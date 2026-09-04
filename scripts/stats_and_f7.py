@@ -70,7 +70,7 @@ for row, i in enumerate(order):
             ha="left" if row % 2 == 0 else "right", color="#1a2733")
 ax.plot([avg_rank.min(), avg_rank.min() + cd], [0.93, 0.93], color="#1a2733", lw=2.5)
 ax.text(avg_rank.min() + cd / 2, 0.96, f"CD = {cd:.2f}", ha="center", fontsize=8.5)
-ax.set_title("Mean IO rank across change axes (lower = better) — Nemenyi CD, α=.05",
+ax.set_title("Mean IO rank across change axes (lower = better) — Nemenyi CD, α = 0.05",
              fontsize=9.5, loc="left", color="#1a2733")
 fig.tight_layout()
 for ext in ("pdf", "png"):
