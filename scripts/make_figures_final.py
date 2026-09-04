@@ -165,7 +165,7 @@ b1 = [c1[f"false_hit_{g}"] * 100 for g in groups]
 b2 = [c2[f"false_hit_{g}"] * 100 for g in groups]
 fig, ax = plt.subplots(figsize=(6.2, 3.5))
 x = np.arange(2); w = 0.36
-r1 = ax.bar(x - w / 2, b1, w, color="#9db4c8", label="threshold only (τ* = 0.89)")
+r1 = ax.bar(x - w / 2, b1, w, color="#9db4c8", label="threshold only ($τ^*_{BA}$ = 0.89)")
 r2 = ax.bar(x + w / 2, b2, w, color=BLUE, label="+ cross-encoder verifier")
 for r in list(r1) + list(r2):
     ax.annotate(f"{r.get_height():.1f}%", (r.get_x() + r.get_width() / 2, r.get_height() + 0.5),

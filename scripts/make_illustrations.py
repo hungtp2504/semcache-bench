@@ -132,6 +132,6 @@ ax.text(9.35, 4.85, "either yes", fontsize=8.5, color=ORANGE)
 box(ax, 8.2, 2.8, 3.5, 1.15, "tuning is futile (IO floor):\nadd a tier-2 verifier in the band,\nor key on discrete slots", "#fdf1e7", ORANGE, fs=8)
 # bottom: reproducibility
 arr(ax, 6.0, 4.85, 6.0, 1.85)
-box(ax, 3.4, 0.55, 5.2, 1.25, "answers must be reproducible\n(compliance, healthcare, grading)?\n→ a bare threshold cache is disqualified:\norder dependence is intrinsic", "#f7ecec", RED, fs=8)
+box(ax, 3.4, 0.55, 5.2, 1.25, "answers must be reproducible\n(compliance, healthcare, grading)?\n→ a threshold-only cache fails the requirement:\norder dependence is intrinsic", "#f7ecec", RED, fs=8)
 ax.set_title("Decision procedure for practitioners", fontsize=10.5, loc="left", color=INK)
 save(fig, "f11_decision_procedure")
