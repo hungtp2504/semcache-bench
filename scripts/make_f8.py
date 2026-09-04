@@ -61,7 +61,7 @@ ax.set_xticks(xs, labels, rotation=45, ha="right", fontsize=7)
 ax.set_title("(d) vs. eviction policy", fontsize=9.5, color=INK)
 ax.set_ylim(0, 60); style(ax)
 
-fig.suptitle("Order dependence is intrinsic: stable across size, skew, and eviction; governed by τ and encoder  (BGE-M3, τ=0.90 unless varied; 50 orders)",
+fig.suptitle("Order dependence is intrinsic: stable across size, skew, and eviction; governed primarily by τ  (BGE-M3, τ=0.90 unless varied; 50 orders)",
              fontsize=9.5, color=INK, x=0.01, ha="left")
 fig.tight_layout(rect=(0, 0, 1, 0.92))
 for ext in ("pdf", "png"):
