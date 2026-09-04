@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 139082,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "ad09aada-343e-441d-ab5d-14e67c28f957",
+  "total_cost_usd": 0.3478458,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 45458,
+    "cache_read_input_tokens": 94179,
+    "output_tokens": 14717,
+    "output_tokens_details": {
+      "thinking_tokens": 11705
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 45458,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2928,
+        "cache_read_input_tokens": 63901,
+        "cache_creation_input_tokens": 11835,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11835
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 14717,
+      "cacheReadInputTokens": 94179,
+      "cacheCreationInputTokens": 45458,
+      "webSearchRequests": 0,
+      "costUSD": 0.3478458,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0392_N5_v4\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"not a quantifier/extreme flip of the seed fact; shifts to unrelated topic (pattern-check order) with no clear ground-truth answer\"}\n{\"id\":\"d3_s0392_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0392_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0398_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0398_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0398_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0398_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0398_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0398_P2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"phrasing is ungrammatical beyond a normal structural reframe (\\\"is retrieved by vote() how\\\")\"}\n{\"id\":\"d3_s0398_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0398_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0398_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0398_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0398_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0398_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0398_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0398_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0398_N2_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"vote() code doesn't branch on request method, so retrieval behavior for GET is identical to POST; answer wouldn't differ\"}\n{\"id\":\"d3_s0398_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0398_N3_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"detail() has no choice-selection logic, so the second clause is incoherent/inapplicable rather than a clean single-entity swap\"}\n{\"id\":\"d3_s0398_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0398_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0398_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"swaps to a missing-Question scenario, not a negation/antonym of \\\"no choice selected\\\"; this is an aspect change, not a polarity flip\"}\n{\"id\":\"d3_s0398_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0398_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0398_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0398_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0398_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"flips a different quantifier dimension (choices existing vs. choices selected) rather than the seed's own quantifier\"}\n{\"id\":\"d3_s0398_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"code raises KeyError on missing 'choice' regardless of whether other POST fields exist, so answer is not necessarily different\"}\n{\"id\":\"d3_s0398_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0398_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0422_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0422_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0422_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0422_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0422_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0422_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0422_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0422_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0422_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0422_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0422_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0422_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0422_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0422_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0422_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"panels ship as part of the same package maintained by Django Commons, so answer likely doesn't differ\"}\n{\"id\":\"d3_s0422_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0422_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0422_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0422_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0422_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0422_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the package was discontinued (false), not a clean negation of \\\"maintains\\\"\"}\n{\"id\":\"d3_s0422_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"inverts subject/object relationship (org->packages instead of package->org) rather than a single negation flip\"}\n{\"id\":\"d3_s0422_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for a count trivially derivable from the seed's answer (one org), not a flip of an existing quantifier yielding new information\"}\n{\"id\":\"d3_s0422_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0422_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"changes the question's subject entirely (largest package by that org) rather than flipping an extreme on the maintainer relationship\"}\n{\"id\":\"d3_s0422_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0422_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0422_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0429_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}",
+  "ttft_ms": 115770,
+  "ttft_stream_ms": 2286,
+  "time_to_request_ms": 24,
+  "type": "result",
+  "duration_ms": 139846,
+  "uuid": "0f2c8f22-75c7-4e29-8eaf-8696e3f41399",
+  "queued_turn_count": 0
+}

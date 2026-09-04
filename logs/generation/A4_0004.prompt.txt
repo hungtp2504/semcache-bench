@@ -1,0 +1,66 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x2, N5 x2, N6 x2 = 24.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — one negation/antonym flips what is asked (include -> exclude,
+   open -> closed, allowed -> forbidden); cached answer would have the wrong sign.
+N5 quantifier/extreme change — min<->max, earliest<->latest, at least<->at most,
+   all<->some; one word flips the target.
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: A4_0004
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d3_s0001", "domain": "tech_docs", "doc_id": "d3_django_admin", "fact_ids": ["d3_f00001"], "question": "I enter a valid username and password on the Django admin login page but it just redisplays the login form with no error message. What's the likely cause and fix?", "answer": "The login cookie's domain doesn't match your browser's domain. Set SESSION_COOKIE_DOMAIN to match your domain, e.g. SESSION_COOKIE_DOMAIN = 'www.example.com' if you're accessing https://www.example.com/admin/.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}
+{"seed_id": "d3_s0002", "domain": "tech_docs", "doc_id": "d3_django_admin", "fact_ids": ["d3_f00002"], "question": "Which two User model fields must both be True for a user to access the Django admin?", "answer": "is_active and is_staff must both be set to True.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}
+{"seed_id": "d3_s0003", "domain": "tech_docs", "doc_id": "d3_django_admin", "fact_ids": ["d3_f00003"], "question": "Which ModelAdmin hook should be customized to automatically record the user who last edited an object?", "answer": "The save_model hook, by extracting the current user from the request.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}
+{"seed_id": "d3_s0004", "domain": "tech_docs", "doc_id": "d3_django_admin", "fact_ids": ["d3_f00004"], "question": "Which two ModelAdmin methods restrict admin objects so they're only visible/editable by the users who created them?", "answer": "get_queryset and has_change_permission.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}
+{"seed_id": "d3_s0005", "domain": "tech_docs", "doc_id": "d3_django_admin", "fact_ids": ["d3_f00005"], "question": "Why might a ManyToManyField not appear as a filter in list_filter?", "answer": "Django won't display a filter for a ManyToManyField if there are no related objects in the database, since such filtering would be meaningless.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}
+{"seed_id": "d3_s0006", "domain": "tech_docs", "doc_id": "d3_django_admin", "fact_ids": ["d3_f00006"], "question": "Why might a database record not appear in the Django admin changelist even though it exists?", "answer": "This happens when the record has a ForeignKey pointing to a nonexistent object and that foreign key is included in list_display — the model declares an integrity constraint that isn't enforced at the database level, so the record is excluded.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}
+{"seed_id": "d3_s0007", "domain": "tech_docs", "doc_id": "d3_django_contributing", "fact_ids": ["d3_f00012"], "question": "What three things help ensure a submitted Django bug-fix ticket doesn't stall before checkin?", "answer": "Clear instructions for reproducing the bug (clear even to someone unfamiliar with the relevant dependency, contrib module, or database), clarity about which of several linked branches matter, and inclusion of a unit test demonstrating the fix.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}
+{"seed_id": "d3_s0008", "domain": "tech_docs", "doc_id": "d3_django_contributing", "fact_ids": ["d3_f00014"], "question": "Where can a Django contributor post a gentle reminder about a ticket they care about?", "answer": "In the #contributing-getting-started channel on the Django Discord server.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}
+{"seed_id": "d3_s0009", "domain": "tech_docs", "doc_id": "d3_django_contributing", "fact_ids": ["d3_f00015"], "question": "Why is it a bad idea to remind the Django team about your ticket right before a release deadline?", "answer": "You're not likely to get the attention you need at that time, since the team is focused on the release.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}
+{"seed_id": "d3_s0010", "domain": "tech_docs", "doc_id": "d3_django_contributing", "fact_ids": ["d3_f00017"], "question": "Can a Django contributor mark their own ticket as \"Ready For Checkin\"?", "answer": "No — it's always better to get another set of eyes on a ticket first.", "generator_model": "claude-sonnet-5", "batch_id": "A_0005", "ts": "2026-08-12T03:04:31Z"}

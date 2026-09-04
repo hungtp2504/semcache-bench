@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 146436,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "d3c22b06-1fe1-4380-b02a-eb1d506949ce",
+  "total_cost_usd": 0.36791979999999996,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47242,
+    "cache_read_input_tokens": 92469,
+    "output_tokens": 16045,
+    "output_tokens_details": {
+      "thinking_tokens": 13002
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47242,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2977,
+        "cache_read_input_tokens": 62191,
+        "cache_creation_input_tokens": 15329,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15329
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 16045,
+      "cacheReadInputTokens": 92469,
+      "cacheCreationInputTokens": 47242,
+      "webSearchRequests": 0,
+      "costUSD": 0.36791979999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0162_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0162_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0162_N2_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"narrowing to attachment-serving doesn't change the compatibility reason; seed's answer (file-like objects) still fully answers it\"}\n{\"id\":\"d3_s0162_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0162_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0162_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0162_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new entity ('which class') not established by seed rather than a clean polarity flip; reads as presupposition shift\"}\n{\"id\":\"d3_s0162_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0162_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0162_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'not accept' is a negation/polarity change, not a min/max or earliest/latest quantifier flip\"}\n{\"id\":\"d3_s0162_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes multiple ReportLab APIs with varying requirements, a fact not established by seed; not a genuine quantifier flip\"}\n{\"id\":\"d3_s0162_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces an unrelated size-limit fact absent from seed's answer rather than flipping an existing quantifier\"}\n{\"id\":\"d3_s0162_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces an unrelated version-history fact absent from seed's answer rather than flipping an existing quantifier\"}\n{\"id\":\"d3_s0162_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0162_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0169_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0169_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0169_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0169_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0169_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0169_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0169_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0169_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0169_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0169_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0169_P3_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"reorders into keyword-fragment style rather than typo/shorthand/casing noise; exceeds P3's allowance\"}\n{\"id\":\"d3_s0169_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0169_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0169_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0169_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0169_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0169_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0169_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps both the setting name (DIRS->STATICFILES_DIRS) and drops the templates-override clause; more than one entity minimally changed\"}\n{\"id\":\"d3_s0169_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0169_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0169_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes a 'discouraged value' the example never mentions; not a clean polarity flip of the seed question\"}\n{\"id\":\"d3_s0169_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's answer already resolves this yes/no correctly (DIRS is not empty), so serving it verbatim would not mislead\"}\n{\"id\":\"d3_s0169_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0169_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0169_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0169_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"invents a hypothetical 'shortest path' not present in seed's answer rather than an extreme over an existing list\"}\n{\"id\":\"d3_s0169_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0169_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0175_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0175_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0175_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0175_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0175_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0175_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0175_P3_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"reorders into arrow/keyword-fragment style rather than typo/shorthand/casing noise; exceeds P3's allowance\"}\n{\"id\":\"d3_s0175_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0175_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"widening to 'entire Django project' doesn't necessarily change the answer — rsync's delta-transfer reason still applies unchanged\"}\n{\"id\":\"d3_s0175_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0175_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}",
+  "ttft_ms": 125832,
+  "ttft_stream_ms": 2220,
+  "time_to_request_ms": 20,
+  "type": "result",
+  "duration_ms": 147251,
+  "uuid": "bb5f9fb6-4e99-47d5-9f6b-ed14df66698c",
+  "queued_turn_count": 0
+}

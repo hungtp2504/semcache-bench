@@ -1,0 +1,60 @@
+{"id": "d5_s0278_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "graduation (toàn khóa cumulative GPA) classification uses the same GPA bands as regular học lực ranking, so seed's answer (3.20-3.59) still applies unchanged", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "asks about the academic-warning threshold, an unrelated regulation, not a negation/antonym flip of the Giỏi-classification fact", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "asks the max possible GPA on the scale (fixed scale ceiling, ~4.0), not an extreme flip of the classification-band question", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "asks the academic-dismissal GPA threshold, an unrelated regulation rather than a min/max flip of the Giỏi-band question", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0278_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "the 2.0x multiplier is generic to 'chương trình đào tạo' regardless of delivery mode, so distance-learning programs would still have the same rule/answer as the seed", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.5, "issue": "asks a downstream consequence of expiry (usability for graduation), a presupposition-style question (fits N6) rather than a negation/antonym flip of the validity-duration fact; seed's answer is simply off-topic here, not 'wrong sign'", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "asks about revocation grounds, an unrelated topic, not a polarity flip of the validity-duration fact", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "since validity is defined as 2.0x standard duration, the seed's answer actually lets one correctly derive 'yes, it shortens proportionally' — serving it does not mislead, so this isn't a genuine wrong-sign flip", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "asks the longest standard program duration directly, dropping the certificate-validity ratio framing rather than flipping max/min of the same quantity", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "asks the shortest standard program duration directly, unrelated to the certificate-validity ratio being flipped", "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0284_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0290_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0290_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0290_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0290_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}
+{"id": "d5_s0290_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3291", "ts": "2026-08-28T01:15:15Z"}

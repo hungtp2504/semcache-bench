@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 150105,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "86bb21b2-21ae-43f2-8084-f49e9ee43e68",
+  "total_cost_usd": 0.3266054,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 43603,
+    "cache_read_input_tokens": 93427,
+    "output_tokens": 13350,
+    "output_tokens_details": {
+      "thinking_tokens": 10253
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43603,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3048,
+        "cache_read_input_tokens": 63149,
+        "cache_creation_input_tokens": 10732,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10732
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 13350,
+      "cacheReadInputTokens": 93427,
+      "cacheCreationInputTokens": 43603,
+      "webSearchRequests": 0,
+      "costUSD": 0.3266054,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0704_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0704_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0704_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"not a clean negation/antonym flip; asks about in-session vs out-of-session location, a different aspect rather than polarity of the seed\"}\n{\"id\":\"d1_s0704_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'returned' is not an antonym of 'held'; this substitutes a different event/facet, not a polarity flip\"}\n{\"id\":\"d1_s0704_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the exam was moved rather than flipping a negation; better fits N6 presupposition shift than N4\"}\n{\"id\":\"d1_s0704_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0704_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"broadens 'exam' to 'graded event' (category widening) in addition to the earliest/latest flip — more than one change\"}\n{\"id\":\"d1_s0704_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new presupposed fact (a makeup exam exists) plus the latest-quantifier — more than a single quantifier flip, fits N6 better\"}\n{\"id\":\"d1_s0704_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"drops the Midterm Exam topic entirely in favor of the term's final session — topic drift beyond a single extreme flip\"}\n{\"id\":\"d1_s0704_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0704_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0711_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0711_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0711_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0711_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0711_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0711_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0711_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0711_P2_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0711_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0711_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0711_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0711_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0711_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0711_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0711_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0711_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"changes both the actor (student→group) and the action (completing both→splitting between members), not a single scope qualifier add/remove\"}\n{\"id\":\"d1_s0711_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0711_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0711_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'penalized' is not a clean antonym of 'credit'; introduces a new aspect (penalty) rather than flipping the seed's polarity\"}\n{\"id\":\"d1_s0711_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"double flip (completing→skipping and get→lose) rather than a single negation/antonym; effectively a different question about non-submission\"}\n{\"id\":\"d1_s0711_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'both'→'neither' is a quantifier extreme change, not a negation/antonym flip; better fits N5\"}\n{\"id\":\"d1_s0711_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about graded/ungraded status, an unrelated aspect, not a negation flip of the credit-for-both-options question\"}\n{\"id\":\"d1_s0711_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks a total-count question, not a min/max/earliest/latest extreme; different aspect from credit rules\"}\n{\"id\":\"d1_s0711_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0711_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0711_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts topic from Assignment 4's credit rule to counting all two-option assignments across the course — topic drift, not a single extreme flip\"}\n{\"id\":\"d1_s0711_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0711_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0037_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0037_P1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0037_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0037_P1_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0037_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0037_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0037_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0037_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0037_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0037_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0037_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0037_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0037_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0037_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0037_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0037_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0037_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0037_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0037_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0037_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'dropped' presupposes a removal history rather than flipping the seed's polarity; better fits N6\"}\n{\"id\":\"d1_s0037_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}",
+  "ttft_ms": 127618,
+  "ttft_stream_ms": 20021,
+  "time_to_request_ms": 59,
+  "type": "result",
+  "duration_ms": 150624,
+  "uuid": "3c87523e-4f5a-4612-b76f-ce659e443c92",
+  "queued_turn_count": 0
+}

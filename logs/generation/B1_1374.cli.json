@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 169738,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "ed5c561d-ef46-42ea-939c-a57134cd12da",
+  "total_cost_usd": 0.383898,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47608,
+    "cache_read_input_tokens": 93590,
+    "output_tokens": 17474,
+    "output_tokens_details": {
+      "thinking_tokens": 14478
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47608,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2945,
+        "cache_read_input_tokens": 63312,
+        "cache_creation_input_tokens": 14574,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14574
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17474,
+      "cacheReadInputTokens": 93590,
+      "cacheCreationInputTokens": 47608,
+      "webSearchRequests": 0,
+      "costUSD": 0.383898,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0125_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Not a minimal single-entity swap; question shape fully rewritten to ask about DEFAULT_FROM_EMAIL's own default/usage, an unrelated setting with a different purpose — reads as topic drift, not entity substitution\"}\n{\"id\":\"d3_s0125_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0125_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0125_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Presupposes a nonexistent alternative to SERVER_EMAIL rather than negating the seed's claim; not a clean polarity flip of the same fact\"}\n{\"id\":\"d3_s0125_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Asks a different facet (which errors are excluded from reporting) rather than negating the seed's sending/address claim; fits aspect-change, not polarity flip\"}\n{\"id\":\"d3_s0125_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks an unrelated fact (recipient count); seed has no quantifier/extreme to flip, so this is a topic shift not a quantifier flip\"}\n{\"id\":\"d3_s0125_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Introduces 'minimum configuration' unrelated to any extreme in the seed; different facet (prerequisites), not a quantifier flip\"}\n{\"id\":\"d3_s0125_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Introduces setting precedence/ordering not present in the seed; different facet, not a flip of an existing extreme\"}\n{\"id\":\"d3_s0125_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Introduces an all/some quantifier about exception coverage, an unrelated fact to the seed's sender-address content; not a flip of a seed extreme\"}\n{\"id\":\"d3_s0125_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0125_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0132_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0132_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0132_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0132_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0132_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0132_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0132_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0132_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0132_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0132_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0132_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0132_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0132_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0132_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0132_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0132_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0132_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0132_N3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0132_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0132_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0132_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0132_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Asks about the exclude option, a different facet of dumpdata usage, not a negation/antonym flip of the seed's claim\"}\n{\"id\":\"d3_s0132_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0132_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0132_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Introduces app output ordering ('first'), unrelated to the seed's 'easiest' extreme; different facet, not a flip\"}\n{\"id\":\"d3_s0132_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Introduces minimum required argument count, unrelated to the seed's 'easiest' extreme; different facet, not a flip\"}\n{\"id\":\"d3_s0132_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0132_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0139_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0139_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0139_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0139_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0139_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0139_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0139_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0139_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0139_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0139_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0139_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0139_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0139_N1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0139_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0139_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0139_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0139_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0139_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0139_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0139_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0139_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}",
+  "ttft_ms": 148731,
+  "ttft_stream_ms": 6365,
+  "time_to_request_ms": 27,
+  "type": "result",
+  "duration_ms": 170569,
+  "uuid": "65d35527-5935-4926-9782-f2035cfb0385",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 171145,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "82e46b37-6218-474b-8045-62ce20e2a49f",
+  "total_cost_usd": 0.5861901,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47872,
+    "cache_read_input_tokens": 90987,
+    "output_tokens": 18110,
+    "output_tokens_details": {
+      "thinking_tokens": 15085
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47872,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2970,
+        "cache_read_input_tokens": 60742,
+        "cache_creation_input_tokens": 17375,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17375
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 18110,
+      "cacheReadInputTokens": 90987,
+      "cacheCreationInputTokens": 47872,
+      "webSearchRequests": 0,
+      "costUSD": 0.5861901,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0003_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0003_N1_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0003_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0003_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0003_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0003_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0003_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0003_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0003_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0003_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts topic to authors of 'variants' rather than flipping an existing min/max extreme; also drops the 'used for' clause — more entity/aspect change than a quantifier flip\"}\n{\"id\":\"d2_s0003_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0003_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0004_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0004_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0004_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0004_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0004_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0004_P2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0004_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0004_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0004_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0004_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0004_P3_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0004_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0004_N1_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"seed's answer already states labeled features are 'manually provided to the classifier', which fully answers how they are obtained\"}\n{\"id\":\"d2_s0004_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0004_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the paper's definition of 'labeled feature' is generic, not domain-specific — restricting to the sentiment setting likely leaves the correct answer unchanged from the seed's\"}\n{\"id\":\"d2_s0004_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0004_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0004_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0004_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0004_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0004_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed has no existing quantifier/extreme to flip — introduces an unrelated superlative ('strongest') and shifts to identifying a specific instance rather than the definition; this is an aspect change (N1), not a quantifier flip\"}\n{\"id\":\"d2_s0004_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed has no existing quantifier/extreme to flip — introduces an unrelated minimum-count question about experimental setup; this is an aspect change (N1), not a quantifier flip\"}\n{\"id\":\"d2_s0004_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0004_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0005_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0005_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0005_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0005_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0005_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the regularized variant likely still uses the same L-BFGS optimizer, so the correct answer probably matches the seed's, failing N2's 'answer differs' requirement\"}\n{\"id\":\"d2_s0005_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0005_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0005_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0005_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0005_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes an algorithm that fails to converge with no grounding in context — this is a presupposition shift (N6-like), not a clean negation of 'used'\"}\n{\"id\":\"d2_s0005_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed has no existing extreme to flip — introduces a comparative 'fastest' presupposing multiple algorithms were tried; fits N6 presupposition shift better than a quantifier flip\"}\n{\"id\":\"d2_s0005_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed has no existing quantifier to flip — introduces an unrelated iteration-count/hyperparameter question; this is an aspect change (N1), not a quantifier flip\"}\n{\"id\":\"d2_s0005_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0005_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}",
+  "ttft_ms": 149503,
+  "ttft_stream_ms": 2870,
+  "time_to_request_ms": 85,
+  "type": "result",
+  "duration_ms": 172350,
+  "uuid": "4c0c18cb-ee3b-48c2-a783-2bb19fde3c79"
+}

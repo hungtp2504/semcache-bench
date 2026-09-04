@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 183387,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "dec56667-c8f1-4484-8a16-40c737fb73e0",
+  "total_cost_usd": 0.41859939999999995,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 50923,
+    "cache_read_input_tokens": 92447,
+    "output_tokens": 19641,
+    "output_tokens_details": {
+      "thinking_tokens": 16632
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 50923,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2969,
+        "cache_read_input_tokens": 62169,
+        "cache_creation_input_tokens": 19032,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19032
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 19641,
+      "cacheReadInputTokens": 92447,
+      "cacheCreationInputTokens": 50923,
+      "webSearchRequests": 0,
+      "costUSD": 0.41859939999999995,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0686_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"drops the specific general/travel values while also swapping the prop name — more than a single minimal entity substitution\"}\n{\"id\":\"d3_s0686_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0686_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0686_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"reversing transition order swaps two entities rather than negating/flipping polarity; fits N3 better\"}\n{\"id\":\"d3_s0686_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"unmount vs prop-change is a different triggering event/aspect, not a negation/antonym flip\"}\n{\"id\":\"d3_s0686_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0686_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0686_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0686_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"two successive changes vs one is a cardinality/scenario change, not a min/max/earliest/latest/at-least/at-most extreme flip\"}\n{\"id\":\"d3_s0686_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0686_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0692_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0692_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0692_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0692_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0692_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0692_P2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0692_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0692_P2_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0692_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0692_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0692_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0692_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0692_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0692_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0692_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0692_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0692_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0692_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0692_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0692_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0692_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0692_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0692_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0692_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0692_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0692_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'all buttons' is a scope-widening change (matches N2), not a min/max/earliest/latest/at-least/at-most quantifier flip\"}\n{\"id\":\"d3_s0692_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0692_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0698_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0698_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0698_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0698_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0698_P2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0698_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0698_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0698_P2_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0698_P3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0698_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0698_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0698_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0698_N1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0698_N1_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0698_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"the Rules of Hooks apply equally inside custom Hooks and components, so the correct answer doesn't actually differ from the seed's\"}\n{\"id\":\"d3_s0698_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to a wholly different topic (reusing one ref across elements) rather than adding/removing a single scope qualifier; behaves like an aspect change\"}\n{\"id\":\"d3_s0698_N3_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"createRef is not subject to the Rules of Hooks, so calling it inside map() is actually permitted — the question presupposes a false restriction\"}\n{\"id\":\"d3_s0698_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes a false restriction — ref callbacks are actually allowed inside map(), so the premise is broken rather than a clean entity substitution\"}\n{\"id\":\"d3_s0698_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's answer already states Hooks must be called at the top level, so this reframed question has essentially the same answer content, not a genuine polarity flip\"}\n{\"id\":\"d3_s0698_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0698_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks why calling outside map() works, which the seed's top-level-only explanation already answers — not a genuinely different answer\"}",
+  "ttft_ms": 163528,
+  "ttft_stream_ms": 1352,
+  "time_to_request_ms": 31,
+  "type": "result",
+  "duration_ms": 184172,
+  "uuid": "458e291d-81c2-4c8a-a092-032090bad174",
+  "queued_turn_count": 0
+}

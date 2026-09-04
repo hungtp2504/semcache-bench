@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 225082,
+  "stop_reason": "end_turn",
+  "session_id": "3535f788-26a2-46ec-936f-ca4ef4ad8e25",
+  "total_cost_usd": 0.26970700000000003,
+  "usage": {
+    "input_tokens": 19,
+    "cache_creation_input_tokens": 48347,
+    "cache_read_input_tokens": 61290,
+    "output_tokens": 33373,
+    "output_tokens_details": {
+      "thinking_tokens": 8988
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 48347,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 10,
+        "output_tokens": 1373,
+        "cache_read_input_tokens": 38791,
+        "cache_creation_input_tokens": 32055,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32055
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 19,
+      "outputTokens": 33373,
+      "cacheReadInputTokens": 61290,
+      "cacheCreationInputTokens": 48347,
+      "webSearchRequests": 0,
+      "costUSD": 0.26970700000000003,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Continuing d5_s0079 from N2:\n\n```jsonl\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N2\",\"v\":1,\"text\":\"Ai đã ký Nghị quyết 29/2026/NQ-HĐND của huyện Tuyên Quang thay mặt Chủ tịch HĐND huyện?\",\"delta\":\"asks about district resolution, not provincial\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N2\",\"v\":2,\"text\":\"Ai đã ký Nghị quyết 29/2026 thay mặt Chủ tịch UBND tỉnh Tuyên Quang?\",\"delta\":\"asks about UBND signer, not HĐND\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N3\",\"v\":1,\"text\":\"Ai đã ký Nghị quyết 30/2026/NQ-HĐND thay mặt Chủ tịch HĐND tỉnh Tuyên Quang?\",\"delta\":\"asks about resolution 30 instead of 29\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N3\",\"v\":2,\"text\":\"Ai đã ký Nghị quyết 29/2026/NQ-HĐND thay mặt Phó Chủ tịch HĐND tỉnh Tuyên Quang?\",\"delta\":\"asks about deputy chair instead of chair\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N4\",\"v\":1,\"text\":\"Ai KHÔNG được phép ký Nghị quyết 29/2026/NQ-HĐND thay mặt Chủ tịch HĐND?\",\"delta\":\"asks who cannot sign\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N4\",\"v\":2,\"text\":\"Phó Chủ tịch Lê Thị Thanh Trà CÓ ĐƯỢC MIỄN ký Nghị quyết 29/2026 không?\",\"delta\":\"asks if signing can be skipped\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N4\",\"v\":3,\"text\":\"Chủ tịch HĐND tỉnh Tuyên Quang CÓ THỂ KHÔNG CẦN phải ký hoặc ủy quyền ký Nghị quyết không?\",\"delta\":\"asks if signing is optional\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N4\",\"v\":4,\"text\":\"Người NGOÀI HĐND tỉnh có ĐƯỢC ký Nghị quyết 29/2026 thay mặt Chủ tịch không?\",\"delta\":\"asks if non-HĐND member can sign\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N5\",\"v\":1,\"text\":\"HĐND thành viên NÀO ĐẦU TIÊN được ủy quyền ký Nghị quyết 29/2026 nếu Chủ tịch vắng mặt?\",\"delta\":\"asks about first person in line\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N5\",\"v\":2,\"text\":\"HĐND thành viên NÀO CUỐI CÙNG trong danh sách có thể được ủy quyền ký Nghị quyết 29/2026?\",\"delta\":\"asks about last person in line\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N5\",\"v\":3,\"text\":\"Có TẤT CẢ bao nhiêu Phó Chủ tịch HĐND tỉnh Tuyên Quang có thể ký thay Chủ tịch?\",\"delta\":\"asks count of authorized deputies\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N5\",\"v\":4,\"text\":\"ÍTÍT NHẤT bao nhiêu cấp bậc lãnh đạo HĐND cần được liên hệ trước khi ký thay?\",\"delta\":\"asks minimum authorization levels\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N6\",\"v\":1,\"text\":\"Nếu không phải Phó Chủ tịch Lê Thị Thanh Trà ký mà là người khác, Nghị quyết có hiệu lực không?\",\"delta\":\"presupposes and asks about validity if different signer\"}\n{\"seed_id\":\"d5_s0079\",\"axis\":\"N6\",\"v\":2,\"text\":\"Phó Chủ tịch Lê Thị Thanh Trà được ủy quyền ký vì cô ấy đã hoàn thành những công việc gì?\",\"delta\":\"presupposes and asks for qualification/prerequisites\"}\n```\n\nAll 280 variants (28 × 10 seeds) generated in JSONL format. Output only valid variants; judge filters N4/N5 candidates per applicability.",
+  "ttft_ms": 69452,
+  "type": "result",
+  "duration_ms": 225341,
+  "uuid": "a470ba1e-7e97-4a72-b26d-42b527a55fcd",
+  "ttft_stream_ms": 1738,
+  "time_to_request_ms": 18,
+  "queued_turn_count": 0
+}

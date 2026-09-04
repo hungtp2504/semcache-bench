@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 24965,
+  "stop_reason": "end_turn",
+  "session_id": "c91b038b-f38c-4535-9cc8-69f91b51ce2c",
+  "total_cost_usd": 0.40298400000000006,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32432,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 2765,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32432,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2765,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32432,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32432
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 2765,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32432,
+      "webSearchRequests": 0,
+      "costUSD": 0.40298400000000006,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0561_N5_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"changes the metric from percentage to absolute count rather than flipping a quantifier; seed already says 'at least', so no min/max flip occurred\"}\n{\"id\":\"d2_s0561_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0561_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about the statistic's rhetorical role; closer to an aspect change (N1) than a presupposition of a different fact\"}\n{\"id\":\"d2_s0567_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0567_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0567_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0567_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0567_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0567_P2_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0567_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0567_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0567_P3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0567_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0567_P3_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0567_P3_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0567_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0567_N1_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0567_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about PLDA training procedure — a different facet (N1), not a single scope qualifier added to the seed question\"}\n{\"id\":\"d2_s0567_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0567_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0567_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0567_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"swaps fixed→open training condition: an entity/scope substitution, not a negation or antonym polarity flip\"}\n{\"id\":\"d2_s0567_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0567_N4_v3\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d2_s0567_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0567_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0567_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0567_N5_v3\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d2_s0567_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a count of approaches rather than flipping a quantifier on the seed's target; seed has no min/max to invert\"}\n{\"id\":\"d2_s0567_N6_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0567_N6_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d2_s0573_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0573_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0573_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0573_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0573_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0573_P2_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0573_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0573_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0573_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0573_P3_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0573_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0573_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0573_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0573_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0573_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0573_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0573_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0573_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0573_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0573_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps user searches for automated non-user queries — an entity/scope substitution (N3/N2), not a negation or antonym flip\"}\n{\"id\":\"d2_s0573_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"reverses the direction of the relation rather than flipping a negation/antonym; reads as an aspect change\"}\n{\"id\":\"d2_s0573_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"changes the measured event (searches returning no related articles) rather than flipping polarity on the seed's click predicate\"}\n{\"id\":\"d2_s0573_N5_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0573_N5_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0573_N5_v3\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d2_s0573_N5_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0573_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0573_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0579_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}",
+  "ttft_ms": 24915,
+  "type": "result",
+  "duration_ms": 25170,
+  "uuid": "53cae6e5-6b89-43f7-ab71-361039080926",
+  "ttft_stream_ms": 1439,
+  "time_to_request_ms": 22,
+  "queued_turn_count": 0
+}

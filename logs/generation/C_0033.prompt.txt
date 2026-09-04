@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0033
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d3_s0078", "domain": "tech_docs", "doc_id": "d3_django_apache-auth", "fact_ids": ["d3_f00129"], "question": "What versions of Apache and mod_wsgi are required to authenticate against Django's user database from Apache?", "answer": "Apache version 2.2 or later and mod_wsgi version 2.0 or later are required.", "generator_model": "claude-sonnet-5", "batch_id": "A_0030", "ts": "2026-08-12T03:31:20Z"}
+{"seed_id": "d3_s0079", "domain": "tech_docs", "doc_id": "d3_django_apache-auth", "fact_ids": ["d3_f00130"], "question": "What attribute must a custom Django user model support to use the default mod_wsgi authentication handler?", "answer": "It must support an is_active attribute.", "generator_model": "claude-sonnet-5", "batch_id": "A_0030", "ts": "2026-08-12T03:31:20Z"}
+{"seed_id": "d3_s0081", "domain": "tech_docs", "doc_id": "d3_django_apache-auth", "fact_ids": ["d3_f00132", "d3_f00133"], "question": "Which Django function does the WSGIAuthUserScript directive execute to check passwords, and where is it imported from?", "answer": "It executes the check_password function, which is imported from django.contrib.auth.handlers.modwsgi.", "generator_model": "claude-sonnet-5", "batch_id": "A_0030", "ts": "2026-08-12T03:31:20Z"}
+{"seed_id": "d3_s0085", "domain": "tech_docs", "doc_id": "d3_django_index", "fact_ids": ["d3_f00140"], "question": "Which file does Django's startproject command create that contains the application callable?", "answer": "It creates <project_name>/wsgi.py, which contains the application callable.", "generator_model": "claude-sonnet-5", "batch_id": "A_0030", "ts": "2026-08-12T03:31:20Z"}
+{"seed_id": "d3_s0086", "domain": "tech_docs", "doc_id": "d3_django_index", "fact_ids": ["d3_f00141"], "question": "What setting does Django's runserver command use to find the path to the application callable?", "answer": "It reads the path from the WSGI_APPLICATION setting.", "generator_model": "claude-sonnet-5", "batch_id": "A_0030", "ts": "2026-08-12T03:31:20Z"}
+{"seed_id": "d3_s0087", "domain": "tech_docs", "doc_id": "d3_django_index", "fact_ids": ["d3_f00142"], "question": "What is the default value of the WSGI_APPLICATION setting?", "answer": "By default it is set to <project_name>.wsgi.application.", "generator_model": "claude-sonnet-5", "batch_id": "A_0030", "ts": "2026-08-12T03:31:20Z"}
+{"seed_id": "d3_s0092", "domain": "tech_docs", "doc_id": "d3_django_modwsgi", "fact_ids": ["d3_f00149"], "question": "What happens if multiple Django sites run in a single mod_wsgi process without using daemon mode?", "answer": "All of the sites will use the settings of whichever one happens to run first.", "generator_model": "claude-sonnet-5", "batch_id": "A_0030", "ts": "2026-08-12T03:31:20Z"}
+{"seed_id": "d3_s0103", "domain": "tech_docs", "doc_id": "d3_django_custom-template-tags", "fact_ids": ["d3_f00165", "d3_f00166"], "question": "Where inside a Django app should custom template tags and filters be placed, and what extra file does that location need?", "answer": "In a templatetags directory at the same level as models.py and views.py; it also needs an __init__.py file so it's treated as a Python package.", "generator_model": "claude-sonnet-5", "batch_id": "A_0029", "ts": "2026-08-12T03:31:41Z"}
+{"seed_id": "d3_s0106", "domain": "tech_docs", "doc_id": "d3_django_custom-template-tags", "fact_ids": ["d3_f00169"], "question": "What must a Python module contain to be considered a valid Django template tag library?", "answer": "A module-level variable named register that is an instance of template.Library.", "generator_model": "claude-sonnet-5", "batch_id": "A_0029", "ts": "2026-08-12T03:31:41Z"}
+{"seed_id": "d3_s0110", "domain": "tech_docs", "doc_id": "d3_django_checklist", "fact_ids": ["d3_f00176"], "question": "What are the two key requirements for a Django project's SECRET_KEY?", "answer": "It must be a large random value and it must be kept secret.", "generator_model": "claude-sonnet-5", "batch_id": "A_0029", "ts": "2026-08-12T03:31:41Z"}

@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 187986,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "7d8415c0-fd62-49f4-b1ce-14aa286b3c19",
+  "total_cost_usd": 0.6113244,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 50289,
+    "cache_read_input_tokens": 93478,
+    "output_tokens": 18769,
+    "output_tokens_details": {
+      "thinking_tokens": 15841
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 50289,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2975,
+        "cache_read_input_tokens": 63231,
+        "cache_creation_input_tokens": 17305,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17305
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 18769,
+      "cacheReadInputTokens": 93478,
+      "cacheCreationInputTokens": 50289,
+      "webSearchRequests": 0,
+      "costUSD": 0.6113244,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0648_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"generalizes entity from PS1 to 'a problem set' while also extremizing session number — bundles entity generalization with the quantifier flip\"}\n{\"id\":\"d1_s0648_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"generalizes entity from PS1 to 'a problem set' while also extremizing session number — bundles entity generalization with the quantifier flip\"}\n{\"id\":\"d1_s0648_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0648_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0655_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0655_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0655_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0655_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0655_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0655_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0655_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0655_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0655_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0655_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0655_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0655_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0655_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0655_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0655_N2_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"blanket 'not available for the exam' entails 'not available for the last question' too — answer is not necessarily different\"}\n{\"id\":\"d1_s0655_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0655_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0655_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0655_N4_v1\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"double-negative trap: 'unavailable' carries the same fact content as seed's 'not available' — excluded case per taxonomy note\"}\n{\"id\":\"d1_s0655_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"swaps topic from solution availability to exam-file availability — an entity/aspect change, not a negation of the same claim\"}\n{\"id\":\"d1_s0655_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"restructures into an open-ended 'which exams' query and widens scope to all exams — more than a single negation flip\"}\n{\"id\":\"d1_s0655_N4_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"asks about access restriction (who may access), a different fact from whether solutions exist — not an antonym flip\"}\n{\"id\":\"d1_s0655_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0655_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0655_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0655_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new attribute (completeness of solutions) not present in the binary availability question — not a simple extreme flip\"}\n{\"id\":\"d1_s0655_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0655_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0658_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0658_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0658_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0658_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0658_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d1_s0658_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0658_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0658_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0658_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"future-tense shift ('will teach next') is not a negation/antonym flip\"}\n{\"id\":\"d1_s0658_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0658_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0658_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0658_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0658_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0658_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces a new aggregate dimension (count of terms taught) rather than flipping earliest/latest of a single instance\"}\n{\"id\":\"d1_s0658_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for the term adjacent to a fixed anchor, not a min/max extreme over the whole domain — closer to entity substitution\"}\n{\"id\":\"d1_s0658_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0658_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}",
+  "ttft_ms": 166512,
+  "ttft_stream_ms": 3548,
+  "time_to_request_ms": 30,
+  "type": "result",
+  "duration_ms": 188923,
+  "uuid": "9716e0ec-1d4e-4d97-8342-0765e3e0fcef"
+}

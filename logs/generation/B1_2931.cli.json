@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 117313,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "cfd2a9be-cd6d-45b1-8531-ae23e448154f",
+  "total_cost_usd": 0.326522,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 43145,
+    "cache_read_input_tokens": 92970,
+    "output_tokens": 13534,
+    "output_tokens_details": {
+      "thinking_tokens": 10633
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43145,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2851,
+        "cache_read_input_tokens": 62692,
+        "cache_creation_input_tokens": 10731,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10731
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 13534,
+      "cacheReadInputTokens": 92970,
+      "cacheCreationInputTokens": 43145,
+      "webSearchRequests": 0,
+      "costUSD": 0.326522,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d4_s0472_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"adds a hypothetical abnormal-development clause; no negation/antonym flip of an existing term in the seed\"}\n{\"id\":\"d4_s0472_N5_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0472_N5_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0472_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"compares left vs right kidney rather than flipping a min/max/extreme quantifier of size\"}\n{\"id\":\"d4_s0472_N5_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0472_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks reason for shape, a different facet on a true premise — fits N1 aspect change, not N6 presupposition shift\"}\n{\"id\":\"d4_s0472_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0478_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0478_P1_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0478_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0478_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0478_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0478_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0478_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0478_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0478_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0478_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0478_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0478_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0478_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0478_N1_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0478_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0478_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0478_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0478_N3_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0478_N4_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0478_N4_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0478_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks when screening ends, a different facet — fits N1 aspect change, not a negation/antonym flip\"}\n{\"id\":\"d4_s0478_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces 'optional vs recommended' concept absent from seed, not a polarity flip of an existing claim\"}\n{\"id\":\"d4_s0478_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0478_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0478_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0478_N5_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0478_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0478_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks rationale for the monthly schedule, a different facet — fits N1 aspect change, not N6 presupposition shift\"}\n{\"id\":\"d4_s0484_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0484_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0484_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0484_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0484_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0484_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0484_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0484_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0484_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0484_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0484_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0484_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0484_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0484_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0484_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps both the counted unit (lobes→lobules) and its container (breast→lobe) rather than adding/removing a single scope qualifier\"}\n{\"id\":\"d4_s0484_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0484_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0484_N3_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0484_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0484_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a subset count (lobes not involved in milk production), a different facet rather than a negation flip of the original claim\"}\n{\"id\":\"d4_s0484_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"unrelated yes/no question about nipple connection, not a polarity flip of the seed's count claim\"}\n{\"id\":\"d4_s0484_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a hypothetical underdevelopment scenario, not a negation/antonym flip of an existing term\"}\n{\"id\":\"d4_s0484_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0484_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0484_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"compares left vs right breast rather than flipping a min/max/extreme quantifier\"}",
+  "ttft_ms": 98684,
+  "ttft_stream_ms": 1859,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 118187,
+  "uuid": "cad4c743-6b65-42f3-a870-4610c072673b",
+  "queued_turn_count": 0
+}

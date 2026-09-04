@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 189482,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "e1ff94bc-b929-494e-9738-28a8da285fb5",
+  "total_cost_usd": 0.35860159999999996,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 39953,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 19273,
+    "output_tokens_details": {
+      "thinking_tokens": 16229
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 39953,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 19273,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 39953,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 39953
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 19273,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 39953,
+      "webSearchRequests": 0,
+      "costUSD": 0.35860159999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0274_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0274_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0274_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0274_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed requires unanimous consent (no existing min/max quantifier to flip); asking for a 'minimum number' presupposes a partial-threshold rule not present in the seed\"}\n{\"id\":\"d5_s0274_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces 'online attendance limit', a concept absent from the seed's conditions, rather than flipping an existing min/max quantifier\"}\n{\"id\":\"d5_s0274_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0274_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0280_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0280_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0280_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0280_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0280_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0280_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0280_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0280_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0280_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0280_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_N4_v1\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"same 1.20 threshold restated as the complementary 'not-warned' condition — equivalent to the excluded until/after deadline pattern, not a wrong-sign flip\"}\n{\"id\":\"d5_s0280_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new procedural concept (clearing an existing warning) rather than negating a polarity element of the seed's condition\"}\n{\"id\":\"d5_s0280_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0280_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"swaps the consequence entity (dismissal vs warning) rather than flipping a negation/antonym; matches N3 pattern, not N4\"}\n{\"id\":\"d5_s0280_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"bundles a scope change (all years, not just first-year) together with the extreme flip, more than the single quantifier change N5 allows\"}\n{\"id\":\"d5_s0280_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0280_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"bundles a scope change (all years, not just first-year) together with the extreme flip, more than the single quantifier change N5 allows\"}\n{\"id\":\"d5_s0280_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for the same 1.20 threshold merely reframed as a minimum-to-avoid value, not a genuinely different quantifier extreme\"}\n{\"id\":\"d5_s0280_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0280_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0286_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0286_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0286_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0286_P1_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0286_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0286_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0286_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0286_P2_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0286_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0286_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0286_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0286_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0286_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0286_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0286_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0286_N2_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"seed's answer already states the scope is the whole program ('của chương trình đào tạo'), so the correct answer doesn't differ from the seed's answer\"}\n{\"id\":\"d5_s0286_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0286_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0286_N4_v1\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"same 10% threshold restated as the complementary ceiling for keeping the rank — equivalent to the excluded until/after pattern\"}\n{\"id\":\"d5_s0286_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0286_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0286_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes an exemption case rather than performing a clean single antonym flip of the seed's condition; closer to N6/N1\"}\n{\"id\":\"d5_s0286_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0286_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the correct answer ('giỏi') is one of only two ranks already named in the seed's answer, so it isn't necessarily different new information\"}\n{\"id\":\"d5_s0286_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces an unrelated graduation-eligibility threshold rather than flipping the min/max of the same rank-reduction fact\"}",
+  "ttft_ms": 170783,
+  "ttft_stream_ms": 4577,
+  "time_to_request_ms": 17,
+  "type": "result",
+  "duration_ms": 189685,
+  "uuid": "9a6fc4f0-266d-4577-89f2-7555d633619d",
+  "queued_turn_count": 0
+}

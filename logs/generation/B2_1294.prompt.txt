@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_1294
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d4_s0592_P1_v2", "axis": "P1", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Which three types are used to categorize pituitary tumors?", "delta": null}
+{"id": "d4_s0592_P1_v3", "axis": "P1", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "How are pituitary tumors divided into three classes?", "delta": null}
+{"id": "d4_s0592_P1_v4", "axis": "P1", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Name the three classifications of pituitary tumors.", "delta": null}
+{"id": "d4_s0592_P2_v1", "axis": "P2", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Pituitary tumors are classified into three categories — what are they?", "delta": null}
+{"id": "d4_s0592_P2_v2", "axis": "P2", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Tell me the three categories that pituitary tumors are divided into.", "delta": null}
+{"id": "d4_s0592_P2_v3", "axis": "P2", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Into which three categories do doctors place pituitary tumors?", "delta": null}
+{"id": "d4_s0592_P2_v4", "axis": "P2", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "I need the three-category classification used for pituitary tumors.", "delta": null}
+{"id": "d4_s0592_P3_v1", "axis": "P3", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "wat r the 3 categories of pituitary tumors?", "delta": null}
+{"id": "d4_s0592_P3_v2", "axis": "P3", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "pituitary tumors 3 categories = ?", "delta": null}
+{"id": "d4_s0592_P3_v3", "axis": "P3", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "how r pituitary tumours classified into 3 grps", "delta": null}
+{"id": "d4_s0592_P3_v4", "axis": "P3", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "the three catagories used to clasify pituitary tumors, whats that", "delta": null}
+{"id": "d4_s0592_N1_v1", "axis": "N1", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "What symptoms do pituitary tumors cause?", "delta": "asks symptoms, not the classification categories"}
+{"id": "d4_s0592_N1_v2", "axis": "N1", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "How are pituitary tumors treated?", "delta": "asks treatment, not the classification"}
+{"id": "d4_s0592_N2_v1", "axis": "N2", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "What are the subtypes of benign pituitary adenomas?", "delta": "narrows to subtypes within one category"}
+{"id": "d4_s0592_N2_v2", "axis": "N2", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "What categories are used to classify all central nervous system tumors?", "delta": "widens to all central nervous system tumors"}
+{"id": "d4_s0592_N3_v1", "axis": "N3", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "What are the three categories used to classify pineal tumors?", "delta": "pineal tumors instead of pituitary tumors"}
+{"id": "d4_s0592_N3_v2", "axis": "N3", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "What are the three categories used to classify thyroid tumors?", "delta": "thyroid tumors, a different organ"}
+{"id": "d4_s0592_N4_v1", "axis": "N4", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Which category of pituitary tumor is malignant rather than benign?", "delta": "asks the malignant category only"}
+{"id": "d4_s0592_N4_v2", "axis": "N4", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Which pituitary adenomas are noninvasive?", "delta": "asks noninvasive adenomas, flipping invasive"}
+{"id": "d4_s0592_N4_v3", "axis": "N4", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Which pituitary tumors are not classified as adenomas?", "delta": "asks the non-adenoma pituitary tumors"}
+{"id": "d4_s0592_N4_v4", "axis": "N4", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Which category of pituitary tumor is not benign?", "delta": "asks the non-benign categories only"}
+{"id": "d4_s0592_N5_v1", "axis": "N5", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Which of the three categories of pituitary tumor is the most common?", "delta": "asks the most common category, not all three"}
+{"id": "d4_s0592_N5_v2", "axis": "N5", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Which category of pituitary tumor is the rarest?", "delta": "asks the rarest category, not the list"}
+{"id": "d4_s0592_N5_v3", "axis": "N5", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Which of the three pituitary tumor categories is the most aggressive?", "delta": "asks the most aggressive one, not all three"}
+{"id": "d4_s0592_N5_v4", "axis": "N5", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Which of the three pituitary tumor categories is the least invasive?", "delta": "asks the least invasive category, not all three"}
+{"id": "d4_s0592_N6_v1", "axis": "N6", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "How is the category of a pituitary tumor determined?", "delta": "asks the method behind the presupposed classification"}
+{"id": "d4_s0592_N6_v2", "axis": "N6", "seed_question": "What are the three categories used to classify pituitary tumors?", "answer": "Pituitary tumors are divided into benign pituitary adenomas, invasive pituitary adenomas, and pituitary carcinomas.", "variation": "Does the category of a pituitary tumor change how it is treated?", "delta": "asks treatment impact of the presupposed categories"}
+{"id": "d4_s0598_P1_v1", "axis": "P1", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "What is the length of the colon?", "delta": null}
+{"id": "d4_s0598_P1_v2", "axis": "P1", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "How many feet long is the colon?", "delta": null}
+{"id": "d4_s0598_P1_v3", "axis": "P1", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "What length does the colon measure?", "delta": null}
+{"id": "d4_s0598_P1_v4", "axis": "P1", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "How long does the colon run?", "delta": null}
+{"id": "d4_s0598_P2_v1", "axis": "P2", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "Tell me the colon's length.", "delta": null}
+{"id": "d4_s0598_P2_v2", "axis": "P2", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "The colon measures how long?", "delta": null}
+{"id": "d4_s0598_P2_v3", "axis": "P2", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "Could you give me the length of the colon?", "delta": null}
+{"id": "d4_s0598_P2_v4", "axis": "P2", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "In feet, how long is a person's colon?", "delta": null}
+{"id": "d4_s0598_P3_v1", "axis": "P3", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "how long is the colon??", "delta": null}
+{"id": "d4_s0598_P3_v2", "axis": "P3", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "colon length = ?", "delta": null}
+{"id": "d4_s0598_P3_v3", "axis": "P3", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "hw long is teh colon", "delta": null}
+{"id": "d4_s0598_P3_v4", "axis": "P3", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "colon how long, just curious", "delta": null}
+{"id": "d4_s0598_N1_v1", "axis": "N1", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "What is the main function of the colon?", "delta": "asks function, not length"}
+{"id": "d4_s0598_N1_v2", "axis": "N1", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "What are the sections of the colon called?", "delta": "asks the colon's segments, not its length"}
+{"id": "d4_s0598_N2_v1", "axis": "N2", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "How long is the sigmoid colon?", "delta": "narrows to the sigmoid segment"}
+{"id": "d4_s0598_N2_v2", "axis": "N2", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "How long is the entire large intestine?", "delta": "widens to the whole large intestine"}
+{"id": "d4_s0598_N3_v1", "axis": "N3", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "How long is the rectum?", "delta": "rectum instead of colon"}
+{"id": "d4_s0598_N3_v2", "axis": "N3", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "How long is the small intestine?", "delta": "small intestine, a different organ"}
+{"id": "d4_s0598_N4_v1", "axis": "N4", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "Which part of the large intestine comes last rather than first?", "delta": "asks the last part, not the first"}
+{"id": "d4_s0598_N4_v2", "axis": "N4", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "How wide is the colon rather than how long?", "delta": "asks diameter instead of length"}
+{"id": "d4_s0598_N4_v3", "axis": "N4", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "Which parts of the large intestine are not the colon?", "delta": "asks the non-colon parts of the large intestine"}
+{"id": "d4_s0598_N4_v4", "axis": "N4", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "How long is the large intestine excluding the colon?", "delta": "excludes the colon and asks the remainder"}
+{"id": "d4_s0598_N5_v1", "axis": "N5", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "What is the maximum length a colon can reach?", "delta": "asks maximum length, not the average"}
+{"id": "d4_s0598_N5_v2", "axis": "N5", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "What is the shortest a normal colon can be?", "delta": "asks minimum length, not the typical five feet"}
+{"id": "d4_s0598_N5_v3", "axis": "N5", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "Which part of the large intestine is the longest?", "delta": "asks the longest segment, not colon length"}
+{"id": "d4_s0598_N5_v4", "axis": "N5", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "Which section of the colon is the shortest?", "delta": "asks the shortest colon section, not total length"}
+{"id": "d4_s0598_N6_v1", "axis": "N6", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "What happens if part of the colon is removed?", "delta": "asks the effect of resection, a presupposed fact"}
+{"id": "d4_s0598_N6_v2", "axis": "N6", "seed_question": "How long is the colon?", "answer": "The colon is the first part of the large intestine and is about 5 feet long.", "variation": "How is the length of the colon measured during a colonoscopy?", "delta": "asks the measurement method, presupposed context"}
+{"id": "d4_s0605_P1_v1", "axis": "P1", "seed_question": "What is rectal cancer?", "answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "variation": "What does rectal cancer mean?", "delta": null}
+{"id": "d4_s0605_P1_v2", "axis": "P1", "seed_question": "What is rectal cancer?", "answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "variation": "Can you define rectal cancer?", "delta": null}
+{"id": "d4_s0605_P1_v3", "axis": "P1", "seed_question": "What is rectal cancer?", "answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "variation": "What exactly is cancer of the rectum?", "delta": null}
+{"id": "d4_s0605_P1_v4", "axis": "P1", "seed_question": "What is rectal cancer?", "answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "variation": "How would you describe rectal cancer?", "delta": null}
+{"id": "d4_s0605_P2_v1", "axis": "P2", "seed_question": "What is rectal cancer?", "answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "variation": "Give me a definition of rectal cancer.", "delta": null}

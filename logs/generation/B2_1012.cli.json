@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 85567,
+  "stop_reason": "end_turn",
+  "session_id": "5b977222-3a77-42e5-8c6e-58c266fa4d60",
+  "total_cost_usd": 0.5423990000000001,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 33381,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 7962,
+    "output_tokens_details": {
+      "thinking_tokens": 5173
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 33381,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 7962,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 33381,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 33381
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 7962,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 33381,
+      "webSearchRequests": 0,
+      "costUSD": 0.5423990000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0170_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0170_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"no quantifier/extreme flipped from seed; changes target from query to top-scoring sentence (aspect change)\"}\n{\"id\":\"d2_s0170_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"target quantity changed entirely (sentence score), not a flip of a seed quantifier\"}\n{\"id\":\"d2_s0170_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks for first document; no quantifier in seed to flip, this is an aspect change\"}\n{\"id\":\"d2_s0170_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces max summary length, a different facet; no seed quantifier flipped\"}\n{\"id\":\"d2_s0170_N6_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0170_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0176_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0176_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0176_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0176_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0176_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0176_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0176_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0176_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0176_P3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0176_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0176_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0176_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0176_N1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0176_N1_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0176_N2_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"narrowing to ROUGE-SU4 does not change the answer; BLEU/MT still fully answers it\"}\n{\"id\":\"d2_s0176_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0176_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0176_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0176_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0176_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0176_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0176_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0176_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"measured quantity changed (variant-human correlation); no seed quantifier flipped\"}\n{\"id\":\"d2_s0176_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about correlation ranking, a different facet rather than a flipped seed quantifier\"}\n{\"id\":\"d2_s0176_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"n-gram order is a new facet; seed contains no quantifier/extreme to flip\"}\n{\"id\":\"d2_s0176_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"n-gram order is a new facet; seed contains no quantifier/extreme to flip\"}\n{\"id\":\"d2_s0176_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0176_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0182_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0182_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0182_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0182_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0182_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0182_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0182_P2_v3\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d2_s0182_P2_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0182_P3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0182_P3_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d2_s0182_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0182_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0182_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0182_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0182_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0182_N2_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d2_s0182_N3_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0182_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0182_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0182_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0182_N4_v3\",\"axis_ok\":true,\"conf\":0.58,\"issue\":null}\n{\"id\":\"d2_s0182_N4_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"adds an ablation condition rather than flipping a polarity; reads as a scope/condition change (N2-like)\"}\n{\"id\":\"d2_s0182_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0182_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0182_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"measured quantity changed from accuracy to subset size; not a flip of a seed quantifier\"}",
+  "ttft_ms": 63730,
+  "type": "result",
+  "duration_ms": 85769,
+  "uuid": "ea5a5b42-306c-45f2-ad13-b8cfd351386a",
+  "ttft_stream_ms": 2537,
+  "time_to_request_ms": 16,
+  "queued_turn_count": 0
+}

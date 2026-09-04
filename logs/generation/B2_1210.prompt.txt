@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_1210
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d3_s0580_P1_v2", "axis": "P1", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Where did React Conf 2025 happen, on what dates, and was there a remote option?", "delta": null}
+{"id": "d3_s0580_P1_v3", "axis": "P1", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "What were the city and dates of React Conf 2025, and was remote attendance possible?", "delta": null}
+{"id": "d3_s0580_P1_v4", "axis": "P1", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Which city hosted React Conf 2025, on which days, and was it streamed for people at home?", "delta": null}
+{"id": "d3_s0580_P2_v1", "axis": "P2", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Tell me the place and dates of React Conf 2025, and whether it could be attended remotely.", "delta": null}
+{"id": "d3_s0580_P2_v2", "axis": "P2", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "React Conf 2025 was held where and when, and was remote access offered?", "delta": null}
+{"id": "d3_s0580_P2_v3", "axis": "P2", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "I need the dates, the location, and the remote availability of React Conf 2025.", "delta": null}
+{"id": "d3_s0580_P2_v4", "axis": "P2", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Give me details on where React Conf 2025 was hosted, when it ran, and if you could join remotely.", "delta": null}
+{"id": "d3_s0580_P3_v1", "axis": "P3", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "where n when was react conf 2025 held + was it remote", "delta": null}
+{"id": "d3_s0580_P3_v2", "axis": "P3", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "react conf 2025 location dates?? and cud u watch online", "delta": null}
+{"id": "d3_s0580_P3_v3", "axis": "P3", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "wher was reactconf 2025 held and when, was ther a remote optn", "delta": null}
+{"id": "d3_s0580_P3_v4", "axis": "P3", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "reactconf25 when/where held, remote avail?", "delta": null}
+{"id": "d3_s0580_N1_v1", "axis": "N1", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Who were the keynote speakers at React Conf 2025?", "delta": "asks speakers, not place, dates, or remote"}
+{"id": "d3_s0580_N1_v2", "axis": "N1", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "How much did a React Conf 2025 ticket cost?", "delta": "asks ticket price, not location or dates"}
+{"id": "d3_s0580_N2_v1", "axis": "N2", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Where and when were the React Conf 2025 workshops held, and were they remote?", "delta": "narrows to the workshop sessions"}
+{"id": "d3_s0580_N2_v2", "axis": "N2", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Where and when has every React Conf been held, and were they available remotely?", "delta": "widens to all React Conf editions"}
+{"id": "d3_s0580_N3_v1", "axis": "N3", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Where and when was React Conf 2024 held, and was it available remotely?", "delta": "a different conference year"}
+{"id": "d3_s0580_N3_v2", "axis": "N3", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Where and when was React Native Conf 2025 held, and was it available remotely?", "delta": "a different conference"}
+{"id": "d3_s0580_N4_v1", "axis": "N4", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Which React Conf 2025 sessions were left out of the free livestream?", "delta": "sessions excluded from the livestream"}
+{"id": "d3_s0580_N4_v2", "axis": "N4", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Was React Conf 2025 closed to in-person attendees?", "delta": "in-person exclusion, not venue and dates"}
+{"id": "d3_s0580_N4_v3", "axis": "N4", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Which day of React Conf 2025 was cancelled?", "delta": "a cancelled day, not the scheduled dates"}
+{"id": "d3_s0580_N4_v4", "axis": "N4", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Which React Conf 2025 content stayed unpublished after the event?", "delta": "unpublished content, not the event details"}
+{"id": "d3_s0580_N5_v1", "axis": "N5", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "When was the earliest React Conf ever held?", "delta": "earliest React Conf, not the 2025 edition"}
+{"id": "d3_s0580_N5_v2", "axis": "N5", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "When is the most recent React Conf held after 2025?", "delta": "a later edition, not 2025"}
+{"id": "d3_s0580_N5_v3", "axis": "N5", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "What was the highest ticket price for React Conf 2025?", "delta": "maximum ticket price, not the free stream"}
+{"id": "d3_s0580_N5_v4", "axis": "N5", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "At most how many people could React Conf 2025 host in Henderson?", "delta": "venue capacity maximum, not the event details"}
+{"id": "d3_s0580_N6_v1", "axis": "N6", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Where can I watch the React Conf 2025 livestream recordings now?", "delta": "asks where recordings are, presupposed livestream"}
+{"id": "d3_s0580_N6_v2", "axis": "N6", "seed_question": "Where and when was React Conf 2025 held, and was it available remotely?", "answer": "React Conf 2025 was held October 7-8, 2025, in Henderson, Nevada, USA, and included a free livestream.", "variation": "Why was Henderson, Nevada chosen as the React Conf 2025 venue?", "delta": "asks venue rationale, presupposed fact"}
+{"id": "d3_s0586_P1_v1", "axis": "P1", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "What city appears as the sole React meetup in Japan on this page?", "delta": null}
+{"id": "d3_s0586_P1_v2", "axis": "P1", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which Japanese city is shown as the only React meetup listed here?", "delta": null}
+{"id": "d3_s0586_P1_v3", "axis": "P1", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "On this page, what is the single city hosting a React meetup in Japan?", "delta": null}
+{"id": "d3_s0586_P1_v4", "axis": "P1", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which city is the lone Japanese React meetup on this page?", "delta": null}
+{"id": "d3_s0586_P2_v1", "axis": "P2", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Japan's only React meetup on this page is in which city?", "delta": null}
+{"id": "d3_s0586_P2_v2", "axis": "P2", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Name the city listed for Japan's only React meetup on this page.", "delta": null}
+{"id": "d3_s0586_P2_v3", "axis": "P2", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "I am looking for the city of the one React meetup listed under Japan on this page.", "delta": null}
+{"id": "d3_s0586_P2_v4", "axis": "P2", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Tell me which city this page lists as Japan's single React meetup.", "delta": null}
+{"id": "d3_s0586_P3_v1", "axis": "P3", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "which city is japans only react meetup on this page", "delta": null}
+{"id": "d3_s0586_P3_v2", "axis": "P3", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "japan react meetup city?? only 1 listed", "delta": null}
+{"id": "d3_s0586_P3_v3", "axis": "P3", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "wich citty is listd as japans only react meetup here", "delta": null}
+{"id": "d3_s0586_P3_v4", "axis": "P3", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "react meetup japan - what city is it in on this pg", "delta": null}
+{"id": "d3_s0586_N1_v1", "axis": "N1", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "How often does Japan's React meetup group meet?", "delta": "asks meeting frequency, not the city"}
+{"id": "d3_s0586_N1_v2", "axis": "N1", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "What is the sign-up link for Japan's React meetup?", "delta": "asks the sign-up link, not the city"}
+{"id": "d3_s0586_N2_v1", "axis": "N2", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which cities are listed for React meetups across all of Asia on this page?", "delta": "widens to all of Asia"}
+{"id": "d3_s0586_N2_v2", "axis": "N2", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which district hosts Japan's only React meetup listed on this page?", "delta": "narrows to a district inside the city"}
+{"id": "d3_s0586_N3_v1", "axis": "N3", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which city is listed as South Korea's only React meetup on this page?", "delta": "a different country"}
+{"id": "d3_s0586_N3_v2", "axis": "N3", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which city is listed as Japan's only React Native meetup on this page?", "delta": "a different meetup community"}
+{"id": "d3_s0586_N4_v1", "axis": "N4", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which city was removed from Japan's React meetup listings on this page?", "delta": "a delisted city, not the listed one"}
+{"id": "d3_s0586_N4_v2", "axis": "N4", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which Japanese city's React meetup is missing from this page?", "delta": "an unlisted city, not the listed one"}
+{"id": "d3_s0586_N4_v3", "axis": "N4", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which city is listed as Japan's only inactive React meetup on this page?", "delta": "an inactive meetup, not the active listing"}
+{"id": "d3_s0586_N4_v4", "axis": "N4", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which city is listed as the only place in Japan without a React meetup?", "delta": "absence of a meetup, not its presence"}
+{"id": "d3_s0586_N5_v1", "axis": "N5", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which Japanese cities other than the listed one host React meetups?", "delta": "cities besides the listed one"}
+{"id": "d3_s0586_N5_v2", "axis": "N5", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "How many React meetups are listed for Japan on this page?", "delta": "a count, not the city name"}
+{"id": "d3_s0586_N5_v3", "axis": "N5", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which country has the most React meetups listed on this page?", "delta": "country with maximum meetups, not Japan's city"}
+{"id": "d3_s0586_N5_v4", "axis": "N5", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "Which city has the largest number of React meetups listed on this page?", "delta": "city with most meetups, not Japan's single one"}
+{"id": "d3_s0586_N6_v1", "axis": "N6", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "When was Japan's only React meetup on this page founded?", "delta": "asks founding date, presupposed meetup"}
+{"id": "d3_s0586_N6_v2", "axis": "N6", "seed_question": "Which city is listed as Japan's only React meetup on this page?", "answer": "Osaka.", "variation": "How do I join Japan's only React meetup listed on this page?", "delta": "asks how to join, presupposed meetup"}
+{"id": "d3_s0593_P1_v1", "axis": "P1", "seed_question": "Which company does Lauren Tan work for and which working group is she part of?", "answer": "Lauren Tan is an Engineer at Cursor, part of the Compiler working group.", "variation": "What company employs Lauren Tan, and which working group is she on?", "delta": null}
+{"id": "d3_s0593_P1_v2", "axis": "P1", "seed_question": "Which company does Lauren Tan work for and which working group is she part of?", "answer": "Lauren Tan is an Engineer at Cursor, part of the Compiler working group.", "variation": "Where does Lauren Tan work and what working group does she belong to?", "delta": null}
+{"id": "d3_s0593_P1_v3", "axis": "P1", "seed_question": "Which company does Lauren Tan work for and which working group is she part of?", "answer": "Lauren Tan is an Engineer at Cursor, part of the Compiler working group.", "variation": "Which employer and which working group are listed for Lauren Tan?", "delta": null}
+{"id": "d3_s0593_P1_v4", "axis": "P1", "seed_question": "Which company does Lauren Tan work for and which working group is she part of?", "answer": "Lauren Tan is an Engineer at Cursor, part of the Compiler working group.", "variation": "Lauren Tan works at which company, and is a member of which working group?", "delta": null}
+{"id": "d3_s0593_P2_v1", "axis": "P2", "seed_question": "Which company does Lauren Tan work for and which working group is she part of?", "answer": "Lauren Tan is an Engineer at Cursor, part of the Compiler working group.", "variation": "Tell me Lauren Tan's employer and her working group.", "delta": null}

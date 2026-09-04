@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 184681,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "1508ea1c-a44a-4a97-aaac-e3904d505619",
+  "total_cost_usd": 0.3597336,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 38831,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 19835,
+    "output_tokens_details": {
+      "thinking_tokens": 16866
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 38831,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 19835,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 38831,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 38831
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 19835,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 38831,
+      "webSearchRequests": 0,
+      "costUSD": 0.3597336,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0249_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0249_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0249_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks exemption case (aspect shift), not a negation/antonym flip of the same question\"}\n{\"id\":\"d5_s0249_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks consequence of missing deadline, a different aspect rather than a polarity flip\"}\n{\"id\":\"d5_s0249_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"substitutes action verb (update->delete) rather than a negation/antonym flip\"}\n{\"id\":\"d5_s0249_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0249_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an 'extension' concept absent from seed rather than flipping an existing quantifier\"}\n{\"id\":\"d5_s0249_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about earliest decision issuance after thesis defense, an unrelated quantity, not an extreme-flip of the update deadline\"}\n{\"id\":\"d5_s0249_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about other data types due, a scope/aspect question, not a min/max/earliest/latest flip\"}\n{\"id\":\"d5_s0249_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0249_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0255_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0255_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0255_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0255_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0255_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0255_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0255_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0255_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0255_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0255_P3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"drops 'hoặc xử lý' clause entirely, a content omission beyond allowed surface noise\"}\n{\"id\":\"d5_s0255_P3_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"drops 'hoặc xử lý' and shifts 'dấu hiệu vi phạm' to 'vi phạm', beyond surface-level noise\"}\n{\"id\":\"d5_s0255_P3_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"drops 'xác minh hoặc' clause, a content omission beyond allowed surface noise\"}\n{\"id\":\"d5_s0255_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0255_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0255_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrowing to doctoral degrees likely does not change the procedural answer (still write notification with reason/timeline)\"}\n{\"id\":\"d5_s0255_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0255_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0255_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0255_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0255_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0255_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks exemption case (aspect shift), not a negation/antonym flip of the same question\"}\n{\"id\":\"d5_s0255_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0255_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0255_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0255_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0255_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about additional duties beyond the notice, a scope question, not a min/max/earliest/latest flip\"}\n{\"id\":\"d5_s0255_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0255_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0261_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0261_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0261_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0261_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0261_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0261_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0261_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0261_P2_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0261_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0261_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0261_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0261_P3_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"trailing 'ntn?' produces a garbled/ungrammatical sentence beyond typo-level noise\"}\n{\"id\":\"d5_s0261_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0261_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0261_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0261_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0261_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0261_N3_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0261_N4_v1\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"before/after complementary cutoff flip yields the same answer date (Jan 1, 2027) — explicitly excluded case for N4\"}\n{\"id\":\"d5_s0261_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0261_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks exception case (aspect shift), not a negation/antonym flip of the same question\"}",
+  "ttft_ms": 167332,
+  "ttft_stream_ms": 4290,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 184879,
+  "uuid": "189dedaf-f9fc-4cba-bb95-1f944b2f9c59",
+  "queued_turn_count": 0
+}

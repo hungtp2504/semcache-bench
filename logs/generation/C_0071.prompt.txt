@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0071
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d5_s0166", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p03", "fact_ids": ["d5_f00211"], "question": "Hoạt động liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe được thực hiện như thế nào?", "answer": "Chỉ được thực hiện giữa các cơ sở đào tạo được phép hoạt động trong cùng phạm vi lĩnh vực sức khỏe, và các cơ sở này phải đáp ứng đầy đủ chuẩn chương trình đào tạo và chuẩn cơ sở giáo dục đại học đối với ngành sức khỏe.", "generator_model": "claude-sonnet-5", "batch_id": "A_0105", "ts": "2026-08-12T03:44:15Z"}
+{"seed_id": "d5_s0168", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p04", "fact_ids": ["d5_f00213"], "question": "Cơ sở đào tạo công nhận trúng tuyển cho người dự tuyển khi đáp ứng những điều kiện gì?", "answer": "Người dự tuyển phải đáp ứng yêu cầu đầu vào của chương trình đào tạo, các điều kiện tuyển sinh theo quy định và hoàn thiện hồ sơ nhập học theo yêu cầu của cơ sở đào tạo.", "generator_model": "claude-sonnet-5", "batch_id": "A_0106", "ts": "2026-08-12T03:46:21Z"}
+{"seed_id": "d5_s0171", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p04", "fact_ids": ["d5_f00217"], "question": "Hoạt động thực hành, thực tập tổ chức ngoài phạm vi cơ sở đào tạo được chiếm tối đa bao nhiêu phần trăm tổng khối lượng chương trình đào tạo?", "answer": "Không vượt quá 30% tổng khối lượng chương trình đào tạo, trừ trường hợp chuẩn chương trình đào tạo hoặc pháp luật chuyên ngành có quy định khác.", "generator_model": "claude-sonnet-5", "batch_id": "A_0106", "ts": "2026-08-12T03:46:21Z"}
+{"seed_id": "d5_s0172", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p04", "fact_ids": ["d5_f00218"], "question": "Khối lượng học tập trực tuyến trong chương trình đào tạo thạc sĩ tối đa là bao nhiêu phần trăm, và trường hợp nào được vượt mức này?", "answer": "Tối đa 30% tổng khối lượng học tập của chương trình đào tạo, trừ trường hợp thiên tai, dịch bệnh hoặc bất khả kháng khác theo quy định của cơ quan có thẩm quyền.", "generator_model": "claude-sonnet-5", "batch_id": "A_0106", "ts": "2026-08-12T03:46:21Z"}
+{"seed_id": "d5_s0174", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p05", "fact_ids": ["d5_f00223"], "question": "Người học theo chương trình đào tạo thạc sĩ định hướng nghiên cứu, học thuật cần làm gì để được công nhận tốt nghiệp?", "answer": "Người học phải thực hiện luận văn để được công nhận tốt nghiệp.", "generator_model": "claude-sonnet-5", "batch_id": "A_0106", "ts": "2026-08-12T03:46:21Z"}
+{"seed_id": "d5_s0176", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p05", "fact_ids": ["d5_f00226"], "question": "Cơ sở đào tạo phải tổ chức đánh giá luận văn thạc sĩ trong thời gian tối đa bao lâu kể từ khi học viên nộp dự thảo luận văn?", "answer": "Tối đa 03 tháng kể từ thời điểm học viên nộp dự thảo luận văn.", "generator_model": "claude-sonnet-5", "batch_id": "A_0106", "ts": "2026-08-12T03:46:21Z"}
+{"seed_id": "d5_s0179", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p05", "fact_ids": ["d5_f00229"], "question": "Cơ sở đào tạo phải xét và công nhận tốt nghiệp trong thời hạn bao lâu, và có thể kéo dài tới bao lâu nếu cần thẩm định?", "answer": "Trong thời hạn 02 tháng kể từ ngày người học hoàn thành yêu cầu tốt nghiệp; nếu cần thẩm định, thời hạn có thể kéo dài nhưng không quá 03 tháng.", "generator_model": "claude-sonnet-5", "batch_id": "A_0106", "ts": "2026-08-12T03:46:21Z"}
+{"seed_id": "d5_s0181", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p06", "fact_ids": ["d5_f00235"], "question": "Thông báo tuyển sinh trình độ tiến sĩ phải được công bố công khai chậm nhất bao nhiêu ngày làm việc trước khi kết thúc thời hạn nhận hồ sơ dự tuyển?", "answer": "Chậm nhất 30 ngày làm việc trước ngày kết thúc thời hạn nhận hồ sơ dự tuyển.", "generator_model": "claude-sonnet-5", "batch_id": "A_0106", "ts": "2026-08-12T03:46:21Z"}
+{"seed_id": "d5_s0182", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p06", "fact_ids": ["d5_f00236"], "question": "Quyết định công nhận nghiên cứu sinh phải bao gồm những thông tin cơ bản nào?", "answer": "Họ tên nghiên cứu sinh, chương trình đào tạo, thời gian đào tạo và đơn vị chuyên môn quản lý nghiên cứu sinh.", "generator_model": "claude-sonnet-5", "batch_id": "A_0106", "ts": "2026-08-12T03:46:21Z"}
+{"seed_id": "d5_s0183", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p06", "fact_ids": ["d5_f00238"], "question": "Giảng viên giảng dạy trình độ tiến sĩ phải có chức danh hoặc bằng cấp gì để đảm nhiệm học phần?", "answer": "Phải có chức danh giáo sư, phó giáo sư hoặc có bằng tiến sĩ ngành phù hợp với các học phần đảm nhiệm trong chương trình đào tạo.", "generator_model": "claude-sonnet-5", "batch_id": "A_0106", "ts": "2026-08-12T03:46:21Z"}

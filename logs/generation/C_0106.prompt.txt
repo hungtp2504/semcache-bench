@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0106
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d2_s0549", "domain": "academic_nlp", "doc_id": "d2_doc0089", "fact_ids": ["d2_f00714"], "question": "How does this paper define sarcasm?", "answer": "The paper defines sarcasm as \"a sharp, bitter, or cutting expression or remark; a bitter gibe or taunt\".", "generator_model": "claude-sonnet-5", "batch_id": "A_0199", "ts": "2026-08-12T08:47:53Z"}
+{"seed_id": "d2_s0551", "domain": "academic_nlp", "doc_id": "d2_doc0089", "fact_ids": ["d2_f00716"], "question": "What methods and features did BIBREF1 use for sarcasm detection, and what did they compare the classifier to?", "answer": "BIBREF1 used SVM and logistic regression over unigrams, dictionary-based lexical features, and pragmatic features like emoticons, and compared the classifier's performance to that of humans.", "generator_model": "claude-sonnet-5", "batch_id": "A_0199", "ts": "2026-08-12T08:47:53Z"}
+{"seed_id": "d2_s0555", "domain": "academic_nlp", "doc_id": "d2_doc0090", "fact_ids": ["d2_f00720"], "question": "According to the efficient market hypothesis described in the paper, what determines financial market movements?", "answer": "The efficient market hypothesis states that financial market movements depend on news, current events, and product releases, which significantly impact a company's stock value.", "generator_model": "claude-sonnet-5", "batch_id": "A_0199", "ts": "2026-08-12T08:47:53Z"}
+{"seed_id": "d2_s0574", "domain": "academic_nlp", "doc_id": "d2_doc0093", "fact_ids": ["d2_f00747"], "question": "Which supervised learning-to-rank model did the study find performed best, and how did it compare to baselines?", "answer": "SVM-Rank was the best supervised learning-to-rank model, and it significantly surpassed state-of-the-art baseline systems.", "generator_model": "claude-sonnet-5", "batch_id": "A_0200", "ts": "2026-08-12T08:47:59Z"}
+{"seed_id": "d2_s0584", "domain": "academic_nlp", "doc_id": "d2_doc0098", "fact_ids": ["d2_f00759"], "question": "What macro-average f-score does UTCNN achieve on the Facebook stance classification task?", "answer": "UTCNN achieves a 0.755 macro-average f-score across supportive, neutral, and unsupportive stance classes on Facebook data.", "generator_model": "claude-sonnet-5", "batch_id": "A_0202", "ts": "2026-08-12T08:49:03Z"}
+{"seed_id": "d2_s0586", "domain": "academic_nlp", "doc_id": "d2_doc0098", "fact_ids": ["d2_f00761"], "question": "What three types of non-text information does UTCNN incorporate for stance classification?", "answer": "UTCNN incorporates user tastes, topic tastes, and user comments on posts.", "generator_model": "claude-sonnet-5", "batch_id": "A_0202", "ts": "2026-08-12T08:49:03Z"}
+{"seed_id": "d2_s0597", "domain": "academic_nlp", "doc_id": "d2_doc0094", "fact_ids": ["d2_f00773", "d2_f00774"], "question": "How do stacked QRNNs compare to stacked LSTMs of the same hidden size in accuracy and speed?", "answer": "Stacked QRNNs have better predictive accuracy than stacked LSTMs of the same hidden size, and are up to 16 times faster at train and test time due to their increased parallelism.", "generator_model": "claude-sonnet-5", "batch_id": "A_0201", "ts": "2026-08-12T08:49:10Z"}
+{"seed_id": "d2_s0603", "domain": "academic_nlp", "doc_id": "d2_doc0095", "fact_ids": ["d2_f00782", "d2_f00783"], "question": "What two training losses does the paper use for RNN-based acoustic word embeddings, and which approach performs better?", "answer": "The paper uses a cross entropy loss for word classification and a contrastive loss in a Siamese network setting; the Siamese RNN embeddings outperform the classification-based models.", "generator_model": "claude-sonnet-5", "batch_id": "A_0201", "ts": "2026-08-12T08:49:10Z"}
+{"seed_id": "d2_s0610", "domain": "academic_nlp", "doc_id": "d2_doc0096", "fact_ids": ["d2_f00791"], "question": "How did the researchers collect Facebook posts and reaction data for their study?", "answer": "They collected Facebook posts and their corresponding reactions from public pages using the Facebook API, accessed via the Facebook-sdk python library.", "generator_model": "claude-sonnet-5", "batch_id": "A_0201", "ts": "2026-08-12T08:49:10Z"}
+{"seed_id": "d2_s0617", "domain": "academic_nlp", "doc_id": "d2_doc0100", "fact_ids": ["d2_f00798"], "question": "Does the proposed IRN model need auxiliary information to reach state-of-the-art performance on KB completion benchmarks?", "answer": "No, it achieves state-of-the-art results on popular knowledge base completion benchmarks without using any auxiliary information.", "generator_model": "claude-sonnet-5", "batch_id": "A_0203", "ts": "2026-08-12T08:50:04Z"}

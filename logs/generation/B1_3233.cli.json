@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 148032,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "72fbef94-6efb-4ae3-b270-2e6fb2d26ce1",
+  "total_cost_usd": 0.35791259999999997,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 45057,
+    "cache_read_input_tokens": 92583,
+    "output_tokens": 15916,
+    "output_tokens_details": {
+      "thinking_tokens": 12943
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 45057,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2936,
+        "cache_read_input_tokens": 62305,
+        "cache_creation_input_tokens": 13030,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13030
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15916,
+      "cacheReadInputTokens": 92583,
+      "cacheCreationInputTokens": 45057,
+      "webSearchRequests": 0,
+      "costUSD": 0.35791259999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d4_s0430_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"not a negation/antonym flip; swaps cancer for precancerous lesion, a different aspect (fits N1, not N4)\"}\n{\"id\":\"d4_s0430_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0430_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0430_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0430_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for the complementary/minority set rather than flipping a single min/max quantifier\"}\n{\"id\":\"d4_s0430_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0430_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0436_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0436_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0436_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0436_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0436_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0436_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0436_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0436_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0436_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0436_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0436_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0436_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0436_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0436_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0436_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"maxillary sinus cancer is itself predominantly squamous cell carcinoma, so seed's answer still fully answers the narrowed question\"}\n{\"id\":\"d4_s0436_N2_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"squamous cell carcinoma is also the predominant type across head and neck cancers overall, so seed's answer still fully answers the widened question\"}\n{\"id\":\"d4_s0436_N3_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0436_N3_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"laryngeal cancer is also predominantly squamous cell carcinoma, so seed's answer would still be correct, not necessarily different\"}\n{\"id\":\"d4_s0436_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0436_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"least vs most common is a min/max extreme flip (N5's domain), not a negation/antonym flip\"}\n{\"id\":\"d4_s0436_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"excludes the top entity and asks for next rank, a ranking/scope shift rather than a clean polarity flip\"}\n{\"id\":\"d4_s0436_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"swaps cancer for precancerous lesion, a different aspect rather than a negation/antonym flip\"}\n{\"id\":\"d4_s0436_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0436_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0436_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0436_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for the complementary/minority set rather than flipping a single min/max quantifier\"}\n{\"id\":\"d4_s0436_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0436_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0442_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0442_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0442_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0442_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0442_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0442_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0442_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0442_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0442_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0442_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0442_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0442_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0442_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0442_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0442_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0442_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0442_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0442_N3_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0442_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0442_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0442_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about malignant transformation rate of benign tumors, a distinct topic rather than a clean negation of 'benign'\"}\n{\"id\":\"d4_s0442_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about need for cancer treatment, a related but distinct concept rather than a clean negation of 'benign'\"}\n{\"id\":\"d4_s0442_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0442_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0442_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks for the identity of the most common benign tumor type, not a quantifier/extreme flip on the proportion question\"}",
+  "ttft_ms": 127857,
+  "ttft_stream_ms": 1277,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 148813,
+  "uuid": "f74f122a-5e20-41a4-baa5-14b241140368",
+  "queued_turn_count": 0
+}

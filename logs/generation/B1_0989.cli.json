@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 125488,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "27a3633e-128e-41b5-ba3e-7eb0c7e8f861",
+  "total_cost_usd": 0.4098021,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32637,
+    "cache_read_input_tokens": 30247,
+    "output_tokens": 13660,
+    "output_tokens_details": {
+      "thinking_tokens": 10636
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32637,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 13660,
+        "cache_read_input_tokens": 30247,
+        "cache_creation_input_tokens": 32637,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32637
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 13660,
+      "cacheReadInputTokens": 30247,
+      "cacheCreationInputTokens": 32637,
+      "webSearchRequests": 0,
+      "costUSD": 0.4098021,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Auditing each item against its axis definition now — this is a judgment task, not a coding task, so I'll apply the compliance criteria directly rather than invoking a skill.\n\n{\"id\":\"d1_s0624_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0624_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0624_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0624_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0624_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"instructor-vs-grader is a different role/facet, not a negation/antonym flip; this is an aspect change (N1), not polarity flip\"}\n{\"id\":\"d1_s0624_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0624_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0624_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0624_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0624_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0624_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0624_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0630_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0630_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0630_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0630_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0630_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0630_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0630_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0630_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0630_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0630_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0630_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0630_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0630_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0630_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0630_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0630_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0630_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0630_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"lectures->recitations swaps a session-type/common noun, not a named entity/id/version; better fits N1/N2 than N3\"}\n{\"id\":\"d1_s0630_N4_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0630_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"cancellation frequency is a different facet from meeting frequency, not a negation/antonym flip; fits N1 not N4\"}\n{\"id\":\"d1_s0630_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0630_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces a duration threshold comparison rather than a single negation/antonym flip of the meeting-frequency question\"}\n{\"id\":\"d1_s0630_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"for a fixed weekly schedule the max sessions/week equals the stated norm (3), so seed's answer would still fully answer it\"}\n{\"id\":\"d1_s0630_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"min sessions/week likely equals the stated norm (3) absent evidence of schedule variation, so seed's answer would still answer it\"}\n{\"id\":\"d1_s0630_N5_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"longest session likely equals the stated 1-hour duration, so seed's answer would still answer it\"}\n{\"id\":\"d1_s0630_N5_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"shortest session likely equals the stated 1-hour duration, so seed's answer would still answer it\"}\n{\"id\":\"d1_s0630_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0630_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0636_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0636_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0636_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0636_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0636_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0636_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0636_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0636_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0636_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0636_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0636_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n\nSummary: 60 items audited; 9 flagged non-compliant — mainly N4 items that are really aspect changes (N1) rather than clean negation/antonym flips (`d1_s0624_N4_v3`, `d1_s0630_N4_v2/v4`), an N3 item that swaps a session-type noun rather than a named entity (`d1_s0630_N3_v2`), and four N5 items on the lecture-frequency seed where the \"extreme\" (max/min sessions, longest/shortest duration) likely collapses to the same value already given in the seed's answer for a fixed weekly schedule.",
+  "ttft_ms": 106376,
+  "ttft_stream_ms": 2322,
+  "time_to_request_ms": 25,
+  "type": "result",
+  "duration_ms": 125705,
+  "uuid": "ee5743b6-05a2-46f5-81cd-abd431a865c1"
+}

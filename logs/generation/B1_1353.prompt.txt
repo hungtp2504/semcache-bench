@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_1353
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d3_s0646_N3_v2", "axis": "N3", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to create a new Expo app?", "delta": "a different framework"}
+{"id": "d3_s0646_N4_v1", "axis": "N4", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to delete a Next.js app I created?", "delta": "deletion, not creation"}
+{"id": "d3_s0646_N4_v2", "axis": "N4", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to add Next.js to an existing app instead of creating one?", "delta": "adds to existing project, not new app"}
+{"id": "d3_s0646_N4_v3", "axis": "N4", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to build a Next.js app for production rather than create it?", "delta": "production build, not creation"}
+{"id": "d3_s0646_N4_v4", "axis": "N4", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to create a new Next.js app without using the latest version?", "delta": "non-latest version, not @latest"}
+{"id": "d3_s0646_N5_v1", "axis": "N5", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command creates a new Next.js app on the earliest supported version instead of the latest?", "delta": "earliest version, not latest"}
+{"id": "d3_s0646_N5_v2", "axis": "N5", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What is the latest Next.js version that create-next-app installs?", "delta": "asks version number, not the command"}
+{"id": "d3_s0646_N5_v3", "axis": "N5", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What is the first command to run after creating a new Next.js app?", "delta": "the following command, not the creation one"}
+{"id": "d3_s0646_N5_v4", "axis": "N5", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What was the original command for creating a Next.js app before create-next-app existed?", "delta": "earliest historical command, not the current one"}
+{"id": "d3_s0646_N6_v1", "axis": "N6", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "Why does the docs' Next.js command use the `@latest` tag?", "delta": "asks reason for @latest, presupposed command"}
+{"id": "d3_s0646_N6_v2", "axis": "N6", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What do I run to start the dev server after creating a new Next.js app?", "delta": "asks the next step, presupposed creation"}
+{"id": "d3_s0653_P1_v1", "axis": "P1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "How do the React docs define React?", "delta": null}
+{"id": "d3_s0653_P1_v2", "axis": "P1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "According to the React documentation, what exactly is React?", "delta": null}
+{"id": "d3_s0653_P1_v3", "axis": "P1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What do the React docs say React is?", "delta": null}
+{"id": "d3_s0653_P1_v4", "axis": "P1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What's React, as described in the official React docs?", "delta": null}
+{"id": "d3_s0653_P2_v1", "axis": "P2", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "Give me the React docs' definition of React.", "delta": null}
+{"id": "d3_s0653_P2_v2", "axis": "P2", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "React is described in the React docs as what?", "delta": null}
+{"id": "d3_s0653_P2_v3", "axis": "P2", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "I'm new here — how is React defined in its own documentation?", "delta": null}
+{"id": "d3_s0653_P2_v4", "axis": "P2", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "In the React docs, React is said to be what?", "delta": null}
+{"id": "d3_s0653_P3_v1", "axis": "P3", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "wat is react accordin to the react docs?", "delta": null}
+{"id": "d3_s0653_P3_v2", "axis": "P3", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "react docs definition of react??", "delta": null}
+{"id": "d3_s0653_P3_v3", "axis": "P3", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "whats react acc to the docs", "delta": null}
+{"id": "d3_s0653_P3_v4", "axis": "P3", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "hey how do the react docs defin react", "delta": null}
+{"id": "d3_s0653_N1_v1", "axis": "N1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "Who maintains React, according to the React docs?", "delta": "asks the maintainer, not the definition"}
+{"id": "d3_s0653_N1_v2", "axis": "N1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "When was React first released, according to the docs?", "delta": "asks release history, not the definition"}
+{"id": "d3_s0653_N2_v1", "axis": "N2", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What part of React is responsible for rendering user interfaces, according to the docs?", "delta": "narrows to the renderer inside React"}
+{"id": "d3_s0653_N2_v2", "axis": "N2", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What is the React ecosystem as a whole, according to the docs?", "delta": "widens to the whole ecosystem"}
+{"id": "d3_s0653_N3_v1", "axis": "N3", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What is React Native, according to the React docs?", "delta": "React Native instead of React"}
+{"id": "d3_s0653_N3_v2", "axis": "N3", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What is JSX, according to the React docs?", "delta": "JSX instead of React"}
+{"id": "d3_s0653_N4_v1", "axis": "N4", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "Why is React not considered a framework, according to the React docs?", "delta": "asks why it isn't a framework"}
+{"id": "d3_s0653_N4_v2", "axis": "N4", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What does React deliberately leave out, according to the React docs?", "delta": "omitted concerns, not what React is"}
+{"id": "d3_s0653_N4_v3", "axis": "N4", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What does React handle besides rendering user interfaces, according to the docs?", "delta": "non-rendering responsibilities, not rendering"}
+{"id": "d3_s0653_N4_v4", "axis": "N4", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "Which framework, rather than library, do the React docs recommend building with?", "delta": "a recommended framework, not React itself"}
+{"id": "d3_s0653_N5_v1", "axis": "N5", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What is the smallest building block of a React user interface called, according to the docs?", "delta": "minimal UI unit, not React's definition"}
+{"id": "d3_s0653_N5_v2", "axis": "N5", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What is the first concept the React docs teach about React?", "delta": "opening concept, not the definition"}
+{"id": "d3_s0653_N5_v3", "axis": "N5", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What is the last core concept the React docs cover?", "delta": "final concept, not the definition"}
+{"id": "d3_s0653_N5_v4", "axis": "N5", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What is the earliest React version the docs still document?", "delta": "earliest version, not what React is"}
+{"id": "d3_s0653_N6_v1", "axis": "N6", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "Why do the React docs call React a library rather than a framework?", "delta": "asks rationale, presupposed classification"}
+{"id": "d3_s0653_N6_v2", "axis": "N6", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What do the React docs say user interfaces are made out of?", "delta": "asks UI composition, presupposed concept"}
+{"id": "d3_s0659_P1_v1", "axis": "P1", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "What type of tool is WebStorm?", "delta": null}
+{"id": "d3_s0659_P1_v2", "axis": "P1", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "What category of tool does WebStorm fall into?", "delta": null}
+{"id": "d3_s0659_P1_v3", "axis": "P1", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "What kind of program is WebStorm?", "delta": null}
+{"id": "d3_s0659_P1_v4", "axis": "P1", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "Could you tell me what sort of application WebStorm is?", "delta": null}
+{"id": "d3_s0659_P2_v1", "axis": "P2", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "Describe what kind of tool WebStorm is.", "delta": null}
+{"id": "d3_s0659_P2_v2", "axis": "P2", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "WebStorm — how would it be classified as a tool?", "delta": null}
+{"id": "d3_s0659_P2_v3", "axis": "P2", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "I'd like to know the type of tool that WebStorm is.", "delta": null}
+{"id": "d3_s0659_P2_v4", "axis": "P2", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "Tell me which tool category WebStorm belongs to.", "delta": null}
+{"id": "d3_s0659_P3_v1", "axis": "P3", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "what kinda tool is webstorm", "delta": null}
+{"id": "d3_s0659_P3_v2", "axis": "P3", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "webstorm is wat type of tool?", "delta": null}
+{"id": "d3_s0659_P3_v3", "axis": "P3", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "wht kind of tool is WebStrom??", "delta": null}
+{"id": "d3_s0659_P3_v4", "axis": "P3", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "yo what sort of tool is webstorm exactly", "delta": null}
+{"id": "d3_s0659_N1_v1", "axis": "N1", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "How much does WebStorm cost?", "delta": "asks pricing, not the tool category"}
+{"id": "d3_s0659_N1_v2", "axis": "N1", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "Which company develops WebStorm?", "delta": "asks the vendor, not what kind of tool"}
+{"id": "d3_s0659_N2_v1", "axis": "N2", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "What kind of tool is WebStorm's built-in debugger?", "delta": "narrows to the debugger component only"}
+{"id": "d3_s0659_N2_v2", "axis": "N2", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "What kinds of tools are recommended for setting up a React editor?", "delta": "widens to all recommended editor tools"}
+{"id": "d3_s0659_N3_v1", "axis": "N3", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "What kind of tool is VS Code?", "delta": "a different editor entity"}
+{"id": "d3_s0659_N3_v2", "axis": "N3", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "What kind of tool is Vim?", "delta": "a different editor entity"}
+{"id": "d3_s0659_N4_v1", "axis": "N4", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "Which language is WebStorm not designed for?", "delta": "asks excluded language, not tool category"}
+{"id": "d3_s0659_N4_v2", "axis": "N4", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "What kind of tool is WebStorm explicitly not?", "delta": "asks the negated category"}
+{"id": "d3_s0659_N4_v3", "axis": "N4", "seed_question": "What kind of tool is WebStorm?", "answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "variation": "Which development task is WebStorm not intended to handle?", "delta": "asks unsupported task, not its category"}

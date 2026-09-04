@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_2906
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d4_s0144_P2_v2", "axis": "P2", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "Name the glioma type diagnosed most often in children.", "delta": null}
+{"id": "d4_s0144_P2_v3", "axis": "P2", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "Among childhood gliomas, which type tops the list?", "delta": null}
+{"id": "d4_s0144_P2_v4", "axis": "P2", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "I would like to know which glioma is diagnosed most often in kids.", "delta": null}
+{"id": "d4_s0144_P3_v1", "axis": "P3", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "wat is the most common glioma in kids?", "delta": null}
+{"id": "d4_s0144_P3_v2", "axis": "P3", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "most comon type of gliomia diagnosed in children??", "delta": null}
+{"id": "d4_s0144_P3_v3", "axis": "P3", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "commonest childhood glioma type - which one", "delta": null}
+{"id": "d4_s0144_P3_v4", "axis": "P3", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "which glioma do childern get diagnosed with most often", "delta": null}
+{"id": "d4_s0144_N1_v1", "axis": "N1", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "How is the most common childhood glioma treated?", "delta": "asks treatment, not the type name"}
+{"id": "d4_s0144_N1_v2", "axis": "N1", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "What symptoms does the most common childhood glioma cause?", "delta": "asks symptoms, not the type name"}
+{"id": "d4_s0144_N2_v1", "axis": "N2", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "What is the most common type of glioma diagnosed in infants?", "delta": "narrows to infants, not all children"}
+{"id": "d4_s0144_N2_v2", "axis": "N2", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "What is the most common type of glioma diagnosed at any age?", "delta": "widens to all ages, not just children"}
+{"id": "d4_s0144_N3_v1", "axis": "N3", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "What is the most common type of glioma diagnosed in adults?", "delta": "adults instead of children"}
+{"id": "d4_s0144_N3_v2", "axis": "N3", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "What is the most common type of embryonal tumor diagnosed in children?", "delta": "embryonal tumors instead of gliomas"}
+{"id": "d4_s0144_N4_v1", "axis": "N4", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "Which type of glioma is the least common in children?", "delta": "least common instead of most common"}
+{"id": "d4_s0144_N4_v2", "axis": "N4", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "Which common childhood brain tumor is not a glioma?", "delta": "asks a common non-glioma tumor"}
+{"id": "d4_s0144_N4_v3", "axis": "N4", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "Which type of glioma is most often misdiagnosed in children?", "delta": "asks misdiagnosis instead of diagnosis"}
+{"id": "d4_s0144_N4_v4", "axis": "N4", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "Which glioma is uncommon in children but common in adults?", "delta": "asks the glioma rare in children"}
+{"id": "d4_s0144_N5_v1", "axis": "N5", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "What is the second most common type of glioma diagnosed in children?", "delta": "second, not first, most common"}
+{"id": "d4_s0144_N5_v2", "axis": "N5", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "What is the rarest type of glioma diagnosed in children?", "delta": "rarest instead of most common"}
+{"id": "d4_s0144_N5_v3", "axis": "N5", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "Is astrocytoma the only type of glioma diagnosed in children?", "delta": "asks whether it is the sole childhood glioma"}
+{"id": "d4_s0144_N5_v4", "axis": "N5", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "Which glioma is diagnosed most often in children apart from astrocytoma?", "delta": "asks the top glioma excluding astrocytoma"}
+{"id": "d4_s0144_N6_v1", "axis": "N6", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "What is the survival rate for the most common childhood glioma?", "delta": "asks prognosis of the presupposed tumor"}
+{"id": "d4_s0144_N6_v2", "axis": "N6", "seed_question": "What is the most common type of glioma diagnosed in children?", "answer": "Astrocytoma is the most common type of glioma diagnosed in children.", "variation": "Where in the brain does the most common childhood glioma usually form?", "delta": "asks location of the presupposed tumor"}
+{"id": "d4_s0150_P1_v1", "axis": "P1", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "In which parts of the brain do about half of AT/RT tumors develop?", "delta": null}
+{"id": "d4_s0150_P1_v2", "axis": "P1", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "About half of AT/RT tumors arise in which brain regions?", "delta": null}
+{"id": "d4_s0150_P1_v3", "axis": "P1", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Where in the brain does roughly half of all AT/RT tumors occur?", "delta": null}
+{"id": "d4_s0150_P1_v4", "axis": "P1", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Which brain areas host about 50% of AT/RT tumors?", "delta": null}
+{"id": "d4_s0150_P2_v1", "axis": "P2", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Name the brain regions where about half of AT/RT tumors form.", "delta": null}
+{"id": "d4_s0150_P2_v2", "axis": "P2", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "About half of all AT/RT tumors — in what part of the brain are they found?", "delta": null}
+{"id": "d4_s0150_P2_v3", "axis": "P2", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "I would like to know the location of roughly half of AT/RT tumors in the brain.", "delta": null}
+{"id": "d4_s0150_P2_v4", "axis": "P2", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Tell me where in the brain about half of AT/RT tumors are located.", "delta": null}
+{"id": "d4_s0150_P3_v1", "axis": "P3", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "where do abt half of AT/RT tumors form in the brain?", "delta": null}
+{"id": "d4_s0150_P3_v2", "axis": "P3", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "atrt tumors - about half form where in brain??", "delta": null}
+{"id": "d4_s0150_P3_v3", "axis": "P3", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "half of at/rt tumours locatn in brain pls", "delta": null}
+{"id": "d4_s0150_P3_v4", "axis": "P3", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "wher do ~half of AT RT tumors form in the brian", "delta": null}
+{"id": "d4_s0150_N1_v1", "axis": "N1", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "How are AT/RT tumors treated?", "delta": "asks treatment, not tumor location"}
+{"id": "d4_s0150_N1_v2", "axis": "N1", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "What symptoms do AT/RT tumors cause?", "delta": "asks symptoms, not tumor location"}
+{"id": "d4_s0150_N2_v1", "axis": "N2", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Where in the brain stem do about half of AT/RT tumors form?", "delta": "narrows to sites within the brain stem"}
+{"id": "d4_s0150_N2_v2", "axis": "N2", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Where do about half of all childhood brain tumors form?", "delta": "widens from AT/RT to all childhood brain tumors"}
+{"id": "d4_s0150_N3_v1", "axis": "N3", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Where do about half of medulloblastoma tumors form in the brain?", "delta": "medulloblastoma instead of AT/RT"}
+{"id": "d4_s0150_N3_v2", "axis": "N3", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Where do about half of ependymoma tumors form in the brain?", "delta": "ependymoma instead of AT/RT"}
+{"id": "d4_s0150_N4_v1", "axis": "N4", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Where do AT/RT tumors form outside the brain?", "delta": "asks sites outside, not inside, the brain"}
+{"id": "d4_s0150_N4_v2", "axis": "N4", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Where does the other half of AT/RT tumors form in the brain?", "delta": "asks the remaining half's location"}
+{"id": "d4_s0150_N4_v3", "axis": "N4", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Do AT/RT tumors avoid the cerebellum?", "delta": "asks avoidance instead of formation there"}
+{"id": "d4_s0150_N4_v4", "axis": "N4", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Which part of the brain is never the site of an AT/RT tumor?", "delta": "asks a site never involved"}
+{"id": "d4_s0150_N5_v1", "axis": "N5", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Which single brain site is the most common location for AT/RT tumors?", "delta": "asks one top site, not the pair"}
+{"id": "d4_s0150_N5_v2", "axis": "N5", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Which brain site is the least common location for AT/RT tumors?", "delta": "asks the rarest brain location"}
+{"id": "d4_s0150_N5_v3", "axis": "N5", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Do all AT/RT tumors form in the cerebellum or brain stem?", "delta": "asks all instead of about half"}
+{"id": "d4_s0150_N5_v4", "axis": "N5", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "At most what fraction of AT/RT tumors form in the cerebellum alone?", "delta": "asks maximum fraction in the cerebellum only"}
+{"id": "d4_s0150_N6_v1", "axis": "N6", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "Why do AT/RT tumors often form in the cerebellum or brain stem?", "delta": "asks the reason for the presupposed location"}
+{"id": "d4_s0150_N6_v2", "axis": "N6", "seed_question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "variation": "How does an AT/RT tumor in the cerebellum affect a child's movement?", "delta": "asks effects of the presupposed location"}
+{"id": "d4_s0156_P1_v1", "axis": "P1", "seed_question": "What genetic disorder is a possible risk factor for childhood brain stem glioma?", "answer": "Neurofibromatosis type 1 (NF1) is a possible risk factor.", "variation": "Which inherited disorder may raise the risk of childhood brain stem glioma?", "delta": null}
+{"id": "d4_s0156_P1_v2", "axis": "P1", "seed_question": "What genetic disorder is a possible risk factor for childhood brain stem glioma?", "answer": "Neurofibromatosis type 1 (NF1) is a possible risk factor.", "variation": "What genetic condition is a possible risk factor for brain stem glioma in children?", "delta": null}
+{"id": "d4_s0156_P1_v3", "axis": "P1", "seed_question": "What genetic disorder is a possible risk factor for childhood brain stem glioma?", "answer": "Neurofibromatosis type 1 (NF1) is a possible risk factor.", "variation": "Which hereditary disease is linked to a higher risk of childhood brain stem glioma?", "delta": null}
+{"id": "d4_s0156_P1_v4", "axis": "P1", "seed_question": "What genetic disorder is a possible risk factor for childhood brain stem glioma?", "answer": "Neurofibromatosis type 1 (NF1) is a possible risk factor.", "variation": "What genetic syndrome might increase the chance of brain stem glioma in children?", "delta": null}
+{"id": "d4_s0156_P2_v1", "axis": "P2", "seed_question": "What genetic disorder is a possible risk factor for childhood brain stem glioma?", "answer": "Neurofibromatosis type 1 (NF1) is a possible risk factor.", "variation": "Childhood brain stem glioma has which genetic disorder as a possible risk factor?", "delta": null}
+{"id": "d4_s0156_P2_v2", "axis": "P2", "seed_question": "What genetic disorder is a possible risk factor for childhood brain stem glioma?", "answer": "Neurofibromatosis type 1 (NF1) is a possible risk factor.", "variation": "Name the genetic disorder that may predispose children to brain stem glioma.", "delta": null}
+{"id": "d4_s0156_P2_v3", "axis": "P2", "seed_question": "What genetic disorder is a possible risk factor for childhood brain stem glioma?", "answer": "Neurofibromatosis type 1 (NF1) is a possible risk factor.", "variation": "I would like to know the genetic disorder considered a risk factor for childhood brain stem glioma.", "delta": null}
+{"id": "d4_s0156_P2_v4", "axis": "P2", "seed_question": "What genetic disorder is a possible risk factor for childhood brain stem glioma?", "answer": "Neurofibromatosis type 1 (NF1) is a possible risk factor.", "variation": "For brain stem glioma in children, which genetic disorder counts as a possible risk factor?", "delta": null}
+{"id": "d4_s0156_P3_v1", "axis": "P3", "seed_question": "What genetic disorder is a possible risk factor for childhood brain stem glioma?", "answer": "Neurofibromatosis type 1 (NF1) is a possible risk factor.", "variation": "wat genetic disorder is a risk factor for childhood brain stem glioma?", "delta": null}

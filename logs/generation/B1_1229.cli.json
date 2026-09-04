@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 147021,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "f4335395-15c3-47b1-9d54-e06d656bc018",
+  "total_cost_usd": 0.3662172,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47172,
+    "cache_read_input_tokens": 94806,
+    "output_tokens": 15856,
+    "output_tokens_details": {
+      "thinking_tokens": 12816
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47172,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2983,
+        "cache_read_input_tokens": 64528,
+        "cache_creation_input_tokens": 12922,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12922
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15856,
+      "cacheReadInputTokens": 94806,
+      "cacheCreationInputTokens": 47172,
+      "webSearchRequests": 0,
+      "costUSD": 0.3662172,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0609_N5_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0609_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'Why' presupposes the same fact as the seed (six reactions were introduced), not a different presupposed fact; better fits N1 aspect change than N6\"}\n{\"id\":\"d2_s0609_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0616_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0616_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0616_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0616_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0616_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0616_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0616_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0616_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0616_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0616_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0616_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0616_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0616_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0616_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0616_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"random walk is already the specific example named in the seed's answer, so narrowing to random-walk approaches likely yields the same correct answer, not a differing one\"}\n{\"id\":\"d2_s0616_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"widening from KB completion to 'NLP representation learning generally' is a domain swap, not a single scope qualifier, and is off-topic for this paper\"}\n{\"id\":\"d2_s0616_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0616_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0616_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0616_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0616_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps subject/object roles (limitation of new method avoided by prior approaches) rather than a single negation/antonym flip\"}\n{\"id\":\"d2_s0616_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0616_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0616_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0616_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0616_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0616_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0616_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0622_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0622_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0622_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0622_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0622_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0622_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0622_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0622_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0622_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0622_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0622_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0622_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0622_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0622_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0622_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"the framework uses one encoder regardless of side, so source-side-only count is still 1 — same as seed's answer, not a differing one\"}\n{\"id\":\"d2_s0622_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the single shared encoder/decoder serves every pair identically, so 'per language pair' count is still 1 and 1 — same fact as seed\"}\n{\"id\":\"d2_s0622_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0622_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0622_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0622_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's answer already states the count holds 'regardless of which side they appear on,' so it still correctly answers this scenario rather than misleading\"}\n{\"id\":\"d2_s0622_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0622_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"not a negation of the seed's content; jumps to an unrelated topic (count of unsupported languages) rather than flipping a polarity in the seed question\"}\n{\"id\":\"d2_s0622_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the architecture fixes exactly one encoder, so the 'maximum it can use' is still 1 — same as the actual count, not necessarily different\"}\n{\"id\":\"d2_s0622_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps topic entirely to language count rather than flipping an extreme on the encoder/decoder count itself\"}\n{\"id\":\"d2_s0622_N5_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"the single decoder is shared identically across all pairs, so no pair uses 'more' capacity than another — no well-defined differentiated answer\"}\n{\"id\":\"d2_s0622_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps topic to number of languages tested rather than flipping the extreme on the encoder/decoder count\"}\n{\"id\":\"d2_s0622_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0622_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0628_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 126649,
+  "ttft_stream_ms": 5907,
+  "time_to_request_ms": 28,
+  "type": "result",
+  "duration_ms": 147840,
+  "uuid": "87e77259-2257-42ba-ac6f-f1f4c4626530",
+  "queued_turn_count": 0
+}

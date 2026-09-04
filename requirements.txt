@@ -1,0 +1,20 @@
+# Core (risk checks run with numpy alone via --mock; real runs need the full set)
+numpy>=2.0
+pandas>=2.2
+pyyaml>=6.0
+tqdm>=4.66
+
+# Embedding evaluation (Months 2, 5–6) — needs a Python version with torch wheels
+# (3.12/3.13 safe; check 3.14 support before creating the venv)
+torch>=2.4
+sentence-transformers>=3.0
+einops                # required by nomic-embed (trust_remote_code)
+
+# Statistics (Months 5–6)
+scipy>=1.13
+scikit-learn>=1.5
+scikit-posthocs>=0.9  # Nemenyi post-hoc / critical difference
+krippendorff>=0.6     # inter-judge agreement gate (α ≥ 0.70)
+
+# Dedupe (Month 3, T12)
+datasketch>=1.6       # MinHash

@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0050
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d4_s0112", "domain": "medical", "doc_id": "d4_0000004_6", "fact_ids": ["d4_f00167"], "question": "What are the two main types of childhood Hodgkin lymphoma?", "answer": "The two types are classical Hodgkin lymphoma and nodular lymphocyte-predominant Hodgkin lymphoma.", "generator_model": "claude-sonnet-5", "batch_id": "A_0159", "ts": "2026-08-12T08:17:24Z"}
+{"seed_id": "d4_s0119", "domain": "medical", "doc_id": "d4_0000004_7", "fact_ids": ["d4_f00180"], "question": "Which type of non-Hodgkin lymphoma is most common, and in which age group does it occur more often?", "answer": "Diffuse large B-cell lymphoma is the most common type of non-Hodgkin lymphoma, and it occurs more often in adolescents than in children.", "generator_model": "claude-sonnet-5", "batch_id": "A_0159", "ts": "2026-08-12T08:17:24Z"}
+{"seed_id": "d4_s0126", "domain": "medical", "doc_id": "d4_0000005_1", "fact_ids": ["d4_f00190"], "question": "How did anal cancer incidence and mortality trends differ between men and women from 2004 to 2013?", "answer": "From 2004 to 2013 both new cases and deaths from anal cancer increased each year; the rise in new cases was slightly higher in women, while the rise in deaths was slightly higher in men.", "generator_model": "claude-sonnet-5", "batch_id": "A_0159", "ts": "2026-08-12T08:17:24Z"}
+{"seed_id": "d4_s0132", "domain": "medical", "doc_id": "d4_0000006_1", "fact_ids": ["d4_f00197"], "question": "What proportion of metastatic brain tumors originate from lung cancer?", "answer": "Up to half of metastatic brain tumors are from lung cancer.", "generator_model": "claude-sonnet-5", "batch_id": "A_0160", "ts": "2026-08-12T08:17:26Z"}
+{"seed_id": "d4_s0134", "domain": "medical", "doc_id": "d4_0000006_1", "fact_ids": ["d4_f00199"], "question": "What functions does the cerebrum control?", "answer": "The cerebrum, the largest part of the brain, controls thinking, learning, problem solving, emotions, speech, reading, writing, and voluntary movement.", "generator_model": "claude-sonnet-5", "batch_id": "A_0160", "ts": "2026-08-12T08:17:26Z"}
+{"seed_id": "d4_s0150", "domain": "medical", "doc_id": "d4_0000006_4", "fact_ids": ["d4_f00219"], "question": "Where do about half of AT/RT tumors form in the brain?", "answer": "About half of AT/RT tumors form in the cerebellum or brain stem.", "generator_model": "claude-sonnet-5", "batch_id": "A_0161", "ts": "2026-08-12T08:18:30Z"}
+{"seed_id": "d4_s0151", "domain": "medical", "doc_id": "d4_0000006_4", "fact_ids": ["d4_f00220", "d4_f00221"], "question": "What genes are linked to an increased risk of AT/RT, and what can happen if changes in these genes are inherited?", "answer": "AT/RT may be linked to changes in the tumor suppressor genes SMARCB1 or SMARCA4. If inherited, tumors may form in two parts of the body at the same time, such as the brain and the kidney.", "generator_model": "claude-sonnet-5", "batch_id": "A_0161", "ts": "2026-08-12T08:18:30Z"}
+{"seed_id": "d4_s0155", "domain": "medical", "doc_id": "d4_0000006_5", "fact_ids": ["d4_f00232", "d4_f00233", "d4_f00234", "d4_f00235"], "question": "What are the two types of childhood brain stem glioma, and how do their growth patterns and prognoses differ?", "answer": "The two types are diffuse intrinsic pontine glioma (DIPG), a fast-growing, hard-to-treat high-grade tumor spreading through the brain stem with poor prognosis, and focal glioma, a slow-growing tumor confined to one area that is easier to treat and has a better prognosis.", "generator_model": "claude-sonnet-5", "batch_id": "A_0161", "ts": "2026-08-12T08:18:30Z"}
+{"seed_id": "d4_s0162", "domain": "medical", "doc_id": "d4_0000006_6", "fact_ids": ["d4_f00245"], "question": "What is the most common type of CNS embryonal tumor and where does it form?", "answer": "The most common type is medulloblastoma, a fast-growing tumor that forms in brain cells in the cerebellum.", "generator_model": "claude-sonnet-5", "batch_id": "A_0161", "ts": "2026-08-12T08:18:30Z"}
+{"seed_id": "d4_s0173", "domain": "medical", "doc_id": "d4_0000006_8", "fact_ids": ["d4_f00266"], "question": "At what age are childhood craniopharyngiomas most often diagnosed?", "answer": "They are most often diagnosed in children aged 5 to 14 years, and are rare in children younger than 2.", "generator_model": "claude-sonnet-5", "batch_id": "A_0162", "ts": "2026-08-12T08:18:42Z"}

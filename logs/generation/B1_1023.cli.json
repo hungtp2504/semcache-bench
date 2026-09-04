@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 186457,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "7e41b2e7-af2c-42fd-b869-e645389a9197",
+  "total_cost_usd": 0.6397523999999999,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 51590,
+    "cache_read_input_tokens": 93418,
+    "output_tokens": 20145,
+    "output_tokens_details": {
+      "thinking_tokens": 17244
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 51590,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2870,
+        "cache_read_input_tokens": 63171,
+        "cache_creation_input_tokens": 18666,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 18666
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 20145,
+      "cacheReadInputTokens": 93418,
+      "cacheCreationInputTokens": 51590,
+      "webSearchRequests": 0,
+      "costUSD": 0.6397523999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d1_s0362_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0362_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0362_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0362_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0362_N3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0362_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0362_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0362_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"final→midterm is an entity substitution (sibling exam), not a negation/antonym flip; matches N3, not N4\"}\n{\"id\":\"d1_s0362_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0362_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0362_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0362_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0362_N5_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0362_N6_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0362_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0368_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0368_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0368_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0368_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0368_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0368_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0368_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0368_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0368_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0368_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0368_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0368_P3_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0368_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0368_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0368_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrowing to a single problem set almost certainly resolves to the same course textbook, so the answer wouldn't differ from the seed's — fails N2's 'answer differs' requirement\"}\n{\"id\":\"d1_s0368_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0368_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0368_N3_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d1_s0368_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0368_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'optional rather than used' presupposes an optional-text distinction not established by the seed; reads as a presupposition shift, not a clean negation/antonym flip\"}\n{\"id\":\"d1_s0368_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'superseded edition' invokes edition history rather than negating 'used'; better characterized as entity substitution/presupposition than a polarity flip\"}\n{\"id\":\"d1_s0368_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0368_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes a range of 'usable' editions not established by seed (which names one specific required edition); fabricated extremum rather than a flip of an existing min/max\"}\n{\"id\":\"d1_s0368_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"same issue as the earliest-edition variant — presupposes an edition timeline/range not present in the seed fact\"}\n{\"id\":\"d1_s0368_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about author ordering, an unrelated facet, not a quantifier/extreme of the textbook/edition fact — matches N1, not N5\"}\n{\"id\":\"d1_s0368_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes a range of 'accepted' editions not established by seed; fabricated extremum rather than a genuine min/max flip\"}\n{\"id\":\"d1_s0368_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0368_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0374_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0374_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0374_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0374_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0374_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0374_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0374_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0374_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0374_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0374_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0374_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0374_P3_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0374_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0374_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0374_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0374_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0374_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n```",
+  "ttft_ms": 167127,
+  "ttft_stream_ms": 1944,
+  "time_to_request_ms": 25,
+  "type": "result",
+  "duration_ms": 187258,
+  "uuid": "a55e6f7d-c607-47ae-94ab-bae773890a65"
+}

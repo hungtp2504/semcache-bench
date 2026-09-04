@@ -1,0 +1,60 @@
+{"id": "d5_s0275_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "shifts from 'how is it penalized' to 'under what conditions is it exempted' — a different question target (conditions vs treatment), closer to N1 aspect change than a single negation/antonym flip", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "introduces new concept 'bảo lưu điểm' as a yes/no question rather than negating the seed question's structure; closer to N6 presupposition shift than a polarity flip", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "asks which exams are exceptions to the rule (case-listing question) rather than flipping one negation/antonym in the original question", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.5, "issue": "seed question has no existing quantifier to flip; introduces a false presupposition that the deduction is variable up to a max, closer to N6 than N5", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "asks max unexcused absences allowed — a wholly different fact/aspect, not a quantifier flip on the seed's content", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "adds a 'first offense' scope qualifier rather than flipping a min/max or earliest/latest extreme; closer to N2 scope change", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0275_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "the consecutive-warning cap rule likely applies uniformly regardless of year of study, so the correct answer for first-year students is unchanged from the seed's answer", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "Thông tư 08/2021/TT-BGDĐT is the actual source regulation for this rule, not a substituted sibling entity, so the answer would stay the same rather than differ", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "flips max to a lower-bound framing ('ít hơn'), which is a quantifier/extreme change rather than a negation/antonym flip — closer to N5", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "asks for cases where consecutive warnings are barred — a case-listing aspect question, not a single negation/antonym flip", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "asks about conditions to avoid a warning altogether — a different facet (N1-like), not a polarity flip of the cap question", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "shifts topic to the expulsion trigger point rather than flipping an extreme within the same warning-cap question — closer to N1 aspect change", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0281_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "narrows 'được cấp gì' to 'được cấp chứng nhận gì', presupposing the answer is a certification type and potentially excluding the transcript option from the seed answer — a scope narrowing rather than pure lexical paraphrase", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "document-issuance policy for non-graduating students likely applies uniformly regardless of nationality, so the correct answer for international students is unchanged from the seed's answer", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}
+{"id": "d5_s0287_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "substitutes 'confirmation of completion' for 'confirmation of participation' — a different facet/type of confirmation rather than a negation/antonym flip", "batch_id": "B1_3372", "ts": "2026-08-28T02:09:41Z"}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "semcache-bench canonical variation record (PLAN §14)",
+  "type": "object",
+  "required": ["id", "domain", "seed_id", "seed_question", "answer", "variation",
+               "axis", "axis_group", "expected_label", "generator_model", "batch_id", "ts"],
+  "properties": {
+    "id":            {"type": "string", "pattern": "^d[1-5]_s[0-9]{4}_(P[1-3]|N[1-6])_v[0-9]+$"},
+    "domain":        {"enum": ["university_admin", "academic_nlp", "tech_docs", "medical", "vietnamese_admin_edu"]},
+    "seed_id":       {"type": "string", "pattern": "^d[1-5]_s[0-9]{4}$"},
+    "seed_question": {"type": "string", "minLength": 1},
+    "answer":        {"type": "string", "minLength": 1},
+    "variation":     {"type": "string", "minLength": 1},
+    "axis":          {"enum": ["P1", "P2", "P3", "N1", "N2", "N3", "N4", "N5", "N6"]},
+    "axis_group":    {"enum": ["invariant", "slope", "cliff"]},
+    "expected_label":{"enum": ["HIT", "MISS"],
+                      "description": "DERIVED FROM AXIS BY CODE (P*->HIT, N*->MISS). Never set by a model."},
+    "delta":         {"type": ["string", "null"],
+                      "description": "N-axes only: <=12 words on what the variant asks for instead"},
+    "generator_model": {"type": "string"},
+    "batch_id":      {"type": "string", "pattern": "^[A-Z0-9]+_[0-9]{4}$"},
+    "judge1":        {"$ref": "#/$defs/judgment"},
+    "judge2":        {"$ref": "#/$defs/judgment"},
+    "ts":            {"type": "string", "format": "date-time"}
+  },
+  "$defs": {
+    "judgment": {
+      "type": "object",
+      "required": ["model", "axis_ok", "conf"],
+      "properties": {
+        "model":   {"type": "string"},
+        "axis_ok": {"type": "boolean"},
+        "conf":    {"type": "number", "minimum": 0, "maximum": 1},
+        "issue":   {"type": ["string", "null"]}
+      }
+    }
+  }
+}

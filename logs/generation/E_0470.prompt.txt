@@ -1,0 +1,73 @@
+You are the verification tier of a semantic cache. The first tier (embedding similarity)
+proposed serving a stored answer to a new query. You see both questions and the stored
+answer. Decide whether serving is safe.
+
+DECISION RULE
+SERVE      — the stored answer is a fully correct and complete answer to the new query.
+REGENERATE — anything else: different entity/version, flipped polarity, different
+             quantifier or extreme, different facet or scope, different presupposed fact,
+             or you are unsure. When in doubt, REGENERATE (a false hit sends a user the
+             wrong answer; a false miss only costs one LLM call).
+
+Pay attention to small discrete differences the first tier is blind to: "1" vs "2",
+negation words, earliest/latest, min/max, sibling entities. Do not be fooled by large
+surface differences that change nothing (typos, missing diacritics, paraphrase).
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"pair_id":"...","decision":"SERVE|REGENERATE","conf":<0..1>}
+
+
+[BATCH INPUT]
+batch_id: E_0470
+pairs (JSONL — pair_id, cached_question, cached_answer, new_query):
+
+{"pair_id": "d1_s0331_P3_v1", "cached_question": "What are the prerequisites for Transport Processes in the Environment (1.061)?", "cached_answer": "18.03 or equivalent; 1.060 or equivalent; or 10.301 or equivalent.", "new_query": "what r the prereqs for transport processes in the environment (1.061)?"}
+{"pair_id": "d1_s0331_P3_v3", "cached_question": "What are the prerequisites for Transport Processes in the Environment (1.061)?", "cached_answer": "18.03 or equivalent; 1.060 or equivalent; or 10.301 or equivalent.", "new_query": "wht are the prerequisits for Transport Processes in the Enviroment 1.061"}
+{"pair_id": "d1_s0331_P3_v4", "cached_question": "What are the prerequisites for Transport Processes in the Environment (1.061)?", "cached_answer": "18.03 or equivalent; 1.060 or equivalent; or 10.301 or equivalent.", "new_query": "prereq for 1.061 transport processes in the environment — which ones"}
+{"pair_id": "d1_s0332_N2_v2", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "How is the final grade broken down in 1.061 for graduate students?"}
+{"pair_id": "d1_s0332_N4_v1", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "Which components do not count toward the final grade in 1.061?"}
+{"pair_id": "d1_s0332_N5_v1", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "Which component is worth the most in the 1.061 final grade?"}
+{"pair_id": "d1_s0332_P1_v1", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "What is the grade breakdown for 1.061?"}
+{"pair_id": "d1_s0332_P1_v2", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "How is the course grade divided up in 1.061?"}
+{"pair_id": "d1_s0332_P1_v3", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "What are the grading weights in 1.061?"}
+{"pair_id": "d1_s0332_P2_v1", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "Give me the breakdown of the final grade for 1.061."}
+{"pair_id": "d1_s0332_P2_v2", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "In 1.061, the final grade is made up of what components?"}
+{"pair_id": "d1_s0332_P2_v3", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "I'd like to see how 1.061 splits the final grade among its components."}
+{"pair_id": "d1_s0332_P2_v4", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "Could you break down 1.061's final grade for me?"}
+{"pair_id": "d1_s0332_P3_v2", "cached_question": "How is the final grade broken down in 1.061?", "cached_answer": "Homework is 25%, three quizzes are 25% each (75% total), and there is also a final exam.", "new_query": "1.061 grade breakdown ??"}
+{"pair_id": "d1_s0336_N1_v2", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "What topics did MIT course 1.101 cover in Fall 2006?"}
+{"pair_id": "d1_s0336_N2_v1", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "Which of MIT 1.101's three instructors led the lab sections in Fall 2006?"}
+{"pair_id": "d1_s0336_N2_v2", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "Who were all the teaching staff for MIT course 1.101 in Fall 2006, including teaching assistants?"}
+{"pair_id": "d1_s0336_N3_v2", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "Who are the three instructors for MIT course 1.102 in Fall 2006?"}
+{"pair_id": "d1_s0336_N5_v2", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "Who was the first instructor listed for MIT course 1.101 in Fall 2006?"}
+{"pair_id": "d1_s0336_N5_v4", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "Who most recently taught MIT course 1.101?"}
+{"pair_id": "d1_s0336_N6_v1", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "How did MIT 1.101's three instructors divide the lecturing in Fall 2006?"}
+{"pair_id": "d1_s0336_N6_v2", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "What final project did MIT 1.101's three instructors require in Fall 2006?"}
+{"pair_id": "d1_s0336_P1_v2", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "Who were the three faculty members leading MIT 1.101 during Fall 2006?"}
+{"pair_id": "d1_s0336_P1_v3", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "Name the trio of instructors running MIT's 1.101 in the fall of 2006."}
+{"pair_id": "d1_s0336_P1_v4", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "Who are the three teaching staff listed for MIT course 1.101 in Fall 2006?"}
+{"pair_id": "d1_s0336_P2_v2", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "Tell me the three instructors of MIT 1.101 for the Fall 2006 term."}
+{"pair_id": "d1_s0336_P2_v3", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "I'm looking up MIT 1.101 from Fall 2006 — who were its three instructors?"}
+{"pair_id": "d1_s0336_P3_v1", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "who are the 3 instructors for mit 1.101 in fall 2006?"}
+{"pair_id": "d1_s0336_P3_v3", "cached_question": "Who are the three instructors for MIT course 1.101 in Fall 2006?", "cached_answer": "Prof. Heidi Nepf, Prof. Herbert Einstein, and Prof. Louis Bucciarelli.", "new_query": "3 instructers for course 1.101 at mit, fall 2006"}
+{"pair_id": "d1_s0337_N1_v1", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "What reading is assigned for Week 2 of 1.101?"}
+{"pair_id": "d1_s0337_N1_v2", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "What is the lecture topic in Week 2 of 1.101?"}
+{"pair_id": "d1_s0337_N2_v1", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "What calibration step is done before the Week 2 lab of 1.101?"}
+{"pair_id": "d1_s0337_N2_v2", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "What lab activities are done during the first month of 1.101?"}
+{"pair_id": "d1_s0337_N3_v1", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "What lab activity is done in Week 3 of 1.101?"}
+{"pair_id": "d1_s0337_N3_v2", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "What lab activity is done in Week 2 of 1.061?"}
+{"pair_id": "d1_s0337_N4_v1", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "Which lab activity is skipped in Week 2 of 1.101?"}
+{"pair_id": "d1_s0337_N5_v3", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "What is the earliest week of 1.101 that includes a lab activity?"}
+{"pair_id": "d1_s0337_N5_v4", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "In which week does the latest-scheduled lab activity of 1.101 occur?"}
+{"pair_id": "d1_s0337_P1_v2", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "What do students do in the Week 2 lab of 1.101?"}
+{"pair_id": "d1_s0337_P1_v4", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "Which hands-on activity happens during Week 2 of 1.101?"}
+{"pair_id": "d1_s0337_P2_v1", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "Tell me the lab activity carried out in Week 2 of 1.101."}
+{"pair_id": "d1_s0337_P2_v3", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "I'd like to know what the Week 2 lab of 1.101 involves."}
+{"pair_id": "d1_s0337_P3_v4", "cached_question": "What lab activity is done in Week 2 of 1.101?", "cached_answer": "Students measure pH using a glass electrode sensor.", "new_query": "week2 lab 1.101, whats the activity"}
+{"pair_id": "d1_s0338_N1_v1", "cached_question": "Who gives the Week 4 lecture on Acid/Base Chemistry in 1.101?", "cached_answer": "Prof. Phil Gschwend.", "new_query": "What readings are assigned for the Week 4 Acid/Base Chemistry lecture in 1.101?"}
+{"pair_id": "d1_s0338_N1_v2", "cached_question": "Who gives the Week 4 lecture on Acid/Base Chemistry in 1.101?", "cached_answer": "Prof. Phil Gschwend.", "new_query": "What lab accompanies the Week 4 Acid/Base Chemistry topic in 1.101?"}
+{"pair_id": "d1_s0338_N2_v1", "cached_question": "Who gives the Week 4 lecture on Acid/Base Chemistry in 1.101?", "cached_answer": "Prof. Phil Gschwend.", "new_query": "Who gives all of the Week 4 lectures in 1.101?"}
+{"pair_id": "d1_s0338_N3_v1", "cached_question": "Who gives the Week 4 lecture on Acid/Base Chemistry in 1.101?", "cached_answer": "Prof. Phil Gschwend.", "new_query": "Who gives the Week 5 lecture on Acid/Base Chemistry in 1.101?"}
+{"pair_id": "d1_s0338_N4_v2", "cached_question": "Who gives the Week 4 lecture on Acid/Base Chemistry in 1.101?", "cached_answer": "Prof. Phil Gschwend.", "new_query": "Who gives the Week 4 lecture in 1.101 that is not on Acid/Base Chemistry?"}
+{"pair_id": "d1_s0338_N6_v1", "cached_question": "Who gives the Week 4 lecture on Acid/Base Chemistry in 1.101?", "cached_answer": "Prof. Phil Gschwend.", "new_query": "What office hours does the Week 4 Acid/Base Chemistry lecturer hold in 1.101?"}
+{"pair_id": "d1_s0338_N6_v2", "cached_question": "Who gives the Week 4 lecture on Acid/Base Chemistry in 1.101?", "cached_answer": "Prof. Phil Gschwend.", "new_query": "Which department is the Week 4 Acid/Base Chemistry lecturer in 1.101 from?"}

@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_1287
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d4_s0495_P1_v2", "axis": "P1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How common is breast cancer in pregnant women?", "delta": null}
+{"id": "d4_s0495_P1_v3", "axis": "P1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How frequently does breast cancer happen in pregnancy?", "delta": null}
+{"id": "d4_s0495_P1_v4", "axis": "P1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "What is the rate of breast cancer among pregnancies?", "delta": null}
+{"id": "d4_s0495_P2_v1", "axis": "P2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Tell me how often breast cancer shows up during pregnancy.", "delta": null}
+{"id": "d4_s0495_P2_v2", "axis": "P2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "During pregnancy, breast cancer occurs at what frequency?", "delta": null}
+{"id": "d4_s0495_P2_v3", "axis": "P2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "In how many pregnancies does breast cancer occur?", "delta": null}
+{"id": "d4_s0495_P2_v4", "axis": "P2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Give me the incidence of breast cancer in pregnancy.", "delta": null}
+{"id": "d4_s0495_P3_v1", "axis": "P3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "how often does breast cancer happen durin pregnancy", "delta": null}
+{"id": "d4_s0495_P3_v2", "axis": "P3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "breast cancer during pregnancy — how comon is it?", "delta": null}
+{"id": "d4_s0495_P3_v3", "axis": "P3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "hw offen does breast cancr occur in pregnancy??", "delta": null}
+{"id": "d4_s0495_P3_v4", "axis": "P3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "frequency of breast ca in pregnancy btw", "delta": null}
+{"id": "d4_s0495_N1_v1", "axis": "N1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How is breast cancer treated during pregnancy?", "delta": "asks treatment, not frequency"}
+{"id": "d4_s0495_N1_v2", "axis": "N1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How is breast cancer diagnosed during pregnancy?", "delta": "asks diagnosis, not how often it occurs"}
+{"id": "d4_s0495_N2_v1", "axis": "N2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer occur during the first trimester of pregnancy?", "delta": "narrows to the first trimester"}
+{"id": "d4_s0495_N2_v2", "axis": "N2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer occur in women of childbearing age?", "delta": "widens to all women of childbearing age"}
+{"id": "d4_s0495_N3_v1", "axis": "N3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does cervical cancer occur during pregnancy?", "delta": "cervical instead of breast cancer"}
+{"id": "d4_s0495_N3_v2", "axis": "N3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer occur during breastfeeding?", "delta": "breastfeeding instead of pregnancy"}
+{"id": "d4_s0495_N4_v1", "axis": "N4", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer go undetected during pregnancy?", "delta": "missed diagnoses, not occurrence rate"}
+{"id": "d4_s0495_N4_v2", "axis": "N4", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer occur outside of pregnancy in women the same age?", "delta": "rate in non-pregnant women instead"}
+{"id": "d4_s0495_N4_v3", "axis": "N4", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does pregnancy occur in women already treated for breast cancer?", "delta": "pregnancy after cancer, relation reversed"}
+{"id": "d4_s0495_N4_v4", "axis": "N4", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often is a breast lump found during pregnancy noncancerous?", "delta": "benign lump rate, not cancer rate"}
+{"id": "d4_s0495_N5_v1", "axis": "N5", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "What is the highest reported rate of breast cancer during pregnancy?", "delta": "maximum reported rate, not the typical one"}
+{"id": "d4_s0495_N5_v2", "axis": "N5", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "What is the lowest reported frequency of breast cancer in pregnancy?", "delta": "minimum reported rate, not the usual figure"}
+{"id": "d4_s0495_N5_v3", "axis": "N5", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Which cancer occurs most often during pregnancy?", "delta": "most frequent pregnancy cancer, not breast cancer's rate"}
+{"id": "d4_s0495_N5_v4", "axis": "N5", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Which cancer occurs least often during pregnancy?", "delta": "rarest pregnancy cancer, not breast cancer's rate"}
+{"id": "d4_s0495_N6_v1", "axis": "N6", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Does breast cancer that occurs during pregnancy affect the baby?", "delta": "asks fetal effects, presupposed occurrence"}
+{"id": "d4_s0495_N6_v2", "axis": "N6", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "What is the survival rate for breast cancer that occurs during pregnancy?", "delta": "asks prognosis, presupposed occurrence"}
+{"id": "d4_s0501_P1_v1", "axis": "P1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "How would you define breast cancer?", "delta": null}
+{"id": "d4_s0501_P1_v2", "axis": "P1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What does the term breast cancer mean?", "delta": null}
+{"id": "d4_s0501_P1_v3", "axis": "P1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "Can you explain what breast cancer is?", "delta": null}
+{"id": "d4_s0501_P1_v4", "axis": "P1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What exactly is breast cancer as a disease?", "delta": null}
+{"id": "d4_s0501_P2_v1", "axis": "P2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "Give me a definition of breast cancer.", "delta": null}
+{"id": "d4_s0501_P2_v2", "axis": "P2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "Breast cancer is defined as what?", "delta": null}
+{"id": "d4_s0501_P2_v3", "axis": "P2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "Describe breast cancer for me.", "delta": null}
+{"id": "d4_s0501_P2_v4", "axis": "P2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "I'd like an explanation of what breast cancer is.", "delta": null}
+{"id": "d4_s0501_P3_v1", "axis": "P3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "wat is breast cancer", "delta": null}
+{"id": "d4_s0501_P3_v2", "axis": "P3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "breast cancer — whats that exactly?", "delta": null}
+{"id": "d4_s0501_P3_v3", "axis": "P3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "whats brest cancr btw", "delta": null}
+{"id": "d4_s0501_P3_v4", "axis": "P3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "explain breast cancr plz", "delta": null}
+{"id": "d4_s0501_N1_v1", "axis": "N1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What causes breast cancer?", "delta": "asks causes, not the definition"}
+{"id": "d4_s0501_N1_v2", "axis": "N1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What are the symptoms of breast cancer?", "delta": "asks symptoms, not what it is"}
+{"id": "d4_s0501_N2_v1", "axis": "N2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is inflammatory breast cancer?", "delta": "narrows to one subtype"}
+{"id": "d4_s0501_N2_v2", "axis": "N2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is cancer in general?", "delta": "widens from breast cancer to all cancer"}
+{"id": "d4_s0501_N3_v1", "axis": "N3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is ovarian cancer?", "delta": "ovarian instead of breast cancer"}
+{"id": "d4_s0501_N3_v2", "axis": "N3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is a breast cyst?", "delta": "a breast cyst instead of breast cancer"}
+{"id": "d4_s0501_N4_v1", "axis": "N4", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is a benign breast tumor?", "delta": "benign growth instead of malignant cancer"}
+{"id": "d4_s0501_N4_v2", "axis": "N4", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is cancer that spreads to the breast from elsewhere called?", "delta": "cancer arriving in the breast, not forming there"}
+{"id": "d4_s0501_N4_v3", "axis": "N4", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What are abnormal but noncancerous breast cells called?", "delta": "non-malignant abnormal cells, not cancer"}
+{"id": "d4_s0501_N4_v4", "axis": "N4", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is healthy, cancer-free breast tissue made of?", "delta": "normal tissue composition, not the disease"}
+{"id": "d4_s0501_N5_v1", "axis": "N5", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is the most common type of breast cancer?", "delta": "most common subtype, not the definition"}
+{"id": "d4_s0501_N5_v2", "axis": "N5", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is the rarest form of breast cancer?", "delta": "rarest subtype, not the definition"}
+{"id": "d4_s0501_N5_v3", "axis": "N5", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is the earliest stage of breast cancer called?", "delta": "earliest stage, not the general definition"}
+{"id": "d4_s0501_N5_v4", "axis": "N5", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is the most advanced stage of breast cancer called?", "delta": "latest stage, not the general definition"}
+{"id": "d4_s0501_N6_v1", "axis": "N6", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "How do the malignant cells in the breast spread to other tissues?", "delta": "asks spread mechanism, presupposed by definition"}
+{"id": "d4_s0501_N6_v2", "axis": "N6", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "Can men get breast cancer, since they also have breast tissue?", "delta": "asks about men, presupposing breast tissue"}
+{"id": "d4_s0507_P1_v1", "axis": "P1", "seed_question": "What rank does breast cancer hold as a cause of cancer death among American women?", "answer": "Breast cancer is the second leading cause of death from cancer in American women.", "variation": "Where does breast cancer rank among causes of cancer death in American women?", "delta": null}
+{"id": "d4_s0507_P1_v2", "axis": "P1", "seed_question": "What rank does breast cancer hold as a cause of cancer death among American women?", "answer": "Breast cancer is the second leading cause of death from cancer in American women.", "variation": "What position does breast cancer occupy as a cause of cancer death in U.S. women?", "delta": null}
+{"id": "d4_s0507_P1_v3", "axis": "P1", "seed_question": "What rank does breast cancer hold as a cause of cancer death among American women?", "answer": "Breast cancer is the second leading cause of death from cancer in American women.", "variation": "How is breast cancer ranked as a cause of cancer death for American women?", "delta": null}
+{"id": "d4_s0507_P1_v4", "axis": "P1", "seed_question": "What rank does breast cancer hold as a cause of cancer death among American women?", "answer": "Breast cancer is the second leading cause of death from cancer in American women.", "variation": "As a cause of cancer deaths among women in America, what rank does breast cancer have?", "delta": null}
+{"id": "d4_s0507_P2_v1", "axis": "P2", "seed_question": "What rank does breast cancer hold as a cause of cancer death among American women?", "answer": "Breast cancer is the second leading cause of death from cancer in American women.", "variation": "Tell me breast cancer's rank as a cause of cancer death among American women.", "delta": null}

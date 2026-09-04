@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 58504,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "d5c03f8f-c187-441e-a1a0-adc6395a5dc3",
+  "total_cost_usd": 0.31140750000000006,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 29988,
+    "cache_read_input_tokens": 30245,
+    "output_tokens": 8160,
+    "output_tokens_details": {
+      "thinking_tokens": 3681
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 29988,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8160,
+        "cache_read_input_tokens": 30245,
+        "cache_creation_input_tokens": 29988,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 29988
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 8160,
+      "cacheReadInputTokens": 30245,
+      "cacheCreationInputTokens": 29988,
+      "webSearchRequests": 0,
+      "costUSD": 0.31140750000000006,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_exams\",\"statement\":\"Course 10.34 'Numerical Methods Applied to Chemical Engineering' is instructed by Prof. William Green, Jr. and Prof. James W. Swan.\",\"source_span\":\"Instructors\\nProf. William Green, Jr.\\nProf. James W. Swan\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_exams\",\"statement\":\"The course was taught in Fall 2015 at the Graduate level.\",\"source_span\":\"10.34 | Fall 2015 | Graduate\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_exams\",\"statement\":\"The course is offered by the Chemical Engineering department.\",\"source_span\":\"Departments\\nChemical Engineering\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_exams\",\"statement\":\"Preparation materials for quizzes and the final exam include Quiz 1 Review, Practice Quiz 1, Practice Quiz 1 Solution, Quiz 2 Review, Practice Quiz 2, Practice Quiz 2 Solution, and Final Exam Review, all as PDFs.\",\"source_span\":\"Quiz 1 Review (PDF)\\nPractice Quiz 1 (PDF)\\nPractice Quiz 1 Solution (PDF)\\nQuiz 2 Review (PDF)\\nPractice Quiz 2 (PDF)\\nPractice Quiz 2 Solution (PDF)\\nFinal Exam Review (PDF)\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_exams\",\"fact_refs\":[0,1],\"question\":\"Who taught MIT course 10.34, Numerical Methods Applied to Chemical Engineering, and in what term was it offered?\",\"answer\":\"Prof. William Green, Jr. and Prof. James W. Swan taught it in Fall 2015 as a graduate-level course.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_exams\",\"fact_refs\":[1,2],\"question\":\"What level and department is MIT's 10.34 course associated with?\",\"answer\":\"It is a graduate-level course offered by the Chemical Engineering department.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_exams\",\"fact_refs\":[3],\"question\":\"What materials can students use to prepare for quizzes and the final exam in 10.34?\",\"answer\":\"Quiz 1 Review, Practice Quiz 1 with its solution, Quiz 2 Review, Practice Quiz 2 with its solution, and a Final Exam Review, all provided as PDFs.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_exams\",\"fact_refs\":[3],\"question\":\"Is a practice solution provided for Quiz 2 in MIT's 10.34 course?\",\"answer\":\"Yes, a Practice Quiz 2 Solution PDF is provided.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"statement\":\"10.34 lectures meet 3 sessions per week, 1 hour per session.\",\"source_span\":\"Lectures: 3 sessions / week, 1 hour / session\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"statement\":\"The final grade is composed of Final Exam 40%, Midterm Quizzes 30%, and Homework 30%.\",\"source_span\":\"Final Exam\\n40%\\nMidterm Quizzes\\n30%\\nHomework\\n30%\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"statement\":\"Students may not accept, read, or use any homework from previous years, though using previous years' quizzes is acceptable.\",\"source_span\":\"accept, read, or use any homeworks from previous years (quizzes are fine).\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"statement\":\"The course nominally requires about 9 hours per week on average.\",\"source_span\":\"This course nominally requires 9 hours per week on average\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"statement\":\"The required textbook is Kenneth J. Beers' 'Numerical Methods for Chemical Engineering: Applications in MATLAB,' Cambridge University Press, 2006, ISBN 9780521859714.\",\"source_span\":\"Required textbook: Beers, Kenneth J. Numerical Methods for Chemical Engineering: Applications in MATLAB. Cambridge University Press, 2006. ISBN: 9780521859714.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"statement\":\"The reference book Press, W.H., 'Numerical Recipes 3rd Edition: The Art of Scientific Computing' (Cambridge University Press, 2007, ISBN 9780521880688), provides short clear synopses of methods for many types of problems.\",\"source_span\":\"Press, W. H. Numerical Recipes 3rd Edition: The Art of Scientific Computing. Cambridge University Press, 2007. ISBN: 9780521880688... This book provides short clear synopses of methods for many types of problems.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"fact_refs\":[1],\"question\":\"How is the final grade determined in MIT's 10.34 course?\",\"answer\":\"The final grade is 40% Final Exam, 30% Midterm Quizzes, and 30% Homework.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"fact_refs\":[0],\"question\":\"How many lecture sessions per week does 10.34 have, and how long is each session?\",\"answer\":\"There are three lecture sessions per week, each lasting one hour.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"fact_refs\":[3],\"question\":\"What is the required textbook for 10.34, including its ISBN?\",\"answer\":\"Kenneth J. Beers' 'Numerical Methods for Chemical Engineering: Applications in MATLAB' (Cambridge University Press, 2006), ISBN 9780521859714.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"fact_refs\":[4],\"question\":\"About how many hours per week does 10.34 nominally require of students?\",\"answer\":\"About 9 hours per week on average.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"fact_refs\":[2],\"question\":\"Under the 10.34 homework policy, can students use homework solutions from previous years?\",\"answer\":\"No, students may not accept, read, or use homework from previous years, though using previous years' quizzes is fine.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-34-numerical-methods-applied-to-chemi_syllabus\",\"fact_refs\":[5],\"question\":\"Which reference book for 10.34 is described as providing short, clear synopses of methods for many types of problems?\",\"answer\":\"Press, W.H.'s 'Numerical Recipes 3rd Edition: The Art of Scientific Computing' (Cambridge University Press, 2007, ISBN 9780521880688).\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"statement\":\"Course 10.37 'Chemical and Biological Reaction Engineering' was taught in Spring 2007 at the Undergraduate level by Prof. K. Dane Wittrup and Prof. William Green, Jr.\",\"source_span\":\"10.37 | Spring 2007 | Undergraduate\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"statement\":\"Assignment solutions were prepared by David Adrian, Karen Daniel, and Bin Pan.\",\"source_span\":\"The following assignment solutions were prepared by David Adrian, Karen Daniel, and Bin Pan.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"statement\":\"Problem set 8's problem 11-5 contains a typo: the reactor pipe length should be 20 cm, not 20 m.\",\"source_span\":\"There is a typo in the problem statement for 11-5. The length of the reactor pipe should be 20 cm, not 20 m.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"statement\":\"For problem set 8, at 500°C the viscosity of hydrogen is 0.015 centipoise and the viscosities of cyclohexane and benzene are both 0.1 centipoise.\",\"source_span\":\"At 500oC, the viscosity of hydrogen is 0.015 centipoise and the viscosities of cyclohexane and benzene are both 0.1 centipoise.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"statement\":\"For problem set 8, the diffusivity of all species (Dab) is assumed to be 0.857 cm2/s at the reactor's temperature and pressure.\",\"source_span\":\"Assume the diffusivity of all species (D ab ) is 0.857 cm 2 /s at the reactor T and P\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"statement\":\"The WebLab experiment studies the reaction of phenolphthalein in aqueous sodium hydroxide solution, comparing an ideal CSTR model against a non-ideal bypass/dead volume model.\",\"source_span\":\"A reaction of phenolphthalein occurs in aqueous sodium hydroxide solution.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"statement\":\"The WebLab files are courtesy of Andreas Braumann and Michael Goodson.\",\"source_span\":\"These files are courtesy of Andreas Braumann and Michael Goodson. Used with permission.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"fact_refs\":[0],\"question\":\"Who taught MIT's 10.37 Chemical and Biological Reaction Engineering course in Spring 2007, and at what level was it offered?\",\"answer\":\"Prof. K. Dane Wittrup and Prof. William Green, Jr. taught it as an undergraduate course in Spring 2007.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"fact_refs\":[1],\"question\":\"Who prepared the assignment solutions for MIT's 10.37 course?\",\"answer\":\"David Adrian, Karen Daniel, and Bin Pan prepared them.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"fact_refs\":[2],\"question\":\"What correction was noted for the reactor pipe length in problem set 8's problem 11-5?\",\"answer\":\"The reactor pipe length should be 20 cm, not 20 m as stated in the problem.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"fact_refs\":[3],\"question\":\"In problem set 8, what viscosity values are given for hydrogen, cyclohexane, and benzene at 500°C?\",\"answer\":\"Hydrogen has a viscosity of 0.015 centipoise, while cyclohexane and benzene each have a viscosity of 0.1 centipoise.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"fact_refs\":[4],\"question\":\"What diffusivity value should be assumed for all species in problem set 8?\",\"answer\":\"A diffusivity (Dab) of 0.857 cm²/s at the reactor's temperature and pressure.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-37-chemical-and-biological-reaction-e_assignments\",\"fact_refs\":[5,6],\"question\":\"What chemical reaction is studied in the 10.37 WebLab experiment, and who provided the WebLab files?\",\"answer\":\"The WebLab studies the reaction of phenolphthalein in aqueous sodium hydroxide solution; the files are courtesy of Andreas Braumann and Michael Goodson.\"}",
+  "ttft_ms": 31590,
+  "ttft_stream_ms": 2424,
+  "time_to_request_ms": 20,
+  "type": "result",
+  "duration_ms": 58753,
+  "uuid": "2609a486-d76b-4650-ac00-2f3b3d03bbdf"
+}

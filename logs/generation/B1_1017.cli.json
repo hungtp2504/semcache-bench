@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 219425,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "42343aaf-ad40-438f-8af3-e50fc9692ca6",
+  "total_cost_usd": 0.6752097,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 51846,
+    "cache_read_input_tokens": 90839,
+    "output_tokens": 22458,
+    "output_tokens_details": {
+      "thinking_tokens": 19117
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 51846,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3276,
+        "cache_read_input_tokens": 60592,
+        "cache_creation_input_tokens": 21501,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 21501
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 22458,
+      "cacheReadInputTokens": 90839,
+      "cacheCreationInputTokens": 51846,
+      "webSearchRequests": 0,
+      "costUSD": 0.6752097,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0284_N3_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"1.051 shares the same 1.xxx prefix (Course 1 = CEE), almost certainly still offered by CEE, so the answer doesn't necessarily change\"}\n{\"id\":\"d1_s0284_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0284_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0284_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"'cross-lists' is a different facet/concept from 'offers', not a negation/antonym flip — this is an aspect change\"}\n{\"id\":\"d1_s0284_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps the queried entity from department to course in addition to negating, more than a single polarity flip\"}\n{\"id\":\"d1_s0284_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the course was discontinued, which isn't established (seed says CEE currently offers it) — a presupposition shift, not a clean negation\"}\n{\"id\":\"d1_s0284_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts from the specific course 1.054 to a topic-wide count of concrete-structures courses; not a minimal extreme modifier on the same question, and CEE plausibly still tops that count\"}\n{\"id\":\"d1_s0284_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes multiple departments offered 1.054 over time, which isn't established; likely still CEE, so answer not necessarily different\"}\n{\"id\":\"d1_s0284_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"same presupposition problem as 'earliest' — likely still CEE, not necessarily a different answer\"}\n{\"id\":\"d1_s0284_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes multiple listed departments and an arbitrary list order; not a genuine min/max quantifier and likely no well-defined different answer\"}\n{\"id\":\"d1_s0284_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0284_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0288_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0288_P1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0288_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0288_P1_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0288_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0288_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0288_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0288_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0288_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0288_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0288_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0288_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0288_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0288_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0288_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0288_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0288_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0288_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0288_N4_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0288_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks break length between sessions, a different facet (gap duration), not a negation/antonym of meeting frequency or session length\"}\n{\"id\":\"d1_s0288_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a new presupposed attribute (optional vs required attendance) absent from the seed; a presupposition shift, not a polarity flip\"}\n{\"id\":\"d1_s0288_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes extra off-schedule sessions exist, which isn't established; a presupposition/scope shift rather than a clean negation\"}\n{\"id\":\"d1_s0288_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes variable session lengths, but the seed states a uniform 1.5-hour length, so 'longest' likely equals the same value\"}\n{\"id\":\"d1_s0288_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"same issue as 'longest' — presupposes variability not established by the seed's uniform 1.5h duration\"}\n{\"id\":\"d1_s0288_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes weekly session count varies; seed states a constant 2/week, so the weekly max would typically equal 2, same as seed\"}\n{\"id\":\"d1_s0288_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0288_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0288_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0176_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0176_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0176_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0176_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0176_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0176_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0176_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0176_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0176_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0176_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0176_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0176_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0176_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0176_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0176_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0176_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the 1.03x series is entirely within Course 1 (CEE), so the answer set is still just CEE, essentially unchanged from the seed despite plural framing\"}\n{\"id\":\"d1_s0176_N3_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"1.040 shares the same 1.xxx prefix and is almost certainly also CEE, so the answer doesn't necessarily change\"}\n{\"id\":\"d1_s0176_N3_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"1.050 shares the same 1.xxx prefix and is almost certainly also CEE, so the answer likely doesn't change\"}\n{\"id\":\"d1_s0176_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the course was discontinued/stopped, not established by the seed (which states CEE currently offers it) — a presupposition shift, not a clean polarity flip\"}\n{\"id\":\"d1_s0176_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}",
+  "ttft_ms": 196634,
+  "ttft_stream_ms": 1532,
+  "time_to_request_ms": 55,
+  "type": "result",
+  "duration_ms": 220164,
+  "uuid": "a30a91d3-a78f-4411-97f7-20607eb9644e"
+}

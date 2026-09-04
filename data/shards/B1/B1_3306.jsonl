@@ -1,0 +1,60 @@
+{"id": "d5_s0121_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "replaces 'trong trường hợp nào' with 'khi nào' — a wording substitution, not surface noise (typo/shorthand/casing)", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "appended 'ntn' (như thế nào) tacks on a manner-question that isn't part of the original question, going beyond noise", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "the deferral rule (sick leave/approved leave/pending investigation) is generic and likely applies regardless of violation type, so narrowing to exam-related violations probably yields the same answer as seed", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.5, "issue": "'miễn kỷ luật' (permanent exemption) is a distinct concept from 'chưa xem xét' (temporary deferral), not a clean antonym/negation flip of the same predicate", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "introduces a duration/'tối đa' dimension not present as a quantifier in the seed question or answer — closer to an aspect change than a flip of an existing extreme", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "same issue as its max-duration pair: duration is not a quantifier present in the seed to flip", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0121_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "replaces 'trong trường hợp nào' with 'khi nào' — a wording substitution, not surface noise", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "appended 'ntn' tacks on a manner-question beyond noise allowance", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "expulsion criteria (prior suspension + reoffense, or level-4 violation) are generic and likely unaffected by narrowing to exam-related violations, so answer likely unchanged", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.5, "issue": "'hủy bỏ' (revocation of a decision already made) is a distinct administrative action/aspect, not a clean negation flip of 'áp dụng'", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "introduces a suspension-duration quantifier not present in the seed question/answer to flip", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.5, "issue": "invents a repeat-offense count quantifier ('ít nhất bao nhiêu lần') not present in the seed, rather than flipping an existing one", "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0127_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0134_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0134_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0134_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0134_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0134_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0134_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0134_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0134_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}
+{"id": "d5_s0134_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3306", "ts": "2026-08-28T01:23:59Z"}

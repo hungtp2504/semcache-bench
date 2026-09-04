@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 114632,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "4c9ea56a-e1fd-474e-9309-837d1199e2f1",
+  "total_cost_usd": 0.310342,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 41705,
+    "cache_read_input_tokens": 91220,
+    "output_tokens": 12527,
+    "output_tokens_details": {
+      "thinking_tokens": 9516
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 41705,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2911,
+        "cache_read_input_tokens": 60942,
+        "cache_creation_input_tokens": 11041,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11041
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 12527,
+      "cacheReadInputTokens": 91220,
+      "cacheCreationInputTokens": 41705,
+      "webSearchRequests": 0,
+      "costUSD": 0.310342,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0667_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0667_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"'change' is not a negation/antonym of 'access'; writing also goes through ref.current, so seed answer partially still applies — this is an aspect swap (read vs write), not a polarity flip\"}\n{\"id\":\"d3_s0667_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'clear' is not a negation/antonym of 'access'; clearing also uses ref.current, so it's a facet change rather than a true polarity flip\"}\n{\"id\":\"d3_s0667_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0667_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'previous' vs 'current' is an entity/attribute substitution, not a negation/antonym flip; belongs to N3 not N4\"}\n{\"id\":\"d3_s0667_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0667_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a new entity ('list of refs') not present in the seed rather than flipping one quantifier on the same subject\"}\n{\"id\":\"d3_s0667_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0667_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a new entity ('ref array') beyond a single quantifier/extreme flip on the seed's subject\"}\n{\"id\":\"d3_s0667_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0667_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0673_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0673_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0673_P1_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0673_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0673_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0673_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0673_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0673_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0673_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0673_P3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0673_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0673_P3_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0673_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0673_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0673_N2_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"changes the subject entity to initial task ids rather than adding/removing a scope qualifier on nextId's start value\"}\n{\"id\":\"d3_s0673_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"reframes the question to a derived task-count rather than adding/removing a single scope qualifier\"}\n{\"id\":\"d3_s0673_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0673_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0673_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0673_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0673_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"changes the premise to a hypothetical (empty list) rather than flipping a negation/antonym\"}\n{\"id\":\"d3_s0673_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about a different entity (last pre-existing task id) rather than a negation/antonym of 'start'; more like entity substitution\"}\n{\"id\":\"d3_s0673_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0673_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0673_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0673_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0673_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0673_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0679_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0679_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0679_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0679_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0679_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0679_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0679_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0679_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0679_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0679_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0679_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0679_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0679_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0679_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0679_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0679_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0679_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0679_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0679_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps premise and target (asks export given import) — an inverse/converse question, not a negation/antonym flip\"}\n{\"id\":\"d3_s0679_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0679_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"presupposes 'two import forms' that are never defined in the question, making it incomplete/ambiguous rather than a clean correct/incorrect polarity flip\"}",
+  "ttft_ms": 94073,
+  "ttft_stream_ms": 1485,
+  "time_to_request_ms": 31,
+  "type": "result",
+  "duration_ms": 115417,
+  "uuid": "744afdd6-65a4-4be3-8c9e-a336ac3a8c7a",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 79424,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "e0955b26-8187-4a87-ae67-c6d3ad913ba7",
+  "total_cost_usd": 0.510424,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32081,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 7203,
+    "output_tokens_details": {
+      "thinking_tokens": 4351
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32081,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 7203,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32081,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32081
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 7203,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32081,
+      "webSearchRequests": 0,
+      "costUSD": 0.510424,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0060_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0060_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0060_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0060_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0060_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0060_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks count instead of flipping a quantifier/extreme; count is already stated in the seed wording (N1-style aspect change)\"}\n{\"id\":\"d1_s0060_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the seed's own fact verbatim and asks rationale; no shifted presupposition\"}\n{\"id\":\"d1_s0060_N6_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d1_s0066_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0066_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0066_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0066_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0066_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0066_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0066_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0066_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0066_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0066_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0066_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0066_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0066_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0066_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0066_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0066_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0066_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0066_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0066_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0066_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0066_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0066_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"no negation/antonym flip of the seed; converts to a yes/no comparative question against a new reference (full semester)\"}\n{\"id\":\"d1_s0066_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0066_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0066_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0066_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0066_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposition unchanged from seed (a final week is implied by the seed answer); this is an aspect change, not a presupposition shift\"}\n{\"id\":\"d1_s0066_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes the seed's own fact (weekly organization) and asks rationale; no shifted presupposition\"}\n{\"id\":\"d1_s0073_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0073_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0073_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0073_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0073_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0073_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0073_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0073_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0073_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0073_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0073_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0073_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0073_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0073_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0073_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"scope qualifier added but correct answer is unchanged — the graduate version is still offered by Civil and Environmental Engineering, so the seed answer still answers it\"}\n{\"id\":\"d1_s0073_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0073_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0073_N3_v2\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"substituted course (Introduction to Civil Engineering Design, 1.012) is offered by the same department, so the seed answer still fully answers it\"}\n{\"id\":\"d1_s0073_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0073_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0073_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0073_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"not a negation/antonym flip; invents an unnatural, unanswerable 'barred from offering' presupposition\"}\n{\"id\":\"d1_s0073_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a count rather than flipping a quantifier/extreme (min/max, first/last, at-least/at-most)\"}\n{\"id\":\"d1_s0073_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"only one department offers the course, so 'listed first' yields the seed answer — seed answer still fully answers it\"}",
+  "ttft_ms": 57154,
+  "ttft_stream_ms": 2411,
+  "time_to_request_ms": 18,
+  "type": "result",
+  "duration_ms": 79617,
+  "uuid": "4e628d7d-729d-4bab-bfc2-b93f2f5a4c2d",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 160194,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "fcce67f9-a1d9-4a0f-89e6-77bd90c8dff7",
+  "total_cost_usd": 0.5702408999999999,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47313,
+    "cache_read_input_tokens": 91053,
+    "output_tokens": 17269,
+    "output_tokens_details": {
+      "thinking_tokens": 14496
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47313,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2752,
+        "cache_read_input_tokens": 60806,
+        "cache_creation_input_tokens": 16754,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16754
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17269,
+      "cacheReadInputTokens": 91053,
+      "cacheCreationInputTokens": 47313,
+      "webSearchRequests": 0,
+      "costUSD": 0.5702408999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0580_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0580_P1_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d1_s0580_P1_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0580_P1_v4\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0580_P2_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0580_P2_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0580_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0580_P2_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0580_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0580_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0580_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0580_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0580_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0580_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0580_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0580_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0580_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0580_N3_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0580_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'handed out' is a different lifecycle aspect (assignment date) rather than a negation/antonym of 'due'; fits N1/N6, not a polarity flip\"}\n{\"id\":\"d1_s0580_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'handed back' is a different aspect (return date) not a negation/antonym of 'due'\"}\n{\"id\":\"d1_s0580_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"changes entity to 'solutions' and aspect to release date; not a negation/antonym flip\"}\n{\"id\":\"d1_s0580_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0580_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0580_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0580_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0580_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines an extreme (last) with scope broadening (all homework) — more than one quantifier/scope change\"}\n{\"id\":\"d1_s0580_N6_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0580_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0586_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0586_P1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0586_P1_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0586_P1_v4\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0586_P2_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0586_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0586_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0586_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0586_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0586_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0586_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0586_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0586_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0586_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0586_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0586_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0586_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0586_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0586_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0586_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0586_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0586_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"seed answer states sessions meet '1 hour per session' (uniform), so seed answer already fully answers this (none deviate)\"}\n{\"id\":\"d1_s0586_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"seed answer already states uniform 1-hour session length, fully answering 'longest' (=1hr)\"}\n{\"id\":\"d1_s0586_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0586_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0586_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"seed answer already states uniform 1-hour session length, fully answering 'shortest' (=1hr)\"}\n{\"id\":\"d1_s0586_N6_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0586_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0592_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0592_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0592_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0592_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}",
+  "ttft_ms": 141938,
+  "ttft_stream_ms": 1485,
+  "time_to_request_ms": 34,
+  "type": "result",
+  "duration_ms": 161010,
+  "uuid": "5b844dce-838a-424a-9985-8916f999e889"
+}

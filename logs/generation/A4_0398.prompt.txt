@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: A4_0398
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d2_s0517", "domain": "academic_nlp", "doc_id": "d2_doc0087", "fact_ids": ["d2_f00674", "d2_f00675"], "question": "How many scientific articles make up the SemEval-2010 benchmark dataset, and how long are the input papers?", "answer": "The SemEval-2010 benchmark dataset is composed of 244 scientific articles from the ACM Digital Library, with input papers ranging from 6 to 8 pages.", "generator_model": "claude-sonnet-5", "batch_id": "A_0198", "ts": "2026-08-12T08:46:44Z"}
+{"seed_id": "d2_s0523", "domain": "academic_nlp", "doc_id": "d2_doc0082", "fact_ids": ["d2_f00681"], "question": "How much larger is the BookTest dataset compared to the Children's Book Test (CBT)?", "answer": "BookTest is more than 60 times larger than the Children's Book Test.", "generator_model": "claude-sonnet-5", "batch_id": "A_0197", "ts": "2026-08-12T08:46:49Z"}
+{"seed_id": "d2_s0530", "domain": "academic_nlp", "doc_id": "d2_doc0083", "fact_ids": ["d2_f00691", "d2_f00696"], "question": "What two classification tasks does the paper's DNN approach address for humanitarian response organizations?", "answer": "It addresses identifying informative tweets (binary classification: 'informative' vs. 'not informative') and classifying tweets into topical/humanitarian classes.", "generator_model": "claude-sonnet-5", "batch_id": "A_0197", "ts": "2026-08-12T08:46:49Z"}
+{"seed_id": "d2_s0536", "domain": "academic_nlp", "doc_id": "d2_doc0084", "fact_ids": ["d2_f00697"], "question": "How many dyads participated in the reciprocal peer tutoring data collection, and what was their composition?", "answer": "12 American English-speaking dyads participated: 6 friends and 6 strangers, 6 boys and 6 girls, with a mean age of 13 years.", "generator_model": "claude-sonnet-5", "batch_id": "A_0197", "ts": "2026-08-12T08:46:49Z"}
+{"seed_id": "d2_s0542", "domain": "academic_nlp", "doc_id": "d2_doc0088", "fact_ids": ["d2_f00704"], "question": "How many people and how many gangs are estimated to be active in the United States?", "answer": "Over 1.4 million people, belonging to more than 33,000 gangs, are active in the United States.", "generator_model": "claude-sonnet-5", "batch_id": "A_0199", "ts": "2026-08-12T08:47:53Z"}
+{"seed_id": "d2_s0549", "domain": "academic_nlp", "doc_id": "d2_doc0089", "fact_ids": ["d2_f00714"], "question": "How does this paper define sarcasm?", "answer": "The paper defines sarcasm as \"a sharp, bitter, or cutting expression or remark; a bitter gibe or taunt\".", "generator_model": "claude-sonnet-5", "batch_id": "A_0199", "ts": "2026-08-12T08:47:53Z"}
+{"seed_id": "d2_s0555", "domain": "academic_nlp", "doc_id": "d2_doc0090", "fact_ids": ["d2_f00720"], "question": "According to the efficient market hypothesis described in the paper, what determines financial market movements?", "answer": "The efficient market hypothesis states that financial market movements depend on news, current events, and product releases, which significantly impact a company's stock value.", "generator_model": "claude-sonnet-5", "batch_id": "A_0199", "ts": "2026-08-12T08:47:53Z"}
+{"seed_id": "d2_s0560", "domain": "academic_nlp", "doc_id": "d2_doc0091", "fact_ids": ["d2_f00727"], "question": "According to the paper, how many people in the United States are members of a street gang?", "answer": "Over 1.23 million people in the United States are members of a street gang.", "generator_model": "claude-sonnet-5", "batch_id": "A_0200", "ts": "2026-08-12T08:47:59Z"}
+{"seed_id": "d2_s0566", "domain": "academic_nlp", "doc_id": "d2_doc0092", "fact_ids": ["d2_f00737"], "question": "How did the focus of the 2016 NIST Speaker Recognition Evaluation differ from previous years?", "answer": "The 2016 evaluation marked a major shift from English towards Austronesian and Chinese languages, emphasizing speaker recognition technology that is robust to novel, heterogeneous languages with less training data.", "generator_model": "claude-sonnet-5", "batch_id": "A_0200", "ts": "2026-08-12T08:47:59Z"}
+{"seed_id": "d2_s0572", "domain": "academic_nlp", "doc_id": "d2_doc0093", "fact_ids": ["d2_f00745"], "question": "As of October 2016, how many citations did PubMed contain, and how many were added in the first three quarters of that year?", "answer": "PubMed housed over 26 million citations as of October 2016, with almost 1 million added during the first three quarters of 2016 alone.", "generator_model": "claude-sonnet-5", "batch_id": "A_0200", "ts": "2026-08-12T08:47:59Z"}

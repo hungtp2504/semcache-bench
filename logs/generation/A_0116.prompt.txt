@@ -1,0 +1,35 @@
+You extract facts and seed question–answer pairs from source documents, to build a
+semantic-cache benchmark.
+
+TASK
+For each document below: (1) extract atomic facts, (2) write seed questions whose answers
+are fully contained in the document.
+
+RULES FOR FACTS
+1. One atomic fact per line — a single checkable statement with its specifics
+   (dates, numbers, names, conditions) intact.
+2. Copy the supporting span reference: quote the shortest snippet that proves the fact.
+3. Skip boilerplate, navigation text, and opinions.
+
+RULES FOR SEEDS
+1. Each seed is a natural, self-contained question a real user would type. It must be
+   answerable WITHOUT seeing the document.
+2. The answer must be short (1–3 sentences), complete, and grounded ONLY in the
+   document. No outside knowledge.
+3. One unambiguous answer per question — if two readings give two answers, rewrite or drop.
+4. Prefer questions rich in entities, numbers, dates, conditions (they support the
+   9-axis variation stage later). Avoid pure yes/no questions (aim ≤ 1 in 6).
+5. Write in the SAME LANGUAGE as the document (d5 documents → Vietnamese).
+6. Target ~6 seeds per document; fewer is fine for thin documents — never pad.
+
+OUTPUT FORMAT — JSONL only, no commentary, no code fences.
+Fact lines:  {"type":"fact","doc_id":"<given>","statement":"...","source_span":"..."}
+Seed lines:  {"type":"seed","doc_id":"<given>","fact_refs":[<0-based indexes of this doc's facts>],"question":"...","answer":"..."}
+(seed_id is assigned by the parser, not by you.)
+
+
+[BATCH INPUT]
+batch_id: A_0116
+documents (each as: doc_id, domain, then full text):
+
+{"doc_id": "d5_vbhn07_2023_hoc_phi_p12", "title": "d5_vbhn07_2023_hoc_phi_p12", "text": "Văn bản hợp nhất 07/VBHN-BGDĐT 2023 — Thu, quản lý học phí\n\nĐiều 15. Trách nhiệm thực hiện và điều khoản thi hành\n1. Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân các tỉnh, thành phố trực thuộc Trung ương chịu trách nhiệm thi hành Nghị định này và thực hiện công bố thủ tục hành chính theo quy định thuộc phạm vi chức năng quản lý của mình.\n2. Nghị định này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2023.\n3. Kể từ ngày Nghị định này có hiệu lực, các thủ tục hành chính, dịch vụ công có yêu cầu nộp, xuất trình sổ hộ khẩu, sổ tạm trú giấy được thay thế bằng việc khai thác, sử dụng thông tin về cư trú theo quy định tại Điều 14 Nghị định này\n.”\nBạn chưa Đăng nhập thành viên.\nĐây là tiện ích dành cho tài khoản thành viên. Vui lòng\nĐăng nhập\nđể xem chi tiết. Nếu chưa có tài khoản, vui lòng\nĐăng ký tại đây\n!\nVăn bản hợp nhất 07/VBHN-BGDĐT năm 2023 do Bộ Giáo dục và Đào tạo ban hành hợp nhất Nghị định quy định về cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập; giá dịch vụ trong lĩnh vực giáo dục, đào tạo\nBạn chưa Đăng nhập thành viên.\nĐây là tiện ích dành cho tài khoản thành viên. Vui lòng\nĐăng nhập\nđể xem chi tiết. Nếu chưa có tài khoản, vui lòng\nĐăng ký\ntại đây!\n* Lưu ý:\nĐể đọc được văn bản tải trên Luatvietnam.vn, bạn cần cài\n            phần mềm đọc file DOC, DOCX và phần mềm đọc file PDF.\nLã Nga\nTừ khóa liên quan:\nNghị định 81/2021\n01\nCông văn 3935/BGDĐT-GDTrH của Bộ Giáo dục và Đào tạo về việc hướng dẫn thực hiện nhiệm vụ giáo dục trung học năm học 2024-2025\nXem thêm\nXem thêm\nHỏi đáp pháp luật về Thuế-Phí-Lệ phí\nThời hạn truy thu thuế là bao lâu?\nHóa đơn lập sai thời điểm có coi là chi phí hợp lý được trừ không?\nTiền từ thiện có phải chịu thuế TNCN không?\nCó phải nộp lệ phí môn bài trong thời gian tạm ngừng kinh doanh không?\nCông ty ủng hộ tiền lũ lụt thì có được trừ khi xác định thuế TNDN không?\nXem thêm\nTin pháp luật về Thuế-Phí-Lệ phí\nTrường hợp nào không phải nộp hồ sơ khai thuế?\nTừ 20/06/2026, những loại bảo hiểm nào không chịu thuế GTGT?\nDoanh nghiệp AI, bán dẫn, sản xuất chip được ưu đãi thuế TNDN thế nào?\nThời hạn đăng ký thuế theo Nghị định 252/2026/NĐ-CP\nHồ sơ hoàn thuế nộp thừa đối với hộ kinh doanh gồm những gì?\nXem thêm\nCác quy định cần biết về Thuế-Phí-Lệ phí\nBộ Tài chính hướng dẫn về thu phí, lệ phí trực tuyến\nMức thu lệ phí cấp thẻ Căn cước mới nhất\nHướng dẫn ghi Tờ khai lệ phí trước bạ nhà đất\nLệ phí làm hộ chiếu là bao nhiêu? [Cập nhật mới nhất]\nCách gọi chính xác là thuế môn bài hay lệ phí môn bài?\nXem thêm\nTin văn bản mới\nQuyết định 1528/QĐ-TTg: Nghiên cứu dùng Quỹ bảo hiểm thất nghiệp hỗ trợ đào tạo lại lao động bị AI tác động\nĐến năm 2030, đào tạo ít nhất 10.000 nhân lực trí tuệ nhân tạo trình độ cao\nÍt nhất 10 triệu người lao động được đào tạo kỹ năng AI cơ bản đến năm 2030\nĐến năm 2030, 90% cán bộ, công chức, viên chức được bồi dưỡng kỹ năng AI\nNăm 2027, đưa vào vận hành Nền tảng quản lý cấp cứu ngoại viện toàn quốc\nXem thêm\nMục lục\nTổng quan\nNội dung\nVB gốc\nTiếng Anh\nHiệu lực\nVB liên quan\nLược đồ\nNội dung hợp nhất\nTính năng này\nchỉ có tại LuatVietnam.vn\n. Nội dung hợp nhất tổng hợp lại tất cả các quy định còn hiệu lực của văn bản gốc và các văn bản sửa đổi, bổ sung, đính chính... trên một trang. Việc hợp nhất văn bản gốc và những văn bản, Thông tư, Nghị định hướng dẫn khác không làm thay đổi thứ tự điều khoản, nội dung.\nKhách hàng chỉ cần xem Nội dung hợp nhất là có thể nắm bắt toàn bộ quy định hiện hành đang áp dụng, cho dù văn bản gốc đã qua nhiều lần chỉnh sửa, bổ sung.\n=>> Xem hướng dẫn chi tiết cách sử dụng Nội dung hợp nhất\nTải về\nĐây là tiện ích dành cho tài khoản\nTiêu chuẩn\nhoặc\nNâng cao\n. Vui lòng\nĐăng nhập\ntài khoản để xem chi tiết.\nĐây là tiện ích dành cho tài khoản\nTiêu chuẩn\nhoặc\nNâng cao\n. Vui lòng\nĐăng nhập\ntài khoản để xem chi tiết.\nIn\nBáo lỗi\nGửi liên kết tới Email\nChia sẻ:\nTrang chủ\nVề LuatVietnam\nCHÍNH SÁCH BẢO VỆ DỮ LIỆU CÁ NHÂN\nYêu cầu hỗ trợ\nChú thích màu chỉ\n            dẫn\nChú thích màu chỉ dẫn:\nCác nội dung của VB này được VB khác thay đổi, hướng dẫn sẽ được làm nổi bật bằng các màu sắc:\nSửa đổi, bổ sung, đính\n                        chính\nThay\n                        thế\nHướng\n                        dẫn\nBãi bỏ\nBãi\n                        bỏ cụm từ\nBình\n                        luận\nClick vào nội dung được bôi màu để xem chi tiết.\n×", "domain": "vietnamese_admin_edu"}

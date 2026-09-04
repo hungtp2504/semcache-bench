@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 72470,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "ac646863-6e80-46de-baa9-0c2626963eeb",
+  "total_cost_usd": 0.498124,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 31711,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 6859,
+    "output_tokens_details": {
+      "thinking_tokens": 3999
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31711,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6859,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 31711,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 31711
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 6859,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 31711,
+      "webSearchRequests": 0,
+      "costUSD": 0.498124,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0288_P3_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0288_P3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0288_P3_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0288_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0288_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0288_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0288_N2_v1\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d1_s0288_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"two scope qualifiers changed at once (whole-term total plus inclusion of exam sessions), not exactly one\"}\n{\"id\":\"d1_s0288_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0288_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0288_N4_v1\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d1_s0288_N4_v2\",\"axis_ok\":false,\"conf\":0.62,\"issue\":\"no negation/antonym flip; asks a new facet (inter-session break length), closer to N1\"}\n{\"id\":\"d1_s0288_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an optional/required distinction absent from the seed rather than flipping one polarity term\"}\n{\"id\":\"d1_s0288_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0288_N5_v1\",\"axis_ok\":false,\"conf\":0.58,\"issue\":\"sessions are uniformly 1.5 h, so 'longest session' has the same answer content as the seed\"}\n{\"id\":\"d1_s0288_N5_v2\",\"axis_ok\":false,\"conf\":0.58,\"issue\":\"uniform 1.5 h sessions mean 'shortest session' yields the seed's answer content\"}\n{\"id\":\"d1_s0288_N5_v3\",\"axis_ok\":false,\"conf\":0.57,\"issue\":\"peak weekly count equals the seed's 2 sessions per week; answer not necessarily different\"}\n{\"id\":\"d1_s0288_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"minimum weekly count coincides with the stated 2 sessions per week; answer not necessarily different\"}\n{\"id\":\"d1_s0288_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0288_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0176_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0176_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0176_P1_v3\",\"axis_ok\":true,\"conf\":0.87,\"issue\":null}\n{\"id\":\"d1_s0176_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0176_P2_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0176_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0176_P2_v3\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0176_P2_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0176_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0176_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0176_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0176_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0176_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0176_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0176_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0176_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0176_N3_v1\",\"axis_ok\":false,\"conf\":0.72,\"issue\":\"1.040 is also a Course 1 (CEE) subject, so the seed's answer still fully answers it\"}\n{\"id\":\"d1_s0176_N3_v2\",\"axis_ok\":false,\"conf\":0.72,\"issue\":\"1.050 is likewise offered by Civil and Environmental Engineering; answer not different\"}\n{\"id\":\"d1_s0176_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0176_N4_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d1_s0176_N4_v3\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d1_s0176_N4_v4\",\"axis_ok\":true,\"conf\":0.58,\"issue\":null}\n{\"id\":\"d1_s0176_N5_v1\",\"axis_ok\":false,\"conf\":0.57,\"issue\":\"adding 'first to offer' does not necessarily change the answer; CEE remains the offering department\"}\n{\"id\":\"d1_s0176_N5_v2\",\"axis_ok\":false,\"conf\":0.57,\"issue\":\"'most recently offered' still resolves to CEE, so the seed's answer answers it\"}\n{\"id\":\"d1_s0176_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"not a quantifier/extreme flip; it presupposes a second offering department (N6-like)\"}\n{\"id\":\"d1_s0176_N5_v4\",\"axis_ok\":false,\"conf\":0.58,\"issue\":\"superlative over sections still yields CEE as the answering department; answer not necessarily different\"}\n{\"id\":\"d1_s0176_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0176_N6_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d1_s0181_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0181_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P1_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d1_s0181_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0181_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0181_P2_v4\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0181_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0181_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0181_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 49302,
+  "ttft_stream_ms": 3107,
+  "time_to_request_ms": 19,
+  "type": "result",
+  "duration_ms": 72678,
+  "uuid": "9e826cb3-905e-4ac4-8ced-a6c20c28f06c",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 155216,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "5911e324-2245-4451-ab79-3e339dd0d340",
+  "total_cost_usd": 0.43670010000000004,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 31835,
+    "cache_read_input_tokens": 30247,
+    "output_tokens": 15774,
+    "output_tokens_details": {
+      "thinking_tokens": 12977
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31835,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 15774,
+        "cache_read_input_tokens": 30247,
+        "cache_creation_input_tokens": 31835,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 31835
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 15774,
+      "cacheReadInputTokens": 30247,
+      "cacheCreationInputTokens": 31835,
+      "webSearchRequests": 0,
+      "costUSD": 0.43670010000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0053_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0053_P3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"substitutes 'use'→'bring' and restructures the question rather than adding noise only\"}\n{\"id\":\"d1_s0053_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0053_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0053_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0053_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0053_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0053_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0053_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0053_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0053_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's answer already explicitly states the prohibited items (computers, phones), so it directly answers rather than misleads\"}\n{\"id\":\"d1_s0053_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about surrendering notes beforehand — a different fact from notes-usage-during-exam, not a negation of the same predicate\"}\n{\"id\":\"d1_s0053_N4_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d1_s0053_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"restructures into a 'which exam' entity-identification question rather than negating the original predicate\"}\n{\"id\":\"d1_s0053_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps permission modality for an obligation modality (required minimum) rather than flipping an extreme of the same allowed-materials list\"}\n{\"id\":\"d1_s0053_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0053_N5_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"introduces a page-count limit not present as any quantifier in the seed question — a new aspect rather than a flipped extreme\"}\n{\"id\":\"d1_s0053_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"restructures into a 'which exam' comparison question rather than an extreme variant of the midterm materials question\"}\n{\"id\":\"d1_s0053_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0053_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0119_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0119_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0119_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0119_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0119_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0119_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0119_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0119_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about chapter/reading assignments, a different facet from textbook identity — aspect change, not a scope-narrowed version of the same question\"}\n{\"id\":\"d1_s0119_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about optional supplementary readings, a different facet from the required textbook — aspect change rather than a scope qualifier on the same question\"}\n{\"id\":\"d1_s0119_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0119_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0119_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0119_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0119_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0119_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0119_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0119_N5_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0119_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0119_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0125_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0125_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0125_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0125_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0125_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0125_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0125_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0125_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0125_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0125_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0125_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0125_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}",
+  "ttft_ms": 139067,
+  "ttft_stream_ms": 1804,
+  "time_to_request_ms": 22,
+  "type": "result",
+  "duration_ms": 155419,
+  "uuid": "594751b1-d3fd-4347-9a79-21896e307687"
+}

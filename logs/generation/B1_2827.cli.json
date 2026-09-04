@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 183466,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "4ce684a4-477c-41cd-9f56-3df1ce01726d",
+  "total_cost_usd": 0.395914,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 48702,
+    "cache_read_input_tokens": 92540,
+    "output_tokens": 18259,
+    "output_tokens_details": {
+      "thinking_tokens": 15335
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 48702,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2932,
+        "cache_read_input_tokens": 62262,
+        "cache_creation_input_tokens": 16718,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16718
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 18259,
+      "cacheReadInputTokens": 92540,
+      "cacheCreationInputTokens": 48702,
+      "webSearchRequests": 0,
+      "costUSD": 0.395914,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0213_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'last-mentioned' is a list-position ask, not an existing min/max/earliest/latest quantifier being flipped; closer to N6 presupposition\"}\n{\"id\":\"d3_s0213_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0213_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0220_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0220_P1_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"recast as a conditional if-clause, a structural reframe rather than pure wording/synonym swap; fits P2\"}\n{\"id\":\"d3_s0220_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0220_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0220_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0220_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0220_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0220_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0220_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0220_P3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0220_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0220_P3_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0220_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0220_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0220_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0220_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0220_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0220_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0220_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0220_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Y/N reframing of the same fact (need both); seed answer verbatim correctly resolves it without misleading, so answer content is the same\"}\n{\"id\":\"d3_s0220_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0220_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0220_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0220_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0220_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0220_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0220_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0220_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0226_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_P1_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"splits single question into three coordinated sub-questions, a structural reframe rather than pure wording swap; fits P2\"}\n{\"id\":\"d3_s0226_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_P1_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0226_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0226_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0226_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0226_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0226_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0226_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0226_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0226_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps target component (subject line -> body) rather than adding/removing a scope qualifier; fits N3 entity substitution\"}\n{\"id\":\"d3_s0226_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0226_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0226_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0226_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Y/N reframing of the same fact (period required); seed answer verbatim correctly resolves it without misleading\"}\n{\"id\":\"d3_s0226_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0226_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0226_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an unrelated dimension (length limit) with no quantifier in the seed to flip; fits N1 aspect change, and duplicates N1_v1's topic\"}\n{\"id\":\"d3_s0226_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces an unrelated dimension (required content) rather than flipping an existing quantifier\"}\n{\"id\":\"d3_s0226_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces an unrelated dimension (sentence count) rather than flipping an existing quantifier\"}\n{\"id\":\"d3_s0226_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes multiple periods-requiring lines; correct answer likely coincides with seed's answer (subject line), failing 'necessarily different'\"}\n{\"id\":\"d3_s0226_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0226_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0238_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 163249,
+  "ttft_stream_ms": 2972,
+  "time_to_request_ms": 20,
+  "type": "result",
+  "duration_ms": 184265,
+  "uuid": "07f4e516-bf1d-45c7-a82b-c30281105a1a",
+  "queued_turn_count": 0
+}

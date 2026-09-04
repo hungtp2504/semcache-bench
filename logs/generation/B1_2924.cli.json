@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 185355,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "2f63dd06-7a32-4a06-ac7b-01db4150c311",
+  "total_cost_usd": 0.42614019999999997,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 51395,
+    "cache_read_input_tokens": 94711,
+    "output_tokens": 20161,
+    "output_tokens_details": {
+      "thinking_tokens": 17114
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 51395,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2979,
+        "cache_read_input_tokens": 64433,
+        "cache_creation_input_tokens": 17240,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17240
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 20161,
+      "cacheReadInputTokens": 94711,
+      "cacheCreationInputTokens": 51395,
+      "webSearchRequests": 0,
+      "costUSD": 0.42614019999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d4_s0377_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed answer already names the complete mole as forming from an egg lacking maternal DNA (=abnormal egg); question is directly answerable by extraction, not a misleading flip\"}\n{\"id\":\"d4_s0377_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks for maternal DNA count in partial mole, not a min/max/earliest/latest extreme flip - a topic shift rather than a quantifier flip\"}\n{\"id\":\"d4_s0377_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0377_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks 'smallest' within a single entity with no natural range to minimize over; not a genuine comparative extreme flip\"}\n{\"id\":\"d4_s0377_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0377_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0377_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0383_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0383_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0383_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0383_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0383_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0383_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0383_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0383_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0383_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0383_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0383_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0383_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0383_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0383_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0383_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0383_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0383_N3_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Erdheim-Chester disease is also predominantly BRAF-mutated like LCH, so the answer likely doesn't change, violating N3's answer-must-differ requirement\"}\n{\"id\":\"d4_s0383_N3_v2\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"melanoma is the classic BRAF-mutated cancer, so the answer (BRAF) is unchanged from the seed - violates N3's answer-must-differ requirement\"}\n{\"id\":\"d4_s0383_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0383_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0383_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'which gene is typically left unmutated' has no single determinate answer (nearly all genes qualify); not a clean polarity flip\"}\n{\"id\":\"d4_s0383_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'which common cancer mutation is not found in LCH' has no unique determinate answer; too broad to be a clean polarity flip\"}\n{\"id\":\"d4_s0383_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"BRAF is documented as the most common LCH mutation, so the answer matches the seed's answer - fails N5's answer-must-differ requirement\"}\n{\"id\":\"d4_s0383_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0383_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for an exhaustive list of mutations, not a min/max/earliest/latest extreme flip - closer to scope widening (N2)\"}\n{\"id\":\"d4_s0383_N5_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"no established basis ranking mutations by growth speed in LCH; BRAF plausibly remains the answer, same as seed\"}\n{\"id\":\"d4_s0383_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0383_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0389_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0389_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0389_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0389_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0389_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0389_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0389_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0389_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0389_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0389_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0389_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0389_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0389_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0389_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0389_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0389_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0389_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0389_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0389_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0389_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"filters seed's list to a tobacco-unrelated subset rather than a genuine negation/antonym flip; closer to scope change (N2)\"}\n{\"id\":\"d4_s0389_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0389_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0389_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0389_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0389_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}",
+  "ttft_ms": 166215,
+  "ttft_stream_ms": 1683,
+  "time_to_request_ms": 15,
+  "type": "result",
+  "duration_ms": 186126,
+  "uuid": "d09eff52-5a04-4870-800c-fcc8c8b485a4",
+  "queued_turn_count": 0
+}

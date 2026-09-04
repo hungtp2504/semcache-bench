@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 131191,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "856241c7-c262-41e9-b94f-a5054bffaf3e",
+  "total_cost_usd": 0.46433490000000005,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 42380,
+    "cache_read_input_tokens": 92093,
+    "output_tokens": 12161,
+    "output_tokens_details": {
+      "thinking_tokens": 9293
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 42380,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2836,
+        "cache_read_input_tokens": 61846,
+        "cache_creation_input_tokens": 10781,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10781
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 12161,
+      "cacheReadInputTokens": 92093,
+      "cacheCreationInputTokens": 42380,
+      "webSearchRequests": 0,
+      "costUSD": 0.46433490000000005,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0218_N5_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"not a quantifier/extreme flip (min/max/earliest/latest); presupposes hidden extra topics, closer to N6\"}\n{\"id\":\"d1_s0218_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0218_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0218_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0224_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0224_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0224_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0224_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0224_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0224_P2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0224_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0224_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0224_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0224_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0224_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0224_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0224_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0224_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0224_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0224_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0224_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0224_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0224_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0224_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0224_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0224_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0224_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"team size fixed at 3 (not a range); min equals seed's answer, so seed answer still fully answers it\"}\n{\"id\":\"d1_s0224_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"team size fixed at 3 (not a range); max equals seed's answer, so seed answer still fully answers it\"}\n{\"id\":\"d1_s0224_N5_v3\",\"axis_ok\":true,\"conf\":0.45,\"issue\":null}\n{\"id\":\"d1_s0224_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"presupposes team-size variation across assignments not established by seed; no distinct extreme answer exists\"}\n{\"id\":\"d1_s0224_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0224_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0230_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0230_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0230_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0230_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0230_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0230_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0230_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0230_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0230_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0230_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0230_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0230_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0230_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0230_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0230_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0230_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0230_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0230_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0230_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0230_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0230_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0230_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"complement-set negation yields same answer content as an 'until when' vs 'after when' style flip, not a genuine wrong-sign mislead\"}\n{\"id\":\"d1_s0230_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"single recorded offering (Fall 2004); earliest term equals seed's answer, so seed answer still fully answers it\"}\n{\"id\":\"d1_s0230_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"single recorded offering (Fall 2004); most recent term equals seed's answer, so seed answer still fully answers it\"}\n{\"id\":\"d1_s0230_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"single recorded offering (Fall 2004); last term taught equals seed's answer, so seed answer still fully answers it\"}\n{\"id\":\"d1_s0230_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"not a quantifier/extreme flip; 'besides X, who else' is an exclusion pattern duplicating N4, not min/max/earliest/latest\"}\n{\"id\":\"d1_s0230_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0230_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}",
+  "ttft_ms": 109255,
+  "ttft_stream_ms": 14315,
+  "time_to_request_ms": 60,
+  "type": "result",
+  "duration_ms": 132029,
+  "uuid": "5f157679-0a44-4893-9288-c72ed5deb39a"
+}

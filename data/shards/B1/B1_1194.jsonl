@@ -1,0 +1,60 @@
+{"id": "d2_s0145_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0145_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0145_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "swaps target constituent (PP -> NP 'the jeans') rather than adding/removing a scope qualifier", "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.85, "issue": "whole example sentence replaced, not a single entity swap with rest minimally changed", "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "asks for a different example sentence in the paper, not a polarity flip on the given example", "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "presupposes the paper rejects a reading rather than flipping a negation/antonym", "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "asks about a different example sentence rather than an extreme within this one", "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0151_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "bundles a quantifier widening (some->all) with a category widening (QA datasets->NLU benchmarks), more than one scope change", "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "shifts to evaluation coverage, not a polarity flip of the accuracy claim", "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "asks for a magnitude of decline, presupposing a drop, rather than a clean negation/antonym flip", "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0158_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}
+{"id": "d2_s0163_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1194", "ts": "2026-08-25T20:03:55Z"}

@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_0197
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d1_s0296_N3_v2", "axis": "N3", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Who helped prepare the exams for MIT's 1.060 Engineering Mechanics II course?", "delta": "exams instead of assignments"}
+{"id": "d1_s0296_N4_v1", "axis": "N4", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Who did not contribute to preparing the assignments for MIT's 1.060?", "delta": "asks non-contributors instead"}
+{"id": "d1_s0296_N4_v2", "axis": "N4", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Which MIT 1.060 materials did David Gonzalez-Rodriguez not help prepare?", "delta": "asks materials he did not prepare"}
+{"id": "d1_s0296_N4_v3", "axis": "N4", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Which assignments in MIT's 1.060 were prepared by the instructor alone?", "delta": "asks solo-prepared assignments"}
+{"id": "d1_s0296_N4_v4", "axis": "N4", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Who graded, rather than prepared, the assignments in MIT's 1.060?", "delta": "asks graders, not preparers"}
+{"id": "d1_s0296_N5_v1", "axis": "N5", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Who prepared the greatest share of MIT 1.060's assignments?", "delta": "asks the main preparer, not both names"}
+{"id": "d1_s0296_N5_v2", "axis": "N5", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Who is the first-listed preparer of MIT 1.060's assignments?", "delta": "first-listed name only, not both"}
+{"id": "d1_s0296_N5_v3", "axis": "N5", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Who prepared the earliest assignment in MIT's 1.060?", "delta": "earliest assignment's preparer, not all"}
+{"id": "d1_s0296_N5_v4", "axis": "N5", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Who prepared the last assignment in MIT's 1.060 Engineering Mechanics II?", "delta": "final assignment's preparer, not all"}
+{"id": "d1_s0296_N6_v1", "axis": "N6", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "What other role does teaching assistant David Gonzalez-Rodriguez have in MIT's 1.060?", "delta": "asks his other duties in the course"}
+{"id": "d1_s0296_N6_v2", "axis": "N6", "seed_question": "Who helped prepare the assignments for MIT's 1.060 Engineering Mechanics II course?", "answer": "The assignments were prepared jointly by the instructor and teaching assistant David Gonzalez-Rodriguez.", "variation": "Are solutions to MIT 1.060's assignments provided along with them?", "delta": "asks about solutions, presupposed fact"}
+{"id": "d1_s0301_P1_v1", "axis": "P1", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "What is the duration of the final exam in 1.060 Engineering Mechanics II?", "delta": null}
+{"id": "d1_s0301_P1_v2", "axis": "P1", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "How much time is allotted for the 1.060 Engineering Mechanics II final exam?", "delta": null}
+{"id": "d1_s0301_P1_v3", "axis": "P1", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "How many hours does the 1.060 final exam run?", "delta": null}
+{"id": "d1_s0301_P1_v4", "axis": "P1", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "What length is the final exam for 1.060 Engineering Mechanics II?", "delta": null}
+{"id": "d1_s0301_P2_v1", "axis": "P2", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "Tell me how long the 1.060 Engineering Mechanics II final exam lasts.", "delta": null}
+{"id": "d1_s0301_P2_v2", "axis": "P2", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "The final exam in 1.060 Engineering Mechanics II runs for how long?", "delta": null}
+{"id": "d1_s0301_P2_v3", "axis": "P2", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "I need the length of the final exam in 1.060.", "delta": null}
+{"id": "d1_s0301_P2_v4", "axis": "P2", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "For 1.060 Engineering Mechanics II, state the final exam's duration.", "delta": null}
+{"id": "d1_s0301_P3_v1", "axis": "P3", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "how long is the final exam in 1.060 eng mechanics ii", "delta": null}
+{"id": "d1_s0301_P3_v2", "axis": "P3", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "1060 final exam length??", "delta": null}
+{"id": "d1_s0301_P3_v3", "axis": "P3", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "how lng is the finl exam for 1.060 engineering mech 2", "delta": null}
+{"id": "d1_s0301_P3_v4", "axis": "P3", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "final exam 1060 — how many hrs?", "delta": null}
+{"id": "d1_s0301_N1_v1", "axis": "N1", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "What material does the final exam in 1.060 Engineering Mechanics II cover?", "delta": "asks exam content, not its length"}
+{"id": "d1_s0301_N1_v2", "axis": "N1", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "When is the final exam scheduled in 1.060 Engineering Mechanics II?", "delta": "asks the date, not the duration"}
+{"id": "d1_s0301_N2_v1", "axis": "N2", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "How long is the open-book portion of the 1.060 final exam?", "delta": "narrows to one portion of the exam"}
+{"id": "d1_s0301_N2_v2", "axis": "N2", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "How much total exam time does 1.060 Engineering Mechanics II require?", "delta": "widens to all exams combined"}
+{"id": "d1_s0301_N3_v1", "axis": "N3", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "How long is the final exam in 1.050 Engineering Mechanics I?", "delta": "a different course"}
+{"id": "d1_s0301_N3_v2", "axis": "N3", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "How long is exam E2 in 1.060 Engineering Mechanics II?", "delta": "a different exam in the course"}
+{"id": "d1_s0301_N4_v1", "axis": "N4", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "Which exam in 1.060 Engineering Mechanics II is not 3 hours long?", "delta": "asks the exam that is not three hours"}
+{"id": "d1_s0301_N4_v2", "axis": "N4", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "How long is the 1.060 exam that is not the final?", "delta": "asks a non-final exam's length"}
+{"id": "d1_s0301_N4_v3", "axis": "N4", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "Which 1.060 Engineering Mechanics II exam has no time limit?", "delta": "asks the untimed exam"}
+{"id": "d1_s0301_N4_v4", "axis": "N4", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "Which 1.060 session that is not an exam lasts 3 hours?", "delta": "asks a non-exam three-hour session"}
+{"id": "d1_s0301_N5_v1", "axis": "N5", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "What is the shortest exam in 1.060 Engineering Mechanics II?", "delta": "shortest exam, not the final's length"}
+{"id": "d1_s0301_N5_v2", "axis": "N5", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "How long is the first exam in 1.060 Engineering Mechanics II?", "delta": "first exam, not the final one"}
+{"id": "d1_s0301_N5_v3", "axis": "N5", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "How long is the longest exam other than the final in 1.060?", "delta": "longest non-final exam, not the final"}
+{"id": "d1_s0301_N5_v4", "axis": "N5", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "What is the minimum time a student must stay in 1.060's final exam?", "delta": "minimum stay time, not the exam length"}
+{"id": "d1_s0301_N6_v1", "axis": "N6", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "What happens if a student misses the 3-hour final exam in 1.060?", "delta": "asks the make-up policy, presupposed fact"}
+{"id": "d1_s0301_N6_v2", "axis": "N6", "seed_question": "How long is the final exam in 1.060 Engineering Mechanics II?", "answer": "The final exam (E4) is 3 hours long.", "variation": "What materials are allowed during the final exam in 1.060?", "delta": "asks permitted materials, presupposed fact"}
+{"id": "d1_s0308_P1_v1", "axis": "P1", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "How large is the 2005 Final Exam PDF file?", "delta": null}
+{"id": "d1_s0308_P1_v2", "axis": "P1", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "What's the size of the PDF for the 2005 Final Exam?", "delta": null}
+{"id": "d1_s0308_P1_v3", "axis": "P1", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "How big is the 2005 Final Exam PDF document?", "delta": null}
+{"id": "d1_s0308_P1_v4", "axis": "P1", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "What file size does the 2005 Final Exam PDF have?", "delta": null}
+{"id": "d1_s0308_P2_v1", "axis": "P2", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "Tell me the file size of the 2005 Final Exam PDF.", "delta": null}
+{"id": "d1_s0308_P2_v2", "axis": "P2", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "The 2005 Final Exam PDF — how many MB is it?", "delta": null}
+{"id": "d1_s0308_P2_v3", "axis": "P2", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "I'd like to know how much space the 2005 Final Exam PDF takes up.", "delta": null}
+{"id": "d1_s0308_P2_v4", "axis": "P2", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "Before I download the 2005 Final Exam PDF, can you tell me its size?", "delta": null}
+{"id": "d1_s0308_P3_v1", "axis": "P3", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "wat size is the 2005 final exam pdf?", "delta": null}
+{"id": "d1_s0308_P3_v2", "axis": "P3", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "2005 final exam pdf file size??", "delta": null}
+{"id": "d1_s0308_P3_v3", "axis": "P3", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "how big is da 2005 final exam PDF btw", "delta": null}
+{"id": "d1_s0308_P3_v4", "axis": "P3", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "size of 2005 finall exam pdf plz", "delta": null}
+{"id": "d1_s0308_N1_v1", "axis": "N1", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "How many pages is the 2005 Final Exam PDF?", "delta": "asks page count, not file size"}
+{"id": "d1_s0308_N1_v2", "axis": "N1", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "What topics are covered on the 2005 Final Exam?", "delta": "asks exam content, not file size"}
+{"id": "d1_s0308_N2_v1", "axis": "N2", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "What is the total size of all the exam PDFs on this page?", "delta": "all exam files combined, not one"}
+{"id": "d1_s0308_N2_v2", "axis": "N2", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "What is the file size of the solutions section of the 2005 Final Exam PDF?", "delta": "only the solutions part, not the whole PDF"}
+{"id": "d1_s0308_N3_v1", "axis": "N3", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "What is the file size of the 2006 Final Exam PDF?", "delta": "a different exam year"}
+{"id": "d1_s0308_N3_v2", "axis": "N3", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "What is the file size of the 2005 Quiz 1 PDF?", "delta": "a quiz, not the final exam"}
+{"id": "d1_s0308_N4_v1", "axis": "N4", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "Which 2005 exam PDF is not the Final Exam?", "delta": "the non-final 2005 exam, inverted target"}
+{"id": "d1_s0308_N4_v2", "axis": "N4", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "What is the file size of the 2005 Final Exam PDF without its solutions?", "delta": "excludes solutions from the file"}
+{"id": "d1_s0308_N4_v3", "axis": "N4", "seed_question": "What is the file size of the 2005 Final Exam PDF?", "answer": "The 2005 Final Exam PDF is 2.2 MB.", "variation": "What is the file size of the non-PDF version of the 2005 Final Exam?", "delta": "a non-PDF format's size"}

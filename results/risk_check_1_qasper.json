@@ -1,0 +1,61 @@
+{
+  "generated": "2026-08-11T06:01:21+00:00",
+  "mock": false,
+  "n_questions": 500,
+  "orders": 200,
+  "models": {
+    "sentence-transformers/all-MiniLM-L6-v2": {
+      "0.85": {
+        "connected_triples": 101,
+        "violations": 26,
+        "violation_rate": 0.25742574257425743,
+        "unstable_share": 0.102,
+        "hit_rate_mean": 0.05743000000000002,
+        "hit_rate_std": 0.0021389483397221166
+      },
+      "0.9": {
+        "connected_triples": 35,
+        "violations": 14,
+        "violation_rate": 0.4,
+        "unstable_share": 0.066,
+        "hit_rate_mean": 0.03661999999999999,
+        "hit_rate_std": 0.0017820213242270696
+      },
+      "0.95": {
+        "connected_triples": 0,
+        "violations": 0,
+        "violation_rate": 0.0,
+        "unstable_share": 0.032,
+        "hit_rate_mean": 0.016000000000000004,
+        "hit_rate_std": 3.469446951953614e-18
+      }
+    },
+    "BAAI/bge-m3": {
+      "0.85": {
+        "connected_triples": 141,
+        "violations": 51,
+        "violation_rate": 0.3617021276595745,
+        "unstable_share": 0.134,
+        "hit_rate_mean": 0.07269999999999999,
+        "hit_rate_std": 0.0021517434791349993
+      },
+      "0.9": {
+        "connected_triples": 39,
+        "violations": 15,
+        "violation_rate": 0.38461538461538464,
+        "unstable_share": 0.068,
+        "hit_rate_mean": 0.03724999999999999,
+        "hit_rate_std": 0.0019538423682579926
+      },
+      "0.95": {
+        "connected_triples": 3,
+        "violations": 3,
+        "violation_rate": 1.0,
+        "unstable_share": 0.042,
+        "hit_rate_mean": 0.020099999999999996,
+        "hit_rate_std": 0.0015459624833740306
+      }
+    }
+  },
+  "verdict": "STRONG: instability reaches 13.4% \u2192 reorganize the narrative around order dependence (RQ3b). This is the abstract's X."
+}

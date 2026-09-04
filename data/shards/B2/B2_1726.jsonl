@@ -1,0 +1,60 @@
+{"id": "d5_s0317_N4_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.75, "issue": "decide→repeal is an aspect shift, not a polarity flip; same body (HĐND cấp tỉnh) would still answer", "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0317_N5_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "superlative added but answer remains cấp tỉnh; seed answer still answers it", "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0317_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0317_N5_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.7, "issue": "changes question facet from authority to ceiling amount; not a single quantifier flip (N1-like)", "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0317_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.75, "issue": "asks annual increase rate — new facet, not a quantifier/extreme flip of the seed", "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0317_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0317_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "disabled students are a subset of the exemption group; the seed's cap answer still applies", "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N2_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.5, "issue": "two changes: scope widened and facet switched from cap amount to list of support items", "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N5_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "quantifier stays 'tối đa'; the measured unit changed from money to months — aspect change, not a quantifier flip", "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N5_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0322_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P3_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "drops content (institution type and the điểm a khoản 2 Điều 10 reference) — deletion, not surface noise", "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N5_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "switches from the multiplier to the ceiling amount itself; facet change rather than a quantifier flip", "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}
+{"id": "d5_s0328_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B2_1726", "ts": "2026-08-31T10:31:19Z"}

@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 143011,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "5128f249-3527-497f-96e5-e69d2fe8ef30",
+  "total_cost_usd": 0.38758800000000004,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 49770,
+    "cache_read_input_tokens": 93300,
+    "output_tokens": 16984,
+    "output_tokens_details": {
+      "thinking_tokens": 11204
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 49770,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2860,
+        "cache_read_input_tokens": 63022,
+        "cache_creation_input_tokens": 17026,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17026
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 16984,
+      "cacheReadInputTokens": 93300,
+      "cacheCreationInputTokens": 49770,
+      "webSearchRequests": 0,
+      "costUSD": 0.38758800000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0702_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0702_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0702_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0702_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0702_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0702_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0702_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0702_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0702_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0702_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"narrowing to perplexity doesn't change the answer - the same 'auxiliary/not evaluated' reason explains the absence of any LM metric, so seed answer still fully applies\"}\n{\"id\":\"d2_s0702_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0702_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0702_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0702_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks which tasks have reported results - an aspect change, not a negation/antonym flip of the seed question\"}\n{\"id\":\"d2_s0702_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"presupposes results exist and asks where - a presupposition shift, not a polarity/negation flip\"}\n{\"id\":\"d2_s0702_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0702_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0702_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a wholly new facet (which task benefits most) rather than flipping a quantifier/extreme already present in the seed question\"}\n{\"id\":\"d2_s0702_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a wholly new facet (which task benefits least) rather than flipping a quantifier/extreme already present in the seed question\"}\n{\"id\":\"d2_s0702_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a wholly new facet (largest gain magnitude) rather than flipping a quantifier/extreme already present in the seed question\"}\n{\"id\":\"d2_s0702_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a wholly new facet (smallest gain magnitude) rather than flipping a quantifier/extreme already present in the seed question\"}\n{\"id\":\"d2_s0702_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0702_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0709_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0709_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0709_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0709_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0709_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0709_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0709_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0709_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0709_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0709_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0709_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0709_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0709_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"clustering without deep features could still use the same K-means algorithm, so the seed answer wouldn't necessarily mislead\"}\n{\"id\":\"d2_s0709_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0709_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about maximum cluster count K, a different facet not tied to flipping an extreme already in the seed question\"}\n{\"id\":\"d2_s0709_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about minimum cluster count K, a different facet not tied to flipping an extreme already in the seed question\"}\n{\"id\":\"d2_s0709_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0709_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0709_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0715_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0715_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0715_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0715_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0715_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0715_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0715_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0715_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0715_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 106721,
+  "ttft_stream_ms": 2295,
+  "time_to_request_ms": 24,
+  "type": "result",
+  "duration_ms": 147019,
+  "uuid": "7c1b177e-9dca-4943-ae25-776ad1690225",
+  "queued_turn_count": 0
+}

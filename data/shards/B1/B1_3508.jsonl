@@ -1,0 +1,60 @@
+{"id": "d5_s0026_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "swaps object from 'tiêu chuẩn' to 'giấy chứng nhận' and asks about revocation authority, a different facet/entity rather than a negation/antonym of the issuing question (fits N1, not N4)", "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "the body that issues a standard typically also holds authority to repeal/amend it, so the seed's answer likely still applies (same-answer trap)", "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.8, "issue": "introduces an unrelated topic (tuition-setting authority for non-accredited institutions) rather than negating the issuing-standard question", "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "'highest level' framing still resolves to the same minister, so the answer is not necessarily different from the seed", "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "asks issuance date, a different aspect entirely (fits N1), not a quantifier/extreme flip of the who-issues question", "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "asks the minimum accreditation level required, a wholly different aspect (fits N1), not an extreme flip of 'who issues'", "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "asks which document, a different aspect (fits N1), not a quantifier/extreme flip", "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0026_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.5, "issue": "'trần học phí thấp nhất' is internally incoherent (a price ceiling framed as a minimum) and conflicts with the premise that fully autonomous institutions aren't bound by a state ceiling", "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0037_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}
+{"id": "d5_s0044_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_3508", "ts": "2026-08-28T10:37:08Z"}

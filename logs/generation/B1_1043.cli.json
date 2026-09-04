@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 190193,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "4836a138-df9d-4d2b-81d9-555363fcd58d",
+  "total_cost_usd": 0.3278436,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 31471,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 19590,
+    "output_tokens_details": {
+      "thinking_tokens": 16605
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31471,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 19590,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 31471,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 31471
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 19590,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 31471,
+      "webSearchRequests": 0,
+      "costUSD": 0.3278436,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0544_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0544_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0544_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0544_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0544_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0544_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0544_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0544_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0544_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0544_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0544_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps aspect (return date) for due date, not a negation/antonym flip — this is an aspect change (N1), not a polarity flip\"}\n{\"id\":\"d1_s0544_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"late-cutoff phrasing has same content as the due date (until/after framing explicitly excluded from N4); seed's answer still effectively answers it\"}\n{\"id\":\"d1_s0544_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps aspect (assigned/handout date) for due date, not a negation/antonym flip — this is an aspect change (N1), not a polarity flip\"}\n{\"id\":\"d1_s0544_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0544_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts to which lectures' material is covered on the pset (content coverage), not a min/max flip of the due-lecture question\"}\n{\"id\":\"d1_s0544_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0544_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts to which lectures' material is tested on the pset (content coverage), not a min/max flip of the due-lecture question\"}\n{\"id\":\"d1_s0544_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0544_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0550_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0550_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0550_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0550_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0550_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0550_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0550_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0550_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0550_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0550_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0550_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0550_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0550_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0550_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0550_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0550_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0550_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0550_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0550_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'failing grade' is a different facet/sub-case, not an antonym flip of how the final grade is determined\"}\n{\"id\":\"d1_s0550_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"seed's answer already states the lowest grade is dropped/excluded, so serving it verbatim correctly answers this — not misleading\"}\n{\"id\":\"d1_s0550_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's answer already states equal weighting, so a verbatim reply correctly implies 'none' — not misleading\"}\n{\"id\":\"d1_s0550_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces an unaddressed edge case (incomplete submissions) — a scope/presupposition shift, not a polarity flip\"}\n{\"id\":\"d1_s0550_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the least-counting set is exactly the dropped lowest grade already stated in seed's answer — same content, not necessarily different\"}\n{\"id\":\"d1_s0550_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"max droppable count (1) is already given by seed's answer ('lowest grade is dropped') — same content\"}\n{\"id\":\"d1_s0550_N5_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"introduces a new topic (minimum completion requirement) not present in the seed question — aspect change rather than a quantifier flip\"}\n{\"id\":\"d1_s0550_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"with equal weighting the 'largest share' is trivially the same 1/7 value derivable from seed's answer — same content\"}\n{\"id\":\"d1_s0550_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0550_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0556_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0556_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0556_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0556_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0556_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0556_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0556_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0556_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0556_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0556_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0556_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0556_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0556_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 173458,
+  "ttft_stream_ms": 1447,
+  "time_to_request_ms": 48,
+  "type": "result",
+  "duration_ms": 190431,
+  "uuid": "79f56f7a-4a77-43cf-8d4d-2f1d465ada6c",
+  "queued_turn_count": 0
+}

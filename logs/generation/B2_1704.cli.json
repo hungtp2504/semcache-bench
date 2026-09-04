@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 55183,
+  "stop_reason": "end_turn",
+  "session_id": "43fb0da1-0f94-4026-8eec-dfafda3831f4",
+  "total_cost_usd": 0.984774,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 37134,
+    "cache_read_input_tokens": 75250,
+    "output_tokens": 7817,
+    "output_tokens_details": {
+      "thinking_tokens": 4893
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 37134,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 7815,
+        "cache_read_input_tokens": 56192,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 6,
+      "outputTokens": 7822,
+      "cacheReadInputTokens": 94308,
+      "cacheCreationInputTokens": 74204,
+      "webSearchRequests": 0,
+      "costUSD": 0.984774,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0029_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0029_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0029_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"ceiling→floor is an extreme/quantifier flip (N5), not a negation/antonym polarity flip; duplicates N5_v1 pattern\"}\n{\"id\":\"d5_s0029_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks the circumstances where increases are banned — aspect change (N1), not a single polarity flip\"}\n{\"id\":\"d5_s0029_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts answer type to who-is-exempt (aspect change), not a polarity flip of the seed fact\"}\n{\"id\":\"d5_s0029_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0029_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds a superlative over a new dimension (year) instead of flipping the seed's quantifier; answer type changes\"}\n{\"id\":\"d5_s0029_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"keeps 'tối đa' and adds 'thấp nhất' over services — superlative added, not one extreme flipped\"}\n{\"id\":\"d5_s0029_N5_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0029_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0029_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0034_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0034_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0034_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0034_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0034_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0034_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0034_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0034_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0034_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0034_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0034_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"turns into a who-is-exempt question (aspect change) and reads awkwardly ('khu vực thành thị nào'), not a single polarity flip\"}\n{\"id\":\"d5_s0034_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"lower bound is explicitly contained in the seed answer, so the seed answer still answers it\"}\n{\"id\":\"d5_s0034_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"upper bound is explicitly contained in the seed answer, so the seed answer still answers it\"}\n{\"id\":\"d5_s0034_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds a superlative over a new dimension (region) rather than flipping an existing quantifier\"}\n{\"id\":\"d5_s0034_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds a superlative over a new dimension (school year) rather than flipping an existing quantifier\"}\n{\"id\":\"d5_s0034_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0034_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0041_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0041_P1_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0041_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0041_P1_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0041_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0041_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0041_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0041_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0041_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0041_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0041_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0041_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0041_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0041_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0041_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0041_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0041_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0041_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0041_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes repeal and asks the repealing document — presupposition shift (N6), not a single negation/antonym flip\"}\n{\"id\":\"d5_s0041_N4_v2\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"entirely new facet (repayment conditions) with no negation/antonym flip of the seed question\"}\n{\"id\":\"d5_s0041_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"negation attaches to a different facet (tuition-support exclusions), not a polarity flip of the governing-document question\"}",
+  "ttft_ms": 23455,
+  "type": "result",
+  "duration_ms": 55391,
+  "uuid": "178126d8-7261-46fa-b2fe-5931d76c4f41",
+  "ttft_stream_ms": 3676,
+  "time_to_request_ms": 16,
+  "queued_turn_count": 0
+}

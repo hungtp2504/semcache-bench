@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_0014
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d3_s0013_N1_v1", "axis": "N1", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "Where was Django originally created?", "delta": "asks the place, not the reason"}
+{"id": "d3_s0013_N1_v2", "axis": "N1", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "When was Django originally created?", "delta": "asks the date, not the motivation"}
+{"id": "d3_s0013_N2_v1", "axis": "N2", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "Why was Django's admin site originally created?", "delta": "narrows to the admin component's origin"}
+{"id": "d3_s0013_N2_v2", "axis": "N2", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "Why were Python web frameworks originally created?", "delta": "widens to web frameworks generally"}
+{"id": "d3_s0013_N3_v1", "axis": "N3", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "Why was Flask originally created?", "delta": "a different framework"}
+{"id": "d3_s0013_N3_v2", "axis": "N3", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "Why was World Online originally created?", "delta": "the company, not the framework"}
+{"id": "d3_s0013_N4_v1", "axis": "N4", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "Why was Django originally not created as a general-purpose framework?", "delta": "asks what it wasn't built for"}
+{"id": "d3_s0013_N4_v2", "axis": "N4", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "What problem was Django originally unable to solve?", "delta": "limitations, not the motivating need"}
+{"id": "d3_s0013_N5_v1", "axis": "N5", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "Why was Django eventually adopted outside the news industry?", "delta": "later adoption, not original creation"}
+{"id": "d3_s0013_N5_v2", "axis": "N5", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "Which of Django's original goals mattered least to World Online?", "delta": "least important goal, not the driving need"}
+{"id": "d3_s0013_N6_v1", "axis": "N6", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "How did journalism deadlines shape Django's design?", "delta": "asks design impact, presupposed deadline pressure"}
+{"id": "d3_s0013_N6_v2", "axis": "N6", "seed_question": "Why was Django originally created?", "answer": "It grew out of World Online's practical need, as a newspaper web operation, to build intensive web applications quickly under journalism deadlines.", "variation": "What was World Online's newspaper site called when Django was created?", "delta": "asks the site's name, presupposed context"}
+{"id": "d3_s0014_P1_v1", "axis": "P1", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who built Django, and when did they move from PHP to Python?", "delta": null}
+{"id": "d3_s0014_P1_v2", "axis": "P1", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Which developers made Django, and at what point did they leave PHP for Python?", "delta": null}
+{"id": "d3_s0014_P1_v3", "axis": "P1", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who are Django's creators, and when did they change from PHP over to Python?", "delta": null}
+{"id": "d3_s0014_P1_v4", "axis": "P1", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who wrote Django, and when did the shift from PHP to Python happen?", "delta": null}
+{"id": "d3_s0014_P2_v1", "axis": "P2", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Django was created by whom, and the PHP-to-Python switch happened when?", "delta": null}
+{"id": "d3_s0014_P2_v2", "axis": "P2", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Tell me Django's creators and the time they switched from PHP to Python.", "delta": null}
+{"id": "d3_s0014_P2_v3", "axis": "P2", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "I want the names of Django's creators and the timing of their move off PHP to Python.", "delta": null}
+{"id": "d3_s0014_P2_v4", "axis": "P2", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Name the people behind Django and say when Python replaced PHP for them.", "delta": null}
+{"id": "d3_s0014_P3_v1", "axis": "P3", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "who created django and when did they switch from php to python?", "delta": null}
+{"id": "d3_s0014_P3_v2", "axis": "P3", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "django creators + when did they go from php 2 python?", "delta": null}
+{"id": "d3_s0014_P3_v3", "axis": "P3", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "who made djnago, n when did they swap php for pyhton??", "delta": null}
+{"id": "d3_s0014_P3_v4", "axis": "P3", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "whos the creator of django n when did they ditch php for python", "delta": null}
+{"id": "d3_s0014_N1_v1", "axis": "N1", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django, and where were they working at the time?", "delta": "asks their employer, not the switch date"}
+{"id": "d3_s0014_N1_v2", "axis": "N1", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django, and why did they switch from PHP to Python?", "delta": "asks the reason, not the date"}
+{"id": "d3_s0014_N2_v1", "axis": "N2", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django's template engine, and when did they switch from PHP to Python?", "delta": "narrows creators to the template engine"}
+{"id": "d3_s0014_N2_v2", "axis": "N2", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django, and when did World Online's whole team switch from PHP to Python?", "delta": "widens to the entire company's switch"}
+{"id": "d3_s0014_N3_v1", "axis": "N3", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django, and when did they switch from Perl to Python?", "delta": "Perl instead of PHP"}
+{"id": "d3_s0014_N3_v2", "axis": "N3", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Flask, and when did they switch from PHP to Python?", "delta": "a different framework's creator"}
+{"id": "d3_s0014_N4_v1", "axis": "N4", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django, and when did they switch from Python back to PHP?", "delta": "reversed direction of the switch"}
+{"id": "d3_s0014_N4_v2", "axis": "N4", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django, and when did they stop using Python?", "delta": "when Python was dropped, inverted"}
+{"id": "d3_s0014_N5_v1", "axis": "N5", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django, and when did they first experiment with Python?", "delta": "earliest Python use, not the switch"}
+{"id": "d3_s0014_N5_v2", "axis": "N5", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who wrote most of Django, and when did that person switch from PHP to Python?", "delta": "the main author only, not both"}
+{"id": "d3_s0014_N6_v1", "axis": "N6", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django, and what PHP codebase were they maintaining before the switch?", "delta": "asks the prior PHP project, presupposed"}
+{"id": "d3_s0014_N6_v2", "axis": "N6", "seed_question": "Who created Django, and when did they switch from PHP to Python?", "answer": "World Online developers Adrian Holovaty and Simon Willison switched from PHP to Python in fall 2003.", "variation": "Who created Django, and how long did the PHP-to-Python migration take?", "delta": "asks migration duration, presupposed switch"}
+{"id": "d3_s0015_P1_v1", "axis": "P1", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "When did World Online make Django open source?", "delta": null}
+{"id": "d3_s0015_P1_v2", "axis": "P1", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "At what point did World Online publish Django as open source?", "delta": null}
+{"id": "d3_s0015_P1_v3", "axis": "P1", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "When did World Online release Django under an open source license?", "delta": null}
+{"id": "d3_s0015_P1_v4", "axis": "P1", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "What time did World Online free Django as open source software?", "delta": null}
+{"id": "d3_s0015_P2_v1", "axis": "P2", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "Django was open-sourced by World Online when?", "delta": null}
+{"id": "d3_s0015_P2_v2", "axis": "P2", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "Tell me when World Online open-sourced Django.", "delta": null}
+{"id": "d3_s0015_P2_v3", "axis": "P2", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "The open-sourcing of Django by World Online happened at what point?", "delta": null}
+{"id": "d3_s0015_P2_v4", "axis": "P2", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "I need the timing of World Online's decision to open-source Django.", "delta": null}
+{"id": "d3_s0015_P3_v1", "axis": "P3", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "when did world online open source django?", "delta": null}
+{"id": "d3_s0015_P3_v2", "axis": "P3", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "world online open sourced django when??", "delta": null}
+{"id": "d3_s0015_P3_v3", "axis": "P3", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "when did worldonline opensource djano", "delta": null}
+{"id": "d3_s0015_P3_v4", "axis": "P3", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "wen did world online make django open src", "delta": null}
+{"id": "d3_s0015_N1_v1", "axis": "N1", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "Why did World Online open-source Django?", "delta": "asks the reason, not the date"}
+{"id": "d3_s0015_N1_v2", "axis": "N1", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "Who at World Online decided to open-source Django?", "delta": "asks the decision-maker, not the date"}
+{"id": "d3_s0015_N2_v1", "axis": "N2", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "When did World Online open-source Django's admin application?", "delta": "narrows to the admin component"}
+{"id": "d3_s0015_N2_v2", "axis": "N2", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "When did World Online start open-sourcing its software projects?", "delta": "widens to all its projects"}
+{"id": "d3_s0015_N3_v1", "axis": "N3", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "When did World Online open-source Ellington?", "delta": "a different World Online product"}
+{"id": "d3_s0015_N3_v2", "axis": "N3", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "When did World Online open-source Python?", "delta": "Python, a different project entirely"}
+{"id": "d3_s0015_N4_v1", "axis": "N4", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "When did Django stop being open source?", "delta": "when it ceased being open, inverted"}
+{"id": "d3_s0015_N4_v2", "axis": "N4", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "How long was Django kept closed-source inside World Online?", "delta": "the closed-source period, opposite state"}
+{"id": "d3_s0015_N5_v1", "axis": "N5", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "When did World Online first consider open-sourcing Django?", "delta": "earliest consideration, not the release"}
+{"id": "d3_s0015_N5_v2", "axis": "N5", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "When did World Online most recently release Django code publicly?", "delta": "latest release, not the original open-sourcing"}
+{"id": "d3_s0015_N6_v1", "axis": "N6", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "Who announced Django's release when World Online open-sourced it?", "delta": "asks the announcer, presupposed release"}
+{"id": "d3_s0015_N6_v2", "axis": "N6", "seed_question": "When did World Online open-source Django?", "answer": "In summer 2005.", "variation": "What version number did Django carry when World Online open-sourced it?", "delta": "asks the initial version, presupposed release"}

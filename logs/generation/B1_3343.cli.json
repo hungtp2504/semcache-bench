@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 154049,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "9788e5ab-81ab-44b8-a94f-f5d48ff09898",
+  "total_cost_usd": 0.38053020000000004,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 50800,
+    "cache_read_input_tokens": 98711,
+    "output_tokens": 15758,
+    "output_tokens_details": {
+      "thinking_tokens": 12526
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 50800,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3159,
+        "cache_read_input_tokens": 68433,
+        "cache_creation_input_tokens": 12645,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12645
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15758,
+      "cacheReadInputTokens": 98711,
+      "cacheCreationInputTokens": 50800,
+      "webSearchRequests": 0,
+      "costUSD": 0.38053020000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0250_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0250_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0250_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's answer already conditions the clock on 'ngày có đủ thông tin, hồ sơ', so it still fully covers the dossier-supplement scenario; answer doesn't necessarily differ\"}\n{\"id\":\"d5_s0250_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0250_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0250_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks for exemption cases (a list), not a negation flip of the same deadline fact; different answer type, closer to N1\"}\n{\"id\":\"d5_s0250_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0250_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about consequence/sanction for lateness, a different facet rather than a polarity flip of the same deadline claim\"}\n{\"id\":\"d5_s0250_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks remedial action after a failed appraisal, a different facet not a same-fact polarity flip\"}\n{\"id\":\"d5_s0250_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0250_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0250_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces an unverified extension mechanism not present in seed's fact rather than flipping min/max of the same measurement\"}\n{\"id\":\"d5_s0250_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts to a meta-comparison across all deadlines in the whole regulation instead of flipping the extreme of this specific fact\"}\n{\"id\":\"d5_s0250_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0250_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"orthogonal facet (who signs) with no presupposed related time-based fact; better fits N1 than N6\"}\n{\"id\":\"d5_s0256_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0256_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0256_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0256_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0256_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0256_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0256_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0256_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0256_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0256_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0256_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0256_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0256_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0256_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0256_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the annual data-lock deadline plausibly applies uniformly across training levels including doctoral, so answer likely unchanged\"}\n{\"id\":\"d5_s0256_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"supplementary admission rounds likely still fall under the same annual Dec 31 cutoff, so answer likely unchanged\"}\n{\"id\":\"d5_s0256_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0256_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0256_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps entity (non-admitted vs admitted) and changes to a yes/no question, not a negation flip of the deadline claim; closer to N3/N1\"}\n{\"id\":\"d5_s0256_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"this is an entity substitution (dropped-out vs admitted learners), not a negation/antonym flip; fits N3 not N4\"}\n{\"id\":\"d5_s0256_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about penalty for late update, a different facet rather than a same-fact polarity flip\"}\n{\"id\":\"d5_s0256_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for exempted data categories (a list), a different answer type; closer to N1\"}\n{\"id\":\"d5_s0256_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0256_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to update frequency count, a different measurable than a date extreme, not a min/max flip of the same fact\"}\n{\"id\":\"d5_s0256_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces an unverified extension mechanism, presupposing a different provision rather than flipping the extreme of the same fact\"}\n{\"id\":\"d5_s0256_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts to a meta-comparison across all reporting milestones in the regulation instead of flipping the extreme of this specific fact\"}\n{\"id\":\"d5_s0256_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"orthogonal facet (who issues account) with no presupposed related-but-different fact; better fits N1 than N6\"}\n{\"id\":\"d5_s0256_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"orthogonal facet (purpose of the data) rather than a presupposition shift; better fits N1 than N6\"}\n{\"id\":\"d5_s0262_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0262_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0262_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0262_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0262_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0262_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0262_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0262_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0262_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0262_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0262_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0262_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0262_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0262_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0262_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0262_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0262_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 133099,
+  "ttft_stream_ms": 1323,
+  "time_to_request_ms": 20,
+  "type": "result",
+  "duration_ms": 154820,
+  "uuid": "4137da5f-d00b-44ce-b16f-f87e7b5a644d",
+  "queued_turn_count": 0
+}

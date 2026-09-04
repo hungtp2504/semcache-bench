@@ -1,0 +1,60 @@
+{"id": "d4_s0624_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0624_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0624_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "screening-age question doesn't presuppose the ranking fact, it's a plain aspect/topic shift; fits N1 better than N6", "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "prostate cancer likely remains the most common nonskin cancer among men over 65 too, so the correct answer probably doesn't differ from seed", "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "seed answer already implies prostate cancer is not uncommon, so the flipped question's correct answer content is unchanged (per taxonomy's stated N4 exception)", "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "asks cancer deaths vs. diagnoses — an aspect change, not a negation/antonym flip; fits N1 rather than N4", "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "introduces a two-entity comparison question rather than a single negation/antonym flip", "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0631_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "not a negation/antonym flip on the question itself — it's a filter/sub-question about tumor origin site, closer to an N6 presupposition pattern", "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0637_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}
+{"id": "d4_s0643_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2883", "ts": "2026-08-27T15:41:42Z"}

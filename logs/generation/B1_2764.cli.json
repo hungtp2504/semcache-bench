@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 149709,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "2cbd04a4-c6ee-4016-9594-1c4756e156ea",
+  "total_cost_usd": 0.369213,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 46468,
+    "cache_read_input_tokens": 92065,
+    "output_tokens": 16492,
+    "output_tokens_details": {
+      "thinking_tokens": 13457
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 46468,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2922,
+        "cache_read_input_tokens": 61787,
+        "cache_creation_input_tokens": 14959,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14959
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 16492,
+      "cacheReadInputTokens": 92065,
+      "cacheCreationInputTokens": 46468,
+      "webSearchRequests": 0,
+      "costUSD": 0.369213,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0074_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes domains were 'retired' but per seed facts neither reactjs.org (redirects, still live) nor legacy.reactjs.org (still hosts old docs) was actually retired; not a real quantifier/extreme in this topic\"}\n{\"id\":\"d3_s0074_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0074_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0080_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0080_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0080_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0080_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0080_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0080_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0080_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0080_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0080_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0080_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0080_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0080_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0080_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0080_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0080_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the 'groups' relation requirement is a Django-level model constraint unlikely to change between daemon and embedded mod_wsgi mode, so the correct answer likely does not differ from the seed's\"}\n{\"id\":\"d3_s0080_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0080_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0080_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0080_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0080_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0080_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to a different facet (plain authentication) rather than a single negation/antonym flip of the authorization claim\"}\n{\"id\":\"d3_s0080_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"the 'groups' relation requirement is a Django application-level constant independent of mod_wsgi, so the seed's answer likely still applies without mod_wsgi — same answer content, not a wrong-sign flip\"}\n{\"id\":\"d3_s0080_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a universal-vs-specific scope question, not a min/max/earliest/latest/at-least/at-most quantifier flip — this is N2 territory, not N5\"}\n{\"id\":\"d3_s0080_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0080_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0080_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0080_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0080_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0086_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0086_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0086_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0086_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0086_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0086_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0086_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0086_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0086_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0086_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0086_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0086_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0086_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0086_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0086_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0086_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0086_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0086_N3_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"Django's testserver command internally reuses runserver's WSGI-serving logic, so the answer (WSGI_APPLICATION) likely does not change\"}\n{\"id\":\"d3_s0086_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0086_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks failure/edge-case behavior, a different facet, rather than a clean negation/antonym flip of the used-setting claim\"}\n{\"id\":\"d3_s0086_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes fallback behavior when unset — closer to N6 presupposition shift than a single polarity flip\"}\n{\"id\":\"d3_s0086_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"fabricated 'skip lookup' premise not grounded in actual runserver behavior; not a clean single negation flip\"}\n{\"id\":\"d3_s0086_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0086_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0086_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0086_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0086_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0086_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0092_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 128817,
+  "ttft_stream_ms": 1465,
+  "time_to_request_ms": 19,
+  "type": "result",
+  "duration_ms": 150485,
+  "uuid": "091b04e5-46ef-4ded-9321-309f4cb4e286",
+  "queued_turn_count": 0
+}

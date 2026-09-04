@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 203674,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "0ce238fa-cb49-4af7-af3e-11088d8c52ac",
+  "total_cost_usd": 0.451353,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 54696,
+    "cache_read_input_tokens": 96905,
+    "output_tokens": 21318,
+    "output_tokens_details": {
+      "thinking_tokens": 18194
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 54696,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3032,
+        "cache_read_input_tokens": 66627,
+        "cache_creation_input_tokens": 18347,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 18347
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 21318,
+      "cacheReadInputTokens": 96905,
+      "cacheCreationInputTokens": 54696,
+      "webSearchRequests": 0,
+      "costUSD": 0.451353,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0214_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"Asks for the consequence of non-compliance, not a polarity flip of the same question — an aspect change (requirement vs. penalty), not a negation/antonym flip\"}\n{\"id\":\"d5_s0214_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0214_N5_v2\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"Introduces an unrelated specific fact (minimum foreign-language level) rather than flipping a quantifier/extreme in the original comparison; this is an aspect change (N1), not N5\"}\n{\"id\":\"d5_s0214_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Invents a comparison between the two sub-requirements not present in the original 'not lower than national standard' statement; not a flip of an existing extreme\"}\n{\"id\":\"d5_s0214_N5_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"Asks about minimum credits, an unrelated fact not derived from flipping any extreme/quantifier in the seed question; aspect change, not N5\"}\n{\"id\":\"d5_s0214_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0214_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0220_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0220_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0220_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0220_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_P2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0220_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0220_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0220_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0220_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0220_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0220_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0220_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Combines entity narrowing (to one specific banned major) with a reframe into an exception/condition question, more than a single negation flip\"}\n{\"id\":\"d5_s0220_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0220_N4_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"Swaps the subject entity from 'ngành' to 'cơ sở giáo dục' — an entity substitution, not a negation/antonym flip; no polarity was flipped\"}\n{\"id\":\"d5_s0220_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Asks for a count of banned groups rather than flipping a min/max/earliest/latest/at-least/at-most extreme\"}\n{\"id\":\"d5_s0220_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0220_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Combines a false uniqueness presupposition with an added scope qualifier ('ở mọi trình độ'), exceeding a single extreme flip\"}\n{\"id\":\"d5_s0220_N5_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"Presupposes an incremental-addition history not established by the source; better fits presupposition shift (N6) than a quantifier/extreme flip\"}\n{\"id\":\"d5_s0220_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0220_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0227_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0227_P1_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0227_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0227_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0227_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0227_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0227_P2_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0227_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0227_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0227_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0227_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0227_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0227_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0227_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0227_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"The replacement mechanism (Điều 14 residence-data lookup) applies uniformly regardless of procedure type, so the seed's answer would still fully answer this narrowed tuition-exemption case; not a genuine scope change\"}\n{\"id\":\"d5_s0227_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0227_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0227_N3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0227_N4_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0227_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0227_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0227_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Shifts subject to a new entity ('cơ quan giải quyết thủ tục') and topic (authority to access data) rather than a single negation flip on the original replacement question\"}\n{\"id\":\"d5_s0227_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0227_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0227_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}",
+  "ttft_ms": 183762,
+  "ttft_stream_ms": 1875,
+  "time_to_request_ms": 24,
+  "type": "result",
+  "duration_ms": 204454,
+  "uuid": "b1f2a66f-0d8d-4d48-9532-fc313ec0b8cd",
+  "queued_turn_count": 0
+}

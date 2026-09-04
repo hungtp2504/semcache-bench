@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 57942,
+  "stop_reason": "end_turn",
+  "session_id": "9c5d5f9c-535c-4047-afff-7293344ab142",
+  "total_cost_usd": 0.07053690000000001,
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 16864,
+    "cache_read_input_tokens": 22499,
+    "output_tokens": 6910,
+    "output_tokens_details": {
+      "thinking_tokens": 5369
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16864,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 6910,
+        "cache_read_input_tokens": 22499,
+        "cache_creation_input_tokens": 16864,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16864
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 9,
+      "outputTokens": 6910,
+      "cacheReadInputTokens": 22499,
+      "cacheCreationInputTokens": 16864,
+      "webSearchRequests": 0,
+      "costUSD": 0.07053690000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"pair_id\":\"d3_s0600_N2_v2\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"d3_s0600_N3_v1\",\"decision\":\"REGENERATE\",\"conf\":0.99}\n{\"pair_id\":\"d3_s0600_N4_v1\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0600_N4_v2\",\"decision\":\"REGENERATE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0600_N5_v1\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"d3_s0600_N6_v1\",\"decision\":\"REGENERATE\",\"conf\":0.92}\n{\"pair_id\":\"d3_s0600_P1_v3\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0600_P2_v1\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0600_P2_v3\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0600_P3_v1\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0600_P3_v4\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"d3_s0605_N1_v2\",\"decision\":\"REGENERATE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0605_N2_v1\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0605_N2_v2\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0605_N3_v1\",\"decision\":\"REGENERATE\",\"conf\":0.99}\n{\"pair_id\":\"d3_s0605_N3_v2\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0605_N4_v1\",\"decision\":\"REGENERATE\",\"conf\":0.99}\n{\"pair_id\":\"d3_s0605_N4_v3\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0605_N6_v2\",\"decision\":\"REGENERATE\",\"conf\":0.96}\n{\"pair_id\":\"d3_s0605_P2_v2\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0605_P2_v3\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0605_P3_v1\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"d3_s0605_P3_v2\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0605_P3_v3\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"d3_s0605_P3_v4\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"d3_s0606_N1_v1\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0606_N1_v2\",\"decision\":\"REGENERATE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0606_N2_v2\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0606_N3_v1\",\"decision\":\"REGENERATE\",\"conf\":0.99}\n{\"pair_id\":\"d3_s0606_N3_v2\",\"decision\":\"REGENERATE\",\"conf\":0.99}\n{\"pair_id\":\"d3_s0606_N4_v1\",\"decision\":\"REGENERATE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0606_N4_v4\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0606_N5_v1\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"d3_s0606_N5_v2\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"d3_s0606_N6_v2\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0606_P2_v1\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0606_P2_v3\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0606_P2_v4\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0606_P3_v1\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0606_P3_v3\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"d3_s0606_P3_v4\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"d3_s0607_N2_v1\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"d3_s0607_N2_v2\",\"decision\":\"REGENERATE\",\"conf\":0.97}\n{\"pair_id\":\"d3_s0607_N3_v1\",\"decision\":\"REGENERATE\",\"conf\":0.99}\n{\"pair_id\":\"d3_s0607_N4_v1\",\"decision\":\"REGENERATE\",\"conf\":0.99}\n{\"pair_id\":\"d3_s0607_N5_v1\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"d3_s0607_P1_v3\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0607_P1_v4\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"d3_s0607_P2_v2\",\"decision\":\"REGENERATE\",\"conf\":0.92}\n{\"pair_id\":\"d3_s0607_P2_v3\",\"decision\":\"SERVE\",\"conf\":0.98}\n```",
+  "ttft_ms": 47569,
+  "type": "result",
+  "duration_ms": 58149,
+  "uuid": "4db3dcfc-cf52-4483-a4bd-6915e09f3f64",
+  "ttft_stream_ms": 1086,
+  "time_to_request_ms": 29,
+  "queued_turn_count": 0
+}

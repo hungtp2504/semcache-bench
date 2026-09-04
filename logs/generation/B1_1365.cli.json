@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 140865,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "745b6b78-b65d-4483-a8a7-fde73da05472",
+  "total_cost_usd": 0.33580319999999997,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 44209,
+    "cache_read_input_tokens": 93596,
+    "output_tokens": 14024,
+    "output_tokens_details": {
+      "thinking_tokens": 11089
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 44209,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2906,
+        "cache_read_input_tokens": 63318,
+        "cache_creation_input_tokens": 11169,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11169
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 14024,
+      "cacheReadInputTokens": 93596,
+      "cacheCreationInputTokens": 44209,
+      "webSearchRequests": 0,
+      "costUSD": 0.33580319999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0815_P3_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d3_s0815_P3_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0815_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0815_N1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0815_N1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0815_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0815_N2_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0815_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0815_N3_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0815_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks what's excluded from client bundle, a distinct aspect (code delivery) rather than a negation/antonym of 'renders'; not a clean polarity flip\"}\n{\"id\":\"d3_s0815_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new scenario (rendering failure) rather than negating the original predicate; aspect change, not polarity flip\"}\n{\"id\":\"d3_s0815_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0815_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks about server dependency (a different aspect entirely), not a negation of 'what text does it render'\"}\n{\"id\":\"d3_s0815_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0815_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts the answer's referent from the demo's own rendered text to unrelated preceding sandbox content, more than a single extreme-qualifier change\"}\n{\"id\":\"d3_s0815_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines an extreme (shortest) with a scope widening (any demo in the sandbox) — two changes, not exactly one quantifier flip\"}\n{\"id\":\"d3_s0815_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines an extreme (deepest) with a scope widening (across all sandbox demos) — two changes, not exactly one quantifier flip\"}\n{\"id\":\"d3_s0815_N6_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0815_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0822_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0822_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0822_P1_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d3_s0822_P1_v4\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d3_s0822_P2_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0822_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0822_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0822_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0822_P3_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d3_s0822_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0822_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0822_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0822_N1_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0822_N1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0822_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0822_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0822_N3_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0822_N3_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'state' vs 'side effects' is a topic/aspect substitution, not an entity/id/version swap of a sibling entity; better fits N1\"}\n{\"id\":\"d3_s0822_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0822_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"changes scope (complex screen -> simple screen) together with a sufficiency flip — two changes, not a clean single negation\"}\n{\"id\":\"d3_s0822_N4_v3\",\"axis_ok\":false,\"conf\":0.62,\"issue\":\"asks a distinct presupposed detail (what to exclude from context) rather than negating 'combine two concepts'; fits N6/N1 better than N4\"}\n{\"id\":\"d3_s0822_N4_v4\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0822_N5_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0822_N5_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0822_N5_v3\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d3_s0822_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0822_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0822_N6_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0828_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0828_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0828_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0828_P1_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0828_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0828_P2_v2\",\"axis_ok\":true,\"conf\":0.87,\"issue\":null}\n{\"id\":\"d3_s0828_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0828_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0828_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0828_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0828_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0828_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0828_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 118456,
+  "ttft_stream_ms": 2366,
+  "time_to_request_ms": 24,
+  "type": "result",
+  "duration_ms": 141359,
+  "uuid": "b30364cb-78e0-43fd-9c2e-73fd9c553089",
+  "queued_turn_count": 0
+}

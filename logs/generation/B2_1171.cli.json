@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 95232,
+  "stop_reason": "end_turn",
+  "session_id": "f886f74f-984f-4732-8630-90d8c3a9fa11",
+  "total_cost_usd": 0.5504990000000001,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 31721,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 8950,
+    "output_tokens_details": {
+      "thinking_tokens": 6086
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31721,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8950,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 31721,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 31721
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 8950,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 31721,
+      "webSearchRequests": 0,
+      "costUSD": 0.5504990000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0798_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0798_N2_v1\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d3_s0798_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"widened scope but correct answer is still 'no, non-state values don't re-render' — seed answer still serves it\"}\n{\"id\":\"d3_s0798_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0798_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0798_N4_v1\",\"axis_ok\":false,\"conf\":0.78,\"issue\":\"change→read is not a negation/antonym flip and the answer is still 'no'\"}\n{\"id\":\"d3_s0798_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"direction reversal, not a polarity flip; answer sign unchanged ('no')\"}\n{\"id\":\"d3_s0798_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"cause→prevent flip still yields a 'no' answer, so seed answer would not mislead by sign\"}\n{\"id\":\"d3_s0798_N4_v4\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d3_s0798_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0798_N5_v2\",\"axis_ok\":false,\"conf\":0.62,\"issue\":\"two quantifiers added and answer is still 'no re-render' — seed answer still applies\"}\n{\"id\":\"d3_s0798_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"comparative/aspect question, no quantifier or extreme flipped\"}\n{\"id\":\"d3_s0798_N5_v4\",\"axis_ok\":false,\"conf\":0.58,\"issue\":\"'only the first' quantifier added but correct answer remains 'no ref change re-renders' — seed answer still serves it\"}\n{\"id\":\"d3_s0798_N6_v1\",\"axis_ok\":false,\"conf\":0.52,\"issue\":\"presupposes the seed's own fact rather than a different one; effectively an aspect change\"}\n{\"id\":\"d3_s0798_N6_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"presupposed fact is identical to the seed answer, not a shifted/different fact\"}\n{\"id\":\"d3_s0804_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0804_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0804_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0804_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0804_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0804_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0804_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0804_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0804_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0804_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0804_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0804_P3_v4\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d3_s0804_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0804_N1_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0804_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0804_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0804_N3_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0804_N3_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0804_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0804_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0804_N4_v3\",\"axis_ok\":false,\"conf\":0.58,\"issue\":\"not a polarity flip (structural change to the dep array), and 'runs on every render' overlaps the seed answer's 'runs too often'\"}\n{\"id\":\"d3_s0804_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0804_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0804_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0804_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0804_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0804_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes the seed's own answer rather than a related-but-different fact; reads as an aspect change\"}\n{\"id\":\"d3_s0804_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0810_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_P1_v3\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"renders→re-renders changes content; seed answer's 'initial render' no longer applies\"}\n{\"id\":\"d3_s0810_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0810_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0810_N1_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0810_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0810_N2_v2\",\"axis_ok\":false,\"conf\":0.58,\"issue\":\"a child renders for the same two reasons (initial render / own-or-ancestor state update) — seed answer still fully answers\"}\n{\"id\":\"d3_s0810_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}",
+  "ttft_ms": 71642,
+  "type": "result",
+  "duration_ms": 95450,
+  "uuid": "73fc40aa-79c7-4692-af76-d9dc37bd4cb8",
+  "ttft_stream_ms": 1518,
+  "time_to_request_ms": 16,
+  "queued_turn_count": 0
+}

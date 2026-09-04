@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0160
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d1_s0265", "domain": "university_admin", "doc_id": "d1_1-051-structural-engineering-design-fall_syllabus", "fact_ids": ["d1_f00413", "d1_f00414"], "question": "Who taught MIT's 1.051 Structural Engineering Design course and in what term?", "answer": "Prof. Oral Buyukozturk taught 1.051 Structural Engineering Design in Fall 2003, at the undergraduate level.", "generator_model": "claude-sonnet-5", "batch_id": "A_0128", "ts": "2026-08-12T08:21:16Z"}
+{"seed_id": "d1_s0271", "domain": "university_admin", "doc_id": "d1_1-054-mechanics-and-design-of-concrete-s_assignments", "fact_ids": ["d1_f00421"], "question": "Who taught MIT's 1.054 Mechanics and Design of Concrete Structures and in what term?", "answer": "Prof. Oral Buyukozturk taught it in Spring 2004, at the undergraduate level.", "generator_model": "claude-sonnet-5", "batch_id": "A_0128", "ts": "2026-08-12T08:21:16Z"}
+{"seed_id": "d1_s0272", "domain": "university_admin", "doc_id": "d1_1-054-mechanics-and-design-of-concrete-s_assignments", "fact_ids": ["d1_f00422"], "question": "What is the topic of Homework 1 in 1.054 Mechanics and Design of Concrete Structures?", "answer": "Homework 1 covers the Design of a Concrete Gravity Platform.", "generator_model": "claude-sonnet-5", "batch_id": "A_0128", "ts": "2026-08-12T08:21:16Z"}
+{"seed_id": "d1_s0273", "domain": "university_admin", "doc_id": "d1_1-054-mechanics-and-design-of-concrete-s_assignments", "fact_ids": ["d1_f00423"], "question": "What does Homework 2 in 1.054 focus on?", "answer": "Homework 2 focuses on Creep Strain in a Reinforced Concrete Building Column.", "generator_model": "claude-sonnet-5", "batch_id": "A_0128", "ts": "2026-08-12T08:21:16Z"}
+{"seed_id": "d1_s0277", "domain": "university_admin", "doc_id": "d1_1-054-mechanics-and-design-of-concrete-s_calendar", "fact_ids": ["d1_f00427", "d1_f00428"], "question": "In the 1.054 course calendar, on which lecture is Homework 1 assigned and on which lecture is it due?", "answer": "Homework 1 is assigned (out) at Lecture 4 (Concrete Plasticity) and is due at Lecture 6 (Creep and Shrinkage Deformation).", "generator_model": "claude-sonnet-5", "batch_id": "A_0128", "ts": "2026-08-12T08:21:16Z"}
+{"seed_id": "d1_s0285", "domain": "university_admin", "doc_id": "d1_1-054-mechanics-and-design-of-concrete-s_exams", "fact_ids": ["d1_f00444"], "question": "How many exams are listed on the exams page for MIT's 1.054 course, and in what format are they provided?", "answer": "Two exams, Exam 1 and Exam 2, both provided as PDF files.", "generator_model": "claude-sonnet-5", "batch_id": "A_0129", "ts": "2026-08-12T08:21:47Z"}
+{"seed_id": "d1_s0287", "domain": "university_admin", "doc_id": "d1_1-054-mechanics-and-design-of-concrete-s_syllabus", "fact_ids": ["d1_f00450", "d1_f00451", "d1_f00452"], "question": "What are the grading percentages for MIT's 1.054 Mechanics and Design of Concrete Structures course?", "answer": "Two exams together count for 50% of the grade (25% each), homework counts for 25%, and the individual project counts for 25%, including project reports and presentations.", "generator_model": "claude-sonnet-5", "batch_id": "A_0129", "ts": "2026-08-12T08:21:47Z"}
+{"seed_id": "d1_s0289", "domain": "university_admin", "doc_id": "d1_1-054-mechanics-and-design-of-concrete-s_syllabus", "fact_ids": ["d1_f00447"], "question": "Who served as the student assistant for MIT's 1.054 course in Spring 2004?", "answer": "Tzu-Yang Yu served as the student assistant.", "generator_model": "claude-sonnet-5", "batch_id": "A_0129", "ts": "2026-08-12T08:21:47Z"}
+{"seed_id": "d1_s0295", "domain": "university_admin", "doc_id": "d1_1-060-engineering-mechanics-ii-spring-20_assignments", "fact_ids": ["d1_f00461"], "question": "How many problem sets were assigned in MIT's 1.060 Engineering Mechanics II course, and were solutions provided?", "answer": "Nine problem sets (Problem Set 1 through Problem Set 9) were assigned, each with solutions provided.", "generator_model": "claude-sonnet-5", "batch_id": "A_0129", "ts": "2026-08-12T08:21:47Z"}
+{"seed_id": "d1_s0740", "domain": "university_admin", "doc_id": "d1_11-002j-making-public-policy-fall-2014_calendar", "fact_ids": ["d1_f01081"], "question": "How many total class sessions does the 11.002J Fall 2014 course calendar list?", "answer": "26 sessions.", "generator_model": "claude-sonnet-5", "batch_id": "A_0154", "ts": "2026-08-12T08:35:20Z"}

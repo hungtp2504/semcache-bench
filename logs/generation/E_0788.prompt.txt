@@ -1,0 +1,73 @@
+You are the verification tier of a semantic cache. The first tier (embedding similarity)
+proposed serving a stored answer to a new query. You see both questions and the stored
+answer. Decide whether serving is safe.
+
+DECISION RULE
+SERVE      — the stored answer is a fully correct and complete answer to the new query.
+REGENERATE — anything else: different entity/version, flipped polarity, different
+             quantifier or extreme, different facet or scope, different presupposed fact,
+             or you are unsure. When in doubt, REGENERATE (a false hit sends a user the
+             wrong answer; a false miss only costs one LLM call).
+
+Pay attention to small discrete differences the first tier is blind to: "1" vs "2",
+negation words, earliest/latest, min/max, sibling entities. Do not be fooled by large
+surface differences that change nothing (typos, missing diacritics, paraphrase).
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"pair_id":"...","decision":"SERVE|REGENERATE","conf":<0..1>}
+
+
+[BATCH INPUT]
+batch_id: E_0788
+pairs (JSONL — pair_id, cached_question, cached_answer, new_query):
+
+{"pair_id": "d4_s0594_P2_v2", "cached_question": "What condition can too much growth hormone from a pituitary tumor cause in adults versus children?", "cached_answer": "In adults it can cause acromegaly, the growth of bones in the face, hands, and feet; in children, the whole body may grow much taller and larger than normal.", "new_query": "Describe the condition too much growth hormone from a pituitary tumor causes in adults versus in children."}
+{"pair_id": "d4_s0594_P3_v3", "cached_question": "What condition can too much growth hormone from a pituitary tumor cause in adults versus children?", "cached_answer": "In adults it can cause acromegaly, the growth of bones in the face, hands, and feet; in children, the whole body may grow much taller and larger than normal.", "new_query": "pituitary tumor too much growth hormone, condition in adults n children??"}
+{"pair_id": "d4_s0594_P3_v4", "cached_question": "What condition can too much growth hormone from a pituitary tumor cause in adults versus children?", "cached_answer": "In adults it can cause acromegaly, the growth of bones in the face, hands, and feet; in children, the whole body may grow much taller and larger than normal.", "new_query": "excess growth hormone pituitary tumour - adults vs childrn what conditon"}
+{"pair_id": "d4_s0598_N2_v1", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "How long is the sigmoid colon?"}
+{"pair_id": "d4_s0598_N5_v1", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "What is the maximum length a colon can reach?"}
+{"pair_id": "d4_s0598_N5_v2", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "What is the shortest a normal colon can be?"}
+{"pair_id": "d4_s0598_N6_v2", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "How is the length of the colon measured during a colonoscopy?"}
+{"pair_id": "d4_s0598_P1_v4", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "How long does the colon run?"}
+{"pair_id": "d4_s0598_P2_v1", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "Tell me the colon's length."}
+{"pair_id": "d4_s0598_P2_v3", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "Could you give me the length of the colon?"}
+{"pair_id": "d4_s0598_P2_v4", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "In feet, how long is a person's colon?"}
+{"pair_id": "d4_s0598_P3_v2", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "colon length = ?"}
+{"pair_id": "d4_s0598_P3_v4", "cached_question": "How long is the colon?", "cached_answer": "The colon is the first part of the large intestine and is about 5 feet long.", "new_query": "colon how long, just curious"}
+{"pair_id": "d4_s0599_N2_v1", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "How long is the anal canal on its own?"}
+{"pair_id": "d4_s0599_N3_v2", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "How long are the cecum and anal canal together?"}
+{"pair_id": "d4_s0599_N5_v2", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "What is the shortest the rectum and anal canal are together?"}
+{"pair_id": "d4_s0599_P1_v3", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "What's the total length of the rectum plus the anal canal?"}
+{"pair_id": "d4_s0599_P1_v4", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "Roughly how long do the rectum and anal canal measure when taken as one section?"}
+{"pair_id": "d4_s0599_P2_v1", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "Tell me the length of the rectum and anal canal taken together."}
+{"pair_id": "d4_s0599_P2_v3", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "I'd like to know how long the rectum and anal canal are combined."}
+{"pair_id": "d4_s0599_P2_v4", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "Can you give me the length that the rectum and anal canal together span?"}
+{"pair_id": "d4_s0599_P3_v1", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "how long r the rectum n anal canal together"}
+{"pair_id": "d4_s0599_P3_v2", "cached_question": "How long are the rectum and anal canal together?", "cached_answer": "Together, the rectum and anal canal make up the last part of the large intestine and are about 6-8 inches long.", "new_query": "rectum + anal canal lenght combined?"}
+{"pair_id": "d4_s0600_N5_v1", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "What is the most common type of colon cancer?"}
+{"pair_id": "d4_s0600_P1_v1", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "What does colon cancer mean?"}
+{"pair_id": "d4_s0600_P1_v2", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "Can you define colon cancer?"}
+{"pair_id": "d4_s0600_P1_v4", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "How is colon cancer defined?"}
+{"pair_id": "d4_s0600_P2_v1", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "Give me a definition of colon cancer."}
+{"pair_id": "d4_s0600_P2_v2", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "Colon cancer — what is it, exactly?"}
+{"pair_id": "d4_s0600_P2_v3", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "I'd like to know what is meant by colon cancer."}
+{"pair_id": "d4_s0600_P2_v4", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "How would colon cancer be described?"}
+{"pair_id": "d4_s0600_P3_v2", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "colon cancer is wat exactly??"}
+{"pair_id": "d4_s0600_P3_v3", "cached_question": "What is colon cancer?", "cached_answer": "Colon cancer is a disease in which malignant (cancer) cells form in the tissues of the colon.", "new_query": "whats colon cancr"}
+{"pair_id": "d4_s0605_P1_v1", "cached_question": "What is rectal cancer?", "cached_answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "new_query": "What does rectal cancer mean?"}
+{"pair_id": "d4_s0605_P1_v2", "cached_question": "What is rectal cancer?", "cached_answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "new_query": "Can you define rectal cancer?"}
+{"pair_id": "d4_s0605_P1_v4", "cached_question": "What is rectal cancer?", "cached_answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "new_query": "How would you describe rectal cancer?"}
+{"pair_id": "d4_s0605_P2_v1", "cached_question": "What is rectal cancer?", "cached_answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "new_query": "Give me a definition of rectal cancer."}
+{"pair_id": "d4_s0605_P2_v2", "cached_question": "What is rectal cancer?", "cached_answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "new_query": "Rectal cancer — what is it?"}
+{"pair_id": "d4_s0605_P2_v3", "cached_question": "What is rectal cancer?", "cached_answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "new_query": "I'd like to know what is meant by rectal cancer."}
+{"pair_id": "d4_s0605_P2_v4", "cached_question": "What is rectal cancer?", "cached_answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "new_query": "What is the disease called rectal cancer?"}
+{"pair_id": "d4_s0605_P3_v2", "cached_question": "What is rectal cancer?", "cached_answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "new_query": "rectal cancer = ?"}
+{"pair_id": "d4_s0605_P3_v3", "cached_question": "What is rectal cancer?", "cached_answer": "Rectal cancer is a disease in which malignant (cancer) cells form in the tissues of the rectum.", "new_query": "whats rectal cancr exactly"}
+{"pair_id": "d4_s0606_N1_v2", "cached_question": "What are the main signs of rectal cancer?", "cached_answer": "Signs of rectal cancer include a change in bowel habits or blood in the stool.", "new_query": "What causes rectal cancer?"}
+{"pair_id": "d4_s0606_N2_v1", "cached_question": "What are the main signs of rectal cancer?", "cached_answer": "Signs of rectal cancer include a change in bowel habits or blood in the stool.", "new_query": "What are the main signs of advanced rectal cancer?"}
+{"pair_id": "d4_s0606_N5_v1", "cached_question": "What are the main signs of rectal cancer?", "cached_answer": "Signs of rectal cancer include a change in bowel habits or blood in the stool.", "new_query": "What is the single most common sign of rectal cancer?"}
+{"pair_id": "d4_s0606_N5_v2", "cached_question": "What are the main signs of rectal cancer?", "cached_answer": "Signs of rectal cancer include a change in bowel habits or blood in the stool.", "new_query": "What is the rarest sign of rectal cancer?"}
+{"pair_id": "d4_s0606_P1_v2", "cached_question": "What are the main signs of rectal cancer?", "cached_answer": "Signs of rectal cancer include a change in bowel habits or blood in the stool.", "new_query": "Which symptoms typically indicate rectal cancer?"}
+{"pair_id": "d4_s0606_P1_v4", "cached_question": "What are the main signs of rectal cancer?", "cached_answer": "Signs of rectal cancer include a change in bowel habits or blood in the stool.", "new_query": "What signs most often point to rectal cancer?"}
+{"pair_id": "d4_s0606_P2_v1", "cached_question": "What are the main signs of rectal cancer?", "cached_answer": "Signs of rectal cancer include a change in bowel habits or blood in the stool.", "new_query": "List the main signs of rectal cancer for me."}
+{"pair_id": "d4_s0606_P2_v3", "cached_question": "What are the main signs of rectal cancer?", "cached_answer": "Signs of rectal cancer include a change in bowel habits or blood in the stool.", "new_query": "I want to know which signs are most commonly seen with rectal cancer."}

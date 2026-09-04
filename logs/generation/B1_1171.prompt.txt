@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_1171
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d2_s0627_N3_v2", "axis": "N3", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "What is the formula for DistMult's score function f(h,r,t)?", "delta": "DistMult instead of TransE"}
+{"id": "d2_s0627_N4_v1", "axis": "N4", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "What is the formula for TransE's dissimilarity, rather than its score, on (h,r,t)?", "delta": "positive distance, not the negated score"}
+{"id": "d2_s0627_N4_v2", "axis": "N4", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "What is the formula for TransE's score function if h + r + t is used instead of h + r - t?", "delta": "sign of t flipped inside the norm"}
+{"id": "d2_s0627_N4_v3", "axis": "N4", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "What is TransE's score function when the L1 norm is used instead of the squared L2 norm?", "delta": "L1 norm variant, not squared L2"}
+{"id": "d2_s0627_N4_v4", "axis": "N4", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "What formula does TransE use to score corrupted rather than valid triples?", "delta": "corrupted-triple scoring, not valid triples"}
+{"id": "d2_s0627_N5_v1", "axis": "N5", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "What is the maximum value TransE's score function f(h,r,t) can take?", "delta": "upper bound of the score, not the formula"}
+{"id": "d2_s0627_N5_v2", "axis": "N5", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "What is the minimum value of TransE's score function f(h,r,t)?", "delta": "lower bound of the score, not the formula"}
+{"id": "d2_s0627_N5_v3", "axis": "N5", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "Which triples receive the highest TransE score f(h,r,t)?", "delta": "top-scoring triples, not the formula"}
+{"id": "d2_s0627_N5_v4", "axis": "N5", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "Which triples receive the lowest TransE score f(h,r,t)?", "delta": "lowest-scoring triples, not the formula"}
+{"id": "d2_s0627_N6_v1", "axis": "N6", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "Why does TransE negate the squared L2 norm in f(h,r,t)?", "delta": "asks the rationale, presupposed formula"}
+{"id": "d2_s0627_N6_v2", "axis": "N6", "seed_question": "What is the formula for TransE's score function f(h,r,t)?", "answer": "f(h,r,t) = -||h + r - t||²₂, i.e. the negative squared L2 norm of (h + r - t).", "variation": "What margin is used with TransE's score function in its ranking loss?", "delta": "asks the margin value, presupposed loss setup"}
+{"id": "d2_s0634_P1_v1", "axis": "P1", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "What is the character limit on tweets according to this paper?", "delta": null}
+{"id": "d2_s0634_P1_v2", "axis": "P1", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How long can a tweet be, in characters, as stated in this paper?", "delta": null}
+{"id": "d2_s0634_P1_v3", "axis": "P1", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "According to this paper, tweets are capped at how many characters?", "delta": null}
+{"id": "d2_s0634_P1_v4", "axis": "P1", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "What character count are tweets limited to in this paper?", "delta": null}
+{"id": "d2_s0634_P2_v1", "axis": "P2", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "Tweets are restricted to how many characters in this paper?", "delta": null}
+{"id": "d2_s0634_P2_v2", "axis": "P2", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "Tell me the number of characters this paper says tweets are limited to.", "delta": null}
+{"id": "d2_s0634_P2_v3", "axis": "P2", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "This paper states a character restriction for tweets — what is it?", "delta": null}
+{"id": "d2_s0634_P2_v4", "axis": "P2", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "What does this paper give as the maximum character length of a tweet?", "delta": null}
+{"id": "d2_s0634_P3_v1", "axis": "P3", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "how many chars are tweets restricted to acording to this paper?", "delta": null}
+{"id": "d2_s0634_P3_v2", "axis": "P3", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "tweet char limit in this paper = ?", "delta": null}
+{"id": "d2_s0634_P3_v3", "axis": "P3", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "how many caracters are tweets limted to in this papr", "delta": null}
+{"id": "d2_s0634_P3_v4", "axis": "P3", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "TWEETS character restriction per this paper??", "delta": null}
+{"id": "d2_s0634_N1_v1", "axis": "N1", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How many tweets were collected for the experiments in this paper?", "delta": "asks the tweet count, not the character limit"}
+{"id": "d2_s0634_N1_v2", "axis": "N1", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How does this paper preprocess tweets before training?", "delta": "asks preprocessing, not the character limit"}
+{"id": "d2_s0634_N2_v1", "axis": "N2", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How many characters are tweet hashtags restricted to according to this paper?", "delta": "narrows to hashtags inside a tweet"}
+{"id": "d2_s0634_N2_v2", "axis": "N2", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How many characters are social media posts in general restricted to in this paper?", "delta": "widens to social media posts generally"}
+{"id": "d2_s0634_N3_v1", "axis": "N3", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How many characters are Facebook posts restricted to according to this paper?", "delta": "Facebook posts instead of tweets"}
+{"id": "d2_s0634_N3_v2", "axis": "N3", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How many characters are SMS messages restricted to according to this paper?", "delta": "SMS messages instead of tweets"}
+{"id": "d2_s0634_N4_v1", "axis": "N4", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "In what way are tweets unrestricted in length according to this paper?", "delta": "asks what is unrestricted, not the limit"}
+{"id": "d2_s0634_N4_v2", "axis": "N4", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How many characters does this paper truncate tweets to, rather than the platform's own cap?", "delta": "the paper's truncation length, not Twitter's limit"}
+{"id": "d2_s0634_N4_v3", "axis": "N4", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "Which tweets does this paper discard for falling below the character limit?", "delta": "asks discarded short tweets, not the limit"}
+{"id": "d2_s0634_N4_v4", "axis": "N4", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How many characters are tweets padded up to in this paper's model?", "delta": "asks the padding length, not the restriction"}
+{"id": "d2_s0634_N5_v1", "axis": "N5", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "What is the minimum number of characters a tweet has in this paper's dataset?", "delta": "minimum tweet length, not the cap"}
+{"id": "d2_s0634_N5_v2", "axis": "N5", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "At least how many characters must a tweet contain to be kept in this paper?", "delta": "lower bound for inclusion, not the cap"}
+{"id": "d2_s0634_N5_v3", "axis": "N5", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "What is the shortest tweet, in characters, in this paper's data?", "delta": "shortest observed tweet, not the maximum allowed"}
+{"id": "d2_s0634_N5_v4", "axis": "N5", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "What is the largest number of characters a tweet may use after the platform's later expansion?", "delta": "the raised limit, not the one in the paper"}
+{"id": "d2_s0634_N6_v1", "axis": "N6", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "Why does the character limit on tweets make classification harder in this paper?", "delta": "asks the implications, presupposed limit"}
+{"id": "d2_s0634_N6_v2", "axis": "N6", "seed_question": "How many characters are tweets restricted to according to this paper?", "answer": "140 characters.", "variation": "How does this paper handle tweets that hit the character limit?", "delta": "asks handling of maxed-out tweets, presupposed limit"}
+{"id": "d2_s0641_P1_v1", "axis": "P1", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Which pair of languages is the focus of this NMT research?", "delta": null}
+{"id": "d2_s0641_P1_v2", "axis": "P1", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "What language combination does this machine translation work target?", "delta": null}
+{"id": "d2_s0641_P1_v3", "axis": "P1", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Which two languages does this neural translation study deal with?", "delta": null}
+{"id": "d2_s0641_P1_v4", "axis": "P1", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "What is the language pair examined in this neural MT paper?", "delta": null}
+{"id": "d2_s0641_P2_v1", "axis": "P2", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Tell me the language pair that this neural machine translation study concentrates on.", "delta": null}
+{"id": "d2_s0641_P2_v2", "axis": "P2", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "This neural machine translation study focuses on which language pair?", "delta": null}
+{"id": "d2_s0641_P2_v3", "axis": "P2", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "I'd like to know which language pair is covered by this NMT study.", "delta": null}
+{"id": "d2_s0641_P2_v4", "axis": "P2", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "The translation work reported here involves which two languages?", "delta": null}
+{"id": "d2_s0641_P3_v1", "axis": "P3", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "which lang pair does this nmt study focus on?", "delta": null}
+{"id": "d2_s0641_P3_v2", "axis": "P3", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "wat language pair is this neural machine translaton study about", "delta": null}
+{"id": "d2_s0641_P3_v3", "axis": "P3", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "nmt paper — language pair??", "delta": null}
+{"id": "d2_s0641_P3_v4", "axis": "P3", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "whats the lang pair in this neural MT study btw", "delta": null}
+{"id": "d2_s0641_N1_v1", "axis": "N1", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "What BLEU score did this neural machine translation study report?", "delta": "asks reported BLEU score, not the language pair"}
+{"id": "d2_s0641_N1_v2", "axis": "N1", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "What model architecture does this neural machine translation study use?", "delta": "asks architecture, not the language pair"}
+{"id": "d2_s0641_N2_v1", "axis": "N2", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Which language pair does the ablation experiment in this neural machine translation study focus on?", "delta": "narrows to the ablation experiment's pair"}
+{"id": "d2_s0641_N2_v2", "axis": "N2", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Which language pairs does this research group's whole machine translation programme cover?", "delta": "widens to the group's programme, not this study"}
+{"id": "d2_s0641_N3_v1", "axis": "N3", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Which language pair does this statistical machine translation study focus on?", "delta": "statistical MT study, a different paper"}
+{"id": "d2_s0641_N3_v2", "axis": "N3", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Which language pair does this neural machine translation shared task focus on?", "delta": "the shared task, not this study"}
+{"id": "d2_s0641_N4_v1", "axis": "N4", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Which language pair does this neural machine translation study exclude from evaluation?", "delta": "excluded pair, not the focus pair"}
+{"id": "d2_s0641_N4_v2", "axis": "N4", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Is the English–Tamil pair excluded from this neural machine translation study?", "delta": "yes/no on exclusion, not the focus pair"}
+{"id": "d2_s0641_N4_v3", "axis": "N4", "seed_question": "Which language pair does this neural machine translation study focus on?", "answer": "English–Tamil.", "variation": "Which language pair is out of scope for this neural machine translation study?", "delta": "out-of-scope pair, opposite of the focus"}

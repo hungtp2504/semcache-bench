@@ -1,0 +1,60 @@
+{"id": "d3_s0166_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0166_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0166_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0166_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0166_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.5, "issue": "seed answer enumerates exactly the two locations, so it already answers 'at most how many places'", "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0166_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0166_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N1_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "seed answer names STATIC_ROOT explicitly, so it effectively answers the setting question", "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "ordinal selection of the first step is an extreme/ordinal pick (N5-style), not a scope qualifier, and the seed answer contains that step verbatim", "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N5_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "'at most how often' is unnatural and the seed answer's 'whenever static files change' already answers the frequency", "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "answer ('two') is stated in the seed question itself and covered by the seed answer's two steps", "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0172_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "narrowing to LTS does not change the correct answer — LTS releases also eventually stop receiving security updates, so the seed answer still fully answers it", "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N2_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.5, "issue": "generalizing to all Python dependencies yields materially the same reason, and it also drops the 'upgrade guide' qualifier (two changes)", "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}
+{"id": "d3_s0185_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1075", "ts": "2026-08-29T08:07:48Z"}

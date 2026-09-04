@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 224839,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "a04c1f9f-ab5c-48a9-beea-4f0408797540",
+  "total_cost_usd": 0.47642979999999996,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 57961,
+    "cache_read_input_tokens": 99039,
+    "output_tokens": 22477,
+    "output_tokens_details": {
+      "thinking_tokens": 19347
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 57961,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3048,
+        "cache_read_input_tokens": 68761,
+        "cache_creation_input_tokens": 19478,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19478
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 22477,
+      "cacheReadInputTokens": 99039,
+      "cacheCreationInputTokens": 57961,
+      "webSearchRequests": 0,
+      "costUSD": 0.47642979999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0147_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0147_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0147_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"widening to general 'công tác sinh viên' likely still yields the same generic transitional answer (continue under old rules) as the seed, not a differing answer as N2 requires\"}\n{\"id\":\"d5_s0147_N3_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0147_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps evaluation topic (conduct vs academic results) rather than a single entity/id/version; likely still triggers the same generic transitional answer, closer to an N1 aspect-change than N3 entity substitution\"}\n{\"id\":\"d5_s0147_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0147_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0147_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0147_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0147_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed question contains no quantifier/extreme to flip; introduces an unrelated deadline fact absent from the Q&A, more like an aspect change than a quantifier flip\"}\n{\"id\":\"d5_s0147_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed question contains no quantifier/extreme to flip; introduces an unrelated earliest-start-time fact absent from the Q&A\"}\n{\"id\":\"d5_s0147_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed question contains no quantifier/extreme to flip; introduces an unrelated max-extension fact absent from the Q&A\"}\n{\"id\":\"d5_s0147_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed question contains no quantifier/extreme to flip; introduces an unrelated min-frequency fact absent from the Q&A\"}\n{\"id\":\"d5_s0147_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a different attribute of the same entity (effective date) rather than presupposing a related-but-different fact; this is a straightforward aspect change, not a presupposition shift\"}\n{\"id\":\"d5_s0147_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0151_P1_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0151_P1_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0151_P1_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0151_P1_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0151_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0151_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0151_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0151_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0151_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0151_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0151_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0151_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0151_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0151_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0151_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0151_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts unit of analysis from documents to articles/clauses of one document rather than adding a simple scope qualifier; also presupposes partial article-level replacement when the seed indicates whole-document replacement\"}\n{\"id\":\"d5_s0151_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0151_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0151_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0151_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0151_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0151_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"no negation/antonym flip present; asks about a different document's (Circular 23/2021) own prior replacement history rather than flipping the polarity of the seed's relation\"}\n{\"id\":\"d5_s0151_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0151_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0151_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0151_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0151_N6_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0151_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0157_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0157_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0157_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0157_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0157_P2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0157_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0157_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0157_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0157_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0157_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0157_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0157_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0157_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0157_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0157_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's generic 3-4 year figure is very plausibly already the value specific to master's-degree entrants under standard Vietnamese doctoral training rules (bachelor's-entry typically gets a longer 4-5 year duration); explicitly adding this qualifier likely yields the SAME answer, not a differing one as N2 requires\"}\n{\"id\":\"d5_s0157_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0157_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 203902,
+  "ttft_stream_ms": 2053,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 225699,
+  "uuid": "7de1b32a-2b2e-4ced-bcd1-7a6340e049a5",
+  "queued_turn_count": 0
+}

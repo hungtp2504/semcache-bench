@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_2780
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d3_s0319_P2_v2", "axis": "P2", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "From django.contrib.postgres.aggregates, which class will Django 7.0 remove?", "delta": null}
+{"id": "d3_s0319_P2_v3", "axis": "P2", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Django 7.0 removes a class from django.contrib.postgres.aggregates — which one is it?", "delta": null}
+{"id": "d3_s0319_P2_v4", "axis": "P2", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "I need to know which class django.contrib.postgres.aggregates loses in Django 7.0.", "delta": null}
+{"id": "d3_s0319_P3_v1", "axis": "P3", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "which class will be removed from django.contrib.postgres.aggregates in django 7.0?", "delta": null}
+{"id": "d3_s0319_P3_v2", "axis": "P3", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "what class gets removed frm django.contrib.postgres.aggregates in dj 7.0", "delta": null}
+{"id": "d3_s0319_P3_v3", "axis": "P3", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "whcih clas will be remved from django.contirb.postgres.aggregates in Djnago 7.0", "delta": null}
+{"id": "d3_s0319_P3_v4", "axis": "P3", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "django 7.0 — which class dropped from contrib.postgres.aggregates??", "delta": null}
+{"id": "d3_s0319_N1_v1", "axis": "N1", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "What should you use instead of the class removed from django.contrib.postgres.aggregates in Django 7.0?", "delta": "asks the replacement, not the class name"}
+{"id": "d3_s0319_N1_v2", "axis": "N1", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "In which Django version was the django.contrib.postgres.aggregates removal first deprecated?", "delta": "asks the deprecation version"}
+{"id": "d3_s0319_N2_v1", "axis": "N2", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Which argument of the class removed from django.contrib.postgres.aggregates in Django 7.0 was deprecated first?", "delta": "narrows to a deprecated argument"}
+{"id": "d3_s0319_N2_v2", "axis": "N2", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Which classes will be removed from django.contrib.postgres entirely in Django 7.0?", "delta": "widens to the whole postgres package"}
+{"id": "d3_s0319_N3_v1", "axis": "N3", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Which class will be removed from django.contrib.postgres.aggregates in Django 6.0?", "delta": "Django 6.0, a different version"}
+{"id": "d3_s0319_N3_v2", "axis": "N3", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Which class will be removed from django.contrib.postgres.fields in Django 7.0?", "delta": "the fields module, not aggregates"}
+{"id": "d3_s0319_N4_v1", "axis": "N4", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Which class will be added to django.contrib.postgres.aggregates in Django 7.0?", "delta": "added, not removed"}
+{"id": "d3_s0319_N4_v2", "axis": "N4", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Which classes will remain in django.contrib.postgres.aggregates in Django 7.0?", "delta": "the retained classes, not the removed one"}
+{"id": "d3_s0319_N4_v3", "axis": "N4", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Which class in django.contrib.postgres.aggregates will not be removed in Django 7.0?", "delta": "the class kept rather than removed"}
+{"id": "d3_s0319_N4_v4", "axis": "N4", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "In which module will StringAgg still be importable after Django 7.0?", "delta": "where it survives, not what is removed"}
+{"id": "d3_s0319_N5_v1", "axis": "N5", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Which class was the first ever removed from django.contrib.postgres.aggregates?", "delta": "the earliest removal, not the 7.0 one"}
+{"id": "d3_s0319_N5_v2", "axis": "N5", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "What is the last Django version in which that django.contrib.postgres.aggregates class is still available?", "delta": "the final version still shipping it"}
+{"id": "d3_s0319_N5_v3", "axis": "N5", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "Of the classes removed from django.contrib.postgres.aggregates in Django 7.0, which was deprecated earliest?", "delta": "earliest-deprecated among the removals"}
+{"id": "d3_s0319_N5_v4", "axis": "N5", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "At most how many classes are removed from django.contrib.postgres.aggregates in Django 7.0?", "delta": "the maximum count, not the name"}
+{"id": "d3_s0319_N6_v1", "axis": "N6", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "What deprecation warning does the django.contrib.postgres.aggregates class removed in Django 7.0 raise?", "delta": "asks the deprecation warning raised"}
+{"id": "d3_s0319_N6_v2", "axis": "N6", "seed_question": "Which class will be removed from django.contrib.postgres.aggregates in Django 7.0?", "answer": "The StringAgg class.", "variation": "How do you migrate code that uses the django.contrib.postgres.aggregates class removed in Django 7.0?", "delta": "asks the migration steps"}
+{"id": "d3_s0325_P1_v1", "axis": "P1", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "At what point was the stable/1.5.x branch cut?", "delta": null}
+{"id": "d3_s0325_P1_v2", "axis": "P1", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When did the stable/1.5.x branch come into existence?", "delta": null}
+{"id": "d3_s0325_P1_v3", "axis": "P1", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "What was the timing of the stable/1.5.x branch's creation?", "delta": null}
+{"id": "d3_s0325_P1_v4", "axis": "P1", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When was stable/1.5.x branched off?", "delta": null}
+{"id": "d3_s0325_P2_v1", "axis": "P2", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "Tell me the moment at which the stable/1.5.x branch was created.", "delta": null}
+{"id": "d3_s0325_P2_v2", "axis": "P2", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "The stable/1.5.x branch was created at which point in the release cycle?", "delta": null}
+{"id": "d3_s0325_P2_v3", "axis": "P2", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "I'd like to know when stable/1.5.x got created.", "delta": null}
+{"id": "d3_s0325_P2_v4", "axis": "P2", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "Creation of the stable/1.5.x branch happened when?", "delta": null}
+{"id": "d3_s0325_P3_v1", "axis": "P3", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "when was the stable/1.5.x branch created?", "delta": null}
+{"id": "d3_s0325_P3_v2", "axis": "P3", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "when did stable/1.5.x branch get made", "delta": null}
+{"id": "d3_s0325_P3_v3", "axis": "P3", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "when was teh stalbe/1.5.x brnach creatd", "delta": null}
+{"id": "d3_s0325_P3_v4", "axis": "P3", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "stable/1.5.x — created when??", "delta": null}
+{"id": "d3_s0325_N1_v1", "axis": "N1", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "Who is responsible for creating the stable/1.5.x branch?", "delta": "asks who creates it, not when"}
+{"id": "d3_s0325_N1_v2", "axis": "N1", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "What kinds of commits are allowed on the stable/1.5.x branch?", "delta": "asks the commit policy for the branch"}
+{"id": "d3_s0325_N2_v1", "axis": "N2", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When was the first commit made on stable/1.5.x after the branch was created?", "delta": "narrows to its first post-creation commit"}
+{"id": "d3_s0325_N2_v2", "axis": "N2", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When were all of the stable/1.x branches created?", "delta": "widens to every stable/1.x branch"}
+{"id": "d3_s0325_N3_v1", "axis": "N3", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When was the stable/1.6.x branch created?", "delta": "a different stable branch"}
+{"id": "d3_s0325_N3_v2", "axis": "N3", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When was the stable/2.0.x branch created?", "delta": "stable/2.0.x instead of stable/1.5.x"}
+{"id": "d3_s0325_N4_v1", "axis": "N4", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When was the stable/1.5.x branch deleted?", "delta": "deletion, not creation"}
+{"id": "d3_s0325_N4_v2", "axis": "N4", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When did the stable/1.5.x branch stop being maintained?", "delta": "end of maintenance, not creation"}
+{"id": "d3_s0325_N4_v3", "axis": "N4", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "Which branch was created immediately before Django 1.5 alpha 1 was tagged?", "delta": "branch created before the alpha tag"}
+{"id": "d3_s0325_N4_v4", "axis": "N4", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When was the stable/1.5.x branch merged back into master?", "delta": "merge-back time, not creation"}
+{"id": "d3_s0325_N5_v1", "axis": "N5", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When was the earliest Django stable branch created?", "delta": "the earliest stable branch, not 1.5.x"}
+{"id": "d3_s0325_N5_v2", "axis": "N5", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "When was the most recent Django stable branch created?", "delta": "the latest stable branch, not 1.5.x"}
+{"id": "d3_s0325_N5_v3", "axis": "N5", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "What is the latest tag on the stable/1.5.x branch?", "delta": "the newest tag on it, not creation time"}
+{"id": "d3_s0325_N5_v4", "axis": "N5", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "Which was the last Django release tagged from the stable/1.5.x branch?", "delta": "the final release cut from that branch"}
+{"id": "d3_s0325_N6_v1", "axis": "N6", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "Why is a stable branch created immediately after the alpha 1 tag?", "delta": "asks the rationale for the timing"}
+{"id": "d3_s0325_N6_v2", "axis": "N6", "seed_question": "When was the stable/1.5.x branch created?", "answer": "Immediately after Django 1.5 alpha 1 was tagged.", "variation": "What happens on master right after the stable/1.5.x branch is created?", "delta": "what happens to master afterwards"}
+{"id": "d3_s0331_P1_v1", "axis": "P1", "seed_question": "In the Django overview example, what field does the Reporter model have and what type is it?", "answer": "It has a full_name field, defined as a CharField with max_length=70.", "variation": "In the Django overview example, which field is defined on the Reporter model and of what type?", "delta": null}
+{"id": "d3_s0331_P1_v2", "axis": "P1", "seed_question": "In the Django overview example, what field does the Reporter model have and what type is it?", "answer": "It has a full_name field, defined as a CharField with max_length=70.", "variation": "What field and field type does the Reporter model use in Django's overview example?", "delta": null}
+{"id": "d3_s0331_P1_v3", "axis": "P1", "seed_question": "In the Django overview example, what field does the Reporter model have and what type is it?", "answer": "It has a full_name field, defined as a CharField with max_length=70.", "variation": "In Django's overview docs, what attribute does the Reporter model declare and what kind of field is it?", "delta": null}
+{"id": "d3_s0331_P1_v4", "axis": "P1", "seed_question": "In the Django overview example, what field does the Reporter model have and what type is it?", "answer": "It has a full_name field, defined as a CharField with max_length=70.", "variation": "Which field does the overview example's Reporter model define, and what type does it use?", "delta": null}
+{"id": "d3_s0331_P2_v1", "axis": "P2", "seed_question": "In the Django overview example, what field does the Reporter model have and what type is it?", "answer": "It has a full_name field, defined as a CharField with max_length=70.", "variation": "Describe the Reporter model's field and its type from the Django overview example.", "delta": null}
+{"id": "d3_s0331_P2_v2", "axis": "P2", "seed_question": "In the Django overview example, what field does the Reporter model have and what type is it?", "answer": "It has a full_name field, defined as a CharField with max_length=70.", "variation": "The Reporter model in the Django overview example has which field, and that field is of what type?", "delta": null}
+{"id": "d3_s0331_P2_v3", "axis": "P2", "seed_question": "In the Django overview example, what field does the Reporter model have and what type is it?", "answer": "It has a full_name field, defined as a CharField with max_length=70.", "variation": "I'm reading the Django overview example — what's on the Reporter model and what type is it?", "delta": null}
+{"id": "d3_s0331_P2_v4", "axis": "P2", "seed_question": "In the Django overview example, what field does the Reporter model have and what type is it?", "answer": "It has a full_name field, defined as a CharField with max_length=70.", "variation": "For the Reporter model in the Django overview, name the field and its type.", "delta": null}
+{"id": "d3_s0331_P3_v1", "axis": "P3", "seed_question": "In the Django overview example, what field does the Reporter model have and what type is it?", "answer": "It has a full_name field, defined as a CharField with max_length=70.", "variation": "in the django overview example what field does the reporter model have n what type is it?", "delta": null}

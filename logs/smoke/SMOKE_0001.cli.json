@@ -1,0 +1,65 @@
+{
+  "is_error": false,
+  "duration_api_ms": 109911,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "3b7231a1-015b-4ea9-b828-78710eeeb162",
+  "total_cost_usd": 0.1162986,
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 16945,
+    "cache_read_input_tokens": 18446,
+    "output_tokens": 16111,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16945,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 16111,
+        "cache_read_input_tokens": 18446,
+        "cache_creation_input_tokens": 16945,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16945
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 9,
+      "outputTokens": 16111,
+      "cacheReadInputTokens": 18446,
+      "cacheCreationInputTokens": 16945,
+      "webSearchRequests": 0,
+      "costUSD": 0.1162986,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```json\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P1\",\"v\":1,\"text\":\"What's the submission deadline for Assignment 1?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P1\",\"v\":2,\"text\":\"What date is Assignment 1 due?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P1\",\"v\":3,\"text\":\"By when must Assignment 1 be submitted?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P1\",\"v\":4,\"text\":\"Assignment 1 submission cut-off time?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P2\",\"v\":1,\"text\":\"Assignment 1 must be submitted by when?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P2\",\"v\":2,\"text\":\"I need to turn in Assignment 1 before what date?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P2\",\"v\":3,\"text\":\"The deadline for Assignment 1 is?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P2\",\"v\":4,\"text\":\"By what date should Assignment 1 be handed in?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P3\",\"v\":1,\"text\":\"when's the deadline 4 assignment 1?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P3\",\"v\":2,\"text\":\"whens the deadline for assignment 1\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P3\",\"v\":3,\"text\":\"what is the assignment 1 due date??\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"P3\",\"v\":4,\"text\":\"deadline for assgn 1?\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N1\",\"v\":1,\"text\":\"What are the grading criteria for Assignment 1?\",\"delta\":\"asks grading criteria, not deadline\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N1\",\"v\":2,\"text\":\"How many pages should Assignment 1 be?\",\"delta\":\"asks assignment length requirement, not deadline\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N2\",\"v\":1,\"text\":\"When is the deadline for the Assignment 1 appendix?\",\"delta\":\"appendix sub-deadline, not the whole assignment\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N2\",\"v\":2,\"text\":\"When do international students need to submit Assignment 1?\",\"delta\":\"deadline for specific student group, not all\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N3\",\"v\":1,\"text\":\"When is the deadline for Assignment 2?\",\"delta\":\"a different assignment number\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N3\",\"v\":2,\"text\":\"When is the deadline for Assignment 3?\",\"delta\":\"a different assignment number\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N4\",\"v\":1,\"text\":\"After what time does Assignment 1 no longer get accepted?\",\"delta\":\"asks when submission closes, not deadline itself\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N4\",\"v\":2,\"text\":\"Assignment 1 will not be accepted after what time?\",\"delta\":\"asks when acceptance ends, not opening deadline\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N5\",\"v\":1,\"text\":\"When is the earliest you can submit Assignment 1?\",\"delta\":\"asks earliest submission time, not deadline\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N5\",\"v\":2,\"text\":\"How many days do I have to submit Assignment 1?\",\"delta\":\"asks submission window duration, not specific deadline\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N6\",\"v\":1,\"text\":\"What is the late penalty for missing Assignment 1 deadline?\",\"delta\":\"asks penalty for late submission, not the deadline\"}\n{\"seed_id\":\"d1_s0001\",\"axis\":\"N6\",\"v\":2,\"text\":\"Will I get an extension if I contact the professor about Assignment 1?\",\"delta\":\"asks about extension possibility, not deadline\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P1\",\"v\":1,\"text\":\"Chi phí học kỳ 1 năm nay bao nhiêu tiền?\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P1\",\"v\":2,\"text\":\"Học phí kỳ 1 năm nay là bao nhiêu?\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P1\",\"v\":3,\"text\":\"Bao nhiêu tiền là học phí học kỳ 1 năm nay?\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P1\",\"v\":4,\"text\":\"Học phí của kỳ 1 năm nay là mức nào?\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P2\",\"v\":1,\"text\":\"Tôi phải đóng bao nhiêu tiền học phí cho kỳ 1 năm nay?\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P2\",\"v\":2,\"text\":\"Kỳ 1 năm nay, học phí là bao nhiêu?\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P2\",\"v\":3,\"text\":\"Đóng học phí kỳ 1 năm nay bao nhiêu?\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P2\",\"v\":4,\"text\":\"Mức học phí của học kỳ 1 năm nay?\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P3\",\"v\":1,\"text\":\"hoc phi ky 1 nam nay bao nhieu\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P3\",\"v\":2,\"text\":\"hoc phi hk 1 nm nay la bao nhieu v?\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P3\",\"v\":3,\"text\":\"học phí học kỳ 1 năm nay là bao nhiu??\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"P3\",\"v\":4,\"text\":\"hoc phi hoc ky 1 nam nay bao nhieu tien\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N1\",\"v\":1,\"text\":\"Hạn nộp học phí học kỳ 1 năm nay là khi nào?\",\"delta\":\"asks payment deadline, not tuition amount\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N1\",\"v\":2,\"text\":\"Học phí học kỳ 1 năm nay có thể trả góp được không?\",\"delta\":\"asks about installment payment options, not amount\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N2\",\"v\":1,\"text\":\"Học phí cho các sinh viên quốc tế ở học kỳ 1 năm nay bao nhiêu?\",\"delta\":\"tuition for international students only, not all\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N2\",\"v\":2,\"text\":\"Học phí dành cho sinh viên có học bổng ở học kỳ 1 năm nay bao nhiêu?\",\"delta\":\"tuition for scholarship recipients, not full rate\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N3\",\"v\":1,\"text\":\"Học phí học kỳ 2 năm nay là bao nhiêu?\",\"delta\":\"tuition for semester 2, not semester 1\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N3\",\"v\":2,\"text\":\"Học phí học kỳ 1 năm tới là bao nhiêu?\",\"delta\":\"next year's tuition, not this year\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N4\",\"v\":1,\"text\":\"Phạt bao nhiêu nếu không đóng học phí học kỳ 1 năm nay?\",\"delta\":\"asks penalty for non-payment, not amount to pay\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N4\",\"v\":2,\"text\":\"Chiết khấu học phí học kỳ 1 năm nay là bao nhiêu?\",\"delta\":\"asks discount amount, not base tuition\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N5\",\"v\":1,\"text\":\"Học phí học kỳ 1 năm nay ít nhất bao nhiêu?\",\"delta\":\"asks minimum tuition, not exact amount\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N5\",\"v\":2,\"text\":\"Mức học phí tối đa cho học kỳ 1 năm nay là bao nhiêu?\",\"delta\":\"asks maximum tuition, not exact amount\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N6\",\"v\":1,\"text\":\"Có khuyến mãi giảm học phí cho học kỳ 1 năm nay không?\",\"delta\":\"asks about tuition discount availability, not amount\"}\n{\"seed_id\":\"d5_s0001\",\"axis\":\"N6\",\"v\":2,\"text\":\"Nếu nộp học phí sớm cho học kỳ 1 năm nay thì sẽ được gì?\",\"delta\":\"asks benefits for early payment, not amount\"}\n```",
+  "ttft_ms": 100004,
+  "ttft_stream_ms": 1367,
+  "time_to_request_ms": 25,
+  "type": "result",
+  "duration_ms": 110121,
+  "uuid": "94a1efcc-2994-40a5-a682-c273891e8264"
+}

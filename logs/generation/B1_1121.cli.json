@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 202034,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "33ef69d9-a65c-4735-87e4-0e42e694e114",
+  "total_cost_usd": 0.42924300000000004,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 52332,
+    "cache_read_input_tokens": 94285,
+    "output_tokens": 20105,
+    "output_tokens_details": {
+      "thinking_tokens": 17045
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 52332,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3003,
+        "cache_read_input_tokens": 64007,
+        "cache_creation_input_tokens": 18603,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 18603
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 20105,
+      "cacheReadInputTokens": 94285,
+      "cacheCreationInputTokens": 52332,
+      "webSearchRequests": 0,
+      "costUSD": 0.42924300000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0723_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0723_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0723_N2_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"drops the entire compare-to-Korea/Taiwan structure and merges both entities into 'developing world', more than one scope qualifier change\"}\n{\"id\":\"d1_s0723_N3_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps two entities (Korea->Japan AND Taiwan->Singapore), not exactly one\"}\n{\"id\":\"d1_s0723_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0723_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"answer (Korea/Taiwan) is already stated directly in seed's answer, not a wrong-sign mislead\"}\n{\"id\":\"d1_s0723_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"two changes at once (crisis->boom event swap AND affect->benefit polarity), and presupposes a fictional boom not covered by seed\"}\n{\"id\":\"d1_s0723_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0723_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"correct answer (LA/Africa excluded from growth) is already the same content stated in seed's answer\"}\n{\"id\":\"d1_s0723_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a timing facet absent from seed rather than flipping an existing quantifier; effectively an aspect change\"}\n{\"id\":\"d1_s0723_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a timing facet absent from seed rather than flipping an existing quantifier; effectively an aspect change\"}\n{\"id\":\"d1_s0723_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"combines entity-granularity change (regions->single country) with a new superlative, more than one change\"}\n{\"id\":\"d1_s0723_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces an unestablished quantity (program start date) plus narrows to Latin America only, more than one change\"}\n{\"id\":\"d1_s0723_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0723_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0729_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0729_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0729_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0729_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0729_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0729_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0729_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0729_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0729_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0729_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0729_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0729_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0729_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0729_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0729_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0729_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0729_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0729_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0729_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces a day-of-week dimension absent from seed; seed's answer wouldn't plausibly be mistaken for an answer, so no genuine mislead risk\"}\n{\"id\":\"d1_s0729_N4_v2\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"unrelated topic (attendance policy) with no polarity relation to session count/duration\"}\n{\"id\":\"d1_s0729_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0729_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0729_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"fixed weekly schedule likely makes the max-in-any-week answer identical to seed's (2), not necessarily different\"}\n{\"id\":\"d1_s0729_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"answer type shifts to a week identifier rather than an extreme value of the same quantity; not a clean quantifier flip\"}\n{\"id\":\"d1_s0729_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"broadens scope beyond lectures to any class meeting AND introduces a superlative, more than one change\"}\n{\"id\":\"d1_s0729_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces an unrelated facet (start time) rather than an extreme of count/duration\"}\n{\"id\":\"d1_s0729_N6_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0729_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0736_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0736_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0736_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0736_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0736_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0736_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0736_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0736_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0736_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0736_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0736_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0736_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0736_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0736_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0736_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0736_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0736_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 180459,
+  "ttft_stream_ms": 2655,
+  "time_to_request_ms": 45,
+  "type": "result",
+  "duration_ms": 202809,
+  "uuid": "18c3fdbb-f11e-4b0c-9ec1-17990ff6f675",
+  "queued_turn_count": 0
+}

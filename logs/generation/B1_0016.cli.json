@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 130573,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "11b52f95-9833-4a04-a695-ed1de7871a72",
+  "total_cost_usd": 0.49607070000000003,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 43423,
+    "cache_read_input_tokens": 92919,
+    "output_tokens": 13843,
+    "output_tokens_details": {
+      "thinking_tokens": 10921
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43423,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2858,
+        "cache_read_input_tokens": 62674,
+        "cache_creation_input_tokens": 10994,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10994
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 13843,
+      "cacheReadInputTokens": 92919,
+      "cacheCreationInputTokens": 43423,
+      "webSearchRequests": 0,
+      "costUSD": 0.49607070000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0018_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0018_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0018_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0018_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0018_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0018_N3_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Flask is also BSD-3-Clause licensed, so the correct answer would not necessarily differ from the seed's\"}\n{\"id\":\"d3_s0018_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"no negation/antonym flip of the seed question; asks about a different aspect (license incompatibility), not a polarity-flipped version of it\"}\n{\"id\":\"d3_s0018_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about prohibitions, a different facet (aspect change), not a negation/antonym flip of 'what license'\"}\n{\"id\":\"d3_s0018_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed has no quantifier/extreme to flip; introduces a new scope (bundled code) plus a superlative rather than flipping one existing extreme\"}\n{\"id\":\"d3_s0018_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0018_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0018_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0019_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0019_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0019_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0019_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0019_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0019_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0019_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0019_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0019_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0019_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0019_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0019_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0019_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0019_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0019_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0019_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrowing to wheel packages likely doesn't change the underlying licensing reason; answer may not actually differ\"}\n{\"id\":\"d3_s0019_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0019_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0019_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"combines a negation ('not include') with an entity substitution (Python->GPL) — more than one change, not a single polarity flip\"}\n{\"id\":\"d3_s0019_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"reverses subject/object direction of the relationship rather than a single negation/antonym flip\"}\n{\"id\":\"d3_s0019_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'how many in total' is a count query, not a min/max/earliest-latest style extreme flip\"}\n{\"id\":\"d3_s0019_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0019_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0019_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0020_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0020_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0020_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0020_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0020_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0020_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0020_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"test runner uses the same configured database engine as the project default, so the answer likely doesn't differ\"}\n{\"id\":\"d3_s0020_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_N3_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps the 'database' concept for 'cache backend', a topic/aspect change rather than a sibling entity substitution\"}\n{\"id\":\"d3_s0020_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0020_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0020_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0020_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0020_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}",
+  "ttft_ms": 108679,
+  "ttft_stream_ms": 2591,
+  "time_to_request_ms": 21,
+  "type": "result",
+  "duration_ms": 131479,
+  "uuid": "b17f66c8-1e42-453e-8171-150169a9b7a9"
+}

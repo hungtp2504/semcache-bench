@@ -1,0 +1,60 @@
+{"id": "d3_s0690_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N4_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "aspect/behavior question rather than a single negation-antonym flip; seed answer's error clause partially covers it", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N4_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "no clean polarity flip; asks failure-condition facet (N1-like) rather than negating the seed's proposition", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N5_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "seed answer still answers it — 'only lima accepted' follows directly from the !== 'lima' check", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N5_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.7, "issue": "no quantifier/extreme flipped from the seed; asks an unrelated ordering facet (N1)", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N5_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "introduces a max-length facet absent from the seed rather than flipping an existing quantifier", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "introduces a min-length facet absent from the seed rather than flipping an existing quantifier", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0690_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_P3_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "drops the useRef(null) argument, so 'initially null' is no longer a correct/complete answer — content loss beyond surface noise", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N4_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "temporal scope narrowing (N2), not a negation/antonym flip", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N4_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "seed answer effectively answers it — if never set, current stays at its initial null", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N4_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "shifts to a timing facet rather than flipping one negation/antonym in the seed proposition", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N5_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "seed answer still answers it — 'a single property' gives the maximum count", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N5_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.65, "issue": "changes topic to ref count per component; no quantifier from the seed is flipped", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N5_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0696_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_N2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_N3_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "framework swap does not change the answer — prop drilling means the same thing in Vue, so the seed answer still answers it", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_N4_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "seed answer already states the intermediate components don't actually need the prop, so it still answers the flipped question", "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}
+{"id": "d3_s0702_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1109", "ts": "2026-08-29T08:21:36Z"}

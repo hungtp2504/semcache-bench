@@ -1,0 +1,60 @@
+{"id": "d5_s0178_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.75, "issue": "Not a negation/antonym flip of the mandatory-thesis claim; asks an unrelated question about forbidden forms. Seed's answer would be non-responsive rather than actively misleading (wrong sign) — reads as an aspect change, not a polarity flip.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.72, "issue": "Not a negation/antonym flip; asks which form cannot be waived (exemption), a different fact from the mandatory/optional claim. Seed's answer is non-responsive, not misleading.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.72, "issue": "Not a negation/antonym flip; asks about prohibitions on institutional discretion, a distinct question. Seed's answer is non-responsive rather than wrong-sign.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.8, "issue": "Asks about excluded fields for program applicability, an entirely different topic from graduation-form requirement; not a polarity flip at all.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "Seed contains no quantifier/extreme to flip (it's a yes/no mandatory question); this introduces a brand-new metric (count of graduation forms), which is an aspect change, not a quantifier flip.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "Introduces an unrelated new metric (max exam attempts) not present as a quantifier in the seed; not a flip of any existing extreme.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.68, "issue": "Introduces an unrelated new metric (minimum credit size of project) not present in the seed as a quantifier to flip; aspect change.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.68, "issue": "Introduces an unrelated new metric (max completion time) not present in the seed as a quantifier; aspect change rather than an extreme flip.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0178_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.78, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "Substitutes the negated entity (chức danh GS/PGS → bằng tiến sĩ) rather than flipping polarity — an entity substitution mislabeled as N4; also creates an incoherent premise since teaching requires already holding a doctorate.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.72, "issue": "Introduces a new concept (exemption cases) not present in the seed; not a negation/antonym flip of the seed's claim.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "Asks about disqualifying cases, a different question from the minimum-years requirement; not a clean polarity flip.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.68, "issue": "Changes the measured quantity from years-of-experience to annual publication count rather than flipping min/max on the same quantity; this is an aspect change, not an extreme flip.", "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0184_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.78, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}
+{"id": "d5_s0190_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_3493", "ts": "2026-08-28T10:29:31Z"}

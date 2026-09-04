@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_0179
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d1_s0126_P1_v2", "axis": "P1", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "Which topic is addressed by problem set 2?", "delta": null}
+{"id": "d1_s0126_P1_v3", "axis": "P1", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What is problem set 2 about?", "delta": null}
+{"id": "d1_s0126_P1_v4", "axis": "P1", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What material does problem set 2 deal with?", "delta": null}
+{"id": "d1_s0126_P2_v1", "axis": "P2", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "Tell me the topic covered by problem set 2.", "delta": null}
+{"id": "d1_s0126_P2_v2", "axis": "P2", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "Problem set 2 covers which topic?", "delta": null}
+{"id": "d1_s0126_P2_v3", "axis": "P2", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "I'd like to know what topic is covered in problem set 2.", "delta": null}
+{"id": "d1_s0126_P2_v4", "axis": "P2", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "The topic of problem set 2 — what is it?", "delta": null}
+{"id": "d1_s0126_P3_v1", "axis": "P3", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "wat topic does problem set 2 cover?", "delta": null}
+{"id": "d1_s0126_P3_v2", "axis": "P3", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "ps 2 covers what topic?", "delta": null}
+{"id": "d1_s0126_P3_v3", "axis": "P3", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "problem set 2 topic??", "delta": null}
+{"id": "d1_s0126_P3_v4", "axis": "P3", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "whats prob set 2 abt", "delta": null}
+{"id": "d1_s0126_N1_v1", "axis": "N1", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "When is problem set 2 due?", "delta": "asks the due date, not the topic"}
+{"id": "d1_s0126_N1_v2", "axis": "N1", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "How many points is problem set 2 worth?", "delta": "asks point value, not the topic"}
+{"id": "d1_s0126_N2_v1", "axis": "N2", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What topic does part b of problem set 2 cover?", "delta": "narrows to part b of the set"}
+{"id": "d1_s0126_N2_v2", "axis": "N2", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What topics do all the problem sets cover?", "delta": "widens to every problem set"}
+{"id": "d1_s0126_N3_v1", "axis": "N3", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What topic does problem set 3 cover?", "delta": "a different problem set"}
+{"id": "d1_s0126_N3_v2", "axis": "N3", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What topic does problem set 1 cover?", "delta": "a different problem set"}
+{"id": "d1_s0126_N4_v1", "axis": "N4", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "Which topic does problem set 2 leave out?", "delta": "the omitted topic, not the covered one"}
+{"id": "d1_s0126_N4_v2", "axis": "N4", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "Which problem set covers species cooperation rather than competition?", "delta": "cooperation, the opposite of competition"}
+{"id": "d1_s0126_N4_v3", "axis": "N4", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "Which problem set does not cover species competition?", "delta": "asks which set omits the topic"}
+{"id": "d1_s0126_N4_v4", "axis": "N4", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "Which problem set 2 topic is optional rather than required?", "delta": "an optional topic, not the required one"}
+{"id": "d1_s0126_N5_v1", "axis": "N5", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What topic does the first problem set cover?", "delta": "the first problem set, not number 2"}
+{"id": "d1_s0126_N5_v2", "axis": "N5", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What topic does the last problem set cover?", "delta": "the final problem set, not number 2"}
+{"id": "d1_s0126_N5_v3", "axis": "N5", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What is the final topic covered within problem set 2?", "delta": "the last topic inside the set"}
+{"id": "d1_s0126_N5_v4", "axis": "N5", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "Which topic appears in the most problem sets?", "delta": "most frequent topic across sets"}
+{"id": "d1_s0126_N6_v1", "axis": "N6", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "Which lecture introduces the species competition covered in problem set 2?", "delta": "asks the paired lecture, presupposed fact"}
+{"id": "d1_s0126_N6_v2", "axis": "N6", "seed_question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "variation": "What model does problem set 2 use to analyze species competition?", "delta": "asks the model used, presupposed fact"}
+{"id": "d1_s0132_P1_v1", "axis": "P1", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "In the course schedule, when is the final paper deadline?", "delta": null}
+{"id": "d1_s0132_P1_v2", "axis": "P1", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "What is the due date for the final paper in the course calendar?", "delta": null}
+{"id": "d1_s0132_P1_v3", "axis": "P1", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "At what point in the schedule must the final paper be turned in?", "delta": null}
+{"id": "d1_s0132_P1_v4", "axis": "P1", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "When does the course schedule say the final paper has to be submitted?", "delta": null}
+{"id": "d1_s0132_P2_v1", "axis": "P2", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "Tell me when the final paper is due according to the course schedule.", "delta": null}
+{"id": "d1_s0132_P2_v2", "axis": "P2", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "The final paper is due when, per the course schedule?", "delta": null}
+{"id": "d1_s0132_P2_v3", "axis": "P2", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "I need to know the session by which the final paper must be handed in.", "delta": null}
+{"id": "d1_s0132_P2_v4", "axis": "P2", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "According to the schedule, by when should the final paper be submitted?", "delta": null}
+{"id": "d1_s0132_P3_v1", "axis": "P3", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "when is the final paper due in the course sched?", "delta": null}
+{"id": "d1_s0132_P3_v2", "axis": "P3", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "final paper due when??", "delta": null}
+{"id": "d1_s0132_P3_v3", "axis": "P3", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "wen is da final paper due per the calendar", "delta": null}
+{"id": "d1_s0132_P3_v4", "axis": "P3", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "final ppr deadline in the schedule?", "delta": null}
+{"id": "d1_s0132_N1_v1", "axis": "N1", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "How long should the final paper be?", "delta": "asks length requirement, not the due date"}
+{"id": "d1_s0132_N1_v2", "axis": "N1", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "How much of the grade is the final paper worth?", "delta": "asks grade weight, not the deadline"}
+{"id": "d1_s0132_N2_v1", "axis": "N2", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "When is the final paper proposal due in the course schedule?", "delta": "the proposal, not the full paper"}
+{"id": "d1_s0132_N2_v2", "axis": "N2", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "When are all written assignments due in the course schedule?", "delta": "widens to every written assignment"}
+{"id": "d1_s0132_N3_v1", "axis": "N3", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "When is the final presentation due in the course schedule?", "delta": "a different deliverable"}
+{"id": "d1_s0132_N3_v2", "axis": "N3", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "When is the midterm paper due in the course schedule?", "delta": "a different paper"}
+{"id": "d1_s0132_N4_v1", "axis": "N4", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "In which session is the final paper assigned in the course schedule?", "delta": "when it is assigned, not when due"}
+{"id": "d1_s0132_N4_v2", "axis": "N4", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "Is the final paper due after session 24 in the course schedule?", "delta": "asks about a later deadline instead"}
+{"id": "d1_s0132_N4_v3", "axis": "N4", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "In which session does the course schedule list no paper due?", "delta": "a session without a paper deadline"}
+{"id": "d1_s0132_N4_v4", "axis": "N4", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "Which paper in the course schedule is optional rather than due?", "delta": "an optional paper, not the required one"}
+{"id": "d1_s0132_N5_v1", "axis": "N5", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "What is the earliest session in which the final paper may be submitted?", "delta": "earliest submission session, not the deadline"}
+{"id": "d1_s0132_N5_v2", "axis": "N5", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "When is the first paper due in the course schedule?", "delta": "the first paper, not the final one"}
+{"id": "d1_s0132_N5_v3", "axis": "N5", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "What is the earliest deadline in the course schedule?", "delta": "earliest deadline overall, not the paper's"}
+{"id": "d1_s0132_N5_v4", "axis": "N5", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "Which is the last session listed in the course schedule?", "delta": "final session overall, not the paper deadline"}
+{"id": "d1_s0132_N6_v1", "axis": "N6", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "What is the penalty for turning the final paper in after session 24?", "delta": "asks the late penalty, presupposed fact"}
+{"id": "d1_s0132_N6_v2", "axis": "N6", "seed_question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "variation": "In what format should the final paper be submitted at session 24?", "delta": "asks submission format, presupposed fact"}
+{"id": "d1_s0140_P1_v1", "axis": "P1", "seed_question": "What textbook does 1.022 use, and where can students access it for free?", "answer": "It uses Networks, Crowds, and Markets: Reasoning about a Highly Connected World by David Easley and Jon Kleinberg (Cambridge University Press, 2010, ISBN 9780521195331); a free online version is available on Jon Kleinberg's Cornell CS homepage.", "variation": "Which textbook is used in 1.022, and where can it be read for free?", "delta": null}
+{"id": "d1_s0140_P1_v2", "axis": "P1", "seed_question": "What textbook does 1.022 use, and where can students access it for free?", "answer": "It uses Networks, Crowds, and Markets: Reasoning about a Highly Connected World by David Easley and Jon Kleinberg (Cambridge University Press, 2010, ISBN 9780521195331); a free online version is available on Jon Kleinberg's Cornell CS homepage.", "variation": "What is the required book for 1.022, and how can students get it at no cost?", "delta": null}
+{"id": "d1_s0140_P1_v3", "axis": "P1", "seed_question": "What textbook does 1.022 use, and where can students access it for free?", "answer": "It uses Networks, Crowds, and Markets: Reasoning about a Highly Connected World by David Easley and Jon Kleinberg (Cambridge University Press, 2010, ISBN 9780521195331); a free online version is available on Jon Kleinberg's Cornell CS homepage.", "variation": "Which course text does 1.022 assign, and where is a free copy available?", "delta": null}
+{"id": "d1_s0140_P1_v4", "axis": "P1", "seed_question": "What textbook does 1.022 use, and where can students access it for free?", "answer": "It uses Networks, Crowds, and Markets: Reasoning about a Highly Connected World by David Easley and Jon Kleinberg (Cambridge University Press, 2010, ISBN 9780521195331); a free online version is available on Jon Kleinberg's Cornell CS homepage.", "variation": "What book does 1.022 rely on, and where can one access it free of charge?", "delta": null}
+{"id": "d1_s0140_P2_v1", "axis": "P2", "seed_question": "What textbook does 1.022 use, and where can students access it for free?", "answer": "It uses Networks, Crowds, and Markets: Reasoning about a Highly Connected World by David Easley and Jon Kleinberg (Cambridge University Press, 2010, ISBN 9780521195331); a free online version is available on Jon Kleinberg's Cornell CS homepage.", "variation": "Tell me the textbook for 1.022 and the place students can access it for free.", "delta": null}

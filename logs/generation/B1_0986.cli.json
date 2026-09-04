@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 178602,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "3f39f78f-428e-495c-aa09-817fb3a121aa",
+  "total_cost_usd": 0.47570309999999993,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 31588,
+    "cache_read_input_tokens": 30247,
+    "output_tokens": 18473,
+    "output_tokens_details": {
+      "thinking_tokens": 15622
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31588,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 18473,
+        "cache_read_input_tokens": 30247,
+        "cache_creation_input_tokens": 31588,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 31588
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 18473,
+      "cacheReadInputTokens": 30247,
+      "cacheCreationInputTokens": 31588,
+      "webSearchRequests": 0,
+      "costUSD": 0.47570309999999993,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0592_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0592_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0592_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0592_P2_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0592_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0592_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0592_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0592_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0592_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0592_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0592_N2_v1\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d1_s0592_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"broadens far beyond one scope qualifier into an unnamed category of courses, not a minimal scope tweak on the same entity\"}\n{\"id\":\"d1_s0592_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0592_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0592_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0592_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about the instructor's other course, a different facet, not a negation/antonym flip of the seed question\"}\n{\"id\":\"d1_s0592_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0592_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0592_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0592_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'most recent instructor listed' is effectively synonymous with 'current instructor', likely identical to seed's answer\"}\n{\"id\":\"d1_s0592_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"if there is a single instructor, 'teaches the most sessions' resolves to the same person as the seed's answer\"}\n{\"id\":\"d1_s0592_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'last instructor listed' is effectively synonymous with 'current instructor', likely identical to seed's answer\"}\n{\"id\":\"d1_s0592_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0592_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0595_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0595_P1_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"nominalizes 'how many' into 'what is the weekly number of' — a structural reframe rather than a pure lexical swap, closer to P2\"}\n{\"id\":\"d1_s0595_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0595_P1_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0595_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0595_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0595_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0595_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0595_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0595_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0595_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0595_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0595_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0595_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0595_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0595_N2_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d1_s0595_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0595_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps 'lecture' for 'recitation', a facet/category change rather than a single entity/id/version substitution — closer to N1 aspect change\"}\n{\"id\":\"d1_s0595_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0595_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0595_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0595_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0595_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"schedule is stated as a constant 3/week, so the weekly maximum equals the seed's answer rather than necessarily differing\"}\n{\"id\":\"d1_s0595_N5_v2\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"all sessions are stated as uniformly 1 hour, so the shortest session equals the seed's answer rather than differing\"}\n{\"id\":\"d1_s0595_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0595_N5_v4\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"all sessions are stated as uniformly 1 hour, so the longest session equals the seed's answer rather than differing\"}\n{\"id\":\"d1_s0595_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0595_N6_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d1_s0602_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0602_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0602_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0602_P1_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0602_P2_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0602_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0602_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0602_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}",
+  "ttft_ms": 161920,
+  "ttft_stream_ms": 4250,
+  "time_to_request_ms": 23,
+  "type": "result",
+  "duration_ms": 178827,
+  "uuid": "c3c0803b-6e76-411e-8e53-4775c64f6a15"
+}

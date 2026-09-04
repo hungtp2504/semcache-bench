@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 131517,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "49a011af-f70b-468b-a657-ef137abf33c2",
+  "total_cost_usd": 0.3445016,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 46354,
+    "cache_read_input_tokens": 94438,
+    "output_tokens": 14019,
+    "output_tokens_details": {
+      "thinking_tokens": 11005
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 46354,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2936,
+        "cache_read_input_tokens": 64160,
+        "cache_creation_input_tokens": 12472,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12472
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 14019,
+      "cacheReadInputTokens": 94438,
+      "cacheCreationInputTokens": 46354,
+      "webSearchRequests": 0,
+      "costUSD": 0.3445016,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0282_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0282_P3_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0282_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0282_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0282_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0282_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0282_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0282_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0282_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0282_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0282_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps 'joint' for 'disjoint' inference, an entity/method substitution (N3-style) rather than a negation flip of the comparative predicate\"}\n{\"id\":\"d2_s0282_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new predicate ('used structured prediction') absent from the seed rather than negating 'better/worse'; this is an aspect/presupposition change, not a polarity flip\"}\n{\"id\":\"d2_s0282_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"flips 'temporal' to 'non-temporal', a scope/topic qualifier change (N2), not a negation of the comparative polarity term\"}\n{\"id\":\"d2_s0282_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0282_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"widens the comparison set to 'all approaches' rather than flipping a min/max/earliest-latest quantifier on the same RNN-vs-DeepDive comparison; this is scope widening (N2)\"}\n{\"id\":\"d2_s0282_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a chronological-order facet ('first tried') absent from the seed; this is an aspect change (N1), not a quantifier/extreme flip\"}\n{\"id\":\"d2_s0282_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about entity-type extraction accuracy, a different facet entirely (N1), not a min/max flip of the RNN-vs-DeepDive comparison\"}\n{\"id\":\"d2_s0282_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes the same fact as the seed's answer (joint inference outperformed RNN) and just asks for the reason; that's an aspect change (N1), not a presupposition of a different fact\"}\n{\"id\":\"d2_s0282_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about DeepDive's configuration, an unrelated aspect rather than a shifted presupposition leading to a different but comparably-phrased answer\"}\n{\"id\":\"d2_s0288_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0288_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0288_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0288_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0288_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0288_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0288_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0288_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0288_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0288_P3_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0288_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0288_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0288_N1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0288_N1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0288_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0288_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0288_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0288_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0288_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0288_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0288_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0288_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0288_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0288_N5_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d2_s0288_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0288_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0288_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0288_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks for the causal mechanism behind the same phenomenon rather than presupposing a different, contradicting fact; closer to an aspect change (N1)\"}\n{\"id\":\"d2_s0294_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0294_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0294_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0294_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0294_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0294_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0294_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0294_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0294_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0294_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0294_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0294_P3_v4\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d2_s0294_N1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}",
+  "ttft_ms": 111297,
+  "ttft_stream_ms": 7477,
+  "time_to_request_ms": 33,
+  "type": "result",
+  "duration_ms": 132417,
+  "uuid": "d78ef791-a1d7-48ca-b96a-7e7bb22c67e3",
+  "queued_turn_count": 0
+}

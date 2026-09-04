@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 102781,
+  "stop_reason": "end_turn",
+  "session_id": "828cb682-589d-460a-8b83-874b154c8205",
+  "total_cost_usd": 0.604409,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 36532,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 9182,
+    "output_tokens_details": {
+      "thinking_tokens": 6386
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 36532,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 9182,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 36532,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 36532
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 9182,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 36532,
+      "webSearchRequests": 0,
+      "costUSD": 0.604409,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0045_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0045_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0045_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0045_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0045_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0045_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0045_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0045_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0045_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0045_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0045_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0045_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0045_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0045_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrowing to the 2021-2022 tuition provisions does not change the effective date; seed answer (15/10/2021) still answers it\"}\n{\"id\":\"d5_s0045_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"more than one scope qualifier changed: entity dropped and asked quantity switched from a date to a duration-after-issuance generalization\"}\n{\"id\":\"d5_s0045_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0045_N3_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0045_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0045_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"not a polarity flip of the seed question; reframed to ask which decree is repealed (presupposition/aspect shift, N6-like)\"}\n{\"id\":\"d5_s0045_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"negation applied to a different facet (academic year of application), not a flip of the effective-date predicate\"}\n{\"id\":\"d5_s0045_N4_v4\",\"axis_ok\":false,\"conf\":0.62,\"issue\":\"issuance vs effective date is an aspect change, not a negation/antonym flip\"}\n{\"id\":\"d5_s0045_N5_v1\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d5_s0045_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0045_N5_v3\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d5_s0045_N5_v4\",\"axis_ok\":true,\"conf\":0.52,\"issue\":null}\n{\"id\":\"d5_s0045_N6_v1\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d5_s0045_N6_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d5_s0051_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0051_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0051_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0051_P1_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0051_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0051_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0051_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0051_P2_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0051_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0051_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0051_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0051_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0051_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0051_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0051_N2_v1\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d5_s0051_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"beyond a single scope qualifier: entity removed and question reframed from which province/circular to how costs are regulated nationwide\"}\n{\"id\":\"d5_s0051_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0051_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0051_N4_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d5_s0051_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"negation attached to a different facet (cost items); seed answer would be irrelevant rather than misleading in sign — aspect change, not polarity flip\"}\n{\"id\":\"d5_s0051_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0051_N4_v4\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d5_s0051_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0051_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0051_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0051_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0051_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no shifted presupposition; simply asks a different facet (effective date) — N1-style aspect change\"}\n{\"id\":\"d5_s0051_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"aspect change (implementing agency) rather than a presupposition shift with high lexical overlap\"}\n{\"id\":\"d5_s0057_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0057_P1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0057_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0057_P1_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0057_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 80218,
+  "type": "result",
+  "duration_ms": 102982,
+  "uuid": "a4228739-19bc-4394-bd8e-ea640756d5f9",
+  "ttft_stream_ms": 1486,
+  "time_to_request_ms": 16,
+  "queued_turn_count": 0
+}

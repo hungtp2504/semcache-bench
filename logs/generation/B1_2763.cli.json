@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 193740,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "1e41463d-a56a-4f69-884a-8cbe3b91fcfa",
+  "total_cost_usd": 0.452513,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 53175,
+    "cache_read_input_tokens": 93775,
+    "output_tokens": 22105,
+    "output_tokens_details": {
+      "thinking_tokens": 15830
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 53175,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3076,
+        "cache_read_input_tokens": 63497,
+        "cache_creation_input_tokens": 19956,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19956
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 22105,
+      "cacheReadInputTokens": 93775,
+      "cacheCreationInputTokens": 53175,
+      "webSearchRequests": 0,
+      "costUSD": 0.452513,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0058_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a new entity (root API name) not answerable from seed; not a negation/antonym flip, closer to presupposition shift\"}\n{\"id\":\"d3_s0058_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0058_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0058_N5_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"swaps React 18 for 'latest version' (entity/version substitution), not a min/max or earliest/latest flip on the enablement quantifier\"}\n{\"id\":\"d3_s0058_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks earliest supporting version, an entity/version substitution rather than a flip of an existing quantifier in the seed\"}\n{\"id\":\"d3_s0058_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the same true fact as the seed (it is opt-in) and asks rationale; this is an aspect/facet change (N1), not a presupposition of a different fact\"}\n{\"id\":\"d3_s0058_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks for how-to migration steps consistent with seed's fact, not a presupposition of a different fact\"}\n{\"id\":\"d3_s0067_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0067_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0067_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0067_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0067_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0067_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0067_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0067_P2_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0067_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0067_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0067_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0067_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0067_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0067_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0067_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Next.js implements React Server Components directly, so the async/await answer plausibly holds unchanged; narrowing doesn't clearly change the answer\"}\n{\"id\":\"d3_s0067_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0067_N3_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps only the illustrative example name (react-fetch->react-fs) in the 'like X' clause; core answer (async/await) is unchanged, so answer is not necessarily different\"}\n{\"id\":\"d3_s0067_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0067_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0067_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0067_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0067_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0067_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"fabricates an unestablished historical fact (a sequence of maintained forked libraries) rather than flipping an existing quantifier from the seed\"}\n{\"id\":\"d3_s0067_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0067_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0067_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes an unestablished ordering of shipped forked libraries rather than flipping an existing quantifier\"}\n{\"id\":\"d3_s0067_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes the same fact implied by the seed (compatibility issue) and asks for rationale; an aspect change, not a presupposition of a different fact\"}\n{\"id\":\"d3_s0067_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0074_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0074_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0074_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0074_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0074_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0074_P2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0074_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0074_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0074_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0074_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0074_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0074_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0074_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0074_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0074_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0074_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps the topic entity (documentation site -> blog), an entity substitution rather than adding/removing a scope qualifier\"}\n{\"id\":\"d3_s0074_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0074_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0074_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0074_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0074_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"achieves its effect by substituting the domain entity (reactjs.org -> legacy.reactjs.org) rather than a lexical negation/antonym flip\"}\n{\"id\":\"d3_s0074_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0074_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes an unestablished history of multiple documentation sites on reactjs.org rather than flipping an existing quantifier\"}\n{\"id\":\"d3_s0074_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces an unrelated dimension (React version numbers) with no quantifier link to the seed's redirect/migration content\"}\n{\"id\":\"d3_s0074_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}",
+  "ttft_ms": 153118,
+  "ttft_stream_ms": 1361,
+  "time_to_request_ms": 42,
+  "type": "result",
+  "duration_ms": 196454,
+  "uuid": "7ccce646-b63d-4cc2-bf65-66d9e61b68de",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 157877,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "c0315adc-3a43-448c-929a-97145668241f",
+  "total_cost_usd": 0.36827480000000007,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 46592,
+    "cache_read_input_tokens": 93294,
+    "output_tokens": 16324,
+    "output_tokens_details": {
+      "thinking_tokens": 13381
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 46592,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2893,
+        "cache_read_input_tokens": 63016,
+        "cache_creation_input_tokens": 13854,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13854
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 16324,
+      "cacheReadInputTokens": 93294,
+      "cacheCreationInputTokens": 46592,
+      "webSearchRequests": 0,
+      "costUSD": 0.36827480000000007,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0250_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0250_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0250_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0256_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0256_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0256_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0256_P3_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0256_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0256_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Human-evaluation portion of the bAbI dialog tasks (DSTC2-based) is still restaurant-reservation setting, so answer likely does not differ from seed\"}\n{\"id\":\"d2_s0256_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0256_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0256_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0256_N4_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"'before this paper' is a temporal/entity reference swap, not a negation/antonym flip; better fits N3/N6\"}\n{\"id\":\"d2_s0256_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0256_N4_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d2_s0256_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0256_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"All bAbI goal-oriented dialog tasks share the same restaurant-reservation setting, so the first task's setting equals the seed's answer\"}\n{\"id\":\"d2_s0256_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"All tasks share the same restaurant-reservation setting, so the last task's setting equals the seed's answer\"}\n{\"id\":\"d2_s0256_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Asks which task is hardest (difficulty), an unrelated aspect change rather than a quantifier flip on the setting question\"}\n{\"id\":\"d2_s0256_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks task count, an aspect change unrelated to the setting, not a quantifier flip of the original question\"}\n{\"id\":\"d2_s0256_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0256_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0262_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0262_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0262_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0262_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0262_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0262_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"First clause changes from 'what does RAFAEL stand for' to 'what does the entity-recognition module do' — a full topic change, not a single added scope qualifier\"}\n{\"id\":\"d2_s0262_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0262_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0262_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0262_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0262_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0262_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0262_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0262_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0262_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Drops the 'what does RAFAEL stand for' clause entirely and asks an unrelated count question, not a single quantifier flip within the existing question\"}\n{\"id\":\"d2_s0262_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Second clause becomes 'best-handled question type', a different aspect than language target, not a quantifier flip on the same dimension\"}\n{\"id\":\"d2_s0262_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Second clause becomes 'worst-handled question type', a different aspect than language target, not a quantifier flip on the same dimension\"}\n{\"id\":\"d2_s0262_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0262_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0394_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 134924,
+  "ttft_stream_ms": 4306,
+  "time_to_request_ms": 62,
+  "type": "result",
+  "duration_ms": 158813,
+  "uuid": "a945f3e5-a151-4657-8175-4a6a5caacd7e",
+  "queued_turn_count": 0
+}

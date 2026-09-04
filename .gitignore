@@ -1,0 +1,22 @@
+# raw corpus documents are licensed material — never commit content, only provenance
+corpus/**
+!corpus/README.md
+!corpus/**/
+!corpus/**/.gitkeep
+!corpus/**/index.jsonl
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# model caches
+.cache/
+*.safetensors
+
+# os
+.DS_Store
+
+# cloned corpora must never be tracked (licensing) — provenance lives in index files
+corpus/d4/MedQuAD/

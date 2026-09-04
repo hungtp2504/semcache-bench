@@ -1,0 +1,51 @@
+{
+  "batch_id": "E_0666",
+  "stage": "E",
+  "model_requested": "claude-haiku-4-5-20251001",
+  "model_reported": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "prompt_file": "prompts/E_verify.md",
+  "prompt_version": "1.0",
+  "cached_block_sha256": "17452e5df2626bd0d88221acefa3030903fb4bbd57cb8b67d05f0a917489c27d",
+  "input_file": "data/rq5_band_remaining.jsonl",
+  "input_lines": "10551:10600",
+  "n_input": 50,
+  "ts_start": "2026-09-02T12:59:16Z",
+  "ts_end": "2026-09-02T13:00:29Z",
+  "cli_session_id": "e5210f39-53ca-4a2b-9f49-3e4c225fd2dd",
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 17034,
+    "cache_read_input_tokens": 22499,
+    "output_tokens": 7841,
+    "output_tokens_details": {
+      "thinking_tokens": 6312
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 17034,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 7841,
+        "cache_read_input_tokens": 22499,
+        "cache_creation_input_tokens": 17034,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17034
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "cost_usd": 0.07553190000000001
+}

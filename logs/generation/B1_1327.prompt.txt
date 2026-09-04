@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_1327
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d3_s0247_N5_v4", "axis": "N5", "seed_question": "What minimum Python version is needed to set up a Django development virtual environment?", "answer": "Python version 3.12 or higher is required.", "variation": "Which Python version did Django's development setup require first?", "delta": "earliest historical requirement"}
+{"id": "d3_s0247_N6_v1", "axis": "N6", "seed_question": "What minimum Python version is needed to set up a Django development virtual environment?", "answer": "Python version 3.12 or higher is required.", "variation": "How do I activate the Django development virtual environment once it is created?", "delta": "asks the activation step, presupposed"}
+{"id": "d3_s0247_N6_v2", "axis": "N6", "seed_question": "What minimum Python version is needed to set up a Django development virtual environment?", "answer": "Python version 3.12 or higher is required.", "variation": "Which package should I install first inside a new Django development virtual environment?", "delta": "asks the first install step, presupposed"}
+{"id": "d3_s0255_P1_v1", "axis": "P1", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "What four roles make up Django's ticket triage process?", "delta": null}
+{"id": "d3_s0255_P1_v2", "axis": "P1", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "Which four parts do people play in Django's ticket triage workflow?", "delta": null}
+{"id": "d3_s0255_P1_v3", "axis": "P1", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "Can you name the four roles involved in triaging Django tickets?", "delta": null}
+{"id": "d3_s0255_P1_v4", "axis": "P1", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "What are the four positions in Django's ticket triage pipeline?", "delta": null}
+{"id": "d3_s0255_P2_v1", "axis": "P2", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "List the four roles that Django's ticket triage workflow involves.", "delta": null}
+{"id": "d3_s0255_P2_v2", "axis": "P2", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "Django's ticket triage workflow is made up of which four roles?", "delta": null}
+{"id": "d3_s0255_P2_v3", "axis": "P2", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "In Django's triage workflow, who are the four kinds of participants?", "delta": null}
+{"id": "d3_s0255_P2_v4", "axis": "P2", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "I need the names of the four roles used in Django's ticket triage workflow.", "delta": null}
+{"id": "d3_s0255_P3_v1", "axis": "P3", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "what r the 4 roles in djangos ticket triage workflow", "delta": null}
+{"id": "d3_s0255_P3_v2", "axis": "P3", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "django ticket triage - 4 roles?? name em", "delta": null}
+{"id": "d3_s0255_P3_v3", "axis": "P3", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "whats the four roles in django tickt triage wrkflow", "delta": null}
+{"id": "d3_s0255_P3_v4", "axis": "P3", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "the 4 roles in django triage workflow r called what", "delta": null}
+{"id": "d3_s0255_N1_v1", "axis": "N1", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "What are the ticket stages in Django's triage workflow?", "delta": "asks triage stages, not the roles"}
+{"id": "d3_s0255_N1_v2", "axis": "N1", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "How does a Django ticket move from new to accepted during triage?", "delta": "asks the transition process, not the roles"}
+{"id": "d3_s0255_N2_v1", "axis": "N2", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "What does a triager do in Django's ticket triage workflow?", "delta": "narrows to one role's duties"}
+{"id": "d3_s0255_N2_v2", "axis": "N2", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "What are the roles across Django's whole contribution process, not just triage?", "delta": "widens beyond triage to all contribution roles"}
+{"id": "d3_s0255_N3_v1", "axis": "N3", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "What are the four roles in Python's ticket triage workflow?", "delta": "Python instead of Django"}
+{"id": "d3_s0255_N3_v2", "axis": "N3", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "What are the four roles in Django's release workflow?", "delta": "release workflow instead of triage workflow"}
+{"id": "d3_s0255_N4_v1", "axis": "N4", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "Which roles fall outside Django's ticket triage workflow?", "delta": "roles not part of triage"}
+{"id": "d3_s0255_N4_v2", "axis": "N4", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "Which of Django's four triage roles is not allowed to merge code?", "delta": "asks who cannot merge"}
+{"id": "d3_s0255_N4_v3", "axis": "N4", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "Which triage role should a new Django contributor avoid taking on?", "delta": "the role to avoid, not the list"}
+{"id": "d3_s0255_N4_v4", "axis": "N4", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "Which of the four Django triage roles is not required for a ticket to be fixed?", "delta": "the dispensable role, not all four"}
+{"id": "d3_s0255_N5_v1", "axis": "N5", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "What is the first role in Django's ticket triage workflow?", "delta": "only the first role, not all four"}
+{"id": "d3_s0255_N5_v2", "axis": "N5", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "What is the last role in Django's ticket triage workflow?", "delta": "only the final role, not all four"}
+{"id": "d3_s0255_N5_v3", "axis": "N5", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "At minimum how many of the triage roles must act for a Django ticket to be merged?", "delta": "minimum roles involved, not their names"}
+{"id": "d3_s0255_N5_v4", "axis": "N5", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "All four Django triage roles except which one require commit access?", "delta": "the exception among the four roles"}
+{"id": "d3_s0255_N6_v1", "axis": "N6", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "How does someone become a merger in Django's ticket triage workflow?", "delta": "asks how to become a merger, presupposed role"}
+{"id": "d3_s0255_N6_v2", "axis": "N6", "seed_question": "What are the four roles in Django's ticket triage workflow?", "answer": "Triagers, bug fixers, reviewers, and mergers.", "variation": "Who assigns the roles in Django's ticket triage workflow?", "delta": "asks who assigns roles, presupposed fact"}
+{"id": "d3_s0261_P1_v1", "axis": "P1", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which code formatter should format every file in Django's codebase?", "delta": null}
+{"id": "d3_s0261_P1_v2", "axis": "P1", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "What automatic formatting tool is Django's codebase meant to be formatted with?", "delta": null}
+{"id": "d3_s0261_P1_v3", "axis": "P1", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which auto-formatting utility do I run over all of Django's files?", "delta": null}
+{"id": "d3_s0261_P1_v4", "axis": "P1", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "What tool auto-formats all files in the Django code base?", "delta": null}
+{"id": "d3_s0261_P2_v1", "axis": "P2", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Tell me the auto-formatter to use on all files in Django's codebase.", "delta": null}
+{"id": "d3_s0261_P2_v2", "axis": "P2", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "All files in Django's codebase should be formatted with which auto-formatter?", "delta": null}
+{"id": "d3_s0261_P2_v3", "axis": "P2", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "If I want to format every file in Django's codebase, which auto-formatter do I reach for?", "delta": null}
+{"id": "d3_s0261_P2_v4", "axis": "P2", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which auto-formatter is used by Django to format its entire codebase?", "delta": null}
+{"id": "d3_s0261_P3_v1", "axis": "P3", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "what auto formatter shud be used to format all files in djangos codebase", "delta": null}
+{"id": "d3_s0261_P3_v2", "axis": "P3", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "django codebase autoformatter - which one??", "delta": null}
+{"id": "d3_s0261_P3_v3", "axis": "P3", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "whch autoformater formats all files in django code base", "delta": null}
+{"id": "d3_s0261_P3_v4", "axis": "P3", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "auto formatter for django code base, whats it called", "delta": null}
+{"id": "d3_s0261_N1_v1", "axis": "N1", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "How do I run the auto-formatter across Django's codebase?", "delta": "asks how to run it, not which tool"}
+{"id": "d3_s0261_N1_v2", "axis": "N1", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "What maximum line length does Django's coding style require?", "delta": "asks the line-length rule, not the formatter"}
+{"id": "d3_s0261_N2_v1", "axis": "N2", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "What auto-formatter should be used for the JavaScript files in Django's codebase?", "delta": "narrows to JavaScript files"}
+{"id": "d3_s0261_N2_v2", "axis": "N2", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "What formatting and linting tools does Django's whole pre-commit setup run?", "delta": "widens to all pre-commit tools"}
+{"id": "d3_s0261_N3_v1", "axis": "N3", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "What auto-formatter should be used to format all files in Flask's codebase?", "delta": "Flask's codebase instead of Django's"}
+{"id": "d3_s0261_N3_v2", "axis": "N3", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "What import sorter should be used across all files in Django's codebase?", "delta": "import sorter instead of auto-formatter"}
+{"id": "d3_s0261_N4_v1", "axis": "N4", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which files in Django's codebase should not be touched by the auto-formatter?", "delta": "excluded files instead of the tool"}
+{"id": "d3_s0261_N4_v2", "axis": "N4", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which auto-formatter should not be used on Django's codebase?", "delta": "a forbidden formatter, not the required one"}
+{"id": "d3_s0261_N4_v3", "axis": "N4", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "When should you avoid running the auto-formatter on Django's codebase?", "delta": "when to avoid running it"}
+{"id": "d3_s0261_N4_v4", "axis": "N4", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which auto-formatter is no longer used in Django's codebase?", "delta": "a formerly used formatter"}
+{"id": "d3_s0261_N5_v1", "axis": "N5", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "All files in Django's codebase except which ones are auto-formatted?", "delta": "the exceptions, not the tool"}
+{"id": "d3_s0261_N5_v2", "axis": "N5", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which minimum version of the auto-formatter does Django's codebase require?", "delta": "minimum tool version, not the tool"}
+{"id": "d3_s0261_N5_v3", "axis": "N5", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which auto-formatter was adopted first for Django's codebase?", "delta": "earliest formatter adopted"}
+{"id": "d3_s0261_N5_v4", "axis": "N5", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which formatting tool covers the fewest files in Django's codebase?", "delta": "least-covering tool instead of the main one"}
+{"id": "d3_s0261_N6_v1", "axis": "N6", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "How does Django's CI enforce that all files stay auto-formatted?", "delta": "asks CI enforcement, presupposed fact"}
+{"id": "d3_s0261_N6_v2", "axis": "N6", "seed_question": "What auto-formatter should be used to format all files in Django's codebase?", "answer": "The black auto-formatter.", "variation": "Which pre-commit hook runs Django's auto-formatter before each commit?", "delta": "asks the hook, presupposed mechanism"}
+{"id": "d3_s0267_P1_v1", "axis": "P1", "seed_question": "Which two contrib apps in Django contain JavaScript code?", "answer": "The admin and gis contrib apps.", "variation": "Which two of Django's contrib applications include JavaScript code?", "delta": null}

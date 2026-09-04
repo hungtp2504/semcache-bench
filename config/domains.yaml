@@ -1,0 +1,68 @@
+# domains.yaml — five data domains (PLAN §10)
+version: "1.0"
+updated: "2026-08-11"
+
+# Seed math (PLAN §13, §15): Stage A pools >= 4,500 valid seeds (~900/domain from
+# ~150 docs x ~6 seeds/doc), from which 2,000 are selected (400/domain) for A4.
+targets_per_domain:
+  docs: 150
+  seed_pool: 900
+  seeds_selected: 400
+
+domains:
+  d1:
+    key: university_admin
+    name: University administration (course documents)
+    language: en
+    sources: >
+      MIT OpenCourseWare course-administration pages (syllabus, assignments,
+      calendar, exams) — CC BY-NC-SA 4.0, fetched by scripts/fetch_d1_ocw.py
+    rationale: >
+      replicates the baseline work's domain (VaryGen, CAIN'24) with OPEN materials
+      — decision 2026-08-12: user provides no private course docs, so d1 uses
+      openly licensed real course documents instead. Gains reproducibility; the
+      deviation from the baseline's private-course setting goes in Threats. The
+      d1-derived benchmark subset ships CC BY-NC-SA (ShareAlike), unlike CC BY
+      domains — document per-domain licensing in the datasheet.
+    legal: attribution to MIT OCW per course URL in corpus/d1/index.jsonl
+    status: fetching
+
+  d2:
+    key: academic_nlp
+    name: Academic NLP papers
+    language: en
+    sources: Qasper dataset (question answering over NLP papers)
+    rationale: public dataset → reproducibility; questions come with grounded answers
+    legal: check and record the dataset license (expected CC BY); cite the Qasper paper
+    status: to_collect
+
+  d3:
+    key: tech_docs
+    name: Technical documentation
+    language: en
+    sources: Django / React / PostgreSQL official docs
+    rationale: dense with confusable entities and version numbers → activates N3 hard
+    legal: record each project's docs license in corpus/d3/index.jsonl before use
+    status: to_collect
+
+  d4:
+    key: medical
+    name: Medical / pharmaceutical (public sources only)
+    language: en
+    sources: MedQuAD, public WHO materials
+    rationale: deep terminology and HIGH error cost → feeds the RQ4 cost-ratio analysis
+    legal: >
+      PUBLIC sources only, absolutely no patient data. Some MedQuAD subsources have
+      restrictions — verify per-source license and record it. PLAN §10.
+    status: to_collect
+
+  d5:
+    key: vietnamese_admin_edu
+    name: Vietnamese administrative / educational documents
+    language: vi
+    sources: self-collected public admin & education documents
+    rationale: >
+      cross-lingual generalization; Vietnamese diacritics + texting shorthand
+      activate P3 strongly
+    legal: public documents only; record provenance per doc in corpus/d5/index.jsonl
+    status: to_collect

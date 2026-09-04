@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 158338,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "f69a6497-0f31-44b1-a555-4b131e24eef1",
+  "total_cost_usd": 0.4227228,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 54369,
+    "cache_read_input_tokens": 95094,
+    "output_tokens": 18622,
+    "output_tokens_details": {
+      "thinking_tokens": 12434
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 54369,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3031,
+        "cache_read_input_tokens": 64816,
+        "cache_creation_input_tokens": 19831,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19831
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 18622,
+      "cacheReadInputTokens": 95094,
+      "cacheCreationInputTokens": 54369,
+      "webSearchRequests": 0,
+      "costUSD": 0.4227228,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0035_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0035_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0035_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0035_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0035_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0035_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0035_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0035_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0035_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0035_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0035_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps 'login pages' for 'API endpoints' (a sibling scope entity), not addition/removal of a scope qualifier — fits N3 better than N2\"}\n{\"id\":\"d3_s0035_N3_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"swapping Kerberos for Basic auth is only illustrative; the middleware choice depends on REMOTE_USER being login-page-only, not the named auth mechanism, so the seed's answer still holds — answer is not necessarily different\"}\n{\"id\":\"d3_s0035_N3_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"swaps 'middleware' for 'authentication backend' — this changes the question's facet/target, not a single entity/id/version swap; fits N1 (used for an identical variant elsewhere in this batch) better than N3\"}\n{\"id\":\"d3_s0035_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0035_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0035_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0035_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0035_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"doesn't flip a min/max/extreme quantifier; presupposes other pages also require REMOTE_USER for this middleware, a false premise — fits N6 presupposition shift rather than N5\"}\n{\"id\":\"d3_s0035_N5_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0035_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0035_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no longer asks which middleware nor flips an explicit quantifier; presupposes the persistent middleware is already chosen and asks about session-end timing — fits N6 presupposition shift rather than N5\"}\n{\"id\":\"d3_s0035_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0035_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0041_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0041_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0041_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0041_P1_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0041_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0041_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0041_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0041_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0041_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0041_P3_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0041_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0041_P3_v4\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0041_N1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0041_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0041_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps 'alpha' for 'experimental channel' — a channel-name entity substitution, not addition/removal of a scope qualifier; fits N3 better than N2\"}\n{\"id\":\"d3_s0041_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"widens on multiple fronts at once (drops React 18 version specificity, alpha-channel specificity, and the production-recommendation sub-question) rather than a single scope qualifier change\"}\n{\"id\":\"d3_s0041_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0041_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0041_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which app types alphas are recommended for — a facet/aspect change rather than a single negation/antonym flip; fits N1 better\"}\n{\"id\":\"d3_s0041_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which channel is production-recommended — shifts to a different entity via presupposition rather than negating a single claim; fits N6 better\"}\n{\"id\":\"d3_s0041_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines a polarity flip (recommended→discouraged) with a subject change (production apps→library authors), exceeding a single negation flip\"}\n{\"id\":\"d3_s0041_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0041_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0041_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0041_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0041_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0041_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0041_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0047_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0047_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0047_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0047_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0047_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0047_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0047_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0047_P2_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0047_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 120071,
+  "ttft_stream_ms": 1951,
+  "time_to_request_ms": 23,
+  "type": "result",
+  "duration_ms": 160825,
+  "uuid": "4648a0c9-78b0-4724-8e90-253d16a3d603",
+  "queued_turn_count": 0
+}

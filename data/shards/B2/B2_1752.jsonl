@@ -1,0 +1,60 @@
+{"id": "d5_s0305_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "scope narrowing does not change the answer; seed's 31/12/2027 still answers it", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N2_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.7, "issue": "restricting to one of the two circulars yields the same date; seed answer still fully answers", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N4_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.85, "issue": "deadline restated as 'from when invalid'; same answer content, explicitly excluded by N4", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N4_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.8, "issue": "'prohibited from when' is the complement of the same cut-off date; same answer content", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N4_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "changes facet (issuance vs use) rather than performing a single polarity flip", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N5_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "not a quantifier flip of the seed's asked quantity; asks which circular took effect later (aspect change)", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "asks issuance order of the two circulars, not a quantifier/extreme flip on the seed's quantity", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0305_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "the generic definition still fully answers the university-scoped question", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N2_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "public-institution qualifier does not change the definition; seed answer still answers", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N3_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "the seed answer is verbatim the Luật Giáo dục definition, so the answer is not necessarily different", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N5_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0312_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "narrowing to financially autonomous institutions leaves the same disclosure/accountability duty; seed answer still answers", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_N2_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "narrowing to admission services leaves the same duty; seed answer still answers", "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}
+{"id": "d5_s0318_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1752", "ts": "2026-08-31T10:42:00Z"}

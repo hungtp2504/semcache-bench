@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 174925,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "6d83650f-8920-4859-9edd-149e6fa75e96",
+  "total_cost_usd": 0.430224,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 55038,
+    "cache_read_input_tokens": 99620,
+    "output_tokens": 19014,
+    "output_tokens_details": {
+      "thinking_tokens": 15876
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 55038,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3096,
+        "cache_read_input_tokens": 69342,
+        "cache_creation_input_tokens": 15974,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15974
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 19014,
+      "cacheReadInputTokens": 99620,
+      "cacheCreationInputTokens": 55038,
+      "webSearchRequests": 0,
+      "costUSD": 0.430224,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0063_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0063_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0063_P1_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0063_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0063_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0063_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0063_P2_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0063_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0063_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0063_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0063_P3_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"'ntn' reframes the yes/no question into a 'how' question that presupposes submission is still required — a content/presupposition change beyond surface noise (typos/shorthand)\"}\n{\"id\":\"d5_s0063_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0063_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0063_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0063_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0063_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0063_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0063_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0063_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0063_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0063_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"swaps permanent-residence book for temporary-residence book (sổ tạm trú) — an entity/document substitution, not a negation/polarity flip; better fits N3\"}\n{\"id\":\"d5_s0063_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0063_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0063_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes one of the two documents is still mandatory (contradicting the seed's 'neither required' answer) rather than flipping a min/max/extreme quantifier — fits N6 presupposition shift, not N5\"}\n{\"id\":\"d5_s0063_N5_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0063_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0063_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks how the ID number reaches the school — tangential new topic with weak tie to any specific fact in the seed's answer; reads as an aspect change (N1) rather than a presupposition built on the answer\"}\n{\"id\":\"d5_s0082_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0082_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0082_P1_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d5_s0082_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0082_P2_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d5_s0082_P2_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d5_s0082_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0082_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0082_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0082_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0082_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0082_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0082_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0082_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0082_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0082_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"scope change swaps the specific resolution entity for an entirely different broad category (all provincial education resolutions) — more than a single scope qualifier add/remove, reads as entity-level generalization\"}\n{\"id\":\"d5_s0082_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0082_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0082_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0082_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0082_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about revenue destination (thu) rather than negating the funding-source question — different aspect (income vs. expenditure), not a negation/antonym flip\"}\n{\"id\":\"d5_s0082_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about handling of unspent leftover funds — a different aspect (fund disposal) rather than a negation/antonym flip\"}\n{\"id\":\"d5_s0082_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0082_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for a maximum per-task spending amount — a new dimension (spending cap) absent from the seed question, not a quantifier flip within the original question\"}\n{\"id\":\"d5_s0082_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for a minimum per-task spending amount — same issue as the max variant, a new spending-amount dimension rather than a quantifier flip\"}\n{\"id\":\"d5_s0082_N5_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0082_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which resolution 29/2026 replaces — unrelated to any specific claim in the seed's answer about funding sources; reads as aspect change (N1), not a presupposition tied to the answer\"}\n{\"id\":\"d5_s0082_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about the settlement/accounting process for funds — tangential to the seed's answer, which only names funding sources, not procedure; reads as aspect change (N1)\"}\n{\"id\":\"d5_s0119_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0119_P1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d5_s0119_P1_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d5_s0119_P1_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d5_s0119_P2_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}",
+  "ttft_ms": 154238,
+  "ttft_stream_ms": 1203,
+  "time_to_request_ms": 18,
+  "type": "result",
+  "duration_ms": 175408,
+  "uuid": "64a0819f-69f3-4326-a6f7-815d39cc1ebe",
+  "queued_turn_count": 0
+}

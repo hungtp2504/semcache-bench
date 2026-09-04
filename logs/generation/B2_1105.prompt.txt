@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_1105
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d3_s0640_P1_v2", "axis": "P1", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "What three pieces of JavaScript syntax let you render JSX conditionally in React?", "delta": null}
+{"id": "d3_s0640_P1_v3", "axis": "P1", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "React relies on which three JavaScript constructs to render JSX conditionally?", "delta": null}
+{"id": "d3_s0640_P1_v4", "axis": "P1", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Name the three JavaScript syntax elements React uses for conditional JSX rendering.", "delta": null}
+{"id": "d3_s0640_P2_v1", "axis": "P2", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Conditional rendering of JSX in React uses which three JavaScript syntax constructs?", "delta": null}
+{"id": "d3_s0640_P2_v2", "axis": "P2", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "List the three JavaScript constructs React uses to conditionally render JSX.", "delta": null}
+{"id": "d3_s0640_P2_v3", "axis": "P2", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "I want to render JSX conditionally in React — which three JavaScript constructs are involved?", "delta": null}
+{"id": "d3_s0640_P2_v4", "axis": "P2", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "There are three JavaScript syntax constructs for conditional JSX in React; what are they?", "delta": null}
+{"id": "d3_s0640_P3_v1", "axis": "P3", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "what 3 js syntax things does react use to conditionally render jsx?", "delta": null}
+{"id": "d3_s0640_P3_v2", "axis": "P3", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "react conditional rendering — the 3 javascript constructs??", "delta": null}
+{"id": "d3_s0640_P3_v3", "axis": "P3", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "which three javscript syntx constructs does react use for conditionaly rendering jsx", "delta": null}
+{"id": "d3_s0640_P3_v4", "axis": "P3", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "3 ways in js to conditionaly render jsx in react, wat r they", "delta": null}
+{"id": "d3_s0640_N1_v1", "axis": "N1", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "When should you pick the ternary operator over an if statement for conditional JSX?", "delta": "asks selection guidance, not the list"}
+{"id": "d3_s0640_N1_v2", "axis": "N1", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "What pitfall does the && operator have when rendering JSX conditionally?", "delta": "asks a pitfall, not the three constructs"}
+{"id": "d3_s0640_N2_v1", "axis": "N2", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Which conditional rendering constructs can be written inside JSX itself rather than around it?", "delta": "narrows to in-JSX-usable constructs"}
+{"id": "d3_s0640_N2_v2", "axis": "N2", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Which JavaScript syntax constructs does React use for both conditional rendering and list rendering?", "delta": "widens to list rendering too"}
+{"id": "d3_s0640_N3_v1", "axis": "N3", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "What three JavaScript syntax constructs does React use to render lists of JSX?", "delta": "list rendering instead of conditional"}
+{"id": "d3_s0640_N3_v2", "axis": "N3", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "What three syntax constructs does Vue use to conditionally render templates?", "delta": "a different framework"}
+{"id": "d3_s0640_N4_v1", "axis": "N4", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "What JavaScript syntax does React use to render JSX unconditionally?", "delta": "unconditional rendering, not conditional"}
+{"id": "d3_s0640_N4_v2", "axis": "N4", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Which of the three JavaScript constructs cannot be used as a JSX expression?", "delta": "the disallowed one, not all three"}
+{"id": "d3_s0640_N4_v3", "axis": "N4", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "What JavaScript syntax construct does React use to hide JSX rather than render it?", "delta": "hiding output, not rendering it"}
+{"id": "d3_s0640_N4_v4", "axis": "N4", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Which JavaScript syntax construct renders JSX only when the condition is false?", "delta": "false branch only, not the three constructs"}
+{"id": "d3_s0640_N5_v1", "axis": "N5", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Which of the three conditional rendering constructs do the React docs recommend most?", "delta": "the preferred one, not all three"}
+{"id": "d3_s0640_N5_v2", "axis": "N5", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Which conditional rendering construct do the React docs introduce first?", "delta": "only the first construct, not all three"}
+{"id": "d3_s0640_N5_v3", "axis": "N5", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Which conditional rendering construct do the React docs introduce last?", "delta": "only the last construct, not all three"}
+{"id": "d3_s0640_N5_v4", "axis": "N5", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Which of the three conditional rendering constructs is the most concise to write?", "delta": "the shortest one, not all three"}
+{"id": "d3_s0640_N6_v1", "axis": "N6", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "Why does the && operator work for conditionally rendering JSX in React?", "delta": "asks why it works, presupposed construct"}
+{"id": "d3_s0640_N6_v2", "axis": "N6", "seed_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "answer": "if statements, the && operator, and the ?: (ternary) operator.", "variation": "What happens when the left side of a && in JSX is the number zero?", "delta": "asks an edge case, presupposed construct"}
+{"id": "d3_s0646_P1_v1", "axis": "P1", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "Which command creates a new Next.js app?", "delta": null}
+{"id": "d3_s0646_P1_v2", "axis": "P1", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What do I type to generate a new Next.js application?", "delta": null}
+{"id": "d3_s0646_P1_v3", "axis": "P1", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What's the command for starting a brand-new Next.js project?", "delta": null}
+{"id": "d3_s0646_P1_v4", "axis": "P1", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "Which CLI command sets up a fresh Next.js app?", "delta": null}
+{"id": "d3_s0646_P2_v1", "axis": "P2", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "To create a new Next.js app, which command should be run?", "delta": null}
+{"id": "d3_s0646_P2_v2", "axis": "P2", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "Give me the command for creating a new Next.js app.", "delta": null}
+{"id": "d3_s0646_P2_v3", "axis": "P2", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "A new Next.js app is created by running what?", "delta": null}
+{"id": "d3_s0646_P2_v4", "axis": "P2", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "I want to start a new Next.js app — what command do I use?", "delta": null}
+{"id": "d3_s0646_P3_v1", "axis": "P3", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "wat command do i run to creat a new nextjs app?", "delta": null}
+{"id": "d3_s0646_P3_v2", "axis": "P3", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "cmd to make a new next.js app??", "delta": null}
+{"id": "d3_s0646_P3_v3", "axis": "P3", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "how do i creat new nextjs app comand", "delta": null}
+{"id": "d3_s0646_P3_v4", "axis": "P3", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "new next js app — whats the command", "delta": null}
+{"id": "d3_s0646_N1_v1", "axis": "N1", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What features does a new Next.js app include by default?", "delta": "asks default features, not the command"}
+{"id": "d3_s0646_N1_v2", "axis": "N1", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What options does the Next.js setup prompt ask about during creation?", "delta": "asks setup prompts, not the command"}
+{"id": "d3_s0646_N2_v1", "axis": "N2", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command creates a new Next.js app using the App Router only?", "delta": "narrows to the App Router option"}
+{"id": "d3_s0646_N2_v2", "axis": "N2", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What commands create a new app for each React framework the docs recommend?", "delta": "widens to all recommended frameworks"}
+{"id": "d3_s0646_N3_v1", "axis": "N3", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to create a new Remix app?", "delta": "a different framework"}
+{"id": "d3_s0646_N3_v2", "axis": "N3", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to create a new Expo app?", "delta": "a different framework"}
+{"id": "d3_s0646_N4_v1", "axis": "N4", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to delete a Next.js app I created?", "delta": "deletion, not creation"}
+{"id": "d3_s0646_N4_v2", "axis": "N4", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to add Next.js to an existing app instead of creating one?", "delta": "adds to existing project, not new app"}
+{"id": "d3_s0646_N4_v3", "axis": "N4", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to build a Next.js app for production rather than create it?", "delta": "production build, not creation"}
+{"id": "d3_s0646_N4_v4", "axis": "N4", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command do I run to create a new Next.js app without using the latest version?", "delta": "non-latest version, not @latest"}
+{"id": "d3_s0646_N5_v1", "axis": "N5", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What command creates a new Next.js app on the earliest supported version instead of the latest?", "delta": "earliest version, not latest"}
+{"id": "d3_s0646_N5_v2", "axis": "N5", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What is the latest Next.js version that create-next-app installs?", "delta": "asks version number, not the command"}
+{"id": "d3_s0646_N5_v3", "axis": "N5", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What is the first command to run after creating a new Next.js app?", "delta": "the following command, not the creation one"}
+{"id": "d3_s0646_N5_v4", "axis": "N5", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What was the original command for creating a Next.js app before create-next-app existed?", "delta": "earliest historical command, not the current one"}
+{"id": "d3_s0646_N6_v1", "axis": "N6", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "Why does the docs' Next.js command use the `@latest` tag?", "delta": "asks reason for @latest, presupposed command"}
+{"id": "d3_s0646_N6_v2", "axis": "N6", "seed_question": "What command do I run to create a new Next.js app?", "answer": "Run `npx create-next-app@latest`.", "variation": "What do I run to start the dev server after creating a new Next.js app?", "delta": "asks the next step, presupposed creation"}
+{"id": "d3_s0653_P1_v1", "axis": "P1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "How do the React docs define React?", "delta": null}
+{"id": "d3_s0653_P1_v2", "axis": "P1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "According to the React documentation, what exactly is React?", "delta": null}
+{"id": "d3_s0653_P1_v3", "axis": "P1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What do the React docs say React is?", "delta": null}
+{"id": "d3_s0653_P1_v4", "axis": "P1", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "What's React, as described in the official React docs?", "delta": null}
+{"id": "d3_s0653_P2_v1", "axis": "P2", "seed_question": "What is React, according to the React docs?", "answer": "React is a JavaScript library for rendering user interfaces (UI).", "variation": "Give me the React docs' definition of React.", "delta": null}

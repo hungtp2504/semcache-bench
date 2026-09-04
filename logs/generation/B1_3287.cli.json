@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 199699,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "f9435d34-030f-4d2b-912f-2580da1716bd",
+  "total_cost_usd": 0.4408982,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 55144,
+    "cache_read_input_tokens": 98621,
+    "output_tokens": 20059,
+    "output_tokens_details": {
+      "thinking_tokens": 16975
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 55144,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3028,
+        "cache_read_input_tokens": 68343,
+        "cache_creation_input_tokens": 17079,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17079
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 20059,
+      "cacheReadInputTokens": 98621,
+      "cacheCreationInputTokens": 55144,
+      "webSearchRequests": 0,
+      "costUSD": 0.4408982,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0223_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0223_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0223_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0223_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0223_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0223_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0223_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0223_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'bãi bỏ' (repeal) mismatches a consolidation (hợp nhất) document; not a clean antonym flip of 'quy định nội dung gì'\"}\n{\"id\":\"d5_s0223_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0223_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces a new quantifiable fact (max tuition amount) with no corresponding quantifier in the seed question to flip; more an unrelated aspect than an extreme flip\"}\n{\"id\":\"d5_s0223_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces a new quantifiable fact (min support amount) with no corresponding quantifier in the seed question to flip\"}\n{\"id\":\"d5_s0223_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0223_N5_v4\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0223_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0223_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0229_P1_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d5_s0229_P1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d5_s0229_P1_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d5_s0229_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0229_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_P2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0229_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_N2_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"narrowing to preschool institutions likely does not change the 20/7 deadline (same rule applies uniformly), so correct answer may not differ from seed's\"}\n{\"id\":\"d5_s0229_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0229_N3_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"swapped funding program (study-cost support) likely follows the same reporting schedule/deadline as tuition subsidy, so answer may not necessarily differ\"}\n{\"id\":\"d5_s0229_N3_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"swapping recipient to education authority presupposes an undocumented reporting duty rather than a clean sibling substitution with a guaranteed different answer\"}\n{\"id\":\"d5_s0229_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0229_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"fabricates a reversed obligation (finance agency response deadline) not implied by seed; not a negation/antonym flip of the existing question\"}\n{\"id\":\"d5_s0229_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0229_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"yes/no framing ('gửi sau ngày 20/7 được không') tests the same underlying deadline fact in disguised form, matching the explicitly excluded 'until when vs after when' pattern\"}\n{\"id\":\"d5_s0229_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0229_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks number of annual disbursements, an unrelated fact with no quantifier basis in seed's deadline question — aspect change rather than an extreme flip\"}\n{\"id\":\"d5_s0229_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0229_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes an extension mechanism not established by the seed; better fits N6 presupposition-shift than a quantifier flip\"}\n{\"id\":\"d5_s0229_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0229_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0235_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0235_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0235_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0235_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0235_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0235_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0235_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'dịch vụ tuyển sinh' replaces the service category itself rather than adding a scope qualifier to 'dịch vụ giáo dục' — this is an entity substitution (N3-like), not scope narrowing\"}\n{\"id\":\"d5_s0235_N3_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}",
+  "ttft_ms": 179511,
+  "ttft_stream_ms": 1486,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 200473,
+  "uuid": "597611b4-eee9-4933-8bd4-b2ecee7ba7f1",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0163
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d5_s0079", "domain": "vietnamese_admin_edu", "doc_id": "d5_nq29_2026_chi_phi_thi_p02", "fact_ids": ["d5_f00095"], "question": "Ai đã ký Nghị quyết 29/2026/NQ-HĐND thay mặt Chủ tịch HĐND tỉnh Tuyên Quang?", "answer": "Phó Chủ tịch Lê Thị Thanh Trà đã ký thay mặt Chủ tịch (KT. Chủ tịch).", "generator_model": "claude-sonnet-5", "batch_id": "A_0101", "ts": "2026-08-12T03:39:32Z"}
+{"seed_id": "d5_s0083", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt40_2026_cong_tac_sinh_vien_p01", "fact_ids": ["d5_f00101"], "question": "Thông tư 40/2026/TT-BGDĐT quy định về nội dung gì?", "answer": "Thông tư quy định về nội dung công tác học sinh, sinh viên và trách nhiệm của các cơ quan, tổ chức, cá nhân trong công tác sinh viên.", "generator_model": "claude-sonnet-5", "batch_id": "A_0101", "ts": "2026-08-12T03:39:32Z"}
+{"seed_id": "d5_s0250", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p10", "fact_ids": ["d5_f00319"], "question": "Bộ Giáo dục và Đào tạo phải thông báo kết quả kiểm tra, thẩm định cho cơ sở đào tạo trong thời hạn bao lâu?", "answer": "Không quá 60 ngày kể từ ngày có đủ thông tin, hồ sơ và tài liệu phục vụ việc kiểm tra, thẩm định.", "generator_model": "claude-sonnet-5", "batch_id": "A_0241", "ts": "2026-08-12T14:46:53Z"}
+{"seed_id": "d5_s0254", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p11", "fact_ids": ["d5_f00330"], "question": "Cơ sở đào tạo phải hoàn thành cấp văn bằng cho người học trong thời hạn tối đa bao lâu kể từ khi người học hoàn thành luận văn hoặc luận án?", "answer": "Tối đa 06 tháng kể từ ngày người học hoàn thành đề án, dự án, luận văn hoặc luận án, trừ trường hợp phải thẩm định lại.", "generator_model": "claude-sonnet-5", "batch_id": "A_0241", "ts": "2026-08-12T14:46:53Z"}
+{"seed_id": "d5_s0257", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p11", "fact_ids": ["d5_f00327"], "question": "Người hướng dẫn nghiên cứu sinh chịu trách nhiệm gì đối với luận án của nghiên cứu sinh?", "answer": "Chịu trách nhiệm học thuật đối với quá trình hướng dẫn, chất lượng chuyên môn và việc bảo đảm liêm chính học thuật của luận án.", "generator_model": "claude-sonnet-5", "batch_id": "A_0241", "ts": "2026-08-12T14:46:53Z"}
+{"seed_id": "d5_s0258", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p11", "fact_ids": ["d5_f00325"], "question": "Theo Điều 29, người học chịu trách nhiệm gì đối với luận văn, luận án, đề án của mình?", "answer": "Chịu trách nhiệm về tính chính xác, tính nguyên bản của luận văn, luận án, đề án và các công bố khoa học liên quan.", "generator_model": "claude-sonnet-5", "batch_id": "A_0241", "ts": "2026-08-12T14:46:53Z"}
+{"seed_id": "d5_s0261", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p12", "fact_ids": ["d5_f00335"], "question": "Người học phải nhập học trước ngày nào để tiếp tục được đào tạo theo Quy chế cũ (Thông tư 23/2021 và 18/2021/TT-BGDĐT)?", "answer": "Người học phải đã trúng tuyển theo thông báo tuyển sinh trước ngày Thông tư 53/2026 có hiệu lực và nhập học trước ngày 01 tháng 01 năm 2027.", "generator_model": "claude-sonnet-5", "batch_id": "A_0241", "ts": "2026-08-12T14:46:53Z"}
+{"seed_id": "d5_s0262", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p12", "fact_ids": ["d5_f00338"], "question": "Quy chế ban hành kèm theo Thông tư 53/2026/TT-BGDĐT được áp dụng cho các khóa tuyển sinh và tổ chức đào tạo từ ngày nào?", "answer": "Từ ngày 01 tháng 01 năm 2027.", "generator_model": "claude-sonnet-5", "batch_id": "A_0241", "ts": "2026-08-12T14:46:53Z"}
+{"seed_id": "d5_s0263", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p12", "fact_ids": ["d5_f00336"], "question": "Quy định về tiêu chuẩn người hướng dẫn nghiên cứu sinh tại khoản 2 Điều 5 của Thông tư 18/2021/TT-BGDĐT được tiếp tục áp dụng đến khi nào?", "answer": "Cho đến khi Bộ trưởng Bộ Giáo dục và Đào tạo ban hành Chuẩn chương trình đào tạo trình độ tiến sĩ đối với ngành, nhóm ngành hoặc lĩnh vực tương ứng.", "generator_model": "claude-sonnet-5", "batch_id": "A_0241", "ts": "2026-08-12T14:46:53Z"}
+{"seed_id": "d5_s0265", "domain": "vietnamese_admin_edu", "doc_id": "d5_tt53_2026_tuyen_sinh_sau_dh_p12", "fact_ids": ["d5_f00334"], "question": "Cơ sở đào tạo phải công khai những thông tin gì liên quan đến chương trình đào tạo trên trang thông tin điện tử?", "answer": "Thông tin tuyển sinh, chuẩn đầu ra, hình thức đào tạo, học phí, học bổng và điều kiện duy trì bảo đảm chất lượng của chương trình đào tạo.", "generator_model": "claude-sonnet-5", "batch_id": "A_0241", "ts": "2026-08-12T14:46:53Z"}

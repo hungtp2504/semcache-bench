@@ -1,0 +1,73 @@
+You are the verification tier of a semantic cache. The first tier (embedding similarity)
+proposed serving a stored answer to a new query. You see both questions and the stored
+answer. Decide whether serving is safe.
+
+DECISION RULE
+SERVE      — the stored answer is a fully correct and complete answer to the new query.
+REGENERATE — anything else: different entity/version, flipped polarity, different
+             quantifier or extreme, different facet or scope, different presupposed fact,
+             or you are unsure. When in doubt, REGENERATE (a false hit sends a user the
+             wrong answer; a false miss only costs one LLM call).
+
+Pay attention to small discrete differences the first tier is blind to: "1" vs "2",
+negation words, earliest/latest, min/max, sibling entities. Do not be fooled by large
+surface differences that change nothing (typos, missing diacritics, paraphrase).
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"pair_id":"...","decision":"SERVE|REGENERATE","conf":<0..1>}
+
+
+[BATCH INPUT]
+batch_id: E_0694
+pairs (JSONL — pair_id, cached_question, cached_answer, new_query):
+
+{"pair_id": "d3_s0640_P3_v1", "cached_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "cached_answer": "if statements, the && operator, and the ?: (ternary) operator.", "new_query": "what 3 js syntax things does react use to conditionally render jsx?"}
+{"pair_id": "d3_s0640_P3_v3", "cached_question": "What three JavaScript syntax constructs does React use to conditionally render JSX?", "cached_answer": "if statements, the && operator, and the ?: (ternary) operator.", "new_query": "which three javscript syntx constructs does react use for conditionaly rendering jsx"}
+{"pair_id": "d3_s0641_N1_v1", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "Why would a React component need to render nothing at all?"}
+{"pair_id": "d3_s0641_N1_v2", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "What does React put in the DOM for a component that renders nothing?"}
+{"pair_id": "d3_s0641_N3_v2", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "What can a Vue component return if it wants to render nothing at all?"}
+{"pair_id": "d3_s0641_N4_v4", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "Which return value from a React component causes an error instead of rendering nothing?"}
+{"pair_id": "d3_s0641_N5_v2", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "How many different return values make a React component render nothing?"}
+{"pair_id": "d3_s0641_P1_v2", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "If a React component shouldn't output anything, what does it return?"}
+{"pair_id": "d3_s0641_P1_v3", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "What's the return value for a React component that renders nothing at all?"}
+{"pair_id": "d3_s0641_P1_v4", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "How does a React component signal that it renders nothing whatsoever?"}
+{"pair_id": "d3_s0641_P2_v1", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "To render nothing at all, a React component returns what?"}
+{"pair_id": "d3_s0641_P2_v2", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "Tell me which value makes a React component render nothing."}
+{"pair_id": "d3_s0641_P2_v4", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "Which value returned from a React component results in nothing being rendered?"}
+{"pair_id": "d3_s0641_P3_v1", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "what can a react component return if it wants to render nothin at all?"}
+{"pair_id": "d3_s0641_P3_v2", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "react comp render nothing — return wat?"}
+{"pair_id": "d3_s0641_P3_v3", "cached_question": "What can a React component return if it wants to render nothing at all?", "cached_answer": "It can return null.", "new_query": "how do i make a react component render nothing?? whats the return value"}
+{"pair_id": "d3_s0642_N1_v1", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "In the PackingList example, which prop controls whether an item counts as packed?"}
+{"pair_id": "d3_s0642_N2_v2", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "In the PackingList example, what symbol appears on the item's checkbox when isPacked is true?"}
+{"pair_id": "d3_s0642_N3_v1", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "In the PackingList example, what symbol is added to an item when its isImportant prop is true?"}
+{"pair_id": "d3_s0642_N3_v2", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "In the TodoList example, what symbol is added to an item when its isPacked prop is true?"}
+{"pair_id": "d3_s0642_N4_v2", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "In the PackingList example, what symbol is removed from an item when its isPacked prop is true?"}
+{"pair_id": "d3_s0642_P1_v2", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "What character does the PackingList example put next to an item when isPacked is true?"}
+{"pair_id": "d3_s0642_P1_v3", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "In the PackingList sample, what mark is shown for an item with isPacked set to true?"}
+{"pair_id": "d3_s0642_P1_v4", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "Which icon does the PackingList example attach to an item when its isPacked prop is true?"}
+{"pair_id": "d3_s0642_P2_v3", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "An item in the PackingList example has isPacked set to true — what symbol appears on it?"}
+{"pair_id": "d3_s0642_P2_v4", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "What gets added to an item's name in the PackingList example if isPacked is true?"}
+{"pair_id": "d3_s0642_P3_v1", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "in the PackingList example wat symbol is added when isPacked is true?"}
+{"pair_id": "d3_s0642_P3_v2", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "packinglist example — isPacked true => which symbol gets added??"}
+{"pair_id": "d3_s0642_P3_v3", "cached_question": "In the PackingList example, what symbol is added to an item when its isPacked prop is true?", "cached_answer": "A checkmark (✅) is added to the item's name.", "new_query": "whats the symbol added to an item wen its isPacked prop is tru (PackingList exmple)"}
+{"pair_id": "d3_s0646_N2_v1", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "What command creates a new Next.js app using the App Router only?"}
+{"pair_id": "d3_s0646_N4_v1", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "What command do I run to delete a Next.js app I created?"}
+{"pair_id": "d3_s0646_N4_v3", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "What command do I run to build a Next.js app for production rather than create it?"}
+{"pair_id": "d3_s0646_N5_v1", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "What command creates a new Next.js app on the earliest supported version instead of the latest?"}
+{"pair_id": "d3_s0646_N5_v4", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "What was the original command for creating a Next.js app before create-next-app existed?"}
+{"pair_id": "d3_s0646_N6_v2", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "What do I run to start the dev server after creating a new Next.js app?"}
+{"pair_id": "d3_s0646_P1_v1", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "Which command creates a new Next.js app?"}
+{"pair_id": "d3_s0646_P1_v2", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "What do I type to generate a new Next.js application?"}
+{"pair_id": "d3_s0646_P1_v3", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "What's the command for starting a brand-new Next.js project?"}
+{"pair_id": "d3_s0646_P1_v4", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "Which CLI command sets up a fresh Next.js app?"}
+{"pair_id": "d3_s0646_P2_v2", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "Give me the command for creating a new Next.js app."}
+{"pair_id": "d3_s0646_P2_v3", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "A new Next.js app is created by running what?"}
+{"pair_id": "d3_s0646_P2_v4", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "I want to start a new Next.js app — what command do I use?"}
+{"pair_id": "d3_s0646_P3_v2", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "cmd to make a new next.js app??"}
+{"pair_id": "d3_s0646_P3_v3", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "how do i creat new nextjs app comand"}
+{"pair_id": "d3_s0646_P3_v4", "cached_question": "What command do I run to create a new Next.js app?", "cached_answer": "Run `npx create-next-app@latest`.", "new_query": "new next js app — whats the command"}
+{"pair_id": "d3_s0647_N1_v2", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "Which license is the Next.js framework released under?"}
+{"pair_id": "d3_s0647_N2_v1", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "Which team inside the maintaining company works on Next.js?"}
+{"pair_id": "d3_s0647_N4_v2", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "Who maintains Next.js outside of Vercel?"}
+{"pair_id": "d3_s0647_N5_v1", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "Who was the first maintainer of the Next.js framework?"}
+{"pair_id": "d3_s0647_N5_v4", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "How many companies maintain the Next.js framework?"}

@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 60509,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "c0bba149-4fcf-4e3a-bb3d-8b17b14dfb00",
+  "total_cost_usd": 0.3261816,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 31353,
+    "cache_read_input_tokens": 87872,
+    "output_tokens": 7446,
+    "output_tokens_details": {
+      "thinking_tokens": 2534
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31353,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4855,
+        "cache_read_input_tokens": 57627,
+        "cache_creation_input_tokens": 3971,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3971
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 7446,
+      "cacheReadInputTokens": 87872,
+      "cacheCreationInputTokens": 31353,
+      "webSearchRequests": 0,
+      "costUSD": 0.3261816,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"statement\":\"The course instructor is Prof. Kristala L. Jones Prather.\",\"source_span\":\"Instructor\\nProf. Kristala L. Jones Prather\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"statement\":\"The course was taught Fall 2004 at the undergraduate level in the Chemical Engineering department.\",\"source_span\":\"As Taught In\\nFall\\n            \\n              2004\\nLevel\\nUndergraduate\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"statement\":\"The Lecture 1 required reading is Rozzell, J. D., \\\"Commercial Scale Biocatalysis: Myths and Realities,\\\" Bioorg Med Chem 7, no. 10 (Oct 1999): 2253-61.\",\"source_span\":\"Rozzell, J. D. “Commercial Scale Biocatalysis: Myths and Realities.”\\nBioorg Med Chem\\n7, no. 10 (Oct, 1999): 2253-61.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"statement\":\"The Lecture 7 readings include \\\"Bugs as Catalysts,\\\" The Economist, print edition, 13 March 2003, and Buckland, B. C., et al., \\\"Microbial Conversion of Indene to Indandiol: A Key Intermediate in the Synthesis of CRIXIVAN,\\\" Metab Eng 1, no. 1 (Jan 1999): 63-74.\",\"source_span\":\"“Bugs as Catalysts.”\\nThe Economist.\\nPrint edition. 13 March 2003.\\nBuckland, B. C., et. al. “Microbial Conversion of Indene to Indandiol: A Key Intermediate in the Synthesis of CRIXIVAN.”\\nMetab Eng\\n1, no. 1 (Jan, 1999): 63-74.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"statement\":\"The Lecture 11 reading is Bornscheuer, U. T., et al., \\\"Optimizing Lipases and Related Enzymes for Efficient Application,\\\" Trends Biotechnol 20, no. 10 (Oct 2002): 433-7.\",\"source_span\":\"Bornscheuer, U. T., C. Bessler, R. Srinivas, and S. H. Krishna. “Optimizing Lipases and Related Enzymes for Efficient Application.”\\nTrends Biotechnol\\n20, no. 10 (Oct, 2002): 433-7.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"statement\":\"There are three problem sets for this course.\",\"source_span\":\"There are three problem sets for this course:\\nProblem Set 1\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"fact_refs\":[0],\"question\":\"Who teaches MIT's 10.492-2 Integrated Chemical Engineering Topics I: Introduction to Biocatalysis?\",\"answer\":\"Prof. Kristala L. Jones Prather.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"fact_refs\":[1],\"question\":\"When was Introduction to Biocatalysis taught, and at what level?\",\"answer\":\"It was taught in Fall 2004 at the undergraduate level, in the Chemical Engineering department.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"fact_refs\":[2],\"question\":\"What article is required reading for Lecture 1 of this biocatalysis course?\",\"answer\":\"Rozzell, J. D., \\\"Commercial Scale Biocatalysis: Myths and Realities,\\\" Bioorg Med Chem 7, no. 10 (Oct 1999): 2253-61.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"fact_refs\":[3],\"question\":\"What two readings are assigned for Lecture 7 on biocatalysis?\",\"answer\":\"\\\"Bugs as Catalysts,\\\" The Economist (13 March 2003), and Buckland et al., \\\"Microbial Conversion of Indene to Indandiol: A Key Intermediate in the Synthesis of CRIXIVAN,\\\" Metab Eng 1, no. 1 (Jan 1999): 63-74.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"fact_refs\":[4],\"question\":\"Which journal article is assigned for Lecture 11 about optimizing lipases?\",\"answer\":\"Bornscheuer, U. T., et al., \\\"Optimizing Lipases and Related Enzymes for Efficient Application,\\\" Trends Biotechnol 20, no. 10 (Oct 2002): 433-7.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_assignments\",\"fact_refs\":[5],\"question\":\"How many problem sets are there in this biocatalysis course?\",\"answer\":\"There are three problem sets.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"statement\":\"The course calendar covers 18 numbered lecture sessions (lec 1 through 18).\",\"source_span\":\"lec #\\nTOPICS\\nKEY DATES\\n1\\nCourse Overview\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"statement\":\"Homework #1 is due at Lecture 5.\",\"source_span\":\"Lecture 5\\nHomework #1 due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"statement\":\"Homework #2 is due at Lecture 9.\",\"source_span\":\"Lecture 9\\nHomework #2 due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"statement\":\"The Design report is distributed at Lecture 11.\",\"source_span\":\"Lecture 11\\nDesign report distributed\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"statement\":\"Homework #3 is due at Lecture 15.\",\"source_span\":\"Lecture 15\\nHomework #3 due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"statement\":\"Lecture 18 is devoted to Presentations of Design/Development Reports.\",\"source_span\":\"18\\nPresentations of Design/Development Reports\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"statement\":\"Lecture 1's topic is Course Overview, Enzyme Classification.\",\"source_span\":\"1\\nCourse Overview, Enzyme Classification\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"fact_refs\":[1],\"question\":\"At which lecture is Homework #1 due in the biocatalysis course calendar?\",\"answer\":\"Homework #1 is due at Lecture 5.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"fact_refs\":[2],\"question\":\"When is Homework #2 due according to the course calendar?\",\"answer\":\"Homework #2 is due at Lecture 9.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"fact_refs\":[3],\"question\":\"At what point in the course is the design report distributed to students?\",\"answer\":\"The design report is distributed at Lecture 11.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"fact_refs\":[4],\"question\":\"When is Homework #3 due in this course?\",\"answer\":\"Homework #3 is due at Lecture 15.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"fact_refs\":[5],\"question\":\"What activity takes place during the final lecture (Lecture 18) of the course?\",\"answer\":\"Lecture 18 is when students give Presentations of Design/Development Reports.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_calendar\",\"fact_refs\":[0],\"question\":\"How many lecture sessions does the course calendar list in total?\",\"answer\":\"The calendar lists 18 lecture sessions.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"statement\":\"The course consists of 18 lecture sessions over 5 weeks, 1 hour per session.\",\"source_span\":\"Lectures: 18 sessions / 5 weeks, 1 hour / session\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"statement\":\"There is no required textbook for this course; handouts and peer-reviewed articles are used instead.\",\"source_span\":\"There is no required textbook for this course. Handouts will be distributed in class to use as reference material.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"statement\":\"A recommended text is Fogler, H. Scott, Elements of Chemical Reaction Engineering, 3rd ed., ISBN 9780135317082.\",\"source_span\":\"Fogler, H. Scott.\\nElements of Chemical Reaction Engineering\\n. 3rd ed. Upper Saddle River, N.J.: Prentice Hall PTR, 1998. ISBN: 9780135317082.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"statement\":\"A recommended text is Blanch, Harvey W., and Douglas S. Clark, Biochemical Engineering, ISBN 9780824789497.\",\"source_span\":\"Blanch, Harvey W., and Douglas S. Clark.\\nBiochemical Engineering\\n. New York, N.Y.: M. Dekker, 1995. ISBN: 9780824789497.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"statement\":\"A recommended text is Bailey, James E., and David F. Ollis, Biochemical Engineering Fundamentals, 2nd ed., ISBN 9780070032125.\",\"source_span\":\"Bailey, James E., and David F. Ollis.\\nBiochemical Engineering Fundamentals\\n. 2nd ed. New York: McGraw-Hill, 1986. ISBN: 9780070032125.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"statement\":\"The course requires 3 homework assignments and one written report.\",\"source_span\":\"There will be 3 homework assignments and one written report based on examples of biocatalysis process design/development in the literature.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"statement\":\"Homework solutions and the final written report must be completed on an individual basis, even though discussing coursework with classmates is encouraged.\",\"source_span\":\"solutions to homework problems and the final written report are to be completed on an individual basis\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"statement\":\"Grading is Homework #1 15%, Homework #2 15%, Homework #3 15%, and Design Report 55%.\",\"source_span\":\"Homework #1\\n15%\\nHomework #2\\n15%\\nHomework #3\\n15%\\nDesign Report\\n55%\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"fact_refs\":[0],\"question\":\"How many lecture sessions does the biocatalysis course have and over how many weeks?\",\"answer\":\"The course has 18 lecture sessions over 5 weeks, meeting 1 hour per session.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"fact_refs\":[1],\"question\":\"Is a textbook required for Introduction to Biocatalysis?\",\"answer\":\"No, there is no required textbook; in-class handouts and peer-reviewed published articles are used as reference material instead.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"fact_refs\":[2],\"question\":\"What is the ISBN of Fogler's recommended text, Elements of Chemical Reaction Engineering?\",\"answer\":\"The ISBN for the 3rd edition is 9780135317082.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"fact_refs\":[6],\"question\":\"Should students complete their homework solutions and final report individually or as a group?\",\"answer\":\"Individually — while discussing course material with classmates is encouraged, homework solutions and the final written report must be completed on an individual basis.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"fact_refs\":[7],\"question\":\"How is the final grade for this biocatalysis course broken down by percentage?\",\"answer\":\"Homework #1, #2, and #3 are each worth 15%, and the Design Report is worth 55%.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-492-2-integrated-chemical-engineering_syllabus\",\"fact_refs\":[5],\"question\":\"How many homework assignments and written reports are required in this course?\",\"answer\":\"Three homework assignments and one written report.\"}",
+  "ttft_ms": 24505,
+  "ttft_stream_ms": 3377,
+  "time_to_request_ms": 46,
+  "type": "result",
+  "duration_ms": 61585,
+  "uuid": "45479c1b-ff6e-41b1-a38b-24dd614cb969"
+}

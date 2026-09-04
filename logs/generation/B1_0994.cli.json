@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 204443,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "c0029eb8-834d-493b-aaa3-4e70e2e7e096",
+  "total_cost_usd": 0.6951513,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 56100,
+    "cache_read_input_tokens": 93031,
+    "output_tokens": 22042,
+    "output_tokens_details": {
+      "thinking_tokens": 15926
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 56100,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3007,
+        "cache_read_input_tokens": 62784,
+        "cache_creation_input_tokens": 23563,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 23563
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 22042,
+      "cacheReadInputTokens": 93031,
+      "cacheCreationInputTokens": 56100,
+      "webSearchRequests": 0,
+      "costUSD": 0.6951513,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0686_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_P3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"compressed into a keyword/noun-phrase fragment that drops all interrogative structure — reads as restructuring, not surface noise\"}\n{\"id\":\"d1_s0686_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0686_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"substitutes a different entity (the exam review session) rather than narrowing the scope of the same First Exam entity\"}\n{\"id\":\"d1_s0686_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0686_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'held' vs 'returned' is not a negation/antonym pair — this is an aspect change (exam return vs exam date), not a polarity flip\"}\n{\"id\":\"d1_s0686_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0686_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'before' vs 'during' is not a clean antonym flip; answer is the same date merely reframed (session 7 = after session 6), matching the disallowed same-answer-content pattern\"}\n{\"id\":\"d1_s0686_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0686_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0686_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'earliest exam-bearing session' is definitionally the First Exam's own session — answer is identical to seed's, not necessarily different\"}\n{\"id\":\"d1_s0686_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0686_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"with a single fixed exam date, 'latest session by which it must be taken' resolves to the same session 6 as the seed's answer\"}\n{\"id\":\"d1_s0686_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks exam coverage/material — a plain aspect change (N1-style), not a presupposition-based shift; may also share the same answer content as the seed\"}\n{\"id\":\"d1_s0686_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks the make-up policy for a missed exam — a plain aspect change (N1-style), not a presupposition shift\"}\n{\"id\":\"d1_s0692_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0692_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0692_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0692_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0692_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0692_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0692_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0692_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0692_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"presupposes one instructor isn't a professor, contradicting the seed (both are Prof.) — a false-premise question with no valid answer, not a clean negation/antonym flip\"}\n{\"id\":\"d1_s0692_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes an instructor was removed, a fact not established by the seed — presupposition-based rather than a direct negation/antonym flip of 'who teaches'\"}\n{\"id\":\"d1_s0692_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes an instructor is not returning next term, an unestablished fact — presupposition-based rather than a clean polarity flip\"}\n{\"id\":\"d1_s0692_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes a 'primary contact' distinction between the two instructors not established by the seed — presupposition-based, not a clean polarity flip\"}\n{\"id\":\"d1_s0692_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0692_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0692_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0692_N5_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0692_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0692_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0699_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0699_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0699_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0699_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0699_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0699_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0699_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0699_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0699_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0699_P3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0699_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0699_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 166141,
+  "ttft_stream_ms": 1538,
+  "time_to_request_ms": 28,
+  "type": "result",
+  "duration_ms": 206938,
+  "uuid": "752cf46d-464c-483b-a5ce-d36ce0a43333"
+}

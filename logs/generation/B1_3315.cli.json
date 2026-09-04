@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 211086,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "1a98563b-6d48-4b1c-8894-eedf45ace237",
+  "total_cost_usd": 0.3674836,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 37791,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 21026,
+    "output_tokens_details": {
+      "thinking_tokens": 18130
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 37791,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 21026,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 37791,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 37791
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 21026,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 37791,
+      "webSearchRequests": 0,
+      "costUSD": 0.3674836,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d5_s0236_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0236_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0236_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0236_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0236_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0236_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0236_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"restructures into an exceptions/conditions question rather than flipping one word's polarity; different question type, closer to aspect change\"}\n{\"id\":\"d5_s0236_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0236_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0236_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0236_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"per-year vs whole-period is a temporal scope change, not a min/max/extreme quantifier flip\"}\n{\"id\":\"d5_s0236_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks which year is highest rather than flipping the extreme direction of an equivalent amount question; format/aspect change\"}\n{\"id\":\"d5_s0236_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"presupposes the 7.5% figure and asks for other entities sharing it; presupposition shift, not a quantifier extreme flip\"}\n{\"id\":\"d5_s0236_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"disclosure-timing is a different facet of the same topic (aspect change), not a presupposition built on the seed's specific claim; same pattern is labeled N1 elsewhere in this batch\"}\n{\"id\":\"d5_s0236_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0242_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0242_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0242_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0242_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0242_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0242_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0242_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0242_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0242_P3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0242_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0242_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0242_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0242_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0242_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0242_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0242_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0242_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0242_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0242_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0242_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"restructures into an exceptions/conditions question rather than flipping one word's polarity\"}\n{\"id\":\"d5_s0242_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0242_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about the exempted party (different subject/aspect), not a simple polarity flip of the same question\"}\n{\"id\":\"d5_s0242_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0242_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"shifts topic to an absolute tuition amount rather than flipping the extreme direction of the increase-rate question; aspect change\"}\n{\"id\":\"d5_s0242_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks which year has the highest increase rather than flipping the extreme direction; format/aspect change\"}\n{\"id\":\"d5_s0242_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"presupposes the 12.5% figure and asks for other entities under it; presupposition shift, not an extreme flip\"}\n{\"id\":\"d5_s0242_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about billing schedule (months collected), an unrelated aspect rather than a presupposition built on the seed's specific claim; fits N1 better\"}\n{\"id\":\"d5_s0242_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0249_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0249_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0249_P1_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0249_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0249_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0249_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0249_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0249_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0249_P3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0249_P3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0249_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0249_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0249_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0249_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0249_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0249_N2_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0249_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n```",
+  "ttft_ms": 210596,
+  "ttft_stream_ms": 10285,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 211291,
+  "uuid": "e1f7f924-cff8-461a-a114-6e5c249511d4",
+  "queued_turn_count": 0
+}

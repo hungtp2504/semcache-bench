@@ -1,0 +1,60 @@
+{"id": "d4_s0013_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "seed answer already states CLL 'usually gets worse slowly', so serving it verbatim correctly implies 'no' rather than misleading with wrong sign; same answer content already covers this", "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.8, "issue": "open/unbounded complement question (any blood cancer other than CLL qualifies) is not a clean single negation/antonym flip and has no canonical answer", "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "introduces 'rarest form/variant of CLL', a subtype dimension not present in seed's claim, rather than flipping an existing min/max on the same variable", "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0013_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.8, "issue": "open/unbounded complement question (any factor not in the list qualifies) is not a clean single negation flip and has no canonical answer", "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0014_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "CLL already predominantly affects middle-aged/older adults, so narrowing to 'older adults' likely leaves the discovery mechanism (routine blood test) unchanged", "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "other chronic leukemias (e.g. CML) are also commonly found incidentally via routine blood tests, so widening scope likely doesn't change the correct answer", "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "'which routine tests fail to detect CLL' is an open/unbounded question rather than a clean single negation/antonym flip, with no canonical answer", "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.75, "issue": "asks about 'earliest detectable stage', a staging concept not present in seed's claim about discovery route/frequency, rather than flipping an existing min/max on the same variable", "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}
+{"id": "d4_s0015_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0022", "ts": "2026-08-12T03:44:52Z"}

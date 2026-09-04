@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 108094,
+  "stop_reason": "end_turn",
+  "session_id": "04938426-a4e9-4bf9-a878-cc20093238c4",
+  "total_cost_usd": 0.596784,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 34177,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 9819,
+    "output_tokens_details": {
+      "thinking_tokens": 6805
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 34177,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 9819,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 34177,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 34177
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 9819,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 34177,
+      "webSearchRequests": 0,
+      "costUSD": 0.596784,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0475_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no quantifier/extreme in seed is flipped; introduces an ordinal and changes the facet (aspect change, not N5)\"}\n{\"id\":\"d3_s0475_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes only what the seed answer already establishes (18.3 surfaces deprecation warnings); no shifted/different presupposed fact\"}\n{\"id\":\"d3_s0475_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0546_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0546_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0546_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0546_P1_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0546_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0546_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0546_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0546_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0546_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0546_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0546_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0546_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0546_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0546_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0546_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrowing to react-server-dom-webpack almost certainly yields the same CVE/score, so the answer does not differ from the seed\"}\n{\"id\":\"d3_s0546_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0546_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0546_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0546_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0546_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0546_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"adds an 'unpatched' qualifier rather than flipping a negation/antonym present in the seed; this is a scope/presupposition change, not a polarity flip\"}\n{\"id\":\"d3_s0546_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0546_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0546_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0546_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0546_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"no earliest/latest extreme exists in the seed to flip; introduces an ordering question and drops the CVSS facet\"}\n{\"id\":\"d3_s0546_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes exactly the seed's answer (CVE-2025-55182 / CVSS 10.0) rather than a different fact; effectively an aspect change\"}\n{\"id\":\"d3_s0546_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0553_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0553_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0553_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0553_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0553_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0553_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0553_P2_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed question retained verbatim with only a conversational prefix added; no structural reframe\"}\n{\"id\":\"d3_s0553_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0553_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0553_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0553_P3_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0553_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0553_N1_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0553_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0553_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"restricting to unpatched React 18 apps does not change the answer — these CVEs still do not allow RCE, so the seed answer still fully answers it\"}\n{\"id\":\"d3_s0553_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0553_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0553_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0553_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0553_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"allow→prevent flip still yields a 'no' answer with the same content, so the seed answer does not carry the wrong sign\"}\n{\"id\":\"d3_s0553_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"seed answer explicitly states the original patch remains effective, so it still fully answers the flipped question\"}\n{\"id\":\"d3_s0553_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0553_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"no quantifier/extreme in the seed to flip; introduces a superlative and switches the facet to CVSS scores\"}\n{\"id\":\"d3_s0553_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0553_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed contains no earliest/latest extreme; replaces the RCE question with a disclosure-ordering question\"}\n{\"id\":\"d3_s0553_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"no extreme present in the seed to flip; changes the facet to severity ranking\"}\n{\"id\":\"d3_s0553_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0553_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes exactly the seed's answer (not RCE) rather than a different fact; effectively an aspect change\"}\n{\"id\":\"d3_s0560_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 83934,
+  "type": "result",
+  "duration_ms": 108306,
+  "uuid": "22c07572-db64-4aae-a98b-7f9d621ec65d",
+  "ttft_stream_ms": 2316,
+  "time_to_request_ms": 16,
+  "queued_turn_count": 0
+}

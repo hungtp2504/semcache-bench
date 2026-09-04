@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 163431,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "f6a768ca-2ffe-40e9-87e9-b7d93fcdca1d",
+  "total_cost_usd": 0.4097092,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 53266,
+    "cache_read_input_tokens": 99136,
+    "output_tokens": 17681,
+    "output_tokens_details": {
+      "thinking_tokens": 14590
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 53266,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3040,
+        "cache_read_input_tokens": 68858,
+        "cache_creation_input_tokens": 14686,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14686
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17681,
+      "cacheReadInputTokens": 99136,
+      "cacheCreationInputTokens": 53266,
+      "webSearchRequests": 0,
+      "costUSD": 0.4097092,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0169_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks about handling/sanctions for non-qualifying lecturers, a different facet (aspect change), not a negation flip of the seed's legal-basis question\"}\n{\"id\":\"d5_s0169_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the most recently issued document is very likely the already-cited Luật Nhà giáo 73/2025/QH15 itself, so seed's answer would still fully answer it\"}\n{\"id\":\"d5_s0169_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0169_N5_v3\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"asks about minimum lecturer qualification, an unrelated facet, not a quantifier/extreme flip on 'which legal document'\"}\n{\"id\":\"d5_s0169_N5_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"asks about max number of standards to meet, an unrelated count/facet, not an extreme flip of the document-identification question\"}\n{\"id\":\"d5_s0169_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0169_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0175_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0175_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0175_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0175_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0175_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0175_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0175_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0175_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0175_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0175_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0175_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0175_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0175_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0175_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0175_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0175_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0175_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0175_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0175_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0175_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0175_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces supervisor exclusion, a fact absent from the seed—not a negation flip of content the seed actually addresses\"}\n{\"id\":\"d5_s0175_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about a quorum-absence threshold, a related but distinct fact (presupposition shift), not a clean polarity flip of the membership-count rule\"}\n{\"id\":\"d5_s0175_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0175_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0175_N5_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"combines an extreme flip with narrowing to 'phản biện' reviewers, a subset not in the seed—more than one axis change at once\"}\n{\"id\":\"d5_s0175_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"keeps 'ít nhất' (minimum) framing like the seed and only narrows to external members—this is a scope change (N2), not a quantifier/extreme flip\"}\n{\"id\":\"d5_s0175_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0175_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0181_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0181_P1_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0181_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0181_P1_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0181_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0181_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0181_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0181_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0181_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0181_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0181_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0181_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0181_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0181_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0181_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0181_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0181_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0181_N3_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"changes the reference anchor to the selection date rather than swapping a sibling entity/id—not a valid entity substitution\"}\n{\"id\":\"d5_s0181_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"before/after-deadline framing mirrors the explicitly excluded pattern; seed's stated rule already implies the answer without new content\"}\n{\"id\":\"d5_s0181_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about exemption cases, a new fact not addressed by the seed, not a negation flip of the timing rule\"}\n{\"id\":\"d5_s0181_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about a withdrawal deadline, a different action from publication—not a polarity flip\"}\n{\"id\":\"d5_s0181_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about prohibited publication forms/channels, an unrelated facet, not a timing polarity flip\"}\n{\"id\":\"d5_s0181_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0181_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0181_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about minimum continuous display duration, a different measured quantity from the publish-by-X-days timing rule\"}",
+  "ttft_ms": 142838,
+  "ttft_stream_ms": 1914,
+  "time_to_request_ms": 17,
+  "type": "result",
+  "duration_ms": 164213,
+  "uuid": "98821a11-b1ec-447a-b11f-2257b24a946c",
+  "queued_turn_count": 0
+}

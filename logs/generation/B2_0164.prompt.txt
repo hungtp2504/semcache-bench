@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_0164
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d1_s0619_N5_v4", "axis": "N5", "seed_question": "What are the prerequisites for 10.571J Atmospheric Physics and Chemistry?", "answer": "Physical Chemistry (5.61), Advanced Calculus for Engineers (18.075), or permission of the instructor.", "variation": "What is the last prerequisite a student should complete before 10.571J?", "delta": "latest prerequisite in sequence, not the list"}
+{"id": "d1_s0619_N6_v1", "axis": "N6", "seed_question": "What are the prerequisites for 10.571J Atmospheric Physics and Chemistry?", "answer": "Physical Chemistry (5.61), Advanced Calculus for Engineers (18.075), or permission of the instructor.", "variation": "How do I get permission of the instructor to take 10.571J Atmospheric Physics and Chemistry?", "delta": "how to obtain permission, presupposed alternative"}
+{"id": "d1_s0619_N6_v2", "axis": "N6", "seed_question": "What are the prerequisites for 10.571J Atmospheric Physics and Chemistry?", "answer": "Physical Chemistry (5.61), Advanced Calculus for Engineers (18.075), or permission of the instructor.", "variation": "In which term is Physical Chemistry (5.61) offered so I can meet the 10.571J prerequisite?", "delta": "when the prerequisite is offered, presupposed fact"}
+{"id": "d1_s0625_P1_v1", "axis": "P1", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "Which semester and academic level was 10.520 offered in?", "delta": null}
+{"id": "d1_s0625_P1_v2", "axis": "P1", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "What term was 10.520 taught in, and at what level?", "delta": null}
+{"id": "d1_s0625_P1_v3", "axis": "P1", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "In what semester did 10.520 run, and at which academic level?", "delta": null}
+{"id": "d1_s0625_P1_v4", "axis": "P1", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "What was the offering term and academic level of 10.520?", "delta": null}
+{"id": "d1_s0625_P2_v1", "axis": "P2", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "Give the term and academic level for 10.520.", "delta": null}
+{"id": "d1_s0625_P2_v2", "axis": "P2", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "10.520 was taught in which term, at what level?", "delta": null}
+{"id": "d1_s0625_P2_v3", "axis": "P2", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "I would like to know when 10.520 was offered and what level it was taught at.", "delta": null}
+{"id": "d1_s0625_P2_v4", "axis": "P2", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "Can you look up the term and academic level of 10.520?", "delta": null}
+{"id": "d1_s0625_P3_v1", "axis": "P3", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "which term n what level was 10.520 taught?", "delta": null}
+{"id": "d1_s0625_P3_v2", "axis": "P3", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "10.520 — term + academic lvl??", "delta": null}
+{"id": "d1_s0625_P3_v3", "axis": "P3", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "in wich term and at wat academic level was 10.520 taugt", "delta": null}
+{"id": "d1_s0625_P3_v4", "axis": "P3", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "yo when was 10.520 offered n what lvl", "delta": null}
+{"id": "d1_s0625_N1_v1", "axis": "N1", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "How many assignments were there in 10.520?", "delta": "asks assignment count, not term and level"}
+{"id": "d1_s0625_N1_v2", "axis": "N1", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "What is the full title of 10.520?", "delta": "asks the course title instead of term and level"}
+{"id": "d1_s0625_N2_v1", "axis": "N2", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "In which term and at what academic level was the project component of 10.520 taught?", "delta": "narrows to the project component"}
+{"id": "d1_s0625_N2_v2", "axis": "N2", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "In which terms and at what academic levels were all the 10.52x courses taught?", "delta": "widens to the whole 10.52x series"}
+{"id": "d1_s0625_N3_v1", "axis": "N3", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "In which term and at what academic level was 10.521 taught?", "delta": "a different course number"}
+{"id": "d1_s0625_N3_v2", "axis": "N3", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "In which term and at what academic level was 10.510 taught?", "delta": "another course number"}
+{"id": "d1_s0625_N4_v1", "axis": "N4", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "Was 10.520 taught at the undergraduate level?", "delta": "undergraduate rather than graduate level"}
+{"id": "d1_s0625_N4_v2", "axis": "N4", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "In which term was 10.520 removed from the catalog?", "delta": "removal term, not the offering term"}
+{"id": "d1_s0625_N4_v3", "axis": "N4", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "Are undergraduates excluded from 10.520?", "delta": "asks undergraduate exclusion, not the level"}
+{"id": "d1_s0625_N4_v4", "axis": "N4", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "Is 10.520 unavailable for graduate credit?", "delta": "asks whether graduate credit is denied"}
+{"id": "d1_s0625_N5_v1", "axis": "N5", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "In which term was 10.520 first taught?", "delta": "first offering term, not the listed one"}
+{"id": "d1_s0625_N5_v2", "axis": "N5", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "In which term was 10.520 most recently taught?", "delta": "latest offering term instead"}
+{"id": "d1_s0625_N5_v3", "axis": "N5", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "What is the lowest academic level allowed to take 10.520?", "delta": "lowest eligible level, not the taught level"}
+{"id": "d1_s0625_N5_v4", "axis": "N5", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "Was Fall 2004 the last term 10.520 was taught?", "delta": "asks whether it was the final offering"}
+{"id": "d1_s0625_N6_v1", "axis": "N6", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "Why was 10.520 taught at the graduate level in Fall 2004?", "delta": "reason for the graduate designation, presupposed fact"}
+{"id": "d1_s0625_N6_v2", "axis": "N6", "seed_question": "In which term and at what academic level was 10.520 taught?", "answer": "It was taught in Fall 2004 at the graduate level.", "variation": "How many students took 10.520 at the graduate level in Fall 2004?", "delta": "enrollment count, presupposed offering"}
+{"id": "d1_s0631_P1_v1", "axis": "P1", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "How much of the final grade in 10.520 does the Course Paper account for?", "delta": null}
+{"id": "d1_s0631_P1_v2", "axis": "P1", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What share of the final grade in 10.520 is the Course Paper worth?", "delta": null}
+{"id": "d1_s0631_P1_v3", "axis": "P1", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What weight does the Course Paper carry toward the final grade in 10.520?", "delta": null}
+{"id": "d1_s0631_P1_v4", "axis": "P1", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "How many percent of the 10.520 final grade comes from the Course Paper?", "delta": null}
+{"id": "d1_s0631_P2_v1", "axis": "P2", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "In 10.520, the Course Paper counts for what percentage of the final grade?", "delta": null}
+{"id": "d1_s0631_P2_v2", "axis": "P2", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "Tell me the Course Paper's percentage of the final grade in 10.520.", "delta": null}
+{"id": "d1_s0631_P2_v3", "axis": "P2", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "For the final grade in 10.520, how heavily is the Course Paper weighted?", "delta": null}
+{"id": "d1_s0631_P2_v4", "axis": "P2", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "Could you tell me what portion of the 10.520 final grade the Course Paper contributes?", "delta": null}
+{"id": "d1_s0631_P3_v1", "axis": "P3", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "what % of the final grade in 10.520 is the course paper?", "delta": null}
+{"id": "d1_s0631_P3_v2", "axis": "P3", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "10.520 course paper — how much of final grade??", "delta": null}
+{"id": "d1_s0631_P3_v3", "axis": "P3", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "wat percentag of the finl grade in 10.520 comes frm the Course Paper", "delta": null}
+{"id": "d1_s0631_P3_v4", "axis": "P3", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "yo how much is the course paper worth in 10.520 grade wise", "delta": null}
+{"id": "d1_s0631_N1_v1", "axis": "N1", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "When is the Course Paper due in 10.520?", "delta": "asks the paper deadline, not its grade weight"}
+{"id": "d1_s0631_N1_v2", "axis": "N1", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What topic should the Course Paper in 10.520 be written on?", "delta": "asks paper topic instead of grade weight"}
+{"id": "d1_s0631_N2_v1", "axis": "N2", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What percentage of the final grade in 10.520 comes from the Course Paper's oral presentation?", "delta": "narrows to the presentation part of the paper"}
+{"id": "d1_s0631_N2_v2", "axis": "N2", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What percentage of the final grade in 10.520 comes from written work overall?", "delta": "widens to all written work"}
+{"id": "d1_s0631_N3_v1", "axis": "N3", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What percentage of the final grade in 10.520 comes from the Problem Sets?", "delta": "a different graded component"}
+{"id": "d1_s0631_N3_v2", "axis": "N3", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What percentage of the final grade in 10.521 comes from the Course Paper?", "delta": "a different course"}
+{"id": "d1_s0631_N4_v1", "axis": "N4", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What percentage of the final grade in 10.520 does not come from the Course Paper?", "delta": "the complementary share, not the paper's share"}
+{"id": "d1_s0631_N4_v2", "axis": "N4", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "Which component is excluded from the final grade in 10.520?", "delta": "asks the ungraded component instead"}
+{"id": "d1_s0631_N4_v3", "axis": "N4", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "Is the Course Paper in 10.520 optional rather than required?", "delta": "asks whether the paper is optional"}
+{"id": "d1_s0631_N4_v4", "axis": "N4", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "Is the Course Paper in 10.520 graded pass/fail instead of by percentage?", "delta": "asks whether it is pass/fail, not its percentage"}
+{"id": "d1_s0631_N5_v1", "axis": "N5", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "Which component contributes the largest percentage to the final grade in 10.520?", "delta": "largest-weighted component, not the paper's share"}
+{"id": "d1_s0631_N5_v2", "axis": "N5", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "Which component contributes the smallest percentage to the final grade in 10.520?", "delta": "smallest-weighted component instead"}
+{"id": "d1_s0631_N5_v3", "axis": "N5", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What percentage of the 10.520 final grade comes from the highest-weighted item other than the Course Paper?", "delta": "highest weight excluding the Course Paper"}
+{"id": "d1_s0631_N5_v4", "axis": "N5", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "Is the Course Paper the most heavily weighted item in the 10.520 final grade?", "delta": "asks whether it carries the maximum weight"}
+{"id": "d1_s0631_N6_v1", "axis": "N6", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "How long should the 10.520 Course Paper be to earn its 35% of the grade?", "delta": "required paper length, presupposed grade weight"}
+{"id": "d1_s0631_N6_v2", "axis": "N6", "seed_question": "What percentage of the final grade in 10.520 comes from the Course Paper?", "answer": "The Course Paper counts for 35% of the final grade.", "variation": "What happens to the final grade in 10.520 if the Course Paper is not submitted?", "delta": "consequence of non-submission, presupposed fact"}
+{"id": "d1_s0637_P1_v1", "axis": "P1", "seed_question": "What prerequisites are assumed for 10.569 Synthesis of Polymers?", "answer": "The course assumes knowledge of organic chemistry (5.12 and 5.13) and thermodynamics and kinetics (5.60).", "variation": "What background knowledge is assumed for 10.569 Synthesis of Polymers?", "delta": null}

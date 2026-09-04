@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 157007,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "cd9291d4-39ce-4b1f-9a8e-549ba756903f",
+  "total_cost_usd": 0.6103779,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 52594,
+    "cache_read_input_tokens": 93923,
+    "output_tokens": 17775,
+    "output_tokens_details": {
+      "thinking_tokens": 11781
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 52594,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2941,
+        "cache_read_input_tokens": 63676,
+        "cache_creation_input_tokens": 19165,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19165
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17775,
+      "cacheReadInputTokens": 93923,
+      "cacheCreationInputTokens": 52594,
+      "webSearchRequests": 0,
+      "costUSD": 0.6103779,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0549_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks about sessions outside the stated period, not a negation/antonym flip of the seed's count/period/duration question; closer to presupposition shift or a degenerate complement-set question\"}\n{\"id\":\"d1_s0549_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about excluded sessions, not a clean negation/antonym flip; introduces a new 'exclusion' concept not present in seed\"}\n{\"id\":\"d1_s0549_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0549_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0549_N5_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks about a minimum attendance requirement, an unrelated policy concept not present in seed; not a min/max flip of the same fact (total session count), fits N1 better\"}\n{\"id\":\"d1_s0549_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0549_N6_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0549_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0555_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0555_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0555_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0555_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0555_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0555_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0555_P2_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0555_P2_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0555_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0555_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0555_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0555_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0555_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0555_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0555_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0555_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0555_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0555_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0555_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"temporal 'term before Fall 2006' framing is a directional shift, not a negation/antonym flip; mirrors the disallowed before/after pattern noted in the N4 spec\"}\n{\"id\":\"d1_s0555_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0555_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'which course was not taught by Johnston' is degenerate/trivial (virtually any other MIT course satisfies it), not a meaningful polarity flip\"}\n{\"id\":\"d1_s0555_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"seed's answer already confirms the course was taught in Fall 2006, which fully answers whether it was discontinued; same answer content as seed\"}\n{\"id\":\"d1_s0555_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0555_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0555_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks a raw count of offerings, not a min/max/earliest/latest extreme; fits N1 aspect change better\"}\n{\"id\":\"d1_s0555_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'other than Fall 2006' is an exclusion/negation of the specific term, not a min/max or earliest/latest extreme; fits N4 rather than N5\"}\n{\"id\":\"d1_s0555_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0555_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0562_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0562_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0562_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0562_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0562_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0562_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0562_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0562_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0562_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0562_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'which course does McRae not teach' is degenerate/trivial (virtually any other course qualifies), not a meaningful polarity flip\"}\n{\"id\":\"d1_s0562_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about a teaching-assistant role rather than negating the instructor fact; this is an aspect change, not a polarity flip\"}\n{\"id\":\"d1_s0562_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 118141,
+  "ttft_stream_ms": 2692,
+  "time_to_request_ms": 23,
+  "type": "result",
+  "duration_ms": 160922,
+  "uuid": "bc1f35bc-12b8-4cdd-92b3-220ce16ec2d7"
+}

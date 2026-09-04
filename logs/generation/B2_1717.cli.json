@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 95059,
+  "stop_reason": "end_turn",
+  "session_id": "1653122f-30b7-46ba-8840-b4ba0389e2e7",
+  "total_cost_usd": 0.567049,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 34496,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 8502,
+    "output_tokens_details": {
+      "thinking_tokens": 5708
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 34496,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8502,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 34496,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 34496
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 8502,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 34496,
+      "webSearchRequests": 0,
+      "costUSD": 0.567049,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0200_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0200_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0200_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0200_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0200_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0200_N4_v1\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"no polarity/antonym flip; asks grounds for annulment = aspect change (N1)\"}\n{\"id\":\"d5_s0200_N4_v2\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"no negation/antonym flip; extension conditions is an aspect change\"}\n{\"id\":\"d5_s0200_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"negation attached to a wholly different facet (membership), not a flip of the seed question\"}\n{\"id\":\"d5_s0200_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"negation added on top of a changed facet (forbidden tasks), not a single polarity flip of the seed\"}\n{\"id\":\"d5_s0200_N5_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0200_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0200_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"extreme not flipped (dài nhất = tối đa); change is topic shift to extension, not quantifier flip\"}\n{\"id\":\"d5_s0200_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"extreme stays maximal (nhiều nhất); measured dimension changed from duration to meeting count\"}\n{\"id\":\"d5_s0200_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0200_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no shifted presupposition; simply a different facet (recipients of the decision) = N1\"}\n{\"id\":\"d5_s0206_P1_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0206_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0206_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0206_P1_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0206_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0206_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0206_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0206_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0206_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0206_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"no polarity flip; swaps the target document (repeal decision) = entity/aspect change\"}\n{\"id\":\"d5_s0206_N4_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0206_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0206_N4_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"no negation/antonym flip; asks about the replacing document instead\"}\n{\"id\":\"d5_s0206_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"inverts question type (asks which circular, not who) rather than flipping one quantifier; seed had no quantifier\"}\n{\"id\":\"d5_s0206_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"superlative over the same single signer; seed's answer (Lê Quân, Thứ trưởng) would still answer it\"}\n{\"id\":\"d5_s0206_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0206_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0206_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0206_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0212_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0212_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0212_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0212_P1_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0212_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0212_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0212_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0212_P2_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0212_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0212_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0212_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0212_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0212_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0212_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0212_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0212_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0212_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}",
+  "ttft_ms": 73022,
+  "type": "result",
+  "duration_ms": 95263,
+  "uuid": "cb3cafd7-d4e1-4256-b3d8-2f3a27dadb46",
+  "ttft_stream_ms": 3258,
+  "time_to_request_ms": 18,
+  "queued_turn_count": 0
+}
