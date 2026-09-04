@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 204704,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "f3a9b45c-02f6-4fc9-b34a-c3b48f464079",
+  "total_cost_usd": 0.4327404,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 51646,
+    "cache_read_input_tokens": 93692,
+    "output_tokens": 20741,
+    "output_tokens_details": {
+      "thinking_tokens": 18430
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 51646,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2283,
+        "cache_read_input_tokens": 63414,
+        "cache_creation_input_tokens": 18510,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 18510
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 20741,
+      "cacheReadInputTokens": 93692,
+      "cacheCreationInputTokens": 51646,
+      "webSearchRequests": 0,
+      "costUSD": 0.4327404,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0247_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0247_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"appendix is typically authenticated together with the main text (same date/signer), so the answer likely wouldn't differ from seed's\"}\n{\"id\":\"d5_s0247_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"more than one change: drops the specific document id, pluralizes to 'các văn bản', and adds a year scope — not a single qualifier add/remove\"}\n{\"id\":\"d5_s0247_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0247_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0247_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"expiry date is a different lifecycle fact (aspect change), not a negation/antonym of 'được xác thực'\"}\n{\"id\":\"d5_s0247_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"repeal date/signer is a different lifecycle fact, not a negation/antonym of the authentication predicate\"}\n{\"id\":\"d5_s0247_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"suspension date/signer is a different lifecycle fact, not a negation/antonym of the authentication predicate\"}\n{\"id\":\"d5_s0247_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts entirely to an applicability/excluded-subjects facet rather than negating the authentication predicate\"}\n{\"id\":\"d5_s0247_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces unestablished 'học phí' topic scope and drops the specific doc id — more than one change beyond the extreme flip\"}\n{\"id\":\"d5_s0247_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0247_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0247_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces unestablished 'học phí' topic scope alongside the extreme flip — more than one change\"}\n{\"id\":\"d5_s0247_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0247_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0308_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0308_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0308_P1_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"active→passive restructuring is a syntactic change, not pure wording/synonym substitution; fits P2 better\"}\n{\"id\":\"d5_s0308_P1_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0308_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0308_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0308_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0308_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0308_P3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0308_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0308_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0308_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0308_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0308_N1_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0308_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0308_N2_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces an unrelated new subject (joint training programs) rather than adding/removing one scope qualifier on the original subjects — entity substitution, not scope change\"}\n{\"id\":\"d5_s0308_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0308_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0308_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0308_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps subject/object roles (regulation not applying to institutions vs institution applying regulations) rather than simply negating the original predicate\"}\n{\"id\":\"d5_s0308_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0308_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"negates membership status (entity substitution to non-member schools) rather than negating the 'áp dụng' predicate\"}\n{\"id\":\"d5_s0308_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0308_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0308_N5_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0308_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0308_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0308_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}",
+  "ttft_ms": 189166,
+  "ttft_stream_ms": 1658,
+  "time_to_request_ms": 23,
+  "type": "result",
+  "duration_ms": 205124,
+  "uuid": "f5aa09b8-5067-4f8c-8631-ccc6de0e2c90",
+  "queued_turn_count": 0
+}

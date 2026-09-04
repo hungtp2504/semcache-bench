@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 108064,
+  "stop_reason": "end_turn",
+  "session_id": "a3102321-2c95-4b4b-a270-625f6b0a6c70",
+  "total_cost_usd": 0.542097,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 32728,
+    "cache_read_input_tokens": 70844,
+    "output_tokens": 7175,
+    "output_tokens_details": {
+      "thinking_tokens": 4464
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32728,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 7170,
+        "cache_read_input_tokens": 51786,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 4,
+      "outputTokens": 7175,
+      "cacheReadInputTokens": 70844,
+      "cacheCreationInputTokens": 32728,
+      "webSearchRequests": 0,
+      "costUSD": 0.542097,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d4_s0064_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"exclusion of a listed item, not a quantifier/extreme flip; and the excluded factor is synonymous with the seed answer's remaining part\"}\n{\"id\":\"d4_s0064_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0064_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0070_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0070_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0070_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0070_P1_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0070_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0070_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0070_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0070_P2_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"content altered, not just structure: asks the change's name and presupposes its diagnostic use, making the two clauses circular\"}\n{\"id\":\"d4_s0070_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0070_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0070_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0070_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0070_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0070_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0070_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"round cell variant carries the same translocation, so the seed answer still fully answers it\"}\n{\"id\":\"d4_s0070_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0070_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0070_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0070_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0070_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0070_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0070_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0070_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"excludes a listed answer item rather than flipping a quantifier or extreme\"}\n{\"id\":\"d4_s0070_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0070_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0070_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0070_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0070_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0076_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0076_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0076_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0076_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0076_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0076_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0076_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0076_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0076_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0076_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0076_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0076_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0076_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0076_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0076_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0076_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the same four-tier scheme (benign / two intermediate / malignant) covers soft tissue tumors generally, so the seed answer still answers it\"}\n{\"id\":\"d4_s0076_N3_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adult vascular tumors use the same four categories, so the answer is not necessarily different\"}\n{\"id\":\"d4_s0076_N3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0076_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0076_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0076_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0076_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0076_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0076_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0076_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"removes one listed item rather than flipping a quantifier/extreme; seed answer still supplies the remaining three\"}\n{\"id\":\"d4_s0076_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0076_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0076_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0082_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 87547,
+  "type": "result",
+  "duration_ms": 108293,
+  "uuid": "d8f02394-092d-4d89-b070-175dbbf41053",
+  "ttft_stream_ms": 2472,
+  "time_to_request_ms": 39,
+  "queued_turn_count": 0
+}

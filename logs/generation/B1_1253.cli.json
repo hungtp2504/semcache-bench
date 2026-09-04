@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 134581,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "934f0c87-e189-47cc-ac88-c826b1ffcd8a",
+  "total_cost_usd": 0.3467606,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 44818,
+    "cache_read_input_tokens": 93253,
+    "output_tokens": 14883,
+    "output_tokens_details": {
+      "thinking_tokens": 11969
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 44818,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2818,
+        "cache_read_input_tokens": 62975,
+        "cache_creation_input_tokens": 12121,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12121
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 14883,
+      "cacheReadInputTokens": 93253,
+      "cacheCreationInputTokens": 44818,
+      "webSearchRequests": 0,
+      "costUSD": 0.3467606,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0216_P3_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0216_P3_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0216_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0216_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0216_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0216_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0216_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0216_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0216_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0216_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0216_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0216_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0216_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0216_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0216_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0216_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0216_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0216_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0216_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0222_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0222_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0222_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0222_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0222_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0222_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0222_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"narrows to 'Weibo alone' but the paper states one unified 140-char limit for both platforms, so the correct answer likely doesn't differ from the seed's, violating N2's answer-must-differ requirement\"}\n{\"id\":\"d2_s0222_N2_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps the entity 'message'→'hashtag' rather than adding a scope qualifier to the same entity; this is entity/aspect substitution, not scope narrowing\"}\n{\"id\":\"d2_s0222_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0222_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"complement of the same single cap fact (>140 vs ≤140), same underlying answer content just reframed — matches the disallowed 'deadline direction' exception, not a genuine polarity flip\"}\n{\"id\":\"d2_s0222_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0222_N4_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0222_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts to an unrelated fact (short-message discarding) rather than negating/antonym-flipping the 'maximum length allowed' claim; no direct negation present, closer to N1 aspect change\"}\n{\"id\":\"d2_s0222_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0222_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"'average' is not a min/max/extreme flip as required by N5; it's a distinct statistic, closer to N1 aspect change\"}\n{\"id\":\"d2_s0222_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts from the platform's allowed maximum (policy) to the shortest observed message in data (empirical statistic) — conflates an extreme flip with an aspect change, not a clean single quantifier flip\"}\n{\"id\":\"d2_s0222_N5_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0222_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0228_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0228_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0228_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0228_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0228_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0228_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0228_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 115849,
+  "ttft_stream_ms": 1565,
+  "time_to_request_ms": 24,
+  "type": "result",
+  "duration_ms": 135367,
+  "uuid": "90864956-fd4e-4dd6-a349-1441de90004d",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,60 @@
+{"id": "d2_s0561_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.75, "issue": "changes the metric from percentage to absolute count rather than flipping a quantifier; seed already says 'at least', so no min/max flip occurred", "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0561_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0561_N6_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "asks about the statistic's rhetorical role; closer to an aspect change (N1) than a presupposition of a different fact", "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "asks about PLDA training procedure — a different facet (N1), not a single scope qualifier added to the seed question", "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N4_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.7, "issue": "swaps fixed→open training condition: an entity/scope substitution, not a negation or antonym polarity flip", "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.72, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.72, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "asks a count of approaches rather than flipping a quantifier on the seed's target; seed has no min/max to invert", "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0567_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.78, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N4_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.65, "issue": "swaps user searches for automated non-user queries — an entity/scope substitution (N3/N2), not a negation or antonym flip", "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N4_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.7, "issue": "reverses the direction of the relation rather than flipping a negation/antonym; reads as an aspect change", "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N4_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "changes the measured event (searches returning no related articles) rather than flipping polarity on the seed's click predicate", "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.78, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N5_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0573_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}
+{"id": "d2_s0579_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.92, "issue": null, "batch_id": "B2_0978", "ts": "2026-08-29T03:57:52Z"}

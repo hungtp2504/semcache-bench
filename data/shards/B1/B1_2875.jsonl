@@ -1,0 +1,60 @@
+{"id": "d4_s0513_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "widens scope from 'skin cancer' to 'skin diseases' (a category not used in the seed's answer) while also flipping polarity — two simultaneous changes, not a clean single negation flip", "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0513_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0513_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0513_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0513_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "introduces a wholly new aspect (skin layer affected) never mentioned in seed Q/A rather than flipping an existing extreme; resembles N1 more than N5", "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0513_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0513_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.93, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.93, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.93, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "less-than/more-than threshold direction is a quantifier/extreme change (N5 territory), not a negation/antonym polarity flip", "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "'can it stay non-cancerous' is largely already answered by the seed's own answer (not cancer, can become cancer) — serving the seed answer would not clearly mislead", "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "presupposes an incoherent condition — a plasma cell disorder defined by normal (non-abnormal) plasma cells — not a well-formed flip", "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0520_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.93, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.78, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "'outside the nervous system' is an ambiguous scope shift, not a clean negation/antonym flip; the seed's answer never frames its sites as 'nervous system' locations", "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "widens scope from 'neuroblastoma' to 'childhood cancers' (a category not used in the seed's answer) while also flipping polarity — two simultaneous changes", "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}
+{"id": "d4_s0527_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_2875", "ts": "2026-08-27T15:24:39Z"}

@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 124200,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "3567fbbb-a716-4bbc-a121-5461e66d4eaf",
+  "total_cost_usd": 0.3282874,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 43497,
+    "cache_read_input_tokens": 91107,
+    "output_tokens": 13607,
+    "output_tokens_details": {
+      "thinking_tokens": 10959
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43497,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2591,
+        "cache_read_input_tokens": 60829,
+        "cache_creation_input_tokens": 12946,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12946
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 13607,
+      "cacheReadInputTokens": 91107,
+      "cacheCreationInputTokens": 43497,
+      "webSearchRequests": 0,
+      "costUSD": 0.3282874,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0810_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0810_P1_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'re-renders' technically excludes the initial-render case, so seed's two-part answer (which includes initial render) doesn't cleanly answer it\"}\n{\"id\":\"d3_s0810_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0810_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0810_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0810_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0810_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"any component (child or not) renders under the same universal rule, so the correct answer doesn't actually differ from the seed's\"}\n{\"id\":\"d3_s0810_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0810_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0810_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0810_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0810_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0810_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0810_N5_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0810_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0810_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0816_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0816_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0816_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0816_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0816_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0816_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0816_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0816_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0816_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0816_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0816_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0816_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0816_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0816_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0816_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0816_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts from 'what marks X' to 'which file is X', a bigger structural change than a single extreme/quantifier flip on the seed's question\"}\n{\"id\":\"d3_s0816_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0816_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0816_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0823_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0823_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0823_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0823_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0823_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 106922,
+  "ttft_stream_ms": 1677,
+  "time_to_request_ms": 20,
+  "type": "result",
+  "duration_ms": 124909,
+  "uuid": "7b16245f-0111-443f-a5e0-d3f612f0af54",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 157184,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "ffd3ba8d-8f70-4160-b655-c29d78a60a2f",
+  "total_cost_usd": 0.38993239999999996,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 49853,
+    "cache_read_input_tokens": 95812,
+    "output_tokens": 17135,
+    "output_tokens_details": {
+      "thinking_tokens": 14471
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 49853,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2593,
+        "cache_read_input_tokens": 65534,
+        "cache_creation_input_tokens": 14597,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14597
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17135,
+      "cacheReadInputTokens": 95812,
+      "cacheCreationInputTokens": 49853,
+      "webSearchRequests": 0,
+      "costUSD": 0.38993239999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0042_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0042_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0042_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0042_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0042_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0042_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0042_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0042_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0042_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0042_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0042_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0042_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0042_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0042_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0042_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0042_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0048_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0048_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0048_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0048_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0048_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0048_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0048_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps the target document entirely (original decree vs. its amending instrument) rather than adding/removing a scope qualifier on the same entity; closer to entity substitution than scope change\"}\n{\"id\":\"d5_s0048_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0048_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0048_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0048_N4_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0048_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0048_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks who the decree was submitted to before signing, a wholly different fact, not a negation/antonym flip of who signed\"}\n{\"id\":\"d5_s0048_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0048_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks the count of signers (identity->quantity aspect change), not a min/max/earliest/latest extreme flip\"}\n{\"id\":\"d5_s0048_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0048_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0048_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0048_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0054_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0054_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0054_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0054_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0054_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 140654,
+  "ttft_stream_ms": 1322,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 157967,
+  "uuid": "b0803d1e-a0ac-4d72-9fd5-20ebbf49f066",
+  "queued_turn_count": 0
+}

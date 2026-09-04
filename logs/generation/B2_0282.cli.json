@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 67585,
+  "stop_reason": "end_turn",
+  "session_id": "5ba94705-46b8-45f1-92c9-876c26fd4fba",
+  "total_cost_usd": 0.508034,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 34012,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 6335,
+    "output_tokens_details": {
+      "thinking_tokens": 3720
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 34012,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6335,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 34012,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 34012
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 6335,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 34012,
+      "webSearchRequests": 0,
+      "costUSD": 0.508034,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0578_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0578_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0578_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0578_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0578_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"not a quantifier/extreme flip; presupposes extra shortcomings beyond the two (N6/N2-like)\"}\n{\"id\":\"d2_s0578_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0578_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0584_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0584_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0584_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0584_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0584_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0584_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0584_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0584_N4_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0584_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0584_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"superlative/extreme selection (worst class), not a negation or antonym flip — belongs to N5\"}\n{\"id\":\"d2_s0584_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0584_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0584_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0584_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0584_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0584_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0584_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0590_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0590_P1_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0590_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0590_P1_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0590_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0590_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0590_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0590_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0590_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0590_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0590_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0590_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0590_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0590_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0590_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0590_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0590_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0590_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0590_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0590_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"train-vs-evaluate is not a polarity flip and the same 8 datasets likely answer it, so the seed answer still holds\"}\n{\"id\":\"d2_s0590_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"adds an ablation condition rather than flipping polarity; dataset count/tasks likely unchanged so seed answer still applies\"}\n{\"id\":\"d2_s0590_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0590_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0590_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0590_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}",
+  "ttft_ms": 47692,
+  "type": "result",
+  "duration_ms": 67781,
+  "uuid": "d60a1581-d68b-49f1-a59c-80103023a553",
+  "ttft_stream_ms": 1839,
+  "time_to_request_ms": 16,
+  "queued_turn_count": 0
+}

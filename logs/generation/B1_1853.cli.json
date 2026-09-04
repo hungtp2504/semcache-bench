@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 113486,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "95b1aaf3-31a8-4d17-9a09-145abf734524",
+  "total_cost_usd": 0.3197348,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 43330,
+    "cache_read_input_tokens": 93884,
+    "output_tokens": 12763,
+    "output_tokens_details": {
+      "thinking_tokens": 9896
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43330,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2810,
+        "cache_read_input_tokens": 63606,
+        "cache_creation_input_tokens": 10002,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10002
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 12763,
+      "cacheReadInputTokens": 93884,
+      "cacheCreationInputTokens": 43330,
+      "webSearchRequests": 0,
+      "costUSD": 0.3197348,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0106_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0106_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0106_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0106_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0106_N3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0106_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0106_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces new predicate (outperforming baseline) absent from seed; not a clean negation/antonym flip of the evaluated-tasks question\"}\n{\"id\":\"d2_s0106_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"presupposes an authorial rejection process not established by seed; not a simple negation/antonym flip\"}\n{\"id\":\"d2_s0106_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0106_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0106_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0106_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'primary' task is not a min/max/earliest/latest/at-least/at-most extreme; presupposes an unranked list has a designated primary member\"}\n{\"id\":\"d2_s0106_N5_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0106_N6_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0106_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0112_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0112_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0112_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0112_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0112_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0112_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0112_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0112_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0112_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0112_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0112_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0112_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0112_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0112_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0112_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0112_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0112_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0112_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0112_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0112_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'optional vs required' introduces a new predicate not present in the seed (module optionality); not a clean negation/antonym flip\"}\n{\"id\":\"d2_s0112_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces new predicate (receiving question representation) absent from seed's content; not a flip of the seed's own answer\"}\n{\"id\":\"d2_s0112_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an external comparison entity ('standard memory networks') not present in seed; more than a single negation flip\"}\n{\"id\":\"d2_s0112_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0112_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0112_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0112_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'only one module that is not recurrent' combines negation with a uniqueness presupposition; doesn't match N5's min/max/earliest/latest/at-least/at-most definition\"}\n{\"id\":\"d2_s0112_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0112_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"low lexical overlap with seed (accuracy/bAbI vs modules/architecture); reads as an unrelated aspect change rather than a presupposition tied to the seed's content\"}\n{\"id\":\"d2_s0119_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0119_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0119_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0119_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0119_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0119_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0119_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0119_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0119_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0119_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0119_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0119_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0119_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0119_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0119_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0119_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0119_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}",
+  "ttft_ms": 95710,
+  "ttft_stream_ms": 1284,
+  "time_to_request_ms": 24,
+  "type": "result",
+  "duration_ms": 114266,
+  "uuid": "22d7d864-8cf5-484f-b28d-b7bd42f158a3",
+  "queued_turn_count": 0
+}

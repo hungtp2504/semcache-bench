@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 112606,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "cf8cd1a2-2ae2-439b-93cc-cecd3e42406f",
+  "total_cost_usd": 0.327488,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 45090,
+    "cache_read_input_tokens": 94200,
+    "output_tokens": 12828,
+    "output_tokens_details": {
+      "thinking_tokens": 9938
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 45090,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2802,
+        "cache_read_input_tokens": 63922,
+        "cache_creation_input_tokens": 11446,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11446
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 12828,
+      "cacheReadInputTokens": 94200,
+      "cacheCreationInputTokens": 45090,
+      "webSearchRequests": 0,
+      "costUSD": 0.327488,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0421_P2_v2\",\"axis_ok\":true,\"conf\":0.96,\"issue\":null}\n{\"id\":\"d2_s0421_P2_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0421_P2_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0421_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0421_P3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0421_P3_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0421_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0421_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0421_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0421_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0421_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0421_N3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0421_N3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0421_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0421_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0421_N4_v3\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d2_s0421_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0421_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0421_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0421_N5_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0421_N5_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0421_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks for justification of a fact that matches the seed's answer (dropout=0.8) rather than presupposing a different/false fact — this is an aspect change (why vs what), not a presupposition shift\"}\n{\"id\":\"d2_s0421_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks a new facet (count of auxiliary tasks) without presupposing any different/false fact — aspect change mislabeled as presupposition shift\"}\n{\"id\":\"d2_s0427_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0427_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0427_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0427_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0427_P2_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0427_P2_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0427_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0427_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0427_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0427_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0427_P3_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0427_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0427_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0427_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0427_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0427_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0427_N3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0427_N3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0427_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0427_N4_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d2_s0427_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0427_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0427_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0427_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"pivots entirely off the methodology topic to ask which political group has highest cohesion — not a minimal extreme-quantifier flip on the seed's content, it's a wholesale aspect/topic change\"}\n{\"id\":\"d2_s0427_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"pivots entirely off the methodology topic to ask which political group has lowest cohesion — not a minimal extreme-quantifier flip on the seed's content, it's a wholesale aspect/topic change\"}\n{\"id\":\"d2_s0427_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0427_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks for justification of a fact matching the seed's answer (Krippendorff's Alpha used) rather than presupposing a different/false fact — aspect change, not presupposition shift\"}\n{\"id\":\"d2_s0427_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks a new facet (ERGM's variables) without presupposing any different/false fact — aspect change mislabeled as presupposition shift\"}\n{\"id\":\"d2_s0433_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0433_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0433_P1_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0433_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0433_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0433_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0433_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0433_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0433_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}",
+  "ttft_ms": 93052,
+  "ttft_stream_ms": 1260,
+  "time_to_request_ms": 35,
+  "type": "result",
+  "duration_ms": 113440,
+  "uuid": "32a1b23e-9b82-4239-a5ae-39209d47c13c",
+  "queued_turn_count": 0
+}

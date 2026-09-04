@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 128789,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "fce90552-18f2-48e1-93c4-bdd501b3271d",
+  "total_cost_usd": 0.364906,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 49929,
+    "cache_read_input_tokens": 86360,
+    "output_tokens": 14791,
+    "output_tokens_details": {
+      "thinking_tokens": 11866
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 49929,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2835,
+        "cache_read_input_tokens": 61458,
+        "cache_creation_input_tokens": 13373,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13373
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 14791,
+      "cacheReadInputTokens": 86360,
+      "cacheCreationInputTokens": 49929,
+      "webSearchRequests": 0,
+      "costUSD": 0.364906,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d4_s0650_N3_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0650_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts to benign-vs-malignant classification with multiple simultaneous changes (drops 'most common', 'cancer'->'growths'), not a clean single negation flip; reads as an aspect change\"}\n{\"id\":\"d4_s0650_N4_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0650_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about metastatic origin (primary vs secondary site), a different facet rather than a negation/antonym flip of the seed's claim\"}\n{\"id\":\"d4_s0650_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'common'->'rarely arises' is an extreme/quantifier flip, matching N5 rather than a polarity negation\"}\n{\"id\":\"d4_s0650_N5_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0650_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0650_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"changes facet from cancer type to anatomic site while the quantifier 'most' is unchanged; not a quantifier/extreme flip, fits N1 instead\"}\n{\"id\":\"d4_s0650_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines an aspect change (site vs type) with an extreme flip (fewest vs most) — more than one change\"}\n{\"id\":\"d4_s0650_N6_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0650_N6_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0656_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0656_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0656_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0656_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0656_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0656_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0656_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0656_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0656_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0656_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0656_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0656_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about the asymptomatic subset among carriers, an added facet rather than a clean negation of the seed's 'have the bone' claim; fits N1\"}\n{\"id\":\"d4_s0656_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about fusion rate, an unrelated fact to prevalence, not a negation of the seed's claim; fits N1\"}\n{\"id\":\"d4_s0656_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0656_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0656_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0656_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0656_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0656_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0662_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0662_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0662_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0662_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0662_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0662_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0662_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0662_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0662_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0662_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0662_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0662_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0662_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0662_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0662_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0662_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0662_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0662_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps two symptoms simultaneously (anemia->dementia, diabetes->ataxia) rather than exactly one entity; better fits N1 aspect change\"}\n{\"id\":\"d4_s0662_N4_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0662_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0662_N4_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}",
+  "ttft_ms": 109653,
+  "ttft_stream_ms": 1908,
+  "time_to_request_ms": 27,
+  "type": "result",
+  "duration_ms": 129548,
+  "uuid": "0e45d65b-c412-4dfb-af25-77dbfd5e1710",
+  "queued_turn_count": 0
+}

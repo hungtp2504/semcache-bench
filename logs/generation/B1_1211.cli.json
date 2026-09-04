@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 129415,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "0f5f7bda-9377-434b-a7a4-31b98065238c",
+  "total_cost_usd": 0.33352420000000005,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 44229,
+    "cache_read_input_tokens": 93701,
+    "output_tokens": 13786,
+    "output_tokens_details": {
+      "thinking_tokens": 10986
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 44229,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2747,
+        "cache_read_input_tokens": 63423,
+        "cache_creation_input_tokens": 11084,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11084
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 13786,
+      "cacheReadInputTokens": 93701,
+      "cacheCreationInputTokens": 44229,
+      "webSearchRequests": 0,
+      "costUSD": 0.33352420000000005,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0377_P3_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0377_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0377_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0377_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0377_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0377_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0377_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0377_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0377_N3_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0377_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0377_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0377_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0377_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0377_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0377_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0377_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes a variable minimum count when the requirement is a fixed six; not a genuine min/max flip on an existing quantifier\"}\n{\"id\":\"d2_s0377_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes an unestablished chronological addition history; this is a presupposition shift (N6), not an extreme flip on existing data\"}\n{\"id\":\"d2_s0377_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0377_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0383_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0383_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0383_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0383_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0383_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0383_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0383_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0383_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0383_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0383_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0383_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0383_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0383_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0383_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0383_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0383_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0383_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0383_N3_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0383_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0383_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0383_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a vague, undefined 'non-human-crafted baseline dataset' rather than negating the seed's specific SNLI comparison; ill-posed as a clean polarity flip\"}\n{\"id\":\"d2_s0383_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0383_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0383_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0383_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"drops the cross-dataset comparison entirely and asks a single-dataset peak value; aspect change (N1), not a quantifier/extreme flip of the original comparison\"}\n{\"id\":\"d2_s0383_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for the model's identity rather than an extremized accuracy-gap value; aspect change, not a quantifier/extreme flip\"}\n{\"id\":\"d2_s0383_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0383_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps the measured facet (dataset size) for accuracy rather than presupposing a related-but-different fact; better fits N1 aspect change\"}\n{\"id\":\"d2_s0389_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0389_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0389_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0389_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0389_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0389_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0389_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0389_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0389_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0389_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0389_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0389_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0389_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}",
+  "ttft_ms": 111562,
+  "ttft_stream_ms": 4368,
+  "time_to_request_ms": 29,
+  "type": "result",
+  "duration_ms": 130200,
+  "uuid": "8ad4b662-d973-4a60-bc0f-3c9e67ab6229",
+  "queued_turn_count": 0
+}

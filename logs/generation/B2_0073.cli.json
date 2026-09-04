@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 65899,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "d12dc4f9-9f09-4feb-83e7-b45474aa82a7",
+  "total_cost_usd": 0.49780900000000006,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32992,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 6334,
+    "output_tokens_details": {
+      "thinking_tokens": 3724
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32992,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6334,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32992,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32992
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 6334,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32992,
+      "webSearchRequests": 0,
+      "costUSD": 0.49780900000000006,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0248_N5_v3\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d1_s0248_N5_v4\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d1_s0248_N6_v1\",\"axis_ok\":true,\"conf\":0.58,\"issue\":null}\n{\"id\":\"d1_s0248_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0254_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0254_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0254_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0254_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0254_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0254_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0254_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0254_P2_v4\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d1_s0254_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0254_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0254_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0254_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0254_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0254_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0254_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0254_N2_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0254_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0254_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0254_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0254_N4_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d1_s0254_N4_v3\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"no negation/antonym flip; asks late-acceptance policy (aspect/presupposition change, not polarity)\"}\n{\"id\":\"d1_s0254_N4_v4\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d1_s0254_N5_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0254_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Assignment 1 is likely the earliest assignment due, so answer collapses back to L9 — seed answer still answers it\"}\n{\"id\":\"d1_s0254_N5_v3\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d1_s0254_N5_v4\",\"axis_ok\":true,\"conf\":0.52,\"issue\":null}\n{\"id\":\"d1_s0254_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0254_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0261_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0261_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0261_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0261_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0261_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0261_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0261_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0261_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0261_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0261_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0261_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0261_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0261_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0261_N1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0261_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0261_N2_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0261_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0261_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0261_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0261_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0261_N4_v3\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d1_s0261_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"deadline-inversion: 'after which session can it no longer be taken' still resolves to L17, same answer content\"}\n{\"id\":\"d1_s0261_N5_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0261_N5_v2\",\"axis_ok\":false,\"conf\":0.58,\"issue\":\"Quiz 1 is presumably the earliest quiz, so answer stays L17 — seed answer still answers it\"}\n{\"id\":\"d1_s0261_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0261_N5_v4\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d1_s0261_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0261_N6_v2\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}",
+  "ttft_ms": 46191,
+  "ttft_stream_ms": 1453,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 66100,
+  "uuid": "c68b6147-196a-41e9-b6ae-bc750cd87650",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 146731,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "4af72f2a-80cd-4047-9faf-243a623803af",
+  "total_cost_usd": 0.372969,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 48455,
+    "cache_read_input_tokens": 93405,
+    "output_tokens": 16046,
+    "output_tokens_details": {
+      "thinking_tokens": 13260
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 48455,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2712,
+        "cache_read_input_tokens": 63127,
+        "cache_creation_input_tokens": 15606,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15606
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 16046,
+      "cacheReadInputTokens": 93405,
+      "cacheCreationInputTokens": 48455,
+      "webSearchRequests": 0,
+      "costUSD": 0.372969,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d4_s0395_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0395_N2_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"lip isn't one of the listed oral cavity tissues and is a distinct site from oral cavity in this source's taxonomy; reads as an entity swap rather than a clean sub-scope narrowing\"}\n{\"id\":\"d4_s0395_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"changes two things at once (tissue scope oral cavity→head/neck AND cancer type oral cavity cancer→generic cancer), not a single scope qualifier change\"}\n{\"id\":\"d4_s0395_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0395_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"two changes at once: tissue scope oral cavity→oropharynx and cancer type oral cavity cancer→generic cancer, not a single entity swap\"}\n{\"id\":\"d4_s0395_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0395_N4_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0395_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0395_N4_v4\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0395_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0395_N5_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"asks for the excluded fraction, which is a negation/complement of a stated fact rather than a min/max/extreme quantifier flip\"}\n{\"id\":\"d4_s0395_N5_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0395_N5_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"asks for a count/cardinality of the list rather than flipping a min/max/extreme quantifier already implicit in the question\"}\n{\"id\":\"d4_s0395_N6_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0395_N6_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0401_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0401_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0401_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0401_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0401_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0401_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0401_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0401_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0401_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0401_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0401_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0401_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0401_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0401_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0401_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0401_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0401_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0401_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0401_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0401_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0401_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0401_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0401_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0401_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0401_N5_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0401_N5_v4\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0401_N6_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0401_N6_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0407_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0407_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0407_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0407_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0407_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0407_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0407_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0407_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0407_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0407_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0407_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0407_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0407_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0407_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0407_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0407_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0407_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}",
+  "ttft_ms": 128419,
+  "ttft_stream_ms": 1417,
+  "time_to_request_ms": 164,
+  "type": "result",
+  "duration_ms": 151365,
+  "uuid": "6638b2e5-4b23-4249-ac69-a1142f5a5016",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 22769,
+  "stop_reason": "end_turn",
+  "session_id": "8f23f64f-d821-4554-b88f-2f391ddb88dd",
+  "total_cost_usd": 0.39634400000000003,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32173,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 2603,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32173,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2603,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32173,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32173
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 2603,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32173,
+      "webSearchRequests": 0,
+      "costUSD": 0.39634400000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0232_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0232_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0232_P3_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0232_N1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0232_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0232_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0232_N2_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d2_s0232_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0232_N3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0232_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0232_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no negation/antonym flip; question/answer swap is an aspect change, not polarity\"}\n{\"id\":\"d2_s0232_N4_v3\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d2_s0232_N4_v4\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d2_s0232_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0232_N5_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d2_s0232_N5_v3\",\"axis_ok\":false,\"conf\":0.62,\"issue\":\"count question, not a quantifier/extreme flip of the seed's target\"}\n{\"id\":\"d2_s0232_N5_v4\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d2_s0232_N6_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d2_s0232_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0238_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0238_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0238_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0238_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0238_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0238_P2_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0238_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0238_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0238_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0238_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0238_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0238_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0238_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0238_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0238_N2_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0238_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0238_N3_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0238_N3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0238_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0238_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0238_N4_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0238_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no polarity flip of the seed predicate; asks a different facet (rating sentiment) rather than negating participation\"}\n{\"id\":\"d2_s0238_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0238_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0238_N5_v3\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d2_s0238_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"scope narrowing to first round, not a quantifier/extreme flip (belongs to N2)\"}\n{\"id\":\"d2_s0238_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0238_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks study findings — an aspect change (N1) with no shifted presupposition\"}\n{\"id\":\"d2_s0244_P1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0244_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0244_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0244_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0244_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0244_P2_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0244_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0244_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0244_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0244_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0244_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0244_P3_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d2_s0244_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 22751,
+  "type": "result",
+  "duration_ms": 22969,
+  "uuid": "c695ceed-8258-4c5f-8fe3-66eb53236f7b",
+  "ttft_stream_ms": 1927,
+  "time_to_request_ms": 16,
+  "queued_turn_count": 0
+}

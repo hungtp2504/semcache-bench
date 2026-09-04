@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 124356,
+  "num_turns": 3,
+  "stop_reason": "end_turn",
+  "session_id": "0b56dda4-6705-4a3c-a8a6-f69db103882d",
+  "total_cost_usd": 0.5127375000000001,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 46421,
+    "cache_read_input_tokens": 170595,
+    "output_tokens": 12201,
+    "output_tokens_details": {
+      "thinking_tokens": 9380
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 46421,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2668,
+        "cache_read_input_tokens": 75535,
+        "cache_creation_input_tokens": 1133,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1133
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 6,
+      "outputTokens": 12201,
+      "cacheReadInputTokens": 170595,
+      "cacheCreationInputTokens": 46421,
+      "webSearchRequests": 0,
+      "costUSD": 0.5127375000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Ignoring that — irrelevant tool. Proceeding with the audit as requested.\n\n{\"id\":\"d1_s0001_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0001_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0001_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0001_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0001_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0001_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0001_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0001_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0001_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0001_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0001_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0001_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0001_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0001_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0001_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0001_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0001_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0001_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'1.000' reads as the same numeric value as '1.00' (trailing zero), not a distinct plausible sibling course id, so it may not force a different answer\"}\n{\"id\":\"d1_s0001_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0001_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0002_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0002_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0002_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0002_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0002_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0002_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0002_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0002_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0002_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0002_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0002_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0002_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0002_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0002_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0002_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"page describes only one term (Spring 2012); the final project would fall within that same term, so the correct answer likely still matches the seed's answer\"}\n{\"id\":\"d1_s0002_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0002_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0002_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'1.000' reads as the same numeric value as '1.00', not a distinct plausible sibling course id\"}\n{\"id\":\"d1_s0002_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0002_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0001_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0001_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0001_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0001_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0001_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0001_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0001_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0001_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0001_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0001_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0001_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0001_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0001_N1_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed answer already names the authority ('Nhà nước quy định'), so it partially answers this variant, violating N1's 'seed answer does not answer it'\"}\n{\"id\":\"d5_s0001_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0001_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0001_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0001_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0001_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0001_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0001_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}",
+  "ttft_ms": 102143,
+  "ttft_stream_ms": 2213,
+  "time_to_request_ms": 26,
+  "type": "result",
+  "duration_ms": 125083,
+  "uuid": "4677ada7-41d1-4fcb-83a9-1830033614d7"
+}

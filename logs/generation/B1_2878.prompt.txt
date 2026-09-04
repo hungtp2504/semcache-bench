@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_2878
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d4_s0559_P2_v2", "axis": "P2", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "How is non-small cell lung cancer defined?", "delta": null}
+{"id": "d4_s0559_P2_v3", "axis": "P2", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "I'd like an explanation of non-small cell lung cancer.", "delta": null}
+{"id": "d4_s0559_P2_v4", "axis": "P2", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "Non-small cell lung cancer — explain what it is.", "delta": null}
+{"id": "d4_s0559_P3_v1", "axis": "P3", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "wat is non small cell lung cancer?", "delta": null}
+{"id": "d4_s0559_P3_v2", "axis": "P3", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "nsclc what is it??", "delta": null}
+{"id": "d4_s0559_P3_v3", "axis": "P3", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "whats non-smal cell lung cancr", "delta": null}
+{"id": "d4_s0559_P3_v4", "axis": "P3", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "non small cell lung cancer definition plz", "delta": null}
+{"id": "d4_s0559_N1_v1", "axis": "N1", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What are the symptoms of non-small cell lung cancer?", "delta": "symptoms, not the definition"}
+{"id": "d4_s0559_N1_v2", "axis": "N1", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "How is non-small cell lung cancer treated?", "delta": "treatment instead of the definition"}
+{"id": "d4_s0559_N2_v1", "axis": "N2", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is metastatic non-small cell lung cancer?", "delta": "narrows to metastatic disease"}
+{"id": "d4_s0559_N2_v2", "axis": "N2", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is non-small cell lung cancer in never-smokers?", "delta": "narrows to the never-smoker population"}
+{"id": "d4_s0559_N3_v1", "axis": "N3", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is pancreatic cancer?", "delta": "a different organ's cancer"}
+{"id": "d4_s0559_N3_v2", "axis": "N3", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is mesothelioma?", "delta": "a different chest cancer"}
+{"id": "d4_s0559_N4_v1", "axis": "N4", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is small cell lung cancer?", "delta": "drops the 'non-' negation in the name"}
+{"id": "d4_s0559_N4_v2", "axis": "N4", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is a benign lung tumor?", "delta": "benign, not malignant, lung growth"}
+{"id": "d4_s0559_N4_v3", "axis": "N4", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is a noncancerous lung disease?", "delta": "noncancerous lung condition"}
+{"id": "d4_s0559_N4_v4", "axis": "N4", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "Which lung tissues stay normal in non-small cell lung cancer?", "delta": "unaffected normal tissue, not malignant tissue"}
+{"id": "d4_s0559_N5_v1", "axis": "N5", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is the most common type of non-small cell lung cancer?", "delta": "most common subtype, not the definition"}
+{"id": "d4_s0559_N5_v2", "axis": "N5", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is the least common type of non-small cell lung cancer?", "delta": "rarest subtype, not the definition"}
+{"id": "d4_s0559_N5_v3", "axis": "N5", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is the earliest stage of non-small cell lung cancer?", "delta": "earliest stage instead of the definition"}
+{"id": "d4_s0559_N5_v4", "axis": "N5", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is the most advanced stage of non-small cell lung cancer?", "delta": "latest stage, not the definition"}
+{"id": "d4_s0559_N6_v1", "axis": "N6", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What causes malignant cells to form in the tissues of the lung?", "delta": "cause, presupposed by the definition"}
+{"id": "d4_s0559_N6_v2", "axis": "N6", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "How are malignant cells in the lung tissue detected?", "delta": "detection method, presupposed fact"}
+{"id": "d4_s0566_P1_v1", "axis": "P1", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is SCLC (small cell lung cancer)?", "delta": null}
+{"id": "d4_s0566_P1_v2", "axis": "P1", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What does small cell lung cancer mean?", "delta": null}
+{"id": "d4_s0566_P1_v3", "axis": "P1", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What kind of disease is small cell lung cancer?", "delta": null}
+{"id": "d4_s0566_P1_v4", "axis": "P1", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What exactly is small cell carcinoma of the lung?", "delta": null}
+{"id": "d4_s0566_P2_v1", "axis": "P2", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "Define small cell lung cancer for me.", "delta": null}
+{"id": "d4_s0566_P2_v2", "axis": "P2", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "How is small cell lung cancer defined?", "delta": null}
+{"id": "d4_s0566_P2_v3", "axis": "P2", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "I'd like an explanation of small cell lung cancer.", "delta": null}
+{"id": "d4_s0566_P2_v4", "axis": "P2", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "Small cell lung cancer — tell me what it is.", "delta": null}
+{"id": "d4_s0566_P3_v1", "axis": "P3", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "wat is small cell lung cancer?", "delta": null}
+{"id": "d4_s0566_P3_v2", "axis": "P3", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "sclc what is it??", "delta": null}
+{"id": "d4_s0566_P3_v3", "axis": "P3", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "whats smal cell lung cancr", "delta": null}
+{"id": "d4_s0566_P3_v4", "axis": "P3", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "small cell lung cancer definition plz", "delta": null}
+{"id": "d4_s0566_N1_v1", "axis": "N1", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What are the symptoms of small cell lung cancer?", "delta": "symptoms, not the definition"}
+{"id": "d4_s0566_N1_v2", "axis": "N1", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "How is small cell lung cancer treated?", "delta": "treatment instead of the definition"}
+{"id": "d4_s0566_N2_v1", "axis": "N2", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is limited-stage small cell lung cancer?", "delta": "narrows to limited stage"}
+{"id": "d4_s0566_N2_v2", "axis": "N2", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is extensive-stage small cell lung cancer?", "delta": "narrows to extensive stage"}
+{"id": "d4_s0566_N3_v1", "axis": "N3", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is small cell bladder cancer?", "delta": "a different organ's small cell cancer"}
+{"id": "d4_s0566_N3_v2", "axis": "N3", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is small cell carcinoma of the prostate?", "delta": "a different organ's small cell cancer"}
+{"id": "d4_s0566_N4_v1", "axis": "N4", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is non-small cell lung cancer?", "delta": "adds the 'non-' negation to the name"}
+{"id": "d4_s0566_N4_v2", "axis": "N4", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is a benign lung nodule?", "delta": "benign, not malignant, lung growth"}
+{"id": "d4_s0566_N4_v3", "axis": "N4", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is large cell lung cancer?", "delta": "large, not small, cell type"}
+{"id": "d4_s0566_N4_v4", "axis": "N4", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "Which lung tissues remain cancer-free in small cell lung cancer?", "delta": "cancer-free tissue, not malignant tissue"}
+{"id": "d4_s0566_N5_v1", "axis": "N5", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is the earliest stage of small cell lung cancer?", "delta": "earliest stage, not the definition"}
+{"id": "d4_s0566_N5_v2", "axis": "N5", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is the most advanced stage of small cell lung cancer?", "delta": "latest stage, not the definition"}
+{"id": "d4_s0566_N5_v3", "axis": "N5", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is the most common variant of small cell lung cancer?", "delta": "most common variant instead of the definition"}
+{"id": "d4_s0566_N5_v4", "axis": "N5", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is the rarest variant of small cell lung cancer?", "delta": "rarest variant, not the definition"}
+{"id": "d4_s0566_N6_v1", "axis": "N6", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "Why do malignant cells form in the tissues of the lung?", "delta": "cause, presupposed by the definition"}
+{"id": "d4_s0566_N6_v2", "axis": "N6", "seed_question": "What is small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "How quickly do the malignant lung cells in small cell lung cancer spread?", "delta": "spread speed, presupposed fact"}
+{"id": "d4_s0573_P1_v1", "axis": "P1", "seed_question": "How does lung cancer rank among cancers in the United States in terms of death and frequency?", "answer": "Lung cancer is the leading cause of cancer death in both men and women, and it is the second most common cancer in the United States, after skin cancer.", "variation": "Where does lung cancer stand among US cancers for deaths and for how common it is?", "delta": null}
+{"id": "d4_s0573_P1_v2", "axis": "P1", "seed_question": "How does lung cancer rank among cancers in the United States in terms of death and frequency?", "answer": "Lung cancer is the leading cause of cancer death in both men and women, and it is the second most common cancer in the United States, after skin cancer.", "variation": "How does lung cancer compare with other cancers in the US in mortality and prevalence?", "delta": null}
+{"id": "d4_s0573_P1_v3", "axis": "P1", "seed_question": "How does lung cancer rank among cancers in the United States in terms of death and frequency?", "answer": "Lung cancer is the leading cause of cancer death in both men and women, and it is the second most common cancer in the United States, after skin cancer.", "variation": "What is lung cancer's rank among American cancers for deaths and for frequency?", "delta": null}
+{"id": "d4_s0573_P1_v4", "axis": "P1", "seed_question": "How does lung cancer rank among cancers in the United States in terms of death and frequency?", "answer": "Lung cancer is the leading cause of cancer death in both men and women, and it is the second most common cancer in the United States, after skin cancer.", "variation": "In the United States, how does lung cancer place among cancers for fatalities and commonness?", "delta": null}
+{"id": "d4_s0573_P2_v1", "axis": "P2", "seed_question": "How does lung cancer rank among cancers in the United States in terms of death and frequency?", "answer": "Lung cancer is the leading cause of cancer death in both men and women, and it is the second most common cancer in the United States, after skin cancer.", "variation": "Tell me lung cancer's ranking among US cancers by death and by frequency.", "delta": null}
+{"id": "d4_s0573_P2_v2", "axis": "P2", "seed_question": "How does lung cancer rank among cancers in the United States in terms of death and frequency?", "answer": "Lung cancer is the leading cause of cancer death in both men and women, and it is the second most common cancer in the United States, after skin cancer.", "variation": "Among cancers in the United States, how is lung cancer ranked for deaths and for how often it occurs?", "delta": null}
+{"id": "d4_s0573_P2_v3", "axis": "P2", "seed_question": "How does lung cancer rank among cancers in the United States in terms of death and frequency?", "answer": "Lung cancer is the leading cause of cancer death in both men and women, and it is the second most common cancer in the United States, after skin cancer.", "variation": "I'd like to know where lung cancer ranks for cancer deaths and cancer frequency in the US.", "delta": null}
+{"id": "d4_s0573_P2_v4", "axis": "P2", "seed_question": "How does lung cancer rank among cancers in the United States in terms of death and frequency?", "answer": "Lung cancer is the leading cause of cancer death in both men and women, and it is the second most common cancer in the United States, after skin cancer.", "variation": "Describe lung cancer's position among US cancers in both mortality and incidence.", "delta": null}
+{"id": "d4_s0573_P3_v1", "axis": "P3", "seed_question": "How does lung cancer rank among cancers in the United States in terms of death and frequency?", "answer": "Lung cancer is the leading cause of cancer death in both men and women, and it is the second most common cancer in the United States, after skin cancer.", "variation": "how does lung cancer rank in the us for deaths n how common it is?", "delta": null}

@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 124003,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "6ab1a048-1d88-483b-bc30-688a7c20fca4",
+  "total_cost_usd": 0.32907,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 43683,
+    "cache_read_input_tokens": 92050,
+    "output_tokens": 13592,
+    "output_tokens_details": {
+      "thinking_tokens": 10587
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43683,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2953,
+        "cache_read_input_tokens": 61772,
+        "cache_creation_input_tokens": 12189,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12189
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 13592,
+      "cacheReadInputTokens": 92050,
+      "cacheCreationInputTokens": 43683,
+      "webSearchRequests": 0,
+      "costUSD": 0.32907,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0301_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"reverses subject/object of the replacement relation rather than a negation/antonym flip; produces a false-presupposition question (fits N6, not N4)\"}\n{\"id\":\"d3_s0301_N5_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"no min/max/earliest/latest quantifier flipped; excludes one item from a set, which is a scope change (N2), not an extreme flip\"}\n{\"id\":\"d3_s0301_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0301_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0301_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0301_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0301_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0307_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0307_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0307_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0307_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0307_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0307_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0307_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0307_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0307_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0307_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0307_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0307_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0307_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0307_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0307_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0307_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0307_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0307_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0307_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks removal process, a different facet (aspect change/N1), not a negation or antonym of maintaining a minimum\"}\n{\"id\":\"d3_s0307_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new topic (appointment authority limits) unrelated to the seed's headcount fact; negation word present but doesn't flip the seed's specific claim\"}\n{\"id\":\"d3_s0307_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about role-conflict/dual-service, a different fact from the minimum-headcount requirement; not a flip of the seed's claim\"}\n{\"id\":\"d3_s0307_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"reverses subject/object (who must maintain a minimum of whom) rather than negation/antonym; reads as a presupposition shift, not N4\"}\n{\"id\":\"d3_s0307_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0307_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines an extreme flip with a scope change (dual-membership on council), more than the single quantifier flip N5 allows\"}\n{\"id\":\"d3_s0307_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks for an identity (who), not a count; answer type changes entirely — this is an aspect change (N1), not a min/max/earliest-latest flip\"}\n{\"id\":\"d3_s0307_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'minimum' is retained but applied to a different quantity (term length vs headcount) — an aspect/facet change, not an extreme flip of the same fact\"}\n{\"id\":\"d3_s0307_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0307_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0314_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0314_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0314_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0314_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0314_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0314_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0314_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0314_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0314_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0314_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0314_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0314_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0314_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0314_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0314_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0314_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0314_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0314_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0314_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0314_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0314_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0314_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"single-page vs multi-page is a target/entity substitution (singlehtml vs html), not a negation/antonym flip\"}\n{\"id\":\"d3_s0314_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0314_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0314_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'minimum' retained but shifts to a completely different quantity (Sphinx version) — an aspect change, not an extreme flip of the same fact\"}",
+  "ttft_ms": 102574,
+  "ttft_stream_ms": 1332,
+  "time_to_request_ms": 40,
+  "type": "result",
+  "duration_ms": 124816,
+  "uuid": "538e3a0b-f613-482f-b1fa-74f3923c9313",
+  "queued_turn_count": 0
+}

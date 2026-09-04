@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 160844,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "ead887f7-1f7a-4b04-8b00-43c45b73ed24",
+  "total_cost_usd": 0.30657959999999995,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32620,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 17004,
+    "output_tokens_details": {
+      "thinking_tokens": 14194
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32620,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 17004,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 32620,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32620
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 17004,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 32620,
+      "webSearchRequests": 0,
+      "costUSD": 0.30657959999999995,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d2_s0114_P3_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0114_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0114_P3_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0114_N1_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0114_N1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0114_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"single-word framing doesn't change the mechanism (still final GRU hidden state over the question's words); correct answer doesn't actually differ from seed's\"}\n{\"id\":\"d2_s0114_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0114_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0114_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"DMN+ retains the same GRU-based question vector and m^0=q memory init as DMN; answer doesn't necessarily differ\"}\n{\"id\":\"d2_s0114_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0114_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0114_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed's answer ('final hidden state of a GRU run over the words') is direction-agnostic; reversing the GRU wouldn't make serving it verbatim actually mislead\"}\n{\"id\":\"d2_s0114_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0114_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0114_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0114_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces an unrelated quantifier (max passes) absent from seed's Q/A rather than flipping an existing extreme; this is an aspect change\"}\n{\"id\":\"d2_s0114_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0114_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes the exact same fact as seed's answer (memory=q) and only asks 'why'; no different presupposition is introduced, so this is an aspect change (N1)\"}\n{\"id\":\"d2_s0114_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"reuses the same initialization fact from the seed without introducing a new/different presupposition; asks about the next step, an aspect change rather than a presupposition shift\"}\n{\"id\":\"d2_s0121_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0121_P1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0121_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0121_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0121_P2_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0121_P2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0121_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0121_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0121_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0121_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0121_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0121_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0121_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0121_N1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0121_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0121_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0121_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0121_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0121_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0121_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0121_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0121_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0121_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0121_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0121_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'minimum needed' introduces a framing not present as a quantifier in seed rather than flipping an existing extreme\"}\n{\"id\":\"d2_s0121_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0121_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0121_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0128_P1_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0128_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0128_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0128_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0128_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0128_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0128_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0128_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0128_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0128_P3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0128_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0128_P3_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0128_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n```",
+  "ttft_ms": 144490,
+  "ttft_stream_ms": 1555,
+  "time_to_request_ms": 29,
+  "type": "result",
+  "duration_ms": 161067,
+  "uuid": "e4e896d2-efe0-4744-965c-cc46081b4ae2",
+  "queued_turn_count": 0
+}

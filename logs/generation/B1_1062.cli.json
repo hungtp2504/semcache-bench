@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 85851,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "99effe1b-1ac3-4ad6-9a00-9279a7e40b94",
+  "total_cost_usd": 0.2760526,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 40468,
+    "cache_read_input_tokens": 93263,
+    "output_tokens": 9552,
+    "output_tokens_details": {
+      "thinking_tokens": 6810
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 40468,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2650,
+        "cache_read_input_tokens": 62985,
+        "cache_creation_input_tokens": 7761,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 7761
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 9552,
+      "cacheReadInputTokens": 93263,
+      "cacheCreationInputTokens": 40468,
+      "webSearchRequests": 0,
+      "costUSD": 0.2760526,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0036_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0036_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0036_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0036_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0036_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0036_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0036_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0036_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0036_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0036_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0036_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0036_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0036_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0036_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0036_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0036_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0036_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0036_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0036_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'disqualifies' is not a clean antonym/negation of 'assumed' — introduces a different concept (disqualifying background) rather than a single polarity flip\"}\n{\"id\":\"d1_s0036_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'subjects to avoid' is a topic/aspect change, not a negation flip of the assumed-knowledge concept\"}\n{\"id\":\"d1_s0036_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0036_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0036_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0036_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0036_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a count (how many semesters), not a min/max or earliest/latest extreme flip\"}\n{\"id\":\"d1_s0036_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0036_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0042_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0042_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0042_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0042_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0042_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0042_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0042_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0042_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0042_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0042_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0042_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0042_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0042_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0042_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0042_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0042_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0042_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0042_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0042_N4_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0042_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes a rejected-title process rather than performing a clean negation/antonym flip of 'title' — closer to N6\"}\n{\"id\":\"d1_s0042_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0042_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'excluded topic' is a different aspect (content coverage), not a negation flip of 'title'\"}\n{\"id\":\"d1_s0042_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0042_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0042_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0042_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0042_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0042_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0048_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0048_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0048_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0048_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0048_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 67657,
+  "ttft_stream_ms": 1906,
+  "time_to_request_ms": 34,
+  "type": "result",
+  "duration_ms": 86694,
+  "uuid": "81c7c320-fe6b-4cd7-bdc7-e16c789f7804",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 149165,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "0fae48fe-c5cf-4e5d-8659-2fc89fbd7e3a",
+  "total_cost_usd": 0.39844599999999997,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 55889,
+    "cache_read_input_tokens": 102660,
+    "output_tokens": 15435,
+    "output_tokens_details": {
+      "thinking_tokens": 12240
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 55889,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3209,
+        "cache_read_input_tokens": 72382,
+        "cache_creation_input_tokens": 13785,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13785
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15435,
+      "cacheReadInputTokens": 102660,
+      "cacheCreationInputTokens": 55889,
+      "webSearchRequests": 0,
+      "costUSD": 0.39844599999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0178_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0178_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0178_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0178_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0178_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0178_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0178_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0178_N3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0178_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0178_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"Not a negation/antonym flip of the mandatory-thesis claim; asks an unrelated question about forbidden forms. Seed's answer would be non-responsive rather than actively misleading (wrong sign) — reads as an aspect change, not a polarity flip.\"}\n{\"id\":\"d5_s0178_N4_v2\",\"axis_ok\":false,\"conf\":0.72,\"issue\":\"Not a negation/antonym flip; asks which form cannot be waived (exemption), a different fact from the mandatory/optional claim. Seed's answer is non-responsive, not misleading.\"}\n{\"id\":\"d5_s0178_N4_v3\",\"axis_ok\":false,\"conf\":0.72,\"issue\":\"Not a negation/antonym flip; asks about prohibitions on institutional discretion, a distinct question. Seed's answer is non-responsive rather than wrong-sign.\"}\n{\"id\":\"d5_s0178_N4_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"Asks about excluded fields for program applicability, an entirely different topic from graduation-form requirement; not a polarity flip at all.\"}\n{\"id\":\"d5_s0178_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Seed contains no quantifier/extreme to flip (it's a yes/no mandatory question); this introduces a brand-new metric (count of graduation forms), which is an aspect change, not a quantifier flip.\"}\n{\"id\":\"d5_s0178_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Introduces an unrelated new metric (max exam attempts) not present as a quantifier in the seed; not a flip of any existing extreme.\"}\n{\"id\":\"d5_s0178_N5_v3\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"Introduces an unrelated new metric (minimum credit size of project) not present in the seed as a quantifier to flip; aspect change.\"}\n{\"id\":\"d5_s0178_N5_v4\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"Introduces an unrelated new metric (max completion time) not present in the seed as a quantifier; aspect change rather than an extreme flip.\"}\n{\"id\":\"d5_s0178_N6_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d5_s0178_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0184_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0184_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0184_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0184_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0184_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0184_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0184_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0184_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0184_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0184_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0184_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0184_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0184_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0184_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0184_N2_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d5_s0184_N2_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d5_s0184_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0184_N3_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d5_s0184_N4_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0184_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Substitutes the negated entity (chức danh GS/PGS → bằng tiến sĩ) rather than flipping polarity — an entity substitution mislabeled as N4; also creates an incoherent premise since teaching requires already holding a doctorate.\"}\n{\"id\":\"d5_s0184_N4_v3\",\"axis_ok\":false,\"conf\":0.72,\"issue\":\"Introduces a new concept (exemption cases) not present in the seed; not a negation/antonym flip of the seed's claim.\"}\n{\"id\":\"d5_s0184_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Asks about disqualifying cases, a different question from the minimum-years requirement; not a clean polarity flip.\"}\n{\"id\":\"d5_s0184_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0184_N5_v2\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"Changes the measured quantity from years-of-experience to annual publication count rather than flipping min/max on the same quantity; this is an aspect change, not an extreme flip.\"}\n{\"id\":\"d5_s0184_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0184_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0184_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0184_N6_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d5_s0190_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0190_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0190_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0190_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0190_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0190_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0190_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0190_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0190_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0190_P3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0190_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0190_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0190_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 126410,
+  "ttft_stream_ms": 1449,
+  "time_to_request_ms": 37,
+  "type": "result",
+  "duration_ms": 149645,
+  "uuid": "e680184d-e020-479e-af4e-f96b80d732e7",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,51 @@
+{
+  "batch_id": "C_0159",
+  "stage": "C",
+  "model_requested": "claude-sonnet-5",
+  "model_reported": [
+    "claude-sonnet-5"
+  ],
+  "prompt_file": "prompts/A4_variation.md",
+  "prompt_version": "1.2\"   # v1.2 2026-08-12: N4/N5 overgenerate-and-filter (4 candidates each;",
+  "cached_block_sha256": "666c8b65cef5675fe994b0ee22800851ef00fbed5b3e1e1d471b5c003b205c70",
+  "input_file": "data/rq6_remaining_sonnet.jsonl",
+  "input_lines": "1:10",
+  "n_input": 10,
+  "ts_start": "2026-09-02T07:11:42Z",
+  "ts_end": "2026-09-02T07:16:27Z",
+  "cli_session_id": "5896d73b-675f-400a-bfa3-b71bcf272506",
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 45417,
+    "cache_read_input_tokens": 87286,
+    "output_tokens": 37424,
+    "output_tokens_details": {
+      "thinking_tokens": 17264
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 45417,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 20153,
+        "cache_read_input_tokens": 57008,
+        "cache_creation_input_tokens": 18687,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 18687
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "cost_usd": 0.5733732
+}

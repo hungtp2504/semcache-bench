@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_1069
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d3_s0078_N5_v4", "axis": "N5", "seed_question": "What versions of Apache and mod_wsgi are required to authenticate against Django's user database from Apache?", "answer": "Apache version 2.2 or later and mod_wsgi version 2.0 or later are required.", "variation": "Of the two requirements, Apache and mod_wsgi, which needs the higher version number?", "delta": "asks which requirement is higher, a comparison"}
+{"id": "d3_s0078_N6_v1", "axis": "N6", "seed_question": "What versions of Apache and mod_wsgi are required to authenticate against Django's user database from Apache?", "answer": "Apache version 2.2 or later and mod_wsgi version 2.0 or later are required.", "variation": "Why does authenticating against Django's user database from Apache require mod_wsgi 2.0 or later?", "delta": "asks the reason for the version floor"}
+{"id": "d3_s0078_N6_v2", "axis": "N6", "seed_question": "What versions of Apache and mod_wsgi are required to authenticate against Django's user database from Apache?", "answer": "Apache version 2.2 or later and mod_wsgi version 2.0 or later are required.", "variation": "How do I check which versions of Apache and mod_wsgi I currently have installed?", "delta": "asks how to check installed versions"}
+{"id": "d3_s0084_P1_v1", "axis": "P1", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is Django's main deployment platform?", "delta": null}
+{"id": "d3_s0084_P1_v2", "axis": "P1", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What's the primary platform for deploying Django?", "delta": null}
+{"id": "d3_s0084_P1_v3", "axis": "P1", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "Which is the chief deployment platform used by Django?", "delta": null}
+{"id": "d3_s0084_P1_v4", "axis": "P1", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is the foremost deployment platform in Django?", "delta": null}
+{"id": "d3_s0084_P2_v1", "axis": "P2", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "Django is primarily deployed on which platform?", "delta": null}
+{"id": "d3_s0084_P2_v2", "axis": "P2", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "Tell me the platform that Django primarily deploys on.", "delta": null}
+{"id": "d3_s0084_P2_v3", "axis": "P2", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "For deploying Django, which platform is the primary one?", "delta": null}
+{"id": "d3_s0084_P2_v4", "axis": "P2", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "Which platform is primarily used by Django for deployment?", "delta": null}
+{"id": "d3_s0084_P3_v1", "axis": "P3", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "whats djangos primary deploymnt platform?", "delta": null}
+{"id": "d3_s0084_P3_v2", "axis": "P3", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "django primary deploy platform??", "delta": null}
+{"id": "d3_s0084_P3_v3", "axis": "P3", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "django's main deployment platfrm - what is it", "delta": null}
+{"id": "d3_s0084_P3_v4", "axis": "P3", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "yo what platform does django deploy on mainly", "delta": null}
+{"id": "d3_s0084_N1_v1", "axis": "N1", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "How do I check that my Django project is ready for deployment?", "delta": "asks the deployment readiness check, not the platform"}
+{"id": "d3_s0084_N1_v2", "axis": "N1", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "Which security settings must I configure before deploying Django?", "delta": "asks pre-deployment security settings, not the platform"}
+{"id": "d3_s0084_N2_v1", "axis": "N2", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is Django's primary deployment platform for asynchronous applications?", "delta": "narrows to async deployment, not deployment generally"}
+{"id": "d3_s0084_N2_v2", "axis": "N2", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is the primary deployment platform for Python web frameworks in general?", "delta": "widens from Django to all Python web frameworks"}
+{"id": "d3_s0084_N3_v1", "axis": "N3", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is Flask's primary deployment platform?", "delta": "a different web framework"}
+{"id": "d3_s0084_N3_v2", "axis": "N3", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is Django Channels' primary deployment platform?", "delta": "Django Channels instead of Django itself"}
+{"id": "d3_s0084_N4_v1", "axis": "N4", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is Django's primary local development platform?", "delta": "development, not deployment, platform"}
+{"id": "d3_s0084_N4_v2", "axis": "N4", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is Django's secondary deployment platform?", "delta": "the secondary, not the primary, platform"}
+{"id": "d3_s0084_N4_v3", "axis": "N4", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "Which deployment platform does Django's documentation recommend against?", "delta": "the discouraged platform, not the recommended one"}
+{"id": "d3_s0084_N4_v4", "axis": "N4", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What platform should I avoid using to deploy Django?", "delta": "platform to avoid rather than to use"}
+{"id": "d3_s0084_N5_v1", "axis": "N5", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is Django's least common deployment platform?", "delta": "least common, not primary, platform"}
+{"id": "d3_s0084_N5_v2", "axis": "N5", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What was Django's original deployment platform?", "delta": "earliest platform, not the primary one"}
+{"id": "d3_s0084_N5_v3", "axis": "N5", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "Which deployment platforms does Django support other than the primary one?", "delta": "all platforms but the primary one"}
+{"id": "d3_s0084_N5_v4", "axis": "N5", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "What is the most recently added deployment platform Django supports?", "delta": "latest added platform, not the primary one"}
+{"id": "d3_s0084_N6_v1", "axis": "N6", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "Why did Django choose WSGI as its primary deployment platform?", "delta": "asks the rationale, a presupposed fact"}
+{"id": "d3_s0084_N6_v2", "axis": "N6", "seed_question": "What is Django's primary deployment platform?", "answer": "WSGI, the Python standard for web servers and applications.", "variation": "Which file in a Django project exposes the WSGI application for deployment?", "delta": "asks the file exposing the WSGI callable"}
+{"id": "d3_s0090_P1_v1", "axis": "P1", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What type of Apache component is mod_wsgi?", "delta": null}
+{"id": "d3_s0090_P1_v2", "axis": "P1", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What sort of component of Apache is mod_wsgi?", "delta": null}
+{"id": "d3_s0090_P1_v3", "axis": "P1", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What category of Apache component does mod_wsgi fall under?", "delta": null}
+{"id": "d3_s0090_P1_v4", "axis": "P1", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What kind of Apache add-on is mod_wsgi?", "delta": null}
+{"id": "d3_s0090_P2_v1", "axis": "P2", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "Describe what kind of Apache component mod_wsgi is.", "delta": null}
+{"id": "d3_s0090_P2_v2", "axis": "P2", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "As an Apache component, how is mod_wsgi classified?", "delta": null}
+{"id": "d3_s0090_P2_v3", "axis": "P2", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "Can you tell me what mod_wsgi is within Apache?", "delta": null}
+{"id": "d3_s0090_P2_v4", "axis": "P2", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "Within Apache, mod_wsgi is categorized as what kind of component?", "delta": null}
+{"id": "d3_s0090_P3_v1", "axis": "P3", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "wat kind of apache component is mod_wsgi", "delta": null}
+{"id": "d3_s0090_P3_v2", "axis": "P3", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "mod wsgi is what type of apache thing?", "delta": null}
+{"id": "d3_s0090_P3_v3", "axis": "P3", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "whats mod_wsgi in apache, what kinda componant", "delta": null}
+{"id": "d3_s0090_P3_v4", "axis": "P3", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "MOD_WSGI apache component type ??", "delta": null}
+{"id": "d3_s0090_N1_v1", "axis": "N1", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "How do I configure mod_wsgi inside an Apache VirtualHost?", "delta": "asks configuration steps, not what it is"}
+{"id": "d3_s0090_N1_v2", "axis": "N1", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "How do I install mod_wsgi for Apache?", "delta": "asks installation, not the component type"}
+{"id": "d3_s0090_N2_v1", "axis": "N2", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What kind of Apache component is mod_wsgi's daemon mode?", "delta": "narrows to daemon mode, not mod_wsgi overall"}
+{"id": "d3_s0090_N2_v2", "axis": "N2", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What kinds of components can Apache be extended with?", "delta": "widens to all Apache extension component kinds"}
+{"id": "d3_s0090_N3_v1", "axis": "N3", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What kind of Apache component is mod_python?", "delta": "a different Apache module"}
+{"id": "d3_s0090_N3_v2", "axis": "N3", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What kind of Nginx component is mod_wsgi?", "delta": "Nginx instead of Apache"}
+{"id": "d3_s0090_N4_v1", "axis": "N4", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What kind of Apache component should I use instead of mod_wsgi?", "delta": "the alternative component, not mod_wsgi itself"}
+{"id": "d3_s0090_N4_v2", "axis": "N4", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "Which Python applications is mod_wsgi unable to host?", "delta": "unsupported applications instead of supported ones"}
+{"id": "d3_s0090_N4_v3", "axis": "N4", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "When should I avoid using mod_wsgi with Apache?", "delta": "asks when not to use it"}
+{"id": "d3_s0090_N4_v4", "axis": "N4", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "Is mod_wsgi disabled in Apache by default?", "delta": "asks default disabled state, not component type"}
+{"id": "d3_s0090_N5_v1", "axis": "N5", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "Which Python WSGI applications can mod_wsgi host besides Django?", "delta": "all hostable applications but Django"}
+{"id": "d3_s0090_N5_v2", "axis": "N5", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "Which Python WSGI application is mod_wsgi least suited to hosting?", "delta": "least-suited application, not the general class"}
+{"id": "d3_s0090_N5_v3", "axis": "N5", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What was the first Apache module able to host Python WSGI applications?", "delta": "earliest such module, not mod_wsgi's kind"}
+{"id": "d3_s0090_N5_v4", "axis": "N5", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "Which Apache module other than mod_wsgi can host WSGI applications?", "delta": "any module but mod_wsgi"}
+{"id": "d3_s0090_N6_v1", "axis": "N6", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "Which Apache directive loads the mod_wsgi module?", "delta": "asks the loading directive, a presupposed fact"}
+{"id": "d3_s0090_N6_v2", "axis": "N6", "seed_question": "What kind of Apache component is mod_wsgi?", "answer": "It is an Apache module that can host any Python WSGI application, including Django.", "variation": "What performance overhead does hosting Django under mod_wsgi add?", "delta": "asks performance cost of the presupposed hosting"}
+{"id": "d3_s0096_P1_v1", "axis": "P1", "seed_question": "What class must a custom Django template backend inherit from, and which method(s) must it implement?", "answer": "It must inherit django.template.backends.base.BaseEngine and implement get_template(); implementing from_string() is optional.", "variation": "Which class does a custom Django template backend have to subclass, and what method(s) must it define?", "delta": null}

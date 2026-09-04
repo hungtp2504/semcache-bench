@@ -1,0 +1,82 @@
+{
+  "duration_api_ms": 154163,
+  "stop_reason": "end_turn",
+  "session_id": "6b0df03e-139d-4775-ba83-56aa8d042c7f",
+  "total_cost_usd": 0.805089,
+  "usage": {
+    "input_tokens": 20,
+    "cache_creation_input_tokens": 34164,
+    "cache_read_input_tokens": 498056,
+    "output_tokens": 44,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 34164,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 22,
+      "outputTokens": 7508,
+      "cacheReadInputTokens": 551278,
+      "cacheCreationInputTokens": 34164,
+      "webSearchRequests": 0,
+      "costUSD": 0.805089,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d4_s0747_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0747_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0747_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"no quantifier/extreme flipped; it is an exclusion/scope shift asking for other genes\"}\n{\"id\":\"d4_s0747_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0747_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0747_N6_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0747_N6_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0753_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0753_P1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0753_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0753_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0753_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0753_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0753_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0753_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0753_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0753_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0753_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0753_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0753_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0753_N1_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"\\\"what causes...\\\" is naturally answered by naming adiposis dolorosa, so the seed answer still answers it\"}\n{\"id\":\"d4_s0753_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0753_N2_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0753_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0753_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0753_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0753_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0753_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0753_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0753_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0753_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0753_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed answer already states it can also occur in men, so it answers which sex is rarest\"}\n{\"id\":\"d4_s0753_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0753_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no shifted presupposition; pain is already presupposed by the seed — this is an aspect/mechanism change\"}\n{\"id\":\"d4_s0753_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0759_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0759_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0759_P1_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0759_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0759_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0759_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0759_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0759_P2_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0759_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0759_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0759_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0759_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0759_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0759_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0759_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0759_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0759_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0759_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0759_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0759_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0759_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0759_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0759_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0759_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0759_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}",
+  "ttft_ms": 154271,
+  "type": "result",
+  "duration_ms": 154482,
+  "uuid": "797420b7-05fa-4f3c-aff5-ac90b5d41aa4",
+  "ttft_stream_ms": 2811,
+  "time_to_request_ms": 145,
+  "queued_turn_count": 0
+}

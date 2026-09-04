@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 186217,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "ceda6bf3-527e-4c9d-9961-71ea64362038",
+  "total_cost_usd": 0.4885641,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 30789,
+    "cache_read_input_tokens": 30247,
+    "output_tokens": 19650,
+    "output_tokens_details": {
+      "thinking_tokens": 16520
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 30789,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 19650,
+        "cache_read_input_tokens": 30247,
+        "cache_creation_input_tokens": 30789,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 30789
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 19650,
+      "cacheReadInputTokens": 30247,
+      "cacheCreationInputTokens": 30789,
+      "webSearchRequests": 0,
+      "costUSD": 0.4885641,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Looking at this task, it's a direct data-labeling/audit job fully specified by the rubric in your instructions — no coding skill applies here, so I'll apply the taxonomy directly to each item.\n\nA few judgment calls worth flagging: several \"N4\" items swap an assignment's *lifecycle point* (assigned→due, assigned→collected) rather than a true negation/antonym, so I scored those as better fitting N1 (aspect change) and marked them non-compliant for N4. Similarly, some \"N5\" items swap the topic entity (term project → \"last assignment\"/\"earliest deadline\") rather than adding an extremum to the same query, so those are marked non-compliant as more-than-one-change. One N4 item (\"stop being taught\") presupposes an ongoing/multi-semester offering not established by the seed, so it reads as N6 rather than N4.\n\n```jsonl\n{\"id\":\"d1_s0110_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0110_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0110_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'assigned' vs 'due' are different facets (start vs deadline), not a negation/antonym pair — fits N1 aspect change, not N4\"}\n{\"id\":\"d1_s0110_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"broadens 'term project' to any assignment while also flipping presence — more than one change, not a clean polarity flip\"}\n{\"id\":\"d1_s0110_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0110_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'collected' vs 'assigned' is an aspect/facet difference (submission vs assignment point), not a negation/antonym pair\"}\n{\"id\":\"d1_s0110_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps entity from 'term project' to generic 'last assignment' rather than adding an extremum to the same query — more than a single quantifier flip\"}\n{\"id\":\"d1_s0110_N5_v2\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"drops the term-project/assignment topic entirely; asks an unrelated fact about the calendar's last lecture\"}\n{\"id\":\"d1_s0110_N5_v3\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"asks lecture count, an unrelated fact, not an extremum on the original query\"}\n{\"id\":\"d1_s0110_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps entity from 'term project' to generic 'earliest deadline' rather than adding an extremum to the same query — more than a single quantifier flip\"}\n{\"id\":\"d1_s0110_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0110_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0116_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0116_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0116_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0116_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0116_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0116_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0116_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0116_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0116_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0116_P3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0116_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0116_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0116_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0116_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0116_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0116_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0116_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0116_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0116_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0116_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0116_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'stop being taught' presupposes an ongoing/multi-semester offering not established by the seed fact — fits N6 presupposition shift, not a clean negation of 'taught'\"}\n{\"id\":\"d1_s0116_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0116_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0116_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0116_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0116_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'how many semesters' asks a cardinality/count, not a min/max, earliest/latest, or at-least/at-most extremum\"}\n{\"id\":\"d1_s0116_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0116_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0004_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0004_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0004_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0004_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0004_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0004_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0004_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0004_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0004_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0004_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0004_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0004_P3_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0004_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0004_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0004_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0004_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0004_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0004_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0004_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0004_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n```",
+  "ttft_ms": 167133,
+  "ttft_stream_ms": 2524,
+  "time_to_request_ms": 55,
+  "type": "result",
+  "duration_ms": 186465,
+  "uuid": "a44e2262-2527-43a8-b655-164778f475c6"
+}

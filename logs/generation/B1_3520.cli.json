@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 138301,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "95ded904-215a-499f-a5d6-220103cff98c",
+  "total_cost_usd": 0.37829519999999994,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 51561,
+    "cache_read_input_tokens": 99666,
+    "output_tokens": 15211,
+    "output_tokens_details": {
+      "thinking_tokens": 12417
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 51561,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2811,
+        "cache_read_input_tokens": 69388,
+        "cache_creation_input_tokens": 12451,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12451
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15211,
+      "cacheReadInputTokens": 99666,
+      "cacheCreationInputTokens": 51561,
+      "webSearchRequests": 0,
+      "costUSD": 0.37829519999999994,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Apologies — this task requires the specified JSONL output format, not the findings tool. Here is the audit:\n\n{\"id\":\"d5_s0197_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0197_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0197_P2_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0197_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0197_P3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0197_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0197_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0197_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0197_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0197_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0197_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0197_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0197_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0197_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0197_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0197_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks which opinions are excluded from the count — an aspect change, not a negation/antonym flip of the pass/fail threshold\"}\n{\"id\":\"d5_s0197_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks which reviewers are barred from participating — an aspect change (eligibility), not a polarity flip\"}\n{\"id\":\"d5_s0197_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0197_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks max number of reviewers invited, a different fact from the agreeing-opinion threshold — not a quantifier flip of the same quantity\"}\n{\"id\":\"d5_s0197_N5_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0197_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0197_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0197_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0203_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0203_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0203_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0203_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0203_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0203_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0203_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0203_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0203_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0203_P3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0203_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0203_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0203_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0203_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0203_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0203_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0203_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0203_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0203_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0203_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0203_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which members are excluded — an aspect change, not a negation flip of the 50%-reuse rule\"}\n{\"id\":\"d5_s0203_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0203_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0203_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0203_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks max number of re-evaluation rounds, a fact not present in the seed — introduces a new quantity rather than flipping an existing quantifier\"}\n{\"id\":\"d5_s0203_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks minimum total council size, a different fact from the 50%-reused-members cap — aspect change, not a quantifier flip of the same quantity\"}\n{\"id\":\"d5_s0203_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0203_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0209_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0209_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0209_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0209_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0209_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0209_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0209_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0209_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0209_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 119824,
+  "ttft_stream_ms": 1401,
+  "time_to_request_ms": 18,
+  "type": "result",
+  "duration_ms": 138690,
+  "uuid": "edf169b9-d878-4440-83b3-11da8aac3719",
+  "queued_turn_count": 0
+}

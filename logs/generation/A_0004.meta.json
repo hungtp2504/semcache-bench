@@ -1,0 +1,51 @@
+{
+  "batch_id": "A_0004",
+  "stage": "A",
+  "model_requested": "claude-sonnet-5",
+  "model_reported": [
+    "claude-sonnet-5"
+  ],
+  "prompt_file": "prompts/A_extract.md",
+  "prompt_version": "1.0",
+  "cached_block_sha256": "052108e6f43207813cd56c945a2f812ce8fa7961b639063c16e6a64ad1104705",
+  "input_file": "/Users/ted/Documents/Working/PaperWriting/Cliffs and Slope/semcache-bench/corpus/d2/stage_a_input.jsonl",
+  "input_lines": "10:12",
+  "n_input": 3,
+  "ts_start": "2026-08-12T03:01:48Z",
+  "ts_end": "2026-08-12T03:03:11Z",
+  "cli_session_id": "677ea410-4db0-4509-877d-8ac243b66575",
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 34799,
+    "cache_read_input_tokens": 90808,
+    "output_tokens": 10147,
+    "output_tokens_details": {
+      "thinking_tokens": 4456
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 34799,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 5672,
+        "cache_read_input_tokens": 60563,
+        "cache_creation_input_tokens": 4481,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4481
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "cost_usd": 0.3882534
+}

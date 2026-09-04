@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 104375,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "60a012c6-d7db-4ab1-ad07-a295f96cdb30",
+  "total_cost_usd": 0.4451934000000001,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 41768,
+    "cache_read_input_tokens": 92628,
+    "output_tokens": 11119,
+    "output_tokens_details": {
+      "thinking_tokens": 8235
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 41768,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2869,
+        "cache_read_input_tokens": 62381,
+        "cache_creation_input_tokens": 9634,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 9634
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 11119,
+      "cacheReadInputTokens": 92628,
+      "cacheCreationInputTokens": 41768,
+      "webSearchRequests": 0,
+      "costUSD": 0.4451934000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0262_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0262_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0262_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0262_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0262_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0262_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0262_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0262_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps to a different event (the review session) rather than adding/removing a scope qualifier on the same quiz session question\"}\n{\"id\":\"d1_s0262_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0262_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0262_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"more than one change: drops Quiz-2 specificity, pluralizes to 'sessions', generalizes to any quiz — not a single negation flip\"}\n{\"id\":\"d1_s0262_N4_v2\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"'given' vs 'returned' is an aspect change (test date vs return date), not a negation/antonym flip\"}\n{\"id\":\"d1_s0262_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0262_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"converts to a yes/no confirmation question directly consistent with the seed fact, not a flip that makes the seed answer wrong-signed\"}\n{\"id\":\"d1_s0262_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0262_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0262_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"drops the quiz entity entirely and asks about the course's last lecture session in general — aspect change, not a quantifier flip on the same question\"}\n{\"id\":\"d1_s0262_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0262_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0262_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0266_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_P1_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0266_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0266_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0266_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0266_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0266_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0266_N2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0266_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0266_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0266_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"restructures to a 'weeks without sessions' count instead of flipping polarity on the per-week session question\"}\n{\"id\":\"d1_s0266_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"'optional vs required' introduces a new fact type (mandatory-ness), an aspect change rather than a negation/antonym flip\"}\n{\"id\":\"d1_s0266_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'outside the regular schedule' is a scope shift to a different session set, not a clean polarity flip\"}\n{\"id\":\"d1_s0266_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks for complement free-time quantity, a different metric entirely rather than a negated version of the same question\"}\n{\"id\":\"d1_s0266_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0266_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0266_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0266_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0266_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0266_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0272_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0272_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0272_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0272_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0272_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0272_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0272_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0272_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0272_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0272_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0272_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0272_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 83726,
+  "ttft_stream_ms": 1762,
+  "time_to_request_ms": 23,
+  "type": "result",
+  "duration_ms": 104887,
+  "uuid": "2fbaac29-960d-4ed2-92cc-2e94be866845"
+}

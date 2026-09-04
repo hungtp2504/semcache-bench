@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 235501,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "a2109703-2a9c-4b20-9920-0af402efc6ea",
+  "total_cost_usd": 0.5049703999999999,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 58039,
+    "cache_read_input_tokens": 91632,
+    "output_tokens": 25448,
+    "output_tokens_details": {
+      "thinking_tokens": 19194
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 58039,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3072,
+        "cache_read_input_tokens": 61354,
+        "cache_creation_input_tokens": 26963,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 26963
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 25448,
+      "cacheReadInputTokens": 91632,
+      "cacheCreationInputTokens": 58039,
+      "webSearchRequests": 0,
+      "costUSD": 0.5049703999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0568_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0568_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces an exclusion concept not present in seed; not a negation/antonym flip of 'how large are teams', reads as aspect change\"}\n{\"id\":\"d1_s0568_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0568_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts to individual-vs-team project structure, a new facet rather than a single polarity flip of the seed's question\"}\n{\"id\":\"d1_s0568_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0568_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed states a fixed team size (four); the permitted maximum likely coincides with seed's answer, so answer is not necessarily different\"}\n{\"id\":\"d1_s0568_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed states a fixed team size (four); the permitted minimum likely coincides with seed's answer, so answer is not necessarily different\"}\n{\"id\":\"d1_s0568_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed states a fixed 30-minute length; the permitted maximum likely coincides with seed's answer, so answer is not necessarily different\"}\n{\"id\":\"d1_s0568_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed states a fixed 30-minute length; the permitted minimum likely coincides with seed's answer, so answer is not necessarily different\"}\n{\"id\":\"d1_s0568_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0568_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0575_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0575_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0575_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0575_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0575_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0575_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0575_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0575_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0575_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0575_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0575_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0575_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes discontinuation; if the subject was taught only once, 'after which term did it stop' resolves to the same Fall 2004 fact as the seed (cf. the taxonomy's 'until vs after' non-example)\"}\n{\"id\":\"d1_s0575_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces an enrollment-eligibility restriction, a different facet rather than a negation of 'what level it was taught at'\"}\n{\"id\":\"d1_s0575_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed reports a single known offering (Fall 2004); 'earliest term' likely coincides with seed's answer, so not necessarily different\"}\n{\"id\":\"d1_s0575_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed reports a single known offering (Fall 2004); 'most recent term' likely coincides with seed's answer, so not necessarily different\"}\n{\"id\":\"d1_s0575_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed reports a single known level (undergraduate); 'highest level' likely coincides with seed's answer, so not necessarily different\"}\n{\"id\":\"d1_s0575_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed reports a single known Fall offering; 'last Fall term' likely coincides with seed's answer, so not necessarily different\"}\n{\"id\":\"d1_s0575_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0575_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0581_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0581_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0581_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0581_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_P3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0581_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0581_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0581_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"assignment date is a different fact, not a negation/antonym of 'due date' — no polarity flip present\"}\n{\"id\":\"d1_s0581_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"return/hand-back date is a different fact, not a negation of 'due date'\"}\n{\"id\":\"d1_s0581_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"solution-release date is a different fact, not a negation of 'due date'\"}",
+  "ttft_ms": 195379,
+  "ttft_stream_ms": 3086,
+  "time_to_request_ms": 58,
+  "type": "result",
+  "duration_ms": 238865,
+  "uuid": "b780e9fe-d2e0-491b-be32-452facf54365",
+  "queued_turn_count": 0
+}

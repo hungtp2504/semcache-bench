@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 97941,
+  "stop_reason": "end_turn",
+  "session_id": "52bba180-a38b-40ab-b797-2769fdbae3b9",
+  "total_cost_usd": 0.559504,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32789,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 8883,
+    "output_tokens_details": {
+      "thinking_tokens": 6169
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32789,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8883,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32789,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32789
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 8883,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32789,
+      "webSearchRequests": 0,
+      "costUSD": 0.559504,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0169_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0169_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0169_P1_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0169_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0169_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0169_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0169_P2_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0169_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0169_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0169_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0169_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0169_N1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0169_N1_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0169_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0169_N2_v2\",\"axis_ok\":true,\"conf\":0.58,\"issue\":null}\n{\"id\":\"d3_s0169_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0169_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0169_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0169_N4_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d3_s0169_N4_v3\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d3_s0169_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"yes/no premise check, not a polarity flip; seed answer directly settles it (DIRS is not empty)\"}\n{\"id\":\"d3_s0169_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"no quantifier flipped vs seed; seed answer lists both override files in order so it still answers 'first'\"}\n{\"id\":\"d3_s0169_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"no quantifier flipped vs seed; seed answer lists both override files in order so it still answers 'last'\"}\n{\"id\":\"d3_s0169_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"count question, not a quantifier/extreme flip; count is directly derivable from the seed answer's DIRS value\"}\n{\"id\":\"d3_s0169_N5_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"with a single DIRS entry the shortest working path is the seed's value, so the answer is unchanged\"}\n{\"id\":\"d3_s0169_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0169_N6_v2\",\"axis_ok\":true,\"conf\":0.58,\"issue\":null}\n{\"id\":\"d3_s0175_P1_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d3_s0175_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0175_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0175_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0175_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0175_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0175_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0175_P3_v1\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d3_s0175_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0175_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0175_N1_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0175_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0175_N2_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"scope widened to the whole project but rsync's incremental-transfer rationale is unchanged, so the seed answer still answers it\"}\n{\"id\":\"d3_s0175_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0175_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0175_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0175_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0175_N4_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"push/pull direction flip leaves the answer the same (rsync still sends only changed parts), so the seed answer still answers it\"}\n{\"id\":\"d3_s0175_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0175_N5_v1\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d3_s0175_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0175_N5_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d3_s0175_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0175_N6_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0175_N6_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d3_s0188_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0188_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0188_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0188_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0188_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}",
+  "ttft_ms": 77414,
+  "type": "result",
+  "duration_ms": 98148,
+  "uuid": "73086634-81b9-4f46-9bed-21f9ecf0d30e",
+  "ttft_stream_ms": 2982,
+  "time_to_request_ms": 16,
+  "queued_turn_count": 0
+}

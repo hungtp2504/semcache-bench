@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 112237,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "849c1197-2992-455e-9268-7033ccbd76e6",
+  "total_cost_usd": 0.3157616,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 43298,
+    "cache_read_input_tokens": 92808,
+    "output_tokens": 12400,
+    "output_tokens_details": {
+      "thinking_tokens": 9557
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43298,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2770,
+        "cache_read_input_tokens": 62530,
+        "cache_creation_input_tokens": 11046,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11046
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 12400,
+      "cacheReadInputTokens": 92808,
+      "cacheCreationInputTokens": 43298,
+      "webSearchRequests": 0,
+      "costUSD": 0.3157616,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0461_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0461_P2_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0461_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0461_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0461_P3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0461_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0461_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0461_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0461_N1_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0461_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0461_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0461_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0461_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0461_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks who should avoid it, an aspect shift rather than a negation/antonym flip of 'purpose'\"}\n{\"id\":\"d3_s0461_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0461_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks which features are excluded, an aspect change rather than a polarity flip\"}\n{\"id\":\"d3_s0461_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0461_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0461_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an unrelated 'earliest adoption point' facet rather than flipping an extreme present in the seed\"}\n{\"id\":\"d3_s0461_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about a version number, an unrelated aspect, not a quantifier/extreme flip\"}\n{\"id\":\"d3_s0461_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks which channel is most stable, an unrelated aspect not a flip of an extreme in the seed\"}\n{\"id\":\"d3_s0461_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0461_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0468_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0468_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0468_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0468_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0468_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0468_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0468_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0468_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0468_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0468_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0468_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0468_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0468_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0468_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0468_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0468_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0468_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0468_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0468_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0468_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks consequence of rule violation, an aspect shift rather than a negation of 'model'\"}\n{\"id\":\"d3_s0468_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks which code gets rejected, an aspect shift not a clean polarity flip\"}\n{\"id\":\"d3_s0468_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks fallback behavior when a rule set can't be modeled, an aspect shift not a negation flip\"}\n{\"id\":\"d3_s0468_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces 'first' ordering absent from seed rather than flipping the seed's 'two' quantifier\"}\n{\"id\":\"d3_s0468_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0468_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0468_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a 'last checked' ordering concept absent from seed, not a flip of 'two'\"}\n{\"id\":\"d3_s0468_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0468_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0475_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0475_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0475_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0475_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0475_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0475_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0475_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0475_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0475_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 92465,
+  "ttft_stream_ms": 2227,
+  "time_to_request_ms": 51,
+  "type": "result",
+  "duration_ms": 113067,
+  "uuid": "67b0360e-a572-4191-9fef-f87d621a7265",
+  "queued_turn_count": 0
+}

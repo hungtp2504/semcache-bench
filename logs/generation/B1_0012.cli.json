@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 139656,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "2ecba3f8-16a6-4962-a9d2-23b1c4f966a1",
+  "total_cost_usd": 0.5239569000000001,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 44908,
+    "cache_read_input_tokens": 93173,
+    "output_tokens": 15103,
+    "output_tokens_details": {
+      "thinking_tokens": 12194
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 44908,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2893,
+        "cache_read_input_tokens": 62928,
+        "cache_creation_input_tokens": 12225,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12225
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15103,
+      "cacheReadInputTokens": 93173,
+      "cacheCreationInputTokens": 44908,
+      "webSearchRequests": 0,
+      "costUSD": 0.5239569000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0008_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0008_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0008_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0008_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0008_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0008_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"ticket→PR swap likely doesn't change the venue answer; same channel plausibly covers reminders about either, so answer not necessarily different\"}\n{\"id\":\"d3_s0008_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0008_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks where replies arrive, not a negation/antonym of the seed's action — this is an aspect change (N1), not a polarity flip\"}\n{\"id\":\"d3_s0008_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"bulk vs single ticket doesn't necessarily change the venue/channel answer\"}\n{\"id\":\"d3_s0008_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new timing dimension rather than flipping an existing quantifier/extreme in the seed question; better fits N1 aspect change\"}\n{\"id\":\"d3_s0008_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0008_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0009_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0009_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0009_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0009_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0009_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0009_N2_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d3_s0009_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0009_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0009_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about good timing rather than negating the 'bad idea' claim; not a clean polarity flip, closer to a presupposition/aspect shift\"}\n{\"id\":\"d3_s0009_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0009_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"reminding about every ticket vs one ticket likely doesn't change the core reasoning (team still focused on release), so answer not necessarily different\"}\n{\"id\":\"d3_s0009_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0010_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0010_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0010_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0010_P1_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0010_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0010_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0010_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0010_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0010_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed answer states self-check-in is 'always' discouraged; narrowing to a trivial typo fix likely doesn't change that answer\"}\n{\"id\":\"d3_s0010_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0010_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0010_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0010_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0010_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"reopening a closed ticket is a different lifecycle action, not an antonym/negation of marking 'Ready For Checkin'\"}\n{\"id\":\"d3_s0010_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new numeric-threshold dimension not present in the seed rather than flipping an existing quantifier/extreme; closer to N1 aspect change\"}\n{\"id\":\"d3_s0010_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0010_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0010_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}",
+  "ttft_ms": 119101,
+  "ttft_stream_ms": 5578,
+  "time_to_request_ms": 28,
+  "type": "result",
+  "duration_ms": 140775,
+  "uuid": "6c5e670c-81a1-467d-b5f9-3e6de38f3bc9"
+}

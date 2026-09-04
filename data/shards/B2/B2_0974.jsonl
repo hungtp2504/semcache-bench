@@ -1,0 +1,60 @@
+{"id": "d2_s0513_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N4_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.7, "issue": "reverses translation direction (DE->EN) rather than flipping a negation/antonym; not a polarity flip", "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N4_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "restructures beyond a single flip, and the seed answer ('Gott' meaning god) largely supplies the requested mapping", "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N4_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "'left untranslated' is a new category, not an antonym/negation flip of 'incorrectly produced'", "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N5_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0513_N6_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.65, "issue": "seed answer already establishes 'Torwart' = goalie, so it still answers the variant; also an aspect change rather than a presupposition shift", "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N4_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "seed answer ('equally distributed into 144/100') still fully answers how the data is distributed; flip does not change the answer content", "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N4_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "'unlabeled' is an orthogonal property, not a negation/antonym of 'split'", "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N5_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "changes the queried facet (number of splits) rather than flipping a single quantifier on the same fact", "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N5_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0518_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}
+{"id": "d2_s0524_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_0974", "ts": "2026-08-29T03:57:24Z"}

@@ -1,0 +1,51 @@
+{
+  "batch_id": "B1_1136",
+  "stage": "B1",
+  "model_requested": "claude-sonnet-5",
+  "model_reported": [
+    "claude-sonnet-5"
+  ],
+  "prompt_file": "prompts/B_judge.md",
+  "prompt_version": "1.0",
+  "cached_block_sha256": "36b1821c767ee2a323b1ce6a5386d0426ef53601a782c09612303a48c45ebcb0",
+  "input_file": "data/judge_input_B1.jsonl",
+  "input_lines": "11701:11760",
+  "n_input": 60,
+  "ts_start": "2026-08-25T04:50:20Z",
+  "ts_end": "2026-08-25T04:52:32Z",
+  "cli_session_id": "463da9e9-f6e4-4c3d-9dbc-acd7bc09729f",
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 43725,
+    "cache_read_input_tokens": 91920,
+    "output_tokens": 13673,
+    "output_tokens_details": {
+      "thinking_tokens": 10853
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43725,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2731,
+        "cache_read_input_tokens": 61642,
+        "cache_creation_input_tokens": 12361,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12361
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "cost_usd": 0.33002200000000004
+}

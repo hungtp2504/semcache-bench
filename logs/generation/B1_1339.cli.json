@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 176633,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "c59fc5b6-8c81-4005-a523-75f2a652b8b9",
+  "total_cost_usd": 0.3854302,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47610,
+    "cache_read_input_tokens": 92011,
+    "output_tokens": 17658,
+    "output_tokens_details": {
+      "thinking_tokens": 14689
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47610,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2919,
+        "cache_read_input_tokens": 61733,
+        "cache_creation_input_tokens": 16155,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16155
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17658,
+      "cacheReadInputTokens": 92011,
+      "cacheCreationInputTokens": 47610,
+      "webSearchRequests": 0,
+      "costUSD": 0.3854302,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0428_N3_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"pages vs words is a unit/facet change, not an entity substitution; fits N1 better\"}\n{\"id\":\"d3_s0428_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"excludes a subset (tutorials) rather than flipping polarity of same predicate; fits N2 scope narrowing\"}\n{\"id\":\"d3_s0428_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"threshold comparison with no negation/antonym flip\"}\n{\"id\":\"d3_s0428_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"excludes a subset (code samples) rather than flipping polarity; fits N2 scope narrowing\"}\n{\"id\":\"d3_s0428_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"excludes a subset (non-English) rather than flipping polarity; fits N2 scope narrowing\"}\n{\"id\":\"d3_s0428_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0428_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0428_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0428_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0428_N6_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"presupposes the same fact as seed's answer (450k words) rather than a different fact; asks a different facet, fits N1\"}\n{\"id\":\"d3_s0428_N6_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"presupposes the same fact as seed's answer rather than a different fact; fits N1 aspect change\"}\n{\"id\":\"d3_s0454_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0454_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0454_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0454_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_P2_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0454_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0454_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0454_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0454_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0454_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0454_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0454_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0454_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which components are exempt (different subject/facet) rather than flipping polarity of the seed's convention question; fits N1\"}\n{\"id\":\"d3_s0454_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0454_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0454_N5_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d3_s0454_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for a count, not a min/max/earliest/latest extreme; fits N1\"}\n{\"id\":\"d3_s0454_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which partner (different entity/subject), not an extreme value on the seed's quantity; fits N1\"}\n{\"id\":\"d3_s0454_N6_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"presupposes the same fact as seed's answer rather than a different fact; asks motivation, fits N1\"}\n{\"id\":\"d3_s0454_N6_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"presupposes the same fact as seed's answer rather than a different fact; asks placement, fits N1\"}\n{\"id\":\"d3_s0460_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0460_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0460_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0460_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0460_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0460_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d3_s0460_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0460_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0460_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about deprecation, a different fact/facet, not a negation flip of the same authorship/publication predicate; fits N1\"}\n{\"id\":\"d3_s0460_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"comparative ordering against a new reference (React 18.3) with no explicit negation/antonym flip\"}",
+  "ttft_ms": 156455,
+  "ttft_stream_ms": 1490,
+  "time_to_request_ms": 34,
+  "type": "result",
+  "duration_ms": 177455,
+  "uuid": "13dd2e31-449c-4a3b-bcdc-acafd2efc5be",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 241576,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "153d4206-e430-4221-8bc9-cf1cb202eea2",
+  "total_cost_usd": 0.4765062,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 54783,
+    "cache_read_input_tokens": 93131,
+    "output_tokens": 23874,
+    "output_tokens_details": {
+      "thinking_tokens": 20770
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 54783,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3052,
+        "cache_read_input_tokens": 62853,
+        "cache_creation_input_tokens": 22208,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 22208
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 23874,
+      "cacheReadInputTokens": 93131,
+      "cacheCreationInputTokens": 54783,
+      "webSearchRequests": 0,
+      "costUSD": 0.4765062,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0687_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0687_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0687_P2_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0687_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0687_P3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"substitutes wording (technique→method, 'words drive prediction'→'word importance') beyond surface noise allowed by P3\"}\n{\"id\":\"d2_s0687_P3_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0687_P3_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"no noise (typo/casing/shorthand) present; this is a clean syntactic restructure, fits P2 not P3\"}\n{\"id\":\"d2_s0687_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0687_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0687_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"LRP is applied regardless of correctness, so seed's answer likely still fully answers a misclassification-scoped question\"}\n{\"id\":\"d2_s0687_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"changes both scope (specific classifier→general NNs) and verb (use→survey), more than one scope qualifier change\"}\n{\"id\":\"d2_s0687_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0687_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0687_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"LRP decomposes both positive and negative relevance, so seed's answer likely still correctly answers the 'suppress' framing—no wrong sign\"}\n{\"id\":\"d2_s0687_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0687_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's answer (paper does decompose) directly and correctly resolves this yes/no without misleading; same answer content\"}\n{\"id\":\"d2_s0687_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's answer already establishes LRP is for explaining not building; no misleading wrong-sign result\"}\n{\"id\":\"d2_s0687_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for a specific word, not the technique; introduces new aspect rather than flipping an existing quantifier in the seed\"}\n{\"id\":\"d2_s0687_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"same issue as v1: different aspect (specific word), not a quantifier flip of the seed question\"}\n{\"id\":\"d2_s0687_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a highlighted-word-count dimension absent from seed rather than flipping an existing quantifier\"}\n{\"id\":\"d2_s0687_N5_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"introduces a 'first tried' temporal dimension not present in seed rather than flipping an existing quantifier\"}\n{\"id\":\"d2_s0687_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0687_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0693_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0693_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0693_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0693_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0693_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0693_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0693_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0693_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0693_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0693_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0693_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0693_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0693_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0693_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0693_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0693_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0693_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0693_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0693_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0693_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0693_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0693_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed's answer (fixed 14-class taxonomy existed) resolves this yes/no consistently without misleading; same answer content\"}\n{\"id\":\"d2_s0693_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces per-class accuracy breakdown absent from seed rather than flipping an existing quantifier\"}\n{\"id\":\"d2_s0693_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for a class label, not a numeric extreme; different answer type from seed's accuracy/class-count pair\"}\n{\"id\":\"d2_s0693_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces a multi-run/varying-taxonomy-size premise not present in seed rather than flipping an existing quantifier\"}\n{\"id\":\"d2_s0693_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces a multi-configuration comparison not present in seed rather than flipping an existing quantifier\"}\n{\"id\":\"d2_s0693_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0693_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0700_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0700_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0700_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0700_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0700_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0700_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0700_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0700_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0700_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 218703,
+  "ttft_stream_ms": 2680,
+  "time_to_request_ms": 32,
+  "type": "result",
+  "duration_ms": 242344,
+  "uuid": "8dfb65f5-cff4-4e8c-a1e4-a7f2b06a1f5f",
+  "queued_turn_count": 0
+}

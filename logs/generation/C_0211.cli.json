@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 292215,
+  "stop_reason": "end_turn",
+  "session_id": "f1afbebb-99ea-4002-9136-13378e1f5e43",
+  "total_cost_usd": 0.2616533,
+  "usage": {
+    "input_tokens": 19,
+    "cache_creation_input_tokens": 47007,
+    "cache_read_input_tokens": 59953,
+    "output_tokens": 32325,
+    "output_tokens_details": {
+      "thinking_tokens": 19013
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47007,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 10,
+        "output_tokens": 325,
+        "cache_read_input_tokens": 37454,
+        "cache_creation_input_tokens": 32052,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32052
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 19,
+      "outputTokens": 32325,
+      "cacheReadInputTokens": 59953,
+      "cacheCreationInputTokens": 47007,
+      "webSearchRequests": 0,
+      "costUSD": 0.2616533,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"seed_id\":\"d3_s0474\",\"axis\":\"N5\",\"v\":3,\"text\":\"Who wrote the React 19 Upgrade Guide first, before April 25, 2024?\",\"delta\":\"flips to earliest draft or pre-publication\"}\n{\"seed_id\":\"d3_s0474\",\"axis\":\"N5\",\"v\":4,\"text\":\"What is the earliest React version with an upgrade guide authored by Ricky Hanlon?\",\"delta\":\"flips to earliest version\"}\n{\"seed_id\":\"d3_s0474\",\"axis\":\"N6\",\"v\":1,\"text\":\"Would someone other than Ricky Hanlon have written the React 19 Upgrade Guide if asked?\",\"delta\":\"presupposes guide authorship might vary\"}\n{\"seed_id\":\"d3_s0474\",\"axis\":\"N6\",\"v\":2,\"text\":\"Was the React 19 Upgrade Guide delayed from its original planned publication date?\",\"delta\":\"presupposes publication date might have changed\"}\n\nComplete. All 10 seeds × 28 variants = 280 JSONL lines generated.",
+  "ttft_ms": 172760,
+  "type": "result",
+  "duration_ms": 292468,
+  "uuid": "e6031d9d-8393-404a-b8b6-9cb28c2bdd1f",
+  "ttft_stream_ms": 1724,
+  "time_to_request_ms": 37,
+  "queued_turn_count": 0
+}

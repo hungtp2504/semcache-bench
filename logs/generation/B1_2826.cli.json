@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 146265,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "b9b5c155-2d86-4811-9a41-1a94b9f09de5",
+  "total_cost_usd": 0.360535,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 46642,
+    "cache_read_input_tokens": 92045,
+    "output_tokens": 15555,
+    "output_tokens_details": {
+      "thinking_tokens": 12700
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 46642,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2761,
+        "cache_read_input_tokens": 61767,
+        "cache_creation_input_tokens": 15153,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15153
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15555,
+      "cacheReadInputTokens": 92045,
+      "cacheCreationInputTokens": 46642,
+      "webSearchRequests": 0,
+      "costUSD": 0.360535,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0194_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines the disable→keep polarity flip with an added scope qualifier ('terminals lacking ANSI support') not in the seed, conflating N4 with a scope change\"}\n{\"id\":\"d3_s0194_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0194_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0194_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks the count of available palettes, not a min/max extreme of the disable-color question; this is a distinct aspect, not a quantifier flip\"}\n{\"id\":\"d3_s0194_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to a different entity (management commands) and facet entirely rather than flipping an extreme of the same disable-color question\"}\n{\"id\":\"d3_s0194_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0194_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0200_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0200_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0200_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0200_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0200_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0200_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0200_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0200_P2_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0200_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0200_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0200_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0200_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0200_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0200_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0200_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"removes multiple qualifiers at once (unique field + existing rows + multi-step) rather than exactly one scope qualifier\"}\n{\"id\":\"d3_s0200_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0200_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0200_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0200_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0200_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0200_N4_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0200_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0200_N5_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d3_s0200_N5_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d3_s0200_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0200_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about the first step of the overall migration process — an aspect-change question, not an extreme flip of the race-condition question\"}\n{\"id\":\"d3_s0200_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0200_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0213_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0213_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0213_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0213_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0213_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0213_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0213_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0213_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0213_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0213_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0213_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0213_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0213_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0213_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0213_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the same recommended tool likely still covers color-contrast checks, so the narrowed scope may not yield an answer different from the seed's\"}\n{\"id\":\"d3_s0213_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0213_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0213_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0213_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0213_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0213_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0213_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0213_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0213_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts entity from 'tool' to 'checks' entirely — an aspect change rather than a min/max extreme of the same tool question\"}\n{\"id\":\"d3_s0213_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}",
+  "ttft_ms": 127193,
+  "ttft_stream_ms": 1416,
+  "time_to_request_ms": 19,
+  "type": "result",
+  "duration_ms": 147180,
+  "uuid": "9b55d8cc-6141-45f1-9d5b-b2d030e92b05",
+  "queued_turn_count": 0
+}

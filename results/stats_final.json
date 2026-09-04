@@ -1,0 +1,72 @@
+{
+  "friedman": {
+    "chi2": 42.00836820083683,
+    "p": 1.3493571250703511e-06
+  },
+  "avg_ranks": {
+    "DistilBERT": 7.5,
+    "ALBERT": 8.166666666666668,
+    "MiniLM-L6": 5.166666666666667,
+    "E5-large": 5.333333333333333,
+    "GTE-large": 3.1666666666666665,
+    "Nomic-v1.5": 2.333333333333333,
+    "BGE-M3": 1.5,
+    "mE5-large": 3.5,
+    "Vi-SBERT": 8.333333333333332
+  },
+  "critical_difference": 4.904692650921157,
+  "nemenyi_p": {
+    "DistilBERT|MiniLM-L6": 0.7862390723512098,
+    "DistilBERT|E5-large": 0.8424113524212697,
+    "DistilBERT|GTE-large": 0.08890940415914328,
+    "DistilBERT|Nomic-v1.5": 0.017788073559471318,
+    "DistilBERT|mE5-large": 0.15194786866979126,
+    "DistilBERT|Vi-SBERT": 0.999990534505197,
+    "ALBERT|DistilBERT": 0.9999999995348198,
+    "ALBERT|MiniLM-L6": 0.7221225238442743,
+    "ALBERT|E5-large": 0.7862390723512097,
+    "ALBERT|GTE-large": 0.06640815701235647,
+    "ALBERT|Nomic-v1.5": 0.01234695857988044,
+    "ALBERT|BGE-M3": 0.001628435635223635,
+    "ALBERT|mE5-large": 0.1171734494514417,
+    "ALBERT|Vi-SBERT": 0.9999993230556892,
+    "MiniLM-L6|Nomic-v1.5": 0.6876948023801467,
+    "MiniLM-L6|mE5-large": 0.9803911770119345,
+    "MiniLM-L6|Vi-SBERT": 0.5413452063690801,
+    "E5-large|MiniLM-L6": 0.9999999995348198,
+    "E5-large|GTE-large": 0.9090879082266278,
+    "E5-large|Nomic-v1.5": 0.615594951144018,
+    "E5-large|mE5-large": 0.964720104077505,
+    "E5-large|Vi-SBERT": 0.6155949511440172,
+    "GTE-large|MiniLM-L6": 0.9413969365693622,
+    "GTE-large|Nomic-v1.5": 0.9998534788842418,
+    "GTE-large|mE5-large": 0.9999998840990862,
+    "GTE-large|Vi-SBERT": 0.029960319122695256,
+    "Nomic-v1.5|mE5-large": 0.9982498727768135,
+    "Nomic-v1.5|Vi-SBERT": 0.004670641830695654,
+    "BGE-M3|DistilBERT": 0.002505899954093449,
+    "BGE-M3|MiniLM-L6": 0.33040707458851315,
+    "BGE-M3|E5-large": 0.2704259235544444,
+    "BGE-M3|GTE-large": 0.9803911770119345,
+    "BGE-M3|Nomic-v1.5": 0.9998534788842418,
+    "BGE-M3|mE5-large": 0.9413969365693622,
+    "BGE-M3|Vi-SBERT": 0.0005250477151694799,
+    "Vi-SBERT|mE5-large": 0.05706162767385148
+  },
+  "headline_cis": {
+    "answer_instability": [
+      0.355878145359011,
+      0.38203047631944437
+    ],
+    "false_answer_rate_mean": [
+      0.1147238871104406,
+      0.13256496779301954
+    ]
+  },
+  "latency": {
+    "bi_encoder_ms_per_query": 1.86,
+    "cross_encoder_ms_per_pair": 3.76,
+    "device": "mps",
+    "note": "M4 Pro, batch 64"
+  }
+}

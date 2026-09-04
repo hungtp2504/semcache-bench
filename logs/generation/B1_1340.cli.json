@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 87380,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "48c7e92b-1583-4b92-89ca-2f1450ec62c4",
+  "total_cost_usd": 0.2681226,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 38867,
+    "cache_read_input_tokens": 92833,
+    "output_tokens": 9408,
+    "output_tokens_details": {
+      "thinking_tokens": 6466
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 38867,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2865,
+        "cache_read_input_tokens": 62555,
+        "cache_creation_input_tokens": 6590,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 6590
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 9408,
+      "cacheReadInputTokens": 92833,
+      "cacheCreationInputTokens": 38867,
+      "webSearchRequests": 0,
+      "costUSD": 0.2681226,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0460_N4_v4\",\"axis_ok\":false,\"conf\":0.9,\"issue\":\"asks about advice re: individual use, not a negation of the seed's authorship/date claim; unrelated new content, not a polarity flip\"}\n{\"id\":\"d3_s0460_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0460_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0460_N5_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"swaps to a different, unrelated post entirely rather than flipping a quantifier/extreme on the same entity\"}\n{\"id\":\"d3_s0460_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"'apart from X' is an exclusion filter, not a min/max/earliest/latest quantifier flip\"}\n{\"id\":\"d3_s0460_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0460_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0467_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0467_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0467_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0467_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0467_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0467_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0467_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0467_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0467_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0467_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks about availability outside Meta, unrelated new claim rather than a negation of 'runs in production at instagram.com'\"}\n{\"id\":\"d3_s0467_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0467_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0467_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks about automatic memoization behavior, an unrelated new claim rather than a negation of the production-site fact\"}\n{\"id\":\"d3_s0467_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0467_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0467_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"'besides X' is an exclusion filter, not a min/max/earliest/latest flip\"}\n{\"id\":\"d3_s0467_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines an added temporal scope ('before Feb 2024') with an extreme ('latest'), more than one flip, and effectively swaps to a different document\"}\n{\"id\":\"d3_s0467_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0467_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0474_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0474_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0474_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0474_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0474_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0474_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0474_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0474_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0474_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0474_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0474_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0474_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0474_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0474_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0474_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0474_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0474_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0474_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0474_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"reviewer vs author is a different role/facet, not a clear negation/antonym of the same claim\"}\n{\"id\":\"d3_s0474_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0474_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks a comparative ordering question against an external event (React 19 stable), not a polarity flip of publish date\"}\n{\"id\":\"d3_s0474_N4_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"asks about skippable steps, an unrelated new facet rather than a negation of authorship/date\"}\n{\"id\":\"d3_s0474_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0474_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines an added scope ('before the guide') with an extreme ('most recent'), more than a single quantifier flip, and swaps to a different document\"}\n{\"id\":\"d3_s0474_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}",
+  "ttft_ms": 67686,
+  "ttft_stream_ms": 1450,
+  "time_to_request_ms": 27,
+  "type": "result",
+  "duration_ms": 88149,
+  "uuid": "702cbe09-a75a-4809-b8d1-486092426fec",
+  "queued_turn_count": 0
+}

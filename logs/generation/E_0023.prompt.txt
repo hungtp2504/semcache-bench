@@ -1,0 +1,73 @@
+You are the verification tier of a semantic cache. The first tier (embedding similarity)
+proposed serving a stored answer to a new query. You see both questions and the stored
+answer. Decide whether serving is safe.
+
+DECISION RULE
+SERVE      — the stored answer is a fully correct and complete answer to the new query.
+REGENERATE — anything else: different entity/version, flipped polarity, different
+             quantifier or extreme, different facet or scope, different presupposed fact,
+             or you are unsure. When in doubt, REGENERATE (a false hit sends a user the
+             wrong answer; a false miss only costs one LLM call).
+
+Pay attention to small discrete differences the first tier is blind to: "1" vs "2",
+negation words, earliest/latest, min/max, sibling entities. Do not be fooled by large
+surface differences that change nothing (typos, missing diacritics, paraphrase).
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"pair_id":"...","decision":"SERVE|REGENERATE","conf":<0..1>}
+
+
+[BATCH INPUT]
+batch_id: E_0023
+pairs (JSONL — pair_id, cached_question, cached_answer, new_query):
+
+{"pair_id": "d1_s0147_N4_v2", "cached_question": "What is the title of the recitation material listed on the 1.033 assignments page?", "cached_answer": "\"Why do sandcastles fall?\"", "new_query": "Which recitation material is missing from the 1.033 assignments page?"}
+{"pair_id": "d1_s0147_P1_v2", "cached_question": "What is the title of the recitation material listed on the 1.033 assignments page?", "cached_answer": "\"Why do sandcastles fall?\"", "new_query": "Which title is given to the recitation handout on 1.033's assignments page?"}
+{"pair_id": "d1_s0147_P2_v1", "cached_question": "What is the title of the recitation material listed on the 1.033 assignments page?", "cached_answer": "\"Why do sandcastles fall?\"", "new_query": "Tell me the title of the recitation material shown on the 1.033 assignments page."}
+{"pair_id": "d1_s0147_P2_v2", "cached_question": "What is the title of the recitation material listed on the 1.033 assignments page?", "cached_answer": "\"Why do sandcastles fall?\"", "new_query": "The recitation material listed for 1.033 assignments carries what title?"}
+{"pair_id": "d1_s0147_P2_v3", "cached_question": "What is the title of the recitation material listed on the 1.033 assignments page?", "cached_answer": "\"Why do sandcastles fall?\"", "new_query": "I'm looking for the title of 1.033's recitation material on the assignments page."}
+{"pair_id": "d1_s0147_P2_v4", "cached_question": "What is the title of the recitation material listed on the 1.033 assignments page?", "cached_answer": "\"Why do sandcastles fall?\"", "new_query": "Give me the name under which 1.033 lists its recitation material."}
+{"pair_id": "d1_s0147_P3_v2", "cached_question": "What is the title of the recitation material listed on the 1.033 assignments page?", "cached_answer": "\"Why do sandcastles fall?\"", "new_query": "1.033 recitation material title?"}
+{"pair_id": "d1_s0147_P3_v4", "cached_question": "What is the title of the recitation material listed on the 1.033 assignments page?", "cached_answer": "\"Why do sandcastles fall?\"", "new_query": "recitation material name for 1.033 assignments — wat is it"}
+{"pair_id": "d1_s0149_N1_v1", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What reading is assigned for week 1 of the 1.033 course calendar?"}
+{"pair_id": "d1_s0149_N1_v2", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What assignment is due in week 1 of the 1.033 course calendar?"}
+{"pair_id": "d1_s0149_N2_v1", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What topics are covered in the first month of the 1.033 course calendar?"}
+{"pair_id": "d1_s0149_N2_v2", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What topic is covered in the recitation during week 1 of the 1.033 course calendar?"}
+{"pair_id": "d1_s0149_N3_v1", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What topic is covered in week 2 of the 1.033 course calendar?"}
+{"pair_id": "d1_s0149_N4_v1", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What topic is skipped in week 1 of the 1.033 course calendar?"}
+{"pair_id": "d1_s0149_N4_v3", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "Which topic was dropped from week 1 of the 1.033 course calendar?"}
+{"pair_id": "d1_s0149_N5_v1", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What topic is covered in the last week of the 1.033 course calendar?"}
+{"pair_id": "d1_s0149_N5_v2", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What is the final topic listed in the 1.033 course calendar?"}
+{"pair_id": "d1_s0149_N6_v1", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "How many weeks does the 1.033 course calendar run?"}
+{"pair_id": "d1_s0149_P1_v2", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What subject is taught in the first week of the 1.033 calendar?"}
+{"pair_id": "d1_s0149_P1_v4", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "What material does the 1.033 course calendar list for week 1?"}
+{"pair_id": "d1_s0149_P2_v2", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "Tell me the topic scheduled for week 1 in the 1.033 course calendar."}
+{"pair_id": "d1_s0149_P2_v3", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "I'd like to know what week 1 of the 1.033 calendar covers."}
+{"pair_id": "d1_s0149_P3_v2", "cached_question": "What topic is covered in week 1 of the 1.033 course calendar?", "cached_answer": "Description of Finite Deformation.", "new_query": "1.033 calendar week 1 topic??"}
+{"pair_id": "d1_s0150_N1_v1", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "What readings are assigned for the Thermoelasticity week of 1.033?"}
+{"pair_id": "d1_s0150_N2_v1", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Which week of 1.033 covers linear thermoelasticity of isotropic solids?"}
+{"pair_id": "d1_s0150_N2_v2", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Which weeks of 1.033 cover thermodynamics topics generally?"}
+{"pair_id": "d1_s0150_N3_v1", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Which week of 1.033 covers Plasticity?"}
+{"pair_id": "d1_s0150_N3_v2", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Which week of 1.022 covers Thermoelasticity?"}
+{"pair_id": "d1_s0150_N4_v1", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Which weeks of 1.033 do not cover Thermoelasticity?"}
+{"pair_id": "d1_s0150_N4_v2", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Which week of 1.033 omits Thermoelasticity from the syllabus?"}
+{"pair_id": "d1_s0150_N5_v1", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Which is the last week of 1.033 to cover Thermoelasticity?"}
+{"pair_id": "d1_s0150_N6_v1", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "What homework is due during week 5 of 1.033 when Thermoelasticity is covered?"}
+{"pair_id": "d1_s0150_N6_v2", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Is the week 5 Thermoelasticity material on the 1.033 exam?"}
+{"pair_id": "d1_s0150_P1_v2", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Thermoelasticity is taught in which week of 1.033?"}
+{"pair_id": "d1_s0150_P2_v1", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Tell me the week of 1.033 that covers Thermoelasticity."}
+{"pair_id": "d1_s0150_P2_v2", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "Thermoelasticity — which 1.033 week is it scheduled in?"}
+{"pair_id": "d1_s0150_P2_v3", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "I would like to know when Thermoelasticity comes up in the 1.033 schedule."}
+{"pair_id": "d1_s0150_P3_v1", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "which week does 1.033 do thermoelasticity?"}
+{"pair_id": "d1_s0150_P3_v2", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "1033 thermoelasticity = week?"}
+{"pair_id": "d1_s0150_P3_v4", "cached_question": "Which week of 1.033 covers Thermoelasticity?", "cached_answer": "Week 5.", "new_query": "thermoelasticity 1.033 which week??"}
+{"pair_id": "d1_s0151_N1_v1", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "What readings are assigned for Part IV: Plasticity and Yield Design in 1.033?"}
+{"pair_id": "d1_s0151_N3_v2", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "What topics fall under Part IV: Plasticity and Yield Design in the 1.020 calendar, and which weeks do they span?"}
+{"pair_id": "d1_s0151_N4_v2", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "Which weeks in the 1.033 calendar are not part of Part IV: Plasticity and Yield Design?"}
+{"pair_id": "d1_s0151_N5_v1", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "Which is the earliest week of Part IV: Plasticity and Yield Design in the 1.033 calendar?"}
+{"pair_id": "d1_s0151_N6_v1", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "Which exam covers the Part IV: Plasticity and Yield Design material in 1.033?"}
+{"pair_id": "d1_s0151_P2_v1", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "List the topics under Part IV: Plasticity and Yield Design in the 1.033 calendar and the weeks they occupy."}
+{"pair_id": "d1_s0151_P2_v3", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "Tell me what is taught in Part IV: Plasticity and Yield Design of 1.033 and when it happens."}
+{"pair_id": "d1_s0151_P2_v4", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "I need the week-by-week topic breakdown of 1.033's Part IV: Plasticity and Yield Design."}
+{"pair_id": "d1_s0151_P3_v1", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "what topics r under part IV plasticity n yield design in the 1.033 calendar n which weeks?"}
+{"pair_id": "d1_s0151_P3_v2", "cached_question": "What topics fall under Part IV: Plasticity and Yield Design in the 1.033 calendar, and which weeks do they span?", "cached_answer": "Weeks 7-9: Week 7 covers 1D-Plasticity–An Energy Approach, Week 8 covers Plasticity Models, and Week 9 covers Limit Analysis and Yield Design.", "new_query": "part 4 plasticity + yield design topics/weeks in 1033 calendar?"}

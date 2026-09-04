@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 186070,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "1bcee230-f69b-49db-b8eb-2d90a698b7e1",
+  "total_cost_usd": 0.4381364,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 55788,
+    "cache_read_input_tokens": 99932,
+    "output_tokens": 19499,
+    "output_tokens_details": {
+      "thinking_tokens": 16291
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 55788,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3134,
+        "cache_read_input_tokens": 69654,
+        "cache_creation_input_tokens": 16412,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16412
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 19499,
+      "cacheReadInputTokens": 99932,
+      "cacheCreationInputTokens": 55788,
+      "webSearchRequests": 0,
+      "costUSD": 0.4381364,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0051_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0051_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks which exams are excluded, an unrelated new aspect rather than a negation of the seed's province/legal-basis content\"}\n{\"id\":\"d5_s0051_N4_v2\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"asks about disallowed cost items, a different topic entirely, not a polarity flip of the seed question\"}\n{\"id\":\"d5_s0051_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks when application ends; matches the flagged non-compliant 'until when' deadline pattern, same info family as seed, not a true polarity flip\"}\n{\"id\":\"d5_s0051_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0051_N5_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks about highest-cost item, an unrelated new topic rather than a min/max flip of the seed's province/legal-basis content\"}\n{\"id\":\"d5_s0051_N5_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks lowest spending level, unrelated new topic not a quantifier flip of seed content\"}\n{\"id\":\"d5_s0051_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0051_N5_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks most expensive exam, unrelated new topic not a quantifier flip of seed content\"}\n{\"id\":\"d5_s0051_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0051_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0057_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0057_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0057_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0057_P1_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0057_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0057_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0057_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0057_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0057_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0057_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0057_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0057_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0057_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0057_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0057_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0057_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0057_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0057_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"two entities changed at once (subject: parents→institution; object: application→list), not exactly one substitution\"}\n{\"id\":\"d5_s0057_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0057_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"changes question type from a day-count to a case-enumeration question; not a clean negation of the seed's content\"}\n{\"id\":\"d5_s0057_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0057_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks the consequence of not filing, a different aspect rather than a polarity flip\"}\n{\"id\":\"d5_s0057_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0057_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0057_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new comparison dimension (education level) absent from the seed, not a simple min/max flip on the same quantity\"}\n{\"id\":\"d5_s0057_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new comparison dimension (semester/term) absent from the seed, not a simple min/max flip on the same quantity\"}\n{\"id\":\"d5_s0057_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0057_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0064_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0064_P1_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"drops the 'hỗ trợ học phí' funding category from the enumeration — content omission beyond synonym paraphrase\"}\n{\"id\":\"d5_s0064_P1_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"drops the 'hỗ trợ học phí' funding category from the enumeration — content omission beyond synonym paraphrase\"}\n{\"id\":\"d5_s0064_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0064_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0064_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0064_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0064_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0064_P3_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"omits the 'và hỗ trợ chi phí học tập' clause entirely — content dropped beyond the noise/shorthand allowance of P3\"}\n{\"id\":\"d5_s0064_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0064_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0064_P3_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"omits the 'hỗ trợ chi phí học tập' clause entirely — content dropped beyond the noise/shorthand allowance of P3\"}\n{\"id\":\"d5_s0064_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0064_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0064_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0064_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0064_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0064_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0064_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks the period lacking authority, which is directly derivable from the seed's end date; same 'until when vs after when' non-compliant pattern\"}\n{\"id\":\"d5_s0064_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks the period lacking settlement authority, directly derivable from the seed's end date rather than a true polarity flip\"}\n{\"id\":\"d5_s0064_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes an unestablished suspension period rather than negating a fact present in the seed's answer\"}",
+  "ttft_ms": 164902,
+  "ttft_stream_ms": 1377,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 186847,
+  "uuid": "62b0b165-d975-41a9-b0df-3d14fc676a54",
+  "queued_turn_count": 0
+}

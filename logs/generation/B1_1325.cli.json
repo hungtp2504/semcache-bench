@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 153888,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "d486ef7f-14f5-42bb-ae62-1d3fe686dcd8",
+  "total_cost_usd": 0.3566438,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 44625,
+    "cache_read_input_tokens": 92179,
+    "output_tokens": 15970,
+    "output_tokens_details": {
+      "thinking_tokens": 12929
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 44625,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3024,
+        "cache_read_input_tokens": 61901,
+        "cache_creation_input_tokens": 13002,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13002
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15970,
+      "cacheReadInputTokens": 92179,
+      "cacheCreationInputTokens": 44625,
+      "webSearchRequests": 0,
+      "costUSD": 0.3566438,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0217_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0217_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks which issues to exclude, not a negation of where/who — different question target, not a single polarity flip\"}\n{\"id\":\"d3_s0217_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"correct answer to variant is essentially seed's own fact restated (archives not public → can't be read); presupposition shift, not a clean flip with different answer content\"}\n{\"id\":\"d3_s0217_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0217_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0217_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"not a min/max/earliest/latest/at-least/at-most flip; presupposes other lists exist, contradicting 'only' exclusivity\"}\n{\"id\":\"d3_s0217_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0217_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0217_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0217_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0217_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0223_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0223_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0223_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0223_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0223_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0223_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0223_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0223_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0223_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0223_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0223_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0223_P3_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"stray fragment 'v?' and dropped 'given hosted on github' clause read as garbled/unnatural beyond typo-level noise\"}\n{\"id\":\"d3_s0223_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0223_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0223_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0223_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0223_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0223_N3_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps the entire framing clause (GitHub hosting → Trac tracker) rather than one entity/id/version; answer not necessarily different since PRs remain the submission mechanism regardless of tracker\"}\n{\"id\":\"d3_s0223_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'rejected' is not an antonym of 'submitted'; this is a different facet (rejection process) rather than a polarity flip\"}\n{\"id\":\"d3_s0223_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'withdrawn' is not an antonym of 'submitted'; different facet, not a clean polarity flip\"}\n{\"id\":\"d3_s0223_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0223_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0223_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0223_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0223_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0223_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about a distinct historical period/method rather than a min/max/earliest/latest extreme within the current question\"}\n{\"id\":\"d3_s0223_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0223_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0235_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_P1_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"nominalizes 'work is coordinated' into 'coordination... takes place' — syntactic restructure beyond wording/synonym-only change expected for P1\"}\n{\"id\":\"d3_s0235_P1_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"restructures into 'what site hosts the coordination of...' (active voice + nominalization), not a pure wording/synonym swap\"}\n{\"id\":\"d3_s0235_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_P2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0235_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0235_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0235_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0235_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0235_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0235_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0235_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about a prohibited submission action, a different facet, not a clean negation flip of the coordination-venue question\"}\n{\"id\":\"d3_s0235_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks which files to avoid editing — a distinct facet (file-level guidance), not a polarity flip of 'where is work coordinated'\"}",
+  "ttft_ms": 132159,
+  "ttft_stream_ms": 1272,
+  "time_to_request_ms": 24,
+  "type": "result",
+  "duration_ms": 154661,
+  "uuid": "bd8ad0c7-ed79-45ce-885a-27d47f3ca157",
+  "queued_turn_count": 0
+}

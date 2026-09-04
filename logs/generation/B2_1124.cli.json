@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 68251,
+  "stop_reason": "end_turn",
+  "session_id": "fc012df0-0e7e-4841-8e17-b10ac5db1086",
+  "total_cost_usd": 0.49148400000000003,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 30832,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 6945,
+    "output_tokens_details": {
+      "thinking_tokens": 4105
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 30832,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6945,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 30832,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 30832
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 6945,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 30832,
+      "webSearchRequests": 0,
+      "costUSD": 0.49148400000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0085_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"substitutes a different file/facet (settings) rather than flipping a negation or antonym; reads as entity/aspect change, not polarity\"}\n{\"id\":\"d3_s0085_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0085_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0085_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"complement/set-exclusion reframe ('besides X, which others'), not a quantifier or extreme flip\"}\n{\"id\":\"d3_s0085_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"changes the facet to 'must edit before deployment' rather than flipping an existing quantifier/extreme\"}\n{\"id\":\"d3_s0085_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the seed's own fact and asks rationale; no shifted presupposition (reads as N1 aspect change)\"}\n{\"id\":\"d3_s0085_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposition is identical to the seed's fact; asks a different task (mod_wsgi config), so it is an aspect change not a presupposition shift\"}\n{\"id\":\"d3_s0091_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0091_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0091_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0091_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0091_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0091_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0091_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0091_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0091_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0091_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0091_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0091_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0091_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0091_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0091_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0091_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0091_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0091_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0091_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0091_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0091_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0091_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0091_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0091_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0091_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"changes the question target from a version to a file; not a single quantifier/extreme flip on the seed\"}\n{\"id\":\"d3_s0091_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0091_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes exactly the seed's fact (1.4) and asks why; no different fact is presupposed\"}\n{\"id\":\"d3_s0091_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposition matches the seed's fact; asks upgrade procedure, so it is an aspect change not a presupposition shift\"}\n{\"id\":\"d3_s0097_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0097_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0097_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0097_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0097_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0097_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0097_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0097_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0097_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0097_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0097_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0097_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0097_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0097_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0097_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0097_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"more than a scope qualifier changes — the asked-for object shifts from the configured value to a resolved path, making it an aspect change\"}\n{\"id\":\"d3_s0097_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0097_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0097_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0097_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0097_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0097_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0097_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"complement/set-exclusion reframe ('besides app_dirname'), not a quantifier or extreme flip\"}\n{\"id\":\"d3_s0097_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0097_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}",
+  "ttft_ms": 46382,
+  "type": "result",
+  "duration_ms": 68449,
+  "uuid": "6bb635d6-3ce8-484f-a5e3-f3dec48cf10c",
+  "ttft_stream_ms": 1460,
+  "time_to_request_ms": 18,
+  "queued_turn_count": 0
+}

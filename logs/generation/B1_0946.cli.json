@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 162727,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "d6ef174c-e9cb-4185-bdf6-7ec49c6a97e8",
+  "total_cost_usd": 0.5699643,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47047,
+    "cache_read_input_tokens": 93101,
+    "output_tokens": 17316,
+    "output_tokens_details": {
+      "thinking_tokens": 14338
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47047,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2889,
+        "cache_read_input_tokens": 62854,
+        "cache_creation_input_tokens": 14440,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14440
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17316,
+      "cacheReadInputTokens": 93101,
+      "cacheCreationInputTokens": 47047,
+      "webSearchRequests": 0,
+      "costUSD": 0.5699643,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0034_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0034_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0034_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0034_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0034_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0034_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0034_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"presupposes the course was cancelled, an unverified fact, rather than flipping a negation/antonym in the seed's question — this is a presupposition shift (N6), not a polarity flip\"}\n{\"id\":\"d1_s0034_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"presupposes teaching stopped after Fall 2008 (unverified new fact); this is presupposition shift (N6-shaped), not a clean polarity flip\"}\n{\"id\":\"d1_s0034_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0034_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"presupposes the course stopped being taught, an unverified new fact — presupposition shift (N6-shaped), not a polarity flip\"}\n{\"id\":\"d1_s0034_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0034_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0034_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a 'how many terms' cardinality question, not a min/max or earliest/latest extreme flip on the seed's question; closer to an N1 aspect change\"}\n{\"id\":\"d1_s0034_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0034_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0034_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0040_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0040_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0040_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0040_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0040_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0040_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0040_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0040_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0040_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0040_P3_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0040_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0040_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0040_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0040_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0040_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0040_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0040_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0040_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0040_N4_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0040_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"seed's answer content ('undergraduate') directly and correctly answers this yes/no framing (no, it was undergraduate) rather than misleading — same answer content, not a genuine wrong-sign flip\"}\n{\"id\":\"d1_s0040_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"presupposes he stopped teaching it after Spring 2011, an unverified new fact — presupposition shift (N6-shaped), not a polarity flip\"}\n{\"id\":\"d1_s0040_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"underspecified/indeterminate question (many terms could satisfy 'not taught by Sussman'); doesn't cleanly flip a negation such that the seed's answer would mislead\"}\n{\"id\":\"d1_s0040_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0040_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0040_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a 'how many instructors' cardinality question, not a min/max or earliest/latest extreme flip; closer to an N1 aspect change\"}\n{\"id\":\"d1_s0040_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0040_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0040_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0046_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0046_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0046_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0046_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0046_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0046_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0046_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0046_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0046_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0046_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0046_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0046_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0046_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0046_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0046_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0046_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}",
+  "ttft_ms": 142819,
+  "ttft_stream_ms": 1475,
+  "time_to_request_ms": 20,
+  "type": "result",
+  "duration_ms": 163517,
+  "uuid": "699262bd-fa01-4c47-847d-b0836e8f2426"
+}

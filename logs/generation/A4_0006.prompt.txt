@@ -1,0 +1,66 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x2, N5 x2, N6 x2 = 24.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — one negation/antonym flips what is asked (include -> exclude,
+   open -> closed, allowed -> forbidden); cached answer would have the wrong sign.
+N5 quantifier/extreme change — min<->max, earliest<->latest, at least<->at most,
+   all<->some; one word flips the target.
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: A4_0006
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d4_s0001", "domain": "medical", "doc_id": "d4_0000001_1", "fact_ids": ["d4_f00001", "d4_f00002"], "question": "What is adult acute lymphoblastic leukemia (ALL)?", "answer": "Adult ALL, also called acute lymphocytic leukemia, is a cancer of the blood and bone marrow in which the bone marrow makes too many lymphocytes, a type of white blood cell.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}
+{"seed_id": "d4_s0002", "domain": "medical", "doc_id": "d4_0000001_1", "fact_ids": ["d4_f00004"], "question": "What two things may increase the risk of developing adult ALL?", "answer": "Previous chemotherapy and exposure to radiation may increase the risk of developing adult ALL.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}
+{"seed_id": "d4_s0003", "domain": "medical", "doc_id": "d4_0000001_1", "fact_ids": ["d4_f00005"], "question": "What are common signs and symptoms of adult ALL?", "answer": "Common signs and symptoms include fever, feeling tired, easy bruising or bleeding, petechiae, shortness of breath, weight loss or loss of appetite, bone or stomach pain, painless lumps in the neck, underarm, stomach, or groin, and having many infections.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}
+{"seed_id": "d4_s0004", "domain": "medical", "doc_id": "d4_0000001_1", "fact_ids": ["d4_f00007"], "question": "What is the Philadelphia chromosome in the context of adult ALL?", "answer": "In Philadelphia chromosome positive ALL, part of one chromosome switches places with part of another chromosome; this genetic change is called the Philadelphia chromosome.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}
+{"seed_id": "d4_s0005", "domain": "medical", "doc_id": "d4_0000001_1", "fact_ids": ["d4_f00008"], "question": "What four factors affect the prognosis and treatment options for adult ALL?", "answer": "Prognosis and treatment depend on the patient's age, whether the cancer has spread to the brain or spinal cord, whether there are certain gene changes including the Philadelphia chromosome, and whether the cancer has been treated before or has recurred.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}
+{"seed_id": "d4_s0006", "domain": "medical", "doc_id": "d4_0000001_1", "fact_ids": ["d4_f00009"], "question": "How is a bone marrow aspiration and biopsy performed to help diagnose adult ALL?", "answer": "It involves removing bone marrow, blood, and a small piece of bone by inserting a hollow needle into the hipbone or breastbone, then examining the samples under a microscope.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}
+{"seed_id": "d4_s0007", "domain": "medical", "doc_id": "d4_0000001_2", "fact_ids": ["d4_f00011", "d4_f00012"], "question": "What is adult acute myeloid leukemia (AML)?", "answer": "Adult AML is a cancer of the blood and bone marrow in which the bone marrow makes abnormal myeloblasts, red blood cells, or platelets; it is the most common type of acute leukemia in adults.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}
+{"seed_id": "d4_s0008", "domain": "medical", "doc_id": "d4_0000001_2", "fact_ids": ["d4_f00013"], "question": "What are other names for adult acute myeloid leukemia?", "answer": "AML is also called acute myelogenous leukemia, acute myeloblastic leukemia, acute granulocytic leukemia, and acute nonlymphocytic leukemia.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}
+{"seed_id": "d4_s0009", "domain": "medical", "doc_id": "d4_0000001_2", "fact_ids": ["d4_f00014"], "question": "What are the possible risk factors for adult AML?", "answer": "Possible risk factors include being male, smoking (especially after age 60), past chemotherapy or radiation therapy, past treatment for childhood ALL, exposure to atomic bomb radiation or the chemical benzene, and a history of a blood disorder such as myelodysplastic syndrome.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}
+{"seed_id": "d4_s0010", "domain": "medical", "doc_id": "d4_0000001_2", "fact_ids": ["d4_f00015"], "question": "What is acute promyelocytic leukemia (APL) and what are its signs?", "answer": "APL is a subtype of AML that occurs when parts of two genes stick together, usually in middle-aged adults; its signs may include both bleeding and forming blood clots.", "generator_model": "claude-sonnet-5", "batch_id": "A_0009", "ts": "2026-08-12T03:09:37Z"}

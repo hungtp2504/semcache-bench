@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 149347,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "6b1ed8b9-e928-4291-a206-8d4efa2c5928",
+  "total_cost_usd": 0.369709,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 49824,
+    "cache_read_input_tokens": 98125,
+    "output_tokens": 15078,
+    "output_tokens_details": {
+      "thinking_tokens": 12135
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 49824,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2878,
+        "cache_read_input_tokens": 67847,
+        "cache_creation_input_tokens": 12255,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 12255
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15078,
+      "cacheReadInputTokens": 98125,
+      "cacheCreationInputTokens": 49824,
+      "webSearchRequests": 0,
+      "costUSD": 0.369709,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0199_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0199_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0199_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0199_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0199_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0199_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0199_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0199_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0199_P3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps 'chức danh khoa học' for 'học hàm' — a lexical substitution beyond allowed surface noise\"}\n{\"id\":\"d5_s0199_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0199_P3_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"noise combined with synonym swaps ('chức danh khoa học'->'học hàm', 'đánh giá'->'chấm') beyond surface noise\"}\n{\"id\":\"d5_s0199_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0199_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0199_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0199_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0199_N3_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0199_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0199_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0199_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0199_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"subject and object both swapped (asks what a PGS holder can't do), not a single polarity flip of the same requirement question\"}\n{\"id\":\"d5_s0199_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about prohibited concurrent roles — an unrelated facet, not a negation of the minimum-title requirement\"}\n{\"id\":\"d5_s0199_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0199_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to identifying which member holds the highest title, not flipping min/max on the same requirement\"}\n{\"id\":\"d5_s0199_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"widens scope from chair to all council members while keeping 'minimum' — a scope change (duplicate of N2_v2), not an extreme flip\"}\n{\"id\":\"d5_s0199_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"excludes the chair and asks about other members' minimum — a scope change, not a min/max extreme flip\"}\n{\"id\":\"d5_s0199_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0199_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0205_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0205_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0205_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0205_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_P3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0205_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0205_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0205_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0205_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0205_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0205_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0205_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0205_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines scope narrowing (specific articles of TT08/2021) with negation — two stacked changes, not a single polarity flip\"}\n{\"id\":\"d5_s0205_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines negation with domain-scope narrowing (university-training circulars only) — more than one flip\"}\n{\"id\":\"d5_s0205_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0205_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0205_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"converts an identity question into a count question — an aspect change, not a min/max/earliest-latest extreme flip\"}\n{\"id\":\"d5_s0205_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"excludes one specific named document rather than flipping a quantifier extreme — a scope exclusion, not N5\"}\n{\"id\":\"d5_s0205_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0205_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0211_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0211_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0211_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0211_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0211_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 129503,
+  "ttft_stream_ms": 1876,
+  "time_to_request_ms": 18,
+  "type": "result",
+  "duration_ms": 150127,
+  "uuid": "b5fe8c49-1b41-4553-933b-84465f33e6a1",
+  "queued_turn_count": 0
+}

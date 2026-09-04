@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_1656
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d5_s0107_N4_v4", "axis": "N4", "seed_question": "Điều 13 của Thông tư 40/2026/TT-BGDĐT quy định về những nội dung gì?", "answer": "Đánh giá kết quả rèn luyện và công tác khen thưởng, kỷ luật đối với sinh viên.", "variation": "Theo Điều 13 Thông tư 40/2026/TT-BGDĐT, hình thức kỷ luật nào được xóa bỏ đối với sinh viên?", "delta": "abolished disciplinary forms, not regulated content"}
+{"id": "d5_s0107_N5_v1", "axis": "N5", "seed_question": "Điều 13 của Thông tư 40/2026/TT-BGDĐT quy định về những nội dung gì?", "answer": "Đánh giá kết quả rèn luyện và công tác khen thưởng, kỷ luật đối với sinh viên.", "variation": "Nội dung đầu tiên được quy định tại Điều 13 Thông tư 40/2026/TT-BGDĐT là gì?", "delta": "only the first regulated item"}
+{"id": "d5_s0107_N5_v2", "axis": "N5", "seed_question": "Điều 13 của Thông tư 40/2026/TT-BGDĐT quy định về những nội dung gì?", "answer": "Đánh giá kết quả rèn luyện và công tác khen thưởng, kỷ luật đối với sinh viên.", "variation": "Nội dung cuối cùng được quy định tại Điều 13 Thông tư 40/2026/TT-BGDĐT là gì?", "delta": "only the last regulated item"}
+{"id": "d5_s0107_N5_v3", "axis": "N5", "seed_question": "Điều 13 của Thông tư 40/2026/TT-BGDĐT quy định về những nội dung gì?", "answer": "Đánh giá kết quả rèn luyện và công tác khen thưởng, kỷ luật đối với sinh viên.", "variation": "Điều 13 Thông tư 40/2026/TT-BGDĐT quy định nhiều nhất bao nhiêu nhóm nội dung?", "delta": "maximum number of content groups"}
+{"id": "d5_s0107_N5_v4", "axis": "N5", "seed_question": "Điều 13 của Thông tư 40/2026/TT-BGDĐT quy định về những nội dung gì?", "answer": "Đánh giá kết quả rèn luyện và công tác khen thưởng, kỷ luật đối với sinh viên.", "variation": "Hình thức khen thưởng cao nhất đối với sinh viên theo Điều 13 Thông tư 40/2026/TT-BGDĐT là gì?", "delta": "highest commendation level, not the article scope"}
+{"id": "d5_s0107_N6_v1", "axis": "N6", "seed_question": "Điều 13 của Thông tư 40/2026/TT-BGDĐT quy định về những nội dung gì?", "answer": "Đánh giá kết quả rèn luyện và công tác khen thưởng, kỷ luật đối với sinh viên.", "variation": "Sinh viên không đồng ý với kết quả đánh giá rèn luyện thì khiếu nại ở đâu?", "delta": "asks the appeal channel for the assessment"}
+{"id": "d5_s0107_N6_v2", "axis": "N6", "seed_question": "Điều 13 của Thông tư 40/2026/TT-BGDĐT quy định về những nội dung gì?", "answer": "Đánh giá kết quả rèn luyện và công tác khen thưởng, kỷ luật đối với sinh viên.", "variation": "Kết quả đánh giá rèn luyện của sinh viên được lưu trong hồ sơ nào?", "delta": "asks record-keeping of the assessment"}
+{"id": "d5_s0113_P1_v1", "axis": "P1", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Kết quả rèn luyện của sinh viên được đánh giá theo thang điểm nào?", "delta": null}
+{"id": "d5_s0113_P1_v2", "axis": "P1", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Việc đánh giá kết quả rèn luyện của sinh viên áp dụng thang điểm bao nhiêu?", "delta": null}
+{"id": "d5_s0113_P1_v3", "axis": "P1", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Thang điểm nào được sử dụng khi chấm điểm rèn luyện của sinh viên?", "delta": null}
+{"id": "d5_s0113_P1_v4", "axis": "P1", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Điểm rèn luyện của sinh viên được tính trên thang điểm bao nhiêu?", "delta": null}
+{"id": "d5_s0113_P2_v1", "axis": "P2", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Cho tôi biết thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên.", "delta": null}
+{"id": "d5_s0113_P2_v2", "axis": "P2", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Thang điểm bao nhiêu được dùng để đánh giá kết quả rèn luyện sinh viên?", "delta": null}
+{"id": "d5_s0113_P2_v3", "axis": "P2", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Kết quả rèn luyện sinh viên được đánh giá bằng thang điểm nào theo quy định?", "delta": null}
+{"id": "d5_s0113_P2_v4", "axis": "P2", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Tôi muốn biết việc đánh giá rèn luyện sinh viên dùng thang mấy điểm?", "delta": null}
+{"id": "d5_s0113_P3_v1", "axis": "P3", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "thang diem danh gia ket qua ren luyen cua sinh vien la bao nhieu v?", "delta": null}
+{"id": "d5_s0113_P3_v2", "axis": "P3", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "cho hỏi điểm rèn luyện sv tính theo thang bn ạ", "delta": null}
+{"id": "d5_s0113_P3_v3", "axis": "P3", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "danh gia ket qua ren luyen sv dung thang diem nao z", "delta": null}
+{"id": "d5_s0113_P3_v4", "axis": "P3", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Thang diêm dung de danh gia ket qua ren luyen cua sinh vien la bao nhieu?", "delta": null}
+{"id": "d5_s0113_N1_v1", "axis": "N1", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Kết quả rèn luyện của sinh viên được đánh giá dựa trên những tiêu chí nào?", "delta": "asks criteria, not the scoring scale"}
+{"id": "d5_s0113_N1_v2", "axis": "N1", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Kết quả rèn luyện của sinh viên được xếp thành những loại nào?", "delta": "asks classification levels, not the scale"}
+{"id": "d5_s0113_N2_v1", "axis": "N2", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Tiêu chí ý thức học tập trong đánh giá rèn luyện của sinh viên được tính bao nhiêu điểm?", "delta": "narrows to one criterion point allocation"}
+{"id": "d5_s0113_N2_v2", "axis": "N2", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Thang điểm dùng để đánh giá kết quả học tập và rèn luyện của sinh viên là bao nhiêu?", "delta": "widens to academic results as well"}
+{"id": "d5_s0113_N3_v1", "axis": "N3", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Thang điểm dùng để đánh giá kết quả rèn luyện của học sinh phổ thông là bao nhiêu?", "delta": "school pupils instead of university students"}
+{"id": "d5_s0113_N3_v2", "axis": "N3", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Thang điểm dùng để đánh giá kết quả học tập của sinh viên là bao nhiêu?", "delta": "academic results instead of conduct results"}
+{"id": "d5_s0113_N4_v1", "axis": "N4", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Điểm rèn luyện của sinh viên bị trừ trong những trường hợp nào?", "delta": "point deductions, not the scale"}
+{"id": "d5_s0113_N4_v2", "axis": "N4", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Sinh viên không được đánh giá kết quả rèn luyện trong trường hợp nào?", "delta": "cases exempt from conduct assessment"}
+{"id": "d5_s0113_N4_v3", "axis": "N4", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Điểm rèn luyện dưới bao nhiêu thì sinh viên bị xếp loại không đạt?", "delta": "failing threshold, not the scale"}
+{"id": "d5_s0113_N4_v4", "axis": "N4", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Kết quả rèn luyện của sinh viên không được tính vào những nội dung nào?", "delta": "where conduct results are not counted"}
+{"id": "d5_s0113_N5_v1", "axis": "N5", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Điểm rèn luyện tối thiểu để sinh viên được xếp loại đạt là bao nhiêu?", "delta": "minimum passing score, not the scale maximum"}
+{"id": "d5_s0113_N5_v2", "axis": "N5", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Sinh viên phải đạt ít nhất bao nhiêu điểm rèn luyện để được khen thưởng?", "delta": "minimum score for commendation"}
+{"id": "d5_s0113_N5_v3", "axis": "N5", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Mức điểm rèn luyện thấp nhất trong thang đánh giá là bao nhiêu?", "delta": "the scale minimum, not its maximum"}
+{"id": "d5_s0113_N5_v4", "axis": "N5", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Loại xếp hạng rèn luyện cao nhất tương ứng với khoảng điểm nào?", "delta": "score band of the top rating"}
+{"id": "d5_s0113_N6_v1", "axis": "N6", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Sinh viên có điểm rèn luyện không đạt thì bị xử lý thế nào?", "delta": "asks consequence of a failing conduct score"}
+{"id": "d5_s0113_N6_v2", "axis": "N6", "seed_question": "Thang điểm dùng để đánh giá kết quả rèn luyện của sinh viên là bao nhiêu?", "answer": "Thang điểm 100.", "variation": "Ai có thẩm quyền phê duyệt kết quả đánh giá rèn luyện của sinh viên?", "delta": "asks who approves the assessment results"}
+{"id": "d5_s0120_P1_v1", "axis": "P1", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Một hành vi vi phạm của sinh viên bị áp dụng kỷ luật bao nhiêu lần?", "delta": null}
+{"id": "d5_s0120_P1_v2", "axis": "P1", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Sinh viên có một hành vi vi phạm thì bị xử lý kỷ luật mấy lần?", "delta": null}
+{"id": "d5_s0120_P1_v3", "axis": "P1", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Cùng một hành vi vi phạm của sinh viên được xem xét kỷ luật bao nhiêu lần?", "delta": null}
+{"id": "d5_s0120_P1_v4", "axis": "P1", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Với một hành vi vi phạm, sinh viên phải chịu bao nhiêu lần xử lý kỷ luật?", "delta": null}
+{"id": "d5_s0120_P2_v1", "axis": "P2", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Cho tôi biết số lần một hành vi vi phạm của sinh viên bị xử lý kỷ luật.", "delta": null}
+{"id": "d5_s0120_P2_v2", "axis": "P2", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Bao nhiêu lần xử lý kỷ luật được áp dụng cho một hành vi vi phạm của sinh viên?", "delta": null}
+{"id": "d5_s0120_P2_v3", "axis": "P2", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Một hành vi vi phạm của sinh viên có bị xử lý kỷ luật nhiều lần không?", "delta": null}
+{"id": "d5_s0120_P2_v4", "axis": "P2", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Nếu sinh viên vi phạm một hành vi thì việc xử lý kỷ luật được thực hiện mấy lần?", "delta": null}
+{"id": "d5_s0120_P3_v1", "axis": "P3", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "mot hanh vi vi pham cua sinh vien bi xu ly ky luat bao nhieu lan v?", "delta": null}
+{"id": "d5_s0120_P3_v2", "axis": "P3", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "cho hỏi 1 hành vi vi phạm của sv bị xử lý kỷ luật mấy lần ạ", "delta": null}
+{"id": "d5_s0120_P3_v3", "axis": "P3", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "1 hvi vi pham cua sv xu ly kl bn lan z", "delta": null}
+{"id": "d5_s0120_P3_v4", "axis": "P3", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Mot hanh vi vi pham cua sinh vien co the bi xu ly ky luât bao nhieu lân?", "delta": null}
+{"id": "d5_s0120_N1_v1", "axis": "N1", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Sinh viên vi phạm bị áp dụng những hình thức kỷ luật nào?", "delta": "asks the disciplinary forms, not the count"}
+{"id": "d5_s0120_N1_v2", "axis": "N1", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Hội đồng kỷ luật sinh viên gồm những thành phần nào?", "delta": "asks council composition, not repeat handling"}
+{"id": "d5_s0120_N2_v1", "axis": "N2", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Sinh viên tái phạm cùng một hành vi vi phạm thì bị xử lý kỷ luật thế nào?", "delta": "adds a repeat-offence qualifier"}
+{"id": "d5_s0120_N2_v2", "axis": "N2", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Nhiều hành vi vi phạm của sinh viên trong cùng một vụ việc được xử lý kỷ luật thế nào?", "delta": "widens to multiple violations at once"}
+{"id": "d5_s0120_N3_v1", "axis": "N3", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Một hành vi vi phạm của giảng viên có thể bị xử lý kỷ luật bao nhiêu lần?", "delta": "lecturers instead of students"}
+{"id": "d5_s0120_N3_v2", "axis": "N3", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Một hành vi vi phạm của học sinh phổ thông có thể bị xử lý kỷ luật bao nhiêu lần?", "delta": "school pupils instead of students"}
+{"id": "d5_s0120_N4_v1", "axis": "N4", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Hành vi vi phạm nào của sinh viên không bị xử lý kỷ luật?", "delta": "acts exempt from discipline, not the count"}
+{"id": "d5_s0120_N4_v2", "axis": "N4", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Trong trường hợp nào sinh viên được miễn xử lý kỷ luật đối với hành vi vi phạm?", "delta": "exemption cases instead of number of times"}
+{"id": "d5_s0120_N4_v3", "axis": "N4", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Quyết định kỷ luật đối với một hành vi vi phạm của sinh viên bị hủy bỏ khi nào?", "delta": "when the decision is annulled"}
+{"id": "d5_s0120_N4_v4", "axis": "N4", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Một hành vi vi phạm của sinh viên được xóa kỷ luật sau bao lâu?", "delta": "when discipline is expunged, not imposed"}
+{"id": "d5_s0120_N5_v1", "axis": "N5", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Sinh viên bị xử lý kỷ luật nhiều nhất bao nhiêu lần trong một khóa học?", "delta": "maximum times per programme, not per act"}
+{"id": "d5_s0120_N5_v2", "axis": "N5", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Hình thức kỷ luật nhẹ nhất áp dụng cho một hành vi vi phạm của sinh viên là gì?", "delta": "lightest disciplinary form, not the count"}
+{"id": "d5_s0120_N5_v3", "axis": "N5", "seed_question": "Một hành vi vi phạm của sinh viên có thể bị xử lý kỷ luật bao nhiêu lần?", "answer": "Chỉ bị xử lý một lần, bằng một hình thức kỷ luật.", "variation": "Hình thức kỷ luật cao nhất áp dụng cho một hành vi vi phạm của sinh viên là gì?", "delta": "most severe disciplinary form, not the count"}

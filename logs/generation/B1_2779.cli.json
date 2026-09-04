@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 161990,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "723829a5-747f-47a2-bf6c-e51acae4740a",
+  "total_cost_usd": 0.38341179999999997,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47498,
+    "cache_read_input_tokens": 92109,
+    "output_tokens": 17499,
+    "output_tokens_details": {
+      "thinking_tokens": 14446
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47498,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2972,
+        "cache_read_input_tokens": 61831,
+        "cache_creation_input_tokens": 15945,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15945
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17499,
+      "cacheReadInputTokens": 92109,
+      "cacheCreationInputTokens": 47498,
+      "webSearchRequests": 0,
+      "costUSD": 0.38341179999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0306_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0306_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0306_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0306_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0306_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0306_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0306_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0306_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0306_P3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0306_P3_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0306_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0306_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0306_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0306_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0306_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0306_N3_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"self-merge approval rule likely applies uniformly to any core-team role, so seed's answer probably still fully answers this variant\"}\n{\"id\":\"d3_s0306_N3_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps the action (merge PR -> push commit), not a single entity/id/version, so it doesn't fit N3's substitution definition\"}\n{\"id\":\"d3_s0306_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0306_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0306_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'close without merging' is a different action, not a clean negation/antonym of 'merge', so it doesn't fit N4's polarity-flip definition\"}\n{\"id\":\"d3_s0306_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0306_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0306_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0306_N5_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"'never enough alone' is an insufficiency/polarity question (N4-like), not a min/max/earliest-latest quantifier flip\"}\n{\"id\":\"d3_s0306_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an entirely new facet (approval wait time) absent from seed content rather than flipping an existing quantifier\"}\n{\"id\":\"d3_s0306_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0306_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0313_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0313_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0313_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0313_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0313_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0313_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0313_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0313_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0313_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0313_P3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0313_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0313_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0313_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0313_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0313_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Django's API reference is also built via Sphinx/autodoc, so the answer is likely unchanged, violating N2's 'answer differs' requirement\"}\n{\"id\":\"d3_s0313_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0313_N3_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"Flask's docs also use Sphinx, so the swapped entity likely yields the same answer, violating N3's 'answer necessarily different' requirement\"}\n{\"id\":\"d3_s0313_N3_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"swaps topic (documentation -> testing), not a single entity/id/version; better fits N1 aspect change\"}\n{\"id\":\"d3_s0313_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0313_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0313_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts to a subset/scope question (which parts) rather than a clean negation/antonym; seed answer is merely irrelevant, not misleading\"}\n{\"id\":\"d3_s0313_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about a prior/historical system (temporal precedence), not a negation/antonym flip; closer to N5/N6\"}\n{\"id\":\"d3_s0313_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0313_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces an unrelated new facet (chronology of tool additions) not present in seed content rather than flipping an existing quantifier\"}\n{\"id\":\"d3_s0313_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0313_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces an 'extensions' concept absent from seed content (system/underlying tool only), not a quantifier flip on existing content\"}\n{\"id\":\"d3_s0313_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0313_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0319_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0319_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0319_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0319_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0319_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 142146,
+  "ttft_stream_ms": 1467,
+  "time_to_request_ms": 21,
+  "type": "result",
+  "duration_ms": 162753,
+  "uuid": "af4b7758-3a4a-4cc3-8809-7ad2e5fcddf9",
+  "queued_turn_count": 0
+}

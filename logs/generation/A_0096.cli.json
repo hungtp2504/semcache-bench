@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 26835,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "1df61119-eba4-434c-8e81-2a137e47835d",
+  "total_cost_usd": 0.2368986,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 27741,
+    "cache_read_input_tokens": 87202,
+    "output_tokens": 2952,
+    "output_tokens_details": {
+      "thinking_tokens": 988
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 27741,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1929,
+        "cache_read_input_tokens": 56957,
+        "cache_creation_input_tokens": 1029,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1029
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 2952,
+      "cacheReadInputTokens": 87202,
+      "cacheCreationInputTokens": 27741,
+      "webSearchRequests": 0,
+      "costUSD": 0.2368986,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"Lifting state up means removing state from two components, moving it to their closest common parent, and passing it down via props.\",\"source_span\":\"remove state from both of them, move it to their closest common parent, and then pass it down to them via props. This is known as *lifting state up,*\"}\n{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"In the example, a parent Accordion component renders two separate Panel components.\",\"source_span\":\"a parent `Accordion` component renders two separate `Panel`s\"}\n{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"Each Panel component has a boolean isActive state that determines whether its content is visible.\",\"source_span\":\"Each `Panel` component has a boolean `isActive` state that determines whether its content is visible.\"}\n{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"Lifting state up to coordinate the two panels requires three steps: remove state from the child components, pass hardcoded data from the common parent, and add state to the common parent with event handlers.\",\"source_span\":\"1. **Remove** state from the child components.\\n2. **Pass** hardcoded data from the common parent.\\n3. **Add** state to the common parent and pass it down together with the event handlers.\"}\n{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"Almaty has a population of about 2 million and is Kazakhstan's largest city.\",\"source_span\":\"With a population of about 2 million, Almaty is Kazakhstan's largest city.\"}\n{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"Almaty was the capital city of Kazakhstan from 1929 to 1997.\",\"source_span\":\"From 1929 to 1997, it was its capital city.\"}\n{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"The name Almaty comes from the Kazakh word 'алма', meaning 'apple', often translated as 'full of apples'.\",\"source_span\":\"The name comes from <span lang=\\\"kk-KZ\\\">алма</span>, the Kazakh word for \\\"apple\\\" and is often translated as \\\"full of apples\\\".\"}\n{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"The wild Malus sieversii is considered a likely candidate for the ancestor of the modern domestic apple.\",\"source_span\":\"the wild <i lang=\\\"la\\\">Malus sieversii</i> is considered a likely candidate for the ancestor of the modern domestic apple\"}\n{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"In step 3, the Accordion component tracks the active panel using a number state variable activeIndex initialized with useState(0), instead of a boolean.\",\"source_span\":\"const [activeIndex, setActiveIndex] = useState(0);\"}\n{\"type\":\"fact\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"statement\":\"When activeIndex is 0 the first panel is active, and when it is 1 the second panel is active.\",\"source_span\":\"When the `activeIndex` is `0`, the first panel is active, and when it's `1`, it's the second one.\"}\n{\"type\":\"seed\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"fact_refs\":[3],\"question\":\"What are the three steps for lifting state up to coordinate two sibling components in React?\",\"answer\":\"Remove state from the child components, pass hardcoded data down from the common parent, then add state to the common parent and pass it down along with event handlers.\"}\n{\"type\":\"seed\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"fact_refs\":[4,5],\"question\":\"According to the React docs example, what is Almaty's population and when was it Kazakhstan's capital?\",\"answer\":\"Almaty has a population of about 2 million and was Kazakhstan's capital city from 1929 to 1997.\"}\n{\"type\":\"seed\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"fact_refs\":[6],\"question\":\"What does the Kazakh word 'алма' mean, and how is Almaty's name often translated?\",\"answer\":\"'Алма' is the Kazakh word for 'apple', and Almaty's name is often translated as 'full of apples'.\"}\n{\"type\":\"seed\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"fact_refs\":[7],\"question\":\"What wild apple species is considered a likely ancestor of the modern domestic apple, per the document?\",\"answer\":\"Malus sieversii, found in the region around Almaty, is considered a likely candidate for the ancestor of the modern domestic apple.\"}\n{\"type\":\"seed\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"fact_refs\":[8,9],\"question\":\"In the Accordion example's step 3, what state variable replaces the boolean isActive, and what do its values 0 and 1 mean?\",\"answer\":\"The Accordion uses a number state variable called activeIndex (initialized via useState(0)); when it's 0 the first panel is active, and when it's 1 the second panel is active.\"}\n{\"type\":\"seed\",\"doc_id\":\"d3_react_sharing-state-between-components\",\"fact_refs\":[0,2],\"question\":\"What is 'lifting state up' in React, and why would you do it for two Panel components each with their own isActive state?\",\"answer\":\"Lifting state up means removing state from sibling components and moving it to their closest common parent, then passing it down via props, so that state (like each Panel's isActive) can be coordinated between them instead of managed independently.\"}",
+  "ttft_ms": 11584,
+  "ttft_stream_ms": 2192,
+  "time_to_request_ms": 19,
+  "type": "result",
+  "duration_ms": 28397,
+  "uuid": "f72b10e6-4a2d-4ef0-86d1-5e6fe9eb7c24"
+}

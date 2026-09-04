@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 169263,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "67cdcf0f-9910-47cb-99b7-76c1edfbaf0e",
+  "total_cost_usd": 0.3955162,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 48923,
+    "cache_read_input_tokens": 94331,
+    "output_tokens": 18095,
+    "output_tokens_details": {
+      "thinking_tokens": 15079
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 48923,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2992,
+        "cache_read_input_tokens": 64053,
+        "cache_creation_input_tokens": 15148,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15148
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 18095,
+      "cacheReadInputTokens": 94331,
+      "cacheCreationInputTokens": 48923,
+      "webSearchRequests": 0,
+      "costUSD": 0.3955162,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0215_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0215_N4_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0215_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0215_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes one dataset wasn't collected in October, but both were (Oct 2014 & Oct 2015) - false presupposition, better fits N6 than a clean polarity flip\"}\n{\"id\":\"d2_s0215_N4_v4\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"'released' vs 'collected' is an aspect change, not a negation/antonym flip; fits N1 not N4\"}\n{\"id\":\"d2_s0215_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0215_N5_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0215_N5_v3\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"shifts to dataset size, an unrelated aspect, rather than a min/max flip on the collection-date measure\"}\n{\"id\":\"d2_s0215_N5_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"with only two datasets there is a single gap value, so 'shortest gap' equals seed's 'a year apart' - answer not necessarily different\"}\n{\"id\":\"d2_s0215_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the same true fact as the seed (collected a year apart) and just asks for the reason - an aspect change, fits N1 not N6\"}\n{\"id\":\"d2_s0215_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a different facet (sampling method) without presupposing a different/false fact; fits N1 not N6\"}\n{\"id\":\"d2_s0221_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0221_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0221_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0221_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0221_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0221_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0221_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0221_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0221_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines two changes - narrows from two features to just LOSS, and adds a 'single topic' scope qualifier - exceeds N2's single-qualifier-change requirement\"}\n{\"id\":\"d2_s0221_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0221_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0221_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0221_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0221_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'per-topic' vs 'per-user' is an aspect/scope change, not a clean antonym flip; presupposes per-topic features exist which contradicts LOSS/GOSS both being per-user\"}\n{\"id\":\"d2_s0221_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0221_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0221_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0221_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks the rationale for a true seed fact (two features exist) rather than presupposing a different fact; fits N1 not N6\"}\n{\"id\":\"d2_s0221_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about accuracy improvement, a different facet, without presupposing a false/different fact; fits N1 not N6\"}\n{\"id\":\"d2_s0227_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0227_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0227_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0227_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0227_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0227_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0227_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0227_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0227_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0227_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0227_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0227_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0227_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0227_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0227_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0227_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0227_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0227_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0227_N4_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0227_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0227_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes a separate 'collected' pool distinct from the 2M training set, contradicting the seed fact that the training set itself is those 2 million tweets\"}",
+  "ttft_ms": 148379,
+  "ttft_stream_ms": 1337,
+  "time_to_request_ms": 23,
+  "type": "result",
+  "duration_ms": 170096,
+  "uuid": "2cb8c7dd-a8db-4cb9-8c83-dd467b51cb23",
+  "queued_turn_count": 0
+}

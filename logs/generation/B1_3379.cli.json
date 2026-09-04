@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 210611,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "105954d3-b779-434a-954d-c69882530f60",
+  "total_cost_usd": 0.3698936,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 36256,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 21881,
+    "output_tokens_details": {
+      "thinking_tokens": 19030
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 36256,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 21881,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 36256,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 36256
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 21881,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 36256,
+      "webSearchRequests": 0,
+      "costUSD": 0.3698936,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d5_s0012_N3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0012_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0012_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0012_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks conditions ending exemption, an aspect/temporal change rather than a negation/antonym flip\"}\n{\"id\":\"d5_s0012_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0012_N5_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0012_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0012_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0012_N5_v4\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0012_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0012_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0019_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0019_P1_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0019_P1_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0019_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0019_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0019_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0019_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0019_P2_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"drops the 'trẻ em mẫu giáo' entity, narrowing content instead of pure restructure\"}\n{\"id\":\"d5_s0019_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0019_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0019_P3_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"drops 'trẻ mẫu giáo' entirely, a content change beyond allowed surface noise\"}\n{\"id\":\"d5_s0019_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0019_N1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0019_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0019_N2_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"two scope qualifiers changed at once (narrows to THPT and adds private-school condition), not exactly one\"}\n{\"id\":\"d5_s0019_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"replaces the defining qualifier (orphan status) with an unrelated broader condition and drops the mẫu giáo group, more than one scope change\"}\n{\"id\":\"d5_s0019_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0019_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0019_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0019_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0019_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks when the policy stops, a temporal aspect change rather than a negation/antonym flip\"}\n{\"id\":\"d5_s0019_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about repayment obligation cases, an aspect change rather than a polarity flip\"}\n{\"id\":\"d5_s0019_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0019_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0019_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0019_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0019_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0019_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0025_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0025_P1_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0025_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0025_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0025_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0025_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0025_P2_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0025_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0025_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0025_P3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0025_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0025_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0025_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0025_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0025_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"program-level accreditation standards are also issued by Bộ trưởng Bộ GD&ĐT, so the answer would not actually differ\"}\n{\"id\":\"d5_s0025_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0025_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0025_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0025_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks who conducts the assessment, an aspect change rather than a negation/antonym flip of the issuer question\"}\n{\"id\":\"d5_s0025_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks which institutions are exempt from applying the standard, a different question dimension rather than negating who issues it\"}\n{\"id\":\"d5_s0025_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks who has authority to revoke certification, an aspect change rather than a polarity flip\"}\n```",
+  "ttft_ms": 193687,
+  "ttft_stream_ms": 1319,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 210817,
+  "uuid": "07d586e9-d3e3-4994-b232-1a3485497337",
+  "queued_turn_count": 0
+}

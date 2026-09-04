@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 172776,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "b40a9462-27de-409d-9f82-920c9a09346e",
+  "total_cost_usd": 0.3170256,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32924,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 17927,
+    "output_tokens_details": {
+      "thinking_tokens": 14819
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32924,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 17927,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 32924,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32924
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 17927,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 32924,
+      "webSearchRequests": 0,
+      "costUSD": 0.3170256,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d2_s0682_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0682_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0682_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0682_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0682_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"new/original isn't a clean negation-antonym flip; it reverses adaptation direction (a scope/entity change) rather than making the seed answer mislead on sign — closer to N1/N6\"}\n{\"id\":\"d2_s0682_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0682_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0682_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new dimension (per-domain speed) absent from seed rather than flipping an existing quantifier on the same dimension — better fits N1\"}\n{\"id\":\"d2_s0682_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new dimension (per-domain speed) absent from seed rather than flipping an existing quantifier on the same dimension — better fits N1\"}\n{\"id\":\"d2_s0682_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposed fact (retraining takes longer) is the same fact as the seed's answer, not a different one; this is an aspect change (asks why, not how long) — better fits N1\"}\n{\"id\":\"d2_s0682_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0688_P1_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0688_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_P1_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"echo-question inversion ('The paper compares which...') is a syntactic restructure, not mere lexical substitution — better fits P2\"}\n{\"id\":\"d2_s0688_P1_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0688_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0688_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0688_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_P3_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"reorders words into telegraphic statement form ('paper compares which 2 models') rather than just noise/shorthand on unchanged structure\"}\n{\"id\":\"d2_s0688_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0688_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0688_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0688_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0688_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'performs worse' is a ranking/extreme question, not a negation-antonym flip of 'compared' — better fits N5 or N1\"}\n{\"id\":\"d2_s0688_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed's answer already contains enough info to derive this (SVM is bag-of-words, so CNN is the answer) — serving it wouldn't mislead, it's an aspect/derivation question, not a polarity flip\"}\n{\"id\":\"d2_s0688_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0688_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces an accuracy dimension never mentioned in seed's question/answer rather than flipping an existing extreme — better fits N1\"}\n{\"id\":\"d2_s0688_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces an accuracy dimension never mentioned in seed's question/answer rather than flipping an existing extreme — better fits N1\"}\n{\"id\":\"d2_s0688_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a category dimension never mentioned in seed's question/answer rather than flipping an existing extreme — better fits N1\"}\n{\"id\":\"d2_s0688_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a category dimension never mentioned in seed's question/answer rather than flipping an existing extreme — better fits N1\"}\n{\"id\":\"d2_s0688_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposed fact (task was chosen to compare CNN/SVM) matches the seed's own answer rather than a different fact; asks rationale, an aspect change — better fits N1\"}\n{\"id\":\"d2_s0688_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0694_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0694_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_P3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0694_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0694_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0694_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0694_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0694_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0694_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0694_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0694_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n```",
+  "ttft_ms": 153224,
+  "ttft_stream_ms": 1453,
+  "time_to_request_ms": 27,
+  "type": "result",
+  "duration_ms": 172993,
+  "uuid": "88e3f31f-a548-4848-9b95-6fe2819a1582",
+  "queued_turn_count": 0
+}

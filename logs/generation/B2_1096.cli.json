@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 69543,
+  "stop_reason": "end_turn",
+  "session_id": "a35e775d-05f9-4301-a6c8-465ad19089c9",
+  "total_cost_usd": 0.5046740000000001,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32806,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 6683,
+    "output_tokens_details": {
+      "thinking_tokens": 3977
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32806,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6683,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32806,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32806
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 6683,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32806,
+      "webSearchRequests": 0,
+      "costUSD": 0.5046740000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0505_N4_v4\",\"axis_ok\":false,\"conf\":0.78,\"issue\":\"no negation/antonym flip of the seed's asked content; it is an aspect change (framework advice) with an internal negative, not a polarity flip\"}\n{\"id\":\"d3_s0505_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0505_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0505_N5_v3\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d3_s0505_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0505_N6_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0505_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0511_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0511_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0511_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0511_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0511_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0511_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0511_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0511_P2_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0511_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0511_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0511_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0511_P3_v4\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d3_s0511_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0511_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0511_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrowing to the Activity section does not change the correct answer — the section shares the post's single byline and publication date, so the seed answer still answers it\"}\n{\"id\":\"d3_s0511_N2_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d3_s0511_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0511_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0511_N4_v1\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d3_s0511_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0511_N4_v3\",\"axis_ok\":false,\"conf\":0.72,\"issue\":\"not a polarity flip of the seed (byline/date); it is an aspect change to feature availability that merely contains a negative\"}\n{\"id\":\"d3_s0511_N4_v4\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"no negation/antonym flip; converts the date question into a yes/no ordering comparison against a release\"}\n{\"id\":\"d3_s0511_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0511_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0511_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0511_N5_v4\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d3_s0511_N6_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0511_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0518_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0518_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0518_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_P2_v4\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d3_s0518_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0518_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_N1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0518_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0518_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"react-dom ships in the same release on the same date, so the narrowed scope yields the same answer — seed answer still fully answers it\"}\n{\"id\":\"d3_s0518_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0518_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0518_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0518_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"not a polarity flip of the seed's date/ordinal question; it is an aspect change to feature content that merely embeds 'excluded'\"}\n{\"id\":\"d3_s0518_N4_v3\",\"axis_ok\":true,\"conf\":0.58,\"issue\":null}\n{\"id\":\"d3_s0518_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0518_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0518_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0518_N5_v3\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}",
+  "ttft_ms": 48057,
+  "type": "result",
+  "duration_ms": 69742,
+  "uuid": "1388e483-8262-4cf9-aac4-ebdabe33fc43",
+  "ttft_stream_ms": 1351,
+  "time_to_request_ms": 17,
+  "queued_turn_count": 0
+}

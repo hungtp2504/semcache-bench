@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 240509,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "36c72136-e775-492b-82e4-905904cb9313",
+  "total_cost_usd": 0.39002159999999997,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32023,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 25587,
+    "output_tokens_details": {
+      "thinking_tokens": 22352
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32023,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 25587,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 32023,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32023
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 25587,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 32023,
+      "webSearchRequests": 0,
+      "costUSD": 0.39002159999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```json\n{\"id\":\"d3_s0046_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0046_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps 'concurrent' for 'synchronous' (a different named mode), matching the entity-substitution pattern of N3 rather than a negation/antonym flip whose seed-answer-verbatim would mislead\"}\n{\"id\":\"d3_s0046_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks whether concurrency is mandatory vs optional, an unaddressed aspect not derived by negating the mode-naming claim; more like N1 aspect change\"}\n{\"id\":\"d3_s0046_N4_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"presupposes concurrent mode previously existed and was removed — a presupposition shift, not a clean negation/antonym flip; seed answer already conveys 'no concurrent mode' without misleading\"}\n{\"id\":\"d3_s0046_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about a different entity (legacy mode) rather than negating/flipping the concurrent-mode claim\"}\n{\"id\":\"d3_s0046_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's y/n claim has no quantifier/extreme to flip; variant introduces an unrelated open question about feature shipping order\"}\n{\"id\":\"d3_s0046_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes a React version had a formally-named concurrent mode, which is false per the recap; not a clean quantifier flip of the original claim\"}\n{\"id\":\"d3_s0046_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"same issue as sibling v1 — pivots to an unrelated 'which version first' question rather than flipping an extreme on the seed's claim\"}\n{\"id\":\"d3_s0046_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0046_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0046_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0052_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0052_P1_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0052_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0052_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0052_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0052_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0052_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0052_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0052_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0052_P3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0052_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0052_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0052_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0052_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0052_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0052_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0052_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0052_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no further rename of this API is known between React 18 and 19 (still root.unmount), so the answer likely equals the seed's, failing the 'necessarily different' requirement\"}\n{\"id\":\"d3_s0052_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"reverses query direction (asks the old name given the new one) rather than a negation/antonym flip of the rename claim\"}\n{\"id\":\"d3_s0052_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed's answer (renamed to root.unmount) already correctly answers this removed-vs-renamed question in the right sign, so serving it verbatim would not mislead — same answer content, not a true flip\"}\n{\"id\":\"d3_s0052_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks the deprecation status of the new API, an unrelated aspect rather than negating the rename claim\"}\n{\"id\":\"d3_s0052_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"refers to a different entity (the mount counterpart API) rather than negating/flipping the unmount rename claim — entity substitution, not polarity\"}\n{\"id\":\"d3_s0052_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0052_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no rename after React 18 is known, so 'latest name' would equal the seed's answer (root.unmount), failing 'necessarily different'\"}\n{\"id\":\"d3_s0052_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0052_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0052_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0052_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0058_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0058_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0058_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0058_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0058_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0058_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0058_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0058_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0058_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0058_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0058_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0058_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0058_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0058_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0058_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"StrictMode does not change the opt-in requirement for concurrent features; the correct answer is likely unchanged from the seed's, failing 'correct answer differs'\"}\n{\"id\":\"d3_s0058_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0058_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0058_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Concurrent React remains opt-in in React 19 as well, so the answer is likely unchanged from the seed's, failing 'necessarily different'\"}\n{\"id\":\"d3_s0058_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0058_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks a procedural 'how to disable' question rather than negating the enablement claim; closer to an N1 aspect change\"}\n{\"id\":\"d3_s0058_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n```",
+  "ttft_ms": 221461,
+  "ttft_stream_ms": 2949,
+  "time_to_request_ms": 46,
+  "type": "result",
+  "duration_ms": 240737,
+  "uuid": "a8944bf5-2e70-4eb5-b646-bd346778d154",
+  "queued_turn_count": 0
+}

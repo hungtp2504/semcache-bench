@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 154891,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "a0fb67f3-de15-4227-a15e-31d969298bc4",
+  "total_cost_usd": 0.3554042,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 45795,
+    "cache_read_input_tokens": 92381,
+    "output_tokens": 15374,
+    "output_tokens_details": {
+      "thinking_tokens": 12418
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 45795,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2904,
+        "cache_read_input_tokens": 62103,
+        "cache_creation_input_tokens": 13970,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13970
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15374,
+      "cacheReadInputTokens": 92381,
+      "cacheCreationInputTokens": 45795,
+      "webSearchRequests": 0,
+      "costUSD": 0.3554042,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0581_N4_v4\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"introduces optional-vs-required predicate absent from seed; aspect change, not a negation flip of the due-date claim\"}\n{\"id\":\"d1_s0581_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0581_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0581_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0581_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0581_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0581_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0587_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0587_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0587_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0587_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0587_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0587_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0587_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0587_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0587_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0587_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"open 'which textbook' identification question presupposing an optional text exists, not a negation flip of required/optional\"}\n{\"id\":\"d1_s0587_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts entity from textbook to handouts; aspect/entity change rather than a clean polarity flip of the same claim\"}\n{\"id\":\"d1_s0587_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about permission to use outside texts, a new policy aspect, not a negation flip of 'textbook required'\"}\n{\"id\":\"d1_s0587_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0587_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces an unrelated 'all readings' composition question; no existing extreme in seed to flip, this is an aspect change\"}\n{\"id\":\"d1_s0587_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes a 'minimum required reading' quantity not established by seed's answer (no required reading list exists); presupposition shift, not a quantifier flip\"}\n{\"id\":\"d1_s0587_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks to identify a specific article, an unrelated aspect, not a quantifier/extreme flip of the textbook-requirement fact\"}\n{\"id\":\"d1_s0587_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts to ranking handouts vs articles as primary source; aspect change rather than a genuine extreme flip\"}\n{\"id\":\"d1_s0587_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0587_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0593_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0593_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0593_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0593_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0593_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0593_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0593_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0593_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0593_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0593_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0593_P3_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0593_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0593_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0593_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0593_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0593_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0593_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0593_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0593_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0593_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about course discontinuation, an unrelated fact not addressed by seed's answer; aspect change, not a negation flip\"}\n{\"id\":\"d1_s0593_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0593_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about an enrollment prohibition, a new presupposed policy fact, not the negation of 'graduate level'\"}\n{\"id\":\"d1_s0593_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0593_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0593_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts from 'level taught at' to 'minimum enrollment eligibility level', a different presupposed fact rather than a pure extreme-flip of the same claim\"}",
+  "ttft_ms": 135157,
+  "ttft_stream_ms": 3093,
+  "time_to_request_ms": 59,
+  "type": "result",
+  "duration_ms": 155849,
+  "uuid": "a44d18e3-036f-4af5-85d8-62b661b2e0e8",
+  "queued_turn_count": 0
+}

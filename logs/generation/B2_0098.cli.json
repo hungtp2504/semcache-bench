@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 72315,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "ba7fbba0-8780-4ee9-8c78-4178ca0900fe",
+  "total_cost_usd": 0.527139,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 34185,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 7030,
+    "output_tokens_details": {
+      "thinking_tokens": 4190
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 34185,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 7030,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 34185,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 34185
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 7030,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 34185,
+      "webSearchRequests": 0,
+      "costUSD": 0.527139,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0555_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0555_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0555_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrows to a module, but the module instructor/term is the same as the seed's, so the seed answer still answers it\"}\n{\"id\":\"d1_s0555_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0555_N3_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0555_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0555_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"temporal scope shift (preceding term), not a negation/antonym flip\"}\n{\"id\":\"d1_s0555_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0555_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0555_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"yes/no framing: seed answer directly and correctly answers it (no, it was taught by Johnston in Fall 2006)\"}\n{\"id\":\"d1_s0555_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0555_N5_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0555_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a count of offerings; no quantifier/extreme was flipped (aspect change)\"}\n{\"id\":\"d1_s0555_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"exclusion of the seed term, not a min/max or earliest/latest flip\"}\n{\"id\":\"d1_s0555_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposition matches the seed fact exactly; this is an aspect change (department), not a shifted presupposition\"}\n{\"id\":\"d1_s0555_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes only what the seed asserts; asks a new facet (prerequisites) rather than a different presupposed fact\"}\n{\"id\":\"d1_s0562_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0562_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_P2_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0562_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0562_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0562_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0562_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrowed to the final design report but the supervisor/term are the seed's answer, so the seed answer still answers it\"}\n{\"id\":\"d1_s0562_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0562_N3_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0562_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0562_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0562_N4_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d1_s0562_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0562_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0562_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0562_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0562_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"count question; no quantifier/extreme flipped\"}\n{\"id\":\"d1_s0562_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"exclusion of the seed term rather than a min/max or earliest/latest flip\"}\n{\"id\":\"d1_s0562_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes exactly the seed fact; asks a new facet (enrollment), so it is an aspect change not a presupposition shift\"}\n{\"id\":\"d1_s0562_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposition identical to the seed fact; office hours is a different facet, not a shifted presupposition\"}\n{\"id\":\"d1_s0567_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0567_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0567_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0567_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0567_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0567_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0567_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0567_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0567_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0567_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0567_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0567_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0567_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0567_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0567_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0567_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}",
+  "ttft_ms": 49529,
+  "ttft_stream_ms": 1892,
+  "time_to_request_ms": 21,
+  "type": "result",
+  "duration_ms": 72509,
+  "uuid": "c08623b9-4e26-4b54-8b49-d34ec003b219",
+  "queued_turn_count": 0
+}

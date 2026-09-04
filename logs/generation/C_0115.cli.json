@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 66729,
+  "stop_reason": "end_turn",
+  "session_id": "895ded7f-2110-46cf-b8df-cc5c19ee4747",
+  "total_cost_usd": 0.0850948,
+  "usage": {
+    "input_tokens": 19,
+    "cache_creation_input_tokens": 25162,
+    "cache_read_input_tokens": 59368,
+    "output_tokens": 5763,
+    "output_tokens_details": {
+      "thinking_tokens": 5245
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 25162,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 10,
+        "output_tokens": 461,
+        "cache_read_input_tokens": 36869,
+        "cache_creation_input_tokens": 10792,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10792
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 19,
+      "outputTokens": 5763,
+      "cacheReadInputTokens": 59368,
+      "cacheCreationInputTokens": 25162,
+      "webSearchRequests": 0,
+      "costUSD": 0.0850948,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 3,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "**Classification: Spike** — generate test dataset following a specific taxonomy. No design needed; the rules are clear. I'll parse each seed for key entities/quantifiers, apply template variants across the 9 axes (P1/P2/P3 paraphrases, N1-N6 answer-flipping), validate uniqueness and compliance, then emit JSONL.\n\n**Plan:** (1) For each of 10 seeds, extract answer structure and quantity-bearing elements. (2) Generate P1/P2/P3 variants (synonyms/restructure/noise) ensuring answer remains identical. (3) Generate N1-N6 variants (aspect/scope/entity/polarity/quantifier/presupposition) ensuring answer differs; include delta for N-axes. (4) Validate: no duplicate within-seed, all counts exact (4/4/4/2/2/2/4/4/2), all N-axis deltas ≤12 words. (5) Emit clean JSONL, one variant per line.\n\nProceed?",
+  "ttft_ms": 56680,
+  "type": "result",
+  "duration_ms": 70010,
+  "uuid": "a0de7b2b-b62f-4fb9-aee1-3047337d99ad",
+  "ttft_stream_ms": 1661,
+  "time_to_request_ms": 321,
+  "queued_turn_count": 0
+}

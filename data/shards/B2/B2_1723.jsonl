@@ -1,0 +1,60 @@
+{"id": "d5_s0280_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "swaps the credit-system qualifier for teacher-training rather than adding one scope qualifier; threshold answer likely unchanged", "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N4_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.75, "issue": "flip preserves answer content: threshold is still 1,20, so seed answer is not misleading", "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N4_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "no negation/antonym flip; asks warning-removal threshold (aspect change) and likely same 1,20 value", "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N4_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.8, "issue": "no polarity flip; swaps warning for dismissal (aspect/entity change, belongs to N1/N3)", "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N5_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.5, "issue": "lowest warning threshold across years is plausibly the first-year 1,20, so seed answer may still be correct", "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.7, "issue": "minimum-to-avoid-warning yields the same 1,20 value; answer not necessarily different", "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0280_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.5, "issue": "narrowing to liên thông programs does not plausibly change the 10% threshold", "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N2_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.75, "issue": "seed answer already states the reference is the program's standard load, so it still answers the variant", "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N4_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.7, "issue": "inverted phrasing keeps the same 10% answer content; seed answer would not mislead", "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N5_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0286_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}
+{"id": "d5_s0292_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1723", "ts": "2026-08-31T10:30:05Z"}

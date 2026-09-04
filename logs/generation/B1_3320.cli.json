@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 136308,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "b447fa28-11c0-4841-afb7-0900e4db4b6f",
+  "total_cost_usd": 0.36400940000000004,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 49287,
+    "cache_read_input_tokens": 98017,
+    "output_tokens": 14725,
+    "output_tokens_details": {
+      "thinking_tokens": 11741
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 49287,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2952,
+        "cache_read_input_tokens": 67739,
+        "cache_creation_input_tokens": 11826,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11826
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 14725,
+      "cacheReadInputTokens": 98017,
+      "cacheCreationInputTokens": 49287,
+      "webSearchRequests": 0,
+      "costUSD": 0.36400940000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0303_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0303_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0303_P2_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0303_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0303_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0303_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0303_P3_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"\\\"cskd\\\" likely abbreviates \\\"cơ sở kinh doanh\\\" (business establishment), swapping the entity rather than just adding shorthand/noise\"}\n{\"id\":\"d5_s0303_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0303_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0303_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0303_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0303_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0303_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0303_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0303_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0303_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes cases of allowed late publication exist rather than a single negation/antonym flip; better fits N6\"}\n{\"id\":\"d5_s0303_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps the action/recipient (report to authority vs public posting) rather than negating a polarity; this is an entity/action substitution (N3), not a polarity flip\"}\n{\"id\":\"d5_s0303_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0303_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a different fact (retention duration) instead of flipping an existing extremum in the same question; fits N1 aspect change\"}\n{\"id\":\"d5_s0303_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes multiple deadlines exist and asks for the longest among them, rather than flipping earliest/latest of the same fact; fits N6\"}\n{\"id\":\"d5_s0303_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes multiple disclosure items with different deadlines and asks for the earliest, rather than flipping an extremum already present in the seed; fits N6\"}\n{\"id\":\"d5_s0303_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0303_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0310_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0310_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0310_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0310_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0310_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0310_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0310_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0310_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0310_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0310_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts to a tuition-exemption fact rather than negating the scope-of-application question itself; fits N1/N6 better\"}\n{\"id\":\"d5_s0310_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes a prior broader scope that was abolished (a new fact) rather than a clean negation flip; fits N6\"}\n{\"id\":\"d5_s0310_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an unrelated fact (tuition levels) instead of flipping an existing quantifier/extreme in the scope-of-application question; fits N1\"}\n{\"id\":\"d5_s0310_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0310_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an unrelated fact (tuition levels) instead of flipping an existing quantifier/extreme; fits N1\"}\n{\"id\":\"d5_s0310_N5_v4\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0310_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0310_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0316_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0316_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0316_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0316_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0316_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0316_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0316_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0316_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0316_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 116686,
+  "ttft_stream_ms": 1246,
+  "time_to_request_ms": 17,
+  "type": "result",
+  "duration_ms": 136786,
+  "uuid": "f46c8ba6-05ee-48ad-8310-cf5b9dd755d8",
+  "queued_turn_count": 0
+}

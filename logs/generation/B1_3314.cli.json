@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 156101,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "139bae24-647b-49c6-9735-ca5caefc5772",
+  "total_cost_usd": 0.3345576,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 38497,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 17451,
+    "output_tokens_details": {
+      "thinking_tokens": 14240
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 38497,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 17451,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 38497,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 38497
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 17451,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 38497,
+      "webSearchRequests": 0,
+      "costUSD": 0.3345576,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Auditing each variant against its axis definition now — checking entity/number preservation for P-axes, facet/scope/answer-difference requirements for N-axes, and flagging cases where the transformation doesn't match its labeled axis (e.g., \"bãi bỏ\" vs \"quy định\" framed as N4 but reading more like an aspect change).\n\n```jsonl\n{\"id\":\"d5_s0224_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0224_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0224_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0224_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0224_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0224_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0224_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0224_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0224_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0224_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"\\\"bãi bỏ\\\" is not an antonym/negation of \\\"quy định\\\" — this is an aspect change (repeal vs. content), not a clean polarity flip\"}\n{\"id\":\"d5_s0224_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks binary in-force status, an unrelated facet, not a negation flip of the seed's content question\"}\n{\"id\":\"d5_s0224_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0224_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0224_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0224_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0224_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks max number of clauses — a different question type, not an extreme flip of a quantifier present in the seed\"}\n{\"id\":\"d5_s0224_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes other similar provisions exist elsewhere — fits presupposition shift, not a min/max extreme flip\"}\n{\"id\":\"d5_s0224_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0224_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0230_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0230_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0230_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0230_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0230_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Nghị định 32/2019/NĐ-CP is a general public-service ordering decree, not education-specific — narrowing to mầm non likely leaves the cited decree unchanged\"}\n{\"id\":\"d5_s0230_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"the same general decree (32/2019) already covers public services broadly, so widening to 'mọi dịch vụ công' may not change the answer\"}\n{\"id\":\"d5_s0230_N3_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the same general decree (32/2019) likely still applies to y tế services, so the answer may not necessarily differ\"}\n{\"id\":\"d5_s0230_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0230_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0230_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0230_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0230_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about a repealed decree — presupposes a different fact rather than negating the seed's applied-decree question\"}\n{\"id\":\"d5_s0230_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0230_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0230_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes other governing documents exist besides 32/2019 — fits presupposition shift, not a min/max extreme flip\"}\n{\"id\":\"d5_s0230_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks for a numeric budget cap, an unrelated facet, not an extreme (min/max) flip of 'which decree/date'\"}\n{\"id\":\"d5_s0230_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0230_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0236_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0236_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0236_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0236_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0236_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0236_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0236_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0236_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0236_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0236_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0236_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0236_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0236_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n```\n\nSummary: 47/60 compliant, 13 flagged non-compliant. Most flags cluster around N4 items that swap in a semantically different verb (\"bãi bỏ\"/repeal, \"hết hiệu lực\"/validity) rather than negating the seed's actual predicate, N5 items that introduce an unrelated quantifier instead of flipping one present in the seed, and N2/N3 items on d5_s0230 where Nghị định 32/2019/NĐ-CP's known general (not sector-specific) scope means the scope/entity change may not actually change the answer — flagged at lower confidence since this relies on domain knowledge of that decree's real coverage.",
+  "ttft_ms": 135428,
+  "ttft_stream_ms": 2719,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 156302,
+  "uuid": "efaa3874-1f33-41e9-9959-0ecdbff9f553",
+  "queued_turn_count": 0
+}

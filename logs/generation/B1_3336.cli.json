@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 212715,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "3a99b380-7a13-4c00-822e-4f8585033a1b",
+  "total_cost_usd": 0.38875760000000004,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 41612,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 21625,
+    "output_tokens_details": {
+      "thinking_tokens": 18809
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 41612,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 21625,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 41612,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 41612
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 21625,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 41612,
+      "webSearchRequests": 0,
+      "costUSD": 0.38875760000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0158_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0158_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0158_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0158_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0158_N3_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0158_N4_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0158_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks consequence of not finishing in time, not a negation/antonym flip; content duplicates the N6_v1 presupposition-shift pattern for this seed\"}\n{\"id\":\"d5_s0158_N4_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0158_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks whether suspension time counts toward the cap — a definitional/inclusion question, not a polarity flip of the min/max rule\"}\n{\"id\":\"d5_s0158_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"shifts to asking which program has the longest standard duration — different entity and quantity, not a min/max extreme flip on the seed's own question\"}\n{\"id\":\"d5_s0158_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks the extreme of standard duration itself across programs, a different quantity than the seed's min/max ratio relative to standard duration\"}\n{\"id\":\"d5_s0158_N5_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"shifts topic to extension length, unrelated quantity to the seed's min/max training duration ratio\"}\n{\"id\":\"d5_s0158_N5_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"shifts topic to number of extensions allowed, unrelated quantity to the seed's min/max duration ratio\"}\n{\"id\":\"d5_s0158_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0158_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0164_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0164_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0164_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0164_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_P3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0164_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0164_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0164_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0164_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0164_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0164_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0164_N4_v3\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"asks about removal timing from the website, a different aspect than the seed's pre-deadline publication timing, not a negation flip\"}\n{\"id\":\"d5_s0164_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0164_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0164_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0164_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks minimum length of the application-receiving window, a different quantity than the seed's lead-time-before-deadline\"}\n{\"id\":\"d5_s0164_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks maximum length of the application-receiving window, a different quantity than the seed's lead-time-before-deadline\"}\n{\"id\":\"d5_s0164_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0164_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0170_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0170_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0170_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0170_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0170_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0170_N2_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0170_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}",
+  "ttft_ms": 196075,
+  "ttft_stream_ms": 1453,
+  "time_to_request_ms": 18,
+  "type": "result",
+  "duration_ms": 212912,
+  "uuid": "0c512400-8633-4788-8610-91df49d1e2cb",
+  "queued_turn_count": 0
+}

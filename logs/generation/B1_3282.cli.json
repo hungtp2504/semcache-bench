@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 141095,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "2707be59-7eb0-4943-96e3-a38d28692815",
+  "total_cost_usd": 0.3104576,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 38857,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 14897,
+    "output_tokens_details": {
+      "thinking_tokens": 11625
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 38857,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 14897,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 38857,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 38857
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 14897,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 38857,
+      "webSearchRequests": 0,
+      "costUSD": 0.3104576,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0156_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"Not a polarity flip of seed's topic (training mode); shifts to unrelated aspect (which fields are barred from doctoral training) — this is aspect change, not negation\"}\n{\"id\":\"d5_s0156_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Seed has no quantifier to flip; introduces an unstated cross-level comparison ('most modes') rather than flipping an existing min/max\"}\n{\"id\":\"d5_s0156_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Seed has no quantifier to flip; invents comparison across modes/levels not grounded in seed's single fact\"}\n{\"id\":\"d5_s0156_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Not a quantifier flip on seed's content; shifts to an unrelated aspect (program duration) per delta note itself\"}\n{\"id\":\"d5_s0156_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Not a quantifier flip on seed's content; shifts to an unrelated aspect (program duration) per delta note itself\"}\n{\"id\":\"d5_s0156_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0156_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Low lexical overlap with seed (no 'hình thức'/'chính quy'); asks about late-completion consequence, an unrelated aspect rather than a presupposition built on the seed's fact\"}\n{\"id\":\"d5_s0162_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0162_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0162_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0162_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0162_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0162_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0162_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0162_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0162_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0162_P3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Drops 'sau đại học' entirely, not just surface noise; N3_v1 shows level is a scope-defining term whose omission broadens the question beyond what seed's answer covers\"}\n{\"id\":\"d5_s0162_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0162_P3_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Drops 'sau đại học' entirely, not just surface noise; omission broadens scope beyond seed's answer\"}\n{\"id\":\"d5_s0162_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0162_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0162_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0162_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0162_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0162_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0162_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Asks about delegable content restrictions, an unrelated topic to the percentage requirement rather than a negation of it\"}\n{\"id\":\"d5_s0162_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0162_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Asks about prohibited joint programs generally, an unrelated topic rather than a negation of the percentage requirement\"}\n{\"id\":\"d5_s0162_N4_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"Asks a definitional boundary question (what's excluded from the count) rather than a straightforward polarity/antonym flip of the requirement\"}\n{\"id\":\"d5_s0162_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0162_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0162_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Introduces unstated cross-level comparison ('highest') rather than flipping the seed's existing min quantifier on the same quantity\"}\n{\"id\":\"d5_s0162_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Swaps entity (host→partner institution) without flipping the quantifier (still 'tối thiểu'); this is entity substitution (N3), not a quantifier/extreme change\"}\n{\"id\":\"d5_s0162_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0162_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Asks about contract content requirements, a different topic not clearly presupposing the seed's specific 50% fact\"}\n{\"id\":\"d5_s0168_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0168_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0168_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0168_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0168_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0168_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0168_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0168_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0168_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0168_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0168_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0168_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0168_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0168_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0168_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0168_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0168_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0168_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0168_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0168_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Asks consequence of failing one sub-condition rather than a direct polarity flip of the recognition question; better fits presupposition-shift than negation\"}\n{\"id\":\"d5_s0168_N4_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0168_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0168_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Seed has no quantifier to flip; introduces a new specific extremum (latest dossier deadline) on a sub-topic not present in seed\"}\n{\"id\":\"d5_s0168_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Seed has no quantifier to flip; introduces a new extremum (earliest recognition date) unrelated to the conditions asked\"}\n{\"id\":\"d5_s0168_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Seed has no quantifier to flip; introduces a new specific value (minimum admission score) not present in seed's open-ended conditions question\"}",
+  "ttft_ms": 119623,
+  "ttft_stream_ms": 1354,
+  "time_to_request_ms": 17,
+  "type": "result",
+  "duration_ms": 141295,
+  "uuid": "7112fe87-03a9-46b2-a90b-32236ead772c",
+  "queued_turn_count": 0
+}

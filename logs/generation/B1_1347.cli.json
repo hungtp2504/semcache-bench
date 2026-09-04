@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 138521,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "0155af36-a885-4fa8-85e0-7242f7cc8a89",
+  "total_cost_usd": 0.3380732,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 44606,
+    "cache_read_input_tokens": 93956,
+    "output_tokens": 14085,
+    "output_tokens_details": {
+      "thinking_tokens": 11102
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 44606,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2927,
+        "cache_read_input_tokens": 63678,
+        "cache_creation_input_tokens": 11206,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11206
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 14085,
+      "cacheReadInputTokens": 93956,
+      "cacheCreationInputTokens": 44606,
+      "webSearchRequests": 0,
+      "costUSD": 0.3380732,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0559_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0559_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0559_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0559_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks which project is excluded from ownership — a negation/exclusion framing, not a min/max/earliest/latest quantifier flip; better fits N4/N6\"}\n{\"id\":\"d3_s0559_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0559_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0559_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0565_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0565_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0565_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0565_P1_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0565_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0565_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0565_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0565_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0565_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0565_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0565_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0565_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0565_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0565_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0565_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0565_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0565_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0565_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0565_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0565_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0565_N4_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0565_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0565_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0565_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"drops the vulnerability-fix content entirely and asks for the newest React release overall since a date; this is an unrelated facet, not an extremum flip on the fixed-versions set\"}\n{\"id\":\"d3_s0565_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0565_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines an extremum change (minimum) with an entity substitution (React 18 line instead of the seed's 19.x), more than the single change N5 allows\"}\n{\"id\":\"d3_s0565_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0565_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0572_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0572_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0572_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0572_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0572_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0572_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0572_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0572_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0572_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0572_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0572_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0572_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0572_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0572_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0572_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Jordan Walke created React including its core reconciler, so the answer likely does not differ from the seed's — scope narrowing may not change the correct answer\"}\n{\"id\":\"d3_s0572_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0572_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0572_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0572_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'leads now' vs 'created' is a facet change (leadership vs. authorship), not a negation/antonym flip; also unnaturally states its own contrast ('rather than who created it')\"}\n{\"id\":\"d3_s0572_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'opposed' is not a lexical antonym of 'created'; this presupposes internal opposition existed and shifts to a new unrelated fact, closer to N6 than a polarity flip\"}\n{\"id\":\"d3_s0572_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about a creator's later departure — presupposes plural creators and a departure fact, a facet/presupposition shift rather than a negation/antonym flip of 'created'\"}\n{\"id\":\"d3_s0572_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0572_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'most recent to join the core team' is an unrelated facet (team membership recency) rather than an extremum flip tied to the original-creation fact\"}\n{\"id\":\"d3_s0572_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'most commits contributed' is an unrelated facet (contribution volume), not a quantifier/extreme flip on who originally created React\"}\n{\"id\":\"d3_s0572_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}",
+  "ttft_ms": 118368,
+  "ttft_stream_ms": 1504,
+  "time_to_request_ms": 27,
+  "type": "result",
+  "duration_ms": 139290,
+  "uuid": "a48f5d0a-d648-494d-bd7c-8090c974071e",
+  "queued_turn_count": 0
+}

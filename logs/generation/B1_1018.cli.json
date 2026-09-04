@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 119550,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "9783dda8-bdc9-43f6-befc-23a7713602fa",
+  "total_cost_usd": 0.3859011,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 31046,
+    "cache_read_input_tokens": 30247,
+    "output_tokens": 12703,
+    "output_tokens_details": {
+      "thinking_tokens": 9728
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31046,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 12703,
+        "cache_read_input_tokens": 30247,
+        "cache_creation_input_tokens": 31046,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 31046
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 12703,
+      "cacheReadInputTokens": 30247,
+      "cacheCreationInputTokens": 31046,
+      "webSearchRequests": 0,
+      "costUSD": 0.3859011,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d1_s0176_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0176_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0176_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"invents a temporal/historical dimension (earliest offering dept) not established by seed's single-fact answer; answer not necessarily different from seed (could still be CEE)\"}\n{\"id\":\"d1_s0176_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"invents a temporal dimension (most recent offering dept) not grounded in seed; answer not necessarily different\"}\n{\"id\":\"d1_s0176_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes a second/'other' offering department not established by the seed's single-department answer; answer indeterminate rather than necessarily different\"}\n{\"id\":\"d1_s0176_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes multiple departments offering sections, not grounded in seed's single-department fact; not a genuine extreme flip of anything in the seed\"}\n{\"id\":\"d1_s0176_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"different facet (prerequisites) with low lexical overlap to seed; better classified as N1 aspect change than N6 presupposition shift\"}\n{\"id\":\"d1_s0176_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"different facet (enrollment permission process), low lexical overlap with seed; fits N1 rather than N6\"}\n{\"id\":\"d1_s0181_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0181_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0181_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0181_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0181_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0181_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0181_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0181_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0181_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'cancelled sessions' is a different facet not covered by seed rather than a clean antonym flip; fits N1 better\"}\n{\"id\":\"d1_s0181_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'break length' is a related-but-different fact with high lexical overlap and no established antonym pairing to 'session length'; fits N6 rather than N4\"}\n{\"id\":\"d1_s0181_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0181_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0181_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed implies a fixed weekly schedule, so the weekly 'maximum' coincides with the regular count; answer not necessarily different\"}\n{\"id\":\"d1_s0181_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0181_N5_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0181_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0181_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"low lexical overlap and a substantially different facet (attendance consequence/policy); closer to N1 than N6\"}\n{\"id\":\"d1_s0181_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0188_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0188_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0188_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0188_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0188_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0188_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0188_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0188_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0188_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0188_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0188_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0188_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes a fabricated 'declining department' entity not established by seed; answer indeterminate rather than a clean antonym flip\"}\n{\"id\":\"d1_s0188_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'excluded departments' has an unbounded/indeterminate complement (virtually all other departments), not a clean single antonym flip\"}\n{\"id\":\"d1_s0188_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0188_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n```",
+  "ttft_ms": 101085,
+  "ttft_stream_ms": 1382,
+  "time_to_request_ms": 23,
+  "type": "result",
+  "duration_ms": 119774,
+  "uuid": "bab85333-56d5-413f-abc9-d00241355f77"
+}

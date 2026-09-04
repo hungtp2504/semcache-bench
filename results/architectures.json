@@ -1,0 +1,48 @@
+{
+  "A_threshold": {
+    "false_hit": 0.27514154758695064,
+    "false_miss": 0.3335976627712855,
+    "hit_rate_on_hits": 0.6664023372287146,
+    "false_hit_slope": 0.2559894109861019,
+    "false_hit_cliff": 0.28498537315463635
+  },
+  "D_slot_guard": {
+    "false_hit": 0.2416194841376831,
+    "false_miss": 0.36673622704507514,
+    "hit_rate_on_hits": 0.6332637729549249,
+    "false_hit_slope": 0.23666446062210456,
+    "false_hit_cliff": 0.24416626981427308
+  },
+  "E_learned": {
+    "false_hit": 0.32974586234964276,
+    "false_miss": 0.199883158070439,
+    "false_hit_slope": 0.3649440596696857,
+    "false_hit_cliff": 0.31165274544707655,
+    "coef": {
+      "sim": 10.669010369114647,
+      "jaccard": -4.237855791010085,
+      "lendiff": -0.8537862263661986,
+      "num_match": 0.5708331660690864,
+      "cap_match": -1.0263051706175597
+    }
+  },
+  "B_cross_encoder": {
+    "false_hit": 0.18396692729396963,
+    "false_miss": 0.2778380634390651,
+    "false_hit_slope": 0.20595632031767042,
+    "false_hit_cliff": 0.17266480712973672
+  },
+  "C_llm_verifier": {
+    "n_band_decided": 22688,
+    "band_false_hit": 0.02672497570456754,
+    "band_false_miss": 0.0032263268269075657,
+    "band_false_hit_slope": 0.01839080459770115,
+    "band_false_hit_cliff": 0.030983847283406755
+  },
+  "instability_N1000_tau090": {
+    "A": 0.422,
+    "D": 0.373,
+    "B": 0.31
+  },
+  "note": "C (LLM) instability not simulated: requires a live LLM in the arrival loop; its pair-level decisions are in config C rates."
+}

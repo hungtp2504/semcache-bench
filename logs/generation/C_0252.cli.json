@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 348208,
+  "stop_reason": "end_turn",
+  "session_id": "7df207ec-c349-4d44-812e-114806fb93f2",
+  "total_cost_usd": 0.2942756,
+  "usage": {
+    "input_tokens": 19,
+    "cache_creation_input_tokens": 51910,
+    "cache_read_input_tokens": 56866,
+    "output_tokens": 36950,
+    "output_tokens_details": {
+      "thinking_tokens": 18390
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 51910,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 10,
+        "output_tokens": 4950,
+        "cache_read_input_tokens": 38362,
+        "cache_creation_input_tokens": 32052,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32052
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 19,
+      "outputTokens": 36950,
+      "cacheReadInputTokens": 56866,
+      "cacheCreationInputTokens": 51910,
+      "webSearchRequests": 0,
+      "costUSD": 0.2942756,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"seed_id\":\"d5_s0017\",\"axis\":\"N5\",\"v\":1,\"text\":\"Học sinh tiểu học được hỗ trợ bao nhiêu phần trăm học phí ở trường tư thục ở địa bàn không đủ trường công lập?\",\"delta\":\"asks for amount of support\"}\n{\"seed_id\":\"d5_s0017\",\"axis\":\"N5\",\"v\":2,\"text\":\"Có được hỗ trợ toàn bộ học phí hay chỉ một phần cho học sinh tiểu học tại trường tư thục ở địa bàn thiếu công lập?\",\"delta\":\"asks about full vs partial support\"}\n{\"seed_id\":\"d5_s0017\",\"axis\":\"N5\",\"v\":3,\"text\":\"Học sinh tiểu học được hỗ trợ học phí tối thiểu bao nhiêu ở trường tư thục ở địa bàn không đủ công lập?\",\"delta\":\"asks for minimum support\"}\n{\"seed_id\":\"d5_s0017\",\"axis\":\"N5\",\"v\":4,\"text\":\"Học sinh tiểu học học tại trường tư thục ở địa bàn không đủ trường công lập được hỗ trợ toàn bộ hay từng phần?\",\"delta\":\"asks extent and scope of support\"}\n{\"seed_id\":\"d5_s0017\",\"axis\":\"N6\",\"v\":1,\"text\":\"Tiền hỗ trợ học phí cho học sinh tiểu học tại trường tư thục ở địa bàn không đủ trường công lập lấy từ đâu?\",\"delta\":\"asks about funding source, presupposed\"}\n{\"seed_id\":\"d5_s0017\",\"axis\":\"N6\",\"v\":2,\"text\":\"Tại sao Nhà nước hỗ trợ học phí cho học sinh tiểu học tại trường tư thục ở địa bàn không đủ trường công lập?\",\"delta\":\"asks about rationale and reason, presupposed\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P1\",\"v\":1,\"text\":\"Những đối tượng nào được áp dụng Nghị định 81/2021/NĐ-CP?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P1\",\"v\":2,\"text\":\"Ai là những người được hưởng các quy định của Nghị định 81/2021/NĐ-CP?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P1\",\"v\":3,\"text\":\"Nghị định 81/2021/NĐ-CP có hiệu lực với những đối tượng nào?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P1\",\"v\":4,\"text\":\"Những người như thế nào được áp dụng các nội dung của Nghị định 81/2021/NĐ-CP?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P2\",\"v\":1,\"text\":\"Trong các đối tượng người học, Nghị định 81/2021/NĐ-CP áp dụng cho ai?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P2\",\"v\":2,\"text\":\"Trẻ em mầm non, học sinh, sinh viên, học viên và nghiên cứu sinh - Nghị định 81/2021/NĐ-CP áp dụng có phải không?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P2\",\"v\":3,\"text\":\"Áp dụng Nghị định 81/2021/NĐ-CP cho những đối tượng nào trong hệ thống giáo dục quốc dân?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P2\",\"v\":4,\"text\":\"Những người học tại hệ thống giáo dục quốc dân - Nghị định 81/2021/NĐ-CP có áp dụng không?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P3\",\"v\":1,\"text\":\"Nghị định 81/2021/NĐ-CP áp dụng cho những đối tượng người học nào?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P3\",\"v\":2,\"text\":\"Nghị định 81 2021 NĐ-CP áp dụng cho những đối tượng người học nào?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P3\",\"v\":3,\"text\":\"Nghị định 81/2021/NĐ-CP ap dung cho nhung doi tuong nguoi hoc nao?\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"P3\",\"v\":4,\"text\":\"Nghị định 81/2021/NĐ-CP áp dụng cho nhữ đối tượng người học nào ntn???\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N1\",\"v\":1,\"text\":\"Những mục tiêu chính của Nghị định 81/2021/NĐ-CP là gì?\",\"delta\":\"asks about objectives, not target audience\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N1\",\"v\":2,\"text\":\"Những ngoại lệ hay các đối tượng nào không được áp dụng Nghị định 81/2021/NĐ-CP?\",\"delta\":\"asks about exclusions, not applications\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N2\",\"v\":1,\"text\":\"Nghị định 81/2021/NĐ-CP áp dụng cho học sinh các trường công lập hay còn bao gồm trường tư thục?\",\"delta\":\"narrowed to type of institution\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N2\",\"v\":2,\"text\":\"Nghị định 81/2021/NĐ-CP áp dụng cho những người học bậc chính quy hay cả hệ thức đào tạo?\",\"delta\":\"narrowed to full-time vs part-time\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N3\",\"v\":1,\"text\":\"Những đối tượng nào được áp dụng Nghị định 82/2021/NĐ-CP?\",\"delta\":\"different decree\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N3\",\"v\":2,\"text\":\"Những đối tượng nào được áp dụng Luật Giáo dục thay vì Nghị định 81/2021?\",\"delta\":\"different legal instrument\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N4\",\"v\":1,\"text\":\"Những đối tượng người học nào KHÔNG được áp dụng Nghị định 81/2021/NĐ-CP?\",\"delta\":\"asks for exclusions, not inclusions\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N4\",\"v\":2,\"text\":\"Thợ học tức người học thực hành không thuộc hệ thống giáo dục quốc dân được áp dụng Nghị định 81/2021 hay không?\",\"delta\":\"asks about non-formal learners\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N4\",\"v\":3,\"text\":\"Nghị định 81/2021/NĐ-CP có áp dụng cho những người không phải là người học không?\",\"delta\":\"negates learner status\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N4\",\"v\":4,\"text\":\"Những người học tại các cơ sở giáo dục nước ngoài có được áp dụng Nghị định 81/2021/NĐ-CP không?\",\"delta\":\"asks about external learners\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N5\",\"v\":1,\"text\":\"Chỉ riêng sinh viên được áp dụng Nghị định 81/2021/NĐ-CP hay tất cả các đối tượng người học?\",\"delta\":\"asks about single group vs all\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N5\",\"v\":2,\"text\":\"Nghị định 81/2021/NĐ-CP áp dụng cho toàn bộ các cơ sở giáo dục hay chỉ những cơ sở chọn lọc?\",\"delta\":\"asks all vs selected institutions\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N5\",\"v\":3,\"text\":\"Những đối tượng người học nào có quyền áp dụng Nghị định 81/2021/NĐ-CP - tối thiểu là những ai?\",\"delta\":\"asks for minimum criteria\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N5\",\"v\":4,\"text\":\"Có bắt buộc phải áp dụng Nghị định 81/2021/NĐ-CP cho tất cả các đối tượng người học không?\",\"delta\":\"asks about universality of application\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N6\",\"v\":1,\"text\":\"Bộ nào chịu trách nhiệm thực hiện Nghị định 81/2021/NĐ-CP đối với các đối tượng người học?\",\"delta\":\"asks about responsible authority, presupposed\"}\n{\"seed_id\":\"d5_s0022\",\"axis\":\"N6\",\"v\":2,\"text\":\"Từ khi nào Nghị định 81/2021/NĐ-CP bắt đầu áp dụng cho các đối tượng người học?\",\"delta\":\"asks about effective date, presupposed\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P1\",\"v\":1,\"text\":\"Ai là người phát hành tiêu chuẩn kiểm định chất lượng giáo dục cho cơ sở giáo dục đại học theo quy định nước ta?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P1\",\"v\":2,\"text\":\"Tiêu chuẩn kiểm định chất lượng giáo dục đối với đại học theo tiêu chuẩn trong nước được ban hành bởi ai?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P1\",\"v\":3,\"text\":\"Cơ sở giáo dục đại học kiểm định chất lượng theo tiêu chuẩn nước ta - chuẩn mực được quy định bởi tổ chức nào?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P1\",\"v\":4,\"text\":\"Ai chịu trách nhiệm ban hành tiêu chuẩn kiểm định chất lượng giáo dục cho các trường đại học trong nước?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P2\",\"v\":1,\"text\":\"Tiêu chuẩn kiểm định chất lượng giáo dục đối với cơ sở giáo dục đại học - theo tiêu chuẩn nước ta, được ban hành bởi ai?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P2\",\"v\":2,\"text\":\"Để kiểm định chất lượng giáo dục ở cơ sở giáo dục đại học theo tiêu chuẩn trong nước, ai ban hành tiêu chuẩn?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P2\",\"v\":3,\"text\":\"Theo tiêu chuẩn trong nước, tiêu chuẩn kiểm định chất lượng giáo dục cho đại học do ai ban hành?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P2\",\"v\":4,\"text\":\"Cơ sở giáo dục đại học áp dụng tiêu chuẩn kiểm định chất lượng trong nước - tiêu chuẩn này do ai xây dựng?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P3\",\"v\":1,\"text\":\"ai ban hành tiêu chuẩn kiểm định chất lượng giáo dục đối với cơ sở giáo dục đại học theo tiêu chuẩn trong nước?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P3\",\"v\":2,\"text\":\"Ai ban hanh tieu chuan kiem dinh chat luong giao duc doi voi co so giao duc dai hoc theo tieu chuan trong nuoc?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P3\",\"v\":3,\"text\":\"ai ban hành tiêu chuẩn kiểm định chất lượng giáo dục đối với cơ sở giáo dục đại học theo tiêu chuẩn trong nước ntn?\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"P3\",\"v\":4,\"text\":\"Ai ban hành tiêu chuẩn kiểm định chất lượng giáo dục đối với cơ sở giáo dục đại học theo tiêu chuẩn trong nước???\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N1\",\"v\":1,\"text\":\"Những nội dung chính của tiêu chuẩn kiểm định chất lượng giáo dục đối với cơ sở giáo dục đại học là gì?\",\"delta\":\"asks about content, not issuer\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N1\",\"v\":2,\"text\":\"Thủ tục kiểm định chất lượng giáo dục đối với cơ sở giáo dục đại học theo tiêu chuẩn trong nước như thế nào?\",\"delta\":\"asks about process, not issuer\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N2\",\"v\":1,\"text\":\"Ai ban hành tiêu chuẩn kiểm định chất lượng giáo dục cho các trường đại học tư thục?\",\"delta\":\"narrowed to private universities only\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N2\",\"v\":2,\"text\":\"Ai ban hành tiêu chuẩn kiểm định chất lượng giáo dục cho các chương trình liên kết đại học?\",\"delta\":\"narrowed to joint programs\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N3\",\"v\":1,\"text\":\"Ai ban hành tiêu chuẩn kiểm định chất lượng giáo dục đối với cơ sở giáo dục học nghề theo tiêu chuẩn trong nước?\",\"delta\":\"asks about vocational education\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N3\",\"v\":2,\"text\":\"Ai ban hành tiêu chuẩn kiểm định chất lượng giáo dục đối với cơ sở giáo dục mầm non theo tiêu chuẩn trong nước?\",\"delta\":\"asks about kindergarten\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N4\",\"v\":1,\"text\":\"Cơ sở giáo dục đại học được tự ban hành tiêu chuẩn kiểm định chất lượng giáo dục riêng hay phải theo quy định của Bộ?\",\"delta\":\"asks about institutional autonomy vs ministry mandate\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N4\",\"v\":2,\"text\":\"Tiêu chuẩn kiểm định chất lượng giáo dục đối với cơ sở giáo dục đại học có thể do các tổ chức quốc tế ban hành không?\",\"delta\":\"asks about international standards as alternative\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N4\",\"v\":3,\"text\":\"Những đơn vị nào KHÔNG được phép ban hành tiêu chuẩn kiểm định chất lượng giáo dục cho đại học?\",\"delta\":\"asks for non-issuers\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N4\",\"v\":4,\"text\":\"Ngoài Bộ trưởng Bộ Giáo dục và Đào tạo, còn có cơ quan nào khác được phép ban hành tiêu chuẩn kiểm định chất lượng giáo dục đại học không?\",\"delta\":\"asks if others can also issue\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N5\",\"v\":1,\"text\":\"Có bao nhiêu tổ chức được phép ban hành tiêu chuẩn kiểm định chất lượng giáo dục cho đại học?\",\"delta\":\"asks for count of organizations\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N5\",\"v\":2,\"text\":\"Tất cả các Bộ có được ban hành tiêu chuẩn kiểm định chất lượng giáo dục cho các cơ sở giáo dục đại học không?\",\"delta\":\"asks if all ministries can issue\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N5\",\"v\":3,\"text\":\"Bộ trưởng nào - chỉ Bộ Giáo dục hay cả các Bộ khác - được phép ban hành tiêu chuẩn này?\",\"delta\":\"asks about scope of authority\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N5\",\"v\":4,\"text\":\"Ai là người cuối cùng phê duyệt tiêu chuẩn kiểm định chất lượng giáo dục cho đại học - chỉ Bộ trưởng hay Thủ tướng?\",\"delta\":\"asks about approval hierarchy\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N6\",\"v\":1,\"text\":\"Thế nào là một tiêu chuẩn kiểm định chất lượng giáo dục được coi là hợp lệ khi do Bộ trưởng Bộ Giáo dục và Đào tạo ban hành?\",\"delta\":\"asks about validity criteria, presupposed\"}\n{\"seed_id\":\"d5_s0025\",\"axis\":\"N6\",\"v\":2,\"text\":\"Bao lâu tiêu chuẩn kiểm định chất lượng giáo dục do Bộ trưởng ban hành được sửa đổi hoặc cập nhật?\",\"delta\":\"asks about revision cycle, presupposed\"}\n```",
+  "ttft_ms": 179603,
+  "type": "result",
+  "duration_ms": 348424,
+  "uuid": "dc209460-0a2f-4403-8a7d-73a0675a4fa8",
+  "ttft_stream_ms": 2334,
+  "time_to_request_ms": 18,
+  "queued_turn_count": 0
+}

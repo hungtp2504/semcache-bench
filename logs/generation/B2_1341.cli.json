@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 26258,
+  "stop_reason": "end_turn",
+  "session_id": "ed094e2f-f5a2-4cc7-989d-9417e3321959",
+  "total_cost_usd": 0.406959,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32957,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 2714,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32957,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2714,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32957,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32957
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 2714,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32957,
+      "webSearchRequests": 0,
+      "costUSD": 0.406959,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d4_s0422_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"no negation/antonym flip of seed content; asks a different facet (effect of obstruction) — N1-like, not N4\"}\n{\"id\":\"d4_s0422_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0422_N5_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d4_s0422_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0422_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0422_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0422_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0429_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0429_P1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d4_s0429_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0429_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0429_P2_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0429_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0429_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0429_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0429_P3_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d4_s0429_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0429_P3_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0429_P3_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d4_s0429_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0429_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0429_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0429_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0429_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0429_N3_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0429_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0429_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0429_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0429_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no explicit negation/antonym marker; 'lie just outside' is an aspect shift to adjacent anatomy rather than a polarity flip\"}\n{\"id\":\"d4_s0429_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"not a quantifier/extreme flip; it is a polarity/exclusion reframe (front part outside the oropharynx)\"}\n{\"id\":\"d4_s0429_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0429_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"adds an exclusion ('besides the soft palate') rather than flipping a quantifier/extreme; also seed answer largely still answers it\"}\n{\"id\":\"d4_s0429_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks ordinal/positional last structure, not a min/max or at-least/at-most quantifier flip\"}\n{\"id\":\"d4_s0429_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0429_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0435_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0435_P1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d4_s0435_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0435_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0435_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0435_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0435_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0435_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0435_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0435_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0435_P3_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d4_s0435_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0435_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0435_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d4_s0435_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0435_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0435_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0435_N3_v2\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d4_s0435_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0435_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0435_N4_v3\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d4_s0435_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"negates set membership of the whole topic entity rather than flipping one relation in the seed; reads as an entity/aspect shift to non-sinus spaces\"}\n{\"id\":\"d4_s0435_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0435_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0435_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}",
+  "ttft_ms": 26246,
+  "type": "result",
+  "duration_ms": 26462,
+  "uuid": "a0582cd1-2498-494a-b0c1-42adc5f5dd85",
+  "ttft_stream_ms": 3410,
+  "time_to_request_ms": 21,
+  "queued_turn_count": 0
+}

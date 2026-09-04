@@ -1,0 +1,60 @@
+{"id": "d5_s0277_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.78, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N5_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "seed answer lists the items in order, so the 'first listed' item is directly derivable from it; also a meta/document-ordering question rather than a quantifier flip", "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N5_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "'last listed' item is directly readable off the seed answer's ordered list", "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.58, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.68, "issue": "asks a count, not a quantifier/extreme flip; the count (4 groups) is directly derivable from the seed answer", "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0277_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.62, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.88, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.58, "issue": "adding 'final-year student' does not change the applicable 3-year GPA threshold, so the seed answer still fully answers it", "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N2_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.52, "issue": "health-field qualifier does not alter the cumulative-GPA dismissal threshold; seed answer still answers", "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N4_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.65, "issue": "flip yields the same answer content (the 4,00 threshold seen from the other side), like the until-when/after-when case", "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.58, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N4_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "'xét lên lớp' is a different facet (promotion criteria), not a negation/antonym flip of the dismissal rule", "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "'highest GPA still causing dismissal after 3 years' resolves to the same 4,00 boundary as the seed answer", "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0283_N6_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.82, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "'at another institution' does not change the answer — the student must still sit the entrance admission like any candidate, so the seed answer still applies", "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.62, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}
+{"id": "d5_s0289_N4_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1802", "ts": "2026-08-31T15:55:59Z"}

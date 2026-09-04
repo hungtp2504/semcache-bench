@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 178495,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "ccef2313-14e3-4411-bc7c-5da6fbf3b255",
+  "total_cost_usd": 0.40683440000000004,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 50077,
+    "cache_read_input_tokens": 93492,
+    "output_tokens": 18782,
+    "output_tokens_details": {
+      "thinking_tokens": 15622
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 50077,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3057,
+        "cache_read_input_tokens": 63214,
+        "cache_creation_input_tokens": 17141,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17141
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 18782,
+      "cacheReadInputTokens": 93492,
+      "cacheCreationInputTokens": 50077,
+      "webSearchRequests": 0,
+      "costUSD": 0.40683440000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d2_s0794_P3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no typos/shorthand/casing noise present; it's a clean syntactic rewording (P2-style), not surface noise\"}\n{\"id\":\"d2_s0794_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0794_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0794_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0794_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0794_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0794_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0794_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0794_N3_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d2_s0794_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed question has no polarity/negation term to flip; this invents a new sub-question about exclusions, i.e. an aspect change (N1), not a polarity flip\"}\n{\"id\":\"d2_s0794_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"same as above: no term in seed to negate; asks about contrasted tasks, an aspect change rather than a true flip\"}\n{\"id\":\"d2_s0794_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no polarity term in seed to flip; asks what's not modeled, an aspect change rather than a negation of seed content\"}\n{\"id\":\"d2_s0794_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no polarity term in seed to flip; asks about non-required inputs, an aspect change rather than a negation of seed content\"}\n{\"id\":\"d2_s0794_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed contains no quantifier/extreme to flip; this introduces an unrelated new quantity question, better classified as aspect change (N1)\"}\n{\"id\":\"d2_s0794_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed contains no quantifier to flip; 'most influential review' is a new invented dimension, not a flip of seed content\"}\n{\"id\":\"d2_s0794_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed contains no quantifier/extreme to flip; introduces an unrelated rating-scale question\"}\n{\"id\":\"d2_s0794_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed contains no quantifier/extreme to flip; introduces an unrelated rating-scale question\"}\n{\"id\":\"d2_s0794_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0794_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0800_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0800_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0800_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0800_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0800_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0800_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0800_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0800_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0800_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0800_P3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0800_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0800_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0800_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0800_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0800_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0800_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0800_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0800_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0800_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0800_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0800_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0800_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0800_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0800_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0800_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0800_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0800_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0800_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0806_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0806_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0806_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0806_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0806_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0806_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0806_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0806_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0806_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0806_P3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0806_P3_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0806_P3_v4\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d2_s0806_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n```\n\nKey patterns flagged as non-compliant: the N4/N5 variants built on `d2_s0794` (task-definition seed with no inherent polarity or quantity) invent unrelated sub-questions (exclusions, review counts, rating extremes) rather than flipping something present in the seed — these fit N1 aspect-change better than N4/N5. The same axes on `d2_s0800` (a \"how many...cover\" seed) do have a natural term (`cover`/count) to flip, so those pass cleanly. One P3 item (`d2_s0794_P3_v2`) was flagged for being a clean rewording with no actual noise.",
+  "ttft_ms": 154469,
+  "ttft_stream_ms": 4450,
+  "time_to_request_ms": 41,
+  "type": "result",
+  "duration_ms": 179337,
+  "uuid": "45f8d733-bfbe-43da-b321-daf6958742c1",
+  "queued_turn_count": 0
+}

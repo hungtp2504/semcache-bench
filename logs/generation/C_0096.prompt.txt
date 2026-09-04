@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0096
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d1_s0746", "domain": "university_admin", "doc_id": "d1_11-006-poverty-and-economic-security-fal_assignments", "fact_ids": ["d1_f01088", "d1_f01089"], "question": "Who is the instructor of MIT's 11.006 Poverty and Economic Security course, and in what term was it taught?", "answer": "Prof. Amy Glasmeier taught the course, offered in Fall 2016 at the undergraduate level.", "generator_model": "claude-sonnet-5", "batch_id": "A_0156", "ts": "2026-08-12T08:35:50Z"}
+{"seed_id": "d1_s0748", "domain": "university_admin", "doc_id": "d1_11-006-poverty-and-economic-security-fal_assignments", "fact_ids": ["d1_f01091"], "question": "What is the page limit for Assignment 1, and what should students avoid doing when completing it?", "answer": "Assignment 1 must be no more than 6 pages, double-spaced, and students should not engage or interview a person for the assignment.", "generator_model": "claude-sonnet-5", "batch_id": "A_0156", "ts": "2026-08-12T08:35:50Z"}
+{"seed_id": "d2_s0023", "domain": "academic_nlp", "doc_id": "d2_doc0004", "fact_ids": ["d2_f00030"], "question": "How does the paper combine multiple source-language POS tag predictions for a given word token?", "answer": "Each word token can receive up to 15 votes from source languages, and the paper simply uses the majority vote among them.", "generator_model": "claude-sonnet-5", "batch_id": "A_0002", "ts": "2026-08-12T03:00:26Z"}
+{"seed_id": "d2_s0024", "domain": "academic_nlp", "doc_id": "d2_doc0004", "fact_ids": ["d2_f00032", "d2_f00033"], "question": "What is the difference between the L2-Prior and EmpGauss regularization methods, and when do they become equivalent?", "answer": "L2-Prior fixes the variance to a constant C while using the average source model as the mean, whereas EmpGauss learns both the variance and mean from source models. They become equivalent in the single-source cross-lingual transfer setup, since observed variance there is zero.", "generator_model": "claude-sonnet-5", "batch_id": "A_0002", "ts": "2026-08-12T03:00:26Z"}
+{"seed_id": "d2_s0025", "domain": "academic_nlp", "doc_id": "d2_doc0005", "fact_ids": ["d2_f00034"], "question": "How large is the new gold standard corpus created for this argumentation mining study?", "answer": "It contains 90,000 tokens across 340 documents.", "generator_model": "claude-sonnet-5", "batch_id": "A_0002", "ts": "2026-08-12T03:00:26Z"}
+{"seed_id": "d2_s0026", "domain": "academic_nlp", "doc_id": "d2_doc0005", "fact_ids": ["d2_f00035"], "question": "Since when has the study of argumentation existed, according to the paper?", "answer": "Since the early work of Aristotle, dating back to the 4th century BC.", "generator_model": "claude-sonnet-5", "batch_id": "A_0002", "ts": "2026-08-12T03:00:26Z"}
+{"seed_id": "d2_s0028", "domain": "academic_nlp", "doc_id": "d2_doc0005", "fact_ids": ["d2_f00037"], "question": "What specific domains or registers have prior argumentation mining approaches typically been restricted to?", "answer": "Domains such as hotel reviews, Tweets about local riot events, student essays, airline passenger rights and consumer protection, and renewable energy sources.", "generator_model": "claude-sonnet-5", "batch_id": "A_0002", "ts": "2026-08-12T03:00:26Z"}
+{"seed_id": "d2_s0031", "domain": "academic_nlp", "doc_id": "d2_doc0006", "fact_ids": ["d2_f00040"], "question": "What is the main contribution of this paper about evaluating speech recognition based systems?", "answer": "A method to evaluate a speech solution's performance without actually putting it to real people use, saving evaluation time and expense.", "generator_model": "claude-sonnet-5", "batch_id": "A_0002", "ts": "2026-08-12T03:00:26Z"}
+{"seed_id": "d2_s0033", "domain": "academic_nlp", "doc_id": "d2_doc0006", "fact_ids": ["d2_f00043"], "question": "After a user says 'savings account' and it is recognized correctly, what options and perplexity does the second node have?", "answer": "The second node offers account balance, cheque, or last 5 transactions, with a perplexity of 3.", "generator_model": "claude-sonnet-5", "batch_id": "A_0002", "ts": "2026-08-12T03:00:26Z"}
+{"seed_id": "d2_s0039", "domain": "academic_nlp", "doc_id": "d2_doc0007", "fact_ids": ["d2_f00052"], "question": "On what date did the Union army launch its frontal assaults at the Battle of Fredericksburg?", "answer": "December 13.", "generator_model": "claude-sonnet-5", "batch_id": "A_0003", "ts": "2026-08-12T03:01:48Z"}

@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 170328,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "fc7b3fd4-3b71-4dad-a8b6-d79255d5edd6",
+  "total_cost_usd": 0.3365296,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 39160,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 17383,
+    "output_tokens_details": {
+      "thinking_tokens": 14393
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 39160,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 17383,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 39160,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 39160
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 17383,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 39160,
+      "webSearchRequests": 0,
+      "costUSD": 0.3365296,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d5_s0170_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0170_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0170_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Shifts queried entity from 'ngành đào tạo' to 'danh hiệu' rather than negating the seed's own claim; conflates entity substitution with polarity flip\"}\n{\"id\":\"d5_s0170_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks about forbidden duties within the fields, a different aspect not addressed by seed's answer, not a direct negation of the seed's claim\"}\n{\"id\":\"d5_s0170_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks about roles forbidden in postgraduate training, an unrelated aspect rather than a polarity flip of the seed's claim\"}\n{\"id\":\"d5_s0170_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0170_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0170_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0170_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Introduces unrelated numeric attribute (teaching credits) with no connection to the seed's fact about title-based exceptions; not a quantifier flip of the same underlying question\"}\n{\"id\":\"d5_s0170_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0170_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0176_P1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0176_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0176_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0176_P1_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0176_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0176_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0176_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0176_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0176_P3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0176_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0176_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0176_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0176_N1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0176_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0176_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0176_N2_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0176_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0176_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0176_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks about grounds for postponement, a different fact rather than a negation/antonym flip of the seed's mandatory-deadline claim\"}\n{\"id\":\"d5_s0176_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks about the consequence of late student submission, unrelated to the seed's deadline claim, not a polarity flip of it\"}\n{\"id\":\"d5_s0176_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0176_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks about resubmission timeline after a failed thesis, a different fact rather than a negation of the seed's evaluation-deadline claim\"}\n{\"id\":\"d5_s0176_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0176_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Asks about student's draft-submission deadline relative to programme end, a different fact rather than a min/max flip of the evaluation-organizing deadline\"}\n{\"id\":\"d5_s0176_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks about minimum notice period for scheduling, a related but distinct attribute, not a quantifier flip of the same deadline fact\"}\n{\"id\":\"d5_s0176_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks about maximum extension for draft submission, a different fact from the evaluation-organizing deadline, not a flip of the same quantifier\"}\n{\"id\":\"d5_s0176_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0176_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0182_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0182_P1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0182_P1_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0182_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0182_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0182_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0182_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0182_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0182_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0182_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0182_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0182_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0182_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0182_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0182_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0182_N2_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0182_N3_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0182_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0182_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0182_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0182_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Combines a polarity flip (not recognized) with a change in what's being asked (existence of a refusal document vs. contents of a decision) - more than a single negation flip\"}\n```",
+  "ttft_ms": 152274,
+  "ttft_stream_ms": 1307,
+  "time_to_request_ms": 18,
+  "type": "result",
+  "duration_ms": 170523,
+  "uuid": "e7c22489-a6d4-4177-a25e-5f50f5f9194a",
+  "queued_turn_count": 0
+}

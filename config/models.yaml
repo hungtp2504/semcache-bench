@@ -1,0 +1,71 @@
+# models.yaml — 12 locally-run models for the evaluation (PLAN §11)
+# 10 bi-encoders + 2 cross-encoders. All < 2.5 GB, run on MPS (M4 Pro 24GB).
+# Note: PLAN §11's table lists BGE-M3 under both "modern" and "multilingual";
+# it is one model — the unique count below is the real 12.
+version: "1.0"
+updated: "2026-08-11"
+
+embedding_models:
+  # -- legacy tier (lineage of the baseline work, CAIN'24) --
+  - id: distilbert/distilbert-base-uncased
+    tier: legacy
+    backend: transformers-mean-pool   # not a sentence-transformers model; mean-pool CLS-less
+    note: baseline-era encoder; expect weak — that is the point
+  - id: albert/albert-base-v2
+    tier: legacy
+    backend: transformers-mean-pool
+    note: stand-in for the ALBERT-ONNX used by the baseline; record this deviation in §5.5
+  - id: sentence-transformers/all-MiniLM-L6-v2
+    tier: legacy
+    backend: sentence-transformers
+    note: also the fast default for risk checks (EN-centric — weak on d5, expected)
+
+  # -- modern tier --
+  - id: BAAI/bge-m3
+    tier: modern
+    backend: sentence-transformers
+    multilingual: true
+    note: ~2.3GB; also covers the multilingual tier; second default for risk checks
+  - id: intfloat/e5-large-v2
+    tier: modern
+    backend: sentence-transformers
+    prefix: "query: "                  # REQUIRED by E5 family for queries
+  - id: thenlper/gte-large
+    tier: modern
+    backend: sentence-transformers
+  - id: nomic-ai/nomic-embed-text-v1.5
+    tier: modern
+    backend: sentence-transformers
+    prefix: "search_query: "           # REQUIRED task prefix
+    trust_remote_code: true            # needs einops
+  - id: jinaai/jina-embeddings-v3
+    tier: modern
+    backend: sentence-transformers
+    trust_remote_code: true
+    encode_kwargs: {task: text-matching}
+    note: >
+      2026-08-12 BROKEN with installed transformers (custom XLMRobertaLoRA:
+      'all_tied_weights_keys' API mismatch). Decide before Month 5: pin transformers
+      in a side venv, or swap for a maintained multilingual encoder; record either way.
+
+  # -- multilingual tier (for d5 Vietnamese; bge-m3 above also counts) --
+  - id: intfloat/multilingual-e5-large
+    tier: multilingual
+    backend: sentence-transformers
+    multilingual: true
+    prefix: "query: "
+  - id: keepitreal/vietnamese-sbert
+    tier: multilingual
+    backend: sentence-transformers
+    multilingual: true
+    note: Vietnamese-specialized; verify availability early — swap for
+      dangvantuan/vietnamese-embedding if the repo has moved
+
+cross_encoders:   # RQ5 second-stage verification
+  - id: BAAI/bge-reranker-v2-m3
+    multilingual: true
+  - id: cross-encoder/ms-marco-MiniLM-L-12-v2
+
+risk_check_defaults:
+  - sentence-transformers/all-MiniLM-L6-v2
+  - BAAI/bge-m3

@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 86404,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "faa925aa-7bab-417a-b2bc-d8d68c7d9909",
+  "total_cost_usd": 0.49140300000000003,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47204,
+    "cache_read_input_tokens": 83390,
+    "output_tokens": 12210,
+    "output_tokens_details": {
+      "thinking_tokens": 2566
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47204,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4771,
+        "cache_read_input_tokens": 58498,
+        "cache_creation_input_tokens": 13598,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13598
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 12210,
+      "cacheReadInputTokens": 83390,
+      "cacheCreationInputTokens": 47204,
+      "webSearchRequests": 0,
+      "costUSD": 0.49140300000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"type\":\"fact\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"statement\":\"The instructor for the course is Prof. Herbert Einstein.\",\"source_span\":\"Instructor\\nProf. Herbert Einstein\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"statement\":\"The course is 1.012 Introduction to Civil Engineering Design, taught Spring 2002 at the undergraduate level.\",\"source_span\":\"1.012 | Spring 2002 | Undergraduate\\nIntroduction to Civil Engineering Design\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"statement\":\"Design-Build Labs meet 2 sessions per week: Session 1 is 2 hours and Session 2 is 1 hour.\",\"source_span\":\"Design-Build Labs: 2 sessions / week\\nSes 1: 2 hours / session\\nSes 2: 1 hour / session\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"statement\":\"Students will be graded on four design projects.\",\"source_span\":\"Students will be graded on four design projects.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"statement\":\"Completing the portfolio is a mandatory requirement for obtaining a B.Sc. in Civil Engineering.\",\"source_span\":\"The portfolio is a mandatory requirement for obtaining a B.Sc. in Civil Engineering.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"statement\":\"Students must bring drafting tools (pencil, ruler, triangles) to each class and lab.\",\"source_span\":\"Students need to have and bring along drafting tools (pencil, ruler, triangles) to each class and lab.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"statement\":\"Class participation is essential and is considered in the final grade.\",\"source_span\":\"Class participation is essential and will be considered in the final grade.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"fact_refs\":[0],\"question\":\"Who is the instructor for MIT's 1.012 Introduction to Civil Engineering Design?\",\"answer\":\"Prof. Herbert Einstein.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"fact_refs\":[1],\"question\":\"When was 1.012 Introduction to Civil Engineering Design taught, and at what level?\",\"answer\":\"It was taught in Spring 2002 at the undergraduate level.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"fact_refs\":[2],\"question\":\"How many Design-Build Lab sessions are held per week in 1.012, and how long is each?\",\"answer\":\"Two sessions per week: Session 1 is 2 hours and Session 2 is 1 hour.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"fact_refs\":[3],\"question\":\"How many design projects are students graded on in 1.012?\",\"answer\":\"Four design projects.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"fact_refs\":[4],\"question\":\"What must students complete to obtain a B.Sc. in Civil Engineering, according to the 1.012 syllabus?\",\"answer\":\"They must complete a portfolio, which is a mandatory requirement for the B.Sc. in Civil Engineering.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"fact_refs\":[5],\"question\":\"What drafting tools must students bring to each class and lab in 1.012?\",\"answer\":\"A pencil, ruler, and triangles.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-012-introduction-to-civil-engineering-_syllabus\",\"fact_refs\":[6],\"question\":\"Does class participation count toward the final grade in 1.012?\",\"answer\":\"Yes, class participation is essential and is considered in the final grade.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"statement\":\"The instructor for the course is Prof. Dennis McLaughlin.\",\"source_span\":\"Instructor\\nProf. Dennis McLaughlin\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"statement\":\"The course is 1.017 Computing and Data Analysis for Environmental Applications, taught Fall 2003 at the undergraduate level.\",\"source_span\":\"1.017 | Fall 2003 | Undergraduate\\nComputing and Data Analysis for Environmental Applications\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"statement\":\"The course includes nine problem sets, Problem Set 1 through Problem Set 9.\",\"source_span\":\"Problem Set 1 (\\nPDF\\n)\\n...Problem Set 9 (\\nPDF\\n)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"statement\":\"Problem Set 3 has supporting MATLAB files transport.m and ozone.m.\",\"source_span\":\"Problem Set 3 (\\nPDF\\n)\\ntransport.m (\\nM\\n)\\nozone.m (\\nM\\n)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"statement\":\"Problem Set 4 has the supporting MATLAB file cdffit.m.\",\"source_span\":\"Problem Set 4 (\\nPDF\\n)\\ncdffit.m (\\nM\\n)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"statement\":\"Problem Set 7 has supporting files Boston_precip.txt and MWRA1.txt.\",\"source_span\":\"Problem Set 7 (\\nPDF\\n)\\nBoston_precip.txt (\\nTXT\\n)\\nMWRA1.txt (\\nTXT\\n)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"statement\":\"Both Problem Set 8 and Problem Set 9 use the supporting file lowercharles.txt.\",\"source_span\":\"Problem Set 8 (\\nPDF\\n)\\nlowercharles.txt (\\nTXT\\n)\\nProblem Set 9 (\\nPDF\\n)\\nlowercharles.txt (\\nTXT\\n)\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"fact_refs\":[0],\"question\":\"Who teaches MIT's 1.017 Computing and Data Analysis for Environmental Applications?\",\"answer\":\"Prof. Dennis McLaughlin.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"fact_refs\":[1],\"question\":\"When was 1.017 Computing and Data Analysis for Environmental Applications offered, and at what level?\",\"answer\":\"It was offered in Fall 2003 at the undergraduate level.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"fact_refs\":[2],\"question\":\"How many problem sets are listed in the 1.017 assignments page?\",\"answer\":\"Nine problem sets, Problem Set 1 through Problem Set 9.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"fact_refs\":[3],\"question\":\"What MATLAB supporting files accompany Problem Set 3 in 1.017?\",\"answer\":\"transport.m and ozone.m.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"fact_refs\":[4],\"question\":\"What supporting text files come with Problem Set 7 in 1.017?\",\"answer\":\"Boston_precip.txt and MWRA1.txt.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_assignments\",\"fact_refs\":[5],\"question\":\"Which supporting file is shared by both Problem Set 8 and Problem Set 9 in 1.017?\",\"answer\":\"lowercharles.txt.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"statement\":\"Quiz 1 takes place at Recitation 5 (R5), during the Quiz Review session.\",\"source_span\":\"R5\\nRecitation 5 — Quiz Review\\nQuiz 1\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"statement\":\"Quiz 2 takes place at Recitation 8 (R8), during the Quiz Review session.\",\"source_span\":\"R8\\nQuiz Review\\nQuiz 2\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"statement\":\"Quiz 3 takes place at lecture L23, the same session Problem Set 9 (PS9) is due.\",\"source_span\":\"PS9 Due\\nQuiz 3\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"statement\":\"Problem Set 1 (PS1) is issued at lecture L3 and due at lecture L5.\",\"source_span\":\"L3\\nProbability\\n...\\nPS1 Issued\\n...\\nL5\\nCombinatorial Methods\\n...\\nPS1 Due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"statement\":\"Lectures L19-L20 cover Analysis of Variance (ANOVA), including testing the significance of a single factor via the F test, with PS7 due and PS8 issued in that session.\",\"source_span\":\"L19-L20\\nAnalysis of Variance (ANOVA)\\nTesting the Significance of a Single Factor, the F Test\\nPS7 Due\\nPS8 Issued\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"statement\":\"Lecture L22 covers Linear Regression, including objectives and assumptions of linear regression, estimating regression coefficients, and normal equations.\",\"source_span\":\"L22\\nLinear Regression\\nObjectives and Assumptions of Linear Regression, Estimating Regression Coefficients, Normal Equations\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"statement\":\"Problem Set 8 (PS8) is due and Problem Set 9 (PS9) is issued at lecture L21.\",\"source_span\":\"L21\\nMultifactor Analysis of Variance\\n...\\nPS8 Due\\nPS9 Issued\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"fact_refs\":[0],\"question\":\"When does Quiz 1 occur in the 1.017 course calendar?\",\"answer\":\"Quiz 1 occurs at Recitation 5 (R5), during the Quiz Review session.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"fact_refs\":[1],\"question\":\"When does Quiz 2 occur in the 1.017 course calendar?\",\"answer\":\"Quiz 2 occurs at Recitation 8 (R8), during the Quiz Review session.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"fact_refs\":[2],\"question\":\"When does Quiz 3 occur, and what assignment is due at the same session?\",\"answer\":\"Quiz 3 occurs at lecture L23, the same session in which Problem Set 9 (PS9) is due.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"fact_refs\":[3],\"question\":\"When is Problem Set 1 issued and due in the 1.017 calendar?\",\"answer\":\"PS1 is issued at lecture L3 and due at lecture L5.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"fact_refs\":[4],\"question\":\"What topic do lectures L19-L20 cover in 1.017, and what problem sets are issued/due then?\",\"answer\":\"L19-L20 cover Analysis of Variance (ANOVA), including testing the significance of a single factor via the F test; PS7 is due and PS8 is issued during that session.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"fact_refs\":[5],\"question\":\"What does lecture L22 cover in the 1.017 course?\",\"answer\":\"L22 covers linear regression, including its objectives and assumptions, estimating regression coefficients, and normal equations.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-017-computing-and-data-analysis-for-en_calendar\",\"fact_refs\":[6],\"question\":\"At which lecture is Problem Set 8 due and Problem Set 9 issued?\",\"answer\":\"At lecture L21, PS8 is due and PS9 is issued.\"}",
+  "ttft_ms": 23511,
+  "ttft_stream_ms": 2992,
+  "time_to_request_ms": 26,
+  "type": "result",
+  "duration_ms": 90674,
+  "uuid": "f5027f9e-67bf-41d9-aa4f-86b9e0f5f1ec"
+}

@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 80119,
+  "stop_reason": "end_turn",
+  "session_id": "b85e60fc-5804-4116-a1e9-08a4ed1b19c3",
+  "total_cost_usd": 0.527869,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32253,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 7832,
+    "output_tokens_details": {
+      "thinking_tokens": 5107
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32253,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 7832,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32253,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32253
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 7832,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32253,
+      "webSearchRequests": 0,
+      "costUSD": 0.527869,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0220_N1_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0220_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"text-only UI change is still a UI change; seed answer (before/after screenshots) still applies\"}\n{\"id\":\"d3_s0220_N2_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d3_s0220_N3_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d3_s0220_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0220_N4_v1\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d3_s0220_N4_v2\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"not a polarity flip; seed answer ('both before and after') fully answers the yes/no question\"}\n{\"id\":\"d3_s0220_N4_v3\",\"axis_ok\":false,\"conf\":0.52,\"issue\":\"reframes the question target (which patches) rather than flipping one negation; reads as aspect change\"}\n{\"id\":\"d3_s0220_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0220_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed answer directly settles the yes/no; answer content unchanged\"}\n{\"id\":\"d3_s0220_N5_v2\",\"axis_ok\":true,\"conf\":0.58,\"issue\":null}\n{\"id\":\"d3_s0220_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0220_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0220_N6_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0220_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0226_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0226_P1_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0226_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0226_P1_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0226_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0226_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0226_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0226_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0226_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0226_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0226_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0226_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0226_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0226_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0226_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed answer ('end with a period') still fully answers the flipped yes/no; no misleading sign\"}\n{\"id\":\"d3_s0226_N4_v3\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d3_s0226_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"acceptability check, not a polarity flip; seed answer directly resolves it\"}\n{\"id\":\"d3_s0226_N5_v1\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"introduces a new dimension (length) rather than flipping a quantifier present in the seed; this is an aspect change\"}\n{\"id\":\"d3_s0226_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"no quantifier in the seed is flipped; 'minimum information' shifts facet instead\"}\n{\"id\":\"d3_s0226_N5_v3\",\"axis_ok\":false,\"conf\":0.53,\"issue\":\"asks a new count dimension (sentences) rather than flipping an existing quantifier/extreme\"}\n{\"id\":\"d3_s0226_N5_v4\",\"axis_ok\":true,\"conf\":0.52,\"issue\":null}\n{\"id\":\"d3_s0226_N6_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d3_s0226_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0238_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0238_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0238_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0238_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0238_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0238_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0238_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0238_P2_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0238_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0238_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0238_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0238_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0238_N1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0238_N1_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0238_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0238_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0238_N3_v1\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}",
+  "ttft_ms": 58880,
+  "type": "result",
+  "duration_ms": 80352,
+  "uuid": "321065df-b6aa-48c8-ac3a-43c9c18fa7f5",
+  "ttft_stream_ms": 1440,
+  "time_to_request_ms": 22,
+  "queued_turn_count": 0
+}

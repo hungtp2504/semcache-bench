@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 192406,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "0cf3b36a-4124-4c61-8c5c-801bb14a1a37",
+  "total_cost_usd": 0.3380136,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32961,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 20011,
+    "output_tokens_details": {
+      "thinking_tokens": 17130
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32961,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 20011,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 32961,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32961
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 20011,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 32961,
+      "webSearchRequests": 0,
+      "costUSD": 0.3380136,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d3_s0773_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"No plausible quantifier fact exists for 'max state variables needed' in this topic; question is fabricated rather than a grounded extreme-flip of an existing fact\"}\n{\"id\":\"d3_s0773_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0773_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0779_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0779_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0779_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0779_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0779_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0779_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0779_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0779_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0779_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0779_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0779_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0779_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0779_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0779_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0779_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Missing→duplicate keys is a condition/entity substitution, not a scope qualifier added/removed\"}\n{\"id\":\"d3_s0779_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0779_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0779_N3_v2\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"Not a single entity swap; entire scenario (list keys vs DOM nesting) changed, rest of question not minimally preserved\"}\n{\"id\":\"d3_s0779_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0779_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Missing→non-unique is a condition/entity substitution rather than a negation/antonym flip\"}\n{\"id\":\"d3_s0779_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0779_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Asks for a suppression method (action/aspect change), not a negated version of the original question\"}\n{\"id\":\"d3_s0779_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0779_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0779_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0779_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0779_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0779_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0786_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0786_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0786_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0786_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0786_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0786_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0786_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0786_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0786_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0786_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0786_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0786_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0786_N1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0786_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0786_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0786_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0786_N3_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Swaps code form to flip correctness (arrow-wrapped call is actually valid) — this is a polarity flip, not a named-entity substitution\"}\n{\"id\":\"d3_s0786_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Swaps code form to flip correctness (bare reference is actually valid) — this is a polarity flip, not a named-entity substitution\"}\n{\"id\":\"d3_s0786_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0786_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0786_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Seed's answer already explains the mechanism causing immediate execution, so it substantially answers this variant too; not a clean wrong-sign flip\"}\n{\"id\":\"d3_s0786_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Combines scope-widening (any JSX attribute) with polarity change rather than a single negation/antonym flip; question has no well-defined answer\"}\n{\"id\":\"d3_s0786_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0786_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'Earliest moment' just restates seed's answer ('fires immediately during rendering'); answer is not necessarily different\"}\n{\"id\":\"d3_s0786_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0786_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0786_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0786_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0792_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n```",
+  "ttft_ms": 174253,
+  "ttft_stream_ms": 1562,
+  "time_to_request_ms": 25,
+  "type": "result",
+  "duration_ms": 192612,
+  "uuid": "a127d7c0-b9fd-4814-9eec-d94919e270cc",
+  "queued_turn_count": 0
+}

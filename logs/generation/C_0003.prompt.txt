@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0003
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d1_s0103", "domain": "university_admin", "doc_id": "d1_1-017-computing-and-data-analysis-for-en_calendar", "fact_ids": ["d1_f00152"], "question": "When does Quiz 2 occur in the 1.017 course calendar?", "answer": "Quiz 2 occurs at Recitation 8 (R8), during the Quiz Review session.", "generator_model": "claude-sonnet-5", "batch_id": "A_0117", "ts": "2026-08-12T08:15:14Z"}
+{"seed_id": "d1_s0104", "domain": "university_admin", "doc_id": "d1_1-017-computing-and-data-analysis-for-en_calendar", "fact_ids": ["d1_f00153"], "question": "When does Quiz 3 occur, and what assignment is due at the same session?", "answer": "Quiz 3 occurs at lecture L23, the same session in which Problem Set 9 (PS9) is due.", "generator_model": "claude-sonnet-5", "batch_id": "A_0117", "ts": "2026-08-12T08:15:14Z"}
+{"seed_id": "d1_s0109", "domain": "university_admin", "doc_id": "d1_1-018j-ecology-i-the-earth-system-fall-2_calendar", "fact_ids": ["d1_f00159"], "question": "Who taught Ecology I: The Earth System (1.018J) in Fall 2009?", "answer": "Prof. Edward DeLong and Prof. Penny Chisholm.", "generator_model": "claude-sonnet-5", "batch_id": "A_0119", "ts": "2026-08-12T08:16:01Z"}
+{"seed_id": "d1_s0126", "domain": "university_admin", "doc_id": "d1_1-020-ecology-ii-engineering-for-sustain_assignments", "fact_ids": ["d1_f00193"], "question": "What topic does problem set 2 cover?", "answer": "Problem set 2 covers species competition.", "generator_model": "claude-sonnet-5", "batch_id": "A_0120", "ts": "2026-08-12T08:16:09Z"}
+{"seed_id": "d1_s0130", "domain": "university_admin", "doc_id": "d1_1-020-ecology-ii-engineering-for-sustain_calendar", "fact_ids": ["d1_f00205"], "question": "In which class session is Exam 1 held in the Ecology II course calendar?", "answer": "Exam 1 is held in session 11, alongside the open system thermodynamics topic.", "generator_model": "claude-sonnet-5", "batch_id": "A_0120", "ts": "2026-08-12T08:16:09Z"}
+{"seed_id": "d1_s0132", "domain": "university_admin", "doc_id": "d1_1-020-ecology-ii-engineering-for-sustain_calendar", "fact_ids": ["d1_f00212"], "question": "When is the final paper due in the course schedule?", "answer": "The final paper is due in session 24.", "generator_model": "claude-sonnet-5", "batch_id": "A_0120", "ts": "2026-08-12T08:16:09Z"}
+{"seed_id": "d1_s0137", "domain": "university_admin", "doc_id": "d1_1-020-ecology-ii-engineering-for-sustain_exams", "fact_ids": ["d1_f00215", "d1_f00216"], "question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "generator_model": "claude-sonnet-5", "batch_id": "A_0120", "ts": "2026-08-12T08:16:09Z"}
+{"seed_id": "d1_s0138", "domain": "university_admin", "doc_id": "d1_1-022-introduction-to-network-models-fal_syllabus", "fact_ids": ["d1_f00217", "d1_f00219"], "question": "Who instructs MIT course 1.022 Introduction to Network Models, and in which semester was it taught?", "answer": "Dr. Amir Ajorlou taught 1.022 Introduction to Network Models in Fall 2018.", "generator_model": "claude-sonnet-5", "batch_id": "A_0122", "ts": "2026-08-12T08:17:25Z"}
+{"seed_id": "d1_s0150", "domain": "university_admin", "doc_id": "d1_1-033-mechanics-of-material-systems-an-e_calendar", "fact_ids": ["d1_f00242"], "question": "Which week of 1.033 covers Thermoelasticity?", "answer": "Week 5.", "generator_model": "claude-sonnet-5", "batch_id": "A_0122", "ts": "2026-08-12T08:17:25Z"}
+{"seed_id": "d1_s0155", "domain": "university_admin", "doc_id": "d1_1-020-ecology-ii-engineering-for-sustain_syllabus", "fact_ids": ["d1_f00247", "d1_f00248"], "question": "Who taught Ecology II: Engineering for Sustainability and in which term?", "answer": "Prof. Dennis McLaughlin taught the course in Spring 2008 as an undergraduate class.", "generator_model": "claude-sonnet-5", "batch_id": "A_0121", "ts": "2026-08-12T08:17:33Z"}

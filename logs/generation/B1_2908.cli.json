@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 157515,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "e278c7f8-e2fe-4c33-844c-549d71b92616",
+  "total_cost_usd": 0.37934959999999995,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47518,
+    "cache_read_input_tokens": 94048,
+    "output_tokens": 17046,
+    "output_tokens_details": {
+      "thinking_tokens": 13906
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47518,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3066,
+        "cache_read_input_tokens": 63770,
+        "cache_creation_input_tokens": 14026,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14026
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17046,
+      "cacheReadInputTokens": 94048,
+      "cacheCreationInputTokens": 47518,
+      "webSearchRequests": 0,
+      "costUSD": 0.37934959999999995,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "I audited all 60 items in batch B1_2908 against their assigned axis definitions.\n\n```jsonl\n{\"id\":\"d4_s0168_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0168_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0168_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0168_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0168_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adult and childhood CNS germ cell tumors share the same pineal/suprasellar predilection; seed's answer would still apply\"}\n{\"id\":\"d4_s0168_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'most'->'least' is a superlative/extreme flip matching N5's min/max pattern, not a simple negation/antonym flip required by N4\"}\n{\"id\":\"d4_s0168_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0168_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0168_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0168_N5_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0168_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0168_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0168_N5_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0168_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0168_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0174_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0174_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0174_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0174_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0174_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0174_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0174_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0174_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0174_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0174_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0174_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0174_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0174_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0174_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0174_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"adamantinomatous is the near-universal pediatric craniopharyngioma subtype; location is unchanged from seed's answer\"}\n{\"id\":\"d4_s0174_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0174_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0174_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adult craniopharyngiomas occur in the same pituitary/hypothalamic region; seed's answer would still apply\"}\n{\"id\":\"d4_s0174_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0174_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0174_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts subject from craniopharyngioma's location to identifying an unspecified different tumor; more than a single polarity flip\"}\n{\"id\":\"d4_s0174_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts subject from craniopharyngioma's location to identifying unspecified other tumors; more than a single polarity flip\"}\n{\"id\":\"d4_s0174_N5_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0174_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0174_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0174_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0174_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0174_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0180_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0180_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0180_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0180_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0180_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0180_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0180_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0180_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d4_s0180_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0180_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0180_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0180_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0180_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0180_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0180_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0180_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0180_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n```\n\nKey non-compliance patterns flagged (7 of 60 items):\n- **Age-swap N3 items** (`d4_s0168_N3_v2`, `d4_s0174_N3_v2`): child→adult swaps don't actually change the anatomical location, so the seed answer still applies.\n- **Superlative mislabeled as N4** (`d4_s0168_N4_v1`): \"most\"→\"least\" is an extreme/quantifier flip (N5's territory), not a negation/antonym flip.\n- **Subtype-narrow N2** (`d4_s0174_N2_v1`): adamantinomatous is essentially the only pediatric subtype, so narrowing to it doesn't change the answer.\n- **Off-target N4 items** (`d4_s0174_N4_v3`, `d4_s0174_N4_v4`): these swap the question's subject entirely (asking to identify some other unspecified tumor) rather than flipping a single polarity on the same subject.",
+  "ttft_ms": 136919,
+  "ttft_stream_ms": 1338,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 158194,
+  "uuid": "05d80e1b-9111-46b9-a2e0-1f507cac4612",
+  "queued_turn_count": 0
+}

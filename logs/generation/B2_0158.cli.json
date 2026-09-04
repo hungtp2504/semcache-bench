@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 73589,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "7c06e4fe-7cc9-434c-8939-f348073a76d5",
+  "total_cost_usd": 0.505544,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32133,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 6987,
+    "output_tokens_details": {
+      "thinking_tokens": 4354
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32133,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6987,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32133,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32133
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 6987,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32133,
+      "webSearchRequests": 0,
+      "costUSD": 0.505544,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0550_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0550_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0550_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0550_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0550_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0550_P2_v3\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d1_s0550_P2_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0550_P3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0550_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0550_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0550_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0550_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0550_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0550_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0550_N2_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d1_s0550_N3_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0550_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"10.490 is most likely the seed's own 'this course' (8 psets), so the answer would be unchanged\"}\n{\"id\":\"d1_s0550_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"final vs failing is an aspect change, not a negation/antonym polarity flip\"}\n{\"id\":\"d1_s0550_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed answer already states the excluded coursework (lowest-scoring pset is dropped)\"}\n{\"id\":\"d1_s0550_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0550_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds a conditional scope clause rather than flipping one polarity term\"}\n{\"id\":\"d1_s0550_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0550_N5_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0550_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0550_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0550_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0550_N6_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d1_s0556_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0556_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0556_P1_v3\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d1_s0556_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0556_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0556_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0556_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0556_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0556_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0556_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0556_P3_v3\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d1_s0556_P3_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0556_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0556_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0556_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0556_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0556_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0556_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0556_N4_v1\",\"axis_ok\":true,\"conf\":0.58,\"issue\":null}\n{\"id\":\"d1_s0556_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0556_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new concept (forbidden co-enrollment) rather than flipping one polarity term\"}\n{\"id\":\"d1_s0556_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"corequisite vs prerequisite is an aspect change, not a negation/antonym flip\"}\n{\"id\":\"d1_s0556_N5_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0556_N5_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d1_s0556_N5_v3\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d1_s0556_N5_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0556_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0556_N6_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d1_s0563_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0563_P1_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d1_s0563_P1_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0563_P1_v4\",\"axis_ok\":true,\"conf\":0.82,\"issue\":null}\n{\"id\":\"d1_s0563_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 53391,
+  "ttft_stream_ms": 1619,
+  "time_to_request_ms": 18,
+  "type": "result",
+  "duration_ms": 73783,
+  "uuid": "55c3ea4a-22cc-4f2f-bb4c-d0aac90b332f",
+  "queued_turn_count": 0
+}

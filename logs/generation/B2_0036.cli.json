@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 72953,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "f2ed939f-ca88-406b-acae-99d7679cdf9a",
+  "total_cost_usd": 0.5394265,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32199,
+    "cache_read_input_tokens": 19103,
+    "output_tokens": 8315,
+    "output_tokens_details": {
+      "thinking_tokens": 5521
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32199,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8315,
+        "cache_read_input_tokens": 19103,
+        "cache_creation_input_tokens": 32199,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32199
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 8315,
+      "cacheReadInputTokens": 19103,
+      "cacheCreationInputTokens": 32199,
+      "webSearchRequests": 0,
+      "costUSD": 0.5394265,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0008_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0008_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0008_N2_v1\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d3_s0008_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0008_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0008_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"ticket->pull request is an artifact/facet swap, not an entity sibling; the same Discord channel answer would still apply\"}\n{\"id\":\"d3_s0008_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0008_N4_v2\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"no negation/antonym flip; post-vs-receive-replies is an aspect change (N1), not polarity\"}\n{\"id\":\"d3_s0008_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"quantifier widened but venue is unchanged, so seed answer still fully answers\"}\n{\"id\":\"d3_s0008_N5_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"seed has no quantifier/extreme to flip; where->earliest-when is an aspect change\"}\n{\"id\":\"d3_s0008_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0008_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"no shifted presupposition; asks wording instead of venue, i.e. a plain aspect change\"}\n{\"id\":\"d3_s0009_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0009_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0009_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0009_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0009_N1_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0009_N1_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0009_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0009_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"generalizing to any open-source team leaves the seed's reason fully applicable, so the answer does not differ\"}\n{\"id\":\"d3_s0009_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0009_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0009_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0009_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"not a single negation/antonym flip; why->when reframe is an aspect change\"}\n{\"id\":\"d3_s0009_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0009_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"quantifier widened plus 'right' dropped, and the seed's attention rationale still fully answers it\"}\n{\"id\":\"d3_s0009_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0009_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0010_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0010_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_P1_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0010_P1_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0010_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_P2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0010_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0010_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0010_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0010_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0010_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0010_N1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0010_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0010_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d3_s0010_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0010_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0010_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0010_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0010_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"replaces the action entirely (reopen a closed ticket) rather than flipping one negation/antonym in the seed\"}\n{\"id\":\"d3_s0010_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"no quantifier in the seed is flipped; reframed from a yes/no permission question to a reviewer-count question (aspect change)\"}\n{\"id\":\"d3_s0010_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0010_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0010_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}",
+  "ttft_ms": 72973,
+  "ttft_stream_ms": 5517,
+  "time_to_request_ms": 28,
+  "type": "result",
+  "duration_ms": 73193,
+  "uuid": "2f41a373-3536-4c71-976d-7ac152ced31a"
+}

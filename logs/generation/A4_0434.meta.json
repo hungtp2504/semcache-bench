@@ -1,0 +1,51 @@
+{
+  "batch_id": "A4_0434",
+  "stage": "A4",
+  "model_requested": "claude-opus-5",
+  "model_reported": [
+    "claude-opus-5"
+  ],
+  "prompt_file": "prompts/A4_variation.md",
+  "prompt_version": "1.2\"   # v1.2 2026-08-12: N4/N5 overgenerate-and-filter (4 candidates each;",
+  "cached_block_sha256": "666c8b65cef5675fe994b0ee22800851ef00fbed5b3e1e1d471b5c003b205c70",
+  "input_file": "data/scale_seed_remaining.jsonl",
+  "input_lines": "571:580",
+  "n_input": 10,
+  "ts_start": "2026-08-18T07:59:39Z",
+  "ts_end": "2026-08-18T08:05:22Z",
+  "cli_session_id": "f117f272-f6b8-4a96-a6bb-2190dcdb9af7",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 25372,
+    "cache_read_input_tokens": 19027,
+    "output_tokens": 33597,
+    "output_tokens_details": {
+      "thinking_tokens": 15722
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 25372,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 33597,
+        "cache_read_input_tokens": 19027,
+        "cache_creation_input_tokens": 25372,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 25372
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "cost_usd": 1.1031685
+}

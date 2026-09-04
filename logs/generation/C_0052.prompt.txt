@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0052
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d4_s0204", "domain": "medical", "doc_id": "d4_0000007_4", "fact_ids": ["d4_f00313"], "question": "Is there a vaccine available to prevent hepatitis C infection?", "answer": "No, there is no vaccine to prevent hepatitis C infection, though vaccines exist for hepatitis A and hepatitis B.", "generator_model": "claude-sonnet-5", "batch_id": "A_0164", "ts": "2026-08-12T08:20:20Z"}
+{"seed_id": "d4_s0205", "domain": "medical", "doc_id": "d4_0000007_4", "fact_ids": ["d4_f00310"], "question": "Which group in the United States has an increased risk of liver cancer?", "answer": "In the United States, men—especially Asian/Pacific Islander men—have an increased risk of liver cancer.", "generator_model": "claude-sonnet-5", "batch_id": "A_0164", "ts": "2026-08-12T08:20:20Z"}
+{"seed_id": "d4_s0211", "domain": "medical", "doc_id": "d4_0000009_1", "fact_ids": ["d4_f00322"], "question": "What other names has Ewing sarcoma been known by?", "answer": "Ewing sarcoma has also been called peripheral primitive neuroectodermal tumor, Askin tumor (when in the chest wall), extraosseous Ewing sarcoma (when in tissue other than bone), and Ewing sarcoma family of tumors.", "generator_model": "claude-sonnet-5", "batch_id": "A_0164", "ts": "2026-08-12T08:20:20Z"}
+{"seed_id": "d4_s0216", "domain": "medical", "doc_id": "d4_0000009_2", "fact_ids": ["d4_f00329"], "question": "Where does osteosarcoma commonly form in children and adolescents?", "answer": "In children and adolescents, osteosarcoma often forms in the bones near the knee.", "generator_model": "claude-sonnet-5", "batch_id": "A_0164", "ts": "2026-08-12T08:20:20Z"}
+{"seed_id": "d4_s0217", "domain": "medical", "doc_id": "d4_0000009_2", "fact_ids": ["d4_f00331"], "question": "How is malignant fibrous histiocytoma (MFH) of bone related to osteosarcoma treatment?", "answer": "MFH of bone is a rare tumor of the bone that is treated like osteosarcoma.", "generator_model": "claude-sonnet-5", "batch_id": "A_0164", "ts": "2026-08-12T08:20:20Z"}
+{"seed_id": "d4_s0221", "domain": "medical", "doc_id": "d4_0000010_1", "fact_ids": ["d4_f00336", "d4_f00338", "d4_f00339"], "question": "What is a gastrointestinal carcinoid tumor and where do these tumors typically occur?", "answer": "It is cancer that forms in the lining of the gastrointestinal tract, arising from neuroendocrine cells; most GI carcinoid tumors are rare, slow-growing, and occur in the small intestine, rectum, and appendix.", "generator_model": "claude-sonnet-5", "batch_id": "A_0165", "ts": "2026-08-12T08:21:11Z"}
+{"seed_id": "d4_s0223", "domain": "medical", "doc_id": "d4_0000010_1", "fact_ids": ["d4_f00340", "d4_f00341"], "question": "Under what circumstances can carcinoid syndrome occur, and what are its signs and symptoms?", "answer": "It can occur if the tumor spreads to the liver or other parts of the body, or if tumor cells enter the blood. Symptoms include facial/neck redness or warmth, abdominal pain, bloating, diarrhea, wheezing or trouble breathing, and a fast heartbeat.", "generator_model": "claude-sonnet-5", "batch_id": "A_0165", "ts": "2026-08-12T08:21:11Z"}
+{"seed_id": "d4_s0228", "domain": "medical", "doc_id": "d4_0000013_2", "fact_ids": ["d4_f00347", "d4_f00348"], "question": "How many types of chronic myeloproliferative neoplasms are there, and what are they?", "answer": "There are 6 types: chronic myelogenous leukemia, polycythemia vera, primary myelofibrosis (chronic idiopathic myelofibrosis), essential thrombocythemia, chronic neutrophilic leukemia, and chronic eosinophilic leukemia.", "generator_model": "claude-sonnet-5", "batch_id": "A_0165", "ts": "2026-08-12T08:21:11Z"}
+{"seed_id": "d4_s0229", "domain": "medical", "doc_id": "d4_0000013_2", "fact_ids": ["d4_f00350"], "question": "Is there a standard staging system for chronic myeloproliferative neoplasms?", "answer": "No, there is no standard staging system; treatment is instead based on the specific type of myeloproliferative neoplasm the patient has.", "generator_model": "claude-sonnet-5", "batch_id": "A_0165", "ts": "2026-08-12T08:21:11Z"}
+{"seed_id": "d4_s0233", "domain": "medical", "doc_id": "d4_0000013_2_1", "fact_ids": ["d4_f00355"], "question": "What is polycythemia vera?", "answer": "A disease in which too many red blood cells are made in the bone marrow.", "generator_model": "claude-sonnet-5", "batch_id": "A_0165", "ts": "2026-08-12T08:21:11Z"}

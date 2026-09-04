@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: A4_0418
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d2_s0188", "domain": "academic_nlp", "doc_id": "d2_doc0031", "fact_ids": ["d2_f00242"], "question": "How is the winning side of an Oxford-style IQ2 debate determined?", "answer": "A side wins if the difference between its post-debate and pre-debate vote percentages (the 'delta') is greater than that of the opposing side.", "generator_model": "claude-sonnet-5", "batch_id": "A_0023", "ts": "2026-08-12T03:35:01Z"}
+{"seed_id": "d2_s0195", "domain": "academic_nlp", "doc_id": "d2_doc0032", "fact_ids": ["d2_f00250"], "question": "Which two baseline methods does the proposed clustering approach outperform?", "answer": "It outperforms a naive bag-of-words baseline and an 'orthographic translation' method based on Damerau-Levenshtein distance, even when the latter is enriched with dictionary mappings.", "generator_model": "claude-sonnet-5", "batch_id": "A_0023", "ts": "2026-08-12T03:35:01Z"}
+{"seed_id": "d2_s0202", "domain": "academic_nlp", "doc_id": "d2_doc0033", "fact_ids": ["d2_f00261"], "question": "Why was the word 'cause' excluded when selecting causal documents?", "answer": "It was excluded because 'cause' is popularly used as a contraction for 'because', not as a causal indicator.", "generator_model": "claude-sonnet-5", "batch_id": "A_0023", "ts": "2026-08-12T03:35:01Z"}
+{"seed_id": "d2_s0209", "domain": "academic_nlp", "doc_id": "d2_doc0034", "fact_ids": ["d2_f00269"], "question": "What dataset of science questions was used to evaluate TableILP?", "answer": "All non-diagram multiple choice questions from 6 years of NY Regents 4th grade science exams.", "generator_model": "claude-sonnet-5", "batch_id": "A_0024", "ts": "2026-08-12T03:35:05Z"}
+{"seed_id": "d2_s0216", "domain": "academic_nlp", "doc_id": "d2_doc0035", "fact_ids": ["d2_f00276"], "question": "How many countries were used in the full classification experiment, and what was the size of the reduced subset?", "answer": "The full experiment covered all 217 countries in the datasets, with a reduced subset of the top 25 countries by tweet volume.", "generator_model": "claude-sonnet-5", "batch_id": "A_0024", "ts": "2026-08-12T03:35:05Z"}
+{"seed_id": "d2_s0222", "domain": "academic_nlp", "doc_id": "d2_doc0036", "fact_ids": ["d2_f00283"], "question": "What is the maximum message length allowed on microblogging platforms like Twitter and Weibo, according to the paper?", "answer": "Messages can be up to 140 characters long.", "generator_model": "claude-sonnet-5", "batch_id": "A_0024", "ts": "2026-08-12T03:35:05Z"}
+{"seed_id": "d2_s0228", "domain": "academic_nlp", "doc_id": "d2_doc0037", "fact_ids": ["d2_f00290"], "question": "What neural network architecture does tweet2vec use to learn tweet representations?", "answer": "A Bi-directional Gated Recurrent Unit (Bi-GRU) neural network.", "generator_model": "claude-sonnet-5", "batch_id": "A_0025", "ts": "2026-08-12T03:35:56Z"}
+{"seed_id": "d2_s0234", "domain": "academic_nlp", "doc_id": "d2_doc0038", "fact_ids": ["d2_f00296", "d2_f00297"], "question": "What time period and topics were the Argus dataset's questions restricted to?", "answer": "Questions were restricted to the period from September 1, 2014 to September 1, 2015, and to the topics of politics, sports, and the stock market.", "generator_model": "claude-sonnet-5", "batch_id": "A_0025", "ts": "2026-08-12T03:35:56Z"}
+{"seed_id": "d2_s0240", "domain": "academic_nlp", "doc_id": "d2_doc0039", "fact_ids": ["d2_f00305"], "question": "Who developed the supervised Twitter speech-act classifier used to build the assertion detector?", "answer": "Vosoughi et al. developed the classifier.", "generator_model": "claude-sonnet-5", "batch_id": "A_0025", "ts": "2026-08-12T03:35:56Z"}
+{"seed_id": "d2_s0246", "domain": "academic_nlp", "doc_id": "d2_doc0040", "fact_ids": ["d2_f00311"], "question": "What is the relationship between the Flickr8K and Flickr30K datasets?", "answer": "Flickr8K is a subset of the Flickr30K dataset.", "generator_model": "claude-sonnet-5", "batch_id": "A_0026", "ts": "2026-08-12T03:36:14Z"}

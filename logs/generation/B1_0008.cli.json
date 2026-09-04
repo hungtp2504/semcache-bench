@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 126609,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "66ead252-9d1e-43ab-8799-03b9569a73e5",
+  "total_cost_usd": 0.5006775000000001,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 44699,
+    "cache_read_input_tokens": 94505,
+    "output_tokens": 13608,
+    "output_tokens_details": {
+      "thinking_tokens": 10602
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 44699,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2929,
+        "cache_read_input_tokens": 64260,
+        "cache_creation_input_tokens": 10684,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10684
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 13608,
+      "cacheReadInputTokens": 94505,
+      "cacheCreationInputTokens": 44699,
+      "webSearchRequests": 0,
+      "costUSD": 0.5006775000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0018_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0018_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0018_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"narrowing to a color-word input doesn't change the module's function description; seed's generic answer (already illustrated with 'bird') still fully applies\"}\n{\"id\":\"d2_s0018_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0018_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0018_N3_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0018_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0018_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to identifying a different module by an unrelated property rather than negating find's stated function; more an entity/aspect shift than a polarity flip of the same question\"}\n{\"id\":\"d2_s0018_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a new quantifiable dimension (pixel count) absent from the seed question rather than flipping an existing extreme; not a genuine quantifier flip\"}\n{\"id\":\"d2_s0018_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new quantifier (count of find modules per network) unrelated to the seed's functional description rather than flipping an existing extreme\"}\n{\"id\":\"d2_s0018_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0018_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0019_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0019_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0019_P1_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0019_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0019_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0019_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0019_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0019_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0019_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0019_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0019_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0019_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0019_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0019_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0019_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0019_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the ~6,900 figure typically already refers to currently/actively spoken living languages, so this narrowed question may share the seed's answer, failing the 'answer differs' requirement\"}\n{\"id\":\"d2_s0019_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0019_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0019_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0019_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"introduces an unrelated new facet (NLP tool coverage) rather than negating the seed's actual predicate (speak); more an aspect change than a polarity flip\"}\n{\"id\":\"d2_s0019_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts to a different quantity (identifying the single most-spoken language) rather than flipping an extreme on the same measure (total language count); reads as an aspect change\"}\n{\"id\":\"d2_s0019_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0019_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0019_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0020_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0020_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0020_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0020_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0020_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0020_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0020_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0020_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0020_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0020_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0020_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0020_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0020_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0020_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0020_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0020_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0020_N3_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0020_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0020_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0020_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0020_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about maxima across any/all NLP toolboxes rather than flipping a quantifier on the seed's specific OpenNLP/CoreNLP figures; shifts entity scope rather than flipping an extreme\"}\n{\"id\":\"d2_s0020_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about minimum labeled-data volume per model, an unrelated quantity to the seed's language-count figures; not a flip of an existing extreme\"}\n{\"id\":\"d2_s0020_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0020_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}",
+  "ttft_ms": 106783,
+  "ttft_stream_ms": 1709,
+  "time_to_request_ms": 55,
+  "type": "result",
+  "duration_ms": 127658,
+  "uuid": "b84f1f55-d70c-4470-a3a9-b8b3ace9d39d"
+}

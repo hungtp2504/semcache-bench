@@ -1,0 +1,73 @@
+You are the verification tier of a semantic cache. The first tier (embedding similarity)
+proposed serving a stored answer to a new query. You see both questions and the stored
+answer. Decide whether serving is safe.
+
+DECISION RULE
+SERVE      — the stored answer is a fully correct and complete answer to the new query.
+REGENERATE — anything else: different entity/version, flipped polarity, different
+             quantifier or extreme, different facet or scope, different presupposed fact,
+             or you are unsure. When in doubt, REGENERATE (a false hit sends a user the
+             wrong answer; a false miss only costs one LLM call).
+
+Pay attention to small discrete differences the first tier is blind to: "1" vs "2",
+negation words, earliest/latest, min/max, sibling entities. Do not be fooled by large
+surface differences that change nothing (typos, missing diacritics, paraphrase).
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"pair_id":"...","decision":"SERVE|REGENERATE","conf":<0..1>}
+
+
+[BATCH INPUT]
+batch_id: E_0695
+pairs (JSONL — pair_id, cached_question, cached_answer, new_query):
+
+{"pair_id": "d3_s0647_P1_v1", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "Which company maintains Next.js?"}
+{"pair_id": "d3_s0647_P1_v3", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "Who looks after the Next.js framework?"}
+{"pair_id": "d3_s0647_P2_v2", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "Tell me who the maintainer of the Next.js framework is."}
+{"pair_id": "d3_s0647_P2_v4", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "Name the maintainer of the Next.js framework."}
+{"pair_id": "d3_s0647_P3_v1", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "who maintains nextjs framwork?"}
+{"pair_id": "d3_s0647_P3_v2", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "next.js — who maintains it??"}
+{"pair_id": "d3_s0647_P3_v3", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "whos the maintainer of nextjs"}
+{"pair_id": "d3_s0647_P3_v4", "cached_question": "Who maintains the Next.js framework?", "cached_answer": "Next.js is maintained by Vercel.", "new_query": "who mantains next js framework btw"}
+{"pair_id": "d3_s0648_N2_v1", "cached_question": "Which company maintains React Router (v7)?", "cached_answer": "React Router is maintained by Shopify.", "new_query": "Which team inside Shopify maintains React Router (v7)?"}
+{"pair_id": "d3_s0648_N4_v2", "cached_question": "Which company maintains React Router (v7)?", "cached_answer": "React Router is maintained by Shopify.", "new_query": "Which of the guide's listed companies does not maintain React Router (v7)?"}
+{"pair_id": "d3_s0648_N5_v1", "cached_question": "Which company maintains React Router (v7)?", "cached_answer": "React Router is maintained by Shopify.", "new_query": "Which company maintained the earliest version of React Router?"}
+{"pair_id": "d3_s0648_P1_v4", "cached_question": "Which company maintains React Router (v7)?", "cached_answer": "React Router is maintained by Shopify.", "new_query": "React Router v7 is maintained by which organization?"}
+{"pair_id": "d3_s0648_P2_v3", "cached_question": "Which company maintains React Router (v7)?", "cached_answer": "React Router is maintained by Shopify.", "new_query": "I'd like to know the company responsible for maintaining React Router v7."}
+{"pair_id": "d3_s0648_P2_v4", "cached_question": "Which company maintains React Router (v7)?", "cached_answer": "React Router is maintained by Shopify.", "new_query": "Maintenance of React Router v7 is handled by which company?"}
+{"pair_id": "d3_s0648_P3_v1", "cached_question": "Which company maintains React Router (v7)?", "cached_answer": "React Router is maintained by Shopify.", "new_query": "which co maintains react router v7?"}
+{"pair_id": "d3_s0648_P3_v2", "cached_question": "Which company maintains React Router (v7)?", "cached_answer": "React Router is maintained by Shopify.", "new_query": "who maintains react-router v7 ?? company name pls"}
+{"pair_id": "d3_s0648_P3_v3", "cached_question": "Which company maintains React Router (v7)?", "cached_answer": "React Router is maintained by Shopify.", "new_query": "react router v7 maintaned by which compny"}
+{"pair_id": "d3_s0653_N1_v2", "cached_question": "What is React, according to the React docs?", "cached_answer": "React is a JavaScript library for rendering user interfaces (UI).", "new_query": "When was React first released, according to the docs?"}
+{"pair_id": "d3_s0653_N2_v2", "cached_question": "What is React, according to the React docs?", "cached_answer": "React is a JavaScript library for rendering user interfaces (UI).", "new_query": "What is the React ecosystem as a whole, according to the docs?"}
+{"pair_id": "d3_s0653_N3_v1", "cached_question": "What is React, according to the React docs?", "cached_answer": "React is a JavaScript library for rendering user interfaces (UI).", "new_query": "What is React Native, according to the React docs?"}
+{"pair_id": "d3_s0653_P1_v1", "cached_question": "What is React, according to the React docs?", "cached_answer": "React is a JavaScript library for rendering user interfaces (UI).", "new_query": "How do the React docs define React?"}
+{"pair_id": "d3_s0653_P1_v2", "cached_question": "What is React, according to the React docs?", "cached_answer": "React is a JavaScript library for rendering user interfaces (UI).", "new_query": "According to the React documentation, what exactly is React?"}
+{"pair_id": "d3_s0653_P2_v1", "cached_question": "What is React, according to the React docs?", "cached_answer": "React is a JavaScript library for rendering user interfaces (UI).", "new_query": "Give me the React docs' definition of React."}
+{"pair_id": "d3_s0653_P2_v2", "cached_question": "What is React, according to the React docs?", "cached_answer": "React is a JavaScript library for rendering user interfaces (UI).", "new_query": "React is described in the React docs as what?"}
+{"pair_id": "d3_s0653_P2_v3", "cached_question": "What is React, according to the React docs?", "cached_answer": "React is a JavaScript library for rendering user interfaces (UI).", "new_query": "I'm new here — how is React defined in its own documentation?"}
+{"pair_id": "d3_s0653_P2_v4", "cached_question": "What is React, according to the React docs?", "cached_answer": "React is a JavaScript library for rendering user interfaces (UI).", "new_query": "In the React docs, React is said to be what?"}
+{"pair_id": "d3_s0654_N1_v1", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "In the example on the 'Your first component' section, what does each Profile component render?"}
+{"pair_id": "d3_s0654_N3_v1", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "In the example on the 'Your first component' section, how many Profile components does the App component render?"}
+{"pair_id": "d3_s0654_N3_v2", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "In the example on the 'Passing props to a component' section, how many Profile components does the Gallery component render?"}
+{"pair_id": "d3_s0654_N4_v4", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "In the example on the 'Your first component' section, how many Profile components does Gallery leave unrendered?"}
+{"pair_id": "d3_s0654_P1_v4", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "How many times does the Gallery component render Profile in the 'Your first component' example?"}
+{"pair_id": "d3_s0654_P2_v2", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "Count the Profile components that Gallery renders in the 'Your first component' section example."}
+{"pair_id": "d3_s0654_P2_v3", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "For the example in the 'Your first component' section, tell me the number of Profile components inside Gallery."}
+{"pair_id": "d3_s0654_P3_v1", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "in the 'your first component' example how many profile componets does gallery render?"}
+{"pair_id": "d3_s0654_P3_v2", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "your first component section — gallery renders how many profiles??"}
+{"pair_id": "d3_s0654_P3_v3", "cached_question": "In the example on the 'Your first component' section, how many Profile components does the Gallery component render?", "cached_answer": "The Gallery component renders three Profile components.", "new_query": "how many Profile comps in Gallery (your first component exmple)"}
+{"pair_id": "d3_s0655_N2_v1", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "What are JSX's stricter rules compared to HTML?"}
+{"pair_id": "d3_s0655_N3_v2", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "What is JSX and how does it compare to XML?"}
+{"pair_id": "d3_s0655_N4_v3", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "Is HTML stricter than JSX?"}
+{"pair_id": "d3_s0655_N4_v4", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "What is JSX and why does it look nothing like HTML?"}
+{"pair_id": "d3_s0655_N5_v4", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "Is JSX at most as strict as HTML?"}
+{"pair_id": "d3_s0655_P1_v4", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "Define JSX and describe how it relates to HTML."}
+{"pair_id": "d3_s0655_P2_v2", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "I need a description of JSX along with a comparison to HTML."}
+{"pair_id": "d3_s0655_P2_v4", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "Give me an explanation of JSX and of its relationship to HTML."}
+{"pair_id": "d3_s0655_P3_v1", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "what is jsx n how does it compare to html?"}
+{"pair_id": "d3_s0655_P3_v2", "cached_question": "What is JSX and how does it compare to HTML?", "cached_answer": "JSX is a syntax extension that React components use to represent markup; it looks a lot like HTML but is a bit stricter.", "new_query": "wats JSX? and hows it diff from HTML"}
+{"pair_id": "d3_s0659_N1_v2", "cached_question": "What kind of tool is WebStorm?", "cached_answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "new_query": "Which company develops WebStorm?"}
+{"pair_id": "d3_s0659_N2_v1", "cached_question": "What kind of tool is WebStorm?", "cached_answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "new_query": "What kind of tool is WebStorm's built-in debugger?"}
+{"pair_id": "d3_s0659_N4_v2", "cached_question": "What kind of tool is WebStorm?", "cached_answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "new_query": "What kind of tool is WebStorm explicitly not?"}
+{"pair_id": "d3_s0659_P1_v2", "cached_question": "What kind of tool is WebStorm?", "cached_answer": "WebStorm is an integrated development environment designed specifically for JavaScript.", "new_query": "What category of tool does WebStorm fall into?"}

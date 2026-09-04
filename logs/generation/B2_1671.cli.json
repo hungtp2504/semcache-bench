@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 84711,
+  "stop_reason": "end_turn",
+  "session_id": "ef89c9eb-99d5-4e23-9232-4997131f98c7",
+  "total_cost_usd": 0.5649890000000001,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 35670,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 7950,
+    "output_tokens_details": {
+      "thinking_tokens": 5099
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 35670,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 7950,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 35670,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 35670
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 7950,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 35670,
+      "webSearchRequests": 0,
+      "costUSD": 0.5649890000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0302_N5_v4\",\"axis_ok\":false,\"conf\":0.72,\"issue\":\"adds a 'thí điểm' (pilot) presupposition rather than flipping a quantifier; earliest applicable cohort is still 2026, so seed answer largely still applies\"}\n{\"id\":\"d5_s0302_N6_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d5_s0302_N6_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks who signed the circular — a plain aspect change (N1), no shifted presupposition and low lexical overlap with seed content\"}\n{\"id\":\"d5_s0309_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0309_P1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0309_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0309_P1_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0309_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0309_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0309_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0309_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0309_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0309_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0309_P3_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0309_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0309_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0309_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0309_N2_v1\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d5_s0309_N2_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d5_s0309_N3_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"ND 81/2021/NĐ-CP is the source decree consolidated into VBHN 07/2023, so its regulated scope is the same — seed answer would still fully answer it\"}\n{\"id\":\"d5_s0309_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0309_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0309_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0309_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0309_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'cấm những hành vi gì' is not a polarity/antonym flip of 'quy định nội dung gì' — prohibited acts are a subset of regulated content, so this is an aspect change\"}\n{\"id\":\"d5_s0309_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0309_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0309_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0309_N5_v4\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d5_s0309_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asking which documents were consolidated is a facet change (N1); the presupposition (VBHN consolidates documents) is true and unchanged, not shifted\"}\n{\"id\":\"d5_s0309_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0315_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0315_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0315_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0315_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0315_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0315_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0315_N1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0315_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"admissions services are a subset of education/training services, so the same 15%/year cap applies — seed answer still fully answers it\"}\n{\"id\":\"d5_s0315_N2_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d5_s0315_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0315_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0315_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0315_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0315_N5_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0315_N5_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0315_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"keeps 'tối đa' and changes the time window to the whole period — a scope/time-unit change (N2), not a quantifier/extreme flip\"}\n{\"id\":\"d5_s0315_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"per-year → per-month is a time-unit change, not a min/max or at-least/at-most quantifier flip\"}\n{\"id\":\"d5_s0315_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0315_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0320_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 62318,
+  "type": "result",
+  "duration_ms": 86452,
+  "uuid": "2d1db387-9d6c-40a2-81d4-5fc251ea9ee6",
+  "ttft_stream_ms": 2075,
+  "time_to_request_ms": 191,
+  "queued_turn_count": 0
+}

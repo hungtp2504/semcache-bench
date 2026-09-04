@@ -1,0 +1,60 @@
+{"id": "d4_s0502_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N4_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "not a negation/antonym flip; inverts the query direction (asks which cancer ranks below), closer to N6/N1", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N4_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.7, "issue": "adds an exclusion scope qualifier (N2), no polarity flip", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N4_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "changes population scope/entity (non-US women) rather than flipping sign of the seed proposition", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N5_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "introduces a new historical/temporal facet rather than flipping an existing quantifier", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N6_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "presupposes the seed's own fact and asks why; aspect change (N1), not a shifted presupposition", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0502_N6_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.65, "issue": "asks mortality trend — aspect change, no altered presupposition", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.5, "issue": "narrowed set is likely all lobes, so the correct answer may still be 15 to 20 (seed answer would suffice)", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N4_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.5, "issue": "antonym flip plus an added condition (underdevelopment); more than one change and not well-posed", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N4_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "converts to a yes/no question about a different property; seed answer is not wrong-signed, just unrelated", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N4_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N5_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N5_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N5_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.55, "issue": "superlative applied to a different quantity (lobules per lobe), not a flip of the seed's quantifier", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N5_v4", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.5, "issue": "introduces a left/right comparison rather than flipping an existing quantifier/extreme", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N6_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0508_N6_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "aspect change (lactation changes), no shifted presupposition", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P1_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P1_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P2_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P2_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P2_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P2_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P3_v3", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_P3_v4", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_N1_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_N1_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_N2_v1", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "basal cell and squamous cell remain the top two on the eyelid, so the seed answer still answers it", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_N2_v2", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.65, "issue": "basal cell and squamous cell are also the two most common skin cancers overall; seed answer still answers it", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_N3_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_N3_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_N4_v1", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_N4_v2", "judge_model": "claude-opus-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}
+{"id": "d4_s0514_N4_v3", "judge_model": "claude-opus-5", "axis_ok": false, "conf": 0.6, "issue": "adds a negated scope qualifier rather than flipping the seed's polarity, and the top two types would likely still be the seed's answer", "batch_id": "B2_1347", "ts": "2026-08-30T14:54:02Z"}

@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_0148
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d1_s0427_N3_v2", "axis": "N3", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "How many recitation sessions per week does 10.34 have, and how long is each?", "delta": "recitations instead of lectures"}
+{"id": "d1_s0427_N4_v1", "axis": "N4", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "How many days per week does 10.34 have no lecture session?", "delta": "lecture-free days, not lecture days"}
+{"id": "d1_s0427_N4_v2", "axis": "N4", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "How many hours per week is 10.34 not in session?", "delta": "hours outside class, not class hours"}
+{"id": "d1_s0427_N4_v3", "axis": "N4", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "Which weekly session in 10.34 is not a lecture?", "delta": "the non-lecture weekly session"}
+{"id": "d1_s0427_N4_v4", "axis": "N4", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "How much of each 10.34 session is not lecture time?", "delta": "non-lecture portion of a session"}
+{"id": "d1_s0427_N5_v1", "axis": "N5", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "What is the maximum number of hours 10.34 meets in a single week?", "delta": "peak weekly hours, not the standard three"}
+{"id": "d1_s0427_N5_v2", "axis": "N5", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "What is the longest single session in 10.34's schedule, and how long is it?", "delta": "the longest session, not a standard lecture"}
+{"id": "d1_s0427_N5_v3", "axis": "N5", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "In which week does 10.34 hold the fewest lecture sessions?", "delta": "the week with the fewest lectures"}
+{"id": "d1_s0427_N5_v4", "axis": "N5", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "What is the minimum number of 10.34 lectures a student must attend per week?", "delta": "minimum attendance required, not sessions held"}
+{"id": "d1_s0427_N6_v1", "axis": "N6", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "What happens to 10.34's one-hour lectures during holiday weeks?", "delta": "asks holiday rescheduling, presupposed"}
+{"id": "d1_s0427_N6_v2", "axis": "N6", "seed_question": "How many lecture sessions per week does 10.34 have, and how long is each session?", "answer": "There are three lecture sessions per week, each lasting one hour.", "variation": "Who lectures at 10.34's three weekly sessions?", "delta": "asks the lecturer, presupposed fact"}
+{"id": "d1_s0433_P1_v1", "axis": "P1", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who wrote the solutions to the assignments in MIT's 10.37?", "delta": null}
+{"id": "d1_s0433_P1_v2", "axis": "P1", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Which people put together the homework solutions for MIT 10.37?", "delta": null}
+{"id": "d1_s0433_P1_v3", "axis": "P1", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who authored the assignment solution sets for MIT's course 10.37?", "delta": null}
+{"id": "d1_s0433_P1_v4", "axis": "P1", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who was responsible for creating 10.37's assignment solutions at MIT?", "delta": null}
+{"id": "d1_s0433_P2_v1", "axis": "P2", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Tell me who prepared MIT 10.37's assignment solutions.", "delta": null}
+{"id": "d1_s0433_P2_v2", "axis": "P2", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "MIT's 10.37 assignment solutions were prepared by whom?", "delta": null}
+{"id": "d1_s0433_P2_v3", "axis": "P2", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "I would like the names of the people who prepared the assignment solutions in MIT's 10.37.", "delta": null}
+{"id": "d1_s0433_P2_v4", "axis": "P2", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "The assignment solutions for MIT course 10.37 were put together by which people?", "delta": null}
+{"id": "d1_s0433_P3_v1", "axis": "P3", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "who prepped the assignment solutions for mit 10.37", "delta": null}
+{"id": "d1_s0433_P3_v2", "axis": "P3", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "mit 1037 assignment solns — who made em??", "delta": null}
+{"id": "d1_s0433_P3_v3", "axis": "P3", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "whos the ppl that prepared 10.37 assignment solutions at mit", "delta": null}
+{"id": "d1_s0433_P3_v4", "axis": "P3", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "10.37 mit: who wrote the hw solns", "delta": null}
+{"id": "d1_s0433_N1_v1", "axis": "N1", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Are the assignment solutions for MIT's 10.37 available as PDF downloads?", "delta": "asks format and availability, not authors"}
+{"id": "d1_s0433_N1_v2", "axis": "N1", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "When are the assignment solutions released in MIT's 10.37?", "delta": "release timing, not the preparers"}
+{"id": "d1_s0433_N2_v1", "axis": "N2", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who prepared the solutions for Problem Set 1 in MIT's 10.37?", "delta": "narrows to one problem set's solutions"}
+{"id": "d1_s0433_N2_v2", "axis": "N2", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who prepared all the course materials for MIT's 10.37?", "delta": "widens to all course materials"}
+{"id": "d1_s0433_N3_v1", "axis": "N3", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who prepared the assignment solutions for MIT's 10.34 course?", "delta": "a different course"}
+{"id": "d1_s0433_N3_v2", "axis": "N3", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who prepared the exam solutions for MIT's 10.37 course?", "delta": "exam solutions instead of assignment solutions"}
+{"id": "d1_s0433_N4_v1", "axis": "N4", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who prepared the assignments themselves, rather than the solutions, in MIT's 10.37?", "delta": "asks who wrote the problems, not the solutions"}
+{"id": "d1_s0433_N4_v2", "axis": "N4", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Which members of MIT 10.37's teaching staff did not prepare the assignment solutions?", "delta": "staff who did not prepare them"}
+{"id": "d1_s0433_N4_v3", "axis": "N4", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who reviewed rather than prepared the assignment solutions in MIT's 10.37?", "delta": "asks the reviewers, not the preparers"}
+{"id": "d1_s0433_N4_v4", "axis": "N4", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Which assignments in MIT's 10.37 have no published solutions?", "delta": "assignments lacking solutions"}
+{"id": "d1_s0433_N5_v1", "axis": "N5", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who was the lead preparer of MIT 10.37's assignment solutions?", "delta": "only the lead, not all three"}
+{"id": "d1_s0433_N5_v2", "axis": "N5", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Which single person prepared the most of MIT 10.37's assignment solutions?", "delta": "the largest contributor only"}
+{"id": "d1_s0433_N5_v3", "axis": "N5", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who is listed first among the preparers of MIT 10.37's assignment solutions?", "delta": "the first-listed preparer only"}
+{"id": "d1_s0433_N5_v4", "axis": "N5", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Who prepared the earliest assignment solutions in MIT's 10.37?", "delta": "preparer of the earliest solution set"}
+{"id": "d1_s0433_N6_v1", "axis": "N6", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "May I cite the 10.37 solutions by David Adrian, Karen Daniel, and Bin Pan in my report?", "delta": "asks citation and reuse permission"}
+{"id": "d1_s0433_N6_v2", "axis": "N6", "seed_question": "Who prepared the assignment solutions for MIT's 10.37 course?", "answer": "David Adrian, Karen Daniel, and Bin Pan prepared them.", "variation": "Which instructor supervised the preparers of MIT 10.37's assignment solutions?", "delta": "asks the supervising instructor"}
+{"id": "d1_s0439_P1_v1", "axis": "P1", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "Which term, which year, and what level was MIT's 10.37 offered in?", "delta": null}
+{"id": "d1_s0439_P1_v2", "axis": "P1", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "What semester and year did MIT teach 10.37, and at which level?", "delta": null}
+{"id": "d1_s0439_P1_v3", "axis": "P1", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "MIT course 10.37 ran in which term and year, and at what academic level?", "delta": null}
+{"id": "d1_s0439_P1_v4", "axis": "P1", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "When, by term and year, and at what level was MIT's 10.37 given?", "delta": null}
+{"id": "d1_s0439_P2_v1", "axis": "P2", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "Tell me the semester, year, and level of MIT's 10.37 offering.", "delta": null}
+{"id": "d1_s0439_P2_v2", "axis": "P2", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "MIT course 10.37 was taught in which semester and year, and at what level?", "delta": null}
+{"id": "d1_s0439_P2_v3", "axis": "P2", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "I need the term, the year, and the level for MIT's course 10.37.", "delta": null}
+{"id": "d1_s0439_P2_v4", "axis": "P2", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "For MIT 10.37, which semester, year, and level apply?", "delta": null}
+{"id": "d1_s0439_P3_v1", "axis": "P3", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "what semester yr n level was mit 10.37 taught", "delta": null}
+{"id": "d1_s0439_P3_v2", "axis": "P3", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "mit 1037 — term/year + level??", "delta": null}
+{"id": "d1_s0439_P3_v3", "axis": "P3", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "wen was 10.37 taught at mit n wat lvl (sem n yr)", "delta": null}
+{"id": "d1_s0439_P3_v4", "axis": "P3", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "10.37 mit: sem, year, lvl pls", "delta": null}
+{"id": "d1_s0439_N1_v1", "axis": "N1", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "How many students enrolled in MIT course 10.37?", "delta": "enrollment size, not term or level"}
+{"id": "d1_s0439_N1_v2", "axis": "N1", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "What textbook did MIT course 10.37 use?", "delta": "course textbook, not term or level"}
+{"id": "d1_s0439_N2_v1", "axis": "N2", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "In what semester, year, and level was the lab portion of MIT course 10.37 taught?", "delta": "narrows to the lab component"}
+{"id": "d1_s0439_N2_v2", "axis": "N2", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "In what semesters and years has MIT taught 10.37 across all of its offerings?", "delta": "widens to every offering, not one"}
+{"id": "d1_s0439_N3_v1", "axis": "N3", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "In what semester, year, and level was MIT course 10.40 taught?", "delta": "a different course number"}
+{"id": "d1_s0439_N3_v2", "axis": "N3", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "In what semester, year, and level was MIT course 10.34 taught?", "delta": "a different course number"}
+{"id": "d1_s0439_N4_v1", "axis": "N4", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "In which semester was MIT course 10.37 not offered, Spring or Fall?", "delta": "the semester it was not offered"}
+{"id": "d1_s0439_N4_v2", "axis": "N4", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "Which level was MIT course 10.37 closed to, graduate or undergraduate?", "delta": "the level excluded from the course"}
+{"id": "d1_s0439_N4_v3", "axis": "N4", "seed_question": "In what semester, year, and level was MIT course 10.37 taught?", "answer": "It was taught in Spring 2007 at the undergraduate level.", "variation": "In what semester and year did MIT stop teaching 10.37?", "delta": "when it ended, not when it was taught"}

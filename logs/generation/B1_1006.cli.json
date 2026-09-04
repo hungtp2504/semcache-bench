@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 112403,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "ab6a1e5a-ae8b-47e5-8c9d-b3f13f9290eb",
+  "total_cost_usd": 0.47107049999999995,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 43449,
+    "cache_read_input_tokens": 92365,
+    "output_tokens": 12177,
+    "output_tokens_details": {
+      "thinking_tokens": 9335
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43449,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2839,
+        "cache_read_input_tokens": 62118,
+        "cache_creation_input_tokens": 11578,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11578
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 12177,
+      "cacheReadInputTokens": 92365,
+      "cacheCreationInputTokens": 43449,
+      "webSearchRequests": 0,
+      "costUSD": 0.47107049999999995,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0033_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0033_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0033_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0033_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0033_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0033_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0033_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0033_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0033_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0033_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0033_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0033_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0033_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0033_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0033_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0033_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0033_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0033_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0033_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0033_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"changes question type from count to which-numbers-are-missing, not just a negation flip\"}\n{\"id\":\"d1_s0033_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0033_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0033_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0033_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0033_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about a completion requirement, unrelated to the number of mini-quizzes provided; not a min/max variant of the seed's quantity\"}\n{\"id\":\"d1_s0033_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"widens scope to any page on the site and switches answer type from a count to a page name; more than one change from a clean extreme flip\"}\n{\"id\":\"d1_s0033_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0033_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0035_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0035_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0035_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0035_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0035_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0035_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0035_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0035_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0035_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0035_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0035_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0035_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0035_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0035_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0035_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0035_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0035_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0035_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0035_N4_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d1_s0035_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about cancellations, a new fact not present in the seed, rather than negating meeting frequency/duration\"}\n{\"id\":\"d1_s0035_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts to outside-class workload hours, an unrelated metric, not a clean negation of session frequency/duration\"}\n{\"id\":\"d1_s0035_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces attendance-requirement, a fact never stated in the seed, rather than negating the seed's frequency/duration content\"}\n{\"id\":\"d1_s0035_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for a weekly total/aggregate, not a min/max/earliest/latest extreme as N5 requires\"}\n{\"id\":\"d1_s0035_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines a superlative (longest) with scope widening (including exams) — more than one change\"}\n{\"id\":\"d1_s0035_N5_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0035_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks total term length, not a min/max extreme of session frequency or duration\"}\n{\"id\":\"d1_s0035_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0035_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0041_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0041_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0041_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0041_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 91494,
+  "ttft_stream_ms": 2586,
+  "time_to_request_ms": 29,
+  "type": "result",
+  "duration_ms": 112896,
+  "uuid": "fe8e7669-9f4c-4c5f-91a7-d22a8e6de6c2"
+}

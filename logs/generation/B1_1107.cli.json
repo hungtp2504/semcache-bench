@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 179755,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "554c4f67-a856-43c1-9850-40fa2084099e",
+  "total_cost_usd": 0.31937360000000004,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 31196,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 18853,
+    "output_tokens_details": {
+      "thinking_tokens": 15831
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 31196,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 18853,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 31196,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 31196
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 18853,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 31196,
+      "webSearchRequests": 0,
+      "costUSD": 0.31937360000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0608_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0608_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0608_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0608_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0608_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0608_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0608_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0608_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0608_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0608_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0608_N5_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0608_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"broadens from 'problem sets' to any grade component in general, combining a scope widening with the extreme flip — exceeds a single quantifier change and loses the anchor entity\"}\n{\"id\":\"d1_s0608_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"broadens from 'problem sets' to any grade component in general, combining a scope widening with the extreme flip — exceeds a single quantifier change and loses the anchor entity\"}\n{\"id\":\"d1_s0608_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0608_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0614_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0614_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0614_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0614_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0614_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0614_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0614_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0614_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0614_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0614_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0614_P3_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'get' and 'turn it in' are synonym substitutions for 'handed out'/'due', not surface noise — reads as lexical paraphrase (P1-style), exceeding P3's noise-only allowance\"}\n{\"id\":\"d1_s0614_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0614_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0614_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0614_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0614_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0614_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0614_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0614_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps exam type (take-home → in-class), a sibling-entity substitution rather than a negation/antonym flip — fits N3, not N4\"}\n{\"id\":\"d1_s0614_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'handed back' denotes a different event (returning the graded exam) not a negation of 'handed out' — reads as an aspect/facet change, not a polarity flip\"}\n{\"id\":\"d1_s0614_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"yes/no recast of the same handout fact ('before Lecture 20') — answer content unchanged from the seed fact, matches the taxonomy's explicit 'until vs after' exclusion for N4\"}\n{\"id\":\"d1_s0614_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"yes/no recast of the same due-date fact ('after Lecture 24') — answer content unchanged from the seed fact, matches the taxonomy's explicit 'until vs after' exclusion for N4\"}\n{\"id\":\"d1_s0614_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0614_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0614_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"broadens from the take-home exam to all 10.571J assignments, combining scope widening with the extreme flip — exceeds a single quantifier change\"}\n{\"id\":\"d1_s0614_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"broadens from the take-home exam to all 10.571J assessments, combining scope widening with the extreme flip — exceeds a single quantifier change\"}\n{\"id\":\"d1_s0614_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0614_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0620_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0620_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0620_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0620_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0620_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0620_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0620_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0620_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0620_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0620_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0620_P3_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'do I need a textbook' and 'the optional one' are paraphrase substitutions, not surface noise — reads as P1-style lexical paraphrase rather than P3 noise\"}\n{\"id\":\"d1_s0620_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0620_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0620_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0620_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0620_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0620_N3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}",
+  "ttft_ms": 161556,
+  "ttft_stream_ms": 3361,
+  "time_to_request_ms": 61,
+  "type": "result",
+  "duration_ms": 179999,
+  "uuid": "669a3ba5-5184-4c63-8f29-a75890ee0b7e",
+  "queued_turn_count": 0
+}

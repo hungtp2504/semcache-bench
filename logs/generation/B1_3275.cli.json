@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 225945,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "cab38191-53e2-4795-a4f9-2b8524018b95",
+  "total_cost_usd": 0.493321,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 58150,
+    "cache_read_input_tokens": 97665,
+    "output_tokens": 24118,
+    "output_tokens_details": {
+      "thinking_tokens": 20986
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 58150,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3126,
+        "cache_read_input_tokens": 67387,
+        "cache_creation_input_tokens": 21041,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 21041
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 24118,
+      "cacheReadInputTokens": 97665,
+      "cacheCreationInputTokens": 58150,
+      "webSearchRequests": 0,
+      "costUSD": 0.493321,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Apologies — that tool call was inapplicable to this task; the output format required is JSONL text, not the findings tool. Here is the audit:\n\n{\"id\":\"d5_s0064_N4_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0064_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0064_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0064_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0064_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0064_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0064_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to consequence of incorrect payment, unrelated to the authority-period fact — an aspect change (N1), not a presupposition tied to the seed's fact\"}\n{\"id\":\"d5_s0070_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0070_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0070_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0070_P1_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0070_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0070_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0070_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0070_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0070_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0070_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0070_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0070_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0070_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0070_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0070_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0070_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0070_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0070_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0070_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps process-stage entity (dự toán vs quyết toán) — an entity substitution (N3-style), not a negation/antonym polarity flip\"}\n{\"id\":\"d5_s0070_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts to asking about exemption cases entirely, not a deadline negation — aspect change (N1), not polarity flip\"}\n{\"id\":\"d5_s0070_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0070_N4_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"'trước' vs 'chỉ được gửi sau' is the 'until when vs after when' pattern the taxonomy explicitly marks non-compliant — same underlying deadline fact\"}\n{\"id\":\"d5_s0070_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0070_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an unestablished 'gia hạn' (extension) concept not present in seed — presupposition shift, not a pure quantifier/extreme flip\"}\n{\"id\":\"d5_s0070_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces an unestablished grace-period/tolerance concept not present in seed — presupposition shift, not a pure quantifier/extreme flip\"}\n{\"id\":\"d5_s0070_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts actor/aspect to the finance agency's appraisal task rather than an extreme of the submission-deadline fact — aspect change, not quantifier flip\"}\n{\"id\":\"d5_s0070_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0070_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0076_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0076_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0076_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0076_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0076_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0076_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0076_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0076_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0076_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0076_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0076_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0076_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0076_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0076_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0076_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0076_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0076_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0076_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0076_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0076_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts to asking about excluded subjects of application, not a date polarity flip — aspect change (N1)\"}\n{\"id\":\"d5_s0076_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0076_N4_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"'có hiệu lực từ' vs 'đến ngày nào ... vẫn chưa có hiệu lực' is the 'until when vs after when' pattern explicitly flagged non-compliant — same underlying effective-date fact\"}\n{\"id\":\"d5_s0076_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0076_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines scope broadening (one resolution → all 2026 resolutions) with an extreme flip and changes answer type from date to resolution-identifier — more than a single quantifier/extreme change\"}\n{\"id\":\"d5_s0076_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes an application/expiration duration not established by seed (only a start date is given) — introduces unverified fact rather than a pure quantifier flip\"}",
+  "ttft_ms": 206289,
+  "ttft_stream_ms": 1436,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 226414,
+  "uuid": "6f10cb7c-045e-422b-a57c-3ef60eed2e39",
+  "queued_turn_count": 0
+}

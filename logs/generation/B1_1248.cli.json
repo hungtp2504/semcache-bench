@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 169900,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "44a2db53-abe7-43d6-8bee-1ebea1492421",
+  "total_cost_usd": 0.3892494,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 48444,
+    "cache_read_input_tokens": 94227,
+    "output_tokens": 17662,
+    "output_tokens_details": {
+      "thinking_tokens": 14638
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 48444,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2936,
+        "cache_read_input_tokens": 63949,
+        "cache_creation_input_tokens": 14773,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14773
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17662,
+      "cacheReadInputTokens": 94227,
+      "cacheCreationInputTokens": 48444,
+      "webSearchRequests": 0,
+      "costUSD": 0.3892494,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0083_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0083_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0083_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0083_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds a new per-word-pair scope not present in seed, combined with a quantifier — not a clean extreme-flip of the same measure, reads as aspect change\"}\n{\"id\":\"d2_s0083_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about peak score value, an unrelated fact to annotator headcount — aspect change, not a quantifier flip on the seed's measure\"}\n{\"id\":\"d2_s0083_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds a new per-word-pair scope combined with a quantifier, not a pure extreme flip of the seed's total-count measure\"}\n{\"id\":\"d2_s0083_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks for annotator identity, not a quantity — answer type differs from a quantifier flip; reads as aspect change\"}\n{\"id\":\"d2_s0083_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0089_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0089_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0089_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0089_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0089_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0089_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0089_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0089_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0089_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0089_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0089_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0089_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0089_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0089_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0089_N2_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Kim (2014)'s non-static variant is initialized identically to the static variant (word2vec/Google-News) — only fine-tuning differs, so the correct answer does not differ from seed's\"}\n{\"id\":\"d2_s0089_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0089_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0089_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0089_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0089_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0089_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0089_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0089_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about a recommended minimum corpus size, a different fact than which corpus/model was actually used — aspect change, not an extreme flip\"}\n{\"id\":\"d2_s0089_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks which model variant used fewest pretrained vectors — unrelated to which corpus/model was used, reads as aspect change\"}\n{\"id\":\"d2_s0089_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines an entity swap (prior papers before Kim) with a quantifier — not a flip of Kim's own corpus/model choice\"}\n{\"id\":\"d2_s0089_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about worst-performing variant, an unrelated performance fact — aspect change, not a quantifier flip on corpus/model\"}\n{\"id\":\"d2_s0089_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0089_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0095_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0095_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0095_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0095_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0095_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0095_P2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0095_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0095_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0095_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0095_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0095_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0095_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0095_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0095_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0095_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0095_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0095_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0095_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0095_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0095_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps low-resource for high-resource setting — an entity/condition substitution (cf. the N3 3k→30k swap), not a negation/antonym polarity flip; direction of comparison likely unchanged, just magnitude\"}\n{\"id\":\"d2_s0095_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 148862,
+  "ttft_stream_ms": 2904,
+  "time_to_request_ms": 27,
+  "type": "result",
+  "duration_ms": 170738,
+  "uuid": "50cfb15c-bc1a-412f-829e-2d222a7de615",
+  "queued_turn_count": 0
+}

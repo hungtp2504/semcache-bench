@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 185283,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "c1555084-bbd5-455a-aa2f-8bda75108f60",
+  "total_cost_usd": 0.41219780000000006,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 49074,
+    "cache_read_input_tokens": 92869,
+    "output_tokens": 19732,
+    "output_tokens_details": {
+      "thinking_tokens": 13758
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 49074,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3037,
+        "cache_read_input_tokens": 62591,
+        "cache_creation_input_tokens": 16761,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16761
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 19732,
+      "cacheReadInputTokens": 92869,
+      "cacheCreationInputTokens": 49074,
+      "webSearchRequests": 0,
+      "costUSD": 0.41219780000000006,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "All 60 items audited. Output below (JSONL, one object per line):\n\n```jsonl\n{\"id\":\"d2_s0070_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0070_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0070_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0070_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0070_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0070_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0070_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0070_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"no genuine polarity flip; seed's answer (no words known) still correctly answers 'which words are recognized' as none\"}\n{\"id\":\"d2_s0070_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks an unrelated permanent-non-learning fact, not an antonym/negation flip of 'prior knowledge before learning'\"}\n{\"id\":\"d2_s0070_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'maximum' given knowledge equals the same single fact as seed's answer (only one knowledge item exists), so answer does not necessarily differ\"}\n{\"id\":\"d2_s0070_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0070_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for ranking among 'prior models' rather than flipping an extreme present in the original question\"}\n{\"id\":\"d2_s0070_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts from actual possession to a necessity/requirement framing ('needs to know'), a different facet rather than a quantifier flip\"}\n{\"id\":\"d2_s0070_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0070_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0076_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0076_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0076_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0076_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0076_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0076_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0076_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0076_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0076_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0076_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps possessor ('his own' -> 'other people's') rather than flipping polarity of 'like'; this is an entity/object substitution, not a negation/antonym flip\"}\n{\"id\":\"d2_s0076_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0076_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks whether he defended it publicly — a different action/facet, not an antonym of 'liked'\"}\n{\"id\":\"d2_s0076_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps the subject to 'anyone other than him' while keeping the same polarity ('dislike' matches the seed's implied sentiment); not a genuine sign flip\"}\n{\"id\":\"d2_s0076_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0076_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0076_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about historical priority ('first to formalise'), unrelated to any extreme/quantifier present in the seed question\"}\n{\"id\":\"d2_s0076_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0076_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0076_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0083_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0083_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0083_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0083_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0083_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0083_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0083_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0083_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0083_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0083_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n```\n\nSummary: 9 of 60 flagged non-compliant, mostly in the `d2_s0070` (robot prior knowledge) and `d2_s0076` (von Neumann) N4/N5 batches — several \"polarity flip\" and \"quantifier flip\" variants actually introduced a different facet/entity (e.g. \"defended it\" vs \"liked it\", \"first to formalise\" vs \"liked it\") rather than a true sign/extreme flip, so the seed answer wouldn't necessarily mislead as required by those axes.",
+  "ttft_ms": 146333,
+  "ttft_stream_ms": 2719,
+  "time_to_request_ms": 28,
+  "type": "result",
+  "duration_ms": 189351,
+  "uuid": "fa0b9b8c-8453-48dc-8836-c1a7ddddb563",
+  "queued_turn_count": 0
+}

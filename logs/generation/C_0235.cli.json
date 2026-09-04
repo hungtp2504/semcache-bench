@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 301512,
+  "stop_reason": "end_turn",
+  "session_id": "9f134f2d-418c-4ce1-ab39-b643bae7aebe",
+  "total_cost_usd": 0.26944710000000005,
+  "usage": {
+    "input_tokens": 19,
+    "cache_creation_input_tokens": 47697,
+    "cache_read_input_tokens": 60641,
+    "output_tokens": 33594,
+    "output_tokens_details": {
+      "thinking_tokens": 7898
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47697,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 10,
+        "output_tokens": 1594,
+        "cache_read_input_tokens": 38142,
+        "cache_creation_input_tokens": 32054,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32054
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 19,
+      "outputTokens": 33594,
+      "cacheReadInputTokens": 60641,
+      "cacheCreationInputTokens": 47697,
+      "webSearchRequests": 0,
+      "costUSD": 0.26944710000000005,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N1\", \"v\": 1, \"text\": \"Năm học 2021-2022, những trường hợp nào được phép ngoại lệ khỏi mức trần học phí từ năm 2020-2021?\", \"delta\": \"asks about exceptions, not the decision mechanism\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N1\", \"v\": 2, \"text\": \"Năm học 2021-2022, những lý do nào có thể làm cho khung hoặc mức học phí vượt trần năm 2020-2021?\", \"delta\": \"asks about justifications for exceeding cap\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N2\", \"v\": 1, \"text\": \"Khung hoặc mức học phí năm học 2021-2022 tại các trường công lập được quyết định theo những điều kiện nào?\", \"delta\": \"narrowed to public schools\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N2\", \"v\": 2, \"text\": \"Khung hoặc mức học phí đại học năm học 2021-2022 được quyết định mà không vượt trần năm 2020-2021?\", \"delta\": \"narrowed to higher education\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N3\", \"v\": 1, \"text\": \"Khung hoặc mức học phí năm học 2022-2023 được quyết định mà không vượt trần năm 2021-2022?\", \"delta\": \"different academic year\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N3\", \"v\": 2, \"text\": \"Khung hoặc mức lệ phí dịch vụ năm học 2021-2022 được quyết định mà không vượt trần năm 2020-2021?\", \"delta\": \"service fees instead of tuition\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N4\", \"v\": 1, \"text\": \"Khung hoặc mức học phí năm học 2021-2022 được quyết định CÓ THỂ vượt trần năm 2020-2021?\", \"delta\": \"inverts cap requirement to allow exceeding\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N4\", \"v\": 2, \"text\": \"Năm học 2021-2022, khung hoặc mức học phí được tự do quyết định thay vì bị giới hạn bởi trần năm 2020-2021?\", \"delta\": \"flips constrained to autonomous decision-making\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N4\", \"v\": 3, \"text\": \"Khung hoặc mức học phí năm học 2021-2022 KHÔNG CÓ giới hạn so với năm 2020-2021?\", \"delta\": \"inverts cap existence\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N4\", \"v\": 4, \"text\": \"Năm học 2021-2022, khung hoặc mức học phí được phép cao hơn hay thấp hơn trần năm 2020-2021?\", \"delta\": \"flips directional constraint\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N5\", \"v\": 1, \"text\": \"Khung hoặc mức học phí năm học 2021-2022 bị giới hạn bởi năm 2020-2021 hay năm 2019-2020?\", \"delta\": \"asks about which prior year sets the cap\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N5\", \"v\": 2, \"text\": \"Khung hoặc mức học phí năm học 2021-2022 có thể tăng hay phải giảm so với trần năm 2020-2021?\", \"delta\": \"asks about direction of adjustment allowed\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N5\", \"v\": 3, \"text\": \"Khung hoặc mức học phí năm học 2021-2022 được quyết định một lần hay hàng năm điều chỉnh?\", \"delta\": \"asks about frequency of decision-making\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N5\", \"v\": 4, \"text\": \"Tất cả hay chỉ một số cơ sở giáo dục được quyết định khung hoặc mức học phí năm 2021-2022 không vượt trần 2020-2021?\", \"delta\": \"asks about universality of cap application\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N6\", \"v\": 1, \"text\": \"Khung hoặc mức học phí năm học 2021-2022 được quyết định bằng cách nào để không vượt trần năm 2020-2021 và áp dụng khi nào?\", \"delta\": \"presupposes timing of implementation\"}\n{\"seed_id\": \"d5_s0036\", \"axis\": \"N6\", \"v\": 2, \"text\": \"Bên cạnh không vượt trần năm 2020-2021, khung hoặc mức học phí năm 2021-2022 còn phải tuân theo những tiêu chí nào khác?\", \"delta\": \"presupposes additional constraints beyond the cap\"}\n```",
+  "ttft_ms": 77449,
+  "type": "result",
+  "duration_ms": 304257,
+  "uuid": "23bc8443-e723-4ba2-9ac9-1fb49aacc598",
+  "ttft_stream_ms": 1313,
+  "time_to_request_ms": 22,
+  "queued_turn_count": 0
+}

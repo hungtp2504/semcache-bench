@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 201684,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "12517cfd-fd33-42cf-8f1e-b9013326d169",
+  "total_cost_usd": 0.45097560000000003,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 56446,
+    "cache_read_input_tokens": 97768,
+    "output_tokens": 20563,
+    "output_tokens_details": {
+      "thinking_tokens": 17627
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 56446,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2880,
+        "cache_read_input_tokens": 67490,
+        "cache_creation_input_tokens": 19234,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19234
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 20563,
+      "cacheReadInputTokens": 97768,
+      "cacheCreationInputTokens": 56446,
+      "webSearchRequests": 0,
+      "costUSD": 0.45097560000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0068_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0068_P2_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0068_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0068_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0068_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0068_P3_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0068_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0068_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0068_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0068_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0068_N2_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"changes both the recipient (cha mẹ học sinh→người học) and the benefit type (tuition compensation→any study support), more than one scope qualifier\"}\n{\"id\":\"d5_s0068_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0068_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0068_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0068_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0068_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"overpayment vs non-payment is a different scenario, not a single negation/antonym flip\"}\n{\"id\":\"d5_s0068_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"refusal to receive changes the cause/aspect of the scenario rather than flipping one negation/antonym\"}\n{\"id\":\"d5_s0068_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the seed's answer ('next payment period') is itself the latest permissible period, so it likely already answers 'latest period' fully\"}\n{\"id\":\"d5_s0068_N5_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0068_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks the normal earliest disbursement date, a different aspect (payment schedule) rather than an extreme variant of the remedy question\"}\n{\"id\":\"d5_s0068_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which period has the largest amount paid, unrelated to the late-payment remedy topic\"}\n{\"id\":\"d5_s0068_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0068_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0074_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0074_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0074_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0074_P1_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0074_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0074_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0074_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0074_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0074_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0074_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0074_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0074_P3_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'các cấp' generalizes the specific enumerated service list beyond mere noise, altering content\"}\n{\"id\":\"d5_s0074_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0074_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0074_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0074_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"replaces the specific field (education) with a generic category and implicitly adds a funding qualifier, more than one scope change\"}\n{\"id\":\"d5_s0074_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0074_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0074_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0074_N4_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0074_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0074_N4_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0074_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0074_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which article has the highest ceiling among four articles, a document-structure question rather than an extreme of the price-basis answer\"}\n{\"id\":\"d5_s0074_N5_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0074_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which article appears earliest in the document, not an extreme of the underlying price quantity\"}\n{\"id\":\"d5_s0074_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0074_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0080_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0080_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0080_P1_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"restructures active 'mức chi...là bao nhiêu' into passive 'X được trả bao nhiêu' — a syntactic restructure beyond pure lexical paraphrase\"}\n{\"id\":\"d5_s0080_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0080_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0080_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0080_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0080_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0080_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 181601,
+  "ttft_stream_ms": 2433,
+  "time_to_request_ms": 46,
+  "type": "result",
+  "duration_ms": 202573,
+  "uuid": "78fdeec2-08e9-474a-bce5-9152640224c0",
+  "queued_turn_count": 0
+}

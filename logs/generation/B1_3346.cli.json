@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 125313,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "ea9d93de-1faa-48eb-9e33-4a3dabd03cd8",
+  "total_cost_usd": 0.2981416,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 40178,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 13137,
+    "output_tokens_details": {
+      "thinking_tokens": 10240
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 40178,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 13137,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 40178,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 40178
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 13137,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 40178,
+      "webSearchRequests": 0,
+      "costUSD": 0.2981416,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0286_N5_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"not a quantifier/extreme flip of the same quantity; asks resulting rank name instead of flipping min/max on the % threshold\"}\n{\"id\":\"d5_s0286_N6_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"low lexical overlap with seed; shifts to unrelated disciplinary-suspension mechanism rather than a related presupposition\"}\n{\"id\":\"d5_s0286_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0292_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0292_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0292_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0292_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0292_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0292_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0292_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0292_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0292_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0292_P3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0292_P3_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0292_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0292_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0292_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0292_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0292_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0292_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0292_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0292_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0292_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"swaps subject to home institution and adds a min/max reframe, more than a single negation/antonym flip\"}\n{\"id\":\"d5_s0292_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks entirely different fact (non-recognition conditions) rather than a single polarity flip\"}\n{\"id\":\"d5_s0292_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks GPA-exclusion fact, an unrelated aspect rather than a negation flip of the cap\"}\n{\"id\":\"d5_s0292_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0292_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"changes unit from percentage to absolute credit count rather than flipping min/max on the same quantity\"}\n{\"id\":\"d5_s0292_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"combines entity swap (home institution) with extremum flip, more than one change\"}\n{\"id\":\"d5_s0292_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"attainable maximum share is effectively the same 50% cap, so seed's answer would still answer it\"}\n{\"id\":\"d5_s0292_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0292_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0298_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0298_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0298_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0298_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0298_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0298_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0298_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0298_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0298_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0298_P3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0298_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0298_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0298_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0298_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0298_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0298_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0298_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0298_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0298_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks for a list of prohibition cases, a qualitative aspect change rather than a single negation flip\"}\n{\"id\":\"d5_s0298_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0298_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks which disciplines are banned, an unrelated fact rather than a polarity flip of the cohort requirement\"}\n{\"id\":\"d5_s0298_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"substitutes 'graduated' for 'admitted' cohorts, an entity/attribute substitution rather than a negation flip\"}\n{\"id\":\"d5_s0298_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0298_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0298_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"broadens to all disciplines, a scope change rather than a min/max flip\"}\n{\"id\":\"d5_s0298_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about enrollment quota percentage, an unrelated metric rather than flipping min/max on cohort count\"}\n{\"id\":\"d5_s0298_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0298_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0304_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 107076,
+  "ttft_stream_ms": 1409,
+  "time_to_request_ms": 18,
+  "type": "result",
+  "duration_ms": 125511,
+  "uuid": "3fc6cb1c-5539-47e8-965c-58c82a585dbf",
+  "queued_turn_count": 0
+}

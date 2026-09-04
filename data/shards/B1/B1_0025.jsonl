@@ -1,0 +1,40 @@
+{"id": "d2_s0021_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d2_s0021_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d2_s0021_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.75, "issue": "seed has no quantifier to flip (identity question); variant asks a new fact (max language count), an aspect change not an extreme flip", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d2_s0021_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.75, "issue": "same as v1: new numeric fact, not a min/max flip of an existing quantity in the seed", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d2_s0022_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d2_s0022_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d2_s0022_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "shifts from actual count 'used' to hypothetical 'minimum required', not a min/max flip of an existing quantity", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d2_s0022_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "adds a per-target scope qualifier plus an extreme -- more than one change for N5", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d3_s0021_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d3_s0021_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d3_s0021_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d3_s0021_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d3_s0022_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d3_s0022_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "'last version to drop support' is logically incoherent -- only one version ever drops support for a given Python version, so 'last' doesn't apply", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d3_s0022_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d3_s0022_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d4_s0021_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d4_s0021_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "asks about prevalence/presence in CML patients generally, a different fact than parent-to-child inheritance (aspect change, not a negation flip of the same fact)", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d4_s0021_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d4_s0021_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "asks about multiplicity of chromosomal abnormalities, an unrelated topic to inheritance (aspect change)", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d4_s0022_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d4_s0022_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d4_s0022_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d4_s0022_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d1_s0001_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.75, "issue": "inverts given/asked (asks for the course, not the instructors) with no negation or antonym present", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d1_s0001_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.75, "issue": "asks about a different role entity (other staff vs instructors), an aspect change not a polarity flip", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d1_s0001_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d1_s0001_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d1_s0002_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "shifts from historical term to current-status question, a temporal aspect change rather than a negation/antonym flip", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d1_s0002_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d1_s0002_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d1_s0002_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.5, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d5_s0001_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d5_s0001_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d5_s0001_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "floor ('sàn') vs ceiling ('trần') are distinct regulatory concepts -- aspect change, not a min/max flip of the same quantity", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d5_s0001_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "shifts from year-over-year comparison to an absolute max-value lookup across groups, an aspect change", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d5_s0002_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d5_s0002_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d5_s0002_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "shifts the comparison axis from the institution-type gap to a cross-group ranking, an aspect change", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}
+{"id": "d5_s0002_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "same as v1: cross-group ranking instead of the institution-type gap, an aspect change", "batch_id": "B1_0025", "ts": "2026-08-12T15:04:38Z"}

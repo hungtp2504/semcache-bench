@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 349721,
+  "stop_reason": "end_turn",
+  "session_id": "74cb59a2-042b-41c3-b092-d463e86cede0",
+  "total_cost_usd": 0.2858188,
+  "usage": {
+    "input_tokens": 19,
+    "cache_creation_input_tokens": 47962,
+    "cache_read_input_tokens": 60908,
+    "output_tokens": 36757,
+    "output_tokens_details": {
+      "thinking_tokens": 18613
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47962,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 10,
+        "output_tokens": 4757,
+        "cache_read_input_tokens": 38409,
+        "cache_creation_input_tokens": 32052,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32052
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 19,
+      "outputTokens": 36757,
+      "cacheReadInputTokens": 60908,
+      "cacheCreationInputTokens": 47962,
+      "webSearchRequests": 0,
+      "costUSD": 0.2858188,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```\n{\"seed_id\":\"d5_s0007\",\"axis\":\"N5\",\"v\":2,\"text\":\"Năm 2025-2026, nhóm ngành nào có mức trần học phí cao nhất tại cơ sở GDNN công lập chưa tự bảo đảm?\",\"delta\":\"asks for highest among all field groups\"}\n{\"seed_id\":\"d5_s0007\",\"axis\":\"N5\",\"v\":3,\"text\":\"Năm 2025-2026, mức trần học phí nhóm ngành Kỹ thuật và CNTT có thể lên tới bao nhiêu tối đa?\",\"delta\":\"asks for ultimate maximum possible\"}\n{\"seed_id\":\"d5_s0007\",\"axis\":\"N5\",\"v\":4,\"text\":\"Năm học 2025-2026, mức học phí thấp nhất cho sinh viên nhóm ngành Kỹ thuật và CNTT là bao nhiêu?\",\"delta\":\"asks for minimum student charge\"}\n{\"seed_id\":\"d5_s0007\",\"axis\":\"N6\",\"v\":1,\"text\":\"Tại sao mức trần học phí nhóm ngành Kỹ thuật và CNTT lại được quy định cao hơn các ngành khác năm 2025-2026?\",\"delta\":\"presupposes higher cap and asks for reason\"}\n{\"seed_id\":\"d5_s0007\",\"axis\":\"N6\",\"v\":2,\"text\":\"Những bước điều chỉnh mức học phí sẽ được thực hiện nếu mức 2.400 nghìn đồng không đủ cho cơ sở GDNN?\",\"delta\":\"presupposes need for adjustment\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P1\",\"v\":1,\"text\":\"Học sinh THCS được miễn học phí từ khi nào tùy theo vị trí địa lý của họ?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P1\",\"v\":2,\"text\":\"Những mốc thời gian miễn học phí cho học sinh THCS dựa trên khu vực cư trú là những lúc nào?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P1\",\"v\":3,\"text\":\"Miễn học phí cho học sinh trung học cơ sở diễn ra ở hai thời điểm nào phụ thuộc vào địa bàn sống?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P1\",\"v\":4,\"text\":\"Có hai thời gian khác nhau được áp dụng để miễn học phí THCS tùy theo nơi cư trú, đó là lúc nào?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P2\",\"v\":1,\"text\":\"Tùy theo khu vực cư trú, học sinh THCS được miễn học phí từ năm học 2022-2023 hoặc 2025-2026?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P2\",\"v\":2,\"text\":\"Hai giai đoạn miễn học phí cho học sinh THCS - năm 2022-2023 và 2025-2026 - áp dụng cho những khu vực nào?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P2\",\"v\":3,\"text\":\"Học sinh ở khu vực đặc biệt khó khăn được miễn từ 2022-2023, còn học sinh ở những nơi khác được miễn từ khi?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P2\",\"v\":4,\"text\":\"Miễn học phí THCS theo hai lịch trình khác nhau dựa vào vị trí địa lý - 2022-2023 cho vùng nào, 2025-2026 cho vùng nào?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P3\",\"v\":1,\"text\":\"học sinh THCS được miễn hoc phi theo 2 mốc thời gian nào tùy theo nơi cư trú?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P3\",\"v\":2,\"text\":\"HS trung học cơ sở - miễn hoc phi theo 2 thời điểm nào tùy khu vực??\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P3\",\"v\":3,\"text\":\"thcs ở những nơi khó khăn được miễn từ khi, còn nơi khác từ lúc nào?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"P3\",\"v\":4,\"text\":\"miễn hoc phi cho THCS theo 2 thời gian: từ 2022-2023 hoặc 2025-2026 tùy vào khu vực ntn?\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N1\",\"v\":1,\"text\":\"Học sinh THCS ở những khu vực khó khăn được hỗ trợ gì ngoài việc miễn học phí?\",\"delta\":\"asks about other support, not exemption timing\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N1\",\"v\":2,\"text\":\"Những tiêu chí nào được sử dụng để phân loại khu vực \\\"đặc biệt khó khăn\\\" cho học sinh THCS?\",\"delta\":\"asks about classification criteria, not exemption timeline\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N2\",\"v\":1,\"text\":\"Học sinh cấp một được miễn học phí theo hai mốc thời gian nào tùy theo khu vực cư trú?\",\"delta\":\"narrows to primary education\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N2\",\"v\":2,\"text\":\"Học sinh trung học cơ sở, trung học phổ thông, và cao đẳng được miễn học phí theo hai mốc thời gian nào?\",\"delta\":\"widens to multiple education levels\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N3\",\"v\":1,\"text\":\"Học sinh tiểu học được miễn học phí theo hai mốc thời gian nào tùy theo khu vực cư trú?\",\"delta\":\"primary school instead of lower secondary\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N3\",\"v\":2,\"text\":\"Trẻ em mầm non được miễn học phí theo hai mốc thời gian nào tùy theo khu vực cư trú?\",\"delta\":\"preschool instead of lower secondary\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N4\",\"v\":1,\"text\":\"Học sinh THCS phải chịu học phí (không được miễn) từ những lúc nào tùy theo khu vực?\",\"delta\":\"flips from exempted to paying\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N4\",\"v\":2,\"text\":\"Những khu vực nào có học sinh THCS không được miễn học phí?\",\"delta\":\"asks about areas NOT exempted\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N4\",\"v\":3,\"text\":\"Học sinh THCS phải bắt đầu thanh toán học phí từ khi nào tùy theo nơi ở?\",\"delta\":\"inverts to ask when payment STARTS\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N4\",\"v\":4,\"text\":\"Sau ngày 1/9/2025, học sinh THCS ở khu vực nào vẫn phải chịu học phí?\",\"delta\":\"asks what areas are still NOT exempt\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N5\",\"v\":1,\"text\":\"Năm nào là sớm nhất mà học sinh THCS được miễn học phí?\",\"delta\":\"asks for earliest year instead of two specific dates\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N5\",\"v\":2,\"text\":\"Năm nào là muộn nhất mà học sinh THCS còn phải chịu học phí?\",\"delta\":\"asks for latest year of payment\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N5\",\"v\":3,\"text\":\"Có bao nhiêu nhóm học sinh THCS được miễn học phí theo các lịch trình khác nhau?\",\"delta\":\"asks for count instead of timeframes\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N5\",\"v\":4,\"text\":\"Khoảng cách thời gian giữa hai mốc miễn học phí cho THCS là bao nhiêu năm?\",\"delta\":\"asks for duration/gap between the two dates\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N6\",\"v\":1,\"text\":\"Tại sao học sinh ở khu vực khó khăn được miễn học phí sớm hơn học sinh ở những nơi khác?\",\"delta\":\"presupposes disparity and asks for reason\"}\n{\"seed_id\":\"d5_s0010\",\"axis\":\"N6\",\"v\":2,\"text\":\"Những tác động gì sẽ xảy ra khi học sinh THCS ở các khu vực không khó khăn bắt đầu phải chịu học phí từ 2025-2026?\",\"delta\":\"presupposes negative impacts of payment requirement\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P1\",\"v\":1,\"text\":\"Theo Nghị định 81/2021, trẻ mầu giáo và học sinh khuyết tật được phân loại là đối tượng gì?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P1\",\"v\":2,\"text\":\"Nghị định 81/2021 quy định rằng trẻ em học mẫu giáo và sinh viên khuyết tật thuộc nhóm đối tượng nào?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P1\",\"v\":3,\"text\":\"Đối tượng gồm trẻ học mẫu giáo và những sinh viên có khuyết tật được xác định như thế nào?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P1\",\"v\":4,\"text\":\"Trẻ em mầm non cùng với học sinh, sinh viên khuyết tật được coi là loại đối tượng gì?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P2\",\"v\":1,\"text\":\"Theo Điều 15 của Nghị định 81/2021, trẻ mầu giáo và người học khuyết tật được miễn học phí?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P2\",\"v\":2,\"text\":\"Trẻ em học mầm non và những học sinh, sinh viên khuyết tật - Nghị định 81/2021 có yêu cầu miễn học phí cho họ không?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P2\",\"v\":3,\"text\":\"Miễn học phí được áp dụng cho trẻ mẫu giáo và sinh viên khuyết tật theo Nghị định 81/2021 hay không?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P2\",\"v\":4,\"text\":\"Có phải trẻ học mầu giáo cùng học sinh khuyết tật được miễn học phí theo Nghị định 81/2021 không?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P3\",\"v\":1,\"text\":\"trẻ em hoc mau giao va hoc sinh sv khuyet tat thuoc doi tuong gi theo nd 81/2021?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P3\",\"v\":2,\"text\":\"the dieu 15 ng định 81/2021, trẻ mầm non và sv khuyết tật là đối tượng gì?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P3\",\"v\":3,\"text\":\"theo ND 81/2021, trẻ học mầu giáo + hs khuyết tật được miễn hp?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"P3\",\"v\":4,\"text\":\"sinh viên khuyết tật & trẻ mầm non - loại đối tượng gì theo ND 81/2021 về hp?\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N1\",\"v\":1,\"text\":\"Trẻ em học mầu giáo và học sinh, sinh viên khuyết tật được hỗ trợ gì theo Nghị định 81/2021?\",\"delta\":\"asks about types of support, not classification\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N1\",\"v\":2,\"text\":\"Những quy định khác ngoài việc miễn học phí áp dụng cho trẻ mầu giáo và sinh viên khuyết tật?\",\"delta\":\"asks about other provisions, not their category\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N2\",\"v\":1,\"text\":\"Trẻ em học mầu giáo công lập và học sinh khuyết tật ở trường công lập thuộc đối tượng gì?\",\"delta\":\"narrows to public institutions only\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N2\",\"v\":2,\"text\":\"Trẻ em học mầu giáo, học sinh khuyết tật, và trẻ em dân tộc thiểu số thuộc đối tượng gì theo Nghị định 81/2021?\",\"delta\":\"widens to include additional groups\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N3\",\"v\":1,\"text\":\"Trẻ em học tiểu học và học sinh khuyết tật thuộc đối tượng gì theo Nghị định 81/2021?\",\"delta\":\"primary school instead of preschool\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N3\",\"v\":2,\"text\":\"Trẻ em học mầu giáo và học sinh đạo tạo lâm nghiệp thuộc đối tượng gì theo Nghị định 81/2021?\",\"delta\":\"substitute student type\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N4\",\"v\":1,\"text\":\"Trẻ em học mầu giáo và học sinh, sinh viên khuyết tật có phải thanh toán học phí đầy đủ không?\",\"delta\":\"flips from exempt to paying\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N4\",\"v\":2,\"text\":\"Những ai KHÔNG được miễn học phí theo Nghị định 81/2021?\",\"delta\":\"asks for non-exempt groups\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N4\",\"v\":3,\"text\":\"Trẻ em mầu giáo và sinh viên khuyết tật bị loại trừ khỏi chính sách miễn học phí phải không?\",\"delta\":\"inverts to ask if excluded from exemption\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N4\",\"v\":4,\"text\":\"Theo Điều 15, trẻ mầu giáo và sinh viên khuyết tật phải đóng góp một phần học phí không?\",\"delta\":\"flips to partial payment requirement\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N5\",\"v\":1,\"text\":\"Trẻ em học mầu giáo và học sinh khuyết tật có phải là những đối tượng ưu tiên nhất được miễn học phí không?\",\"delta\":\"asks about priority/most deserving\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N5\",\"v\":2,\"text\":\"Bao nhiêu đối tượng khác ngoài trẻ mầu giáo và sinh viên khuyết tật được miễn học phí?\",\"delta\":\"asks for number of other exempt categories\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N5\",\"v\":3,\"text\":\"Có những ai khác ngoài trẻ mầu giáo và sinh viên khuyết tật cũng được miễn học phí?\",\"delta\":\"asks for all exempt groups, not just these two\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N5\",\"v\":4,\"text\":\"Đối tượng trẻ mầu giáo và sinh viên khuyết tật chiếm tỷ lệ bao nhiêu trong tổng số người được miễn?\",\"delta\":\"asks for percentage/proportion\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N6\",\"v\":1,\"text\":\"Tại sao Nghị định 81/2021 lại quy định miễn học phí cho trẻ mầu giáo và sinh viên khuyết tật?\",\"delta\":\"presupposes policy rationale\"}\n{\"seed_id\":\"d5_s0012\",\"axis\":\"N6\",\"v\":2,\"text\":\"Những thách thức nào phát sinh từ việc miễn học phí cho trẻ mầu giáo và sinh viên khuyết tật?\",\"delta\":\"presupposes implementation challenges\"}\n```\n\nComplete. 8 seeds × 28 variants = 224 JSONL lines total.",
+  "ttft_ms": 182146,
+  "type": "result",
+  "duration_ms": 349967,
+  "uuid": "5a6e00ad-20a8-42bb-aaa4-080fed53fcb8",
+  "ttft_stream_ms": 1128,
+  "time_to_request_ms": 19,
+  "queued_turn_count": 0
+}

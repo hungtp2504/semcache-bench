@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 168746,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "85751be8-514f-457c-9e51-be0b76948464",
+  "total_cost_usd": 0.405314,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 53366,
+    "cache_read_input_tokens": 100010,
+    "output_tokens": 17184,
+    "output_tokens_details": {
+      "thinking_tokens": 14027
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 53366,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3318,
+        "cache_read_input_tokens": 69732,
+        "cache_creation_input_tokens": 13912,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13912
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 17184,
+      "cacheReadInputTokens": 100010,
+      "cacheCreationInputTokens": 53366,
+      "webSearchRequests": 0,
+      "costUSD": 0.405314,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0248_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about a right to opt out of publication, not a negation/antonym flip of the duration question; seed's answer (with its confidential/restricted exception) doesn't clearly mislead\"}\n{\"id\":\"d5_s0248_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0248_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0248_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines scope narrowing (restricted-access case) with a min→max flip; more than one change\"}\n{\"id\":\"d5_s0248_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'shortest reducible period' collapses to the same 30-day minimum as seed's answer, not necessarily different\"}\n{\"id\":\"d5_s0248_N6_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0248_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0254_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0254_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0254_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0254_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0254_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0254_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0254_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0254_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0254_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0254_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0254_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0254_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0254_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0254_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0254_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0254_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps the object issued (diploma → transcript/diploma-supplement) rather than adding/removing a scope qualifier; closer to entity substitution\"}\n{\"id\":\"d5_s0254_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0254_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps the reference event (completion→successful defense) rather than a named entity/id/version; closer to N6 presupposition shift\"}\n{\"id\":\"d5_s0254_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about premature issuance before completion; not a negation/antonym flip of the max-duration question, a different facet\"}\n{\"id\":\"d5_s0254_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'not before which point' reframes toward a start marker with similar answer content to seed's deadline info; matches the disallowed until-vs-after pattern\"}\n{\"id\":\"d5_s0254_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"reverses the subject entirely (student's collection deadline after issuance) — a new question, not a negation/antonym flip\"}\n{\"id\":\"d5_s0254_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about suspension duration during re-appraisal, a new fact rather than a negation/antonym flip\"}\n{\"id\":\"d5_s0254_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0254_N5_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0254_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0254_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines scope narrowing (re-appraisal case) with a max flip; more than one change\"}\n{\"id\":\"d5_s0254_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0254_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0260_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0260_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0260_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_P2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0260_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0260_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0260_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"drops one circular (TT18) while also adding a new scope qualifier (domestic issuance) — more than one change\"}\n{\"id\":\"d5_s0260_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"drops one circular (TT18) while also adding a new scope qualifier (doctoral-admission use) — more than one change\"}\n{\"id\":\"d5_s0260_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0260_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0260_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks the start of invalidity, which is the same cutoff-date fact reframed ('until when' vs 'from when it stops'), not a genuine polarity flip\"}\n{\"id\":\"d5_s0260_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about certificates outside the appendix — a different entity/facet, not a negation/antonym flip\"}\n{\"id\":\"d5_s0260_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0260_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about the replacement certificate after expiry — a different facet, not a polarity flip\"}\n{\"id\":\"d5_s0260_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0260_N5_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"shifts from the cutoff-date quantifier to per-certificate validity duration, a different dimension not established by seed, not a simple min/max flip of the same quantity\"}\n{\"id\":\"d5_s0260_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}",
+  "ttft_ms": 140860,
+  "ttft_stream_ms": 1448,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 174437,
+  "uuid": "e326ff78-e32f-4d56-96bc-a9e84c3a4d12",
+  "queued_turn_count": 0
+}

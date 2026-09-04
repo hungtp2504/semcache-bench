@@ -1,0 +1,89 @@
+You generate test inputs for a semantic-cache benchmark. A semantic cache returns a
+stored answer when a new query is "similar enough" to a stored query. We test exactly
+where that breaks. For each seed question (given with its answer), produce 24 variant
+queries along 9 axes.
+
+GLOBAL RULES
+1. Write every variant in the SAME LANGUAGE as its seed.
+2. Variants must read like real user queries: natural, self-contained, no meta-text.
+3. P-axes (P1,P2,P3): the seed's answer MUST remain a fully correct and complete answer
+   to the variant. Never alter entities, identifiers, numbers, dates, quantifiers, or polarity.
+4. N-axes (N1..N6): the correct answer to the variant MUST differ from the seed's answer.
+   Add "delta": at most 12 words stating what the variant asks for instead.
+5. Within one axis, variants must differ substantially from each other (no trivial
+   re-punctuation). No variant may duplicate the seed or any other variant.
+6. Keep surface edits MINIMAL for N3, N4, N5 — a tiny edit that flips the answer is the
+   entire point of these axes. Do not "helpfully" rephrase the rest of the sentence.
+7. Counts per seed, exactly: P1 x4, P2 x4, P3 x4, N1 x2, N2 x2, N3 x2, N4 x4, N5 x4,
+   N6 x2 = 28. N4/N5 are generated as FOUR CANDIDATES each because their
+   applicability depends on the seed (only judge-validated ones enter the dataset):
+   make the four candidates try DIFFERENT anchor elements (seed predicate, answer
+   polarity, answer date/amount, answer condition); if the seed truly has no
+   flippable element, still produce your best four — the judge filters.
+
+AXES (taxonomy v1.0 — full definitions in config/taxonomy.yaml)
+P1 lexical paraphrase — synonyms/wording only; answer unchanged.
+P2 syntactic restructure — reorder/reframe (question<->request, active<->passive); answer unchanged.
+P3 surface noise — typos, abbreviations, casual register, lowercase; Vietnamese: missing
+   diacritics, texting shorthand (ntn, bn, v). Content words recognizable; answer unchanged.
+N1 aspect change — same topic entity, different facet (deadline -> grading criteria).
+N2 scope change — narrow/widen by exactly one qualifier (assignment -> its appendix;
+   students -> international students).
+N3 entity substitution — swap exactly ONE entity/id/version for a plausible sibling
+   (Assignment 1 -> Assignment 2); everything else as close to the seed as possible.
+N4 polarity flip — flip the sign of an element PRESENT IN THE SEED with ONE
+   negation/antonym (include -> exclude, open -> closed, allowed -> forbidden,
+   do -> avoid). HARD CHECKS, all required:
+   (a) exactly one change — never combine with an entity/aspect/scope change;
+   (b) the seed's answer must NO LONGER correctly answer the variant (if the flipped
+       question is still answered by the same fact — e.g. seed answer says "painless"
+       and you ask "is it painful?" — it is NOT compliant; pick another element);
+   (c) the variant stays bounded — no open complement sets ("which tests FAIL to
+       detect X" is unbounded and non-compliant).
+   BAD: "What does find do?" -> "Which module does NOT do X?"  (aspect drift + unbounded)
+   GOOD: "Which files should I include?" -> "Which files should I exclude?"
+N5 quantifier/extreme change — flip a quantifier or extreme that EXISTS in the seed
+   or is pinned by its answer: min<->max, earliest<->latest, at least<->at most,
+   first<->last, all<->none-but. HARD CHECKS, all required:
+   (a) NEVER introduce a quantity dimension absent from both seed and answer
+       (no invented counts, sizes, frequencies, thresholds);
+   (b) if the seed has no explicit quantifier, anchor to the answer's quantity-bearing
+       element (a date -> earliest/latest; an amount -> minimum/maximum);
+   (c) verify the flipped question's correct answer actually DIFFERS (if only one
+       item exists, "the largest X" resolves to the same X — not compliant).
+   BAD: seed about tool function -> "What is the maximum number of modules?"  (invented dimension)
+   GOOD: "What is the latest submission date?" -> "What is the earliest submission date?"
+N6 presupposition shift — presuppose a related but different fact from the same context
+   (deadline -> penalty for missing it); keep high lexical overlap with the seed.
+
+WORKED EXAMPLE
+seed: {"seed_id":"d1_s0042","question":"Hạn nộp Assignment 1 là khi nào?","answer":"Assignment 1 nộp trước 20/11/2025, 23:59."}
+{"seed_id":"d1_s0042","axis":"P1","v":1,"text":"Deadline của Bài tập 1 là lúc nào?"}
+{"seed_id":"d1_s0042","axis":"P2","v":1,"text":"Tôi phải nộp Assignment 1 trước ngày nào?"}
+{"seed_id":"d1_s0042","axis":"P3","v":1,"text":"assignment 1 deadline khi nao v?"}
+{"seed_id":"d1_s0042","axis":"N1","v":1,"text":"Assignment 1 chấm theo tiêu chí nào?","delta":"asks grading criteria, not the deadline"}
+{"seed_id":"d1_s0042","axis":"N2","v":1,"text":"Hạn nộp phần phụ lục của Assignment 1?","delta":"appendix sub-deadline, not the whole assignment"}
+{"seed_id":"d1_s0042","axis":"N3","v":1,"text":"Hạn nộp Assignment 2 là khi nào?","delta":"a different assignment"}
+{"seed_id":"d1_s0042","axis":"N4","v":1,"text":"Sau thời điểm nào thì Assignment 1 không được nhận nữa?","delta":"asks when submission closes, inverted framing"}
+{"seed_id":"d1_s0042","axis":"N5","v":1,"text":"Hạn nộp sớm nhất của Assignment 1?","delta":"earliest, not latest, submission date"}
+{"seed_id":"d1_s0042","axis":"N6","v":1,"text":"Nộp trễ Assignment 1 bị phạt bao nhiêu?","delta":"asks the late penalty, presupposed fact"}
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary, no code fences:
+{"seed_id":"...","axis":"P1|P2|P3|N1..N6","v":<1..4>,"text":"...","delta":"..."(N-axes only)}
+Exactly 24 lines per seed, in axis order P1,P2,P3,N1..N6.
+
+
+[BATCH INPUT]
+batch_id: C_0026
+seeds (JSONL — seed_id, question, answer, domain):
+
+{"seed_id": "d2_s0499", "domain": "academic_nlp", "doc_id": "d2_doc0081", "fact_ids": ["d2_f00648"], "question": "What task does this paper introduce regarding tweets and alcohol use?", "answer": "It introduces automatic drunk-texting prediction: the task of identifying whether a tweet was written by someone under the influence of alcohol.", "generator_model": "claude-sonnet-5", "batch_id": "A_0051", "ts": "2026-08-12T03:44:47Z"}
+{"seed_id": "d2_s0500", "domain": "academic_nlp", "doc_id": "d2_doc0081", "fact_ids": ["d2_f00649"], "question": "How are tweets labeled as drunk or sober for building the dataset?", "answer": "Tweets are labeled using hashtag-based distant supervision, where authors' own hashtags indicate whether they were drunk when posting.", "generator_model": "claude-sonnet-5", "batch_id": "A_0051", "ts": "2026-08-12T03:44:47Z"}
+{"seed_id": "d2_s0501", "domain": "academic_nlp", "doc_id": "d2_doc0081", "fact_ids": ["d2_f00650"], "question": "What kind of classifier and features are used for drunk-texting prediction?", "answer": "SVM-based classifiers are used, with N-gram features and stylistic features like capitalisation and spelling errors.", "generator_model": "claude-sonnet-5", "batch_id": "A_0051", "ts": "2026-08-12T03:44:47Z"}
+{"seed_id": "d2_s0506", "domain": "academic_nlp", "doc_id": "d2_doc0085", "fact_ids": ["d2_f00659"], "question": "What F-scores did the Civique system achieve for emergency detection and for categorizing emergencies?", "answer": "Civique's classifiers achieved F-scores exceeding 70% for emergency detection and exceeding 90% for categorization.", "generator_model": "claude-sonnet-5", "batch_id": "A_0198", "ts": "2026-08-12T08:46:44Z"}
+{"seed_id": "d2_s0508", "domain": "academic_nlp", "doc_id": "d2_doc0085", "fact_ids": ["d2_f00661", "d2_f00662"], "question": "How many earthquakes did the Indian subcontinent experience in 2015, and how many people did the Nepal earthquake kill?", "answer": "The Indian subcontinent suffered seven earthquakes in 2015, and the Nepal earthquake alone killed more than 9000 people.", "generator_model": "claude-sonnet-5", "batch_id": "A_0198", "ts": "2026-08-12T08:46:44Z"}
+{"seed_id": "d2_s0525", "domain": "academic_nlp", "doc_id": "d2_doc0082", "fact_ids": ["d2_f00682"], "question": "By how much did training on the BookTest dataset reduce prediction error on the original CBT test data?", "answer": "It reduced the prediction error by almost one third.", "generator_model": "claude-sonnet-5", "batch_id": "A_0197", "ts": "2026-08-12T08:46:49Z"}
+{"seed_id": "d2_s0530", "domain": "academic_nlp", "doc_id": "d2_doc0083", "fact_ids": ["d2_f00691", "d2_f00696"], "question": "What two classification tasks does the paper's DNN approach address for humanitarian response organizations?", "answer": "It addresses identifying informative tweets (binary classification: 'informative' vs. 'not informative') and classifying tweets into topical/humanitarian classes.", "generator_model": "claude-sonnet-5", "batch_id": "A_0197", "ts": "2026-08-12T08:46:49Z"}
+{"seed_id": "d2_s0537", "domain": "academic_nlp", "doc_id": "d2_doc0084", "fact_ids": ["d2_f00698"], "question": "How many total sessions and minutes of data were collected across all dyads in this study?", "answer": "A total of 60 sessions were collected, amounting to 5400 minutes of data, from 5 hourly sessions per dyad over 5 weeks.", "generator_model": "claude-sonnet-5", "batch_id": "A_0197", "ts": "2026-08-12T08:46:49Z"}
+{"seed_id": "d2_s0538", "domain": "academic_nlp", "doc_id": "d2_doc0084", "fact_ids": ["d2_f00699"], "question": "What F1 score did the proposed model achieve for recognizing social norm violation?", "answer": "The model achieved an F1 score of 0.705 using long-term temporal and contextual information.", "generator_model": "claude-sonnet-5", "batch_id": "A_0197", "ts": "2026-08-12T08:46:49Z"}
+{"seed_id": "d2_s0544", "domain": "academic_nlp", "doc_id": "d2_doc0088", "fact_ids": ["d2_f00707"], "question": "What percentage of gang members participate in online offending activities like threatening or harassing others?", "answer": "Approximately 45% of gang members participate in online offending activities such as threatening, harassing individuals, posting violent videos, or attacking someone for something said online.", "generator_model": "claude-sonnet-5", "batch_id": "A_0199", "ts": "2026-08-12T08:47:53Z"}

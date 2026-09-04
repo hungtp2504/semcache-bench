@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 194953,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "fbc1a7b5-6ff8-4f72-bb3d-d98d546bef56",
+  "total_cost_usd": 0.3582796,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 36785,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 20508,
+    "output_tokens_details": {
+      "thinking_tokens": 17484
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 36785,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 20508,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 36785,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 36785
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 20508,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 36785,
+      "webSearchRequests": 0,
+      "costUSD": 0.3582796,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d5_s0138_N3_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"changes frequency (annual→per-semester), not an entity/id/version swap; better fits N2 scope change\"}\n{\"id\":\"d5_s0138_N4_v1\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"before→after flip on a deadline is the explicitly excluded pattern per axis note (no genuine distinct answer)\"}\n{\"id\":\"d5_s0138_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks start date vs completion deadline — different facet, not a negation/antonym of the same fact (fits N1)\"}\n{\"id\":\"d5_s0138_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"shifts subject from date to exempt units — aspect change, not a polarity flip of the same fact\"}\n{\"id\":\"d5_s0138_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces an unstated 'postponement' concept — presupposition shift, not a negation flip\"}\n{\"id\":\"d5_s0138_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0138_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks max count of yearly rounds — new quantifier dimension unrelated to the deadline date, not a flip of an existing extreme\"}\n{\"id\":\"d5_s0138_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which round/month is first — different facet (round scheduling), not an extreme flip on the deadline\"}\n{\"id\":\"d5_s0138_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"keeps the same 'latest' direction and adds an unstated extension mechanism — presupposition shift, not a min/max flip\"}\n{\"id\":\"d5_s0138_N6_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0138_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0145_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0145_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0145_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0145_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0145_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0145_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0145_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0145_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0145_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0145_N4_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0145_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"pivots to the issuing body (an organization, not a person) — a different entity type, not a negation/antonym of the same fact\"}\n{\"id\":\"d5_s0145_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"pivots to the initialing officer, a related-but-different role — presupposition shift, not a clean polarity flip\"}\n{\"id\":\"d5_s0145_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to a different document (preceding circular) — entity substitution, not a min/max flip on the same fact\"}\n{\"id\":\"d5_s0145_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks max number of signers — a quantifier not present in the seed question, not a flip of an existing extreme\"}\n{\"id\":\"d5_s0145_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks the highest title mentioned anywhere in the document — new extremal question, not a flip of an existing quantifier\"}\n{\"id\":\"d5_s0145_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks the first person named in the document — new order concept, not a flip of an existing quantifier\"}\n{\"id\":\"d5_s0145_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0145_N6_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"low lexical overlap with the seed question — reuses only the answer's proper noun (Lê Quân) to ask an unrelated portfolio fact, not a presupposition tied to the seed question\"}\n{\"id\":\"d5_s0155_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0155_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0155_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0155_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0155_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0155_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0155_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0155_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0155_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0155_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0155_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0155_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n```",
+  "ttft_ms": 177536,
+  "ttft_stream_ms": 1345,
+  "time_to_request_ms": 17,
+  "type": "result",
+  "duration_ms": 195146,
+  "uuid": "b668faae-26e4-42c3-ac11-b836111facc2",
+  "queued_turn_count": 0
+}

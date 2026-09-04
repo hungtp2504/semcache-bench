@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 200047,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "1a0d8417-d3ae-41f1-8937-aa9b7239f22e",
+  "total_cost_usd": 0.4388932,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 52188,
+    "cache_read_input_tokens": 94816,
+    "output_tokens": 21117,
+    "output_tokens_details": {
+      "thinking_tokens": 17741
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 52188,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3262,
+        "cache_read_input_tokens": 64538,
+        "cache_creation_input_tokens": 17928,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17928
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 21117,
+      "cacheReadInputTokens": 94816,
+      "cacheCreationInputTokens": 52188,
+      "webSearchRequests": 0,
+      "costUSD": 0.4388932,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0140_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a new dimension (usage frequency) absent from seed; not a flip of an existing quantifier, resembles N1 aspect change with a superlative appended\"}\n{\"id\":\"d2_s0140_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0140_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0146_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0146_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0146_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0146_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0146_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0146_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0146_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0146_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0146_P3_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0146_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0146_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0146_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0146_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0146_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0146_N2_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d2_s0146_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0146_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0146_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0146_N4_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d2_s0146_N4_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"likely shares the same true answer as the seed (both plausibly 'no'), so serving the seed answer wouldn't mislead; reads as a different aspect (training data) rather than a clean negation of the tool-reliance claim\"}\n{\"id\":\"d2_s0146_N4_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d2_s0146_N4_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"shifts to a different aspect (manual annotation dependence) not addressed by the seed's stated answer, rather than negating the tool-reliance claim itself; closer to N1 than N4\"}\n{\"id\":\"d2_s0146_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"fabricates a new dimension (max language count) unrelated to seed content; not a flip of an existing quantifier\"}\n{\"id\":\"d2_s0146_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"fabricates a new dimension (best-performing language) unrelated to seed content; not a flip of an existing quantifier\"}\n{\"id\":\"d2_s0146_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"fabricates a new dimension (worst domain) unrelated to seed content; not a flip of an existing quantifier\"}\n{\"id\":\"d2_s0146_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"fabricates a new dimension (first domain applied) unrelated to seed content; not a flip of an existing quantifier\"}\n{\"id\":\"d2_s0146_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0146_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0152_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0152_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0152_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0152_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0152_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0152_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0152_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0152_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0152_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0152_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0152_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0152_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0152_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0152_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0152_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0152_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"passive voice doesn't change the underlying semantic explanation (soap still aids washing); correct answer content is essentially identical to seed's, not necessarily different as N2 requires\"}\n{\"id\":\"d2_s0152_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0152_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swapping 'jeans' for 'shirts' doesn't change the underlying reasoning/answer (soap still aids washing regardless of the object), so answer is not necessarily different as N3 requires\"}\n{\"id\":\"d2_s0152_N4_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"the sentence contains only one PP ('with soap'), which attaches to the verb per the seed — there is no PP attaching to the noun, so this presupposes something not present rather than being a clean polarity flip\"}\n{\"id\":\"d2_s0152_N4_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"asks for hypothetical PPs not present in the given sentence rather than negating the seed's specific claim\"}\n{\"id\":\"d2_s0152_N4_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"combines a negation flip with scope generalization to 'some sentences' beyond the given sentence — more than one change, not a clean single flip\"}\n{\"id\":\"d2_s0152_N4_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"generalizes beyond the given sentence to unspecified conditions rather than a single clean negation of the seed's claim\"}\n{\"id\":\"d2_s0152_N5_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"restates the same underlying fact using farthest/nearest terminology rather than flipping an existing quantifier to yield a different answer; answer content matches seed's\"}\n{\"id\":\"d2_s0152_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"fabricates a 'nearest candidate' dimension not present in seed; different aspect rather than a flip of an existing extreme\"}\n{\"id\":\"d2_s0152_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"fabricates a 'last candidate' dimension not present in seed; different aspect rather than a flip of an existing extreme\"}\n{\"id\":\"d2_s0152_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"fabricates a 'max attachment sites' count not present in seed; different aspect rather than a flip of an existing extreme\"}\n{\"id\":\"d2_s0152_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0152_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0159_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 177620,
+  "ttft_stream_ms": 2364,
+  "time_to_request_ms": 25,
+  "type": "result",
+  "duration_ms": 200817,
+  "uuid": "76579dbe-0abe-4947-9335-95b01e493d2e",
+  "queued_turn_count": 0
+}

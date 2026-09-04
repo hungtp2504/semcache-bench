@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 26327,
+  "stop_reason": "end_turn",
+  "session_id": "10213a0a-6e79-42f3-8122-b388ff38cea0",
+  "total_cost_usd": 0.403014,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32170,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 2871,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32170,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2871,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32170,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32170
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 2871,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32170,
+      "webSearchRequests": 0,
+      "costUSD": 0.403014,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0216_N5_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"no quantifier/extreme flipped from seed; asks a wholly new fact (identity of 25th country), closer to N1/N6\"}\n{\"id\":\"d2_s0216_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0216_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a different facet (assignment method) rather than presupposing a related but different fact; better fits N1\"}\n{\"id\":\"d2_s0222_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d2_s0222_P1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0222_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0222_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0222_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_P2_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0222_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0222_P3_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0222_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_P3_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0222_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0222_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0222_N1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0222_N2_v1\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"scope narrowed to Weibo but the correct answer is still 140 characters, so seed's answer still fully answers it\"}\n{\"id\":\"d2_s0222_N2_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"not a scope qualifier add/remove; switches the measured entity to hashtags (closer to N1/N3)\"}\n{\"id\":\"d2_s0222_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0222_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0222_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0222_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"not a single negation/antonym flip of the seed; rewritten question asking which platform lacks a limit\"}\n{\"id\":\"d2_s0222_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0222_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"not a polarity flip of the seed question; asks about discarded short messages, a different fact\"}\n{\"id\":\"d2_s0222_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0222_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"average is not a quantifier/extreme flip of maximum\"}\n{\"id\":\"d2_s0222_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0222_N5_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0222_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d2_s0222_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0228_P1_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0228_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0228_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0228_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0228_P2_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0228_P2_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0228_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0228_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d2_s0228_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_P3_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d2_s0228_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0228_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_N1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d2_s0228_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0228_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0228_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d2_s0228_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d2_s0228_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0228_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"not a single negation/antonym flip; reframed as asking about rejected alternatives\"}\n{\"id\":\"d2_s0228_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"negates a different predicate (learned from data) rather than flipping the seed's question; closer to N1\"}\n{\"id\":\"d2_s0228_N4_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"not a polarity flip of the seed; asks which component is feed-forward, a new sub-question\"}\n{\"id\":\"d2_s0228_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d2_s0228_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no quantifier/extreme in seed is flipped; introduces a new 'contributes most' comparison\"}\n{\"id\":\"d2_s0228_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a superlative absent from the seed rather than flipping one; new comparison-set question\"}\n{\"id\":\"d2_s0228_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no seed quantifier/extreme to flip; asks worst-performing baseline, a new fact\"}\n{\"id\":\"d2_s0228_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0228_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d2_s0234_P1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}",
+  "ttft_ms": 26317,
+  "type": "result",
+  "duration_ms": 26527,
+  "uuid": "250a3896-7509-4c88-9316-252ea5145553",
+  "ttft_stream_ms": 1659,
+  "time_to_request_ms": 16,
+  "queued_turn_count": 0
+}

@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 96694,
+  "stop_reason": "end_turn",
+  "session_id": "62433055-049b-4875-a9cb-3acf0971079f",
+  "total_cost_usd": 0.632194,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 40298,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 8787,
+    "output_tokens_details": {
+      "thinking_tokens": 5977
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 40298,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8787,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 40298,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 40298
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 8787,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 40298,
+      "webSearchRequests": 0,
+      "costUSD": 0.632194,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0265_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0265_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0265_N2_v2\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d5_s0265_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0265_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0265_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0265_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0265_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0265_N4_v4\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d5_s0265_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0265_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0265_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0265_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"no quantifier in seed is flipped; shifts to a new facet (update deadline) — an aspect change, not an extreme change\"}\n{\"id\":\"d5_s0265_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0265_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0271_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0271_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0271_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0271_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0271_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0271_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0271_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0271_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0271_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0271_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0271_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0271_P3_v4\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d5_s0271_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0271_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0271_N2_v1\",\"axis_ok\":true,\"conf\":0.72,\"issue\":null}\n{\"id\":\"d5_s0271_N2_v2\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d5_s0271_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0271_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0271_N4_v1\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"no negation/antonym flip; it narrows scope to the final term (N2-like), and the seed answer already states the minimum is waived then\"}\n{\"id\":\"d5_s0271_N4_v2\",\"axis_ok\":false,\"conf\":0.68,\"issue\":\"no polarity flip; narrows to the exempted good-standing group (scope change, not wrong-sign)\"}\n{\"id\":\"d5_s0271_N4_v3\",\"axis_ok\":false,\"conf\":0.58,\"issue\":\"asks for exempt cases, which the seed answer already enumerates (final term/special cases, Khá+ students); not a wrong-sign flip\"}\n{\"id\":\"d5_s0271_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0271_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"quantifier 'tối đa' unchanged; the edit is a scope narrowing to the final term, not an extreme flip\"}\n{\"id\":\"d5_s0271_N5_v2\",\"axis_ok\":false,\"conf\":0.62,\"issue\":\"changes the measured quantity entirely (study-time extension), not a quantifier/extreme flip on the seed\"}\n{\"id\":\"d5_s0271_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"two edits: drops 'tối đa' and adds a student-group scope qualifier; not exactly one quantifier flip\"}\n{\"id\":\"d5_s0271_N5_v4\",\"axis_ok\":true,\"conf\":0.58,\"issue\":null}\n{\"id\":\"d5_s0271_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0271_N6_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"seed answer still fully answers it — it explicitly states the exemption is for students with học lực Khá or above\"}\n{\"id\":\"d5_s0277_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0277_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0277_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0277_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0277_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0277_P2_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0277_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0277_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0277_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0277_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0277_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0277_P3_v4\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d5_s0277_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0277_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0277_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrowing to ngành Y khoa leaves the same excluded course types, so the seed answer still fully answers it\"}\n{\"id\":\"d5_s0277_N2_v2\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d5_s0277_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 74674,
+  "type": "result",
+  "duration_ms": 96896,
+  "uuid": "e47803a0-6b70-48ae-8864-9f87c3a8b583",
+  "ttft_stream_ms": 2581,
+  "time_to_request_ms": 18,
+  "queued_turn_count": 0
+}

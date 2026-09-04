@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 205401,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "c69697c0-b4c4-432d-81eb-b5b1870a634e",
+  "total_cost_usd": 0.6166293,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 49611,
+    "cache_read_input_tokens": 90571,
+    "output_tokens": 19452,
+    "output_tokens_details": {
+      "thinking_tokens": 17236
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 49611,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2157,
+        "cache_read_input_tokens": 60326,
+        "cache_creation_input_tokens": 19530,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19530
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 19452,
+      "cacheReadInputTokens": 90571,
+      "cacheCreationInputTokens": 49611,
+      "webSearchRequests": 0,
+      "costUSD": 0.6166293,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d2_s0021_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d2_s0021_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0021_N5_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"seed has no quantifier to flip (identity question); variant asks a new fact (max language count), an aspect change not an extreme flip\"}\n{\"id\":\"d2_s0021_N5_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"same as v1: new numeric fact, not a min/max flip of an existing quantity in the seed\"}\n{\"id\":\"d2_s0022_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d2_s0022_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d2_s0022_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts from actual count 'used' to hypothetical 'minimum required', not a min/max flip of an existing quantity\"}\n{\"id\":\"d2_s0022_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds a per-target scope qualifier plus an extreme -- more than one change for N5\"}\n{\"id\":\"d3_s0021_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0021_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0021_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0021_N5_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0022_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0022_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"'last version to drop support' is logically incoherent -- only one version ever drops support for a given Python version, so 'last' doesn't apply\"}\n{\"id\":\"d3_s0022_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0022_N5_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d4_s0021_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0021_N4_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about prevalence/presence in CML patients generally, a different fact than parent-to-child inheritance (aspect change, not a negation flip of the same fact)\"}\n{\"id\":\"d4_s0021_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0021_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about multiplicity of chromosomal abnormalities, an unrelated topic to inheritance (aspect change)\"}\n{\"id\":\"d4_s0022_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0022_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0022_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0022_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0001_N4_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"inverts given/asked (asks for the course, not the instructors) with no negation or antonym present\"}\n{\"id\":\"d1_s0001_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"asks about a different role entity (other staff vs instructors), an aspect change not a polarity flip\"}\n{\"id\":\"d1_s0001_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0001_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0002_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"shifts from historical term to current-status question, a temporal aspect change rather than a negation/antonym flip\"}\n{\"id\":\"d1_s0002_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0002_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0002_N5_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0001_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0001_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0001_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"floor ('sàn') vs ceiling ('trần') are distinct regulatory concepts -- aspect change, not a min/max flip of the same quantity\"}\n{\"id\":\"d5_s0001_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"shifts from year-over-year comparison to an absolute max-value lookup across groups, an aspect change\"}\n{\"id\":\"d5_s0002_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0002_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0002_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"shifts the comparison axis from the institution-type gap to a cross-group ranking, an aspect change\"}\n{\"id\":\"d5_s0002_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"same as v1: cross-group ranking instead of the institution-type gap, an aspect change\"}",
+  "ttft_ms": 185600,
+  "ttft_stream_ms": 3480,
+  "time_to_request_ms": 197,
+  "type": "result",
+  "duration_ms": 210940,
+  "uuid": "fbba8912-ba6a-4ce0-a4eb-b46cb9f2e6fd"
+}

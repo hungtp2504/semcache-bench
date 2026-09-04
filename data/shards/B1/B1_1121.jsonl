@@ -1,0 +1,60 @@
+{"id": "d1_s0723_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "drops the entire compare-to-Korea/Taiwan structure and merges both entities into 'developing world', more than one scope qualifier change", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "swaps two entities (Korea->Japan AND Taiwan->Singapore), not exactly one", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "answer (Korea/Taiwan) is already stated directly in seed's answer, not a wrong-sign mislead", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "two changes at once (crisis->boom event swap AND affect->benefit polarity), and presupposes a fictional boom not covered by seed", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "correct answer (LA/Africa excluded from growth) is already the same content stated in seed's answer", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "introduces a timing facet absent from seed rather than flipping an existing quantifier; effectively an aspect change", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "introduces a timing facet absent from seed rather than flipping an existing quantifier; effectively an aspect change", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "combines entity-granularity change (regions->single country) with a new superlative, more than one change", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "introduces an unestablished quantity (program start date) plus narrows to Latin America only, more than one change", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0723_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "introduces a day-of-week dimension absent from seed; seed's answer wouldn't plausibly be mistaken for an answer, so no genuine mislead risk", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.8, "issue": "unrelated topic (attendance policy) with no polarity relation to session count/duration", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "fixed weekly schedule likely makes the max-in-any-week answer identical to seed's (2), not necessarily different", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "answer type shifts to a week identifier rather than an extreme value of the same quantity; not a clean quantifier flip", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "broadens scope beyond lectures to any class meeting AND introduces a superlative, more than one change", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "introduces an unrelated facet (start time) rather than an extreme of count/duration", "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0729_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.55, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}
+{"id": "d1_s0736_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1121", "ts": "2026-08-25T04:42:07Z"}

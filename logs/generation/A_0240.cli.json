@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 87886,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "d0767ba0-73c6-4dab-bbbe-d0beb29b1490",
+  "total_cost_usd": 0.3422115,
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 29833,
+    "cache_read_input_tokens": 257845,
+    "output_tokens": 5722,
+    "output_tokens_details": {
+      "thinking_tokens": 3166
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 29833,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2538,
+        "cache_read_input_tokens": 56900,
+        "cache_creation_input_tokens": 3178,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3178
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 10,
+      "outputTokens": 5722,
+      "cacheReadInputTokens": 257845,
+      "cacheCreationInputTokens": 29833,
+      "webSearchRequests": 0,
+      "costUSD": 0.3422115,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"type\":\"fact\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"statement\":\"Văn bản hợp nhất số 07/VBHN-BGDĐT năm 2023 do Bộ Giáo dục và Đào tạo ban hành, hợp nhất Nghị định quy định về cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập; giá dịch vụ trong lĩnh vực giáo dục, đào tạo.\",\"source_span\":\"Văn bản hợp nhất 07/VBHN-BGDĐT năm 2023 do Bộ Giáo dục và Đào tạo ban hành hợp nhất Nghị định quy định về cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và chính sách miễn, giảm học phí, hỗ trợ chi phí học tập; giá dịch vụ trong lĩnh vực giáo dục, đào tạo\"}\n{\"type\":\"fact\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"statement\":\"Điều 15 của văn bản có tên là 'Trách nhiệm thực hiện và điều khoản thi hành'.\",\"source_span\":\"Điều 15. Trách nhiệm thực hiện và điều khoản thi hành\"}\n{\"type\":\"fact\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"statement\":\"Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân các tỉnh, thành phố trực thuộc Trung ương chịu trách nhiệm thi hành Nghị định này và công bố thủ tục hành chính theo quy định thuộc phạm vi chức năng quản lý của mình.\",\"source_span\":\"Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân các tỉnh, thành phố trực thuộc Trung ương chịu trách nhiệm thi hành Nghị định này và thực hiện công bố thủ tục hành chính theo quy định thuộc phạm vi chức năng quản lý của mình\"}\n{\"type\":\"fact\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"statement\":\"Nghị định này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2023.\",\"source_span\":\"Nghị định này có hiệu lực thi hành từ ngày 01 tháng 01 năm 2023.\"}\n{\"type\":\"fact\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"statement\":\"Kể từ ngày Nghị định có hiệu lực, các thủ tục hành chính, dịch vụ công có yêu cầu nộp, xuất trình sổ hộ khẩu, sổ tạm trú giấy được thay thế bằng việc khai thác, sử dụng thông tin về cư trú theo quy định tại Điều 14 của Nghị định.\",\"source_span\":\"các thủ tục hành chính, dịch vụ công có yêu cầu nộp, xuất trình sổ hộ khẩu, sổ tạm trú giấy được thay thế bằng việc khai thác, sử dụng thông tin về cư trú theo quy định tại Điều 14 Nghị định này\"}\n{\"type\":\"fact\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"statement\":\"Từ khóa liên quan của văn bản này là Nghị định 81/2021.\",\"source_span\":\"Từ khóa liên quan:\\nNghị định 81/2021\"}\n{\"type\":\"seed\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"fact_refs\":[0],\"question\":\"Văn bản hợp nhất 07/VBHN-BGDĐT năm 2023 do cơ quan nào ban hành và quy định về nội dung gì?\",\"answer\":\"Do Bộ Giáo dục và Đào tạo ban hành, hợp nhất Nghị định quy định về cơ chế thu, quản lý học phí đối với cơ sở giáo dục thuộc hệ thống giáo dục quốc dân, chính sách miễn, giảm học phí, hỗ trợ chi phí học tập và giá dịch vụ trong lĩnh vực giáo dục, đào tạo.\"}\n{\"type\":\"seed\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"fact_refs\":[1],\"question\":\"Điều 15 của Văn bản hợp nhất 07/VBHN-BGDĐT năm 2023 quy định về nội dung gì?\",\"answer\":\"Điều 15 quy định về 'Trách nhiệm thực hiện và điều khoản thi hành' của Nghị định.\"}\n{\"type\":\"seed\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"fact_refs\":[2],\"question\":\"Theo Điều 15, những ai chịu trách nhiệm thi hành Nghị định về học phí này?\",\"answer\":\"Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, và Chủ tịch Ủy ban nhân dân các tỉnh, thành phố trực thuộc Trung ương chịu trách nhiệm thi hành Nghị định, kèm theo việc công bố thủ tục hành chính thuộc phạm vi quản lý của mình.\"}\n{\"type\":\"seed\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"fact_refs\":[3],\"question\":\"Nghị định về cơ chế thu, quản lý học phí này có hiệu lực thi hành từ ngày nào?\",\"answer\":\"Nghị định có hiệu lực thi hành từ ngày 01 tháng 01 năm 2023.\"}\n{\"type\":\"seed\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"fact_refs\":[4],\"question\":\"Kể từ ngày Nghị định có hiệu lực, các thủ tục hành chính yêu cầu sổ hộ khẩu, sổ tạm trú giấy được xử lý thay thế như thế nào?\",\"answer\":\"Được thay thế bằng việc khai thác, sử dụng thông tin về cư trú theo quy định tại Điều 14 của Nghị định.\"}\n{\"type\":\"seed\",\"doc_id\":\"d5_vbhn07_2023_hoc_phi_p12\",\"fact_refs\":[5],\"question\":\"Văn bản hợp nhất 07/VBHN-BGDĐT năm 2023 có từ khóa liên quan đến Nghị định nào?\",\"answer\":\"Từ khóa liên quan là Nghị định 81/2021.\"}",
+  "ttft_ms": 70030,
+  "ttft_stream_ms": 3485,
+  "time_to_request_ms": 19,
+  "type": "result",
+  "duration_ms": 88926,
+  "uuid": "b43d7309-ca44-467b-bf95-2a10ff9428f1"
+}

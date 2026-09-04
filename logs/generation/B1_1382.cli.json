@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 200251,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "b7019b26-8425-4aa3-a5bc-578ce6d242b4",
+  "total_cost_usd": 0.4144456000000001,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 48756,
+    "cache_read_input_tokens": 92218,
+    "output_tokens": 20097,
+    "output_tokens_details": {
+      "thinking_tokens": 16988
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 48756,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3050,
+        "cache_read_input_tokens": 61940,
+        "cache_creation_input_tokens": 17094,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17094
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 20097,
+      "cacheReadInputTokens": 92218,
+      "cacheCreationInputTokens": 48756,
+      "webSearchRequests": 0,
+      "costUSD": 0.4144456000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0256_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"veto vs grant is not a real antonym flip; introduces an unestablished new concept rather than negating the seed's claim\"}\n{\"id\":\"d3_s0256_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"seed has no existing quantifier; introduces a vote-threshold aspect not present in seed, not a flip of an extreme\"}\n{\"id\":\"d3_s0256_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces a temporal 'most recent grantee' facet absent from seed; not a flip of an existing extreme\"}\n{\"id\":\"d3_s0256_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces a temporal 'earliest grantee' facet absent from seed; not a flip of an existing extreme\"}\n{\"id\":\"d3_s0256_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces unanimous-vs-majority quantifier not present in seed; fabricated extreme, not a genuine flip\"}\n{\"id\":\"d3_s0256_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0256_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0262_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0262_P1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d3_s0262_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d3_s0262_P1_v4\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d3_s0262_P2_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0262_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0262_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0262_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0262_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0262_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0262_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0262_P3_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0262_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0262_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0262_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0262_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0262_N3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0262_N3_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0262_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about excluded files, a different aspect, not a negation/antonym flip of the stated limit\"}\n{\"id\":\"d3_s0262_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0262_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes an exception location rather than flipping polarity of the stated rule\"}\n{\"id\":\"d3_s0262_N4_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0262_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0262_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts subject to black's output and asks an ill-defined 'shortest line' fact rather than cleanly flipping the stated maximum\"}\n{\"id\":\"d3_s0262_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"asks about a specific file's longest line, an unrelated empirical fact, not a flip of the stated maximum\"}\n{\"id\":\"d3_s0262_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0262_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0262_N6_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0268_P1_v1\",\"axis_ok\":true,\"conf\":0.94,\"issue\":null}\n{\"id\":\"d3_s0268_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0268_P1_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d3_s0268_P1_v4\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0268_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0268_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0268_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0268_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0268_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0268_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0268_P3_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0268_P3_v4\",\"axis_ok\":true,\"conf\":0.87,\"issue\":null}\n{\"id\":\"d3_s0268_N1_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0268_N1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d3_s0268_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"the admin app likely follows the same project-wide convention, so the correct answer would not actually differ from seed's\"}\n{\"id\":\"d3_s0268_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0268_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0268_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0268_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"the answer (avoid underscore_case) is already explicit in seed's answer text; same answer content, not a genuine flip\"}\n{\"id\":\"d3_s0268_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts to a different code/entity ('which code uses underscore_case') rather than flipping polarity of the same claim\"}\n{\"id\":\"d3_s0268_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about exempted files, a different aspect, not a polarity flip\"}\n{\"id\":\"d3_s0268_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"the answer (non-camelCase = underscore_case) is already explicit in seed's answer; same answer content\"}\n{\"id\":\"d3_s0268_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a 'least used' frequency quantifier absent from the seed, which has no existing extreme to flip\"}\n{\"id\":\"d3_s0268_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"shifts to name-length limit, an unrelated aspect, not a flip of the naming-style question\"}\n{\"id\":\"d3_s0268_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces an unestablished historical 'first convention used' dimension, not a flip of an existing extreme\"}",
+  "ttft_ms": 178966,
+  "ttft_stream_ms": 3650,
+  "time_to_request_ms": 23,
+  "type": "result",
+  "duration_ms": 201020,
+  "uuid": "c006de93-d98e-4797-832f-4663109c9e9a",
+  "queued_turn_count": 0
+}

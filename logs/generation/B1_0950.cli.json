@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 84655,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "f2f39869-a786-4d31-a127-ff02119a1869",
+  "total_cost_usd": 0.39143340000000004,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 38241,
+    "cache_read_input_tokens": 91318,
+    "output_tokens": 8972,
+    "output_tokens_details": {
+      "thinking_tokens": 5972
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 38241,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2939,
+        "cache_read_input_tokens": 61071,
+        "cache_creation_input_tokens": 7417,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 7417
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 8972,
+      "cacheReadInputTokens": 91318,
+      "cacheCreationInputTokens": 38241,
+      "webSearchRequests": 0,
+      "costUSD": 0.39143340000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Auditing this batch as a direct judgment task (no coding/skill needed) against the taxonomy definitions.\n\n```jsonl\n{\"id\":\"d1_s0089_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0089_P1_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0089_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0089_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0089_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0089_P2_v2\",\"axis_ok\":true,\"conf\":0.94,\"issue\":null}\n{\"id\":\"d1_s0089_P2_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0089_P2_v4\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0089_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0089_P3_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0089_P3_v3\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0089_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0089_N1_v1\",\"axis_ok\":true,\"conf\":0.94,\"issue\":null}\n{\"id\":\"d1_s0089_N1_v2\",\"axis_ok\":true,\"conf\":0.94,\"issue\":null}\n{\"id\":\"d1_s0089_N2_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"swaps role entity (instructor→TA) rather than adding/removing a scope qualifier; this is an aspect change (N1-like), not a scope change\"}\n{\"id\":\"d1_s0089_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0089_N3_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0089_N3_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0089_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0089_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0089_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0089_N4_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"substitutes a different role entity (student contact) rather than negating/flipping a polarity term\"}\n{\"id\":\"d1_s0089_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0089_N5_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0089_N5_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d1_s0089_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"'apart from X' is a set-exclusion query, not a min/max/earliest/latest/at-least/at-most quantifier flip\"}\n{\"id\":\"d1_s0089_N6_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0089_N6_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0096_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0096_P1_v2\",\"axis_ok\":true,\"conf\":0.94,\"issue\":null}\n{\"id\":\"d1_s0096_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0096_P1_v4\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0096_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0096_P2_v2\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0096_P2_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0096_P2_v4\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0096_P3_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0096_P3_v2\",\"axis_ok\":true,\"conf\":0.87,\"issue\":null}\n{\"id\":\"d1_s0096_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0096_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0096_N1_v1\",\"axis_ok\":true,\"conf\":0.94,\"issue\":null}\n{\"id\":\"d1_s0096_N1_v2\",\"axis_ok\":true,\"conf\":0.94,\"issue\":null}\n{\"id\":\"d1_s0096_N2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0096_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0096_N3_v1\",\"axis_ok\":true,\"conf\":0.93,\"issue\":null}\n{\"id\":\"d1_s0096_N3_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0096_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0096_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0096_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"substitutes a different role entity (grader) rather than negating/flipping a polarity term\"}\n{\"id\":\"d1_s0096_N4_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0096_N5_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0096_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks for the immediate predecessor, a relative sequence position rather than an earliest/latest/min-max extreme\"}\n{\"id\":\"d1_s0096_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"'apart from X' is a set-exclusion query, not a min/max/earliest/latest/at-least/at-most quantifier flip\"}\n{\"id\":\"d1_s0096_N5_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0096_N6_v1\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0096_N6_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d1_s0102_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0102_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0102_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0102_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n```\n\nFlagged non-compliant items: role-swap variants mislabeled as N2/N4 when they're really aspect changes rather than scope-qualifier or polarity flips (`d1_s0089_N2_v1`, `d1_s0089_N4_v4`, `d1_s0096_N4_v3`), and \"apart from X\" / \"just before current\" variants mislabeled as N5 when they're set-exclusion or relative-sequence queries rather than min/max/earliest/latest flips (`d1_s0089_N5_v4`, `d1_s0096_N5_v2`, `d1_s0096_N5_v3`).",
+  "ttft_ms": 64187,
+  "ttft_stream_ms": 2355,
+  "time_to_request_ms": 28,
+  "type": "result",
+  "duration_ms": 85405,
+  "uuid": "0b20cd2a-ffa8-45de-8fc7-807f00a0d00e"
+}

@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 55889,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "ed1443b0-0d34-4301-ade3-8ba053fc169c",
+  "total_cost_usd": 0.2971095,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 27600,
+    "cache_read_input_tokens": 30245,
+    "output_tokens": 8162,
+    "output_tokens_details": {
+      "thinking_tokens": 3299
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 27600,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8162,
+        "cache_read_input_tokens": 30245,
+        "cache_creation_input_tokens": 27600,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 27600
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 8162,
+      "cacheReadInputTokens": 30245,
+      "cacheCreationInputTokens": 27600,
+      "webSearchRequests": 0,
+      "costUSD": 0.2971095,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"statement\":\"The course is titled 'Mechanics of Material Systems: An Energy Approach' (course number 1.033).\",\"source_span\":\"1.033 | Fall 2003 | Undergraduate\\nMechanics of Material Systems: An Energy Approach\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"statement\":\"The instructor for the course is Prof. Franz-Josef Ulm.\",\"source_span\":\"Prof. Franz-Josef Ulm\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"statement\":\"The course is offered by the Civil and Environmental Engineering department.\",\"source_span\":\"Departments\\nCivil and Environmental Engineering\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"statement\":\"The course was taught in Fall 2003.\",\"source_span\":\"As Taught In\\nFall\\n            \\n              2003\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"statement\":\"The course level is Undergraduate.\",\"source_span\":\"Level\\nUndergraduate\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"statement\":\"A Quiz 1 with Solutions is available as a PDF.\",\"source_span\":\"Quiz 1 with Solutions (\\nPDF\\n)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"statement\":\"A Quiz 2 with Solutions is available as a PDF.\",\"source_span\":\"Quiz 2 with Solutions (\\nPDF\\n)\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"fact_refs\":[1],\"question\":\"Who is the instructor for MIT course 1.033, Mechanics of Material Systems: An Energy Approach?\",\"answer\":\"The instructor is Prof. Franz-Josef Ulm.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"fact_refs\":[0,3]\",\"question\":\"What is the full title of MIT course 1.033 and when was it taught?\",\"answer\":\"1.033 is titled 'Mechanics of Material Systems: An Energy Approach' and was taught in Fall 2003.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"fact_refs\":[2],\"question\":\"Which department offers course 1.033?\",\"answer\":\"The Civil and Environmental Engineering department offers it.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"fact_refs\":[5,6],\"question\":\"What exam materials with solutions are provided for MIT course 1.033?\",\"answer\":\"Quiz 1 with Solutions and Quiz 2 with Solutions are both provided as PDFs.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"fact_refs\":[4],\"question\":\"At what academic level is MIT course 1.033 offered?\",\"answer\":\"It is offered at the undergraduate level.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_exams\",\"fact_refs\":[3],\"question\":\"In what semester and year was 1.033 taught according to the exams page?\",\"answer\":\"It was taught in Fall 2003.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"statement\":\"Lectures for 1.033 meet 3 sessions per week, 1 hour per session.\",\"source_span\":\"Lectures: 3 sessions / week, 1 hour / session\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"statement\":\"Recitations for 1.033 meet 1 session per week, 1.5 hours per session.\",\"source_span\":\"Recitations: 1 session / week, 1.5 hours / session\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"statement\":\"The prerequisite for 1.033 is 1.030, Civil Engineering Materials.\",\"source_span\":\"Prerequisites\\n1.030, Civil Engineering Materials\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"statement\":\"The subject is composed of four parts: Deformation and Strain; Momentum Balance, Stress and Stress States; Elasticity and Elasticity Bounds; and Plasticity and Yield Design.\",\"source_span\":\"The subject is composed of four parts:\\nDeformation and Strain\\nMomentum Balance, Stress and Stress States\\nElasticity and Elasticity Bounds\\nPlasticity and Yield Design\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"statement\":\"1.033 is a pre-requisite for the Spring H-Subject 1.570, Durability Mechanics (Mechanics and Durability of Solids II).\",\"source_span\":\"It is a pre-requisite for the Spring H-Subject 1.570 Durability Mechanics (Mechanics and Durability of Solids II)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"statement\":\"Graduate students (M.Eng./Sc.M/Ph.D.) are expected to complete additional assignments in 1.033.\",\"source_span\":\"Graduate Students (M.Eng./Sc.M/Ph.D.) are expected to complete additional assignments.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"statement\":\"The assignments/exams for 1.033 consist of 4 Homework Assignments, 2 Quizzes, and 1 Final.\",\"source_span\":\"4 Homework Assignments\\n2 Quizzes\\n1 Final\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"statement\":\"The reading for 1.033 is Ulm, F.-J., and O. Coussy, 'Solid Mechanics,' in Mechanics and Durability of Solids, Vol. I, Prentice Hall, 2003.\",\"source_span\":\"Ulm, F.-J., and O. Coussy. “Solid Mechanics.” In\\nMechanics and Durability of Solids.\\nVol. I. Upper Saddle River, NJ: Prentice Hall, 2003.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"fact_refs\":[2],\"question\":\"What is the prerequisite course for MIT 1.033?\",\"answer\":\"The prerequisite is 1.030, Civil Engineering Materials.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"fact_refs\":[0,1],\"question\":\"How often do lectures and recitations meet in MIT course 1.033, and how long is each session?\",\"answer\":\"Lectures meet 3 sessions per week for 1 hour each, and recitations meet 1 session per week for 1.5 hours.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"fact_refs\":[3],\"question\":\"What are the four parts that make up the 1.033 subject?\",\"answer\":\"The four parts are Deformation and Strain; Momentum Balance, Stress and Stress States; Elasticity and Elasticity Bounds; and Plasticity and Yield Design.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"fact_refs\":[6],\"question\":\"What assignments and exams make up the grading components of 1.033?\",\"answer\":\"1.033 includes 4 Homework Assignments, 2 Quizzes, and 1 Final.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"fact_refs\":[4],\"question\":\"Which subsequent course is 1.033 a prerequisite for?\",\"answer\":\"1.033 is a prerequisite for the Spring H-Subject 1.570, Durability Mechanics (Mechanics and Durability of Solids II).\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"fact_refs\":[7],\"question\":\"What textbook reading is assigned for MIT course 1.033?\",\"answer\":\"The reading is Ulm, F.-J., and O. Coussy, 'Solid Mechanics,' in Mechanics and Durability of Solids, Vol. I, Prentice Hall, 2003.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-033-mechanics-of-material-systems-an-e_syllabus\",\"fact_refs\":[5],\"question\":\"Are graduate students required to do extra work in 1.033?\",\"answer\":\"Yes, graduate students (M.Eng./Sc.M/Ph.D.) are expected to complete additional assignments.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"statement\":\"The instructor for 1.040 Project Management is Dr. Nathaniel Osgood.\",\"source_span\":\"Dr. Nathaniel Osgood\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"statement\":\"1.040 is offered jointly by Civil and Environmental Engineering and the Engineering Systems Division.\",\"source_span\":\"Civil and Environmental Engineering\\nEngineering Systems Division\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"statement\":\"1.040 was taught in Spring 2004 at the undergraduate level.\",\"source_span\":\"As Taught In\\nSpring\\n            \\n              2004\\nLevel\\nUndergraduate\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"statement\":\"The 1.040 calendar lists 18 lectures.\",\"source_span\":\"17\\nRisk Management II, Quality Monitoring and Control, and Project Learning\\n18\\nReviews (cont.), Audits, Changes and Disputes\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"statement\":\"Lecture 1 of 1.040 covers 'Introduction'.\",\"source_span\":\"1\\nIntroduction\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"statement\":\"Lecture 9 of 1.040 covers 'Planning and Deterministic Scheduling'.\",\"source_span\":\"9\\nPlanning and Deterministic Scheduling\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"statement\":\"Lecture 14 of 1.040 covers 'EVA (C/SCSC) and Basics of Project Control'.\",\"source_span\":\"14\\nEVA (C/SCSC) and Basics of Project Control\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"statement\":\"Lecture 18, the final lecture of 1.040, covers 'Reviews (cont.), Audits, Changes and Disputes'.\",\"source_span\":\"18\\nReviews (cont.), Audits, Changes and Disputes\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"fact_refs\":[0],\"question\":\"Who taught MIT course 1.040, Project Management, in Spring 2004?\",\"answer\":\"Dr. Nathaniel Osgood taught the course.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"fact_refs\":[1],\"question\":\"Which two departments jointly offer MIT course 1.040?\",\"answer\":\"1.040 is offered jointly by Civil and Environmental Engineering and the Engineering Systems Division.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"fact_refs\":[3],\"question\":\"How many lectures are listed in the 1.040 Project Management course calendar?\",\"answer\":\"The calendar lists 18 lectures.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"fact_refs\":[5],\"question\":\"What topic is covered in Lecture 9 of MIT's 1.040 Project Management course?\",\"answer\":\"Lecture 9 covers 'Planning and Deterministic Scheduling'.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"fact_refs\":[6],\"question\":\"What does Lecture 14 of 1.040 focus on?\",\"answer\":\"Lecture 14 covers 'EVA (C/SCSC) and Basics of Project Control'.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"fact_refs\":[7],\"question\":\"What is the topic of the final (18th) lecture in the 1.040 course calendar?\",\"answer\":\"The final lecture covers 'Reviews (cont.), Audits, Changes and Disputes'.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_1-040-project-management-spring-2004_calendar\",\"fact_refs\":[2],\"question\":\"In what term and at what level was 1.040 Project Management taught?\",\"answer\":\"It was taught in Spring 2004 at the undergraduate level.\"}",
+  "ttft_ms": 26774,
+  "ttft_stream_ms": 1918,
+  "time_to_request_ms": 29,
+  "type": "result",
+  "duration_ms": 56130,
+  "uuid": "18209704-feb0-4238-9ce9-68070bb1f23e"
+}

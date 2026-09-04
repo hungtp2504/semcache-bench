@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 127876,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "5e3dcf31-2e86-475d-8e44-26fa287f7e44",
+  "total_cost_usd": 0.2807116,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 33678,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 13994,
+    "output_tokens_details": {
+      "thinking_tokens": 11073
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 33678,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 13994,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 33678,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 33678
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 13994,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 33678,
+      "webSearchRequests": 0,
+      "costUSD": 0.2807116,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d4_s0229_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0229_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0229_N4_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"not a negation/antonym flip; introduces a new premise (treatment-by-type failing for some subtype) rather than flipping the polarity of the staging question\"}\n{\"id\":\"d4_s0229_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"chronic->acute is a category/entity substitution, not a negation/antonym flip; 'acute myeloproliferative neoplasm' isn't the standard sibling entity implied\"}\n{\"id\":\"d4_s0229_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about real-world practice given the presupposed absence, not a clean polarity flip of the original question\"}\n{\"id\":\"d4_s0229_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0229_N5_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"pivots to counting disease subtypes, an unrelated facet rather than a min/max flip on the staging question (this is aspect change, not N5)\"}\n{\"id\":\"d4_s0229_N5_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"pivots to most-common-subtype, an unrelated facet rather than a quantifier/extreme flip of the staging question\"}\n{\"id\":\"d4_s0229_N5_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"pivots to rarest-subtype, an unrelated facet rather than a quantifier/extreme flip of the staging question\"}\n{\"id\":\"d4_s0229_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the identical fact stated in the seed's answer (no standard system) rather than a different fact; effectively a follow-up 'why' question, not a presupposition shift\"}\n{\"id\":\"d4_s0229_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the identical fact from the seed's answer (treatment by type) rather than a different fact; asks for mechanism, not a shifted presupposition\"}\n{\"id\":\"d4_s0235_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0235_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0235_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_P2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0235_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0235_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0235_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0235_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0235_N2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0235_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0235_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0235_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0235_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0235_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0235_N5_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0235_N5_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0235_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0235_N5_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0235_N6_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the identical fact from the seed's answer (itching after warm water) rather than a different one; asks mechanism, not a presupposition shift\"}\n{\"id\":\"d4_s0235_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes the identical fact from the seed's answer (headache symptom) rather than a different one; asks about relief, not a presupposition shift\"}\n{\"id\":\"d4_s0241_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0241_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0241_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0241_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0241_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0241_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0241_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0241_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0241_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0241_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0241_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0241_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0241_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0241_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0241_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0241_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d4_s0241_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0241_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0241_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0241_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0241_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 110981,
+  "ttft_stream_ms": 1288,
+  "time_to_request_ms": 17,
+  "type": "result",
+  "duration_ms": 128078,
+  "uuid": "bc114edb-0218-466a-8e5d-6d14b45cc057",
+  "queued_turn_count": 0
+}

@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_0262
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d2_s0376_N5_v4", "axis": "N5", "seed_question": "What F-score did the proposed language identification system achieve in the tweetLID shared task, and how did it compare to the top submission?", "answer": "It achieved a macro-averaged F-score of 76.63%, which is 1.4% higher than the top submission's score of 75.2%.", "variation": "On which language did the proposed system achieve its highest F-score at tweetLID?", "delta": "best per-language score, not the macro average"}
+{"id": "d2_s0376_N6_v1", "axis": "N6", "seed_question": "What F-score did the proposed language identification system achieve in the tweetLID shared task, and how did it compare to the top submission?", "answer": "It achieved a macro-averaged F-score of 76.63%, which is 1.4% higher than the top submission's score of 75.2%.", "variation": "Why did the proposed system outperform the top tweetLID submission by 1.4%?", "delta": "asks the reason for the margin"}
+{"id": "d2_s0376_N6_v2", "axis": "N6", "seed_question": "What F-score did the proposed language identification system achieve in the tweetLID shared task, and how did it compare to the top submission?", "answer": "It achieved a macro-averaged F-score of 76.63%, which is 1.4% higher than the top submission's score of 75.2%.", "variation": "How is the macro-averaged F-score computed in the tweetLID shared task?", "delta": "asks the metric definition, presupposed"}
+{"id": "d2_s0382_P1_v1", "axis": "P1", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "What is the size of the SNLI corpus in examples?", "delta": null}
+{"id": "d2_s0382_P1_v2", "axis": "P1", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How many instances are in the SNLI corpus?", "delta": null}
+{"id": "d2_s0382_P1_v3", "axis": "P1", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "What number of examples does SNLI include?", "delta": null}
+{"id": "d2_s0382_P1_v4", "axis": "P1", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How large is the SNLI corpus in terms of examples?", "delta": null}
+{"id": "d2_s0382_P2_v1", "axis": "P2", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "Tell me the number of examples in the SNLI corpus.", "delta": null}
+{"id": "d2_s0382_P2_v2", "axis": "P2", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "The SNLI corpus is made up of how many examples?", "delta": null}
+{"id": "d2_s0382_P2_v3", "axis": "P2", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "I'd like the example count for the SNLI corpus.", "delta": null}
+{"id": "d2_s0382_P2_v4", "axis": "P2", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "Examples in the SNLI corpus number how many?", "delta": null}
+{"id": "d2_s0382_P3_v1", "axis": "P3", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "how many examples in the snli corpus?", "delta": null}
+{"id": "d2_s0382_P3_v2", "axis": "P3", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "snli corpus size — how many examples??", "delta": null}
+{"id": "d2_s0382_P3_v3", "axis": "P3", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "how many exampls does the snli corpus contian", "delta": null}
+{"id": "d2_s0382_P3_v4", "axis": "P3", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "size of snli in # of examples pls", "delta": null}
+{"id": "d2_s0382_N1_v1", "axis": "N1", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How was the SNLI corpus collected?", "delta": "asks collection method, not the size"}
+{"id": "d2_s0382_N1_v2", "axis": "N1", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "What labels are used for the examples in the SNLI corpus?", "delta": "asks the label set, not the count"}
+{"id": "d2_s0382_N2_v1", "axis": "N2", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How many examples are in the SNLI test set?", "delta": "narrows to the test split only"}
+{"id": "d2_s0382_N2_v2", "axis": "N2", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How many examples do all the NLI corpora in the paper contain together?", "delta": "widens to all NLI corpora combined"}
+{"id": "d2_s0382_N3_v1", "axis": "N3", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How many examples does the MultiNLI corpus contain?", "delta": "MultiNLI instead of SNLI"}
+{"id": "d2_s0382_N3_v2", "axis": "N3", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How many examples does the SICK corpus contain?", "delta": "SICK corpus instead of SNLI"}
+{"id": "d2_s0382_N4_v1", "axis": "N4", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How many examples were excluded from the SNLI corpus?", "delta": "asks discarded examples, not included ones"}
+{"id": "d2_s0382_N4_v2", "axis": "N4", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How many SNLI examples lack a gold label?", "delta": "asks unlabeled examples, inverted"}
+{"id": "d2_s0382_N4_v3", "axis": "N4", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How many SNLI examples are not entailment pairs?", "delta": "asks non-entailment count, inverted"}
+{"id": "d2_s0382_N4_v4", "axis": "N4", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How many sentence pairs in SNLI are unusable?", "delta": "asks unusable pairs, inverted from the total"}
+{"id": "d2_s0382_N5_v1", "axis": "N5", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "What is the maximum number of examples any single SNLI split contains?", "delta": "largest split, not the corpus total"}
+{"id": "d2_s0382_N5_v2", "axis": "N5", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "What is the smallest SNLI split's example count?", "delta": "smallest split, not the corpus total"}
+{"id": "d2_s0382_N5_v3", "axis": "N5", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "At most how many examples does the SNLI corpus contain?", "delta": "upper bound, flipping over half a million"}
+{"id": "d2_s0382_N5_v4", "axis": "N5", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "Which SNLI label has the fewest examples?", "delta": "least frequent label, not the corpus total"}
+{"id": "d2_s0382_N6_v1", "axis": "N6", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "How were the half a million SNLI examples annotated?", "delta": "asks the annotation process, presupposed"}
+{"id": "d2_s0382_N6_v2", "axis": "N6", "seed_question": "How many examples does the SNLI corpus contain?", "answer": "Over half a million examples.", "variation": "Why does SNLI need over half a million examples?", "delta": "asks motivation for the corpus scale"}
+{"id": "d2_s0388_P1_v1", "axis": "P1", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "What is the number of questions and evidences in the WebQA dataset?", "delta": null}
+{"id": "d2_s0388_P1_v2", "axis": "P1", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How large is WebQA in terms of questions and evidence passages?", "delta": null}
+{"id": "d2_s0388_P1_v3", "axis": "P1", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How many question items and evidence items make up the WebQA dataset?", "delta": null}
+{"id": "d2_s0388_P1_v4", "axis": "P1", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "What counts of questions and evidences does WebQA include?", "delta": null}
+{"id": "d2_s0388_P2_v1", "axis": "P2", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "Tell me how many questions and how many evidences WebQA holds.", "delta": null}
+{"id": "d2_s0388_P2_v2", "axis": "P2", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "The WebQA dataset is composed of how many questions and evidences?", "delta": null}
+{"id": "d2_s0388_P2_v3", "axis": "P2", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "I'd like the question and evidence totals for the WebQA dataset.", "delta": null}
+{"id": "d2_s0388_P2_v4", "axis": "P2", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "Questions and evidences in WebQA number how many, respectively?", "delta": null}
+{"id": "d2_s0388_P3_v1", "axis": "P3", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "how many questions n evidences in webqa?", "delta": null}
+{"id": "d2_s0388_P3_v2", "axis": "P3", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "webqa dataset size — questions + evidences??", "delta": null}
+{"id": "d2_s0388_P3_v3", "axis": "P3", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "how many questins and evidences does the webqa datset contain", "delta": null}
+{"id": "d2_s0388_P3_v4", "axis": "P3", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "webqa: # of questions and # of evidences pls", "delta": null}
+{"id": "d2_s0388_N1_v1", "axis": "N1", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "What language are the questions in the WebQA dataset written in?", "delta": "asks language, not the counts"}
+{"id": "d2_s0388_N1_v2", "axis": "N1", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How were the evidences in the WebQA dataset collected?", "delta": "asks collection method, not the counts"}
+{"id": "d2_s0388_N2_v1", "axis": "N2", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How many questions and evidences are in WebQA's test split?", "delta": "narrows to the test split only"}
+{"id": "d2_s0388_N2_v2", "axis": "N2", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How many questions and evidences do all the QA datasets in the paper contain?", "delta": "widens to every dataset in the paper"}
+{"id": "d2_s0388_N3_v1", "axis": "N3", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How many questions and evidences does the WebQuestions dataset contain?", "delta": "WebQuestions instead of WebQA"}
+{"id": "d2_s0388_N3_v2", "axis": "N3", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How many questions and evidences does the SQuAD dataset contain?", "delta": "SQuAD instead of WebQA"}
+{"id": "d2_s0388_N4_v1", "axis": "N4", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How many WebQA questions have no supporting evidence?", "delta": "asks questions lacking evidence, inverted"}
+{"id": "d2_s0388_N4_v2", "axis": "N4", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How many evidences were excluded from the WebQA dataset?", "delta": "asks discarded evidences, not included ones"}
+{"id": "d2_s0388_N4_v3", "axis": "N4", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How many WebQA questions are unanswerable from their evidences?", "delta": "asks unanswerable questions, inverted"}
+{"id": "d2_s0388_N4_v4", "axis": "N4", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How many evidences in WebQA are labelled negative rather than positive?", "delta": "asks negative evidences, flipping polarity"}
+{"id": "d2_s0388_N5_v1", "axis": "N5", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "At most how many questions does the WebQA dataset contain?", "delta": "upper bound, flipping the more-than figure"}
+{"id": "d2_s0388_N5_v2", "axis": "N5", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "What is the largest number of evidences attached to a single WebQA question?", "delta": "per-question maximum, not the total"}
+{"id": "d2_s0388_N5_v3", "axis": "N5", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "What is the fewest evidences any WebQA question has?", "delta": "per-question minimum, not the total"}
+{"id": "d2_s0388_N5_v4", "axis": "N5", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "Which WebQA split has the smallest number of questions?", "delta": "smallest split, not the dataset total"}
+{"id": "d2_s0388_N6_v1", "axis": "N6", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How are the 556,000 evidences linked to WebQA's questions?", "delta": "asks question-evidence linking, presupposed"}
+{"id": "d2_s0388_N6_v2", "axis": "N6", "seed_question": "How many questions and evidences does the WebQA dataset contain?", "answer": "WebQA contains more than 42,000 questions and 556,000 evidences.", "variation": "How were the answers to the WebQA questions annotated?", "delta": "asks answer annotation, presupposed"}
+{"id": "d2_s0207_P1_v1", "axis": "P1", "seed_question": "By how much did TableILP outperform the best previous MLN-based structured reasoning system on the science QA task?", "answer": "TableILP outperformed the best previous MLN-based system by +14% absolute.", "variation": "What was the margin by which TableILP exceeded the best prior MLN-based structured reasoning system on the science QA task?", "delta": null}

@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 215528,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "c842ea18-ce2f-4299-b0a0-a26e33eddc8e",
+  "total_cost_usd": 0.4562444,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 56419,
+    "cache_read_input_tokens": 99152,
+    "output_tokens": 21073,
+    "output_tokens_details": {
+      "thinking_tokens": 17734
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 56419,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3297,
+        "cache_read_input_tokens": 68874,
+        "cache_creation_input_tokens": 17823,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 17823
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 21073,
+      "cacheReadInputTokens": 99152,
+      "cacheCreationInputTokens": 56419,
+      "webSearchRequests": 0,
+      "costUSD": 0.4562444,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0273_N5_v4\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Not a min/max flip on the same fact; switches from 'max % for distance mode' to 'which mode has the highest weight', changing the subject entity to an open comparison across modes rather than flipping the extreme of the same variable.\"}\n{\"id\":\"d5_s0273_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0273_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0279_P1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0279_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0279_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0279_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0279_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0279_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0279_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0279_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0279_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0279_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0279_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0279_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0279_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0279_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0279_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0279_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0279_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0279_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0279_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0279_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0279_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Presupposes exceptions exist and asks 'which cases', shifting question type from a numeric threshold to enumerating exemptions — more than a single negation flip, overlaps with presupposition shift (N6).\"}\n{\"id\":\"d5_s0279_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Swaps the metric from credit debt to accumulated credits in addition to negating the outcome — two changes rather than a single polarity flip.\"}\n{\"id\":\"d5_s0279_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Shifts to an entirely different rule (expulsion threshold) rather than flipping min/max on the same warning-threshold fact; resembles entity substitution more than a quantifier flip.\"}\n{\"id\":\"d5_s0279_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'Minimum debt to trigger warning' restates the same threshold fact as the seed's 'exceeds X' framing; answer does not necessarily differ, so it reads as a P1-style paraphrase mislabeled N5.\"}\n{\"id\":\"d5_s0279_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Asks for the highest threshold across multiple distinct sanction levels (warning/suspension/expulsion), not a min/max flip of the same warning-threshold fact.\"}\n{\"id\":\"d5_s0279_N5_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"Asks about maximum registrable credits next semester — an unrelated fact, not a quantifier flip of the credit-debt warning threshold.\"}\n{\"id\":\"d5_s0279_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0279_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0285_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0285_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0285_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0285_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_N1_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0285_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0285_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0285_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0285_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0285_N3_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Swaps the core attribute (học lực → rèn luyện) rather than a sibling entity/id with the rest minimally changed; reads as an aspect change (N1).\"}\n{\"id\":\"d5_s0285_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0285_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Combines negating the standing (below-average) with changing the question type from stating a threshold to prescribing a remedial action — more than a single flip.\"}\n{\"id\":\"d5_s0285_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Swaps the qualifying variable from học lực to tín chỉ accumulation in addition to negating — conflates a variable swap with a polarity flip.\"}\n{\"id\":\"d5_s0285_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Introduces an unrelated entity (suspension status) not present in the seed rather than negating the học lực requirement itself.\"}\n{\"id\":\"d5_s0285_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Shifts to a different rule (honors/'xuất sắc' degree classification) rather than flipping the extreme of the same minimum-standing-for-eligibility fact.\"}\n{\"id\":\"d5_s0285_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Changes the metric from categorical standing to numeric GPA rather than flipping min/max on the same fact; introduces an unstated numeric fact (presupposition-like), not a quantifier flip.\"}\n{\"id\":\"d5_s0285_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"Asks about maximum allowed study duration, an unrelated fact, not a min/max flip of the học lực standing requirement.\"}\n{\"id\":\"d5_s0285_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Swaps to the other qualifying condition (credit count) mentioned in the answer rather than flipping the extreme of the học lực standing itself.\"}\n{\"id\":\"d5_s0285_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0285_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0291_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 189927,
+  "ttft_stream_ms": 2238,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 216312,
+  "uuid": "94bad12f-f97a-410a-aab0-e4373261eaa0",
+  "queued_turn_count": 0
+}

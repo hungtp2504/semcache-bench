@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_1364
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d4_s0736_P1_v2", "axis": "P1", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "What genes have historically been implicated in AVMD?", "delta": null}
+{"id": "d4_s0736_P1_v3", "axis": "P1", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Historically, which genes were thought to cause AVMD?", "delta": null}
+{"id": "d4_s0736_P1_v4", "axis": "P1", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which genes have long been linked to the development of AVMD?", "delta": null}
+{"id": "d4_s0736_P2_v1", "axis": "P2", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "List the genes historically linked to causing AVMD.", "delta": null}
+{"id": "d4_s0736_P2_v2", "axis": "P2", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "AVMD has historically been attributed to which genes?", "delta": null}
+{"id": "d4_s0736_P2_v3", "axis": "P2", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "I'm looking for the genes that have historically been tied to AVMD, which are they?", "delta": null}
+{"id": "d4_s0736_P2_v4", "axis": "P2", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Name the genes that have been linked, historically, with causing AVMD.", "delta": null}
+{"id": "d4_s0736_P3_v1", "axis": "P3", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "which genes historically linked to causing avmd", "delta": null}
+{"id": "d4_s0736_P3_v2", "axis": "P3", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "wat genes hav been linked to AVMD historically", "delta": null}
+{"id": "d4_s0736_P3_v3", "axis": "P3", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "avmd - genes historicaly linked to it??", "delta": null}
+{"id": "d4_s0736_P3_v4", "axis": "P3", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "which genes r historically associated w/ causing AVMD", "delta": null}
+{"id": "d4_s0736_N1_v1", "axis": "N1", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "What symptoms does AVMD cause?", "delta": "asks symptoms, not causative genes"}
+{"id": "d4_s0736_N1_v2", "axis": "N1", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "How is AVMD diagnosed?", "delta": "asks diagnosis, not the genes"}
+{"id": "d4_s0736_N2_v1", "axis": "N2", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which genes have historically been linked to causing autosomal recessive AVMD?", "delta": "narrows to recessive AVMD cases"}
+{"id": "d4_s0736_N2_v2", "axis": "N2", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which genes have historically been linked to causing macular dystrophies?", "delta": "widens from AVMD to macular dystrophies generally"}
+{"id": "d4_s0736_N3_v1", "axis": "N3", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which genes have historically been linked to causing Best disease?", "delta": "a different macular dystrophy"}
+{"id": "d4_s0736_N3_v2", "axis": "N3", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which genes have historically been linked to causing Stargardt disease?", "delta": "a different retinal dystrophy"}
+{"id": "d4_s0736_N4_v1", "axis": "N4", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which genes have historically been ruled out as causes of AVMD?", "delta": "genes excluded as causes, not implicated"}
+{"id": "d4_s0736_N4_v2", "axis": "N4", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which genes have only recently, rather than historically, been linked to AVMD?", "delta": "newly implicated genes, not historical ones"}
+{"id": "d4_s0736_N4_v3", "axis": "N4", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which genes have historically been linked to protecting against AVMD?", "delta": "protective genes instead of causative ones"}
+{"id": "d4_s0736_N4_v4", "axis": "N4", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Is BEST1 a gene that has never been linked to AVMD?", "delta": "negated yes or no about BEST1"}
+{"id": "d4_s0736_N5_v1", "axis": "N5", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "How many genes have historically been linked to causing AVMD?", "delta": "a count, not the gene names"}
+{"id": "d4_s0736_N5_v2", "axis": "N5", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which single gene is most commonly linked to causing AVMD?", "delta": "most frequent gene, not all four"}
+{"id": "d4_s0736_N5_v3", "axis": "N5", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which gene was the first to be linked to causing AVMD?", "delta": "earliest identified gene only"}
+{"id": "d4_s0736_N5_v4", "axis": "N5", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "Which of the genes linked to AVMD is the rarest cause?", "delta": "least common gene, not the full list"}
+{"id": "d4_s0736_N6_v1", "axis": "N6", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "What proportion of AVMD cases are explained by the historically linked genes?", "delta": "share of cases explained, presupposed genes"}
+{"id": "d4_s0736_N6_v2", "axis": "N6", "seed_question": "Which genes have historically been linked to causing AVMD?", "answer": "PRPH2, BEST1, IMPG1, and IMPG2.", "variation": "How are the genes historically linked to AVMD tested for in patients?", "delta": "genetic testing method, presupposed genes"}
+{"id": "d4_s0742_P1_v1", "axis": "P1", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "What is the inheritance pattern of afibrinogenemia?", "delta": null}
+{"id": "d4_s0742_P1_v2", "axis": "P1", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "How is afibrinogenemia passed down in families?", "delta": null}
+{"id": "d4_s0742_P1_v3", "axis": "P1", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "In what manner is afibrinogenemia inherited?", "delta": null}
+{"id": "d4_s0742_P1_v4", "axis": "P1", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "How does afibrinogenemia get transmitted from parents to children?", "delta": null}
+{"id": "d4_s0742_P2_v1", "axis": "P2", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "Explain the way afibrinogenemia is inherited.", "delta": null}
+{"id": "d4_s0742_P2_v2", "axis": "P2", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "Afibrinogenemia follows which mode of inheritance?", "delta": null}
+{"id": "d4_s0742_P2_v3", "axis": "P2", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "I want to understand how afibrinogenemia runs in families.", "delta": null}
+{"id": "d4_s0742_P2_v4", "axis": "P2", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "Tell me about the genetic transmission of afibrinogenemia.", "delta": null}
+{"id": "d4_s0742_P3_v1", "axis": "P3", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "how is afibrinogenemia inheritd", "delta": null}
+{"id": "d4_s0742_P3_v2", "axis": "P3", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "afibrinogenemia inheritance ptrn?", "delta": null}
+{"id": "d4_s0742_P3_v3", "axis": "P3", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "how do u inherit afibrinogenemia", "delta": null}
+{"id": "d4_s0742_P3_v4", "axis": "P3", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "afibrinogenemia - how is it passed on genetically??", "delta": null}
+{"id": "d4_s0742_N1_v1", "axis": "N1", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "What are the symptoms of afibrinogenemia?", "delta": "asks symptoms, not inheritance"}
+{"id": "d4_s0742_N1_v2", "axis": "N1", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "How is afibrinogenemia treated?", "delta": "asks treatment, not inheritance"}
+{"id": "d4_s0742_N2_v1", "axis": "N2", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "How is afibrinogenemia inherited in consanguineous families?", "delta": "narrows to consanguineous families"}
+{"id": "d4_s0742_N2_v2", "axis": "N2", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "How are fibrinogen disorders inherited?", "delta": "widens to all fibrinogen disorders"}
+{"id": "d4_s0742_N3_v1", "axis": "N3", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "How is hypofibrinogenemia inherited?", "delta": "a different fibrinogen disorder"}
+{"id": "d4_s0742_N3_v2", "axis": "N3", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "How is dysfibrinogenemia inherited?", "delta": "another fibrinogen disorder"}
+{"id": "d4_s0742_N4_v1", "axis": "N4", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "Is afibrinogenemia inherited in an autosomal dominant manner?", "delta": "asks about dominant, not recessive inheritance"}
+{"id": "d4_s0742_N4_v2", "axis": "N4", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "Can afibrinogenemia be acquired rather than inherited?", "delta": "acquired, non-inherited cases instead"}
+{"id": "d4_s0742_N4_v3", "axis": "N4", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "What happens to a person who does not inherit an abnormal gene from both parents?", "delta": "outcome without two abnormal genes"}
+{"id": "d4_s0742_N4_v4", "axis": "N4", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "Which parent does not pass on an abnormal gene in afibrinogenemia?", "delta": "non-transmitting parent, inverted from both"}
+{"id": "d4_s0742_N5_v1", "axis": "N5", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "What is the maximum number of abnormal genes a person with afibrinogenemia can carry?", "delta": "upper count, not the required two"}
+{"id": "d4_s0742_N5_v2", "axis": "N5", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "Is it enough to inherit an abnormal gene from just one parent to have afibrinogenemia?", "delta": "one parent only, not both"}
+{"id": "d4_s0742_N5_v3", "axis": "N5", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "If only one abnormal afibrinogenemia gene is inherited, what is that person called?", "delta": "status with one gene, not two"}
+{"id": "d4_s0742_N5_v4", "axis": "N5", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "Do all children of two carrier parents inherit afibrinogenemia?", "delta": "all versus some children affected"}
+{"id": "d4_s0742_N6_v1", "axis": "N6", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "If both parents carry the abnormal gene, what is the chance their child has afibrinogenemia?", "delta": "recurrence risk, presupposed inheritance mode"}
+{"id": "d4_s0742_N6_v2", "axis": "N6", "seed_question": "How is afibrinogenemia inherited?", "answer": "In an autosomal recessive manner, meaning an affected individual must inherit two abnormal genes, one from each parent.", "variation": "Do the parents who each pass on an abnormal gene for afibrinogenemia have symptoms themselves?", "delta": "carrier parents' health, presupposed transmission"}
+{"id": "d4_s0748_P1_v1", "axis": "P1", "seed_question": "What enzyme is deficient in people with adenylosuccinase deficiency?", "answer": "Adenylosuccinase deficiency results from a lack of the enzyme adenylosuccinate lyase.", "variation": "Which enzyme is lacking in people with adenylosuccinase deficiency?", "delta": null}
+{"id": "d4_s0748_P1_v2", "axis": "P1", "seed_question": "What enzyme is deficient in people with adenylosuccinase deficiency?", "answer": "Adenylosuccinase deficiency results from a lack of the enzyme adenylosuccinate lyase.", "variation": "What enzyme is missing in individuals who have adenylosuccinase deficiency?", "delta": null}
+{"id": "d4_s0748_P1_v3", "axis": "P1", "seed_question": "What enzyme is deficient in people with adenylosuccinase deficiency?", "answer": "Adenylosuccinase deficiency results from a lack of the enzyme adenylosuccinate lyase.", "variation": "Adenylosuccinase deficiency involves a shortage of which enzyme?", "delta": null}
+{"id": "d4_s0748_P1_v4", "axis": "P1", "seed_question": "What enzyme is deficient in people with adenylosuccinase deficiency?", "answer": "Adenylosuccinase deficiency results from a lack of the enzyme adenylosuccinate lyase.", "variation": "Which enzyme is in short supply in patients with adenylosuccinase deficiency?", "delta": null}
+{"id": "d4_s0748_P2_v1", "axis": "P2", "seed_question": "What enzyme is deficient in people with adenylosuccinase deficiency?", "answer": "Adenylosuccinase deficiency results from a lack of the enzyme adenylosuccinate lyase.", "variation": "Name the enzyme that is deficient in adenylosuccinase deficiency.", "delta": null}

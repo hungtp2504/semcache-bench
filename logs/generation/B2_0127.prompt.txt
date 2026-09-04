@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B2_0127
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d1_s0163_N3_v1", "axis": "N3", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "What percentage of the final course grade do the exams count for?", "delta": "exams instead of homework"}
+{"id": "d1_s0163_N3_v2", "axis": "N3", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "What percentage of the final course grade does homework count for in 1.033?", "delta": "a different course"}
+{"id": "d1_s0163_N4_v1", "axis": "N4", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "What percentage of the final course grade does homework not count for?", "delta": "the non-homework share of the grade"}
+{"id": "d1_s0163_N4_v2", "axis": "N4", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "What percentage of homework is dropped from the final course grade?", "delta": "dropped homework share, not counted share"}
+{"id": "d1_s0163_N4_v3", "axis": "N4", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "Which homework does not count toward the final course grade?", "delta": "non-counting homework, not the weight"}
+{"id": "d1_s0163_N4_v4", "axis": "N4", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "What percentage of the final course grade is lost if homework is skipped?", "delta": "penalty share for skipping homework"}
+{"id": "d1_s0163_N5_v1", "axis": "N5", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "What is the largest single component of the final course grade, and what percentage is it?", "delta": "biggest grade component instead"}
+{"id": "d1_s0163_N5_v2", "axis": "N5", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "What is the smallest component of the final course grade, and what percentage is it?", "delta": "smallest grade component instead"}
+{"id": "d1_s0163_N5_v3", "axis": "N5", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "What is the minimum homework score required to pass the course?", "delta": "passing threshold, not the grade weight"}
+{"id": "d1_s0163_N5_v4", "axis": "N5", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "Aside from homework, what makes up the rest of the final course grade?", "delta": "all components but homework"}
+{"id": "d1_s0163_N6_v1", "axis": "N6", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "How is the 30% homework portion of the grade computed across the assignments?", "delta": "asks how the homework score is computed"}
+{"id": "d1_s0163_N6_v2", "axis": "N6", "seed_question": "What percentage of the final course grade does homework count for?", "answer": "Homework is worth 30% of the final course grade.", "variation": "Is the lowest homework grade dropped from the homework portion?", "delta": "asks the drop policy within homework"}
+{"id": "d1_s0169_P1_v1", "axis": "P1", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "At which lecture is Homework 1 handed out, and by which lecture must it be turned in?", "delta": null}
+{"id": "d1_s0169_P1_v2", "axis": "P1", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "When does Homework 1 get released, and when is the submission deadline?", "delta": null}
+{"id": "d1_s0169_P1_v3", "axis": "P1", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "Which lecture is Homework 1 given out in, and which lecture is it due by?", "delta": null}
+{"id": "d1_s0169_P1_v4", "axis": "P1", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "When is Homework 1 assigned and when does it have to be submitted?", "delta": null}
+{"id": "d1_s0169_P2_v1", "axis": "P2", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "Tell me the distribution and due points for Homework 1.", "delta": null}
+{"id": "d1_s0169_P2_v2", "axis": "P2", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "Homework 1 — handed out when, and due when?", "delta": null}
+{"id": "d1_s0169_P2_v3", "axis": "P2", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "I need to know the release and deadline lectures for Homework 1.", "delta": null}
+{"id": "d1_s0169_P2_v4", "axis": "P2", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "By which lecture is Homework 1 due, and at which lecture is it distributed?", "delta": null}
+{"id": "d1_s0169_P3_v1", "axis": "P3", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "when is hw1 handed out n when is it due?", "delta": null}
+{"id": "d1_s0169_P3_v2", "axis": "P3", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "homework 1 distribution + due lecture??", "delta": null}
+{"id": "d1_s0169_P3_v3", "axis": "P3", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "hw 1 given out wich lecture n due wich lecture", "delta": null}
+{"id": "d1_s0169_P3_v4", "axis": "P3", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "hmwk1 out/due lectures pls", "delta": null}
+{"id": "d1_s0169_N1_v1", "axis": "N1", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "How is Homework 1 graded?", "delta": "asks grading, not distribution and due points"}
+{"id": "d1_s0169_N1_v2", "axis": "N1", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "What topics does Homework 1 cover?", "delta": "asks content, not the schedule"}
+{"id": "d1_s0169_N2_v1", "axis": "N2", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "When is the coding portion of Homework 1 due?", "delta": "narrows to one part of Homework 1"}
+{"id": "d1_s0169_N2_v2", "axis": "N2", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "When is each homework in the course distributed and when is it due?", "delta": "widens to all homework assignments"}
+{"id": "d1_s0169_N3_v1", "axis": "N3", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "When is Homework 2 distributed and when is it due?", "delta": "a different homework"}
+{"id": "d1_s0169_N3_v2", "axis": "N3", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "When is Homework 1 distributed and when is it due in 1.033?", "delta": "a different course"}
+{"id": "d1_s0169_N4_v1", "axis": "N4", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "At which lecture are the graded Homework 1 papers returned?", "delta": "return of graded work, not distribution"}
+{"id": "d1_s0169_N4_v2", "axis": "N4", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "Which homework is not distributed at Lecture 3?", "delta": "homework other than the Lecture-3 one"}
+{"id": "d1_s0169_N4_v3", "axis": "N4", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "Which lectures have no homework distributed or due?", "delta": "lectures free of homework activity"}
+{"id": "d1_s0169_N4_v4", "axis": "N4", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "By which lecture must Homework 1 be graded rather than submitted?", "delta": "grading deadline, not the submission deadline"}
+{"id": "d1_s0169_N5_v1", "axis": "N5", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "Which homework is distributed at the earliest lecture?", "delta": "the earliest-distributed homework"}
+{"id": "d1_s0169_N5_v2", "axis": "N5", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "Which homework has the latest due lecture in the course?", "delta": "the last-due homework instead"}
+{"id": "d1_s0169_N5_v3", "axis": "N5", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "What is the earliest lecture at which Homework 1 may be submitted?", "delta": "earliest allowed submission, not the deadline"}
+{"id": "d1_s0169_N5_v4", "axis": "N5", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "At most how many lectures may pass between the release of Homework 1 and its deadline?", "delta": "maximum gap allowed, not the fixed lectures"}
+{"id": "d1_s0169_N6_v1", "axis": "N6", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "What is the penalty for turning in Homework 1 after Lecture 6?", "delta": "asks the late penalty, presupposed deadline"}
+{"id": "d1_s0169_N6_v2", "axis": "N6", "seed_question": "When is Homework 1 distributed and when is it due?", "answer": "Homework 1 is distributed at Lecture 3 and is due by Lecture 6.", "variation": "How should Homework 1 be submitted at Lecture 6 — on paper or online?", "delta": "asks the submission method"}
+{"id": "d1_s0237_P1_v1", "axis": "P1", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "What subjects are covered in Lec 1 and Lab 0 during Week 1 of this course?", "delta": null}
+{"id": "d1_s0237_P1_v2", "axis": "P1", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "Which themes do Lec 1 and Lab 0 address in the first week of this course?", "delta": null}
+{"id": "d1_s0237_P1_v3", "axis": "P1", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "What material is covered by Lecture 1 and Lab 0 in Week 1?", "delta": null}
+{"id": "d1_s0237_P1_v4", "axis": "P1", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "What are the subject areas for Lec 1 and Lab 0 in this course's Week 1?", "delta": null}
+{"id": "d1_s0237_P2_v1", "axis": "P2", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "Tell me the topics covered by Lec 1 and Lab 0 in Week 1 of this course.", "delta": null}
+{"id": "d1_s0237_P2_v2", "axis": "P2", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "In Week 1 of this course, Lec 1 and Lab 0 cover which topics?", "delta": null}
+{"id": "d1_s0237_P2_v3", "axis": "P2", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "I'd like to know what Lec 1 and Lab 0 are about in Week 1 of this course.", "delta": null}
+{"id": "d1_s0237_P2_v4", "axis": "P2", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "Week 1 topics for Lec 1 and Lab 0 in this course - what are they?", "delta": null}
+{"id": "d1_s0237_P3_v1", "axis": "P3", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "wat r the topics of lec 1 and lab 0 in week 1 of this course?", "delta": null}
+{"id": "d1_s0237_P3_v2", "axis": "P3", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "week 1 lec 1 + lab 0 topics??", "delta": null}
+{"id": "d1_s0237_P3_v3", "axis": "P3", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "whats lec1 and lab0 about in wk 1", "delta": null}
+{"id": "d1_s0237_P3_v4", "axis": "P3", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "topics for lec 1 & lab 0, week1 of the course - anyone know", "delta": null}
+{"id": "d1_s0237_N1_v1", "axis": "N1", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "Which readings are assigned for Lec 1 and Lab 0 in Week 1 of this course?", "delta": "asks assigned readings, not session topics"}
+{"id": "d1_s0237_N1_v2", "axis": "N1", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "On what dates are Lec 1 and Lab 0 held in Week 1 of this course?", "delta": "asks the meeting dates, not topics"}
+{"id": "d1_s0237_N2_v1", "axis": "N2", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "What is the topic of Lec 1 in Week 1 of this course?", "delta": "narrows to Lec 1 only, dropping Lab 0"}
+{"id": "d1_s0237_N2_v2", "axis": "N2", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "What are the topics of all lectures and labs in Weeks 1 and 2 of this course?", "delta": "widens to Week 2 sessions as well"}
+{"id": "d1_s0237_N3_v1", "axis": "N3", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "What are the topics of Lec 2 and Lab 0 in Week 1 of this course?", "delta": "Lec 2 instead of Lec 1"}
+{"id": "d1_s0237_N3_v2", "axis": "N3", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "What are the topics of Lec 1 and Lab 0 in Week 2 of this course?", "delta": "Week 2 instead of Week 1"}
+{"id": "d1_s0237_N4_v1", "axis": "N4", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "What topics are not covered in Lec 1 and Lab 0 in Week 1 of this course?", "delta": "topics excluded from those sessions"}
+{"id": "d1_s0237_N4_v2", "axis": "N4", "seed_question": "What are the topics of Lec 1 and Lab 0 in Week 1 of this course?", "answer": "Lec 1's topic is Introduction, and Lab 0 covers Use of Spreadsheet Orientation.", "variation": "In Week 1, which sessions other than Lec 1 and Lab 0 have topics listed?", "delta": "other Week 1 sessions instead"}

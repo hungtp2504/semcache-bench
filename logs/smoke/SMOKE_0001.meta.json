@@ -1,0 +1,48 @@
+{
+  "batch_id": "SMOKE_0001",
+  "stage": "A4",
+  "model_requested": "claude-haiku-4-5-20251001",
+  "model_reported": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "prompt_file": "prompts/A4_variation.md",
+  "prompt_version": "1.0",
+  "cached_block_sha256": "da101461606d983a0c3f1182fd514adf0676fd602b1c582e5ef37ac0d0b8ea9d",
+  "input_file": "/private/tmp/claude-501/-Users-ted-Documents-Working-PaperWriting-Cliffs-and-Slope/ef0e6635-cab2-487d-95ab-c48ba5a5872b/scratchpad/smoke_seeds.jsonl",
+  "input_lines": "1:2",
+  "n_input": 2,
+  "ts_start": "2026-08-11T06:14:09Z",
+  "ts_end": "2026-08-11T06:16:04Z",
+  "cli_session_id": "3b7231a1-015b-4ea9-b828-78710eeeb162",
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 16945,
+    "cache_read_input_tokens": 18446,
+    "output_tokens": 16111,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16945,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 16111,
+        "cache_read_input_tokens": 18446,
+        "cache_creation_input_tokens": 16945,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16945
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "cost_usd": 0.1162986
+}

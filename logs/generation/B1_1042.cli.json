@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 142394,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "3476d20c-48e8-49c8-b3e6-3edc0d85a1ae",
+  "total_cost_usd": 0.3535882,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 45768,
+    "cache_read_input_tokens": 92791,
+    "output_tokens": 15195,
+    "output_tokens_details": {
+      "thinking_tokens": 12064
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 45768,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3078,
+        "cache_read_input_tokens": 62513,
+        "cache_creation_input_tokens": 13533,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13533
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15195,
+      "cacheReadInputTokens": 92791,
+      "cacheCreationInputTokens": 45768,
+      "webSearchRequests": 0,
+      "costUSD": 0.3535882,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0534_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0534_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0534_P2_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0534_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0534_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0534_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0534_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0534_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0534_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0534_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0534_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0534_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0534_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0534_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0534_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"conflates two senses of 'level' (academic level taught vs enrollment eligibility); not a clean single-predicate negation flip, closer to an aspect change\"}\n{\"id\":\"d1_s0534_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"if Fall 2006 is the only recorded offering, 'term instruction ended' resolves to the same Fall 2006 value as seed — mirrors the disallowed 'until/after' deadline pattern\"}\n{\"id\":\"d1_s0534_N4_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"asks who is excluded from enrollment, a different topic/facet entirely rather than a polarity flip of the term/level question — this is N1-shaped, not N4\"}\n{\"id\":\"d1_s0534_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"course appears to have a single recorded offering (Fall 2006); 'earliest term' resolves to the same answer as seed, so the answer is not necessarily different\"}\n{\"id\":\"d1_s0534_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"single recorded offering means 'most recent term' equals the seed's Fall 2006 answer\"}\n{\"id\":\"d1_s0534_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"only one level (undergraduate) is on record, so 'highest level offered' equals the seed's answer\"}\n{\"id\":\"d1_s0534_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"single recorded Fall 2006 offering means 'last Fall term' equals the seed's answer\"}\n{\"id\":\"d1_s0534_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0534_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0537_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0537_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0537_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0537_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0537_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0537_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0537_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0537_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0537_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0537_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0537_P3_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0537_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0537_N1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0537_N1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0537_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0537_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0537_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0537_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0537_N4_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0537_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"conflates 'level taught' with 'level unavailable to students' (enrollment eligibility), not a clean single-predicate polarity flip\"}\n{\"id\":\"d1_s0537_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes a renumbering that isn't established by the seed fact; closer to an unverified N6 presupposition than a clean polarity flip, and the answer may be indeterminate\"}\n{\"id\":\"d1_s0537_N4_v4\",\"axis_ok\":false,\"conf\":0.8,\"issue\":\"asks who is excluded from enrollment, a different facet entirely rather than a polarity flip of the number/term/level question\"}\n{\"id\":\"d1_s0537_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"single recorded offering (Fall 2004) means 'earliest term' equals the seed's answer\"}\n{\"id\":\"d1_s0537_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"single recorded offering means 'most recent term' equals the seed's answer\"}\n{\"id\":\"d1_s0537_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"only one level (undergraduate) is on record, so 'highest level offered' equals the seed's answer\"}\n{\"id\":\"d1_s0537_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts scope to the entire Topics series' numbering rather than flipping an extreme on this subject's own attribute; answer not necessarily different from seed's\"}\n{\"id\":\"d1_s0537_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0537_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0544_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0544_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0544_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0544_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0544_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0544_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0544_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0544_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0544_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 120795,
+  "ttft_stream_ms": 2149,
+  "time_to_request_ms": 37,
+  "type": "result",
+  "duration_ms": 143202,
+  "uuid": "1b85534f-b82e-40af-98ac-a26d1b620a3e",
+  "queued_turn_count": 0
+}

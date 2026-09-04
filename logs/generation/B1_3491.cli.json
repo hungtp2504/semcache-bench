@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 195113,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "74a08f20-22fe-4e56-b107-f92c4a4afcbb",
+  "total_cost_usd": 0.46313560000000004,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 58391,
+    "cache_read_input_tokens": 98668,
+    "output_tokens": 20983,
+    "output_tokens_details": {
+      "thinking_tokens": 17940
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 58391,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2981,
+        "cache_read_input_tokens": 68390,
+        "cache_creation_input_tokens": 20279,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 20279
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 20983,
+      "cacheReadInputTokens": 98668,
+      "cacheCreationInputTokens": 58391,
+      "webSearchRequests": 0,
+      "costUSD": 0.46313560000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0154_P1_v2\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0154_P1_v3\",\"axis_ok\":true,\"conf\":0.92,\"issue\":null}\n{\"id\":\"d5_s0154_P1_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0154_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0154_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0154_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0154_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0154_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0154_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0154_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0154_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0154_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0154_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0154_N2_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines degree-level narrowing (tiến sĩ only) with an unrelated topic shift to supervisor requirements — two changes, not a single scope qualifier; seed answer never mentions supervisors\"}\n{\"id\":\"d5_s0154_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps program type entirely (foreign-institution-awarded program → joint domestic-foreign program), a different regulatory category, not a single added/removed scope qualifier; also drops tiến sĩ\"}\n{\"id\":\"d5_s0154_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0154_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0154_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0154_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces 'phạm vi điều chỉnh' (regulatory scope), a topic not present in the seed question — a topic switch rather than a negation of the requirements question\"}\n{\"id\":\"d5_s0154_N4_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0154_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about suspension trigger, an enforcement/consequence topic, not a negation of the program-requirements question\"}\n{\"id\":\"d5_s0154_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0154_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0154_N5_v3\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0154_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks for a count of requirements rather than a min/max extreme of a quantifiable value; seed's answer has no enumerable list to count\"}\n{\"id\":\"d5_s0154_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0154_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0160_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0160_P1_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0160_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0160_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0160_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0160_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0160_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0160_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0160_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0160_P3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0160_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0160_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0160_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0160_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0160_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0160_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0160_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0160_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0160_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks which content is not recognized (categorical/list answer) vs seed's percentage-cap question — type mismatch rather than a clean polarity flip\"}\n{\"id\":\"d5_s0160_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0160_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about refusal cases, a different topic (procedural denial) rather than a negation of the percentage-cap question\"}\n{\"id\":\"d5_s0160_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0160_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0160_N5_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"changes unit from percentage to absolute credit count and switches entity to in-house/self-earned credits — more than a single extreme flip\"}\n{\"id\":\"d5_s0160_N5_v3\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"presupposes institutions set their own floor within a range, a different regulatory mechanism not established by the seed — presupposition shift rather than a clean extreme flip\"}\n{\"id\":\"d5_s0160_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes the cap varies by program and asks which program has it, contradicting seed's single uniform cap — presupposition shift rather than min/max flip\"}\n{\"id\":\"d5_s0160_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0160_N6_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0166_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0166_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0166_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0166_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0166_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 172811,
+  "ttft_stream_ms": 1675,
+  "time_to_request_ms": 34,
+  "type": "result",
+  "duration_ms": 196280,
+  "uuid": "8a0a23ef-7ff8-4688-bd26-56ca336d6cf6",
+  "queued_turn_count": 0
+}

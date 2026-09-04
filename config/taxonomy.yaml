@@ -1,0 +1,225 @@
+# taxonomy.yaml — SOURCE OF TRUTH for the 9-axis taxonomy (PLAN §6)
+# Prompts embed a rendered copy stamped with this version; regenerate only on version bump.
+version: "1.0"
+updated: "2026-08-11"
+
+organizing_principle: >
+  A single spectrum: how much answer change does a given surface change cause
+  (answer-step / surface-step ratio)? Group I: large surface steps, zero answer step
+  (cache MUST hit). Group II: small surface steps, moderate answer step with a fuzzy
+  boundary (cache must miss, but humans may disagree at the margin). Group III: minimal
+  surface steps, total/inverted answer step — the "cliff" where smooth embeddings are
+  structurally blind. The taxonomy is derived from this principle, not enumerated;
+  a 10th axis found later gets placed on the same spectrum.
+
+groups:
+  invariant:
+    roman: I
+    expected_label: HIT
+    axes: [P1, P2, P3]
+    variants_per_axis: 4      # 3 axes x 4 = 12 HIT per seed
+  slope:
+    roman: II
+    expected_label: MISS
+    axes: [N1, N2]
+    variants_per_axis: 2
+  cliff:
+    roman: III
+    expected_label: MISS
+    axes: [N3, N4, N5, N6]
+    variants_per_axis: 2      # (2+4 axes) x 2 = 12 MISS per seed → 24 variants/seed
+
+axes:
+  P1:
+    name_en: Lexical paraphrase
+    name_vi: Từ đồng nghĩa
+    group: invariant
+    surface_step: medium
+    answer_step: none
+    tests: robustness to lexical variation
+    definition: >
+      Replace words/phrases with synonyms or equivalent wording. Meaning identical;
+      the seed's answer remains a fully correct, complete answer.
+    constraints:
+      - Never change any entity, identifier, number, date, quantifier, or polarity.
+      - Keep the same question intent and scope.
+    example_vi:
+      seed: "Hạn nộp Assignment 1 là khi nào?"
+      variant: "Deadline của Bài tập 1 là lúc nào?"
+    example_en:
+      seed: "When is the deadline for Assignment 1?"
+      variant: "What is the due date for Assignment 1?"
+
+  P2:
+    name_en: Syntactic restructure
+    name_vi: Biến đổi cú pháp
+    group: invariant
+    surface_step: large
+    answer_step: none
+    tests: robustness to structural variation
+    definition: >
+      Restructure the sentence: reorder clauses, question ↔ embedded request,
+      active ↔ passive, direct ↔ indirect. Content and answer unchanged.
+    constraints:
+      - Same entities, numbers, polarity, scope.
+      - Must remain a natural, self-contained query.
+    example_vi:
+      seed: "Hạn nộp Assignment 1 là khi nào?"
+      variant: "Tôi phải nộp Assignment 1 trước ngày nào?"
+    example_en:
+      seed: "Can I submit the project after the deadline?"
+      variant: "Is submitting the project after the deadline allowed?"
+
+  P3:
+    name_en: Surface noise
+    name_vi: Nhiễu bề mặt
+    group: invariant
+    surface_step: very_large
+    answer_step: none
+    tests: robustness to typos, missing diacritics, abbreviations
+    definition: >
+      Degrade the surface form: typos, casual register, abbreviations, lowercase,
+      missing punctuation; Vietnamese additionally: remove diacritics, texting shorthand
+      (ntn, bn, v, e/a). Content words must remain recognizable; answer unchanged.
+    constraints:
+      - Do not accidentally alter an entity or number while adding noise.
+      - Keep it plausible as a real user's hasty query.
+    example_vi:
+      seed: "Hạn nộp Assignment 1 là khi nào?"
+      variant: "assignment 1 deadline khi nao v?"
+    example_en:
+      seed: "When is the deadline for Assignment 1?"
+      variant: "assignment 1 deadline pls"
+
+  N1:
+    name_en: Aspect change
+    name_vi: Đổi khía cạnh
+    group: slope
+    surface_step: small
+    answer_step: moderate
+    tests: aspect resolution (fuzzy boundary)
+    definition: >
+      Same topic/entity, but ask about a different facet (deadline → grading criteria,
+      side effects → dosage, where → when). The seed's answer no longer answers it,
+      though the answers may share context.
+    constraints:
+      - Keep the topic entity identical; change only the facet asked about.
+      - The new facet must plausibly exist in the same source document.
+    example_vi:
+      seed: "Hạn nộp Assignment 1 là khi nào?"
+      variant: "Assignment 1 chấm theo tiêu chí nào?"
+    example_en:
+      seed: "What are the side effects of ibuprofen?"
+      variant: "What is the recommended dose of ibuprofen?"
+
+  N2:
+    name_en: Scope change
+    name_vi: Đổi phạm vi
+    group: slope
+    surface_step: small
+    answer_step: moderate
+    tests: scope sensitivity (fuzzy boundary)
+    definition: >
+      Narrow or widen the scope: whole → sub-part, general → a specific subgroup or
+      condition (assignment → its appendix; students → international students).
+      The correct answer becomes more specific/different, though related.
+    constraints:
+      - Add or remove exactly one scoping qualifier; keep everything else close.
+      - The narrowed/widened scope must be plausible in the domain.
+    example_vi:
+      seed: "Hạn nộp Assignment 1 là khi nào?"
+      variant: "Hạn nộp phần phụ lục của Assignment 1?"
+    example_en:
+      seed: "What is the tuition fee this semester?"
+      variant: "What is the tuition fee for international students this semester?"
+
+  N3:
+    name_en: Entity substitution
+    name_vi: Đổi thực thể
+    group: cliff
+    surface_step: minimal
+    answer_step: total
+    tests: discrete discrimination
+    definition: >
+      Swap exactly ONE entity/identifier/version for a plausible sibling
+      (Assignment 1 → Assignment 2, PostgreSQL → MySQL, adults → children,
+      semester 1 → semester 2). Everything else stays as close to the seed as possible.
+      The answer changes entirely.
+    constraints:
+      - Exactly one substitution; minimal surface edit is the point of this axis.
+      - The sibling entity must plausibly exist in the same domain.
+    example_vi:
+      seed: "Hạn nộp Assignment 1 là khi nào?"
+      variant: "Hạn nộp Assignment 2 là khi nào?"
+    example_en:
+      seed: "How do I create a user in PostgreSQL?"
+      variant: "How do I create a user in MySQL?"
+
+  N4:
+    name_en: Polarity flip
+    name_vi: Phủ định / đảo cực tính
+    group: cliff
+    surface_step: minimal
+    answer_step: inverted
+    tests: polarity sensitivity
+    definition: >
+      Flip the polarity of what is asked via negation or an antonym
+      (include → exclude, open → closed, allowed → forbidden, safe → unsafe).
+      Serving the cached answer verbatim gives the user the wrong sign.
+    constraints:
+      - One negation/antonym flip; keep the rest of the sentence intact.
+      - Works best on yes/no and which-questions; adapt the nearest polar element
+        when the seed is a when/what question.
+    example_vi:
+      seed: "Thư viện có mở cửa Chủ nhật không?"
+      variant: "Thư viện có đóng cửa Chủ nhật không?"
+    example_en:
+      seed: "Which files should I include in the submission?"
+      variant: "Which files should I exclude from the submission?"
+    note: >
+      PLAN §6's worked example (deadline seed → "Khi nào thì không còn nhận bài
+      Assignment 1?") is borderline: the flipped when-question can carry the same
+      timestamp information. Pilot (Month 2, T7–8) must sharpen N4 few-shots toward
+      clean polarity flips; expect judge disagreement here otherwise.
+
+  N5:
+    name_en: Quantifier / extreme change
+    name_vi: Lượng từ / so sánh
+    group: cliff
+    surface_step: minimal
+    answer_step: total
+    tests: quantification sensitivity
+    definition: >
+      Change a quantifier, comparative, or extreme: earliest ↔ latest, min ↔ max,
+      at least ↔ at most, all ↔ some, first ↔ last. One word flips the target
+      of the question entirely.
+    constraints:
+      - Exactly one quantifier/extreme changed; everything else minimal.
+      - The flipped question must still make sense in the domain.
+    example_vi:
+      seed: "Hạn nộp Assignment 1 là khi nào?"
+      variant: "Hạn nộp sớm nhất của Assignment 1?"
+    example_en:
+      seed: "What is the latest date I can submit Assignment 1?"
+      variant: "What is the earliest date I can submit Assignment 1?"
+
+  N6:
+    name_en: Presupposition shift
+    name_vi: Đổi tiền giả định
+    group: cliff
+    surface_step: small
+    answer_step: total
+    tests: presupposition sensitivity
+    definition: >
+      Ask a question that presupposes a related but different fact from the same
+      context (deadline → the penalty for missing it; exam date → conditions for
+      exemption). High lexical overlap with the seed, entirely different answer.
+    constraints:
+      - The presupposed fact must be plausible in the source document's context.
+      - Keep strong lexical overlap with the seed — that is what makes it dangerous.
+    example_vi:
+      seed: "Hạn nộp Assignment 1 là khi nào?"
+      variant: "Nộp trễ Assignment 1 bị phạt bao nhiêu?"
+    example_en:
+      seed: "When is the deadline for Assignment 1?"
+      variant: "How many points do I lose for submitting Assignment 1 late?"

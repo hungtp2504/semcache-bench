@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 42145,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "2abc4da7-c837-44cd-a390-8bf0a21592e7",
+  "total_cost_usd": 0.2569125,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 26553,
+    "cache_read_input_tokens": 30245,
+    "output_tokens": 5901,
+    "output_tokens_details": {
+      "thinking_tokens": 2456
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 26553,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 5901,
+        "cache_read_input_tokens": 30245,
+        "cache_creation_input_tokens": 26553,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 26553
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 5901,
+      "cacheReadInputTokens": 30245,
+      "cacheCreationInputTokens": 26553,
+      "webSearchRequests": 0,
+      "costUSD": 0.2569125,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"statement\":\"Course 10.626 Electrochemical Energy Systems was taught in Spring 2014 at the graduate level.\",\"source_span\":\"10.626 | Spring 2014 | Graduate\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"statement\":\"The instructor of the course is Prof. Martin Bazant.\",\"source_span\":\"Instructor\\nProf. Martin Bazant\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"statement\":\"The course is offered by the Chemical Engineering department.\",\"source_span\":\"Departments\\nChemical Engineering\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"statement\":\"There are a total of 5 problem sets in the course.\",\"source_span\":\"There are a total of 5 problem sets.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"statement\":\"Collaboration with other students in the course is encouraged.\",\"source_span\":\"Collaboration with other students in the course is encouraged.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"statement\":\"Solutions to the problem sets are unavailable.\",\"source_span\":\"Solutions are unavailable.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"fact_refs\":[1],\"question\":\"Who is the instructor for MIT's 10.626 Electrochemical Energy Systems course?\",\"answer\":\"Prof. Martin Bazant.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"fact_refs\":[0],\"question\":\"In which term and at what level was 10.626 Electrochemical Energy Systems taught?\",\"answer\":\"It was taught in Spring 2014 at the graduate level.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"fact_refs\":[3],\"question\":\"How many problem sets are assigned in 10.626 Electrochemical Energy Systems?\",\"answer\":\"There are a total of 5 problem sets.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"fact_refs\":[4],\"question\":\"Is collaboration with other students allowed on the problem sets in 10.626?\",\"answer\":\"Yes, collaboration with other students in the course is encouraged.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"fact_refs\":[5],\"question\":\"Are solutions provided for the problem sets in 10.626 Electrochemical Energy Systems?\",\"answer\":\"No, solutions to the problem sets are unavailable.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_assignments\",\"fact_refs\":[2],\"question\":\"Which department offers the course 10.626 Electrochemical Energy Systems?\",\"answer\":\"The Chemical Engineering department.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"statement\":\"Session 1 (SES 1) covers the syllabus and course overview.\",\"source_span\":\"1\\nSyllabus, overview\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"statement\":\"Problem set 1 is due after session 6, whose topic is Impedance II.\",\"source_span\":\"6\\nImpedance II\\nProblem set 1 due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"statement\":\"Problem set 2 is due after session 12, whose topic is Metal acid batteries, Lemon battery demo.\",\"source_span\":\"12\\nMetal acid batteries, Lemon battery demo\\nProblem set 2 due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"statement\":\"Problem set 3 is due after session 19, whose topic is Electrocatalysis.\",\"source_span\":\"19\\nElectrocatalysis\\nProblem set 3 due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"statement\":\"The Midterm Exam is due after session 22, whose topic is Homogeneous charge transfer.\",\"source_span\":\"22\\nHomogeneous charge transfer\\nMidterm Exam due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"statement\":\"Problem set 4 is due after session 28, whose topic is Forced convection I.\",\"source_span\":\"28\\nForced convection I\\nProblem set 4 due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"statement\":\"Problem set 5 is due after session 33, whose topic is Homogeneous reaction-diffusion.\",\"source_span\":\"33\\nHomogeneous reaction-diffusion\\nProblem set 5 due\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"statement\":\"The course schedule spans 38 sessions in total, ending with session 38 on Porous electrodes (overview).\",\"source_span\":\"38\\nPorous electrodes (overview)\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"fact_refs\":[1],\"question\":\"After which session in the 10.626 course calendar is Problem Set 1 due?\",\"answer\":\"Problem Set 1 is due after session 6, which covers Impedance II.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"fact_refs\":[2],\"question\":\"After which session is Problem Set 2 due in the 10.626 course calendar?\",\"answer\":\"Problem Set 2 is due after session 12, which covers Metal acid batteries and a Lemon battery demo.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"fact_refs\":[4],\"question\":\"When is the Midterm Exam due according to the 10.626 course calendar?\",\"answer\":\"The Midterm Exam is due after session 22, which covers Homogeneous charge transfer.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"fact_refs\":[5],\"question\":\"After which session topic is Problem Set 4 due in 10.626?\",\"answer\":\"Problem Set 4 is due after session 28, which covers Forced convection I.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"fact_refs\":[0],\"question\":\"What topic is covered in session 1 of 10.626 Electrochemical Energy Systems?\",\"answer\":\"Session 1 covers the syllabus and course overview.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"fact_refs\":[7],\"question\":\"How many total sessions (SES) make up the 10.626 course schedule?\",\"answer\":\"The course schedule consists of 38 sessions.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_calendar\",\"fact_refs\":[6],\"question\":\"After which session is Problem Set 5 due in 10.626?\",\"answer\":\"Problem Set 5 is due after session 33, which covers Homogeneous reaction-diffusion.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_exams\",\"statement\":\"A PDF of the 2014 Midterm Exam for 10.626 is available.\",\"source_span\":\"2014 Midterm Exam (PDF)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_exams\",\"statement\":\"Solutions to the 2014 Midterm Exam are available as a PDF.\",\"source_span\":\"2014 Midterm Exam Solutions (PDF)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_exams\",\"statement\":\"A PDF of the 2014 Final Exam for 10.626 is available.\",\"source_span\":\"2014 Final Exam (PDF)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_exams\",\"statement\":\"Solutions to the 2014 Final Exam are not available.\",\"source_span\":\"(Solutions not available)\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_exams\",\"fact_refs\":[3],\"question\":\"Are solutions available for the 2014 Final Exam of 10.626 Electrochemical Energy Systems?\",\"answer\":\"No, solutions are not available for the 2014 Final Exam.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_exams\",\"fact_refs\":[1],\"question\":\"Is a solutions document provided for the 2014 Midterm Exam in 10.626?\",\"answer\":\"Yes, the 2014 Midterm Exam Solutions are provided as a PDF.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-626-electrochemical-energy-systems-sp_exams\",\"fact_refs\":[0,2],\"question\":\"What exams are provided for MIT's 10.626 course from 2014?\",\"answer\":\"A 2014 Midterm Exam and a 2014 Final Exam are both provided as PDFs.\"}",
+  "ttft_ms": 22250,
+  "ttft_stream_ms": 2850,
+  "time_to_request_ms": 28,
+  "type": "result",
+  "duration_ms": 42387,
+  "uuid": "5fce242f-d9dc-42d7-bc3a-6c61cc388a19"
+}

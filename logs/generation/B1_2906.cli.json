@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 170625,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "f3c143b5-ef6b-4b13-9f7a-116711e15fdc",
+  "total_cost_usd": 0.38772419999999996,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 46958,
+    "cache_read_input_tokens": 92421,
+    "output_tokens": 18140,
+    "output_tokens_details": {
+      "thinking_tokens": 14926
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 46958,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3094,
+        "cache_read_input_tokens": 62143,
+        "cache_creation_input_tokens": 15093,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15093
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 18140,
+      "cacheReadInputTokens": 92421,
+      "cacheCreationInputTokens": 46958,
+      "webSearchRequests": 0,
+      "costUSD": 0.38772419999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "Here are the audit results:\n\n```jsonl\n{\"id\":\"d4_s0144_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0144_P2_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0144_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0144_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0144_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0144_P3_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0144_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0144_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0144_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0144_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0144_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0144_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0144_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0144_N4_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"most-common to least-common is a min/max extreme flip (N5 territory), not a negation/antonym polarity flip; duplicates N5_v2's pattern\"}\n{\"id\":\"d4_s0144_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0144_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'misdiagnosed' is not a strict antonym of 'diagnosed'; serving the seed answer isn't clearly wrong-sign, it's just a different unrelated fact — closer to N1 aspect change\"}\n{\"id\":\"d4_s0144_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines a polarity flip (common->uncommon) with an added entity comparison to adults, exceeding the single-flip allowance\"}\n{\"id\":\"d4_s0144_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0144_N5_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0144_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0144_N5_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0144_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes the SAME fact as the seed (not a different one) and merely pivots to a new aspect (survival rate) — functionally an N1 aspect change, not a presupposition shift\"}\n{\"id\":\"d4_s0144_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"same issue — presupposes the identical seed fact and pivots to location aspect; matches N1's pattern rather than shifting to a different presupposed fact\"}\n{\"id\":\"d4_s0150_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0150_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0150_P1_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0150_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0150_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0150_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0150_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d4_s0150_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d4_s0150_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0150_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0150_N4_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"'the other half' is not a clear negation/antonym flip — it references a complementary subset rather than inverting the polarity of a claim\"}\n{\"id\":\"d4_s0150_N4_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d4_s0150_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d4_s0150_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0150_N5_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d4_s0150_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d4_s0150_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines the quantifier flip (about->at most) with an added scope narrowing (cerebellum alone vs cerebellum-or-brain-stem), exceeding a single-axis change\"}\n{\"id\":\"d4_s0150_N6_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes the same location fact as the seed and pivots to a new aspect (reason) — matches the N1 aspect-change pattern rather than a genuinely different presupposition\"}\n{\"id\":\"d4_s0150_N6_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"same pattern — presupposes seed's fact and asks about effect (new aspect); also silently narrows 'cerebellum or brain stem' to cerebellum only\"}\n{\"id\":\"d4_s0156_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0156_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d4_s0156_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0156_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0156_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0156_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0156_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0156_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d4_s0156_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n```\n\nNotable pattern flagged: the N6 items across both s0144 and s0150 seed groups presuppose the *same* fact established by the seed (not a genuinely different one) and simply pivot to a new facet — structurally indistinguishable from the N1 items in the same groups. Also flagged a few N4 items that are actually extreme/min-max flips (N5 territory) or compound changes exceeding a single flip.",
+  "ttft_ms": 148522,
+  "ttft_stream_ms": 1230,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 171399,
+  "uuid": "8e1638a8-a5e0-4155-87d1-b54d984e0f92",
+  "queued_turn_count": 0
+}

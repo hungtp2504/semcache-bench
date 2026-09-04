@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_2873
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d4_s0489_N1_v2", "axis": "N1", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "How is male breast cancer treated?", "delta": "asks treatment, not detection age"}
+{"id": "d4_s0489_N2_v1", "axis": "N2", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "At what age range is BRCA-related male breast cancer usually detected?", "delta": "narrows to BRCA-linked cases"}
+{"id": "d4_s0489_N2_v2", "axis": "N2", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "At what age range is breast cancer usually detected in both men and women?", "delta": "widens to all patients, not just men"}
+{"id": "d4_s0489_N3_v1", "axis": "N3", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "At what age range is female breast cancer usually detected?", "delta": "women instead of men"}
+{"id": "d4_s0489_N3_v2", "axis": "N3", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "At what age range is prostate cancer usually detected in men?", "delta": "prostate instead of breast cancer"}
+{"id": "d4_s0489_N4_v1", "axis": "N4", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "At what age range is male breast cancer rarely detected?", "delta": "ages where it is rarely found"}
+{"id": "d4_s0489_N4_v2", "axis": "N4", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "At what age range does male breast cancer usually begin, rather than get detected?", "delta": "age of onset, not age of detection"}
+{"id": "d4_s0489_N4_v3", "axis": "N4", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "Below what age is male breast cancer almost never found?", "delta": "age below which it is essentially absent"}
+{"id": "d4_s0489_N4_v4", "axis": "N4", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "Is male breast cancer usually detected before age 60?", "delta": "asks about detection before the stated range"}
+{"id": "d4_s0489_N5_v1", "axis": "N5", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "What is the youngest age a man has been diagnosed with breast cancer?", "delta": "youngest recorded age, not the usual range"}
+{"id": "d4_s0489_N5_v2", "axis": "N5", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "At what single age is male breast cancer detected most frequently?", "delta": "peak age, not the whole range"}
+{"id": "d4_s0489_N5_v3", "axis": "N5", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "At what age range is male breast cancer least often detected?", "delta": "least common detection ages"}
+{"id": "d4_s0489_N5_v4", "axis": "N5", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "What is the oldest age group in which male breast cancer is still commonly found?", "delta": "upper extreme beyond the usual range"}
+{"id": "d4_s0489_N6_v1", "axis": "N6", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "Why is male breast cancer usually detected at an older age?", "delta": "asks the reason, presupposing late detection"}
+{"id": "d4_s0489_N6_v2", "axis": "N6", "seed_question": "At what age range is male breast cancer usually detected?", "answer": "Male breast cancer is usually detected in men between 60 and 70 years of age.", "variation": "How is breast cancer detected in men in their sixties?", "delta": "asks detection method, presupposed by the age"}
+{"id": "d4_s0495_P1_v1", "axis": "P1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "What is the frequency of breast cancer during pregnancy?", "delta": null}
+{"id": "d4_s0495_P1_v2", "axis": "P1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How common is breast cancer in pregnant women?", "delta": null}
+{"id": "d4_s0495_P1_v3", "axis": "P1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How frequently does breast cancer happen in pregnancy?", "delta": null}
+{"id": "d4_s0495_P1_v4", "axis": "P1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "What is the rate of breast cancer among pregnancies?", "delta": null}
+{"id": "d4_s0495_P2_v1", "axis": "P2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Tell me how often breast cancer shows up during pregnancy.", "delta": null}
+{"id": "d4_s0495_P2_v2", "axis": "P2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "During pregnancy, breast cancer occurs at what frequency?", "delta": null}
+{"id": "d4_s0495_P2_v3", "axis": "P2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "In how many pregnancies does breast cancer occur?", "delta": null}
+{"id": "d4_s0495_P2_v4", "axis": "P2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Give me the incidence of breast cancer in pregnancy.", "delta": null}
+{"id": "d4_s0495_P3_v1", "axis": "P3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "how often does breast cancer happen durin pregnancy", "delta": null}
+{"id": "d4_s0495_P3_v2", "axis": "P3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "breast cancer during pregnancy — how comon is it?", "delta": null}
+{"id": "d4_s0495_P3_v3", "axis": "P3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "hw offen does breast cancr occur in pregnancy??", "delta": null}
+{"id": "d4_s0495_P3_v4", "axis": "P3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "frequency of breast ca in pregnancy btw", "delta": null}
+{"id": "d4_s0495_N1_v1", "axis": "N1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How is breast cancer treated during pregnancy?", "delta": "asks treatment, not frequency"}
+{"id": "d4_s0495_N1_v2", "axis": "N1", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How is breast cancer diagnosed during pregnancy?", "delta": "asks diagnosis, not how often it occurs"}
+{"id": "d4_s0495_N2_v1", "axis": "N2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer occur during the first trimester of pregnancy?", "delta": "narrows to the first trimester"}
+{"id": "d4_s0495_N2_v2", "axis": "N2", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer occur in women of childbearing age?", "delta": "widens to all women of childbearing age"}
+{"id": "d4_s0495_N3_v1", "axis": "N3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does cervical cancer occur during pregnancy?", "delta": "cervical instead of breast cancer"}
+{"id": "d4_s0495_N3_v2", "axis": "N3", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer occur during breastfeeding?", "delta": "breastfeeding instead of pregnancy"}
+{"id": "d4_s0495_N4_v1", "axis": "N4", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer go undetected during pregnancy?", "delta": "missed diagnoses, not occurrence rate"}
+{"id": "d4_s0495_N4_v2", "axis": "N4", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does breast cancer occur outside of pregnancy in women the same age?", "delta": "rate in non-pregnant women instead"}
+{"id": "d4_s0495_N4_v3", "axis": "N4", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often does pregnancy occur in women already treated for breast cancer?", "delta": "pregnancy after cancer, relation reversed"}
+{"id": "d4_s0495_N4_v4", "axis": "N4", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "How often is a breast lump found during pregnancy noncancerous?", "delta": "benign lump rate, not cancer rate"}
+{"id": "d4_s0495_N5_v1", "axis": "N5", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "What is the highest reported rate of breast cancer during pregnancy?", "delta": "maximum reported rate, not the typical one"}
+{"id": "d4_s0495_N5_v2", "axis": "N5", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "What is the lowest reported frequency of breast cancer in pregnancy?", "delta": "minimum reported rate, not the usual figure"}
+{"id": "d4_s0495_N5_v3", "axis": "N5", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Which cancer occurs most often during pregnancy?", "delta": "most frequent pregnancy cancer, not breast cancer's rate"}
+{"id": "d4_s0495_N5_v4", "axis": "N5", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Which cancer occurs least often during pregnancy?", "delta": "rarest pregnancy cancer, not breast cancer's rate"}
+{"id": "d4_s0495_N6_v1", "axis": "N6", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "Does breast cancer that occurs during pregnancy affect the baby?", "delta": "asks fetal effects, presupposed occurrence"}
+{"id": "d4_s0495_N6_v2", "axis": "N6", "seed_question": "How often does breast cancer occur during pregnancy?", "answer": "Breast cancer occurs about once in every 3,000 pregnancies.", "variation": "What is the survival rate for breast cancer that occurs during pregnancy?", "delta": "asks prognosis, presupposed occurrence"}
+{"id": "d4_s0501_P1_v1", "axis": "P1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "How would you define breast cancer?", "delta": null}
+{"id": "d4_s0501_P1_v2", "axis": "P1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What does the term breast cancer mean?", "delta": null}
+{"id": "d4_s0501_P1_v3", "axis": "P1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "Can you explain what breast cancer is?", "delta": null}
+{"id": "d4_s0501_P1_v4", "axis": "P1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What exactly is breast cancer as a disease?", "delta": null}
+{"id": "d4_s0501_P2_v1", "axis": "P2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "Give me a definition of breast cancer.", "delta": null}
+{"id": "d4_s0501_P2_v2", "axis": "P2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "Breast cancer is defined as what?", "delta": null}
+{"id": "d4_s0501_P2_v3", "axis": "P2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "Describe breast cancer for me.", "delta": null}
+{"id": "d4_s0501_P2_v4", "axis": "P2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "I'd like an explanation of what breast cancer is.", "delta": null}
+{"id": "d4_s0501_P3_v1", "axis": "P3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "wat is breast cancer", "delta": null}
+{"id": "d4_s0501_P3_v2", "axis": "P3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "breast cancer — whats that exactly?", "delta": null}
+{"id": "d4_s0501_P3_v3", "axis": "P3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "whats brest cancr btw", "delta": null}
+{"id": "d4_s0501_P3_v4", "axis": "P3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "explain breast cancr plz", "delta": null}
+{"id": "d4_s0501_N1_v1", "axis": "N1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What causes breast cancer?", "delta": "asks causes, not the definition"}
+{"id": "d4_s0501_N1_v2", "axis": "N1", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What are the symptoms of breast cancer?", "delta": "asks symptoms, not what it is"}
+{"id": "d4_s0501_N2_v1", "axis": "N2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is inflammatory breast cancer?", "delta": "narrows to one subtype"}
+{"id": "d4_s0501_N2_v2", "axis": "N2", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is cancer in general?", "delta": "widens from breast cancer to all cancer"}
+{"id": "d4_s0501_N3_v1", "axis": "N3", "seed_question": "What is breast cancer?", "answer": "Breast cancer is a disease in which malignant (cancer) cells form in the tissues of the breast.", "variation": "What is ovarian cancer?", "delta": "ovarian instead of breast cancer"}

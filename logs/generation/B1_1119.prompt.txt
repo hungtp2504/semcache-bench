@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_1119
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d1_s0081_P2_v2", "axis": "P2", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "In course 1.017, the final grade is put together how?", "delta": null}
+{"id": "d1_s0081_P2_v3", "axis": "P2", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "I'd like a breakdown of the components that make up the final grade in course 1.017.", "delta": null}
+{"id": "d1_s0081_P2_v4", "axis": "P2", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "Tell me the weights used to calculate the final grade in course 1.017.", "delta": null}
+{"id": "d1_s0081_P3_v1", "axis": "P3", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "how is the final grade calculated in 1.017?", "delta": null}
+{"id": "d1_s0081_P3_v2", "axis": "P3", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "1017 grading breakdwn??", "delta": null}
+{"id": "d1_s0081_P3_v3", "axis": "P3", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "hows the finl grade worked out in course 1017 - percentages?", "delta": null}
+{"id": "d1_s0081_P3_v4", "axis": "P3", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "final grade calc for 1.017 pls, whats the weighting", "delta": null}
+{"id": "d1_s0081_N1_v1", "axis": "N1", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "What is the late policy for work submitted in course 1.017?", "delta": "asks late policy, not grade weights"}
+{"id": "d1_s0081_N1_v2", "axis": "N1", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "What letter grade corresponds to each score range in course 1.017?", "delta": "asks the letter-grade scale instead"}
+{"id": "d1_s0081_N2_v1", "axis": "N2", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "How much of the final grade in course 1.017 comes from in-class exercises alone?", "delta": "narrows to in-class exercises only"}
+{"id": "d1_s0081_N2_v2", "axis": "N2", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "How are final grades calculated across all courses in the department?", "delta": "widens beyond course 1.017"}
+{"id": "d1_s0081_N3_v1", "axis": "N3", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "How is the final grade calculated in course 1.012?", "delta": "a different course"}
+{"id": "d1_s0081_N3_v2", "axis": "N3", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "How is the midterm grade calculated in course 1.017?", "delta": "midterm grade, not the final grade"}
+{"id": "d1_s0081_N4_v1", "axis": "N4", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "Which coursework is excluded from the final grade calculation in course 1.017?", "delta": "excluded components, not the counted ones"}
+{"id": "d1_s0081_N4_v2", "axis": "N4", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "Which quiz in course 1.017 does not count toward the final grade?", "delta": "the quiz excluded from grading"}
+{"id": "d1_s0081_N4_v3", "axis": "N4", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "Which work in course 1.017 is ungraded?", "delta": "ungraded work, not the graded weights"}
+{"id": "d1_s0081_N4_v4", "axis": "N4", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "How is the final grade calculated in course 1.017 if a quiz is not taken?", "delta": "the missed-quiz case, not the standard weights"}
+{"id": "d1_s0081_N5_v1", "axis": "N5", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "What is the minimum overall percentage required to pass course 1.017?", "delta": "passing threshold, not the weight breakdown"}
+{"id": "d1_s0081_N5_v2", "axis": "N5", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "At most how many quizzes can be missed in course 1.017 without failing?", "delta": "maximum missable quizzes, not the weights"}
+{"id": "d1_s0081_N5_v3", "axis": "N5", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "Which graded component in course 1.017 comes earliest in the term?", "delta": "earliest assessment, not the weights"}
+{"id": "d1_s0081_N5_v4", "axis": "N5", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "What is the highest possible homework score in course 1.017?", "delta": "maximum homework points, not its 40% weight"}
+{"id": "d1_s0081_N6_v1", "axis": "N6", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "How is a make-up quiz weighted in the final grade for course 1.017?", "delta": "asks make-up quiz handling, presupposed fact"}
+{"id": "d1_s0081_N6_v2", "axis": "N6", "seed_question": "How is the final grade calculated in course 1.017?", "answer": "40% from homework and in-class exercises, and 20% from each of the three quizzes.", "variation": "When are the three quizzes scheduled in course 1.017?", "delta": "asks quiz dates, presupposed fact"}
+{"id": "d1_s0087_P1_v1", "axis": "P1", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "How large is the Problem set 2 file in Ecology I: The Earth System?", "delta": null}
+{"id": "d1_s0087_P1_v2", "axis": "P1", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "What size is the file for Problem set 2 in Ecology I: The Earth System?", "delta": null}
+{"id": "d1_s0087_P1_v3", "axis": "P1", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "How big is the download for Problem set 2 in Ecology I: The Earth System?", "delta": null}
+{"id": "d1_s0087_P1_v4", "axis": "P1", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "What is the size in megabytes of the Problem set 2 file in Ecology I: The Earth System?", "delta": null}
+{"id": "d1_s0087_P2_v1", "axis": "P2", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "Tell me the file size of Problem set 2 in Ecology I: The Earth System.", "delta": null}
+{"id": "d1_s0087_P2_v2", "axis": "P2", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "Problem set 2 in Ecology I: The Earth System — what file size does it have?", "delta": null}
+{"id": "d1_s0087_P2_v3", "axis": "P2", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "In Ecology I: The Earth System, the Problem set 2 file comes to how many megabytes?", "delta": null}
+{"id": "d1_s0087_P2_v4", "axis": "P2", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "I need the file size listed for Problem set 2 of Ecology I: The Earth System.", "delta": null}
+{"id": "d1_s0087_P3_v1", "axis": "P3", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "file size of problem set 2 in ecology i??", "delta": null}
+{"id": "d1_s0087_P3_v2", "axis": "P3", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "how big is the ps2 file in ecology 1 the earth system", "delta": null}
+{"id": "d1_s0087_P3_v3", "axis": "P3", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "ecology I earth system - problm set 2 filesize?", "delta": null}
+{"id": "d1_s0087_P3_v4", "axis": "P3", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "whats ps 2 file size (mb) for ecology i the earth sys, thx", "delta": null}
+{"id": "d1_s0087_N1_v1", "axis": "N1", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "When is Problem set 2 due in Ecology I: The Earth System?", "delta": "asks the due date, not the file size"}
+{"id": "d1_s0087_N1_v2", "axis": "N1", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "What file format is Problem set 2 in Ecology I: The Earth System?", "delta": "asks the format, not the size"}
+{"id": "d1_s0087_N2_v1", "axis": "N2", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "What is the file size of the solutions to Problem set 2 in Ecology I: The Earth System?", "delta": "narrows to the solutions file"}
+{"id": "d1_s0087_N2_v2", "axis": "N2", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "What is the total file size of all problem sets in Ecology I: The Earth System?", "delta": "widens to all problem sets"}
+{"id": "d1_s0087_N3_v1", "axis": "N3", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "What is the file size of Problem set 3 in Ecology I: The Earth System?", "delta": "Problem set 3, not Problem set 2"}
+{"id": "d1_s0087_N3_v2", "axis": "N3", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "What is the file size of Problem set 2 in Ecology II?", "delta": "a different course"}
+{"id": "d1_s0087_N4_v1", "axis": "N4", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "Which problem set in Ecology I: The Earth System has no file attached?", "delta": "the problem set without a file"}
+{"id": "d1_s0087_N4_v2", "axis": "N4", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "Which problem set files in Ecology I: The Earth System are unavailable for download?", "delta": "unavailable files, not the size"}
+{"id": "d1_s0087_N4_v3", "axis": "N4", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "Is Problem set 2 in Ecology I: The Earth System optional rather than required?", "delta": "asks whether it is optional"}
+{"id": "d1_s0087_N4_v4", "axis": "N4", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "Which file for Problem set 2 in Ecology I: The Earth System is not counted in its listed size?", "delta": "the file excluded from the stated size"}
+{"id": "d1_s0087_N5_v1", "axis": "N5", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "Which problem set in Ecology I: The Earth System has the largest file size?", "delta": "largest problem set file, not set 2's"}
+{"id": "d1_s0087_N5_v2", "axis": "N5", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "Which problem set in Ecology I: The Earth System has the smallest file size?", "delta": "smallest problem set file, not set 2's"}
+{"id": "d1_s0087_N5_v3", "axis": "N5", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "What is the maximum file size allowed for submissions in Ecology I: The Earth System?", "delta": "upload size limit, not the file's size"}
+{"id": "d1_s0087_N5_v4", "axis": "N5", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "What is the file size of the last problem set in Ecology I: The Earth System?", "delta": "final problem set's size, not set 2's"}
+{"id": "d1_s0087_N6_v1", "axis": "N6", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "Where can the Problem set 2 file for Ecology I: The Earth System be downloaded?", "delta": "asks the download location"}
+{"id": "d1_s0087_N6_v2", "axis": "N6", "seed_question": "What is the file size of Problem set 2 in Ecology I: The Earth System?", "answer": "3.1MB.", "variation": "How many questions does Problem set 2 in Ecology I: The Earth System contain?", "delta": "asks the question count, presupposed fact"}
+{"id": "d1_s0092_P1_v1", "axis": "P1", "seed_question": "How many design projects are students graded on in 1.012?", "answer": "Four design projects.", "variation": "On how many design projects are students assessed in 1.012?", "delta": null}
+{"id": "d1_s0092_P1_v2", "axis": "P1", "seed_question": "How many design projects are students graded on in 1.012?", "answer": "Four design projects.", "variation": "How many design projects count toward students' grades in 1.012?", "delta": null}
+{"id": "d1_s0092_P1_v3", "axis": "P1", "seed_question": "How many design projects are students graded on in 1.012?", "answer": "Four design projects.", "variation": "What number of design projects are graded for students in course 1.012?", "delta": null}
+{"id": "d1_s0092_P1_v4", "axis": "P1", "seed_question": "How many design projects are students graded on in 1.012?", "answer": "Four design projects.", "variation": "How many design projects do students get marked on in 1.012?", "delta": null}
+{"id": "d1_s0092_P2_v1", "axis": "P2", "seed_question": "How many design projects are students graded on in 1.012?", "answer": "Four design projects.", "variation": "Tell me the number of design projects that students are graded on in 1.012.", "delta": null}
+{"id": "d1_s0092_P2_v2", "axis": "P2", "seed_question": "How many design projects are students graded on in 1.012?", "answer": "Four design projects.", "variation": "In 1.012, students are graded on how many design projects?", "delta": null}
+{"id": "d1_s0092_P2_v3", "axis": "P2", "seed_question": "How many design projects are students graded on in 1.012?", "answer": "Four design projects.", "variation": "I want to know how many graded design projects students have in 1.012.", "delta": null}
+{"id": "d1_s0092_P2_v4", "axis": "P2", "seed_question": "How many design projects are students graded on in 1.012?", "answer": "Four design projects.", "variation": "The number of design projects used to grade students in 1.012 is what?", "delta": null}
+{"id": "d1_s0092_P3_v1", "axis": "P3", "seed_question": "How many design projects are students graded on in 1.012?", "answer": "Four design projects.", "variation": "how many design projects r students graded on in 1.012?", "delta": null}

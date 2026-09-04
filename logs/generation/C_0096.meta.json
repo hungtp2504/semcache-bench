@@ -1,0 +1,51 @@
+{
+  "batch_id": "C_0096",
+  "stage": "C",
+  "model_requested": "claude-haiku-4-5-20251001",
+  "model_reported": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "prompt_file": "prompts/A4_variation.md",
+  "prompt_version": "1.2\"   # v1.2 2026-08-12: N4/N5 overgenerate-and-filter (4 candidates each;",
+  "cached_block_sha256": "666c8b65cef5675fe994b0ee22800851ef00fbed5b3e1e1d471b5c003b205c70",
+  "input_file": "data/rq6_seed_subset.jsonl",
+  "input_lines": "161:170",
+  "n_input": 10,
+  "ts_start": "2026-09-01T13:27:44Z",
+  "ts_end": "2026-09-01T13:30:32Z",
+  "cli_session_id": "49424ec6-e3c7-4600-a450-8fbc32d52a60",
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 15153,
+    "cache_read_input_tokens": 22499,
+    "output_tokens": 23441,
+    "output_tokens_details": {
+      "thinking_tokens": 7234
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15153,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 23441,
+        "cache_read_input_tokens": 22499,
+        "cache_creation_input_tokens": 15153,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15153
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "cost_usd": 0.1497699
+}

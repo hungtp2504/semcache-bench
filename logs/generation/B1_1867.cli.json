@@ -1,0 +1,93 @@
+{
+  "is_error": false,
+  "duration_api_ms": 124119,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "1df703d3-acda-41ce-bde5-d7c712db123e",
+  "total_cost_usd": 0.3149732,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 41397,
+    "cache_read_input_tokens": 91786,
+    "output_tokens": 13102,
+    "output_tokens_details": {
+      "thinking_tokens": 10042
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 41397,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2994,
+        "cache_read_input_tokens": 61508,
+        "cache_creation_input_tokens": 10167,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10167
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 13102,
+      "cacheReadInputTokens": 91786,
+      "cacheCreationInputTokens": 41397,
+      "webSearchRequests": 0,
+      "costUSD": 0.3149732,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0654_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0654_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0654_N2_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"changes both the counted entity type (Profile→img) and the container (Gallery→each Profile) — two changes, not one scope qualifier; reads as an aspect change\"}\n{\"id\":\"d3_s0654_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0654_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0654_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0654_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0654_N4_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d3_s0654_N4_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0654_N5_v1\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"no existing min/max/earliest/latest quantifier in seed to flip; introduces a new ordinal facet (last) — an aspect change, not a quantifier flip\"}\n{\"id\":\"d3_s0654_N5_v2\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"same issue as v1 with 'first' — introduces an extreme absent from the seed rather than flipping one\"}\n{\"id\":\"d3_s0654_N5_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a superlative ('most children') across components with no corresponding quantifier in the seed to flip\"}\n{\"id\":\"d3_s0654_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a count of childless components — not a min/max/earliest/latest flip of anything in the seed\"}\n{\"id\":\"d3_s0654_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0654_N6_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks an unrelated fact (heading text) rather than presupposing a different related fact — plain aspect change\"}\n{\"id\":\"d3_s0660_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0660_P1_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0660_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0660_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0660_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0660_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0660_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0660_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0660_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0660_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0660_P3_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0660_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0660_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0660_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0660_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0660_N2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0660_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0660_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0660_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks a different facet (auto-fixable problems) rather than flipping a negation/antonym present in the seed's answer — seed answer would just be incomplete, not wrong-signed\"}\n{\"id\":\"d3_s0660_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks how to disable ESLint — a different aspect, not a polarity flip of any claim in the seed's answer\"}\n{\"id\":\"d3_s0660_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0660_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0660_N5_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces a historical/temporal extreme absent from the seed and swaps the entity — not a flip of an existing quantifier\"}\n{\"id\":\"d3_s0660_N5_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"introduces 'newest' extreme not present in seed; more entity substitution than quantifier flip\"}\n{\"id\":\"d3_s0660_N5_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"introduces a version-minimum concept entirely absent from the seed rather than flipping an existing quantifier\"}\n{\"id\":\"d3_s0660_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a complement/list question ('besides ESLint'), not a min/max/earliest/latest flip\"}\n{\"id\":\"d3_s0660_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0660_N6_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"plain how-to/aspect change (editor integration), not a presupposition of a different related fact\"}\n{\"id\":\"d3_s0667_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0667_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0667_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0667_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0667_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0667_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0667_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0667_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0667_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0667_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0667_P3_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0667_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0667_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0667_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0667_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0667_N2_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0667_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}",
+  "ttft_ms": 103594,
+  "ttft_stream_ms": 5697,
+  "time_to_request_ms": 24,
+  "type": "result",
+  "duration_ms": 125015,
+  "uuid": "75fdee35-6c80-473e-84df-21f06436454b",
+  "queued_turn_count": 0
+}

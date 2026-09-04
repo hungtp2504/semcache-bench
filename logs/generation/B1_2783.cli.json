@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 183761,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "7b3e78fa-6dee-40cd-bc30-37e0b611c142",
+  "total_cost_usd": 0.40296599999999994,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 49148,
+    "cache_read_input_tokens": 93030,
+    "output_tokens": 18776,
+    "output_tokens_details": {
+      "thinking_tokens": 15793
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 49148,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3000,
+        "cache_read_input_tokens": 62752,
+        "cache_creation_input_tokens": 16674,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16674
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 18776,
+      "cacheReadInputTokens": 93030,
+      "cacheCreationInputTokens": 49148,
+      "webSearchRequests": 0,
+      "costUSD": 0.40296599999999994,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d3_s0357_N3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0357_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks which issue categories are excluded, not a negation of the timeframe fact; seed's answer is simply irrelevant, not misleading\"}\n{\"id\":\"d3_s0357_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0357_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to a categorical 'which vulnerabilities' question rather than a clean polarity flip of the same fact\"}\n{\"id\":\"d3_s0357_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"presupposes an escalation process; this is a presupposition shift (N6-like), not a negation/antonym flip\"}\n{\"id\":\"d3_s0357_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0357_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'longest actual time' doesn't flip the extreme vs seed's aim (already an upper-bound/max concept); only target→actual changes, no min/max flip\"}\n{\"id\":\"d3_s0357_N5_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0357_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"yes/no exceptions question, not a min/max/earliest/latest/at-least/at-most flip\"}\n{\"id\":\"d3_s0357_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0357_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d3_s0363_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0363_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0363_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0363_P1_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0363_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0363_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0363_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0363_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0363_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0363_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0363_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0363_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0363_N1_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0363_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0363_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0363_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0363_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0363_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0363_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"shifts from a quantity question to a categorical 'which option' question rather than negating the same fact\"}\n{\"id\":\"d3_s0363_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks which content is retained (categorical), not a negation flip of the savings quantity\"}\n{\"id\":\"d3_s0363_N4_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d3_s0363_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"rationale/'why avoid' question, not a negation flip of the same fact\"}\n{\"id\":\"d3_s0363_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"minimum possible download size is likely ~70MB, already present in seed's answer, so the answer isn't necessarily different\"}\n{\"id\":\"d3_s0363_N5_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0363_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks a generic git minimum-depth fact (trivially 1), unrelated to data-transfer savings — aspect change rather than extreme flip of the same fact\"}\n{\"id\":\"d3_s0363_N5_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"presupposes multiple comparable optimizations exist and asks for the max among them — closer to presupposition/scope-widen than a clean extreme flip\"}\n{\"id\":\"d3_s0363_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0363_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0369_P1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0369_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d3_s0369_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0369_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0369_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0369_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0369_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0369_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0369_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d3_s0369_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0369_P3_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0369_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d3_s0369_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0369_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d3_s0369_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0369_N2_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0369_N3_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d3_s0369_N3_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d3_s0369_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d3_s0369_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"bug-demo and fix-confirm shell examples likely use the same 30-day offset, so the answer would match seed's, not a genuine polarity flip\"}\n{\"id\":\"d3_s0369_N4_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}",
+  "ttft_ms": 163299,
+  "ttft_stream_ms": 1358,
+  "time_to_request_ms": 35,
+  "type": "result",
+  "duration_ms": 184556,
+  "uuid": "974aaaa8-e87b-4fc6-a65a-07539d6100c9",
+  "queued_turn_count": 0
+}

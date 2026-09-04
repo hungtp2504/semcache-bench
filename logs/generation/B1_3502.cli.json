@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 228952,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "041ee3f9-a40e-457a-a95a-9c0857ff1070",
+  "total_cost_usd": 0.4939696,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 60141,
+    "cache_read_input_tokens": 100538,
+    "output_tokens": 23329,
+    "output_tokens_details": {
+      "thinking_tokens": 20099
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 60141,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3217,
+        "cache_read_input_tokens": 70260,
+        "cache_creation_input_tokens": 20159,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 20159
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 23329,
+      "cacheReadInputTokens": 100538,
+      "cacheCreationInputTokens": 60141,
+      "webSearchRequests": 0,
+      "costUSD": 0.4939696,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0294_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"mixes domestic-cooperation term 'cơ sở phối hợp' (specific to hợp tác đào tạo) into a liên kết đào tạo với nước ngoài context where that role/term doesn't normally apply; not a clean plausible-sibling entity swap\"}\n{\"id\":\"d5_s0294_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0294_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"permission→obligation is a modal shift, not a negation/antonym flip; better fits N1 aspect change\"}\n{\"id\":\"d5_s0294_N4_v3\",\"axis_ok\":false,\"conf\":0.7,\"issue\":\"substitutes the activity noun (giảng dạy→đánh giá kết quả học tập), not a negation/antonym flip\"}\n{\"id\":\"d5_s0294_N4_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks about a wholly different fact (facilities excluded from use) rather than negating the seed's teaching-permission question\"}\n{\"id\":\"d5_s0294_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"seed is a boolean permission question with no quantifier to flip; introduces an unrelated numeric fact (max programs), effectively an N1 aspect change\"}\n{\"id\":\"d5_s0294_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces unrelated quantifier (curriculum share) about a different entity (cơ sở chủ trì, not cơ sở phối hợp); not a flip of anything in the seed\"}\n{\"id\":\"d5_s0294_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces unrelated quantifier (agreement duration) with no basis in seed's boolean permission question\"}\n{\"id\":\"d5_s0294_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces unrelated quantifier (minimum labs) unconnected to seed's teaching-permission question\"}\n{\"id\":\"d5_s0294_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0294_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0300_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0300_P1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0300_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0300_P1_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"'trường đại học' narrows the broader legal entity 'cơ sở đào tạo', an entity change disallowed under P1\"}\n{\"id\":\"d5_s0300_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0300_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0300_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0300_P2_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0300_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0300_P3_v2\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"'trường' substitutes for 'cơ sở đào tạo', a substantive entity narrowing beyond allowed surface noise\"}\n{\"id\":\"d5_s0300_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0300_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0300_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0300_N1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0300_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds a program-mode qualifier but the enrollment-time check plausibly applies uniformly regardless of study mode, so seed's answer likely still holds\"}\n{\"id\":\"d5_s0300_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0300_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0300_N3_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0300_N4_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0300_N4_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0300_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps the responsible actor (institution→student), an entity/agent substitution rather than a negation/antonym flip\"}\n{\"id\":\"d5_s0300_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a different facet (mismatch-handling procedure) rather than negating the seed's polarity\"}\n{\"id\":\"d5_s0300_N5_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0300_N5_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0300_N5_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0300_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts topic entirely to student disciplinary penalty, unrelated to seed's timing fact; not an extreme-flip of the same fact\"}\n{\"id\":\"d5_s0300_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0300_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0306_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0306_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0306_P1_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0306_P1_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0306_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0306_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0306_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0306_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0306_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0306_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0306_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0306_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0306_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0306_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0306_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrows to one section of the quy chế but the deadline plausibly applies to the whole document equally, so seed's answer likely still holds\"}\n{\"id\":\"d5_s0306_N2_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0306_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0306_N3_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0306_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0306_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about legal validity/effect of non-conforming regulations, a different facet from the deadline, not a single negation/antonym flip of the seed question\"}\n{\"id\":\"d5_s0306_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}",
+  "ttft_ms": 206102,
+  "ttft_stream_ms": 1505,
+  "time_to_request_ms": 19,
+  "type": "result",
+  "duration_ms": 229734,
+  "uuid": "c3868371-8ee2-4f97-841f-29513f947fe1",
+  "queued_turn_count": 0
+}

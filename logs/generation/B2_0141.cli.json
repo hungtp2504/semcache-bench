@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 87928,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "343c0d59-d47d-40e6-9267-6247c9878b85",
+  "total_cost_usd": 0.540069,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 32668,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 8154,
+    "output_tokens_details": {
+      "thinking_tokens": 5277
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 32668,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8154,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 32668,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 32668
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 8154,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 32668,
+      "webSearchRequests": 0,
+      "costUSD": 0.540069,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d1_s0403_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0403_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0403_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps the excluded item (exams->review problems) rather than flipping a negation/antonym; reads as scope/entity change, not polarity\"}\n{\"id\":\"d1_s0403_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"adds a new qualifier 'unsolved' instead of flipping an existing polarity; no negation/antonym flip of seed content\"}\n{\"id\":\"d1_s0403_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds a 'non-downloadable' qualifier not present in seed; qualifier addition rather than polarity flip, and likely unanswerable\"}\n{\"id\":\"d1_s0403_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"changes what->how many (count request); no quantifier/extreme flipped\"}\n{\"id\":\"d1_s0403_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"if review problems are the only other material, the last item is the seed's answer, so answer is not necessarily different\"}\n{\"id\":\"d1_s0403_N5_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"first non-exam item is most likely the review problems, so seed answer still answers it\"}\n{\"id\":\"d1_s0403_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks a count instead of flipping a quantifier/extreme\"}\n{\"id\":\"d1_s0403_N6_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0403_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0405_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0405_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0405_P1_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0405_P1_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0405_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0405_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0405_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0405_P2_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0405_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0405_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0405_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0405_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0405_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0405_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0405_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"substitutes lecture->recitation (session-type swap) rather than adding/removing exactly one scope qualifier\"}\n{\"id\":\"d1_s0405_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0405_N3_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0405_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0405_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"changes the counted unit (sessions/week -> weeks) as well as negating; trailing 'and for how long' becomes incoherent\"}\n{\"id\":\"d1_s0405_N4_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds an 'optional' qualifier rather than flipping an existing polarity; reads as scope narrowing\"}\n{\"id\":\"d1_s0405_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"per week -> per month is a unit/scope change, not a negation or antonym flip\"}\n{\"id\":\"d1_s0405_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0405_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0405_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d1_s0405_N5_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d1_s0405_N5_v4\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d1_s0405_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0405_N6_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d1_s0295_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0295_P1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0295_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0295_P1_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0295_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0295_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0295_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0295_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0295_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0295_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0295_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0295_P3_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0295_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0295_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0295_N2_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d1_s0295_N2_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0295_N3_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"keeps course number 1.060 while renaming to Engineering Mechanics I, producing an inconsistent (implausible) entity\"}\n{\"id\":\"d1_s0295_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0295_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d1_s0295_N4_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0295_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}",
+  "ttft_ms": 64920,
+  "ttft_stream_ms": 2232,
+  "time_to_request_ms": 20,
+  "type": "result",
+  "duration_ms": 88139,
+  "uuid": "104e8637-ddbe-45ab-8595-9b72a4aa39b9",
+  "queued_turn_count": 0
+}

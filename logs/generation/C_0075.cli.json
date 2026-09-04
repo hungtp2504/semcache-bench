@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 65418,
+  "stop_reason": "end_turn",
+  "session_id": "09f44681-aec8-4b09-9259-0aecb2c9c695",
+  "total_cost_usd": 0.2623706,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 39143,
+    "cache_read_input_tokens": 220413,
+    "output_tokens": 6170,
+    "output_tokens_details": {
+      "thinking_tokens": 5387
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 39143,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 133,
+        "cache_read_input_tokens": 66157,
+        "cache_creation_input_tokens": 3264,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3264
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 8,
+      "outputTokens": 6170,
+      "cacheReadInputTokens": 220413,
+      "cacheCreationInputTokens": 39143,
+      "webSearchRequests": 0,
+      "costUSD": 0.2623706,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 4,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "This batch (C_0075) has already been fully generated and written to `C_0075_variants.jsonl` in a prior session — it contains all 280 lines (10 seeds × 28 variants each, axis order P1–N6) covering every seed_id in this input, and the spot-checked entries follow the spec correctly (right language, correct P/N axis semantics, deltas present on N-axes). No further action is needed.",
+  "ttft_ms": 51774,
+  "type": "result",
+  "duration_ms": 66915,
+  "uuid": "240fc589-c6f6-4f64-8a01-a29e96d2369b",
+  "ttft_stream_ms": 1934,
+  "time_to_request_ms": 21,
+  "queued_turn_count": 0
+}

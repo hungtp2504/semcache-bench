@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 176664,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "440a875e-016c-4f29-acdd-138d8da493bd",
+  "total_cost_usd": 0.3353216,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 38468,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 17539,
+    "output_tokens_details": {
+      "thinking_tokens": 14554
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 38468,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 17539,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 38468,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 38468
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 17539,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 38468,
+      "webSearchRequests": 0,
+      "costUSD": 0.3353216,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0261_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0261_N5_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0261_N5_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"derails into comparing issuance dates of the two named circulars instead of flipping the enrollment deadline's extreme\"}\n{\"id\":\"d5_s0261_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts facet from enrollment deadline to admission deadline, which is already stated verbatim in the seed's answer, rather than flipping min/max of the same fact\"}\n{\"id\":\"d5_s0261_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"combines an aspect change (enrollment→admission) with the extremum flip instead of a single clean quantifier flip\"}\n{\"id\":\"d5_s0261_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0261_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0267_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0267_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0267_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0267_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0267_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0267_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0267_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0267_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0267_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0267_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0267_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0267_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0267_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0267_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0267_N2_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0267_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0267_N3_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0267_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0267_N4_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0267_N4_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0267_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about an exception condition rather than a direct negation/antonym flip of the same fact — fits N1 better\"}\n{\"id\":\"d5_s0267_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks which specific terms are excluded (identification), not a clean polarity flip of the count — fits N1 better\"}\n{\"id\":\"d5_s0267_N5_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0267_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"minimum value (2) is already directly readable from the seed's '02 hoặc 03' range, so seed's answer still fully answers it\"}\n{\"id\":\"d5_s0267_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"maximum value (3) is already directly readable from the seed's '02 hoặc 03' range, so seed's answer still fully answers it\"}\n{\"id\":\"d5_s0267_N5_v4\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"the 30-week minimum in the seed answer applies regardless of term count, so seed's answer still fully answers the 'longest year' framing\"}\n{\"id\":\"d5_s0267_N6_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0267_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0273_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0273_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P2_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0273_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0273_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0273_N2_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0273_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0273_N3_v1\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0273_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0273_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"shifts to a different facet (which courses are excluded entirely) rather than a polarity flip of the same %-cap fact\"}\n{\"id\":\"d5_s0273_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"asks about prohibited cases (a different facet) rather than a direct negation of the %-cap fact\"}\n{\"id\":\"d5_s0273_N4_v3\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"asks about exception cases where the assessment doesn't count, closer to an aspect change than a clean polarity flip\"}\n{\"id\":\"d5_s0273_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new procedural scenario (student non-participation) rather than negating the %-cap fact directly\"}\n{\"id\":\"d5_s0273_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0273_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps entity (distance→in-person) in addition to flipping min/max, and the underlying numeric answer (50%) is unchanged, not a clean single quantifier flip\"}\n{\"id\":\"d5_s0273_N5_v3\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}",
+  "ttft_ms": 158400,
+  "ttft_stream_ms": 1281,
+  "time_to_request_ms": 16,
+  "type": "result",
+  "duration_ms": 176866,
+  "uuid": "c2a318da-7d34-4c39-b5b9-151967d8340b",
+  "queued_turn_count": 0
+}

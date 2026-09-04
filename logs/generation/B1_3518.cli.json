@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 159251,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "166816b5-73c8-4900-8114-e2d3ebc362f0",
+  "total_cost_usd": 0.3956362,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 53435,
+    "cache_read_input_tokens": 100741,
+    "output_tokens": 16174,
+    "output_tokens_details": {
+      "thinking_tokens": 13154
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 53435,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2970,
+        "cache_read_input_tokens": 70463,
+        "cache_creation_input_tokens": 13250,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13250
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 16174,
+      "cacheReadInputTokens": 100741,
+      "cacheCreationInputTokens": 53435,
+      "webSearchRequests": 0,
+      "costUSD": 0.3956362,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0167_N5_v4\",\"axis_ok\":false,\"conf\":0.85,\"issue\":\"seed has no quantifier/extreme to flip; variant asks an unrelated max-program-count fact, not a min/max version of the accreditation question\"}\n{\"id\":\"d5_s0167_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0167_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0173_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0173_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0173_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0173_P1_v4\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d5_s0173_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0173_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0173_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0173_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0173_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0173_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0173_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0173_P3_v4\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0173_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0173_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0173_N2_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"two scope qualifiers changed at once (partner narrowed to doanh nghiệp AND module narrowed to học phần thực tập), not exactly one\"}\n{\"id\":\"d5_s0173_N2_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0173_N3_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps the activity type (học phần → luận án tiến sĩ) rather than a plausible sibling entity; reads as an aspect/topic change, not entity substitution\"}\n{\"id\":\"d5_s0173_N3_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"swaps the activity type (học phần → tuyển sinh) rather than a plausible sibling entity; reads as an aspect/topic change, not entity substitution\"}\n{\"id\":\"d5_s0173_N4_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0173_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts subject from partners to non-outsourceable modules, a new aspect rather than a clean negation of the original question\"}\n{\"id\":\"d5_s0173_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"shifts subject from partners to restricted resources, a new aspect rather than a clean negation of the original question\"}\n{\"id\":\"d5_s0173_N4_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0173_N5_v1\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"seed has no quantifier to flip; introduces an unrelated outsourcing-percentage-cap fact\"}\n{\"id\":\"d5_s0173_N5_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"seed has no quantifier to flip; introduces an unrelated per-module partner-count cap\"}\n{\"id\":\"d5_s0173_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed has no quantifier/extreme to flip; asks about list ordering, not a min/max of the original question\"}\n{\"id\":\"d5_s0173_N5_v4\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"seed has no quantifier to flip; introduces an unrelated minimum-partner-count requirement\"}\n{\"id\":\"d5_s0173_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0173_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0179_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0179_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0179_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0179_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0179_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_P2_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0179_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0179_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0179_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0179_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0179_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_N4_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0179_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a new concept (exempted learners) absent from the original rather than negating the original fact directly\"}\n{\"id\":\"d5_s0179_N4_v3\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"asks the consequence of a missed deadline, a presupposition-shift question (N6), not a negation/antonym flip\"}\n{\"id\":\"d5_s0179_N4_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0179_N5_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0179_N5_v2\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0179_N5_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0179_N5_v4\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"total maximum span equals the seed's stated 3-month cap, so the seed's answer would still fully answer it\"}\n{\"id\":\"d5_s0179_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0179_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0185_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 137451,
+  "ttft_stream_ms": 2290,
+  "time_to_request_ms": 17,
+  "type": "result",
+  "duration_ms": 160182,
+  "uuid": "acc5d7d1-46ee-4026-95d1-2cbb9f0f96da",
+  "queued_turn_count": 0
+}

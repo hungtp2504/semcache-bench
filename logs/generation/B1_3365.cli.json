@@ -1,0 +1,94 @@
+{
+  "is_error": false,
+  "duration_api_ms": 152604,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "92679f16-f17a-4c4c-b684-e5641366b5f0",
+  "total_cost_usd": 0.3239656,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 39954,
+    "cache_read_input_tokens": 30278,
+    "output_tokens": 15809,
+    "output_tokens_details": {
+      "thinking_tokens": 12965
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 39954,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 15809,
+        "cache_read_input_tokens": 30278,
+        "cache_creation_input_tokens": 39954,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 39954
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 15809,
+      "cacheReadInputTokens": 30278,
+      "cacheCreationInputTokens": 39954,
+      "webSearchRequests": 0,
+      "costUSD": 0.3239656,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0183_N3_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0183_N4_v1\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0183_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"Introduces a new predicate (which specific courses are restricted) rather than a clean negation of the credential requirement; closer to a presupposition/aspect shift than a polarity flip.\"}\n{\"id\":\"d5_s0183_N4_v3\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0183_N4_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0183_N5_v1\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0183_N5_v2\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"Asks about max course load, an unrelated fact, not a min/max flip of the seed's credential requirement.\"}\n{\"id\":\"d5_s0183_N5_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"Asks minimum count of professors staffing the program, an unrelated fact, not a flip of the seed's quantifier.\"}\n{\"id\":\"d5_s0183_N5_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0183_N6_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0183_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0189_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0189_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0189_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0189_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0189_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0189_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0189_P2_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0189_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0189_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0189_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0189_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0189_P3_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0189_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0189_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0189_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0189_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0189_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0189_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0189_N4_v1\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Shifts to grounds for rejection, a different aspect, rather than a negation flip of the deadline/confirmation obligation.\"}\n{\"id\":\"d5_s0189_N4_v2\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0189_N4_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"Asks post-rejection handling procedure, a different aspect, not a polarity flip of the approval-timing question.\"}\n{\"id\":\"d5_s0189_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Introduces an early-invalidity threshold not implied by the seed (which only sets a no-later-than deadline); this is an extreme/min-style question mislabeled as a polarity flip.\"}\n{\"id\":\"d5_s0189_N5_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0189_N5_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0189_N5_v3\",\"axis_ok\":false,\"conf\":0.75,\"issue\":\"Asks max number of topics proposed, an unrelated fact, not a flip of the seed's time quantifier.\"}\n{\"id\":\"d5_s0189_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"Changes the anchor point (before defense date vs. since admission) rather than flipping min/max on the same fact.\"}\n{\"id\":\"d5_s0189_N6_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0189_N6_v2\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0195_P1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0195_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0195_P1_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0195_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0195_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0195_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0195_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0195_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0195_P3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0195_P3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0195_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0195_P3_v4\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0195_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0195_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0195_N2_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0195_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0195_N3_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0195_N3_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d5_s0195_N4_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0195_N4_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"Asks for a numeric floor on how much the deadline can be shortened — a quantifier/extreme question, not a negation/polarity flip.\"}\n{\"id\":\"d5_s0195_N4_v3\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}",
+  "ttft_ms": 135709,
+  "ttft_stream_ms": 3321,
+  "time_to_request_ms": 17,
+  "type": "result",
+  "duration_ms": 152804,
+  "uuid": "39c36175-d343-4ac1-bc01-f55fe7d93f3b",
+  "queued_turn_count": 0
+}

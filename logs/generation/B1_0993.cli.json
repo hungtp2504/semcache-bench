@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 148840,
+  "num_turns": 2,
+  "stop_reason": "end_turn",
+  "session_id": "7fa7ef0c-4ce5-49f6-b53a-d643c91b1eab",
+  "total_cost_usd": 0.5492721,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 47331,
+    "cache_read_input_tokens": 93647,
+    "output_tokens": 15812,
+    "output_tokens_details": {
+      "thinking_tokens": 12759
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47331,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3011,
+        "cache_read_input_tokens": 63400,
+        "cache_creation_input_tokens": 14178,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 14178
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 4,
+      "outputTokens": 15812,
+      "cacheReadInputTokens": 93647,
+      "cacheCreationInputTokens": 47331,
+      "webSearchRequests": 0,
+      "costUSD": 0.5492721,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"id\":\"d1_s0674_P2_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0674_P2_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0674_P2_v3\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0674_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0674_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0674_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0674_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0674_P3_v4\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0674_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0674_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0674_N2_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"narrows to 'project component' but same single instructor plausibly still covers it; seed's answer likely still fully answers\"}\n{\"id\":\"d1_s0674_N2_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"widens to an entire course sequence rather than adding/removing one scope qualifier on the same course; changes question type\"}\n{\"id\":\"d1_s0674_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0674_N3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0674_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"adds a level qualifier (undergraduate) rather than a negation/antonym flip; this is a presupposition shift, not N4\"}\n{\"id\":\"d1_s0674_N4_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0674_N4_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0674_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"swaps role (grader vs instructor) is an aspect change, not a negation/antonym flip\"}\n{\"id\":\"d1_s0674_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes multiple offerings exist; only one term is evidenced by the seed, so the answer may coincide with it\"}\n{\"id\":\"d1_s0674_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes multiple offerings exist; only one term is evidenced by the seed, so the answer may coincide with it\"}\n{\"id\":\"d1_s0674_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces enrollment data not established anywhere in the seed; presupposes multiple terms with known enrollment\"}\n{\"id\":\"d1_s0674_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes multiple instructors across multiple terms, not evidenced by a single-instructor/single-term seed\"}\n{\"id\":\"d1_s0674_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0674_N6_v2\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0681_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0681_P1_v2\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0681_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0681_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_P3_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0681_P3_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_P3_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0681_N1_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_N1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_N2_v1\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d1_s0681_N2_v2\",\"axis_ok\":false,\"conf\":0.65,\"issue\":\"widens to all technology-and-law courses rather than adding/removing one scope qualifier; changes the question entirely\"}\n{\"id\":\"d1_s0681_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_N3_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0681_N4_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"adds a level qualifier (undergraduate) rather than a negation/antonym flip; a presupposition shift, not N4\"}\n{\"id\":\"d1_s0681_N4_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0681_N4_v3\",\"axis_ok\":true,\"conf\":0.75,\"issue\":null}\n{\"id\":\"d1_s0681_N4_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"compound presupposition (listed but did not teach) rather than a single negation/antonym flip\"}\n{\"id\":\"d1_s0681_N5_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes multiple offerings; only Spring 2006 is evidenced by the seed\"}\n{\"id\":\"d1_s0681_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"presupposes multiple offerings; only Spring 2006 is evidenced by the seed\"}\n{\"id\":\"d1_s0681_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes independently comparable per-instructor term counts, not evidenced by a single co-taught term\"}\n{\"id\":\"d1_s0681_N5_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"presupposes staggered instructor join dates, not evidenced by the seed\"}\n{\"id\":\"d1_s0681_N6_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0681_N6_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0686_P1_v1\",\"axis_ok\":true,\"conf\":0.95,\"issue\":null}\n{\"id\":\"d1_s0686_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_P1_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_P2_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d1_s0686_P2_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d1_s0686_P2_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n```",
+  "ttft_ms": 128638,
+  "ttft_stream_ms": 2055,
+  "time_to_request_ms": 27,
+  "type": "result",
+  "duration_ms": 149650,
+  "uuid": "6f7ea720-d843-40b5-a89c-46c072c63648"
+}

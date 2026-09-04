@@ -1,0 +1,94 @@
+{
+  "duration_api_ms": 103444,
+  "stop_reason": "end_turn",
+  "session_id": "b5ccb455-c01c-4eb9-a681-f8727926f80a",
+  "total_cost_usd": 0.586414,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 35070,
+    "cache_read_input_tokens": 19058,
+    "output_tokens": 9047,
+    "output_tokens_details": {
+      "thinking_tokens": 6144
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 35070,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 9047,
+        "cache_read_input_tokens": 19058,
+        "cache_creation_input_tokens": 35070,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 35070
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-5": {
+      "inputTokens": 2,
+      "outputTokens": 9047,
+      "cacheReadInputTokens": 19058,
+      "cacheCreationInputTokens": 35070,
+      "webSearchRequests": 0,
+      "costUSD": 0.586414,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"id\":\"d5_s0131_P1_v2\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0131_P1_v3\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0131_P1_v4\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0131_P2_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0131_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0131_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0131_P2_v4\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0131_P3_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0131_P3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0131_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0131_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0131_N1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0131_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0131_N2_v1\",\"axis_ok\":true,\"conf\":0.55,\"issue\":null}\n{\"id\":\"d5_s0131_N2_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0131_N3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0131_N3_v2\",\"axis_ok\":true,\"conf\":0.62,\"issue\":null}\n{\"id\":\"d5_s0131_N4_v1\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d5_s0131_N4_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"combines negation with aspect change (council membership vs chairmanship), not a single polarity flip\"}\n{\"id\":\"d5_s0131_N4_v3\",\"axis_ok\":false,\"conf\":0.62,\"issue\":\"rewritten into a different question type (in which cases), not a single negation/antonym flip of the seed\"}\n{\"id\":\"d5_s0131_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"scope qualifier flip, and for a non-delegated unit the seed's answer (head of school) would still be correct\"}\n{\"id\":\"d5_s0131_N5_v1\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"seed has no quantifier to flip; asking member count is an aspect change (N1), not a quantifier/extreme flip\"}\n{\"id\":\"d5_s0131_N5_v2\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"quorum question is newly introduced, not a flip of any quantifier present in the seed\"}\n{\"id\":\"d5_s0131_N5_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"contrived document-ordering question; no quantifier/extreme in the seed was flipped\"}\n{\"id\":\"d5_s0131_N5_v4\",\"axis_ok\":true,\"conf\":0.5,\"issue\":null}\n{\"id\":\"d5_s0131_N6_v1\",\"axis_ok\":false,\"conf\":0.5,\"issue\":\"no shifted presupposition; and the signer is plausibly the same head of school/deputy, so the seed's answer may still apply\"}\n{\"id\":\"d5_s0131_N6_v2\",\"axis_ok\":false,\"conf\":0.52,\"issue\":\"who establishes the council is plausibly the same head of school, so the answer is not clearly different\"}\n{\"id\":\"d5_s0138_P1_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0138_P1_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0138_P1_v3\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0138_P1_v4\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0138_P2_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0138_P2_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0138_P2_v3\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0138_P2_v4\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0138_P3_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0138_P3_v2\",\"axis_ok\":true,\"conf\":0.78,\"issue\":null}\n{\"id\":\"d5_s0138_P3_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0138_P3_v4\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0138_N1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0138_N1_v2\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0138_N2_v1\",\"axis_ok\":true,\"conf\":0.68,\"issue\":null}\n{\"id\":\"d5_s0138_N2_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"changes the subject event (evaluation completion → report submission to the Ministry) rather than adding exactly one scope qualifier\"}\n{\"id\":\"d5_s0138_N3_v1\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0138_N3_v2\",\"axis_ok\":true,\"conf\":0.8,\"issue\":null}\n{\"id\":\"d5_s0138_N4_v1\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"deadline before/after flip — the explicitly excluded case; answer content stays the same date\"}\n{\"id\":\"d5_s0138_N4_v2\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0138_N4_v3\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"negation combined with a change of question type (which unit vs which date), not a single polarity flip\"}\n{\"id\":\"d5_s0138_N4_v4\",\"axis_ok\":false,\"conf\":0.6,\"issue\":\"introduces a postponement presupposition; no negation or antonym flip of the seed\"}\n{\"id\":\"d5_s0138_N5_v1\",\"axis_ok\":true,\"conf\":0.7,\"issue\":null}\n{\"id\":\"d5_s0138_N5_v2\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"frequency-count question newly introduced; no existing quantifier/extreme in the seed was flipped\"}\n{\"id\":\"d5_s0138_N5_v3\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0138_N5_v4\",\"axis_ok\":false,\"conf\":0.55,\"issue\":\"adds an extension presupposition rather than flipping the seed's latest/earliest extreme\"}\n{\"id\":\"d5_s0138_N6_v1\",\"axis_ok\":true,\"conf\":0.6,\"issue\":null}\n{\"id\":\"d5_s0138_N6_v2\",\"axis_ok\":true,\"conf\":0.65,\"issue\":null}\n{\"id\":\"d5_s0145_P1_v1\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0145_P1_v2\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}\n{\"id\":\"d5_s0145_P1_v3\",\"axis_ok\":true,\"conf\":0.85,\"issue\":null}\n{\"id\":\"d5_s0145_P1_v4\",\"axis_ok\":true,\"conf\":0.88,\"issue\":null}\n{\"id\":\"d5_s0145_P2_v1\",\"axis_ok\":true,\"conf\":0.9,\"issue\":null}",
+  "ttft_ms": 80714,
+  "type": "result",
+  "duration_ms": 103638,
+  "uuid": "3296d449-3f1d-4eab-8412-3993d1b54188",
+  "ttft_stream_ms": 2800,
+  "time_to_request_ms": 18,
+  "queued_turn_count": 0
+}

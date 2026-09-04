@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_1009
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d1_s0125_N1_v1", "axis": "N1", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "When is problem set 1 due in Ecology II: Engineering for Sustainability?", "delta": "asks the due date, not the topic"}
+{"id": "d1_s0125_N1_v2", "axis": "N1", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "How is problem set 1 graded in Ecology II: Engineering for Sustainability?", "delta": "asks grading method, not the topic"}
+{"id": "d1_s0125_N2_v1", "axis": "N2", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "What is part (b) of problem set 1 in Ecology II: Engineering for Sustainability about?", "delta": "one sub-question, not the whole set"}
+{"id": "d1_s0125_N2_v2", "axis": "N2", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "What are all the problem sets in Ecology II: Engineering for Sustainability about?", "delta": "widens to every problem set"}
+{"id": "d1_s0125_N3_v1", "axis": "N3", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "What is problem set 2 about in Ecology II: Engineering for Sustainability?", "delta": "a different problem set"}
+{"id": "d1_s0125_N3_v2", "axis": "N3", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "What is problem set 1 about in Ecology I: The Earth System?", "delta": "a different course"}
+{"id": "d1_s0125_N4_v1", "axis": "N4", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "Which problem set in Ecology II: Engineering for Sustainability is about desalination in irrigated agriculture?", "delta": "desalination, not salination"}
+{"id": "d1_s0125_N4_v2", "axis": "N4", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "Which problem set in Ecology II: Engineering for Sustainability covers salination in non-irrigated agriculture?", "delta": "non-irrigated instead of irrigated agriculture"}
+{"id": "d1_s0125_N4_v3", "axis": "N4", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "Which problem set in Ecology II: Engineering for Sustainability is not about salination?", "delta": "sets other than the salination one"}
+{"id": "d1_s0125_N4_v4", "axis": "N4", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "Which topics are excluded from problem set 1 in Ecology II: Engineering for Sustainability?", "delta": "excluded topics, not the covered topic"}
+{"id": "d1_s0125_N5_v1", "axis": "N5", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "What is the last problem set about in Ecology II: Engineering for Sustainability?", "delta": "final problem set, not the first"}
+{"id": "d1_s0125_N5_v2", "axis": "N5", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "Which problem set in Ecology II: Engineering for Sustainability is the most heavily weighted?", "delta": "highest-weight set, not set 1's topic"}
+{"id": "d1_s0125_N5_v3", "axis": "N5", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "What are the remaining problem sets in Ecology II: Engineering for Sustainability about, other than problem set 1?", "delta": "all sets except the first"}
+{"id": "d1_s0125_N5_v4", "axis": "N5", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "Which Ecology II: Engineering for Sustainability problem set covers salination most extensively?", "delta": "most extensive salination set, not set 1"}
+{"id": "d1_s0125_N6_v1", "axis": "N6", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "What data do I need to solve the salination problem in problem set 1 of Ecology II: Engineering for Sustainability?", "delta": "asks required data, presupposed task"}
+{"id": "d1_s0125_N6_v2", "axis": "N6", "seed_question": "What is problem set 1 about in Ecology II: Engineering for Sustainability?", "answer": "Problem set 1 is about salination in irrigated agriculture.", "variation": "Where are the solutions to the salination problem set 1 in Ecology II: Engineering for Sustainability?", "delta": "asks where solutions are posted"}
+{"id": "d1_s0131_P1_v1", "axis": "P1", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "Which session does Exam 2 take place in?", "delta": null}
+{"id": "d1_s0131_P1_v2", "axis": "P1", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "What session number is Exam 2 given in?", "delta": null}
+{"id": "d1_s0131_P1_v3", "axis": "P1", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "During which class session is Exam 2 administered?", "delta": null}
+{"id": "d1_s0131_P1_v4", "axis": "P1", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "Exam 2 falls in which session?", "delta": null}
+{"id": "d1_s0131_P2_v1", "axis": "P2", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "Tell me the session in which Exam 2 is held.", "delta": null}
+{"id": "d1_s0131_P2_v2", "axis": "P2", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "Exam 2 is held during which session?", "delta": null}
+{"id": "d1_s0131_P2_v3", "axis": "P2", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "I want to know which session hosts Exam 2.", "delta": null}
+{"id": "d1_s0131_P2_v4", "axis": "P2", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "In which session will Exam 2 be scheduled?", "delta": null}
+{"id": "d1_s0131_P3_v1", "axis": "P3", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "exam 2 is in which session??", "delta": null}
+{"id": "d1_s0131_P3_v2", "axis": "P3", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "which sesion is exam 2 held in", "delta": null}
+{"id": "d1_s0131_P3_v3", "axis": "P3", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "exam2 = what session number?", "delta": null}
+{"id": "d1_s0131_P3_v4", "axis": "P3", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "wat session do we hav exam 2", "delta": null}
+{"id": "d1_s0131_N1_v1", "axis": "N1", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "How long does Exam 2 last?", "delta": "asks duration, not the session"}
+{"id": "d1_s0131_N1_v2", "axis": "N1", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "How much is Exam 2 worth toward the final grade?", "delta": "asks grade weight, not the session"}
+{"id": "d1_s0131_N2_v1", "axis": "N2", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "In which session is the review for Exam 2 held?", "delta": "review session, not the exam itself"}
+{"id": "d1_s0131_N2_v2", "axis": "N2", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "In which sessions are all the exams held?", "delta": "widens to every exam in the course"}
+{"id": "d1_s0131_N3_v1", "axis": "N3", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "In which session is Exam 1 held?", "delta": "a different exam"}
+{"id": "d1_s0131_N3_v2", "axis": "N3", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "In which session is the final project presentation held?", "delta": "a different assessment"}
+{"id": "d1_s0131_N4_v1", "axis": "N4", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "To which session was Exam 2 postponed?", "delta": "rescheduled session, not the scheduled one"}
+{"id": "d1_s0131_N4_v2", "axis": "N4", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "Which exam is not held in session 22?", "delta": "exam other than the session-22 one"}
+{"id": "d1_s0131_N4_v3", "axis": "N4", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "In which session is Exam 2 optional rather than required?", "delta": "optional sitting, not the required one"}
+{"id": "d1_s0131_N4_v4", "axis": "N4", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "In which sessions is Exam 2 not administered?", "delta": "sessions without Exam 2"}
+{"id": "d1_s0131_N5_v1", "axis": "N5", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "In which session is the last exam of the course held?", "delta": "final exam's session, not Exam 2's"}
+{"id": "d1_s0131_N5_v2", "axis": "N5", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "What is the earliest session in which an exam is held?", "delta": "first exam's session, not Exam 2's"}
+{"id": "d1_s0131_N5_v3", "axis": "N5", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "What is the highest-numbered session of the course?", "delta": "final session number, not the exam session"}
+{"id": "d1_s0131_N5_v4", "axis": "N5", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "Which exam is held in the latest session?", "delta": "the latest-session exam, not its session"}
+{"id": "d1_s0131_N6_v1", "axis": "N6", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "What happens if I miss Exam 2 in session 22?", "delta": "asks make-up policy for missing it"}
+{"id": "d1_s0131_N6_v2", "axis": "N6", "seed_question": "In which session is Exam 2 held?", "answer": "Exam 2 is held in session 22, during the life cycle analysis topic.", "variation": "Is Exam 2 in session 22 open-book?", "delta": "asks exam rules, presupposed session"}
+{"id": "d1_s0137_P1_v1", "axis": "P1", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "How many practice exams that include solutions are provided in the course?", "delta": null}
+{"id": "d1_s0137_P1_v2", "axis": "P1", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "What number of practice exams with answer keys does the course provide?", "delta": null}
+{"id": "d1_s0137_P1_v3", "axis": "P1", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "How many sample exams with worked solutions are available in this course?", "delta": null}
+{"id": "d1_s0137_P1_v4", "axis": "P1", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "The course supplies how many practice exams complete with solutions?", "delta": null}
+{"id": "d1_s0137_P2_v1", "axis": "P2", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "Tell me the number of practice exams with solutions offered by the course.", "delta": null}
+{"id": "d1_s0137_P2_v2", "axis": "P2", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "Practice exams with solutions — how many does the course include?", "delta": null}
+{"id": "d1_s0137_P2_v3", "axis": "P2", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "I would like a count of the practice exams with solutions provided in the course.", "delta": null}
+{"id": "d1_s0137_P2_v4", "axis": "P2", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "How many practice exams with solutions are offered by the course?", "delta": null}
+{"id": "d1_s0137_P3_v1", "axis": "P3", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "how many practice exams w/ solutions does the course have?", "delta": null}
+{"id": "d1_s0137_P3_v2", "axis": "P3", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "practise exams with solutions - how many r there?", "delta": null}
+{"id": "d1_s0137_P3_v3", "axis": "P3", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "hw many practice exams + solns does this course offer", "delta": null}
+{"id": "d1_s0137_P3_v4", "axis": "P3", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "num of practice exams with solutions in the course??", "delta": null}
+{"id": "d1_s0137_N1_v1", "axis": "N1", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "Where can I download the practice exams with solutions for the course?", "delta": "asks where they are posted, not how many"}
+{"id": "d1_s0137_N1_v2", "axis": "N1", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "What topics do the course's practice exams with solutions cover?", "delta": "asks topics covered, not the count"}
+{"id": "d1_s0137_N2_v1", "axis": "N2", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "How many practice exams with solutions does the course offer for Exam 1 only?", "delta": "narrows to Exam 1 alone"}
+{"id": "d1_s0137_N2_v2", "axis": "N2", "seed_question": "How many practice exams with solutions does the course offer?", "answer": "The course offers two practice exams with solutions: Exam 1 and Exam 2.", "variation": "How many practice exams does the course offer in total, with or without solutions?", "delta": "drops the with-solutions qualifier"}

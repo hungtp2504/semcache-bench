@@ -1,0 +1,60 @@
+{"id": "d3_s0392_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.85, "issue": "not a quantifier/extreme flip of the seed fact; shifts to unrelated topic (pattern-check order) with no clear ground-truth answer", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0392_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0392_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "phrasing is ungrammatical beyond a normal structural reframe (\"is retrieved by vote() how\")", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "vote() code doesn't branch on request method, so retrieval behavior for GET is identical to POST; answer wouldn't differ", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "detail() has no choice-selection logic, so the second clause is incoherent/inapplicable rather than a clean single-entity swap", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.7, "issue": "swaps to a missing-Question scenario, not a negation/antonym of \"no choice selected\"; this is an aspect change, not a polarity flip", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.65, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "flips a different quantifier dimension (choices existing vs. choices selected) rather than the seed's own quantifier", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "code raises KeyError on missing 'choice' regardless of whether other POST fields exist, so answer is not necessarily different", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0398_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P1_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P1_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P2_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P2_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P2_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P3_v3", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_P3_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N1_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.9, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N2_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "panels ship as part of the same package maintained by Django Commons, so answer likely doesn't differ", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N2_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.8, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N3_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N3_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N4_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N4_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.7, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N4_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "presupposes the package was discontinued (false), not a clean negation of \"maintains\"", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N4_v4", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.55, "issue": "inverts subject/object relationship (org->packages instead of package->org) rather than a single negation flip", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N5_v1", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.6, "issue": "asks for a count trivially derivable from the seed's answer (one org), not a flip of an existing quantifier yielding new information", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N5_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N5_v3", "judge_model": "claude-sonnet-5", "axis_ok": false, "conf": 0.65, "issue": "changes the question's subject entirely (largest package by that org) rather than flipping an extreme on the maintainer relationship", "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N5_v4", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.6, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N6_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.85, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0422_N6_v2", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.75, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}
+{"id": "d3_s0429_P1_v1", "judge_model": "claude-sonnet-5", "axis_ok": true, "conf": 0.95, "issue": null, "batch_id": "B1_1857", "ts": "2026-08-26T09:30:45Z"}

@@ -1,0 +1,68 @@
+{
+  "is_error": false,
+  "duration_api_ms": 44627,
+  "num_turns": 1,
+  "stop_reason": "end_turn",
+  "session_id": "25fe1dfe-948f-497d-8d67-32ff30b6b9a2",
+  "total_cost_usd": 0.2573625,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 25898,
+    "cache_read_input_tokens": 30245,
+    "output_tokens": 6193,
+    "output_tokens_details": {
+      "thinking_tokens": 2465
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 25898,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6193,
+        "cache_read_input_tokens": 30245,
+        "cache_creation_input_tokens": 25898,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 25898
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-sonnet-5": {
+      "inputTokens": 2,
+      "outputTokens": 6193,
+      "cacheReadInputTokens": 30245,
+      "cacheCreationInputTokens": 25898,
+      "webSearchRequests": 0,
+      "costUSD": 0.2573625,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-sonnet-5",
+      "provider": "firstParty"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_assignments\",\"statement\":\"Prof. Kenneth Smith is the instructor of course 10.52 Mechanics of Fluids.\",\"source_span\":\"Instructor\\nProf. Kenneth Smith\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_assignments\",\"statement\":\"10.52 Mechanics of Fluids was taught in Spring 2006 at the graduate level.\",\"source_span\":\"10.52 | Spring 2006 | Graduate\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_assignments\",\"statement\":\"10.52 Mechanics of Fluids is offered by the Chemical Engineering department.\",\"source_span\":\"Departments\\nChemical Engineering\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_assignments\",\"statement\":\"The course lists six problem sets, Problem Set 1 through Problem Set 6.\",\"source_span\":\"Problem Set 1 (\\nPDF\\n)\\nProblem Set 2 (\\nPDF\\n)\\nProblem Set 3 (\\nPDF\\n)\\nProblem Set 4 (\\nPDF\\n)\\nProblem Set 5 (\\nPDF\\n)\\nProblem Set 6 (\\nPDF\\n)\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_assignments\",\"fact_refs\":[0],\"question\":\"Who is the instructor of MIT course 10.52 Mechanics of Fluids?\",\"answer\":\"Prof. Kenneth Smith.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_assignments\",\"fact_refs\":[1,2],\"question\":\"In what term and department was 10.52 Mechanics of Fluids taught, and at what level?\",\"answer\":\"It was taught in Spring 2006 by the Chemical Engineering department, at the graduate level.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_assignments\",\"fact_refs\":[3],\"question\":\"How many problem sets are posted for 10.52 Mechanics of Fluids?\",\"answer\":\"Six problem sets, Problem Set 1 through Problem Set 6.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"statement\":\"Lectures for 10.52 Mechanics of Fluids meet 3 sessions per week, 1 hour per session.\",\"source_span\":\"Lectures: 3 sessions / week, 1 hour / session\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"statement\":\"The course covers kinematics, macroscopic balances for linear and angular momentum, the stress tensor, creeping flows and the lubrication approximation, the boundary layer approximation, and linear stability theory.\",\"source_span\":\"kinematics, macroscopic balances for linear and angular momentum, the stress tensor, creeping flows and the lubrication approximation, the boundary layer approximation, and linear stability theory\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"statement\":\"There is no required textbook, but Panton's Incompressible Flow (3rd ed., John Wiley & Sons, 2005, ISBN 9780471261223) is suggested as a useful reference.\",\"source_span\":\"Panton, Ronald L.\\nIncompressible Flow.\\n3rd ed. Hoboken, NJ: John Wiley & Sons, Inc, 2005. ISBN: 9780471261223.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"statement\":\"The final project is a 1-hour in-class presentation that critically reviews a topic from current literature, chosen by the student and approved by faculty.\",\"source_span\":\"a 1-hour, in-class presentation. The presentation is a critical review of a topic from current literature. Topics are selected by individual students and approved by faculty.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"statement\":\"Grades are determined by the six problem sets given during the term, the final presentation, and in-class participation, and there are no exams in this class.\",\"source_span\":\"Grades are determined by performance on the six problem sets given during the term, the final presentation, and in-class participation. There are no exams given in this class.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"statement\":\"In the course calendar, sessions 27-35 cover the boundary layer approximation and sessions 40-45 are devoted to presentations.\",\"source_span\":\"27-35\\nThe boundary layer approximation\\n36-39\\nLinear stability theory\\n40-45\\nPresentations\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"fact_refs\":[0],\"question\":\"How many lecture sessions per week does 10.52 Mechanics of Fluids have, and how long is each session?\",\"answer\":\"It has 3 lecture sessions per week, each 1 hour long.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"fact_refs\":[2],\"question\":\"What reference textbook is suggested for 10.52 Mechanics of Fluids, and what is its ISBN?\",\"answer\":\"Ronald L. Panton's Incompressible Flow, 3rd edition (John Wiley & Sons, 2005), ISBN 9780471261223, is suggested as a reference; no textbook is required.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"fact_refs\":[3],\"question\":\"What does the final project in 10.52 Mechanics of Fluids consist of?\",\"answer\":\"A 1-hour, in-class presentation critically reviewing a topic from current literature, with topics chosen by individual students and approved by faculty.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"fact_refs\":[4],\"question\":\"How is the final grade determined in 10.52 Mechanics of Fluids?\",\"answer\":\"Grades come from the six problem sets given during the term, the final presentation, and in-class participation; there are no exams.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"fact_refs\":[4],\"question\":\"Are there any exams in the MIT course 10.52 Mechanics of Fluids?\",\"answer\":\"No, there are no exams; grades are based on problem sets, the final presentation, and participation.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"fact_refs\":[5],\"question\":\"Which topic is covered in sessions 27-35 of the 10.52 Mechanics of Fluids course calendar?\",\"answer\":\"The boundary layer approximation.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-52-mechanics-of-fluids-spring-2006_syllabus\",\"fact_refs\":[1],\"question\":\"What topics does 10.52 Mechanics of Fluids cover?\",\"answer\":\"Kinematics, macroscopic balances for linear and angular momentum, the stress tensor, creeping flows and the lubrication approximation, the boundary layer approximation, and linear stability theory.\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-520-molecular-aspects-of-chemical-eng_assignments\",\"statement\":\"Prof. Paula Hammond is the instructor of course 10.520 Molecular Aspects of Chemical Engineering.\",\"source_span\":\"Instructor\\nProf. Paula Hammond\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-520-molecular-aspects-of-chemical-eng_assignments\",\"statement\":\"10.520 Molecular Aspects of Chemical Engineering was taught in Fall 2004 at the graduate level.\",\"source_span\":\"10.520 | Fall 2004 | Graduate\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-520-molecular-aspects-of-chemical-eng_assignments\",\"statement\":\"10.520 Molecular Aspects of Chemical Engineering is offered by the Chemical Engineering department.\",\"source_span\":\"Departments\\nChemical Engineering\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-520-molecular-aspects-of-chemical-eng_assignments\",\"statement\":\"The course lists four assignments, Assignment 1 through Assignment 4.\",\"source_span\":\"Assignment 1 (\\nPDF\\n)\\nAssignment 2 (\\nPDF - 1.2 MB\\n)\\nAssignment 3 (\\nPDF\\n)\\nAssignment 4 (\\nPDF\\n)\"}\n{\"type\":\"fact\",\"doc_id\":\"d1_10-520-molecular-aspects-of-chemical-eng_assignments\",\"statement\":\"Assignment 2 for 10.520 is a PDF file of 1.2 MB.\",\"source_span\":\"Assignment 2 (\\nPDF - 1.2 MB\\n)\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-520-molecular-aspects-of-chemical-eng_assignments\",\"fact_refs\":[0],\"question\":\"Who is the instructor of MIT course 10.520 Molecular Aspects of Chemical Engineering?\",\"answer\":\"Prof. Paula Hammond.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-520-molecular-aspects-of-chemical-eng_assignments\",\"fact_refs\":[1,2],\"question\":\"When and at what level was 10.520 Molecular Aspects of Chemical Engineering taught, and by which department?\",\"answer\":\"It was taught in Fall 2004 at the graduate level by the Chemical Engineering department.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-520-molecular-aspects-of-chemical-eng_assignments\",\"fact_refs\":[3],\"question\":\"How many assignments are posted for 10.520 Molecular Aspects of Chemical Engineering?\",\"answer\":\"Four assignments, Assignment 1 through Assignment 4.\"}\n{\"type\":\"seed\",\"doc_id\":\"d1_10-520-molecular-aspects-of-chemical-eng_assignments\",\"fact_refs\":[4],\"question\":\"What is the file size of Assignment 2 in 10.520 Molecular Aspects of Chemical Engineering?\",\"answer\":\"1.2 MB.\"}",
+  "ttft_ms": 21291,
+  "ttft_stream_ms": 2544,
+  "time_to_request_ms": 26,
+  "type": "result",
+  "duration_ms": 44866,
+  "uuid": "d75c6173-c562-496b-a7a9-aceaf3c02b08"
+}

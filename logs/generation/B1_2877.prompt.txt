@@ -1,0 +1,106 @@
+You are an independent auditor of machine-generated benchmark items. For each item you
+receive: a seed question, its answer, a variant query, and the AXIS the variant was
+supposed to follow. Judge ONLY whether the variant complies with its axis definition.
+
+YOU DO NOT DECIDE HIT/MISS. That label is derived from the axis by the pipeline.
+You only verify axis compliance.
+
+AXIS COMPLIANCE CRITERIA (taxonomy v1.0)
+P1 lexical paraphrase — compliant iff: wording/synonym change only; NO entity, number,
+   date, quantifier, or polarity altered; seed's answer still fully answers it.
+P2 syntactic restructure — compliant iff: structural reframe; content identical;
+   seed's answer still fully answers it.
+P3 surface noise — compliant iff: noise only (typos / no diacritics / shorthand /
+   casing); content words recognizable; seed's answer still fully answers it.
+N1 aspect change — compliant iff: same topic entity, clearly different facet;
+   seed's answer does NOT answer it.
+N2 scope change — compliant iff: exactly one scope qualifier added/removed;
+   correct answer differs from seed's answer.
+N3 entity substitution — compliant iff: exactly ONE entity/id/version swapped for a
+   plausible sibling; rest minimally changed; answer necessarily different.
+N4 polarity flip — compliant iff: one negation/antonym flip; serving the seed's answer
+   verbatim would mislead (wrong sign). NOT compliant if the flipped question still has
+   the same answer content (e.g. deadline questions asked "until when" vs "after when").
+N5 quantifier/extreme change — compliant iff: exactly one quantifier/extreme flipped
+   (min/max, earliest/latest, at-least/at-most); answer necessarily different.
+N6 presupposition shift — compliant iff: presupposes a related but different fact;
+   high lexical overlap; answer clearly different.
+
+ALSO MARK NON-COMPLIANT when the variant:
+- is unnatural/ungrammatical beyond its axis's allowance (P3 allows noise; others do not),
+- duplicates the seed or is a near-verbatim copy,
+- is in a different language than the seed,
+- for any P-axis: the seed's answer would actually be wrong or incomplete for it,
+- for any N-axis: the seed's answer would still fully answer it.
+
+CONFIDENCE: conf in [0,1] — 0.9+ only when clear-cut; use 0.5–0.7 for genuine boundary
+cases (expected on N1/N2); do not inflate.
+
+OUTPUT FORMAT — JSONL only, one object per line, no commentary:
+{"id":"<variant id>","axis_ok":true|false,"conf":<0..1>,"issue":"<short reason iff axis_ok=false, else null>"}
+
+
+[BATCH INPUT]
+batch_id: B1_2877
+items (JSONL — id, axis, seed_question, answer, variation, delta):
+
+{"id": "d4_s0547_P1_v2", "axis": "P1", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "What else is Merkel cell carcinoma called?", "delta": null}
+{"id": "d4_s0547_P1_v3", "axis": "P1", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "Which alternative names does Merkel cell carcinoma go by?", "delta": null}
+{"id": "d4_s0547_P1_v4", "axis": "P1", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "What other terms are used for Merkel cell carcinoma?", "delta": null}
+{"id": "d4_s0547_P2_v1", "axis": "P2", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "List the other names of Merkel cell carcinoma.", "delta": null}
+{"id": "d4_s0547_P2_v2", "axis": "P2", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "Merkel cell carcinoma is also known as what?", "delta": null}
+{"id": "d4_s0547_P2_v3", "axis": "P2", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "I'd like the alternative names for Merkel cell carcinoma.", "delta": null}
+{"id": "d4_s0547_P2_v4", "axis": "P2", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "Tell me what Merkel cell carcinoma is also referred to as.", "delta": null}
+{"id": "d4_s0547_P3_v1", "axis": "P3", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "wat else is merkel cell carcinoma called?", "delta": null}
+{"id": "d4_s0547_P3_v2", "axis": "P3", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "merkel cell carcinoma other names??", "delta": null}
+{"id": "d4_s0547_P3_v3", "axis": "P3", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "othr names for merkle cell carcinoma plz", "delta": null}
+{"id": "d4_s0547_P3_v4", "axis": "P3", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "mcc (merkel cell carcinoma) aka what", "delta": null}
+{"id": "d4_s0547_N1_v1", "axis": "N1", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "How is Merkel cell carcinoma treated?", "delta": "treatment, not alternative names"}
+{"id": "d4_s0547_N1_v2", "axis": "N1", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "What causes Merkel cell carcinoma?", "delta": "causes instead of other names"}
+{"id": "d4_s0547_N2_v1", "axis": "N2", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "By what other names is metastatic Merkel cell carcinoma known?", "delta": "narrows to the metastatic stage naming"}
+{"id": "d4_s0547_N2_v2", "axis": "N2", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "By what other names are neuroendocrine skin tumors known?", "delta": "widens to all neuroendocrine skin tumors"}
+{"id": "d4_s0547_N3_v1", "axis": "N3", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "By what other names is basal cell carcinoma known?", "delta": "a different skin carcinoma"}
+{"id": "d4_s0547_N3_v2", "axis": "N3", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "By what other names is Kaposi sarcoma known?", "delta": "a different skin cancer"}
+{"id": "d4_s0547_N4_v1", "axis": "N4", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "What is the primary medical name for trabecular cancer?", "delta": "the main name, not the alternatives"}
+{"id": "d4_s0547_N4_v2", "axis": "N4", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "What is Merkel cell carcinoma called when it is not in the skin?", "delta": "non-skin naming, not skin names"}
+{"id": "d4_s0547_N4_v3", "axis": "N4", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "By what name is Merkel cell carcinoma no longer known?", "delta": "obsolete name, not current alternatives"}
+{"id": "d4_s0547_N4_v4", "axis": "N4", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "Which skin cancers are not also called trabecular cancer?", "delta": "cancers other than trabecular cancer"}
+{"id": "d4_s0547_N5_v1", "axis": "N5", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "Which of Merkel cell carcinoma's names is used most often?", "delta": "single most-used name, not all names"}
+{"id": "d4_s0547_N5_v2", "axis": "N5", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "What is the least commonly used name for Merkel cell carcinoma?", "delta": "least-used name, not all names"}
+{"id": "d4_s0547_N5_v3", "axis": "N5", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "What is the oldest name for Merkel cell carcinoma?", "delta": "earliest historical name only"}
+{"id": "d4_s0547_N5_v4", "axis": "N5", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "What is the newest name for Merkel cell carcinoma?", "delta": "most recent name only"}
+{"id": "d4_s0547_N6_v1", "axis": "N6", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "Why is Merkel cell carcinoma also called trabecular cancer?", "delta": "reason for the name, presupposed"}
+{"id": "d4_s0547_N6_v2", "axis": "N6", "seed_question": "By what other names is Merkel cell carcinoma known?", "answer": "Merkel cell carcinoma is also called neuroendocrine carcinoma of the skin or trabecular cancer.", "variation": "Where in the skin does neuroendocrine carcinoma of the skin form?", "delta": "site of formation, presupposed entity"}
+{"id": "d4_s0553_P1_v1", "axis": "P1", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "What is the most frequent cancer in the United States?", "delta": null}
+{"id": "d4_s0553_P1_v2", "axis": "P1", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which type of cancer occurs most commonly in the US?", "delta": null}
+{"id": "d4_s0553_P1_v3", "axis": "P1", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "What cancer is the most widespread in the United States?", "delta": null}
+{"id": "d4_s0553_P1_v4", "axis": "P1", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is diagnosed most often in America?", "delta": null}
+{"id": "d4_s0553_P2_v1", "axis": "P2", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Tell me which cancer is the most common one in the United States.", "delta": null}
+{"id": "d4_s0553_P2_v2", "axis": "P2", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "In the United States, the most common cancer is which one?", "delta": null}
+{"id": "d4_s0553_P2_v3", "axis": "P2", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "I'd like to know the most common cancer in the United States.", "delta": null}
+{"id": "d4_s0553_P2_v4", "axis": "P2", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Name the cancer that is most common in the US.", "delta": null}
+{"id": "d4_s0553_P3_v1", "axis": "P3", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "wat is the most common cancer in the us?", "delta": null}
+{"id": "d4_s0553_P3_v2", "axis": "P3", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "most common cancer in usa??", "delta": null}
+{"id": "d4_s0553_P3_v3", "axis": "P3", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "which cancr is most comon in the united states", "delta": null}
+{"id": "d4_s0553_P3_v4", "axis": "P3", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "most common cancer in the US rn plz", "delta": null}
+{"id": "d4_s0553_N1_v1", "axis": "N1", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "How many new cancer cases are diagnosed each year in the United States?", "delta": "annual case count, not which cancer leads"}
+{"id": "d4_s0553_N1_v2", "axis": "N1", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer causes the most deaths in the United States?", "delta": "deadliest cancer, not the most common"}
+{"id": "d4_s0553_N2_v1", "axis": "N2", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is the most common cancer among women in the United States?", "delta": "narrows to women only"}
+{"id": "d4_s0553_N2_v2", "axis": "N2", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is the most common cancer worldwide?", "delta": "widens to worldwide, not the US"}
+{"id": "d4_s0553_N3_v1", "axis": "N3", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is the most common cancer in Canada?", "delta": "a different country"}
+{"id": "d4_s0553_N3_v2", "axis": "N3", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is the most common cancer in Japan?", "delta": "a different country"}
+{"id": "d4_s0553_N4_v1", "axis": "N4", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is the rarest cancer in the United States?", "delta": "rarest, not most common"}
+{"id": "d4_s0553_N4_v2", "axis": "N4", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which common disease in the United States is not a cancer?", "delta": "non-cancer disease, not a cancer"}
+{"id": "d4_s0553_N4_v3", "axis": "N4", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is the most common one outside the United States?", "delta": "outside the US, not inside"}
+{"id": "d4_s0553_N4_v4", "axis": "N4", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is no longer the most common cancer in the United States?", "delta": "one that lost the top rank"}
+{"id": "d4_s0553_N5_v1", "axis": "N5", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is the least common in the United States?", "delta": "least common, not the most common"}
+{"id": "d4_s0553_N5_v2", "axis": "N5", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is the second most common cancer in the United States?", "delta": "second rank, not the first"}
+{"id": "d4_s0553_N5_v3", "axis": "N5", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer has the fewest cases in the United States?", "delta": "fewest cases, not the most"}
+{"id": "d4_s0553_N5_v4", "axis": "N5", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Which cancer is the third most common cancer in the United States?", "delta": "third rank instead of the first"}
+{"id": "d4_s0553_N6_v1", "axis": "N6", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "Why is skin cancer the most common cancer in the United States?", "delta": "reason for the top rank, presupposed"}
+{"id": "d4_s0553_N6_v2", "axis": "N6", "seed_question": "Which cancer is the most common cancer in the United States?", "answer": "Skin cancer is the most common cancer in the United States.", "variation": "How many cases of the most common cancer in the United States occur each year?", "delta": "case count, presupposed top cancer"}
+{"id": "d4_s0559_P1_v1", "axis": "P1", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What is NSCLC (non-small cell lung cancer)?", "delta": null}
+{"id": "d4_s0559_P1_v2", "axis": "P1", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What does non-small cell lung cancer mean?", "delta": null}
+{"id": "d4_s0559_P1_v3", "axis": "P1", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What kind of disease is non-small cell lung cancer?", "delta": null}
+{"id": "d4_s0559_P1_v4", "axis": "P1", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "What exactly is non-small cell lung carcinoma?", "delta": null}
+{"id": "d4_s0559_P2_v1", "axis": "P2", "seed_question": "What is non-small cell lung cancer?", "answer": "It is a disease in which malignant (cancer) cells form in the tissues of the lung.", "variation": "Define non-small cell lung cancer for me.", "delta": null}
