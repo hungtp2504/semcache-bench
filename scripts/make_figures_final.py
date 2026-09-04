@@ -127,7 +127,7 @@ for k, (metric, title) in enumerate((("answer_instability", "Order-dependent ans
     style(ax)
     ax.set_xticks([0.85, 0.90, 0.95])
     ax.set_xlim(0.835, 0.965)
-axes[0].annotate("recommended\nτ = 0.9", xy=(0.9, 58), xytext=(0.915, 72),
+axes[0].annotate("commonly recommended\nτ = 0.9", xy=(0.9, 58), xytext=(0.915, 72),
                  fontsize=8, color=MUT,
                  arrowprops=dict(arrowstyle="->", color=MUT, lw=0.8))
 axes[0].legend(frameon=False, fontsize=8.5, loc="lower left")
@@ -211,5 +211,5 @@ for (name, r), y in zip(left, ys_l):
 for (name, r), y in zip(right[::-1], ys_r):
     ax.plot([r, r, 10.1], [0.84, y, y], color="#9db4c8", lw=0.9)
     ax.text(10.25, y, f"{name} ({r:.2f})", ha="left", va="center", fontsize=8.5, color=INK)
-ax.set_title("Mean IO rank across change axes (lower = better), Nemenyi CD at α = .05", pad=14)
+ax.set_title("Mean IO rank across change axes (lower = better), Nemenyi CD at α = 0.05", pad=14)
 save(fig, "f7_cd_diagram")
