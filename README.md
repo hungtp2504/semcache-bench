@@ -19,10 +19,13 @@ datasheet, and the human gold-subset annotations are published on the Hugging Fa
 [`tedbelford/cliffs-and-slopes-semantic-cache`](https://huggingface.co/datasets/tedbelford/cliffs-and-slopes-semantic-cache).
 Code is MIT-licensed; data licensing is mixed (CC BY 4.0, d1 subset CC BY-NC-SA 4.0) — see `DATASHEET.md`.
 
-**Human label validation:** three independent blind annotators labeled a
+**Human label audit:** three blind annotators independently labeled a
 stratified 1,500-pair subset (`data/00_manual/`, protocol included). Fleiss'
-κ = 0.76 [0.73, 0.78]; the majority label agrees with the construction-derived
-label on 98.5% of pairs [97.8, 99.0], ≥ 96.4% on every axis. Reproduce with
+κ = 0.76 [0.73, 0.78] (cluster-bootstrap by seed); on the n = 1,497 analysis
+set the majority label agrees with the construction-derived label on 98.5% of
+pairs [97.9, 99.1], ≥ 96.3% on every axis. Annotators judged question pairs
+without source grounding (see paper, Threats); a source-grounded round is
+prepared in `human_annotation_v2/`. Reproduce with
 `python3 scripts/gold_agreement.py` → `results/human_gold.json`.
 
 ## Setup

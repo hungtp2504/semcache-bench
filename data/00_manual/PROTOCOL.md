@@ -3,9 +3,12 @@
 > **Status (2026-09-05): executed.** Three annotators (university-educated
 > colleagues of the authors, unpaid volunteers, all reading Vietnamese) labeled
 > all 1,500 pairs. Outputs: `data/00_manual/annotator_{1,2,3}.jsonl`; analysis:
-> `scripts/gold_agreement.py` → `results/human_gold.json`. Result: Fleiss'
-> κ = 0.76 [0.73, 0.78] (gate 0.65 passed); majority label vs construction
-> label 1,478/1,500 = 98.5% [97.8, 99.0]. Paths below reflect the new layout;
+> `scripts/gold_agreement.py` → `results/human_gold.json`. Result (analysis
+> rules v2: three double-UNSURE pairs excluded, n = 1,497; CIs
+> cluster-bootstrapped by seed): Fleiss' κ = 0.76 [0.73, 0.78] (gate 0.65
+> passed); majority label vs construction label 1,475/1,497 = 98.5%
+> [97.9, 99.1]. A source-grounded round 2 is prepared in
+> `human_annotation_v2/`. Paths below reflect the new layout;
 > the annotator-facing guide `HUONG_DAN.md` is kept verbatim as distributed.
 
 Validates the benchmark's construction-derived labels with independent human
