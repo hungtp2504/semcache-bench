@@ -1,0 +1,568 @@
+{
+  "n_pairs": 1500,
+  "n_binary_complete": 1497,
+  "unsure_items": {
+    "d1_s0102_N5_v2": {
+      "A1": "DIFFERENT",
+      "A2": "UNSURE",
+      "A3": "UNSURE"
+    },
+    "d1_s0262_N5_v1": {
+      "A1": "DIFFERENT",
+      "A2": "UNSURE",
+      "A3": "UNSURE"
+    },
+    "d3_s0056_N5_v1": {
+      "A1": "DIFFERENT",
+      "A2": "UNSURE",
+      "A3": "UNSURE"
+    }
+  },
+  "annotator_marginals": {
+    "A1": {
+      "SAME": 511,
+      "DIFFERENT": 989
+    },
+    "A2": {
+      "SAME": 514,
+      "DIFFERENT": 983,
+      "UNSURE": 3
+    },
+    "A3": {
+      "SAME": 447,
+      "DIFFERENT": 1050,
+      "UNSURE": 3
+    }
+  },
+  "fleiss_kappa": 0.7554,
+  "fleiss_kappa_ci95": [
+    0.7278,
+    0.7839
+  ],
+  "gwet_ac1": 0.8073,
+  "gwet_ac1_ci95": [
+    0.7824,
+    0.8312
+  ],
+  "raw_mean_pairwise": 0.8922,
+  "pairwise": {
+    "A1-A2": {
+      "raw": 0.9259,
+      "cohen_kappa": 0.8353,
+      "gwet_ac1": 0.8651
+    },
+    "A1-A3": {
+      "raw": 0.8424,
+      "cohen_kappa": 0.6385,
+      "gwet_ac1": 0.7209
+    },
+    "A2-A3": {
+      "raw": 0.9085,
+      "cohen_kappa": 0.7905,
+      "gwet_ac1": 0.8378
+    }
+  },
+  "unanimous": {
+    "n": 1255,
+    "pct_of_binary": 83.83
+  },
+  "gold_vs_construction": {
+    "overall": {
+      "n": 1500,
+      "agree": 1478,
+      "pct": 98.53,
+      "ci95": [
+        97.79,
+        99.03
+      ]
+    },
+    "by_axis": {
+      "N1": {
+        "n": 168,
+        "agree": 168,
+        "pct": 100.0,
+        "ci95": [
+          97.76,
+          100.0
+        ]
+      },
+      "N2": {
+        "n": 168,
+        "agree": 162,
+        "pct": 96.43,
+        "ci95": [
+          92.43,
+          98.35
+        ]
+      },
+      "N3": {
+        "n": 166,
+        "agree": 164,
+        "pct": 98.8,
+        "ci95": [
+          95.71,
+          99.67
+        ]
+      },
+      "N4": {
+        "n": 164,
+        "agree": 162,
+        "pct": 98.78,
+        "ci95": [
+          95.66,
+          99.66
+        ]
+      },
+      "N5": {
+        "n": 167,
+        "agree": 161,
+        "pct": 96.41,
+        "ci95": [
+          92.38,
+          98.34
+        ]
+      },
+      "N6": {
+        "n": 165,
+        "agree": 164,
+        "pct": 99.39,
+        "ci95": [
+          96.65,
+          99.89
+        ]
+      },
+      "P1": {
+        "n": 168,
+        "agree": 167,
+        "pct": 99.4,
+        "ci95": [
+          96.71,
+          99.89
+        ]
+      },
+      "P2": {
+        "n": 168,
+        "agree": 166,
+        "pct": 98.81,
+        "ci95": [
+          95.76,
+          99.67
+        ]
+      },
+      "P3": {
+        "n": 166,
+        "agree": 164,
+        "pct": 98.8,
+        "ci95": [
+          95.71,
+          99.67
+        ]
+      }
+    },
+    "by_axis_group": {
+      "cliff": {
+        "n": 662,
+        "agree": 651,
+        "pct": 98.34,
+        "ci95": [
+          97.05,
+          99.07
+        ]
+      },
+      "invariant": {
+        "n": 502,
+        "agree": 497,
+        "pct": 99.0,
+        "ci95": [
+          97.69,
+          99.57
+        ]
+      },
+      "slope": {
+        "n": 336,
+        "agree": 330,
+        "pct": 98.21,
+        "ci95": [
+          96.16,
+          99.18
+        ]
+      }
+    },
+    "by_domain": {
+      "academic_nlp": {
+        "n": 302,
+        "agree": 299,
+        "pct": 99.01,
+        "ci95": [
+          97.12,
+          99.66
+        ]
+      },
+      "medical": {
+        "n": 301,
+        "agree": 300,
+        "pct": 99.67,
+        "ci95": [
+          98.14,
+          99.94
+        ]
+      },
+      "tech_docs": {
+        "n": 298,
+        "agree": 291,
+        "pct": 97.65,
+        "ci95": [
+          95.23,
+          98.86
+        ]
+      },
+      "university_admin": {
+        "n": 297,
+        "agree": 291,
+        "pct": 97.98,
+        "ci95": [
+          95.66,
+          99.07
+        ]
+      },
+      "vietnamese_admin_edu": {
+        "n": 302,
+        "agree": 297,
+        "pct": 98.34,
+        "ci95": [
+          96.18,
+          99.29
+        ]
+      }
+    },
+    "by_language": {
+      "en": {
+        "n": 1198,
+        "agree": 1181,
+        "pct": 98.58,
+        "ci95": [
+          97.74,
+          99.11
+        ]
+      },
+      "vi": {
+        "n": 302,
+        "agree": 297,
+        "pct": 98.34,
+        "ci95": [
+          96.18,
+          99.29
+        ]
+      }
+    },
+    "by_expected_label": {
+      "HIT": {
+        "n": 502,
+        "agree": 497,
+        "pct": 99.0,
+        "ci95": [
+          97.69,
+          99.57
+        ]
+      },
+      "MISS": {
+        "n": 998,
+        "agree": 981,
+        "pct": 98.3,
+        "ci95": [
+          97.29,
+          98.93
+        ]
+      }
+    },
+    "disagreements": [
+      {
+        "gid": "d1_s0207_P2_v3",
+        "axis": "P2",
+        "domain": "university_admin",
+        "expected": "HIT",
+        "human_gold": "MISS",
+        "votes": {
+          "A1": "SAME",
+          "A2": "DIFFERENT",
+          "A3": "DIFFERENT"
+        }
+      },
+      {
+        "gid": "d1_s0403_P3_v3",
+        "axis": "P3",
+        "domain": "university_admin",
+        "expected": "HIT",
+        "human_gold": "MISS",
+        "votes": {
+          "A1": "SAME",
+          "A2": "DIFFERENT",
+          "A3": "DIFFERENT"
+        }
+      },
+      {
+        "gid": "d1_s0403_P3_v4",
+        "axis": "P3",
+        "domain": "university_admin",
+        "expected": "HIT",
+        "human_gold": "MISS",
+        "votes": {
+          "A1": "SAME",
+          "A2": "DIFFERENT",
+          "A3": "DIFFERENT"
+        }
+      },
+      {
+        "gid": "d1_s0424_P2_v3",
+        "axis": "P2",
+        "domain": "university_admin",
+        "expected": "HIT",
+        "human_gold": "MISS",
+        "votes": {
+          "A1": "SAME",
+          "A2": "DIFFERENT",
+          "A3": "DIFFERENT"
+        }
+      },
+      {
+        "gid": "d1_s0464_N2_v1",
+        "axis": "N2",
+        "domain": "university_admin",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "SAME",
+          "A2": "SAME",
+          "A3": "DIFFERENT"
+        }
+      },
+      {
+        "gid": "d1_s0550_N3_v1",
+        "axis": "N3",
+        "domain": "university_admin",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "SAME",
+          "A2": "SAME",
+          "A3": "DIFFERENT"
+        }
+      },
+      {
+        "gid": "d2_s0207_N5_v1",
+        "axis": "N5",
+        "domain": "academic_nlp",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "SAME",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d2_s0258_N5_v2",
+        "axis": "N5",
+        "domain": "academic_nlp",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "SAME",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d2_s0744_N4_v3",
+        "axis": "N4",
+        "domain": "academic_nlp",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "SAME",
+          "A2": "SAME",
+          "A3": "DIFFERENT"
+        }
+      },
+      {
+        "gid": "d3_s0058_N5_v1",
+        "axis": "N5",
+        "domain": "tech_docs",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "SAME",
+          "A2": "DIFFERENT",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d3_s0092_N5_v1",
+        "axis": "N5",
+        "domain": "tech_docs",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "DIFFERENT",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d3_s0098_N2_v1",
+        "axis": "N2",
+        "domain": "tech_docs",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "SAME",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d3_s0243_N6_v1",
+        "axis": "N6",
+        "domain": "tech_docs",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "DIFFERENT",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d3_s0292_N5_v1",
+        "axis": "N5",
+        "domain": "tech_docs",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "SAME",
+          "A2": "DIFFERENT",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d3_s0559_N4_v1",
+        "axis": "N4",
+        "domain": "tech_docs",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "DIFFERENT",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d3_s0679_N3_v2",
+        "axis": "N3",
+        "domain": "tech_docs",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "DIFFERENT",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d4_s0415_N2_v2",
+        "axis": "N2",
+        "domain": "medical",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "DIFFERENT",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d5_s0055_P1_v2",
+        "axis": "P1",
+        "domain": "vietnamese_admin_edu",
+        "expected": "HIT",
+        "human_gold": "MISS",
+        "votes": {
+          "A1": "DIFFERENT",
+          "A2": "DIFFERENT",
+          "A3": "DIFFERENT"
+        }
+      },
+      {
+        "gid": "d5_s0147_N2_v1",
+        "axis": "N2",
+        "domain": "vietnamese_admin_edu",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "DIFFERENT",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d5_s0224_N2_v1",
+        "axis": "N2",
+        "domain": "vietnamese_admin_edu",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "SAME",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d5_s0251_N2_v1",
+        "axis": "N2",
+        "domain": "vietnamese_admin_edu",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "DIFFERENT",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      },
+      {
+        "gid": "d5_s0355_N5_v1",
+        "axis": "N5",
+        "domain": "vietnamese_admin_edu",
+        "expected": "MISS",
+        "human_gold": "HIT",
+        "votes": {
+          "A1": "DIFFERENT",
+          "A2": "SAME",
+          "A3": "SAME"
+        }
+      }
+    ]
+  },
+  "per_axis_group_agreement": {
+    "cliff": {
+      "n": 659,
+      "raw": 0.9322,
+      "gwet_ac1": 0.9264,
+      "fleiss_kappa": 0.1476,
+      "p_same": 0.0415
+    },
+    "invariant": {
+      "n": 502,
+      "raw": 0.8048,
+      "gwet_ac1": 0.7609,
+      "fleiss_kappa": -0.0633,
+      "p_same": 0.8977
+    },
+    "slope": {
+      "n": 336,
+      "raw": 0.9444,
+      "gwet_ac1": 0.9401,
+      "fleiss_kappa": 0.2343,
+      "p_same": 0.0377
+    }
+  }
+}

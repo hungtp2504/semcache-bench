@@ -1,7 +1,15 @@
 # Human annotation protocol — gold-subset validation (PLAN §15, Month 4)
 
+> **Status (2026-09-05): executed.** Three annotators (university-educated
+> colleagues of the authors, unpaid volunteers, all reading Vietnamese) labeled
+> all 1,500 pairs. Outputs: `data/00_manual/annotator_{1,2,3}.jsonl`; analysis:
+> `scripts/gold_agreement.py` → `results/human_gold.json`. Result: Fleiss'
+> κ = 0.76 [0.73, 0.78] (gate 0.65 passed); majority label vs construction
+> label 1,478/1,500 = 98.5% [97.8, 99.0]. Paths below reflect the new layout;
+> the annotator-facing guide `HUONG_DAN.md` is kept verbatim as distributed.
+
 Validates the benchmark's construction-derived labels with independent human
-judgment. Input: `human_annotation/gold_input.jsonl` — 1,500 pairs stratified over the
+judgment. Input: `data/00_manual/gold_input.jsonl` — 1,500 pairs stratified over the
 9 axes × 5 domains grid (164–168 per axis, ~300 per domain), **blind**: each
 record carries only `{gid, qa, qb}`; no expected label, no axis, no judge
 output; A/B order already randomized per pair.
@@ -18,7 +26,7 @@ output; A/B order already randomized per pair.
   discussion does not converge).
 - Deliverable per annotator: one JSONL file, one line per pair:
   `{"gid": "...", "label": "SAME" | "DIFFERENT" | "UNSURE"}`
-  Name it `human_annotation/annotator_<initials>.jsonl`.
+  Name it `data/00_manual/annotator_<n>.jsonl`.
 
 ## The one question
 
@@ -43,10 +51,11 @@ Judge each pair independently. Do not assume any pattern in the data.
 
 ## Analysis
 
-`python3 human_annotation/scripts/gold_agreement.py human_annotation/annotator_*.jsonl` computes:
-Fleiss' κ (gate 0.65), pairwise raw agreement, majority label vs the
-construction-derived label (overall + per axis + per domain), the adjudication
-list (all pairs without unanimity), and human↔LLM-judge agreement for RQ2.
+`python3 scripts/gold_agreement.py` (writes `results/human_gold.json`) computes:
+Fleiss' κ with bootstrap CI (gate 0.65), pairwise raw agreement / Cohen's κ /
+Gwet's AC1, unanimity, majority label vs the construction-derived label
+(overall + per axis + per axis group + per domain + per language, Wilson CIs),
+and the full disagreement list with per-annotator votes.
 
 ## What this buys the paper (with n = 1,500)
 
