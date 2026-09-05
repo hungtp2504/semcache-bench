@@ -23,6 +23,15 @@ under submission to Information and Software Technology).
   generation logs** (full prompts, raw outputs, exact model strings, token usage,
   timestamps, prompt-version hashes) are included in `logs/`.
 - Prompt versions: A4 v1.0 (pilot) → v1.2 (scale); judge rubric constant (v1.0).
+- Human validation (2026-09): a 1,500-pair subset stratified over the 9 axes ×
+  5 domains grid was independently labeled by three blind annotators
+  (university-educated colleagues of the authors, unpaid volunteers, all
+  reading Vietnamese) answering one question per pair — would one complete,
+  correct answer serve both queries? Pre-registered gate Fleiss' κ ≥ 0.65:
+  achieved κ = 0.76 [0.73, 0.78]; the 2-of-3 majority label matches the
+  construction-derived label on 1,478/1,500 pairs (98.5% [97.8, 99.0]). The
+  protocol, annotator guide (Vietnamese), blind input, raw labels, and summary
+  statistics are released alongside the data.
 
 ## Source material & licensing (per domain)
 | Domain | Source | License of source | License of derived pairs |
@@ -44,8 +53,15 @@ studying order-dependence; calibration research. NOT a QA-accuracy benchmark: th
 answers are grounded in specific source documents and may age.
 
 ## Known limitations
-- LLM-generated text with LLM compliance filtering —
-  no human anchor (the study's main limitation; see paper T3).
+- LLM-generated text with LLM compliance filtering. Labels are human-anchored
+  on a stratified 1,500-pair subset: three independent blind annotators
+  (university-educated volunteers, all reading Vietnamese), Fleiss' κ = 0.76
+  [0.73, 0.78], majority label vs construction label 98.5% [97.8, 99.0],
+  ≥ 96.4% per axis. Annotations, blind input, and protocol ship in both
+  releases (`human_annotation/` on Hugging Face; `data/00_manual/` in the code
+  repo, analysis `scripts/gold_agreement.py` → `results/human_gold.json`).
+  The remaining pairs carry construction-derived labels only (see paper,
+  Threats).
 - N4/N5 applicability is seed-conditional (see paper §5, §8).
 - Vietnamese domain drawn from legal/administrative register.
 - Generator family is Claude-only (cross-vendor generation is future work).

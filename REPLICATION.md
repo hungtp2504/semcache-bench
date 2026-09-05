@@ -20,6 +20,7 @@ prompt block (T1 mitigation). `logs/manifest.json` is the batch ledger.
 | RQ5 four configs + RQ4 τ*(ρ) + F5/F6 inputs | `python scripts/rq5_experiment.py` then `python scripts/rq5_config3.py` | `results/rq5_rq4.json` |
 | RQ6 Kendall | `python scripts/rq6_analysis.py` | `results/rq6.json` |
 | Friedman/Nemenyi + F7 + latency | `python scripts/stats_and_f7.py` | `results/stats_final.json` |
+| Human gold-subset validation (κ, per-axis label agreement) | `python scripts/gold_agreement.py` | `results/human_gold.json` |
 | Figures F1–F7 | `python scripts/make_figures.py --results results/final_analysis.json`, `make_figures2.py`, `make_f1_f2.py` | `../paper/figures/` |
 
 ## 3. Regenerating the dataset itself (needs Claude Code CLI + subscription)

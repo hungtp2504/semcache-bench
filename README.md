@@ -15,9 +15,15 @@ threshold-on-similarity caching fails structurally:
 - **Second-stage verification** — predicted to help disproportionately on "cliff" axes (RQ5)
 
 **Dataset release:** the frozen 46,214-pair benchmark, taxonomy, prompts,
-and datasheet are published on the Hugging Face Hub:
+datasheet, and the human gold-subset annotations are published on the Hugging Face Hub:
 [`tedbelford/cliffs-and-slopes-semantic-cache`](https://huggingface.co/datasets/tedbelford/cliffs-and-slopes-semantic-cache).
 Code is MIT-licensed; data licensing is mixed (CC BY 4.0, d1 subset CC BY-NC-SA 4.0) — see `DATASHEET.md`.
+
+**Human label validation:** three independent blind annotators labeled a
+stratified 1,500-pair subset (`data/00_manual/`, protocol included). Fleiss'
+κ = 0.76 [0.73, 0.78]; the majority label agrees with the construction-derived
+label on 98.5% of pairs [97.8, 99.0], ≥ 96.4% on every axis. Reproduce with
+`python3 scripts/gold_agreement.py` → `results/human_gold.json`.
 
 ## Setup
 

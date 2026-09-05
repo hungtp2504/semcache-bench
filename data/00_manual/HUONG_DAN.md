@@ -1,5 +1,12 @@
 # Hướng dẫn gán nhãn (dành cho người gán — đọc kỹ trước khi bắt đầu)
 
+> **Ghi chú lưu trữ (2026-09-05):** đây là bản hướng dẫn nguyên văn đã phát cho
+> ba người gán nhãn. Việc gán đã hoàn tất; kết quả nằm ở
+> `data/00_manual/annotator_{1,2,3}.jsonl`, phân tích bằng
+> `scripts/gold_agreement.py` → `results/human_gold.json`. Các đường dẫn
+> `human_annotation/...` bên dưới là bố cục thư mục tại thời điểm gán nhãn.
+
+
 Cảm ơn bạn tham gia. Nhiệm vụ của bạn là đọc từng **cặp câu hỏi** và trả lời đúng
 một câu duy nhất:
 
