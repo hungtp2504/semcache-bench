@@ -45,9 +45,9 @@ questions?
 
 ## Analysis rules (fixed in advance; identical to round 1 rules v2)
 
-- Analysis set: pairs with a 2-of-3 definite (SAME/DIFFERENT) majority; pairs
-  without one are excluded from all statistics and reported separately, so
-  agreement and label-accuracy analyses use the same n.
+- Analysis set: pairs with three definite (SAME/DIFFERENT) labels; any pair
+  carrying an UNSURE vote is excluded from all statistics and reported
+  separately, so agreement and label-accuracy analyses use the same n.
 - Gold label: 2-of-3 majority of definite votes.
 - Headline CIs: nonparametric percentile cluster bootstrap resampling seeds
   (pairs cluster by seed), 10,000 replicates; per-stratum proportions also
