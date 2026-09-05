@@ -18,10 +18,17 @@ judge outputs, and each other. Analyze with:
 python3 scripts/gold_agreement.py   # writes results/human_gold.json
 ```
 
-Headline (2026-09-05): Fleiss' κ = 0.76 [0.73, 0.78] (pre-registered gate
-0.65); majority label vs construction label 1,478/1,500 = 98.5% [97.8, 99.0];
-every axis ≥ 96.4%. Three pairs (all N5) were double-UNSURE, resolved by the
-remaining definite vote.
+Headline (2026-09-05, analysis rules v2): three pairs (all N5) were rated
+UNSURE by two annotators — no 2-of-3 definite majority — and are excluded from
+all statistics, so agreement and accuracy use the same n = 1,497. Fleiss'
+κ = 0.76, cluster-bootstrap 95% CI [0.73, 0.78] (acceptance gate 0.65, fixed
+before annotation); majority label vs construction label 1,475/1,497 = 98.5%
+(cluster-bootstrap [97.9, 99.1]); every axis ≥ 96.3%. CIs cluster-bootstrap by
+seed (1,060 clusters, 10,000 replicates) because pairs cluster by seed.
+Note the audit's scope: annotators saw only the two questions (no source
+passage or reference answer), so it certifies question-level answer
+substitutability — see the paper's Threats section. A source-grounded round is
+prepared in `human_annotation_v2/` (repo root).
 
 ## risk_check_pairs.jsonl — ⚠️ DRAFT, researcher review required before running
 

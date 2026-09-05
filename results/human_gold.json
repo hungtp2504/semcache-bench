@@ -1,7 +1,13 @@
 {
-  "n_pairs": 1500,
-  "n_binary_complete": 1497,
-  "unsure_items": {
+  "analysis_rules": {
+    "analysis_set": "pairs with a 2-of-3 definite (SAME/DIFFERENT) majority; pairs without one are excluded from all statistics",
+    "gold_label": "2-of-3 majority of definite votes",
+    "bootstrap": "nonparametric percentile cluster bootstrap over seeds (1059 clusters, 10000 replicates, RNG seed 0)"
+  },
+  "n_pairs_annotated": 1500,
+  "n_analysis_set": 1497,
+  "n_seed_clusters": 1059,
+  "excluded_pairs": {
     "d1_s0102_N5_v2": {
       "A1": "DIFFERENT",
       "A2": "UNSURE",
@@ -35,16 +41,17 @@
     }
   },
   "fleiss_kappa": 0.7554,
-  "fleiss_kappa_ci95": [
-    0.7278,
-    0.7839
+  "fleiss_kappa_ci95_cluster": [
+    0.7277,
+    0.7827
   ],
   "gwet_ac1": 0.8073,
-  "gwet_ac1_ci95": [
-    0.7824,
-    0.8312
+  "gwet_ac1_ci95_cluster": [
+    0.7831,
+    0.8307
   ],
   "raw_mean_pairwise": 0.8922,
+  "human_p_same": 0.3278,
   "pairwise": {
     "A1-A2": {
       "raw": 0.9259,
@@ -64,16 +71,22 @@
   },
   "unanimous": {
     "n": 1255,
-    "pct_of_binary": 83.83
+    "pct": 83.83,
+    "agree_with_construction": 1250,
+    "agree_pct": 99.6
   },
   "gold_vs_construction": {
     "overall": {
-      "n": 1500,
-      "agree": 1478,
+      "n": 1497,
+      "agree": 1475,
       "pct": 98.53,
-      "ci95": [
-        97.79,
+      "wilson_ci95": [
+        97.78,
         99.03
+      ],
+      "cluster_boot_ci95": [
+        97.85,
+        99.13
       ]
     },
     "by_axis": {
@@ -81,7 +94,7 @@
         "n": 168,
         "agree": 168,
         "pct": 100.0,
-        "ci95": [
+        "wilson_ci95": [
           97.76,
           100.0
         ]
@@ -90,7 +103,7 @@
         "n": 168,
         "agree": 162,
         "pct": 96.43,
-        "ci95": [
+        "wilson_ci95": [
           92.43,
           98.35
         ]
@@ -99,7 +112,7 @@
         "n": 166,
         "agree": 164,
         "pct": 98.8,
-        "ci95": [
+        "wilson_ci95": [
           95.71,
           99.67
         ]
@@ -108,25 +121,25 @@
         "n": 164,
         "agree": 162,
         "pct": 98.78,
-        "ci95": [
+        "wilson_ci95": [
           95.66,
           99.66
         ]
       },
       "N5": {
-        "n": 167,
-        "agree": 161,
-        "pct": 96.41,
-        "ci95": [
-          92.38,
-          98.34
+        "n": 164,
+        "agree": 158,
+        "pct": 96.34,
+        "wilson_ci95": [
+          92.25,
+          98.31
         ]
       },
       "N6": {
         "n": 165,
         "agree": 164,
         "pct": 99.39,
-        "ci95": [
+        "wilson_ci95": [
           96.65,
           99.89
         ]
@@ -135,7 +148,7 @@
         "n": 168,
         "agree": 167,
         "pct": 99.4,
-        "ci95": [
+        "wilson_ci95": [
           96.71,
           99.89
         ]
@@ -144,7 +157,7 @@
         "n": 168,
         "agree": 166,
         "pct": 98.81,
-        "ci95": [
+        "wilson_ci95": [
           95.76,
           99.67
         ]
@@ -153,7 +166,7 @@
         "n": 166,
         "agree": 164,
         "pct": 98.8,
-        "ci95": [
+        "wilson_ci95": [
           95.71,
           99.67
         ]
@@ -161,11 +174,11 @@
     },
     "by_axis_group": {
       "cliff": {
-        "n": 662,
-        "agree": 651,
-        "pct": 98.34,
-        "ci95": [
-          97.05,
+        "n": 659,
+        "agree": 648,
+        "pct": 98.33,
+        "wilson_ci95": [
+          97.04,
           99.07
         ]
       },
@@ -173,7 +186,7 @@
         "n": 502,
         "agree": 497,
         "pct": 99.0,
-        "ci95": [
+        "wilson_ci95": [
           97.69,
           99.57
         ]
@@ -182,7 +195,7 @@
         "n": 336,
         "agree": 330,
         "pct": 98.21,
-        "ci95": [
+        "wilson_ci95": [
           96.16,
           99.18
         ]
@@ -193,7 +206,7 @@
         "n": 302,
         "agree": 299,
         "pct": 99.01,
-        "ci95": [
+        "wilson_ci95": [
           97.12,
           99.66
         ]
@@ -202,34 +215,34 @@
         "n": 301,
         "agree": 300,
         "pct": 99.67,
-        "ci95": [
+        "wilson_ci95": [
           98.14,
           99.94
         ]
       },
       "tech_docs": {
-        "n": 298,
-        "agree": 291,
-        "pct": 97.65,
-        "ci95": [
-          95.23,
-          98.86
+        "n": 297,
+        "agree": 290,
+        "pct": 97.64,
+        "wilson_ci95": [
+          95.22,
+          98.85
         ]
       },
       "university_admin": {
-        "n": 297,
-        "agree": 291,
-        "pct": 97.98,
-        "ci95": [
-          95.66,
-          99.07
+        "n": 295,
+        "agree": 289,
+        "pct": 97.97,
+        "wilson_ci95": [
+          95.63,
+          99.06
         ]
       },
       "vietnamese_admin_edu": {
         "n": 302,
         "agree": 297,
         "pct": 98.34,
-        "ci95": [
+        "wilson_ci95": [
           96.18,
           99.29
         ]
@@ -237,11 +250,11 @@
     },
     "by_language": {
       "en": {
-        "n": 1198,
-        "agree": 1181,
+        "n": 1195,
+        "agree": 1178,
         "pct": 98.58,
-        "ci95": [
-          97.74,
+        "wilson_ci95": [
+          97.73,
           99.11
         ]
       },
@@ -249,7 +262,7 @@
         "n": 302,
         "agree": 297,
         "pct": 98.34,
-        "ci95": [
+        "wilson_ci95": [
           96.18,
           99.29
         ]
@@ -260,17 +273,17 @@
         "n": 502,
         "agree": 497,
         "pct": 99.0,
-        "ci95": [
+        "wilson_ci95": [
           97.69,
           99.57
         ]
       },
       "MISS": {
-        "n": 998,
-        "agree": 981,
-        "pct": 98.3,
-        "ci95": [
-          97.29,
+        "n": 995,
+        "agree": 978,
+        "pct": 98.29,
+        "wilson_ci95": [
+          97.28,
           98.93
         ]
       }
@@ -548,21 +561,21 @@
       "raw": 0.9322,
       "gwet_ac1": 0.9264,
       "fleiss_kappa": 0.1476,
-      "p_same": 0.0415
+      "human_p_same": 0.0415
     },
     "invariant": {
       "n": 502,
       "raw": 0.8048,
       "gwet_ac1": 0.7609,
       "fleiss_kappa": -0.0633,
-      "p_same": 0.8977
+      "human_p_same": 0.8977
     },
     "slope": {
       "n": 336,
       "raw": 0.9444,
       "gwet_ac1": 0.9401,
       "fleiss_kappa": 0.2343,
-      "p_same": 0.0377
+      "human_p_same": 0.0377
     }
   }
 }
