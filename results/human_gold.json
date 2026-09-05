@@ -1,6 +1,6 @@
 {
   "analysis_rules": {
-    "analysis_set": "pairs with a 2-of-3 definite (SAME/DIFFERENT) majority; pairs without one are excluded from all statistics",
+    "analysis_set": "pairs with three definite (SAME/DIFFERENT) labels; pairs carrying any UNSURE vote are excluded from all statistics",
     "gold_label": "2-of-3 majority of definite votes",
     "bootstrap": "nonparametric percentile cluster bootstrap over seeds (1059 clusters, 10000 replicates, RNG seed 0)"
   },

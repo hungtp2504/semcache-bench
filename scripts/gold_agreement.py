@@ -8,10 +8,10 @@ expected_label. Writes results/human_gold.json.
 
 Analysis rules (applied identically everywhere):
 - Analysis set: pairs with three definite (SAME/DIFFERENT) labels. Pairs
-  without a 2-of-3 definite majority (in this data: the three pairs rated
-  UNSURE by two annotators) are EXCLUDED from all statistics and reported
-  separately, so the agreement (kappa) and label-accuracy analyses use the
-  same n.
+  carrying any UNSURE vote are EXCLUDED from all statistics and reported
+  separately (kappa requires three definite labels; using the same set for
+  label accuracy keeps the two analyses on the same n). In the round-1 data
+  the excluded pairs are exactly the three rated UNSURE by two annotators.
 - Gold label: 2-of-3 majority of the three definite votes.
 - CIs: the subset clusters by seed (1,060 seeds for 1,500 pairs, up to 4
   pairs/seed), so pair-level i.i.d. intervals can be optimistic. Headline CIs
@@ -95,14 +95,15 @@ def main():
             return "HIT"
         if v["DIFFERENT"] >= 2:
             return "MISS"
-        return None  # no 2-of-3 definite majority -> excluded
+        return None
+
+    def all_definite(g):
+        return all(ann[i][g] in DEFINITE for i in (1, 2, 3))
 
     gold_lab = {g: gold(g) for g in all_gids}
-    excluded = sorted(g for g in all_gids if gold_lab[g] is None)
-    gids = [g for g in all_gids if gold_lab[g] is not None]
-    # in this data the excluded set coincides with the pairs carrying any
-    # UNSURE vote; assert the analysis set has three definite labels each
-    assert all(all(ann[i][g] in DEFINITE for i in (1, 2, 3)) for g in gids)
+    excluded = sorted(g for g in all_gids if not all_definite(g))
+    gids = [g for g in all_gids if all_definite(g)]
+    assert all(gold_lab[g] is not None for g in gids)
     n = len(gids)
 
     def row(g):
@@ -184,9 +185,9 @@ def main():
 
     result = {
         "analysis_rules": {
-            "analysis_set": "pairs with a 2-of-3 definite (SAME/DIFFERENT) "
-                            "majority; pairs without one are excluded from "
-                            "all statistics",
+            "analysis_set": "pairs with three definite (SAME/DIFFERENT) "
+                            "labels; pairs carrying any UNSURE vote are "
+                            "excluded from all statistics",
             "gold_label": "2-of-3 majority of definite votes",
             "bootstrap": f"nonparametric percentile cluster bootstrap over "
                          f"seeds ({len(seed_list)} clusters, "
