@@ -17,11 +17,14 @@ prompt block (T1 mitigation). `logs/manifest.json` is the batch ledger.
 | Paper artifact | Command | Output |
 |---|---|---|
 | F3 heatmap + IO tables (RQ3a), instability (RQ3b) | `python scripts/analyze_final.py --models <9 encoders>` | `results/final_analysis.json` |
-| RQ5 four configs + RQ4 τ*(ρ) + F5/F6 inputs | `python scripts/rq5_experiment.py` then `python scripts/rq5_config3.py` | `results/rq5_rq4.json` |
+| RQ4 τ*(ρ) + F5 inputs; pre-revision in-sample RQ5 (emits the band pairs for the E stage) | `python scripts/rq5_experiment.py` then `python scripts/rq5_config3.py` | `results/rq5_rq4.json` |
+| **RQ5 / Table 1 (revision): held-out, same-denominator evaluation of A–E + F6 inputs** — 5-fold seed-grouped CV, every threshold/band/cutoff/model tuned on training folds; also reruns the in-sample protocol (reproduces 27.5% / 18.4% / band 2.7%) | `python scripts/rq5_heldout.py` (after `rq5_config3.py` has produced `data/06_verify_decisions.jsonl`) | `results/rq5_heldout.json` |
+| RQ3b answer-identity analysis (revision): classifies wrong serves by what the verdict rests on; bounds; answer-text re-keying | `python scripts/rq3b_answer_identity.py` | `results/rq3b_answer_identity.json` |
 | RQ6 Kendall | `python scripts/rq6_analysis.py` | `results/rq6.json` |
 | Friedman/Nemenyi + F7 + latency | `python scripts/stats_and_f7.py` | `results/stats_final.json` |
 | Human gold-subset validation (κ, per-axis label agreement) | `python scripts/gold_agreement.py` | `results/human_gold.json` |
 | Figures F1–F7 | `python scripts/make_figures.py --results results/final_analysis.json`, `make_figures2.py`, `make_f1_f2.py` | `../paper/figures/` |
+| Publication figures (final) | `python scripts/make_figures_final.py` then `python scripts/make_illustrations.py` (run last: its F1 supersedes); set `FIG_OUT=<dir>` to write elsewhere | `../paper/figures/` |
 
 ## 3. Regenerating the dataset itself (needs Claude Code CLI + subscription)
 Stages A → A4 → B1/B2 (→ C for RQ6, E for RQ5-config3) run

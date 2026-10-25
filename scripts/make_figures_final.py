@@ -4,6 +4,7 @@
 Layout rules enforced: no text over text, no text over marks, labels either in
 dedicated whitespace or in legends; consistent palette; recessive axes."""
 import json
+import os
 from pathlib import Path
 
 import matplotlib
@@ -12,7 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 REPO = Path(__file__).resolve().parents[1]
-FIG = REPO.parent / "paper" / "figures"
+FIG = Path(os.environ.get("FIG_OUT", REPO.parent / "paper" / "figures"))
 INK, MUT, GRID = "#1a2733", "#5b6b7a", "#e3e8ec"
 BLUE, ORANGE, GREEN, PURPLE, RED = "#3b6fb6", "#c2571f", "#3d8f5f", "#8256a8", "#a8323e"
 plt.rcParams.update({"font.size": 9, "axes.titlesize": 10.5, "axes.titlelocation": "left",
@@ -160,14 +161,14 @@ ax.set_title("The optimal threshold depends on domain and error cost (RQ4)")
 save(fig, "f5_tau_star")
 
 # ================= F6: C4 asymmetry =================
-c1 = r5["configs"]["threshold_only"]["0.89"]
-c2 = r5["configs"]["cross_encoder"]["rates"]
+# held-out, same-denominator values (rq5_heldout.py; IEEE Access revision R1)
+ho = json.loads((REPO / "results" / "rq5_heldout.json").read_text())["held_out"]["metrics"]
 groups = ["slope", "cliff"]
-b1 = [c1[f"false_hit_{g}"] * 100 for g in groups]
-b2 = [c2[f"false_hit_{g}"] * 100 for g in groups]
+b1 = [ho["A_threshold"][f"false_hit_{g}"]["value"] * 100 for g in groups]
+b2 = [ho["B_cross_encoder"][f"false_hit_{g}"]["value"] * 100 for g in groups]
 fig, ax = plt.subplots(figsize=(6.2, 3.5))
 x = np.arange(2); w = 0.36
-r1 = ax.bar(x - w / 2, b1, w, color="#9db4c8", label="threshold only ($τ^*_{BA}$ = 0.89)")
+r1 = ax.bar(x - w / 2, b1, w, color="#9db4c8", label="threshold only ($τ^*_{BA}$, tuned per fold)")
 r2 = ax.bar(x + w / 2, b2, w, color=BLUE, label="+ cross-encoder verifier")
 for r in list(r1) + list(r2):
     ax.annotate(f"{r.get_height():.1f}%", (r.get_x() + r.get_width() / 2, r.get_height() + 0.5),
@@ -184,7 +185,7 @@ ax.legend(frameon=True, fontsize=8.5, loc="upper left", ncol=1,
           bbox_to_anchor=(0.0, 1.0), facecolor="white", edgecolor="none",
           framealpha=1.0).set_zorder(10)
 style(ax)
-ax.set_title("Verification helps disproportionately on cliff axes (C4)")
+ax.set_title("Verification helps disproportionately on cliff axes (C4, held-out)")
 save(fig, "f6_c4_asymmetry")
 
 # ================= F7: CD diagram (proper two-column layout) =================

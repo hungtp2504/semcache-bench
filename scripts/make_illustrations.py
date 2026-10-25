@@ -5,9 +5,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+import os
 from pathlib import Path
 
-FIG = Path(__file__).resolve().parents[2] / "paper" / "figures"
+FIG = Path(os.environ.get("FIG_OUT", Path(__file__).resolve().parents[2] / "paper" / "figures"))
 INK, MUT = "#1a2733", "#5b6b7a"
 BLUE, ORANGE, GREEN, RED, LBLUE = "#3b6fb6", "#c2571f", "#3d8f5f", "#a8323e", "#9db4c8"
 
@@ -92,7 +93,7 @@ save(fig, "f9_order_timelines")
 
 # ============ F10: two-tier architecture ============
 fig, ax = plt.subplots(figsize=(7.8, 3.6))
-ax.axis("off"); ax.set_xlim(0, 13.4); ax.set_ylim(0, 6.8)
+ax.axis("off"); ax.set_xlim(0, 13.4); ax.set_ylim(-0.75, 6.8)
 box(ax, 0.2, 2.8, 2.0, 1.2, "incoming\nquery $q_i$", "#f4f6f8", MUT)
 arr(ax, 2.3, 3.4, 3.1, 3.4)
 box(ax, 3.2, 2.8, 2.5, 1.2, "tier 1: bi-encoder\nsim to best stored\n(1.9 ms)", "#e8eef6", BLUE, fs=8)
@@ -110,8 +111,8 @@ arr(ax, 11.75, 4.15, 9.5, 5.45, color=GREEN, lw=1.4)
 ax.text(11.05, 5.0, "SERVE", fontsize=8, color=GREEN, ha="center")
 arr(ax, 11.75, 2.65, 9.5, 1.1, color=RED, lw=1.4)
 ax.text(11.5, 1.3, "REGENERATE", fontsize=8, color=RED, ha="center")
-ax.text(0.2, 0.15, "False hits among band pairs: 27.5% (no verifier) → 18.4% (cross-encoder) → 2.7% (LLM verifier).",
-        fontsize=8.5, color=MUT)
+ax.text(0.2, 0.3, "Held-out false hits, all expected-MISS pairs: 26.8% (no verifier) → 18.1% (cross-encoder) → 7.2% (LLM).\nInside the band, where the verifiers act: 45.4% → 26.5% → 2.7%.",
+        fontsize=8.5, color=MUT, va="top", linespacing=1.5)
 ax.set_title("The two-tier remedy: verify only where the threshold cannot decide",
              fontsize=10.5, loc="left", color=INK)
 save(fig, "f10_two_tier")
