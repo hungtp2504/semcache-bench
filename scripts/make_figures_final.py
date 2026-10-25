@@ -130,7 +130,8 @@ for k, (metric, title) in enumerate((("answer_instability", "Order-dependent ans
 axes[0].annotate("commonly recommended\nτ = 0.9", xy=(0.9, 58), xytext=(0.915, 72),
                  fontsize=8, color=MUT,
                  arrowprops=dict(arrowstyle="->", color=MUT, lw=0.8))
-axes[0].legend(frameon=False, fontsize=8.5, loc="lower left")
+axes[0].legend(frameon=True, fontsize=8.5, loc="lower left",
+               facecolor="white", edgecolor="none", framealpha=1.0).set_zorder(10)
 fig.tight_layout()
 save(fig, "f4_order_dependence")
 
@@ -151,8 +152,9 @@ ax.set_xlabel("cost ratio ρ = C_err / C_llm (log scale)", fontsize=9, color=MUT
 ax.set_ylabel("optimal threshold τ*", fontsize=9, color=MUT)
 ax.set_xlim(1, 1000)
 ax.set_ylim(0.79, 1.005)
-ax.legend(frameon=False, fontsize=8.5, loc="lower right", ncol=1,
-          borderaxespad=1.2)
+ax.legend(frameon=True, fontsize=8.5, loc="lower right", ncol=1,
+          borderaxespad=1.2, facecolor="white", edgecolor="none",
+          framealpha=1.0).set_zorder(10)
 style(ax)
 ax.set_title("The optimal threshold depends on domain and error cost (RQ4)")
 save(fig, "f5_tau_star")
@@ -178,8 +180,9 @@ ax.set_xticks(x, ["slope axes (N1–N2)\nintrinsically fuzzy",
                   "cliff axes (N3–N6)\ndiscrete flips"], fontsize=9)
 ax.set_ylabel("false-hit rate (%)", fontsize=9, color=MUT)
 ax.set_ylim(0, 38)   # headroom so the legend never touches the bars
-ax.legend(frameon=False, fontsize=8.5, loc="upper left", ncol=1,
-          bbox_to_anchor=(0.0, 1.0))
+ax.legend(frameon=True, fontsize=8.5, loc="upper left", ncol=1,
+          bbox_to_anchor=(0.0, 1.0), facecolor="white", edgecolor="none",
+          framealpha=1.0).set_zorder(10)
 style(ax)
 ax.set_title("Verification helps disproportionately on cliff axes (C4)")
 save(fig, "f6_c4_asymmetry")

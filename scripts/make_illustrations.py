@@ -33,31 +33,31 @@ ax.axis("off"); ax.set_xlim(0, 10); ax.set_ylim(0, 6)
 seed = (2.2, 2.6)
 ax.scatter(*seed, s=170, color=INK, zorder=5)
 ax.text(seed[0] - 0.35, seed[1], "seed\n“deadline for\nAssignment 1?”",
-        ha="right", va="center", fontsize=8.5, color=INK, linespacing=1.4)
+        ha="right", va="center", fontsize=9.8, color=INK, linespacing=1.4)
 # green: long arrow up-right; label block fully right of dot, clear of arrow
 g = (7.0, 4.8)
 arr(ax, seed[0] + 0.22, seed[1] + 0.18, g[0] - 0.18, g[1] - 0.12, color=GREEN, lw=2.2)
 ax.scatter(*g, s=140, color=GREEN, zorder=5)
-ax.text(g[0] + 0.35, g[1] + 0.05, "“as1 deadline khi nao v”", fontsize=9,
+ax.text(g[0] + 0.35, g[1] + 0.05, "“as1 deadline khi nao v”", fontsize=10.3,
         color=GREEN, va="center")
-ax.text(g[0] + 0.35, g[1] - 0.62, "huge surface step — SAME answer", fontsize=8.5,
+ax.text(g[0] + 0.35, g[1] - 0.62, "huge surface step — SAME answer", fontsize=9.8,
         color=GREEN, va="center")
-ax.text(4.6, 4.35, "invariance", fontsize=8.5, color=GREEN, style="italic",
+ax.text(4.6, 4.35, "invariance", fontsize=9.8, color=GREEN, style="italic",
         rotation=23, rotation_mode="anchor")
 # orange: tiny arrow down-right; labels below-right, clear of everything
 o = (3.6, 1.7)
 arr(ax, seed[0] + 0.2, seed[1] - 0.16, o[0] - 0.16, o[1] + 0.14, color=ORANGE, lw=2.2)
 ax.scatter(*o, s=140, color=ORANGE, zorder=5)
-ax.text(o[0] + 0.35, o[1] + 0.05, "“deadline for Assignment 2?”", fontsize=9,
+ax.text(o[0] + 0.35, o[1] + 0.05, "“deadline for Assignment 2?”", fontsize=10.3,
         color=ORANGE, va="center")
 ax.text(o[0] + 0.35, o[1] - 0.62, "one-character step — answer TOTALLY different",
-        fontsize=8.5, color=ORANGE, va="center")
-ax.text(2.75, 2.45, "cliff", fontsize=8.5, color=ORANGE, style="italic",
+        fontsize=9.8, color=ORANGE, va="center")
+ax.text(2.75, 2.45, "cliff", fontsize=9.8, color=ORANGE, style="italic",
         rotation=-33, rotation_mode="anchor")
 ax.text(0.15, 0.25, "Embeddings are trained for smoothness (nearby text → nearby "
                     "vectors); answer equivalence has cliffs.",
-        fontsize=8.5, color=MUT)
-ax.set_title("Surface distance is not answer distance", fontsize=10.5,
+        fontsize=9.8, color=MUT)
+ax.set_title("Surface distance is not answer distance", fontsize=12,
              loc="left", color=INK)
 save(fig, "f1_cliff_concept")
 
@@ -92,7 +92,7 @@ save(fig, "f9_order_timelines")
 
 # ============ F10: two-tier architecture ============
 fig, ax = plt.subplots(figsize=(7.8, 3.6))
-ax.axis("off"); ax.set_xlim(0, 13); ax.set_ylim(0, 6.8)
+ax.axis("off"); ax.set_xlim(0, 13.4); ax.set_ylim(0, 6.8)
 box(ax, 0.2, 2.8, 2.0, 1.2, "incoming\nquery $q_i$", "#f4f6f8", MUT)
 arr(ax, 2.3, 3.4, 3.1, 3.4)
 box(ax, 3.2, 2.8, 2.5, 1.2, "tier 1: bi-encoder\nsim to best stored\n(1.9 ms)", "#e8eef6", BLUE, fs=8)
@@ -105,11 +105,11 @@ arr(ax, 5.8, 2.95, 6.7, 1.35)
 box(ax, 6.8, 0.6, 2.6, 0.95, "sim $< \\tau_{lo}$ (confident)\ncall the LLM", "#f4f6f8", MUT, fs=8)
 # tier 2 to the right of the band
 arr(ax, 9.5, 3.4, 10.2, 3.4)
-box(ax, 10.3, 2.75, 2.5, 1.3, "tier 2 verifier\nreads BOTH texts\nCE 3.8 ms / LLM ~1.4 s", "#e8eef6", BLUE, fs=8)
-arr(ax, 11.55, 4.1, 9.5, 5.45, color=GREEN, lw=1.4)
-ax.text(10.9, 5.0, "SERVE", fontsize=8, color=GREEN, ha="center")
-arr(ax, 11.55, 2.7, 9.5, 1.1, color=RED, lw=1.4)
-ax.text(10.95, 1.7, "REGENERATE", fontsize=8, color=RED, ha="center")
+box(ax, 10.3, 2.75, 2.9, 1.3, "tier 2 verifier\nreads BOTH texts\nCE 3.8 ms / LLM ~1.4 s", "#e8eef6", BLUE, fs=8)
+arr(ax, 11.75, 4.15, 9.5, 5.45, color=GREEN, lw=1.4)
+ax.text(11.05, 5.0, "SERVE", fontsize=8, color=GREEN, ha="center")
+arr(ax, 11.75, 2.65, 9.5, 1.1, color=RED, lw=1.4)
+ax.text(11.5, 1.3, "REGENERATE", fontsize=8, color=RED, ha="center")
 ax.text(0.2, 0.15, "False hits among band pairs: 27.5% (no verifier) → 18.4% (cross-encoder) → 2.7% (LLM verifier).",
         fontsize=8.5, color=MUT)
 ax.set_title("The two-tier remedy: verify only where the threshold cannot decide",
@@ -125,13 +125,13 @@ box(ax, 3.7, 4.9, 4.6, 1.05, "cliff share $c$ high?\nerror cost $\\rho$ high?", 
 # left: no
 arr(ax, 3.6, 5.4, 2.3, 4.0, color=GREEN)
 ax.text(1.75, 4.55, "no / no", fontsize=8.5, color=GREEN)
-box(ax, 0.4, 2.8, 3.4, 1.15, "tuning suffices:\ncalibrate $\\tau^*(\\rho)$ from the\nutility model; re-check on drift", "#eaf3ee", GREEN, fs=8)
+box(ax, 0.4, 2.55, 3.4, 1.4, "tuning suffices:\ncalibrate $\\tau^*(\\rho)$ from the\nutility model; re-check on drift", "#eaf3ee", GREEN, fs=8)
 # right: yes
 arr(ax, 8.4, 5.4, 9.7, 4.0, color=ORANGE)
 ax.text(9.35, 4.85, "either yes", fontsize=8.5, color=ORANGE)
-box(ax, 8.2, 2.8, 3.5, 1.15, "tuning is futile (IO floor):\nadd a tier-2 verifier in the band,\nor key on discrete slots", "#fdf1e7", ORANGE, fs=8)
+box(ax, 7.9, 2.55, 3.9, 1.4, "tuning is futile (IO floor):\nadd a tier-2 verifier in the band,\nor key on discrete slots", "#fdf1e7", ORANGE, fs=8)
 # bottom: reproducibility
 arr(ax, 6.0, 4.85, 6.0, 1.85)
-box(ax, 3.4, 0.55, 5.2, 1.25, "answers must be reproducible\n(compliance, healthcare, grading)?\n→ a threshold-only cache fails the requirement:\norder dependence is intrinsic", "#f7ecec", RED, fs=8)
+box(ax, 3.2, 0.25, 5.6, 1.55, "answers must be reproducible\n(compliance, healthcare, grading)?\n→ a threshold-only cache fails the requirement:\norder dependence is intrinsic", "#f7ecec", RED, fs=8)
 ax.set_title("Decision procedure for practitioners", fontsize=10.5, loc="left", color=INK)
 save(fig, "f11_decision_procedure")
