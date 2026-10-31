@@ -149,7 +149,7 @@ for dom, lbl, col in DOMS:
     ax.plot([c["rho"] for c in curve], [c["tau_star"] for c in curve],
             "-", color=col, lw=2, label=lbl)
 ax.set_xscale("log")
-ax.set_xlabel("cost ratio ρ = C_err / C_llm (log scale)", fontsize=9, color=MUT)
+ax.set_xlabel(r"cost ratio $\rho = C_{\mathrm{err}}/C_{\mathrm{llm}}$ (log scale)", fontsize=9, color=MUT)
 ax.set_ylabel("optimal threshold τ*", fontsize=9, color=MUT)
 ax.set_xlim(1, 1000)
 ax.set_ylim(0.79, 1.005)
@@ -190,7 +190,7 @@ save(fig, "f6_c4_asymmetry")
 
 # ================= F7: CD diagram (proper two-column layout) =================
 st = json.loads((REPO / "results" / "stats_final.json").read_text())
-ranks = st["avg_ranks"]; cd = st["critical_difference"]
+ranks = {("E5-large-v2" if k == "E5-large" else k): v for k, v in st["avg_ranks"].items()}; cd = st["critical_difference"]
 items = sorted(ranks.items(), key=lambda kv: kv[1])
 k = len(items)
 fig, ax = plt.subplots(figsize=(7.4, 3.0))

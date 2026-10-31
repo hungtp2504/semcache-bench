@@ -45,7 +45,8 @@ stat, p = friedmanchisquare(*[M[i] for i in range(len(labels))])
 print(f"Friedman chi2={stat:.2f}, p={p:.2e} (9 encoders, 6 axis blocks)")
 nem = sp.posthoc_nemenyi_friedman(M.T)  # blocks x treatments
 nem.index = labels; nem.columns = labels
-avg_rank = M.T.argsort(axis=1).argsort(axis=1).mean(axis=0) + 1  # rank per block, avg
+from scipy.stats import rankdata
+avg_rank = np.array([rankdata(row) for row in M.T]).mean(axis=0)  # mid-ranks per block (ties averaged), avg
 print("avg ranks:", dict(zip(labels, np.round(avg_rank, 2))))
 
 # CD diagram (simple): ranks on a line, bars join groups not significantly different

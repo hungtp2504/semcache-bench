@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Dataset-analysis figures: FD1 composition, FD2 empirical spectrum, FD3 overlap."""
-import json, sys
+import json, os, sys
 from collections import defaultdict
 from pathlib import Path
 import matplotlib
@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from embed_utils import embed_texts
 
 REPO = Path(__file__).resolve().parents[1]
-FIG = REPO.parent / "paper" / "figures"
+FIG = Path(os.environ.get("FIG_OUT", REPO.parent / "paper" / "figures"))
 INK, MUT, GRID = "#1a2733", "#5b6b7a", "#e3e8ec"
 BLUE, ORANGE, GREEN = "#3b6fb6", "#c2571f", "#3d8f5f"
 AXES = ["P1", "P2", "P3", "N1", "N2", "N3", "N4", "N5", "N6"]
@@ -76,17 +76,18 @@ for axname in AXES:
                 yerr=[[y - (1 - np.percentile(sims[m], 75))],
                       [(1 - np.percentile(sims[m], 25)) - y]],
                 fmt="o", ms=9, color=c, capsize=3, lw=1.2)
-    dy = 0.012 if axname not in ("N3", "N5") else -0.020
-    ha = "left"
-    ax.annotate(axname, (x, y), xytext=(6, 6 if dy > 0 else -14),
+    # label offsets chosen so no label sits on another axis's error bar
+    off = {"N3": (6, -14), "N5": (6, -14), "N4": (-8, -14), "N1": (6, -14)}.get(axname, (6, 6))
+    ha = "right" if off[0] < 0 else "left"
+    ax.annotate(axname, (x, y), xytext=off,
                 textcoords="offset points", fontsize=9, color=c, ha=ha)
 ax.set_xlabel("measured surface step (1 − word Jaccard), median with IQR",
               fontsize=9, color=MUT)
 ax.set_ylabel("embedding distance (1 − cosine, BGE-M3), median with IQR",
               fontsize=9, color=MUT)
 style(ax); ax.grid(color=GRID, lw=0.6); ax.set_axisbelow(True)
-ax.set_title("The designed spectrum, recovered from data: embeddings track surface\n"
-             "form — cliff axes (orange, answer flips) sit closest to the origin",
+ax.set_title("The designed spectrum, recovered from data: minimal answer-flipping edits (N3–N5)\n"
+             "sit no farther from the seed in embedding space than surface noise (P3)",
              fontsize=9.8, loc="left", color=INK)
 fig.tight_layout()
 for ext in ("pdf", "png"):
@@ -107,7 +108,7 @@ for k, axname in enumerate(["N1", "N2", "N3", "N4", "N5", "N6"]):
     ax.set_title(axname, fontsize=9.5, color=GROUPC[axname])
     style(ax)
     if k == 0:
-        ax.legend(frameon=False, fontsize=6.6, loc="upper left")
+        ax.legend(frameon=False, fontsize=8.5, loc="upper left")
     if k // 3 == 1:
         ax.set_xlabel("cosine similarity", fontsize=8.5, color=MUT)
 fig.suptitle("Where the irreducible overlap lives: different-answer pairs (colored) "

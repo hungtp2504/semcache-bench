@@ -4,9 +4,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+import os
 from pathlib import Path
 
-FIG = Path(__file__).resolve().parents[2] / "paper" / "figures"
+FIG = Path(os.environ.get("FIG_OUT", Path(__file__).resolve().parents[2] / "paper" / "figures"))
 INK, MUT, BLUE, ORANGE, GREEN, RED = "#1a2733", "#5b6b7a", "#3b6fb6", "#c2571f", "#3d8f5f", "#a8323e"
 
 fig, ax = plt.subplots(figsize=(7.2, 3.6))
@@ -32,18 +33,18 @@ ax.text(2.05, 2.6, "threshold $\\tau$", fontsize=9, color=MUT, ha="left")
 box(0.3, 1.1, 3.2, 1.1, "cache decision\nHIT / MISS", "#e8eef6", BLUE)
 
 # right column: what correctness requires (level 3)
-box(6.5, 3.0, 3.2, 1.1, "level 3: answer equivalence\n$E(q_i,q_s)$ --- binary, transitive", "#eaf3ee", GREEN)
+box(6.5, 3.0, 3.2, 1.1, "level 3: answer equivalence\n$E(q_i,q_s)$ — binary, transitive", "#eaf3ee", GREEN)
 arrow(8.1, 2.95, 8.1, 2.25)
 box(6.5, 1.1, 3.2, 1.1, "ground truth\nSAME / DIFFERENT answer", "#eaf3ee", GREEN)
 
 # the mismatch link
 arrow(3.6, 1.65, 6.4, 1.65, color=RED, style="<|-|>", lw=2)
-ax.text(5.0, 1.95, "$E \\not\\equiv S_{>\\tau}$", fontsize=11, color=RED, ha="center")
+ax.text(5.0, 1.95, "$E$ ≢ $S_{>\\tau}$", fontsize=11, color=RED, ha="center")
 ax.text(5.0, 0.45, "irreducible overlap (no $\\tau$ separates)  +  non-transitivity (order dependence)",
         fontsize=8.5, color=RED, ha="center")
 ax.text(5.15, 4.55, "the cache decides with level 2;\ncorrectness is defined at level 3",
         fontsize=9.5, color=INK, ha="center", style="italic", linespacing=1.5)
-ax.set_title("Three levels of query relatedness --- and where semantic caching breaks",
+ax.set_title("Three levels of query relatedness — and where semantic caching breaks",
              fontsize=10.5, loc="left", color=INK)
 fig.tight_layout()
 for ext in ("pdf", "png"):
