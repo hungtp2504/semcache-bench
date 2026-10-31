@@ -1,0 +1,101 @@
+{
+  "duration_api_ms": 111692,
+  "stop_reason": "end_turn",
+  "session_id": "b1183f7c-139d-4860-b460-62a344c5da40",
+  "total_cost_usd": 0.09853669999999999,
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 20578,
+    "cache_read_input_tokens": 18867,
+    "output_tokens": 11097,
+    "output_tokens_details": {
+      "thinking_tokens": 9804
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 20578,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 11097,
+        "cache_read_input_tokens": 18867,
+        "cache_creation_input_tokens": 20578,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 20578
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 9,
+      "outputTokens": 11097,
+      "cacheReadInputTokens": 18867,
+      "cacheCreationInputTokens": 20578,
+      "webSearchRequests": 0,
+      "costUSD": 0.09853669999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 9804,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 20578,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```json\n{\"pair_id\":\"q96b60cd844\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q08ca3ab9fa\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qd551676e32\",\"decision\":\"SERVE\",\"conf\":0.80}\n{\"pair_id\":\"q26ad864b86\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q5abce10fce\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q1e4977f27d\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q9968488af7\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"qf44986c44e\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qb15da68a4a\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q16f0fedaab\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qebcb0261cb\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qe69b17a41c\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qe53f0f5e1d\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q97673532b8\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"qa718d3a29e\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q225e9fd755\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qe9345085f4\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q8101b6fd7e\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qb127f77c04\",\"decision\":\"REGENERATE\",\"conf\":0.75}\n{\"pair_id\":\"qf51d55ea12\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q24c3e9b34f\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q61fac7a301\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qb64ef36f7c\",\"decision\":\"SERVE\",\"conf\":0.85}\n{\"pair_id\":\"qf9d68b12ed\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qf611db6c4f\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q0b517d1362\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qa9ed05ec97\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qfa490d7c44\",\"decision\":\"SERVE\",\"conf\":0.85}\n{\"pair_id\":\"q8b50c62fb1\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qfabb6f731e\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qdd3497b0e7\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q9856fc14ad\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"qa2973bbcf2\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qe0026b5398\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qa0f711e56e\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"qd19cc2bdef\",\"decision\":\"REGENERATE\",\"conf\":0.80}\n{\"pair_id\":\"qbf8234ccfd\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q7d9d8cf939\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q6b08d56e87\",\"decision\":\"SERVE\",\"conf\":0.85}\n{\"pair_id\":\"q56ca41e84a\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"qf2698dc487\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q61455357de\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qcdcb9b5229\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qf6d7c155d3\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q7704e053ec\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q30fe316d6d\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q6dc22e847d\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qe2c0a8bf43\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q13dc97b945\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q597ad47995\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n```",
+  "ttft_ms": 103773,
+  "type": "result",
+  "duration_ms": 111923,
+  "uuid": "562def32-88aa-4830-af40-e954eef6ba08",
+  "ttft_stream_ms": 688,
+  "time_to_request_ms": 29,
+  "first_content_frame_ms": 689,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

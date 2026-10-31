@@ -1,0 +1,101 @@
+{
+  "duration_api_ms": 82118,
+  "stop_reason": "end_turn",
+  "session_id": "e165a3bb-b2a8-4d76-8bbb-bab538e6cde7",
+  "total_cost_usd": 0.0781377,
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 19986,
+    "cache_read_input_tokens": 18867,
+    "output_tokens": 7254,
+    "output_tokens_details": {
+      "thinking_tokens": 5959
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 19986,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 7254,
+        "cache_read_input_tokens": 18867,
+        "cache_creation_input_tokens": 19986,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19986
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 9,
+      "outputTokens": 7254,
+      "cacheReadInputTokens": 18867,
+      "cacheCreationInputTokens": 19986,
+      "webSearchRequests": 0,
+      "costUSD": 0.0781377,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 5959,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 19986,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```json\n{\"pair_id\":\"qce7907c808\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q9315567aa2\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q91590f7233\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q4d13e6c3e2\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q99eca7bbfb\",\"decision\":\"SERVE\",\"conf\":0.85}\n{\"pair_id\":\"q0a8bb7f01b\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q5ba6112fde\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q4c58264e70\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qbd1d95e4af\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q0c56e814ac\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qbbcf226575\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q63d6d4b8f7\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q223a1f0010\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qfc28b527a2\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q7950a284bf\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q7cfae447be\",\"decision\":\"REGENERATE\",\"conf\":0.80}\n{\"pair_id\":\"qea8f62bc48\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q1393213749\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q325f7b3973\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q0fe03d4678\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qf36622ac08\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qe5519ca464\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q69e1f9955d\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q9b2c5fa309\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"qa169c56e45\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qed3edba7d0\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qb14d28488e\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qbd1590213f\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qbef0fd6e30\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qf004e7e004\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qf2930dc91a\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q537cea6bb8\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qb6fb60cbb2\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qd6a7116f5e\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qb00b8bad6b\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qe87ffa7824\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q0e6e379afc\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q16d31501f0\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q72e490afef\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qdebd7d63c9\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q9d80798ecb\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q836e216c35\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q6fbbbb804c\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q0a6b94a723\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qe8a4dd0fed\",\"decision\":\"SERVE\",\"conf\":0.85}\n{\"pair_id\":\"q05b58ca2a7\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q1e9c22e873\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q1db1a4580e\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qe4d2960190\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"qd8030c0d37\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n```",
+  "ttft_ms": 71556,
+  "type": "result",
+  "duration_ms": 82328,
+  "uuid": "ac4fc58f-62c9-4dfa-9e12-8fcab84f52d2",
+  "ttft_stream_ms": 1029,
+  "time_to_request_ms": 31,
+  "first_content_frame_ms": 1029,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

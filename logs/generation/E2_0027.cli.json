@@ -1,0 +1,101 @@
+{
+  "duration_api_ms": 93744,
+  "stop_reason": "end_turn",
+  "session_id": "1a31ec53-21f9-409e-97ef-98f3a1999137",
+  "total_cost_usd": 0.08868770000000001,
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 19971,
+    "cache_read_input_tokens": 18867,
+    "output_tokens": 9370,
+    "output_tokens_details": {
+      "thinking_tokens": 7815
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 19971,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 9370,
+        "cache_read_input_tokens": 18867,
+        "cache_creation_input_tokens": 19971,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19971
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 9,
+      "outputTokens": 9370,
+      "cacheReadInputTokens": 18867,
+      "cacheCreationInputTokens": 19971,
+      "webSearchRequests": 0,
+      "costUSD": 0.08868770000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 7815,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 19971,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"pair_id\": \"q14a1166c4f\", \"decision\": \"SERVE\", \"conf\": 0.95}\n{\"pair_id\": \"qccd29b197b\", \"decision\": \"REGENERATE\", \"conf\": 0.98}\n{\"pair_id\": \"q873b70a86f\", \"decision\": \"SERVE\", \"conf\": 0.99}\n{\"pair_id\": \"q297acf4f5b\", \"decision\": \"REGENERATE\", \"conf\": 0.98}\n{\"pair_id\": \"qf35af94068\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"q92f4f1efd9\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"qbe318b4b4a\", \"decision\": \"SERVE\", \"conf\": 0.95}\n{\"pair_id\": \"q2e470d5850\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"q3dcf64a4c4\", \"decision\": \"SERVE\", \"conf\": 0.98}\n{\"pair_id\": \"q9b34611cfc\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"qeba13fdefb\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"q35e8cf81ba\", \"decision\": \"REGENERATE\", \"conf\": 0.98}\n{\"pair_id\": \"qcc731745b4\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"qbb27253a47\", \"decision\": \"SERVE\", \"conf\": 0.99}\n{\"pair_id\": \"q3f0127890f\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"qcaf86d840a\", \"decision\": \"REGENERATE\", \"conf\": 0.95}\n{\"pair_id\": \"qbd8cbc6d99\", \"decision\": \"REGENERATE\", \"conf\": 0.95}\n{\"pair_id\": \"q4681c1c69f\", \"decision\": \"SERVE\", \"conf\": 0.98}\n{\"pair_id\": \"q05750ee20f\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"qf9a95e1c8c\", \"decision\": \"SERVE\", \"conf\": 0.97}\n{\"pair_id\": \"qd642c03583\", \"decision\": \"SERVE\", \"conf\": 0.98}\n{\"pair_id\": \"qca4f4b0df3\", \"decision\": \"REGENERATE\", \"conf\": 0.95}\n{\"pair_id\": \"q35f83218b3\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"q6bf06b40ae\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"qa714d6fb23\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"qb5c85f4b97\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"qed00b4b3e8\", \"decision\": \"REGENERATE\", \"conf\": 0.98}\n{\"pair_id\": \"q934147a2f9\", \"decision\": \"REGENERATE\", \"conf\": 0.85}\n{\"pair_id\": \"q3bc26a7dc3\", \"decision\": \"REGENERATE\", \"conf\": 0.98}\n{\"pair_id\": \"q0af7d98033\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"q7226880afc\", \"decision\": \"REGENERATE\", \"conf\": 0.98}\n{\"pair_id\": \"q7076ea7594\", \"decision\": \"SERVE\", \"conf\": 0.99}\n{\"pair_id\": \"q24926879b1\", \"decision\": \"REGENERATE\", \"conf\": 0.98}\n{\"pair_id\": \"q0075d2e856\", \"decision\": \"SERVE\", \"conf\": 0.98}\n{\"pair_id\": \"qf0de8e8f1c\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"q28d8cc2571\", \"decision\": \"REGENERATE\", \"conf\": 0.95}\n{\"pair_id\": \"qdee5bc6040\", \"decision\": \"SERVE\", \"conf\": 0.98}\n{\"pair_id\": \"q001e9bdd2d\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"q2b6c8c99ea\", \"decision\": \"SERVE\", \"conf\": 0.99}\n{\"pair_id\": \"q17cae06a3b\", \"decision\": \"SERVE\", \"conf\": 0.98}\n{\"pair_id\": \"q808cc70ecd\", \"decision\": \"SERVE\", \"conf\": 0.99}\n{\"pair_id\": \"q9dd41baf7b\", \"decision\": \"SERVE\", \"conf\": 0.98}\n{\"pair_id\": \"q3978396ba4\", \"decision\": \"SERVE\", \"conf\": 0.99}\n{\"pair_id\": \"qabefed722d\", \"decision\": \"SERVE\", \"conf\": 0.97}\n{\"pair_id\": \"qb3877851be\", \"decision\": \"SERVE\", \"conf\": 0.98}\n{\"pair_id\": \"qb2893e379c\", \"decision\": \"REGENERATE\", \"conf\": 0.95}\n{\"pair_id\": \"qab2480543f\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n{\"pair_id\": \"q5e16a6c978\", \"decision\": \"REGENERATE\", \"conf\": 0.98}\n{\"pair_id\": \"qb15733f06c\", \"decision\": \"REGENERATE\", \"conf\": 0.92}\n{\"pair_id\": \"q71e554059b\", \"decision\": \"REGENERATE\", \"conf\": 0.99}\n```",
+  "ttft_ms": 80167,
+  "type": "result",
+  "duration_ms": 93971,
+  "uuid": "74ae0f25-b558-4cfd-a046-ae186219002f",
+  "ttft_stream_ms": 774,
+  "time_to_request_ms": 31,
+  "first_content_frame_ms": 774,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

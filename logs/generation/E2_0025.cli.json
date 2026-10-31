@@ -1,0 +1,101 @@
+{
+  "duration_api_ms": 94697,
+  "stop_reason": "end_turn",
+  "session_id": "a4727d5a-162d-4e55-b654-c10cc54fcb0e",
+  "total_cost_usd": 0.0945597,
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 20237,
+    "cache_read_input_tokens": 18867,
+    "output_tokens": 10438,
+    "output_tokens_details": {
+      "thinking_tokens": 9177
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 20237,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 10438,
+        "cache_read_input_tokens": 18867,
+        "cache_creation_input_tokens": 20237,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 20237
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 9,
+      "outputTokens": 10438,
+      "cacheReadInputTokens": 18867,
+      "cacheCreationInputTokens": 20237,
+      "webSearchRequests": 0,
+      "costUSD": 0.0945597,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 9177,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 20237,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```json\n{\"pair_id\":\"q2c0a915e2f\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q13895b5e4d\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q9a5bb213bf\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qe051c54463\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q30f774fbb0\",\"decision\":\"REGENERATE\",\"conf\":0.7}\n{\"pair_id\":\"q5b597818c9\",\"decision\":\"REGENERATE\",\"conf\":0.9}\n{\"pair_id\":\"q753f69acea\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qa23cb34ade\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"q158a6c7701\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q756d48aaa3\",\"decision\":\"REGENERATE\",\"conf\":0.9}\n{\"pair_id\":\"qa6f7b127dc\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"q796633f6b1\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q12fb802ffc\",\"decision\":\"REGENERATE\",\"conf\":0.9}\n{\"pair_id\":\"q2d3671ee7e\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q4b25b9b04c\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q23ded70d6b\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q2a307aea27\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qb8462a4bcd\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q40e6f97fe9\",\"decision\":\"SERVE\",\"conf\":0.85}\n{\"pair_id\":\"qa464097060\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"q07cbe9e75a\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"qe44abd9d17\",\"decision\":\"REGENERATE\",\"conf\":0.9}\n{\"pair_id\":\"qda16a3f02c\",\"decision\":\"REGENERATE\",\"conf\":0.9}\n{\"pair_id\":\"q8350ca82ed\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q70abf07edd\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"qb4494b023b\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"q744f231ed6\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q27f0336ffc\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q381375395e\",\"decision\":\"REGENERATE\",\"conf\":0.8}\n{\"pair_id\":\"q92049f13fe\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q853ece282f\",\"decision\":\"REGENERATE\",\"conf\":0.8}\n{\"pair_id\":\"q099914fed5\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"qc575afa858\",\"decision\":\"REGENERATE\",\"conf\":0.9}\n{\"pair_id\":\"q8d50a541d5\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q1302c88c41\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q2e8827c84d\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q33555f8a27\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"qccee7f67a8\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q07d160a2e1\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"q636d4d444c\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qf5a15e995e\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q45bf2c9819\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qab0a598f3f\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q4c80492f43\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q26a13a13a1\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qb7344d7bab\",\"decision\":\"SERVE\",\"conf\":0.9}\n{\"pair_id\":\"qebb648590d\",\"decision\":\"REGENERATE\",\"conf\":0.75}\n{\"pair_id\":\"q24b7965bb0\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qb11db7d1e0\",\"decision\":\"SERVE\",\"conf\":0.95}\n```",
+  "ttft_ms": 88858,
+  "type": "result",
+  "duration_ms": 94926,
+  "uuid": "877b4d75-f3e2-46dd-8189-0dcbb38dcf13",
+  "ttft_stream_ms": 890,
+  "time_to_request_ms": 29,
+  "first_content_frame_ms": 890,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

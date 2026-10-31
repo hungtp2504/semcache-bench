@@ -1,10 +1,12 @@
 # semcache-bench
 
-Benchmark and analysis code for **"Cliffs and Slopes: Why Semantic Caches Fail
-Structurally, Not Just Through Miscalibration"**.
+Benchmark and analysis code for **"Cliffs and Slopes: Structural Failure Modes and
+Testing of Semantic Caches for LLM Applications"** (under review at IEEE Access).
+The version of the code and results cited by the manuscript is tag
+`access-2026-49663-r1`; `REPLICATION.md` maps every table and figure to its script.
 
 A semantic cache answers a new query with the stored answer of a "similar enough" past
-query. This repo builds a ~35,000-pair benchmark (5 domains, 2 languages, 9 transformation
+query. This repo builds a 46,214-pair benchmark (5 domains, 2 languages, 9 transformation
 axes derived from the ratio *answer-step / surface-step*) and measures where — and why —
 threshold-on-similarity caching fails structurally:
 
@@ -12,7 +14,9 @@ threshold-on-similarity caching fails structurally:
 - **Order dependence** — thresholded similarity is not transitive, so cache behavior
   depends on query arrival order (RQ3b)
 - **Cost-aware calibration** — no dominant threshold across domains/cost ratios (RQ4)
-- **Second-stage verification** — predicted to help disproportionately on "cliff" axes (RQ5)
+- **Second-stage verification** — evaluated held-out (5-fold, seed-grouped) with common
+  denominators; the pre-registered cliff/slope asymmetry holds for the cross-encoder tier,
+  not for the LLM verifier (RQ5; `scripts/rq5_heldout.py`)
 
 **Dataset release:** the frozen 46,214-pair benchmark, taxonomy, prompts,
 datasheet, and the human gold-subset annotations are published on the Hugging Face Hub:
@@ -40,7 +44,7 @@ exists yet for your Python (3.14 is new), create the venv with Python 3.12/3.13 
 (`uv venv -p 3.12` or pyenv). The risk-check scripts also run with `--mock` (numpy only)
 to smoke-test logic without downloading models.
 
-## Quick start — the two early risk checks (PLAN §9, run BEFORE generating data)
+## Quick start — the two early risk checks (run before generating data)
 
 ```bash
 # 1) Are transitivity violations frequent enough to carry RQ3b?
@@ -51,8 +55,8 @@ python3 scripts/risk_check_2_cliff_separation.py
 ```
 
 Both print a verdict against the pre-registered decision rules and write JSON to `results/`.
-**Review/edit `data/00_manual/risk_check_pairs.jsonl` first** — it ships as a draft and the
-plan requires researcher-curated pairs.
+`data/00_manual/risk_check_pairs.jsonl` holds the 60 hand-written pairs used for the
+second check.
 
 ## Pipeline (data generation happens in Claude Code sessions)
 

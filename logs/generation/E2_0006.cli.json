@@ -1,0 +1,101 @@
+{
+  "duration_api_ms": 82430,
+  "stop_reason": "end_turn",
+  "session_id": "91731dc2-a1f5-4114-b267-fde68b55991d",
+  "total_cost_usd": 0.0862527,
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 19726,
+    "cache_read_input_tokens": 18867,
+    "output_tokens": 8981,
+    "output_tokens_details": {
+      "thinking_tokens": 7691
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 19726,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 8981,
+        "cache_read_input_tokens": 18867,
+        "cache_creation_input_tokens": 19726,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 19726
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 9,
+      "outputTokens": 8981,
+      "cacheReadInputTokens": 18867,
+      "cacheCreationInputTokens": 19726,
+      "webSearchRequests": 0,
+      "costUSD": 0.0862527,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 7691,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 19726,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"pair_id\":\"q5f02e8697e\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"qedeb7a9336\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q3715194a2b\",\"decision\":\"REGENERATE\",\"conf\":0.92}\n{\"pair_id\":\"qbace22b7c8\",\"decision\":\"REGENERATE\",\"conf\":0.97}\n{\"pair_id\":\"q8f9b187873\",\"decision\":\"REGENERATE\",\"conf\":0.94}\n{\"pair_id\":\"q0585be1ed0\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"qab72b0934b\",\"decision\":\"REGENERATE\",\"conf\":0.99}\n{\"pair_id\":\"qc0ba45d132\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"q15f9549ad3\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q8ba195af73\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"qb80cc8792a\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"q4c31a5aa93\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"qbb42825d83\",\"decision\":\"REGENERATE\",\"conf\":0.93}\n{\"pair_id\":\"q7f18388352\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"q1dc6ad88c8\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q2c5d65da08\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"qa4fe1d7d4a\",\"decision\":\"REGENERATE\",\"conf\":0.99}\n{\"pair_id\":\"q5501692abd\",\"decision\":\"REGENERATE\",\"conf\":0.96}\n{\"pair_id\":\"qe1c7a18738\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q870bb9fb7a\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"q16857aa9cf\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q067920049f\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"qdcc9b533a8\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"qcd48379b70\",\"decision\":\"REGENERATE\",\"conf\":0.91}\n{\"pair_id\":\"q9d784544e0\",\"decision\":\"REGENERATE\",\"conf\":0.98}\n{\"pair_id\":\"qcb8b56816c\",\"decision\":\"REGENERATE\",\"conf\":0.93}\n{\"pair_id\":\"q07338680a4\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"q006d76c664\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"qb2a9f5de22\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"qb9a5a9ea00\",\"decision\":\"REGENERATE\",\"conf\":0.94}\n{\"pair_id\":\"q24ec108619\",\"decision\":\"SERVE\",\"conf\":0.96}\n{\"pair_id\":\"q2f98d6e02e\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qbc9005e4ce\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q4d1be649ac\",\"decision\":\"REGENERATE\",\"conf\":0.97}\n{\"pair_id\":\"q6ff8dad5cd\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q998af68b1b\",\"decision\":\"SERVE\",\"conf\":0.98}\n{\"pair_id\":\"q1f69085272\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"qb3b86f04c5\",\"decision\":\"REGENERATE\",\"conf\":0.94}\n{\"pair_id\":\"q439e7b9fdd\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q87820404b6\",\"decision\":\"REGENERATE\",\"conf\":0.97}\n{\"pair_id\":\"q03a5f4be44\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"qe6a7d8da2b\",\"decision\":\"REGENERATE\",\"conf\":0.91}\n{\"pair_id\":\"q2157670104\",\"decision\":\"REGENERATE\",\"conf\":0.96}\n{\"pair_id\":\"qf70cb6e598\",\"decision\":\"REGENERATE\",\"conf\":0.96}\n{\"pair_id\":\"q7a3d15f25d\",\"decision\":\"REGENERATE\",\"conf\":0.94}\n{\"pair_id\":\"qc29aa12b6d\",\"decision\":\"REGENERATE\",\"conf\":0.93}\n{\"pair_id\":\"q72cbef272b\",\"decision\":\"SERVE\",\"conf\":0.97}\n{\"pair_id\":\"q49a61daa50\",\"decision\":\"REGENERATE\",\"conf\":0.96}\n{\"pair_id\":\"qde7f161c63\",\"decision\":\"SERVE\",\"conf\":0.94}\n{\"pair_id\":\"q0f278ea247\",\"decision\":\"SERVE\",\"conf\":0.97}\n```",
+  "ttft_ms": 74197,
+  "type": "result",
+  "duration_ms": 82680,
+  "uuid": "8058f395-d322-44b6-ba06-12b02234d8d5",
+  "ttft_stream_ms": 938,
+  "time_to_request_ms": 50,
+  "first_content_frame_ms": 938,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

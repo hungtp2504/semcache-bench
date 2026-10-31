@@ -1,12 +1,13 @@
-# Datasheet — semcache-bench (draft, updated as the benchmark freezes)
+# Datasheet — semcache-bench
 
-Follows Gebru et al.'s "Datasheets for Datasets" structure. ▢ = filled at freeze.
+Follows Gebru et al.'s "Datasheets for Datasets" structure.
 
 ## Motivation
 Built to measure *structural* failures of similarity-threshold semantic caches:
 the irreducible overlap between same-answer and different-answer query pairs, and
 order-dependent cache behavior. Created by the "Cliffs and Slopes" project (paper
-under submission to Information and Software Technology).
+"Cliffs and Slopes: Structural Failure Modes and Testing of Semantic Caches for LLM
+Applications", under review at IEEE Access).
 
 ## Composition
 - Query pairs (seed question, variant) with construction-derived expected labels
@@ -67,9 +68,9 @@ answers are grounded in specific source documents and may age.
   Annotations, blind input, and protocol ship in both releases
   (`human_annotation/` on Hugging Face; `data/00_manual/` in the code repo,
   analysis `scripts/gold_agreement.py` → `results/human_gold.json`).
-- N4/N5 applicability is seed-conditional (see paper §5, §8).
+- N4/N5 applicability is seed-conditional (see the paper's benchmark section and Threats to Validity).
 - Vietnamese domain drawn from legal/administrative register.
 - Generator family is Claude-only (cross-vendor generation is future work).
 
 ## Maintenance
-▢ Zenodo DOI; versioned releases; contact = paper authors. Rerun scripts included.
+Versioned releases via git tags (manuscript version: `access-2026-49663-r1`); contact = paper authors. Rerun scripts included.

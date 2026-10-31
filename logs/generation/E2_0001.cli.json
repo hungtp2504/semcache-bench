@@ -1,0 +1,101 @@
+{
+  "duration_api_ms": 92643,
+  "stop_reason": "end_turn",
+  "session_id": "eca5308a-df72-4e2b-b28f-d09372d2db09",
+  "total_cost_usd": 0.0924059,
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 23188,
+    "cache_read_input_tokens": 14959,
+    "output_tokens": 8905,
+    "output_tokens_details": {
+      "thinking_tokens": 7603
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 23188,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 8905,
+        "cache_read_input_tokens": 14959,
+        "cache_creation_input_tokens": 23188,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 23188
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 9,
+      "outputTokens": 8905,
+      "cacheReadInputTokens": 14959,
+      "cacheCreationInputTokens": 23188,
+      "webSearchRequests": 0,
+      "costUSD": 0.0924059,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 7603,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 23188,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"pair_id\":\"q29f33cd8d1\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qf1cc62cfc6\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q836ce708d6\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qc317f5c39c\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qf5e50bcfea\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"qba5cee02df\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q5a2c54c0a0\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q9173b1fbc5\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q9e2d74323f\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q54bfb535bd\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q2e9be68939\",\"decision\":\"REGENERATE\",\"conf\":0.75}\n{\"pair_id\":\"q4b2a964814\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q22be7e6154\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q6d979df0dc\",\"decision\":\"REGENERATE\",\"conf\":0.70}\n{\"pair_id\":\"q68a6fc242f\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q6396dc63fe\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qaff5ee865e\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qf8441d23af\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q8e58e3ca22\",\"decision\":\"REGENERATE\",\"conf\":0.80}\n{\"pair_id\":\"qe05e09df23\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"qc4a59a537c\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q32e06dc202\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qe980b90947\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qeac440cbbc\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q224551a39b\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q3604028487\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qf222fc0f4a\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qfc4c4ad7ce\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q98a7ef0c6e\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q5fb30e5dca\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qbf6a635f0c\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q5d3fd7640b\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q0dbaaf026e\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"qe54b2b71e0\",\"decision\":\"REGENERATE\",\"conf\":0.75}\n{\"pair_id\":\"q462ba47371\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q7130b18d96\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qb96309ee5d\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qed6afd8acc\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q3494ad1813\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qa5f1771daa\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qdfa5761613\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q8735a54d4e\",\"decision\":\"REGENERATE\",\"conf\":0.80}\n{\"pair_id\":\"q395aa30b77\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"qdbb10c8d98\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q1ce10bd14f\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q07310f99ed\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q96b9dda76a\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q6a72b1abf5\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"qdca0c37d99\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qc794f34f16\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n```",
+  "ttft_ms": 80599,
+  "type": "result",
+  "duration_ms": 92930,
+  "uuid": "693cae4d-6283-4eff-b565-4d07e4c716f9",
+  "ttft_stream_ms": 948,
+  "time_to_request_ms": 60,
+  "first_content_frame_ms": 948,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

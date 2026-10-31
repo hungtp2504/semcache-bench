@@ -1,0 +1,101 @@
+{
+  "duration_api_ms": 67915,
+  "stop_reason": "end_turn",
+  "session_id": "e0d9cab9-9ab9-411f-b9e4-cd5bf3478880",
+  "total_cost_usd": 0.0753127,
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 20751,
+    "cache_read_input_tokens": 18867,
+    "output_tokens": 6383,
+    "output_tokens_details": {
+      "thinking_tokens": 5105
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 20751,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 6383,
+        "cache_read_input_tokens": 18867,
+        "cache_creation_input_tokens": 20751,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 20751
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 9,
+      "outputTokens": 6383,
+      "cacheReadInputTokens": 18867,
+      "cacheCreationInputTokens": 20751,
+      "webSearchRequests": 0,
+      "costUSD": 0.0753127,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 5105,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 20751,
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+    "spawned": 0,
+    "requested": {
+      "background": 0,
+      "foreground": 0,
+      "unset": 0
+    },
+    "started_in_background": 0,
+    "max_depth": 0,
+    "spawned_by_subagents": 0,
+    "completed": 0,
+    "failed": 0,
+    "killed": {
+      "parent": 0,
+      "user": 0,
+      "system": 0
+    },
+    "refused": {
+      "depth_limit": 0,
+      "concurrency_limit": 0,
+      "budget": 0
+    },
+    "by_type": {}
+  },
+  "safety_stops": 0,
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "```jsonl\n{\"pair_id\":\"qb43171d602\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q8112f68167\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qeb5ef5fbef\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q9633c5813f\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"qee574603c3\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"qeefea37430\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q8c1b34ba15\",\"decision\":\"SERVE\",\"conf\":0.80}\n{\"pair_id\":\"q5e46ea29d8\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q96ab36c3f9\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q06ab9a240c\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q3959aef9f4\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q043d55fcec\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qc3226e9e70\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"qc2e449ea42\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q11594c5f44\",\"decision\":\"SERVE\",\"conf\":0.90}\n{\"pair_id\":\"q9bccad95cf\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qee1a645ae6\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q88281b9699\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"q465603d5fb\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q0f8f225274\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q50657c63d3\",\"decision\":\"REGENERATE\",\"conf\":0.80}\n{\"pair_id\":\"qfd3ad03e35\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qc2001f1c37\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q0eac19d7c7\",\"decision\":\"SERVE\",\"conf\":0.75}\n{\"pair_id\":\"q5061f7baf3\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q5b7877dde0\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q3224c5032b\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qada668e539\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q47d64532ef\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q100c7548ea\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q4412e6c46e\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"qa17458e8fe\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qdae75312a5\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q41ca5a57ac\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qf273f0cf52\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q63968d632b\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q598ce13685\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q97bc46f57e\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qd7fe77e213\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"qe78b716b8b\",\"decision\":\"REGENERATE\",\"conf\":0.85}\n{\"pair_id\":\"q6a5449ebad\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q39e9794208\",\"decision\":\"REGENERATE\",\"conf\":0.70}\n{\"pair_id\":\"q2941126d0f\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q440d2450ea\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"qfd7eb294d3\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q3a1491ebc1\",\"decision\":\"SERVE\",\"conf\":0.95}\n{\"pair_id\":\"q6e22ff0716\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q9799e292b7\",\"decision\":\"REGENERATE\",\"conf\":0.95}\n{\"pair_id\":\"q91908190dd\",\"decision\":\"REGENERATE\",\"conf\":0.90}\n{\"pair_id\":\"qbc3f3338bb\",\"decision\":\"SERVE\",\"conf\":0.95}\n```",
+  "ttft_ms": 58080,
+  "type": "result",
+  "duration_ms": 68144,
+  "uuid": "02aceaf7-73b5-46ef-be1a-fd6a59d02c7c",
+  "ttft_stream_ms": 712,
+  "time_to_request_ms": 30,
+  "first_content_frame_ms": 712,
+  "queued_turn_count": 0,
+  "result_index": 0
+}

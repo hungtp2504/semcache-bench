@@ -1,0 +1,52 @@
+{
+  "batch_id": "E2_0023",
+  "stage": "E",
+  "model_requested": "claude-haiku-4-5-20251001",
+  "model_reported": [
+    "claude-haiku-4-5-20251001"
+  ],
+  "prompt_file": "prompts/E_verify.md",
+  "prompt_version": "1.0",
+  "cached_block_sha256": "17452e5df2626bd0d88221acefa3030903fb4bbd57cb8b67d05f0a917489c27d",
+  "input_file": "/Users/ted/Documents/Working/PaperWriting/Cliffs and Slope/semcache-bench/data/rq5_opaque_input.jsonl",
+  "input_lines": "1101:1150",
+  "n_input": 50,
+  "ts_start": "2026-10-31T06:32:40Z",
+  "ts_end": "2026-10-31T06:34:28Z",
+  "cli_session_id": "0c992e50-ab60-4742-aa01-2ec632f4bdda",
+  "usage": {
+    "input_tokens": 9,
+    "cache_creation_input_tokens": 20254,
+    "cache_read_input_tokens": 18867,
+    "output_tokens": 10122,
+    "output_tokens_details": {
+      "thinking_tokens": 8575
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 20254,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 9,
+        "output_tokens": 10122,
+        "cache_read_input_tokens": 18867,
+        "cache_creation_input_tokens": 20254,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 20254
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "cost_usd": 0.0930137
+}

@@ -263,6 +263,9 @@ def main() -> int:
     ap.add_argument("--folds", type=int, default=5)
     ap.add_argument("--split-seed", type=int, default=20261025)
     ap.add_argument("--boot", type=int, default=2000)
+    ap.add_argument("--fill-missing", action="store_true",
+                    help="add the opaque-identifier rerun decisions (data/06b_verify_decisions_opaque.jsonl, "
+                         "mapped through data/rq5_opaque_key.jsonl) for pairs without an original decision")
     ap.add_argument("--out", default=str(REPO / "results" / "rq5_heldout.json"),
                     help="output path (split-seed robustness runs write elsewhere)")
     a = ap.parse_args()
@@ -282,6 +285,18 @@ def main() -> int:
         if ln.strip():
             j = json.loads(ln)
             dec[j["pair_id"]] = 1 if j["decision"] == "SERVE" else 0
+    if a.fill_missing:
+        key = {}
+        for ln in (REPO / "data" / "rq5_opaque_key.jsonl").read_text(encoding="utf-8").splitlines():
+            if ln.strip():
+                j = json.loads(ln)
+                key[j["opaque_id"]] = j["pair_id"]
+        for ln in (REPO / "data" / "06b_verify_decisions_opaque.jsonl").read_text(encoding="utf-8").splitlines():
+            if ln.strip():
+                j = json.loads(ln)
+                pid = key.get(j["pair_id"])
+                if pid is not None and pid not in dec:
+                    dec[pid] = 1 if j["decision"] == "SERVE" else 0
     llm = np.array([dec.get(r["id"], -1) for r in recs])
 
     y = np.array([r["expected_label"] == "HIT" for r in recs])
