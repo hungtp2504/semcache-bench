@@ -3,7 +3,7 @@
 Benchmark and analysis code for **"Cliffs and Slopes: Structural Failure Modes and
 Testing of Semantic Caches for LLM Applications"** (under review at IEEE Access).
 The version of the code and results cited by the manuscript is tag
-`access-2026-49663-r1`; `REPLICATION.md` maps every table and figure to its script.
+`access-2026-49663-submitted`; `REPLICATION.md` maps every table and figure to its script.
 
 A semantic cache answers a new query with the stored answer of a "similar enough" past
 query. This repo builds a 46,214-pair benchmark (5 domains, 2 languages, 9 transformation

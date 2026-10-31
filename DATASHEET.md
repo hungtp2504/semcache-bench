@@ -73,4 +73,4 @@ answers are grounded in specific source documents and may age.
 - Generator family is Claude-only (cross-vendor generation is future work).
 
 ## Maintenance
-Versioned releases via git tags (manuscript version: `access-2026-49663-r1`); contact = paper authors. Rerun scripts included.
+Versioned releases via git tags (manuscript version: `access-2026-49663-submitted`); contact = paper authors. Rerun scripts included.
