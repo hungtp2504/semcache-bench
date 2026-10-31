@@ -49,7 +49,7 @@ Applications", under review at IEEE Access).
 | d5 vietnamese_admin_edu | VN legal documents via luatvietnam.vn | copyright-exempt (Điều 15 Luật SHTT) | CC BY 4.0 |
 
 Raw source documents are NOT redistributed; per-document provenance (URL, license,
-retrieval date) is in `corpus/*/index.jsonl`. **The d1 subset must be used under
+retrieval date) is in the code repository, `corpus/*/index*.jsonl`. **The d1 subset must be used under
 NC-SA terms; the remainder is CC BY.** No personal data: sources are published
 documents; d4 contains no patient data.
 

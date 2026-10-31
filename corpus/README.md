@@ -1,26 +1,18 @@
-# corpus/ — raw source documents (NOT committed)
+# corpus/ — raw source documents (not committed)
 
-Raw documents are licensed material. Git ignores everything here except this README,
-`.gitkeep` placeholders, and per-domain `index.jsonl` provenance files.
+Raw documents are licensed material, so git ignores everything here except this
+README and the per-domain provenance indexes (`index*.jsonl`: document id, title,
+URL, license, retrieval date; no document text).
 
-## Provenance — required BEFORE a document is used
+| Dir | Domain | Source | Provenance index |
+|---|---|---|---|
+| d1 | University administration (EN) | MIT OpenCourseWare course pages (CC BY-NC-SA 4.0) | `d1/index.jsonl` |
+| d2 | Academic NLP (EN) | Qasper v0.3, AllenAI (CC BY 4.0) | `d2/index.jsonl` |
+| d3 | Technical documentation (EN) | Django docs (BSD-3-Clause), react.dev (CC BY 4.0) | `d3/index_django.jsonl`, `d3/index_react.jsonl` |
+| d4 | Medical (EN) | MedQuAD, NIH sources (CC BY 4.0; verify per subsource); no patient data | `d4/index_MedQuAD.jsonl` |
+| d5 | Vietnamese administrative/education regulations (VI) | Legal documents via luatvietnam.vn (copyright-exempt, Art. 15 of the Law on Intellectual Property) | `d5/index.jsonl` |
 
-Each domain keeps `corpus/dN/index.jsonl`, one line per document:
-
-```json
-{"doc_id":"d3_doc0007","title":"...","url":"...","license":"...","retrieved":"2026-08-20","notes":""}
-```
-
-A document without an index line does not exist for the pipeline.
-
-## Per-domain licensing checklist (PLAN §10)
-
-| Dir | Domain | Rules before use |
-|---|---|---|
-| d1 | University admin (course docs, EN) | **Written permission from the course owner** + anonymize names/codes/institution BEFORE the file lands here. |
-| d2 | Academic NLP (Qasper) | Record dataset license + version; cite the Qasper paper. |
-| d3 | Tech docs (Django/React/PostgreSQL) | Record each project's documentation license per doc. |
-| d4 | Medical (MedQuAD, WHO public) | **Public sources only, zero patient data.** MedQuAD subsources vary — record license per subsource. |
-| d5 | Vietnamese admin/edu (self-collected) | Public documents only; record provenance (URL, date) per doc. |
-
-Target: ~150 docs/domain → ~900-seed pool/domain → select 400/domain (config/domains.yaml).
+The indexes list the collected documents; the 567 documents from which seeds were
+extracted are the `doc_id`s in `data/01_facts.jsonl` / `data/02_seeds.jsonl`
+(d3/d4 seed `doc_id`s are derived from the file names in the indexes' `local_path`).
+Licensing of the derived benchmark pairs: see `DATASHEET.md`.

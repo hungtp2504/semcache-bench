@@ -50,13 +50,18 @@ to smoke-test logic without downloading models.
 # 1) Are transitivity violations frequent enough to carry RQ3b?
 python3 scripts/risk_check_1_transitivity.py --questions data/00_manual/risk_check_pairs.jsonl
 
-# 2) Do cliff pairs separate from slope pairs? (uses the hand-written 60 pairs)
+# 2) Do cliff pairs separate from slope pairs? (hand-written pairs, data/00_manual/)
 python3 scripts/risk_check_2_cliff_separation.py
 ```
 
 Both print a verdict against the pre-registered decision rules and write JSON to `results/`.
-`data/00_manual/risk_check_pairs.jsonl` holds the 60 hand-written pairs used for the
-second check.
+`data/00_manual/risk_check_pairs.jsonl` holds the 180 hand-written pairs of the second
+check (`results/risk_check_2.json`: first 60-pair run; `results/risk_check_2_n180.json`:
+full set). The first check's committed outputs are `results/risk_check_1_pairs.json` and
+`results/risk_check_1_qasper.json` (pass `--out` to choose the file name).
+
+Tags: `access-2026-49663-submitted` is the version cited by the IEEE Access revision;
+`ieee-access-submission-v1` marks the code state at the original submission.
 
 ## Pipeline (data generation happens in Claude Code sessions)
 
