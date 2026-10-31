@@ -106,7 +106,7 @@ arr(ax, 5.8, 2.95, 6.7, 1.35)
 box(ax, 6.8, 0.6, 2.6, 0.95, "sim $< \\tau_{lo}$ (confident)\ncall the LLM", "#f4f6f8", MUT, fs=8)
 # tier 2 to the right of the band
 arr(ax, 9.5, 3.4, 10.2, 3.4)
-box(ax, 10.3, 2.75, 2.9, 1.3, "tier 2 verifier\nreads BOTH texts\nCE 3.8 ms / LLM ~1.4 s", "#e8eef6", BLUE, fs=8)
+box(ax, 10.3, 2.75, 2.9, 1.3, "tier 2 verifier\nreads BOTH texts\nCE 3.7 ms / LLM ~1.4 s", "#e8eef6", BLUE, fs=8)
 arr(ax, 11.75, 4.15, 9.5, 5.45, color=GREEN, lw=1.4)
 ax.text(11.05, 5.0, "SERVE", fontsize=8, color=GREEN, ha="center")
 arr(ax, 11.75, 2.65, 9.5, 1.1, color=RED, lw=1.4)

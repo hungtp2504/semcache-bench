@@ -1,7 +1,7 @@
 {
- "bi_encoder_ms": 1.86,
- "cross_encoder_ms": 3.76,
- "llm_verifier_ms_per_pair": 1400,
- "full_llm_answer_ms": 1391,
- "note": "verifier/full-LLM from measured batch wall-clock medians over all logged batches"
+  "bi_encoder_ms": 1.88,
+  "cross_encoder_ms": 3.74,
+  "llm_verifier_ms_per_pair": 1400,
+  "llm_verifier_batches": 454,
+  "note": "bi/cross-encoder: scripts/stats_and_f7.py micro-benchmark (M4 Pro, MPS, batch 64, amortized per item, no nearest-neighbour search); LLM verifier: median per-pair wall-clock over the logged stage-E batches"
 }

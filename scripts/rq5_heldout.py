@@ -263,6 +263,8 @@ def main() -> int:
     ap.add_argument("--folds", type=int, default=5)
     ap.add_argument("--split-seed", type=int, default=20261025)
     ap.add_argument("--boot", type=int, default=2000)
+    ap.add_argument("--out", default=str(REPO / "results" / "rq5_heldout.json"),
+                    help="output path (split-seed robustness runs write elsewhere)")
     a = ap.parse_args()
 
     recs = load_recs()
@@ -328,7 +330,7 @@ def main() -> int:
     m_in, c4_in = evaluate(preds, band_all, ctx, a.boot, rng)
     results["in_sample"] = {"params": params, "metrics": m_in, "c4": c4_in}
 
-    out = REPO / "results" / "rq5_heldout.json"
+    out = Path(a.out)
     out.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {out}", flush=True)
 

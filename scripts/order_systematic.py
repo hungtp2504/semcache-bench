@@ -6,14 +6,10 @@ Order sensitivity OS = share of queries whose serving source varies across rando
 arrival orders. Sweeps: workload size N, threshold tau, Zipf skew alpha, encoder,
 eviction policy (unbounded / FIFO-capacity / LRU-capacity).
 
-Architectures on the frozen pair benchmark:
-  A threshold-only            serve iff sim > tau
-  B + cross-encoder verifier  in band -> CE decides
-  C + LLM verifier            in band -> Haiku decides (from measured decisions)
-  D + discrete-slot guard     serve iff sim > tau AND numeric/acronym slots match
-  E learned decision model    logistic model on interpretable features, seed-split
+Architectures (Table 1) are evaluated by scripts/rq5_heldout.py (error rates) and
+scripts/order_architectures.py (order sensitivity).
 
-Outputs results/order_systematic.json and results/architectures.json.
+Outputs results/order_systematic.json.
 """
 import json
 import re
@@ -186,104 +182,9 @@ def main() -> int:
         json.dumps(out, indent=2) + "\n", encoding="utf-8")
     print("order_systematic.json written", flush=True)
 
-    # ================= Architectures A-E on the pair benchmark =================
-    print("architectures...", flush=True)
-    n = len(recs)
-    E1 = embed_texts([r["seed_question"] for r in recs] + [r["variation"] for r in recs],
-                     "BAAI/bge-m3")
-    sims = np.einsum("ij,ij->i", E1[:n], E1[n:])
-    y = np.array([r["expected_label"] == "HIT" for r in recs])
-    groups = [GROUP[r["axis"]] for r in recs]
-    TAU = 0.89
-
-    def slots(q):
-        nums = set(re.findall(r"\d+(?:[.,/]\d+)*", q))
-        caps = set(re.findall(r"\b[A-ZĐ]{2,}\b", q))
-        return nums, caps
-
-    def rates(pred):
-        d = {"false_hit": float(pred[~y].mean()), "false_miss": float((~pred[y]).mean()),
-             "hit_rate_on_hits": float(pred[y].mean())}
-        for g in ("slope", "cliff"):
-            m = np.array([x == g for x in groups]) & ~y
-            d[f"false_hit_{g}"] = float(pred[m].mean())
-        return d
-
-    arch = {}
-    arch["A_threshold"] = rates(sims > TAU)
-    # D: discrete-slot guard
-    slot_ok = np.array([slots(r["seed_question"])[0] == slots(r["variation"])[0] and
-                        slots(r["seed_question"])[1] == slots(r["variation"])[1]
-                        for r in recs])
-    arch["D_slot_guard"] = rates((sims > TAU) & slot_ok)
-    # E: learned decision model (interpretable features, split by seed)
-    from sklearn.linear_model import LogisticRegression
-    def feats(r, s):
-        q1, q2 = r["seed_question"], r["variation"]
-        w1, w2 = set(q1.lower().split()), set(q2.lower().split())
-        n1, c1 = slots(q1); n2, c2 = slots(q2)
-        return [s, len(w1 & w2) / max(1, len(w1 | w2)),
-                abs(len(q1) - len(q2)) / max(len(q1), len(q2)),
-                1.0 * (n1 == n2), 1.0 * (c1 == c2)]
-    X = np.array([feats(r, s) for r, s in zip(recs, sims)])
-    seeds = np.array([r["seed_id"] for r in recs])
-    useeds = np.unique(seeds); rng.shuffle(useeds)
-    tr = np.isin(seeds, useeds[:len(useeds) // 2]); te = ~tr
-    clf = LogisticRegression(max_iter=2000).fit(X[tr], y[tr])
-    pred_e = np.zeros(n, dtype=bool); pred_e[te] = clf.predict(X[te]).astype(bool)
-    d = {"false_hit": float(pred_e[te & ~y].mean()), "false_miss": float((~pred_e)[te & y].mean())}
-    for g in ("slope", "cliff"):
-        m = np.array([x == g for x in groups]) & ~y & te
-        d[f"false_hit_{g}"] = float(pred_e[m].mean())
-    d["coef"] = dict(zip(["sim", "jaccard", "lendiff", "num_match", "cap_match"],
-                         map(float, clf.coef_[0])))
-    arch["E_learned"] = d
-
-    # B/C from existing results (rq5_rq4.json) merged for the unified table
-    r5 = json.loads((REPO / "results" / "rq5_rq4.json").read_text())
-    arch["B_cross_encoder"] = r5["configs"]["cross_encoder"]["rates"]
-    arch["C_llm_verifier"] = r5["configs"]["llm_verifier"]
-
-    # instability per architecture (N=1000 subsample, 50 orders):
-    Nu = 1000
-    subS = S["BAAI/bge-m3"][:Nu, :Nu]
-    ords = orders_for(Nu)
-    inst = {"A": simulate(subS, k_master[:Nu], 0.90, ORD, rng, arrival=ords)["OS"]}
-    # D in simulation: guard on slots of the two queries
-    texts_sub = [items[i] for i in master[:Nu]]
-    slot_list = [slots(t) for t in texts_sub]
-    def d_decide(i, j):
-        return slot_list[i][0] == slot_list[j][0] and slot_list[i][1] == slot_list[j][1]
-    inst["D"] = simulate(subS, k_master[:Nu], 0.90, ORD, rng, arrival=ords,
-                         band=(-1.0, 2.0), band_decide=d_decide)["OS"]
-    # B in simulation: CE on in-band pairs (precompute)
-    import torch
-    from sentence_transformers import CrossEncoder
-    ce = CrossEncoder("BAAI/bge-reranker-v2-m3",
-                      device="mps" if torch.backends.mps.is_available() else "cpu")
-    lo, hi = 0.83, 0.95
-    pairs_idx = [(i, j) for i in range(Nu) for j in range(i)
-                 if lo <= subS[i, j] <= hi]
-    print(f"CE precompute for {len(pairs_idx)} in-band pairs", flush=True)
-    ce_scores = {}
-    B = 2048
-    for k0 in range(0, len(pairs_idx), B):
-        chunk = pairs_idx[k0:k0 + B]
-        scores = ce.predict([(texts_sub[i], texts_sub[j]) for i, j in chunk],
-                            batch_size=128)
-        for (i, j), sc in zip(chunk, scores):
-            ce_scores[(i, j)] = float(sc); ce_scores[(j, i)] = float(sc)
-    ce_tau = r5["configs"]["cross_encoder"]["ce_tau"]
-    def b_decide(i, j):
-        return ce_scores.get((i, j), 1e9) > ce_tau
-    inst["B"] = simulate(subS, k_master[:Nu], 0.90, ORD, rng, arrival=ords,
-                         band=(lo, hi), band_decide=b_decide)["OS"]
-    arch["instability_N1000_tau090"] = inst
-    arch["note"] = ("C (LLM) instability not simulated: requires a live LLM in the "
-                    "arrival loop; its pair-level decisions are in config C rates.")
-    (REPO / "results" / "architectures.json").write_text(
-        json.dumps(arch, indent=2) + "\n", encoding="utf-8")
-    print("architectures.json written", flush=True)
+    # Architectures: order sensitivity of A/B/D under their Table 1 decision rules is
+    # simulated by scripts/order_architectures.py (results/architectures.json); their
+    # error rates come from scripts/rq5_heldout.py (results/rq5_heldout.json).
     return 0
 
 
