@@ -40,7 +40,7 @@ ORDER = [
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--results", default=str(REPO / "results" / "pilot_analysis_allmodels.json"))
+    ap.add_argument("--results", default=str(REPO / "results" / "final_analysis.json"))
     ap.add_argument("--pilot", action="store_true")
     a = ap.parse_args()
 
