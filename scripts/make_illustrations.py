@@ -130,9 +130,9 @@ box(ax, 0.4, 2.55, 3.4, 1.4, "tuning suffices:\ncalibrate $\\tau^*(\\rho)$ from 
 # right: yes
 arr(ax, 8.4, 5.4, 9.7, 4.0, color=ORANGE)
 ax.text(9.35, 4.85, "either yes", fontsize=8.5, color=ORANGE)
-box(ax, 7.9, 2.55, 3.9, 1.4, "tuning is futile (IO floor):\nadd a tier-2 verifier in the band,\nor key on discrete slots", "#fdf1e7", ORANGE, fs=8)
+box(ax, 7.9, 2.55, 3.9, 1.4, "tuning has limited benefit\n(IO floor): add a tier-2\nverifier in the danger band", "#fdf1e7", ORANGE, fs=8)
 # bottom: reproducibility
 arr(ax, 6.0, 4.85, 6.0, 1.85)
-box(ax, 3.2, 0.25, 5.6, 1.55, "answers must be reproducible\n(compliance, healthcare, grading)?\n→ a threshold-only cache fails the requirement:\norder dependence is intrinsic", "#f7ecec", RED, fs=8)
+box(ax, 3.2, 0.25, 5.6, 1.55, "answers must be reproducible\n(compliance, healthcare, grading)?\n→ a similarity-keyed cache fails the requirement:\nuse canonical, order-independent keys", "#f7ecec", RED, fs=8)
 ax.set_title("Decision procedure for practitioners", fontsize=10.5, loc="left", color=INK)
 save(fig, "f11_decision_procedure")
