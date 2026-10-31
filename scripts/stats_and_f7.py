@@ -11,6 +11,7 @@
    (ms/item, MPS) for the RQ5 cost table.
 """
 import json
+import os
 import time
 from pathlib import Path
 
@@ -22,7 +23,7 @@ import scikit_posthocs as sp
 from scipy.stats import friedmanchisquare
 
 REPO = Path(__file__).resolve().parents[1]
-FIG = REPO.parent / "paper" / "figures"
+FIG = Path(os.environ.get("FIG_OUT", REPO.parent / "paper" / "figures"))
 
 fa = json.loads((REPO / "results" / "final_analysis.json").read_text())
 AXES = ["N1", "N2", "N3", "N4", "N5", "N6"]
@@ -69,6 +70,20 @@ for row, i in enumerate(order):
     ax.plot([r, r], [0.75, ys[row] + 0.02], color="#9db4c8", lw=0.8)
     ax.text(r, ys[row], f"{labels[i]} ({r:.2f})", fontsize=8.5,
             ha="left" if row % 2 == 0 else "right", color="#1a2733")
+# cliques: maximal runs of encoders whose mean ranks differ by less than CD
+rs = avg_rank[order]
+cliques = []
+for a_ in range(k):
+    b_ = a_
+    while b_ + 1 < k and rs[b_ + 1] - rs[a_] < cd:
+        b_ += 1
+    if b_ > a_ and not any(c0 <= a_ and b_ <= c1 for c0, c1 in cliques):
+        cliques.append((a_, b_))
+for c_i, (a_, b_) in enumerate(cliques):
+    yb = 0.70 - 0.035 * c_i
+    ax.plot([rs[a_] - 0.05, rs[b_] + 0.05], [yb, yb], color="#1a2733", lw=2.2,
+            solid_capstyle="butt")
+print("cliques:", [[labels[order[i]] for i in range(a_, b_ + 1)] for a_, b_ in cliques])
 ax.plot([avg_rank.min(), avg_rank.min() + cd], [0.93, 0.93], color="#1a2733", lw=2.5)
 ax.text(avg_rank.min() + cd / 2, 0.96, f"CD = {cd:.2f}", ha="center", fontsize=8.5)
 ax.set_title("Mean IO rank across change axes (lower = better) — Nemenyi CD, α = 0.05",
@@ -88,22 +103,26 @@ for name in ("answer_instability", "false_answer_rate_mean"):
     lo_, hi_ = ci(rb[name], nq)
     print(f"bge-m3 tau=.9 {name}: {rb[name]:.3f} [95% CI {lo_:.3f}, {hi_:.3f}] (n={nq})")
 
-# Latency micro-benchmark
+# Latency micro-benchmark (--keep-latency: reuse the recorded values, figure-only rerun)
 import sys
+KEEP = "--keep-latency" in sys.argv
 sys.path.insert(0, str(REPO / "scripts"))
 import torch
 from sentence_transformers import SentenceTransformer, CrossEncoder
 dev = "mps" if torch.backends.mps.is_available() else "cpu"
-texts = ["When is the deadline for Assignment %d?" % i for i in range(256)]
-be = SentenceTransformer("BAAI/bge-m3", device=dev)
-be.encode(texts[:8])  # warmup
-t0 = time.perf_counter(); be.encode(texts, batch_size=64); t_be = (time.perf_counter() - t0) / len(texts) * 1000
-ce = CrossEncoder("BAAI/bge-reranker-v2-m3", device=dev)
-pairs = [(t, t.replace("deadline", "grading")) for t in texts]
-ce.predict(pairs[:8])
-t0 = time.perf_counter(); ce.predict(pairs, batch_size=64); t_ce = (time.perf_counter() - t0) / len(pairs) * 1000
-lat = {"bi_encoder_ms_per_query": round(t_be, 2), "cross_encoder_ms_per_pair": round(t_ce, 2),
-       "device": dev, "note": "M4 Pro, batch 64"}
+if KEEP:
+    lat = json.loads((REPO / "results" / "stats_final.json").read_text())["latency"]
+else:
+    texts = ["When is the deadline for Assignment %d?" % i for i in range(256)]
+    be = SentenceTransformer("BAAI/bge-m3", device=dev)
+    be.encode(texts[:8])  # warmup
+    t0 = time.perf_counter(); be.encode(texts, batch_size=64); t_be = (time.perf_counter() - t0) / len(texts) * 1000
+    ce = CrossEncoder("BAAI/bge-reranker-v2-m3", device=dev)
+    pairs = [(t, t.replace("deadline", "grading")) for t in texts]
+    ce.predict(pairs[:8])
+    t0 = time.perf_counter(); ce.predict(pairs, batch_size=64); t_ce = (time.perf_counter() - t0) / len(pairs) * 1000
+    lat = {"bi_encoder_ms_per_query": round(t_be, 2), "cross_encoder_ms_per_pair": round(t_ce, 2),
+           "device": dev, "note": "M4 Pro, batch 64"}
 print("latency:", lat)
 
 out = {"friedman": {"chi2": float(stat), "p": float(p)},

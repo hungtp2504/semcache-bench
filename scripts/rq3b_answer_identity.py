@@ -9,19 +9,34 @@ across two different seeds is always counted wrong. This script reruns that
 simulation on the identical 5,231-query workload and classifies every wrong
 serve by what its "wrong" verdict rests on:
 
-  within_family    query and served entry derive from the same seed: the verdict
-                   rests on the construction-derived HIT/MISS label (audited
-                   against three blind annotators, 98.5% agreement).
+  within_family    query and served entry derive from the same seed. Split into:
+    within_label     one side is the seed or a HIT variant, the other a MISS
+                     variant: the verdict rests on the construction-derived
+                     HIT/MISS label (audited against three blind annotators,
+                     98.5% agreement).
+    within_miss_miss both are MISS variants of the same seed (same or different
+                     axis): no label relates them, so the verdict rests on the
+                     constructed identity (each MISS variant its own key); two
+                     edits of one seed can share an answer (e.g. two polarity
+                     flips), most plausibly on the same axis.
   cross_verified   different seeds, both with a recorded reference answer (seed or
                    HIT variant): the two stored answers are compared directly
-                   (normalized exact match = same answer, i.e. not actually wrong).
+                   (normalized exact match = same answer). String match misses
+                   paraphrases: in this workload these serves come almost entirely
+                   from near-duplicate seeds whose answers agree in content, so the
+                   lower bound does not count them as wrong.
   cross_unverified different seeds and at least one side is a MISS variant, whose
                    answer was never generated: the verdict rests on the
                    assumption that distinct seeds/variants have distinct answers.
 
 It also reports two bounds and one re-keyed rerun:
-  lower bound  count only within-family + verified-different cross-seed serves
-               as wrong (every unverifiable cross-seed serve assumed correct);
+  lower bound  count only label-backed within-family serves as wrong (every
+               cross-seed serve and every serve that rests on the constructed
+               identity assumed correct). "Label-backed" also reads a HIT variant
+               as sharing its seed's answer and a MISS variant's answer as not
+               answering its seed's question; the stress value additionally
+               drops serves of a stored N1/N2 MISS variant, where the more
+               specific answer may partly answer the seed question;
   upper bound  the published constructed-identity count;
   answer-text  re-key seeds/HIT variants by their normalized answer text, so seeds
                with literally identical answers share a key; recompute OS + wrong.
@@ -66,18 +81,20 @@ def main() -> int:
             doc_of[j["seed_id"]] = j["doc_id"]
 
     # items exactly as analyze_pilot.rq3b builds them
-    items, keys, fam, kind, ans = [], [], [], [], []
+    items, keys, fam, kind, ans, axis = [], [], [], [], [], []
     seen = set()
     for r in sample:
         if r["seed_id"] not in seen:
             seen.add(r["seed_id"])
             items.append(r["seed_question"]); keys.append(r["seed_id"])
             fam.append(r["seed_id"]); kind.append("seed"); ans.append(norm(r["answer"]))
+            axis.append("seed")
         items.append(r["variation"])
         hit = r["expected_label"] == "HIT"
         keys.append(r["seed_id"] if hit else r["id"])
         fam.append(r["seed_id"]); kind.append("HIT" if hit else "MISS")
         ans.append(norm(r["answer"]) if hit else None)
+        axis.append(r["axis"])
     n = len(items)
     print(f"workload: {n} queries from {len(sample)} pairs, {len(seen)} seeds", flush=True)
 
@@ -109,9 +126,14 @@ def main() -> int:
     for tau in a.taus:
         served_c = [set() for _ in range(n)]
         served_a = [set() for _ in range(n)]
-        cnt = dict(serves=0, wrong=0, within_family=0, cross_verified_diff=0,
+        cnt = dict(serves=0, wrong=0, within_family=0, within_label=0,
+                   within_label_seed_vs_miss=0, within_label_stored_miss=0,
+                   within_label_stored_miss_n1n2=0,
+                   within_miss_miss_same_axis=0, within_miss_miss_diff_axis=0,
+                   cross_verified_diff=0,
                    cross_verified_same=0, cross_unverified=0, cross_same_doc=0,
                    wrong_answer_text=0)
+        xpairs = {}
         for _ in range(a.orders):
             order = rng.permutation(n)
             stored = np.empty(n, dtype=np.int64); m = 0
@@ -130,6 +152,17 @@ def main() -> int:
                             cnt["wrong"] += 1
                             if fam_arr[i] == fam_arr[j]:
                                 cnt["within_family"] += 1
+                                if kind[i] == "MISS" and kind[j] == "MISS":
+                                    cnt["within_miss_miss_same_axis" if axis[i] == axis[j]
+                                        else "within_miss_miss_diff_axis"] += 1
+                                else:
+                                    cnt["within_label"] += 1
+                                    if "seed" in (kind[i], kind[j]):
+                                        cnt["within_label_seed_vs_miss"] += 1
+                                    if kind[j] == "MISS":
+                                        cnt["within_label_stored_miss"] += 1
+                                        if axis[j] in ("N1", "N2"):
+                                            cnt["within_label_stored_miss_n1n2"] += 1
                             else:
                                 if same_doc(i, j):
                                     cnt["cross_same_doc"] += 1
@@ -138,6 +171,8 @@ def main() -> int:
                                         cnt["cross_verified_same"] += 1
                                     else:
                                         cnt["cross_verified_diff"] += 1
+                                        pk = tuple(sorted((fam[i], fam[j])))
+                                        xpairs[pk] = xpairs.get(pk, 0) + 1
                                 else:
                                     cnt["cross_unverified"] += 1
                         continue
@@ -150,13 +185,24 @@ def main() -> int:
             "wrong_rate": w / denom,
             "hit_rate": cnt["serves"] / denom,
             "wrong_shares": {k: (cnt[k] / w if w else 0.0) for k in
-                             ("within_family", "cross_verified_diff", "cross_verified_same",
-                              "cross_unverified", "cross_same_doc")},
-            "wrong_rate_lower_bound": (cnt["within_family"] + cnt["cross_verified_diff"]) / denom,
+                             ("within_family", "within_label", "within_label_seed_vs_miss",
+                              "within_label_stored_miss", "within_label_stored_miss_n1n2",
+                              "within_miss_miss_same_axis",
+                              "within_miss_miss_diff_axis", "cross_verified_diff",
+                              "cross_verified_same", "cross_unverified", "cross_same_doc")},
+            "wrong_rate_lower_bound": cnt["within_label"] / denom,
+            "wrong_rate_lower_bound_stress": (cnt["within_label"]
+                                              - cnt["within_label_stored_miss_n1n2"]) / denom,
+            "wrong_rate_without_same_axis_mm_and_cross_seed": (
+                w - cnt["within_miss_miss_same_axis"] - cnt["cross_unverified"]
+                - cnt["cross_verified_diff"] - cnt["cross_verified_same"]) / denom,
+            "wrong_per_serve": w / cnt["serves"] if cnt["serves"] else 0.0,
             "wrong_rate_upper_bound": w / denom,
             "answer_text_keys": {"order_sensitivity": sum(1 for s in served_a if len(s) > 1) / n,
                                  "wrong_rate": cnt["wrong_answer_text"] / denom},
             "counts": cnt,
+            "cross_verified_diff_by_seed_pair": {f"{a_}|{b_}": v for (a_, b_), v in
+                                                 sorted(xpairs.items(), key=lambda kv: -kv[1])},
         }
         out["taus"][str(tau)] = res
         print(f"tau={tau}: OS {res['order_sensitivity']:.1%}  wrong {res['wrong_rate']:.2%} "

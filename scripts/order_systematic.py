@@ -26,6 +26,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from embed_utils import embed_texts
+from analyze_final import stratified_sample
 
 REPO = Path(__file__).resolve().parents[1]
 GROUP = {"N1": "slope", "N2": "slope", "N3": "cliff", "N4": "cliff",
@@ -102,13 +103,20 @@ def simulate(S, keys, tau, orders, rng, policy="none", capacity=None,
 def main() -> int:
     rng = np.random.default_rng(42)
     recs = load_final()
-    items, keys = build_workload(recs, rng)
-    # master stratified sample of 5,231 (same as final analysis: first N in seed order)
-    idx_all = np.arange(len(items))
-    master = idx_all[:5231]
+    # the headline RQ3b workload (analyze_final.py): whole seed families drawn in a
+    # seeded random order until >= 5,000 pairs -> 5,231 queries over all five domains.
+    # Sub-workloads of size N take the first N queries, i.e. whole random families.
+    sample = stratified_sample(recs, 5000, np.random.default_rng(42))
+    items, keys = build_workload(sample, rng)
+    master = np.arange(len(items))
+    assert len(master) == 5231, len(master)
+    out_domains = {}
+    for r_ in sample:
+        out_domains[r_["domain"]] = out_domains.get(r_["domain"], 0) + 1
 
     out = {"generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
-           "sweeps": {}}
+           "workload": "headline RQ3b sample (analyze_final.stratified_sample, rng 42)",
+           "workload_pairs_per_domain": out_domains, "sweeps": {}}
     embs = {}
     for enc in ENCODERS:
         print(f"embedding {enc} ...", flush=True)

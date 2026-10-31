@@ -215,5 +215,17 @@ for (name, r), y in zip(left, ys_l):
 for (name, r), y in zip(right[::-1], ys_r):
     ax.plot([r, r, 10.1], [0.84, y, y], color="#9db4c8", lw=0.9)
     ax.text(10.25, y, f"{name} ({r:.2f})", ha="left", va="center", fontsize=8.5, color=INK)
+# cliques: thick bars join maximal runs of encoders whose mean ranks differ by < CD
+rs = [r for _, r in items]
+cliques = []
+for a_ in range(k):
+    b_ = a_
+    while b_ + 1 < k and rs[b_ + 1] - rs[a_] < cd:
+        b_ += 1
+    if b_ > a_ and not any(c0 <= a_ and b_ <= c1 for c0, c1 in cliques):
+        cliques.append((a_, b_))
+for c_i, (a_, b_) in enumerate(cliques):
+    yb = 0.80 - 0.055 * c_i
+    ax.plot([rs[a_] - 0.06, rs[b_] + 0.06], [yb, yb], color=INK, lw=2.6, solid_capstyle="butt")
 ax.set_title("Mean IO rank across change axes (lower = better), Nemenyi CD at α = 0.05", pad=14)
 save(fig, "f7_cd_diagram")
